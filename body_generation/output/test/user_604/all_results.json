@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 604,
+    "candidate_news_id": "N69938",
+    "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+    "user_history_count": 10,
+    "user_history": [
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials",
+      "A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.",
+      "Navy Submarine, Missing for 75 Years, Is Found Off Okinawa",
+      "Man cuffed for eating sandwich on train platform gets an apology"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\"A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.\"\n\"Navy Submarine, Missing for 75 Years, Is Found Off Okinawa\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article about Meghan Markle and Hillary Clinton spending time together at Frogmore Cottage, you may expect to learn about the nature of their meeting, including any discussions or topics they addressed. The article is likely to provide insights into their relationship, particularly in the context of their public personas and any shared interests or causes. Additionally, it could explore the implications of their meeting for both figures, especially considering their respective roles in public life and potential impacts on social or political matters.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N32286",
+    "candidate_title": "A third of boomers make this critical retirement mistake",
+    "user_history_count": 10,
+    "user_history": [
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials",
+      "A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.",
+      "Navy Submarine, Missing for 75 Years, Is Found Off Okinawa",
+      "Man cuffed for eating sandwich on train platform gets an apology"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\"A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.\"\n\"Navy Submarine, Missing for 75 Years, Is Found Off Okinawa\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\n[Candidate News Title]\n\"A third of boomers make this critical retirement mistake\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses common retirement planning pitfalls faced by baby boomers, with a focus on critical mistakes that can jeopardize their financial security in later years. It may outline specific errors, such as underestimating healthcare costs or failing to maximize retirement account contributions. Additionally, the piece could provide insights into how these mistakes can impact overall retirement savings and suggest strategies for avoiding them. Overall, readers can expect a practical guide aimed at helping boomers navigate their retirement planning more effectively.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N100738",
+    "candidate_title": "These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show",
+    "user_history_count": 10,
+    "user_history": [
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials",
+      "A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.",
+      "Navy Submarine, Missing for 75 Years, Is Found Off Okinawa",
+      "Man cuffed for eating sandwich on train platform gets an apology"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\"A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.\"\n\"Navy Submarine, Missing for 75 Years, Is Found Off Okinawa\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\n[Candidate News Title]\n\"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show,\" you can expect a collection of images showcasing key moments from the Country Music Association Awards held in 2019. The article is likely to highlight notable performances, red carpet fashion, and award winners, providing a visual recap of the event. It may also include brief descriptions or insights about the artists featured in the photos or the significance of certain moments during the awards ceremony.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N110104",
+    "candidate_title": "Latin Grammys 2019: Moments you might have missed, including Alicia Keys, Juanes",
+    "user_history_count": 10,
+    "user_history": [
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials",
+      "A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.",
+      "Navy Submarine, Missing for 75 Years, Is Found Off Okinawa",
+      "Man cuffed for eating sandwich on train platform gets an apology"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\"A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.\"\n\"Navy Submarine, Missing for 75 Years, Is Found Off Okinawa\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\n[Candidate News Title]\n\"Latin Grammys 2019: Moments you might have missed, including Alicia Keys, Juanes\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article about the Latin Grammys 2019, you may expect a recap of notable moments and performances from the event, highlighting key artists like Alicia Keys and Juanes. The article is likely to cover significant awards, memorable speeches, and perhaps some surprises that occurred during the ceremony. Additionally, it could provide insights into the cultural impact of the event and how it reflects current trends in Latin music. Overall, the piece may offer a comprehensive overview for readers interested in the intersection of music and culture.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N104644",
+    "candidate_title": "Brett Kavanaugh calls Ruth Bader Ginsburg 'inspiration,' heaps gratitude on allies",
+    "user_history_count": 10,
+    "user_history": [
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials",
+      "A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.",
+      "Navy Submarine, Missing for 75 Years, Is Found Off Okinawa",
+      "Man cuffed for eating sandwich on train platform gets an apology"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\"A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.\"\n\"Navy Submarine, Missing for 75 Years, Is Found Off Okinawa\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\n[Candidate News Title]\n\"Brett Kavanaugh calls Ruth Bader Ginsburg 'inspiration,' heaps gratitude on allies\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article about Brett Kavanaugh's remarks on Ruth Bader Ginsburg, the user can expect a discussion of Kavanaugh's acknowledgment of Ginsburg's influence on the judiciary and her contributions to legal discourse. The piece may detail Kavanaugh's expressions of gratitude towards his colleagues and allies, possibly highlighting the context in which these comments were made, such as during a public event or in a written statement. Additionally, the article could explore the implications of Kavanaugh's words in relation to current judicial debates or the broader political climate, though these connections are not guaranteed.",
+    "model": "gpt-4o-mini"
+  }
+]

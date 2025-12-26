@@ -1,0 +1,21 @@
+{
+  "user_id": 848,
+  "candidate_news_id": "N26703",
+  "candidate_title": "Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump to spend $300 million on border wall \"quality assurance\"",
+    "Plow Clears Snow-Covered Sidewalk in Green Bay",
+    "In Louisiana, Trump Attacks 'Deranged' Impeachment Inquiry and 'Radical' Governor",
+    "Excited Puppy Experiences First Snow in Southern Minnesota",
+    "Top diplomat in Ukraine directly ties Trump to quid pro quo",
+    "French leader laments NATO's 'brain death' due to US absence",
+    "Grading all 32 NFL teams heading into the last eight weeks of the 2019 season",
+    "Bloomberg leads Trump by 6 points in 2020 election matchup",
+    "Matthew Stafford won't play vs. Bears because of fractured bones in back",
+    "Snow cancels over 1,500 flights, transforms roads to sheets of ice"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump to spend $300 million on border wall \"quality assurance\"\"\n\"Plow Clears Snow-Covered Sidewalk in Green Bay\"\n\"In Louisiana, Trump Attacks 'Deranged' Impeachment Inquiry and 'Radical' Governor\"\n\"Excited Puppy Experiences First Snow in Southern Minnesota\"\n\"Top diplomat in Ukraine directly ties Trump to quid pro quo\"\n\"French leader laments NATO's 'brain death' due to US absence\"\n\"Grading all 32 NFL teams heading into the last eight weeks of the 2019 season\"\n\"Bloomberg leads Trump by 6 points in 2020 election matchup\"\n\"Matthew Stafford won't play vs. Bears because of fractured bones in back\"\n\"Snow cancels over 1,500 flights, transforms roads to sheets of ice\"\n\n[Candidate News Title]\n\"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the controversy surrounding Mason Rudolph following an incident where he was struck in the head with his own helmet during a game. It may explore the reactions from fans and analysts regarding his performance and the accountability he faces for the situation. The piece could also include insights into how this incident has impacted team dynamics and Rudolph's role moving forward. Additionally, it may speculate on whether the criticism he is receiving is warranted or if external factors are influencing public perception.",
+  "model": "gpt-4o-mini"
+}

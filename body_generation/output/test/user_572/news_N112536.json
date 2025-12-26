@@ -1,0 +1,21 @@
+{
+  "user_id": 572,
+  "candidate_news_id": "N112536",
+  "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+  "user_history_count": 10,
+  "user_history": [
+    "See what your favorite stars look like without makeup",
+    "Donald Trump Jr walks out of Triggered book launch after heckling   from supporters",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores",
+    "3 awful reasons to take Social Security benefits at 65",
+    "Celebrity plastic surgery transformations",
+    "40 Nutrition Experts Told Us The Foods You Should Be Eating Every Day",
+    "7 Surprising Features That Boost Your Home Value",
+    "Dean Foods files for bankruptcy",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"See what your favorite stars look like without makeup\"\n\"Donald Trump Jr walks out of Triggered book launch after heckling   from supporters\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores\"\n\"3 awful reasons to take Social Security benefits at 65\"\n\"Celebrity plastic surgery transformations\"\n\"40 Nutrition Experts Told Us The Foods You Should Be Eating Every Day\"\n\"7 Surprising Features That Boost Your Home Value\"\n\"Dean Foods files for bankruptcy\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a specific location in the United States that has experienced consistently high temperatures, exceeding 80 degrees since March. Readers may expect to learn about the environmental factors contributing to this prolonged heat, such as geographical features or climate patterns. Additionally, the article could explore the implications of this unusual weather on local residents and businesses, possibly touching on topics like energy consumption or outdoor activities. Overall, the content may provide insights into how this heat wave affects day-to-day life in the area, though specific details may vary.",
+  "model": "gpt-4o-mini"
+}

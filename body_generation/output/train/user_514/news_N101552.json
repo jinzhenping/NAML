@@ -1,0 +1,21 @@
+{
+  "user_id": 514,
+  "candidate_news_id": "N101552",
+  "candidate_title": "How to Make Cornbread Without a Recipe",
+  "user_history_count": 10,
+  "user_history": [
+    "Dakota Johnson's Tribute to Former Stepdad Antonio Banderas Will Leave You In Tears",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Helen Mirren Says it Was 'Very Flattering' to Be Mistaken for Keanu Reeves' Girlfriend",
+    "Las Vegas adopts ban on sleeping, camping on streets, sidewalks",
+    "Holocaust survivor under guard amid death threats",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Precious metals get crushed as end-of-the-world trade implodes",
+    "This Solo Dining Trend Is Changing the Way People Eat"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dakota Johnson's Tribute to Former Stepdad Antonio Banderas Will Leave You In Tears\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Helen Mirren Says it Was 'Very Flattering' to Be Mistaken for Keanu Reeves' Girlfriend\"\n\"Las Vegas adopts ban on sleeping, camping on streets, sidewalks\"\n\"Holocaust survivor under guard amid death threats\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Precious metals get crushed as end-of-the-world trade implodes\"\n\"This Solo Dining Trend Is Changing the Way People Eat\"\n\n[Candidate News Title]\n\"How to Make Cornbread Without a Recipe\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"How to Make Cornbread Without a Recipe\" is likely to provide a straightforward guide on creating cornbread with flexible techniques that emphasize improvisation. Readers may expect to learn about key ingredients typically used in cornbread, such as cornmeal and buttermilk, and how to adjust proportions based on personal taste or available ingredients. Additionally, the article might explore various methods for preparing cornbread, potentially including baking tips or alternative flavor additions. Overall, it could encourage a more intuitive approach to cooking, allowing for creativity in the kitchen.",
+  "model": "gpt-4o-mini"
+}

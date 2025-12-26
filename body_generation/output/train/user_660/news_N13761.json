@@ -1,0 +1,21 @@
+{
+  "user_id": 660,
+  "candidate_news_id": "N13761",
+  "candidate_title": "Celebrity plastic surgery transformations",
+  "user_history_count": 10,
+  "user_history": [
+    "Shut Down: 100s of Muscle Cars, EVs, and More Seized and Headed to Auction",
+    "Celebrity kids then and now: See how they've grown",
+    "Celebrity weddings of 2019",
+    "Republicans quit trying to rein in Trump after 'lynching' tweet",
+    "11 Things Your Mouth Can Tell You About Your Health",
+    "Celebs celebrate Halloween 2019",
+    "Kate Beckinsale and Len Wiseman Finalize Divorce 4 Years After Split",
+    "NYPD Commissioner James O'Neill resigns, Dermot Shea to be new top cop",
+    "A New Jersey woman has been missing for nearly a week. She went to see a psychic before she vanished",
+    "Election Day 2019: Most Important Races and What to Watch For"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shut Down: 100s of Muscle Cars, EVs, and More Seized and Headed to Auction\"\n\"Celebrity kids then and now: See how they've grown\"\n\"Celebrity weddings of 2019\"\n\"Republicans quit trying to rein in Trump after 'lynching' tweet\"\n\"11 Things Your Mouth Can Tell You About Your Health\"\n\"Celebs celebrate Halloween 2019\"\n\"Kate Beckinsale and Len Wiseman Finalize Divorce 4 Years After Split\"\n\"NYPD Commissioner James O'Neill resigns, Dermot Shea to be new top cop\"\n\"A New Jersey woman has been missing for nearly a week. She went to see a psychic before she vanished\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\n[Candidate News Title]\n\"Celebrity plastic surgery transformations\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Celebrity plastic surgery transformations,\" the user is likely expecting an exploration of various celebrities who have undergone notable cosmetic procedures. The content may detail specific transformations, providing before-and-after images alongside descriptions of the surgeries that were performed, such as rhinoplasties, facelifts, or breast augmentations. Additionally, the piece could examine the public and media reactions to these changes and discuss the implications of plastic surgery in the celebrity culture. This article is likely to appeal to the user's interest in celebrity lifestyles and personal developments.",
+  "model": "gpt-4o-mini"
+}

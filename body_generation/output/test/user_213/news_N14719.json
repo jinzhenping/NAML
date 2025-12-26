@@ -1,0 +1,21 @@
+{
+  "user_id": 213,
+  "candidate_news_id": "N14719",
+  "candidate_title": "Father-daughter first dance medley had every guest on their feet",
+  "user_history_count": 10,
+  "user_history": [
+    "Aaron Rodgers hints that lack of rest was the issue in L.A.",
+    "5 struggling teams that can still make NFL playoffs",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis",
+    "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+    "David Ross' 1st Cubs coaching staff is taking shape. Now Theo Epstein will start renovation work on roster at GM meetings.",
+    "Maggert holes out to win Champions finale; McCarron takes Schwab Cup",
+    "Cassius Winston posts double-double a day after his brother's death",
+    "JuJu Smith-Schuster: Jalen Ramsey's right, I'm not Antonio Brown",
+    "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+    "Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Aaron Rodgers hints that lack of rest was the issue in L.A.\"\n\"5 struggling teams that can still make NFL playoffs\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\"David Ross' 1st Cubs coaching staff is taking shape. Now Theo Epstein will start renovation work on roster at GM meetings.\"\n\"Maggert holes out to win Champions finale; McCarron takes Schwab Cup\"\n\"Cassius Winston posts double-double a day after his brother's death\"\n\"JuJu Smith-Schuster: Jalen Ramsey's right, I'm not Antonio Brown\"\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\"Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media\"\n\n[Candidate News Title]\n\"Father-daughter first dance medley had every guest on their feet\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Father-daughter first dance medley had every guest on their feet\" is likely to discuss a memorable wedding moment where the father and daughter performed a choreographed dance that captivated their guests. Readers may expect details about the song selection and the significance of the dance to the family, along with descriptions of the atmosphere during the event. The article could also include insights into the planning process behind the medley and reactions from attendees, highlighting the joy and connection shared during this special occasion.",
+  "model": "gpt-4o-mini"
+}

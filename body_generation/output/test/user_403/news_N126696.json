@@ -1,0 +1,21 @@
+{
+  "user_id": 403,
+  "candidate_news_id": "N126696",
+  "candidate_title": "Maze of tunnels reveals remains of ancient Jerusalem",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Jim Harbaugh exploring potential NFL return",
+    "Funny celeb pics for October 2019",
+    "Here's how the Fed rate cut affects you",
+    "Here's how the Fed rate cut affects you",
+    "The 25 US cities where it's easiest to get a mortgage",
+    "Fisherman faces prison, fine for cruel act on rare fish",
+    "After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car",
+    "The first thing 14 lottery winners have bought after finding out they were rich",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Country music's biggest scandals"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Jim Harbaugh exploring potential NFL return\"\n\"Funny celeb pics for October 2019\"\n\"Here's how the Fed rate cut affects you\"\n\"Here's how the Fed rate cut affects you\"\n\"The 25 US cities where it's easiest to get a mortgage\"\n\"Fisherman faces prison, fine for cruel act on rare fish\"\n\"After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car\"\n\"The first thing 14 lottery winners have bought after finding out they were rich\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Country music's biggest scandals\"\n\n[Candidate News Title]\n\"Maze of tunnels reveals remains of ancient Jerusalem\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Maze of tunnels reveals remains of ancient Jerusalem\" is likely to explore the recent archaeological findings related to a complex network of tunnels in Jerusalem. Readers may expect detailed descriptions of the excavation process, historical context regarding the significance of these tunnels, and insights into what the remains reveal about ancient life in the city. The article could also discuss the implications of these discoveries for understanding Jerusalem's history and its cultural heritage, as well as the methods used by archaeologists to uncover this hidden aspect of the city.",
+  "model": "gpt-4o-mini"
+}

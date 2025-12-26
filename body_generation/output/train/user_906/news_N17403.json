@@ -1,0 +1,21 @@
+{
+  "user_id": 906,
+  "candidate_news_id": "N17403",
+  "candidate_title": "Watch: Budda Baker pulled this sick move out of 'The Matrix'",
+  "user_history_count": 10,
+  "user_history": [
+    "Chasing a Lamborghini Huracán Evo With a 200-MPH Ducati for 1200 Miles",
+    "Video shows terrifying moment a train slammed into an SUV in Mesa",
+    "Trying to find the market for J.D. Martinez",
+    "1-ton boulder known as 'Wizard Rock' that disappeared from forest 'magically' returns",
+    "Warmer-than-average temperatures in the forecast for Phoenix",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "2019 Gold Glove Award winners announced; Lorenzo Cain finally included",
+    "Krispy Kreme orders Minnesota student who bought, resold doughnuts to 'shut down operations'",
+    "Locked On Suns Tuesday: Devin Booker plays his best game ever as Suns take down Sixers",
+    "Aubrey O'Day Responded to Critics Who Say Plastic Surgery Has Dramatically Changed Her Appearance"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chasing a Lamborghini Huracán Evo With a 200-MPH Ducati for 1200 Miles\"\n\"Video shows terrifying moment a train slammed into an SUV in Mesa\"\n\"Trying to find the market for J.D. Martinez\"\n\"1-ton boulder known as 'Wizard Rock' that disappeared from forest 'magically' returns\"\n\"Warmer-than-average temperatures in the forecast for Phoenix\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"2019 Gold Glove Award winners announced; Lorenzo Cain finally included\"\n\"Krispy Kreme orders Minnesota student who bought, resold doughnuts to 'shut down operations'\"\n\"Locked On Suns Tuesday: Devin Booker plays his best game ever as Suns take down Sixers\"\n\"Aubrey O'Day Responded to Critics Who Say Plastic Surgery Has Dramatically Changed Her Appearance\"\n\n[Candidate News Title]\n\"Watch: Budda Baker pulled this sick move out of 'The Matrix'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Watch: Budda Baker pulled this sick move out of 'The Matrix',\" the user is likely to expect a detailed analysis of a remarkable play made by NFL player Budda Baker, possibly during a recent game. The coverage may include descriptions of the play's context, its significance in the game, and commentary on Baker's skills and athleticism. Additionally, there may be video highlights illustrating the move, which could offer insights into how it compares to other notable plays in the league. Overall, the article is likely to provide a thorough breakdown of this specific moment in sports.",
+  "model": "gpt-4o-mini"
+}

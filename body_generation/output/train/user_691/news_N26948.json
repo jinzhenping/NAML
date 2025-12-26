@@ -1,0 +1,21 @@
+{
+  "user_id": 691,
+  "candidate_news_id": "N26948",
+  "candidate_title": "81 Bean Recipes You'll Be Making All Year Long",
+  "user_history_count": 10,
+  "user_history": [
+    "This Woman Shared Her Weight and Body Fat Percentages Over 4 Years to Make an Important Point",
+    "Model Belle Lucia   Who Was Shamed for Her Small Bump   Shares Her Post-Baby 'Pregnancy Transformation'",
+    "Porsche Taycan Turbo S Sport Turismo runs hard at the 'Ring",
+    "This Holiday Turkey Pie is perfect for Friendsgiving",
+    "The Hospital on a Mission to Bring Home-Cooked Meals to Its Patients",
+    "Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech",
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads",
+    "The Day in Sports: Wednesday, November 6, 2019",
+    "Nurses reveal 10 things they wish they could tell patients, but can't",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"This Woman Shared Her Weight and Body Fat Percentages Over 4 Years to Make an Important Point\"\n\"Model Belle Lucia   Who Was Shamed for Her Small Bump   Shares Her Post-Baby 'Pregnancy Transformation'\"\n\"Porsche Taycan Turbo S Sport Turismo runs hard at the 'Ring\"\n\"This Holiday Turkey Pie is perfect for Friendsgiving\"\n\"The Hospital on a Mission to Bring Home-Cooked Meals to Its Patients\"\n\"Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech\"\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\"The Day in Sports: Wednesday, November 6, 2019\"\n\"Nurses reveal 10 things they wish they could tell patients, but can't\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\n[Candidate News Title]\n\"81 Bean Recipes You'll Be Making All Year Long\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a comprehensive collection of 81 bean recipes that can be utilized throughout the year. The piece may include a variety of dishes, ranging from simple salads and hearty stews to more complex entrees that highlight the versatility of beans as an ingredient. Expect a focus on nutritional benefits and possibly tips for cooking with different types of beans, catering to both novice and experienced cooks. Additionally, there could be suggestions on how to incorporate beans into various meal plans, making it a practical resource for those looking to enhance their culinary repertoire.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 15,
+  "candidate_news_id": "N123683",
+  "candidate_title": "Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year",
+  "user_history_count": 10,
+  "user_history": [
+    "Walmart's Pre-Holiday Deals Are Live Right Now",
+    "Sarah Michelle Gellar evacuates home during LA wildfires, runs into Selma Blair",
+    "J.C. Penney Plots a Comeback: Less Clutter, More Yoga Classes",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "South Florida principal who made controversial comments about the Holocaust is fired",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Why the USWNT's coaching transition is different than any other in sports",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "College gymnast dies following training accident in Connecticut"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Walmart's Pre-Holiday Deals Are Live Right Now\"\n\"Sarah Michelle Gellar evacuates home during LA wildfires, runs into Selma Blair\"\n\"J.C. Penney Plots a Comeback: Less Clutter, More Yoga Classes\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"South Florida principal who made controversial comments about the Holocaust is fired\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Why the USWNT's coaching transition is different than any other in sports\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"College gymnast dies following training accident in Connecticut\"\n\n[Candidate News Title]\n\"Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to learn about Meghan Markle and Prince Harry's decision not to join Queen Elizabeth at Sandringham for Christmas this year. The piece is likely to provide context regarding their relationship with the royal family, including any recent developments that may have influenced this choice. Additionally, it may touch on how this decision fits into the broader narrative of their life in the public eye, as well as any implications it might have for their future engagements or public perceptions. Overall, the article may offer insights into the ongoing dynamics within the royal family.",
+  "model": "gpt-4o-mini"
+}

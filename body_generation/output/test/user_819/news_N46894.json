@@ -1,0 +1,21 @@
+{
+  "user_id": 819,
+  "candidate_news_id": "N46894",
+  "candidate_title": "How much turkey do you need to buy per person?",
+  "user_history_count": 10,
+  "user_history": [
+    "Cornell student, 18, found dead in gorge after frat party, reports say",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Kylie Jenner, Travis Scott Not Back Together: They Have 'Two Different Lives'",
+    "Brody Jenner and Josie Canseco just split: Find out why",
+    "Khloe Kardashian is back to brunette in new fragrance ads with sisters",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Teen survivor recalls horrifying details of ambush in Mexico that killed 9"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cornell student, 18, found dead in gorge after frat party, reports say\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Kylie Jenner, Travis Scott Not Back Together: They Have 'Two Different Lives'\"\n\"Brody Jenner and Josie Canseco just split: Find out why\"\n\"Khloe Kardashian is back to brunette in new fragrance ads with sisters\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Teen survivor recalls horrifying details of ambush in Mexico that killed 9\"\n\n[Candidate News Title]\n\"How much turkey do you need to buy per person?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"How much turkey do you need to buy per person?\", the user can expect a practical guide focused on determining the appropriate amount of turkey for various gatherings, particularly during holiday meals like Thanksgiving. It is likely to outline recommendations based on factors such as the number of guests, their typical appetite, and whether other dishes will be served. The article may also provide tips on preparation and cooking methods to ensure the turkey is adequately enjoyed by all attendees. Overall, it aims to assist readers in planning their meals effectively.",
+  "model": "gpt-4o-mini"
+}

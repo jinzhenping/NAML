@@ -1,0 +1,21 @@
+{
+  "user_id": 995,
+  "candidate_news_id": "N56999",
+  "candidate_title": "Why 17-Year-Old Can't Get Out of Her Seatbelt",
+  "user_history_count": 10,
+  "user_history": [
+    "Matthew Stafford won't play vs. Bears because of fractured bones in back",
+    "Navy Submarine, Missing for 75 Years, Is Found Off Okinawa",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago",
+    "What Roger Stone's trial revealed about Donald Trump and WikiLeaks",
+    "I moved from the US to the UK. Here are the 8 things that surprised me the most.",
+    "Biggest California earthquake in two decades ruptured on at least 24 faults",
+    "Eight Nike Oregon Project athletes confirm Mary Cain's allegations of abuse to Sports Illustrated",
+    "California crisis of fires, blackouts decades in the making",
+    "American Outdoor to split into two firms, separating its gun business"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Matthew Stafford won't play vs. Bears because of fractured bones in back\"\n\"Navy Submarine, Missing for 75 Years, Is Found Off Okinawa\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago\"\n\"What Roger Stone's trial revealed about Donald Trump and WikiLeaks\"\n\"I moved from the US to the UK. Here are the 8 things that surprised me the most.\"\n\"Biggest California earthquake in two decades ruptured on at least 24 faults\"\n\"Eight Nike Oregon Project athletes confirm Mary Cain's allegations of abuse to Sports Illustrated\"\n\"California crisis of fires, blackouts decades in the making\"\n\"American Outdoor to split into two firms, separating its gun business\"\n\n[Candidate News Title]\n\"Why 17-Year-Old Can't Get Out of Her Seatbelt\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Why 17-Year-Old Can't Get Out of Her Seatbelt,\" the user can expect an exploration of the circumstances surrounding a teenager's inability to unbuckle her seatbelt, which may include details about the incident itself, possible safety features of modern seatbelt systems, or an examination of related legal or medical implications. The piece could discuss the importance of seatbelt safety and how such incidents highlight broader issues regarding vehicle safety regulations. It is likely to provide insights into any relevant statistics or expert opinions on seatbelt use and child safety in vehicles.",
+  "model": "gpt-4o-mini"
+}

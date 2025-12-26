@@ -1,0 +1,21 @@
+{
+  "user_id": 179,
+  "candidate_news_id": "N62024",
+  "candidate_title": "Watch: John Harbaugh shared awesome moment with Lamar Jackson",
+  "user_history_count": 10,
+  "user_history": [
+    "Demi Moore Names Male Co-Star Who Didn't Deserve to Make More Money Than Her",
+    "Kate Middleton Takes Prince George and Princess Charlotte Halloween Shopping at Local Supermarket",
+    "Stormi Webster Channels Mom Kylie Jenner With Epic Halloween Costume",
+    "Queen Elizabeth and Michelle Obama Shared 'Instant, Mutual Warmth' When They Broke Royal Protocol",
+    "50 'Rare' Events That Happen All the Time",
+    "Will Teresa Giudice and Joe Giudice Get Divorced? 'I Don't See It Working,' She Says",
+    "Is Ben Affleck Dating Musician Katie Cherry?",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Demi Lovato and Mike Johnson's Romance Has Officially ''Fizzled Out'' After One Month",
+    "The Latest: Kansas City to remove King's name from street"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Demi Moore Names Male Co-Star Who Didn't Deserve to Make More Money Than Her\"\n\"Kate Middleton Takes Prince George and Princess Charlotte Halloween Shopping at Local Supermarket\"\n\"Stormi Webster Channels Mom Kylie Jenner With Epic Halloween Costume\"\n\"Queen Elizabeth and Michelle Obama Shared 'Instant, Mutual Warmth' When They Broke Royal Protocol\"\n\"50 'Rare' Events That Happen All the Time\"\n\"Will Teresa Giudice and Joe Giudice Get Divorced? 'I Don't See It Working,' She Says\"\n\"Is Ben Affleck Dating Musician Katie Cherry?\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Demi Lovato and Mike Johnson's Romance Has Officially ''Fizzled Out'' After One Month\"\n\"The Latest: Kansas City to remove King's name from street\"\n\n[Candidate News Title]\n\"Watch: John Harbaugh shared awesome moment with Lamar Jackson\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Watch: John Harbaugh shared awesome moment with Lamar Jackson,\" they are likely expecting to read about a notable interaction or exchange between Baltimore Ravens head coach John Harbaugh and quarterback Lamar Jackson. The article may provide details on the context of this moment, possibly highlighting a recent game or practice session. Additionally, it could explore the dynamics of their relationship, emphasizing Harbaugh's coaching style and Jackson's performance. The piece is likely to include quotes or insights that illustrate their rapport, though the specific nature of the moment shared remains uncertain.",
+  "model": "gpt-4o-mini"
+}

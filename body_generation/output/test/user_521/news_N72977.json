@@ -1,0 +1,21 @@
+{
+  "user_id": 521,
+  "candidate_news_id": "N72977",
+  "candidate_title": "Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs",
+  "user_history_count": 10,
+  "user_history": [
+    "Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Orangutan granted legal personhood moves to Florida",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "Subtle Signs You May Have Clogged Arteries",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+    "Why Kate & Meghan Were on Different Balconies for Remembrance Sunday",
+    "I'm Child-Free and Couldn't Be Happier About It. What's So Bad About That?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Orangutan granted legal personhood moves to Florida\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"Subtle Signs You May Have Clogged Arteries\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\"Why Kate & Meghan Were on Different Balconies for Remembrance Sunday\"\n\"I'm Child-Free and Couldn't Be Happier About It. What's So Bad About That?\"\n\n[Candidate News Title]\n\"Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Taylor Swift's allegations against Scooter Braun and Scott Borchetta, the user is likely to find an overview of the ongoing conflict regarding her ability to perform her older hits at the American Music Awards (AMAs). The piece may detail the history of her dispute with her former management and the implications of these restrictions on her career. Additionally, it could explore the broader context of artist rights and control over their music, which has become a significant topic in the music industry. The article is likely to provide insights into how this situation might affect Swift's public appearances and fan relationships.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 633,
+  "candidate_news_id": "N40625",
+  "candidate_title": "Insiders predict: NFL Week 11 winners",
+  "user_history_count": 10,
+  "user_history": [
+    "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "New Mexico DE Nahje Flowers dies at 21",
+    "Renowned Seattle Restaurateur Tom Douglas Settles $2.4 Million Lawsuit With Employees",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "3 dead, dozens injured as Australia wildfires raze homes",
+    "Nike will look into runner Mary Cain's allegations of abuse",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'",
+    "Gigi Hadid Unfollows Tyler Cameron on Instagram 1 Month After Split"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"New Mexico DE Nahje Flowers dies at 21\"\n\"Renowned Seattle Restaurateur Tom Douglas Settles $2.4 Million Lawsuit With Employees\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"3 dead, dozens injured as Australia wildfires raze homes\"\n\"Nike will look into runner Mary Cain's allegations of abuse\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\"Gigi Hadid Unfollows Tyler Cameron on Instagram 1 Month After Split\"\n\n[Candidate News Title]\n\"Insiders predict: NFL Week 11 winners\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Insiders predict: NFL Week 11 winners,\" the user is likely to find a detailed analysis of the upcoming NFL games for Week 11, including predictions from sports analysts and insiders concerning which teams are favored to win. The article may discuss key matchups, player performances, and any relevant statistics that could influence the outcomes of the games. Additionally, it could provide insights into injuries or other factors affecting team dynamics. Overall, the user can expect a well-rounded preview that helps them understand the context behind the predictions.",
+  "model": "gpt-4o-mini"
+}

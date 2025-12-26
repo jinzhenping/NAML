@@ -1,0 +1,21 @@
+{
+  "user_id": 697,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 10,
+  "user_history": [
+    "Flavor Flav, You ARE The Father! Paternity Test Confirms Rapper Is Dad Of 2-Month-Old Baby",
+    "Dwayne Johnson Jokingly Warns His Mom About Her 'Magic Mike' Birthday Celebration in Vegas",
+    "Meghan King Edmonds, Jim Edmonds' Nanny Denies Cheating Allegations",
+    "Miranda Lambert Shares the Surprising Story of Her and Brendan McLoughlin's Meet-Cute",
+    "Adele Lost 20 Pounds with Pilates and Cardio After Splitting From Simon Konecki",
+    "15 secrets of the $4.99 Costco rotisserie chicken",
+    "What It Was Like Inside the Homes of the Pilgrims",
+    "Country music's biggest scandals",
+    "Gradual lifestyle changes helped this woman lose 75 pounds and keep it off",
+    "Wrap Your Christmas Gifts Like a Pro With This Guide"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Flavor Flav, You ARE The Father! Paternity Test Confirms Rapper Is Dad Of 2-Month-Old Baby\"\n\"Dwayne Johnson Jokingly Warns His Mom About Her 'Magic Mike' Birthday Celebration in Vegas\"\n\"Meghan King Edmonds, Jim Edmonds' Nanny Denies Cheating Allegations\"\n\"Miranda Lambert Shares the Surprising Story of Her and Brendan McLoughlin's Meet-Cute\"\n\"Adele Lost 20 Pounds with Pilates and Cardio After Splitting From Simon Konecki\"\n\"15 secrets of the $4.99 Costco rotisserie chicken\"\n\"What It Was Like Inside the Homes of the Pilgrims\"\n\"Country music's biggest scandals\"\n\"Gradual lifestyle changes helped this woman lose 75 pounds and keep it off\"\n\"Wrap Your Christmas Gifts Like a Pro With This Guide\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Opinion: Colin Kaepernick is about to get what he deserves: a chance,\" they may expect a detailed analysis of Kaepernick's career and the recent developments that could lead to his return to professional football. The article is likely to explore the implications of his activism, public perception, and any potential opportunities that may arise in the league. Additionally, it could discuss the broader context of athlete activism and how Kaepernick's situation reflects ongoing discussions about race and sports in America. This exploration may include perspectives on his previous controversies and the current climate surrounding NFL teams’ decisions.",
+  "model": "gpt-4o-mini"
+}

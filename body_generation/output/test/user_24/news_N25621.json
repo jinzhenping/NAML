@@ -1,0 +1,21 @@
+{
+  "user_id": 24,
+  "candidate_news_id": "N25621",
+  "candidate_title": "Queen Elizabeth Just Rode Horseback at Age 93",
+  "user_history_count": 10,
+  "user_history": [
+    "NFL players who should be traded before the deadline",
+    "Eagles, Ravens and Saints had interest in Jalen Ramsey, but Jags waited for desperation",
+    "Nestle to Return $20 Billion to Investors",
+    "Winners and losers from Week 8 in college football led by Wisconsin, Oregon",
+    "Where do the Yankees go from here? Big decisions that New York must address this offseason",
+    "If You Don't Eat a Banana Every Day, This Might Convince You to Start",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "NFL draft winners and losers: Joe Burrow not the only standout in LSU-Bama thriller",
+    "The 'Blue Zones' diet: Foods that help people live to 100"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL players who should be traded before the deadline\"\n\"Eagles, Ravens and Saints had interest in Jalen Ramsey, but Jags waited for desperation\"\n\"Nestle to Return $20 Billion to Investors\"\n\"Winners and losers from Week 8 in college football led by Wisconsin, Oregon\"\n\"Where do the Yankees go from here? Big decisions that New York must address this offseason\"\n\"If You Don't Eat a Banana Every Day, This Might Convince You to Start\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"NFL draft winners and losers: Joe Burrow not the only standout in LSU-Bama thriller\"\n\"The 'Blue Zones' diet: Foods that help people live to 100\"\n\n[Candidate News Title]\n\"Queen Elizabeth Just Rode Horseback at Age 93\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Queen Elizabeth riding horseback at age 93 is likely to provide insights into her ongoing engagement with equestrian activities, reflecting her long-standing passion for horse riding. Readers may expect to learn about the significance of this event, including any context regarding her health and physical capabilities at this age. Additionally, the piece might explore how this activity aligns with her public persona and responsibilities as a monarch. It could also touch on any reactions from the public or royal watchers, although such details may not be the primary focus.",
+  "model": "gpt-4o-mini"
+}

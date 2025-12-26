@@ -1,0 +1,21 @@
+{
+  "user_id": 648,
+  "candidate_news_id": "N10673",
+  "candidate_title": "Abandoned mansions of the world's billionaires",
+  "user_history_count": 10,
+  "user_history": [
+    "Bust of Orville Wright found on North Carolina beach",
+    "Bay Area earthquakes struck on unusual section of San Andreas fault",
+    "Americans now need at least $500,000 a year to enter the top 1 percent",
+    "The 10 Hardest Math Problems That Remain Unsolved",
+    "'Priceless' finds that turned out to be worthless",
+    "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+    "The world's cutest homes are beyond beautiful",
+    "Video captures terrifying moment woman slips at Grand Canyon"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"Abandoned mansions of the world's billionaires\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Abandoned mansions of the world's billionaires\" is likely to explore the intriguing world of opulent properties that have been left behind by their wealthy owners. Readers may expect a detailed examination of several notable abandoned estates, highlighting their architectural features, historical significance, and the circumstances that led to their neglect. The piece could also provide insights into the cultural and economic implications of these properties, as well as the contrast between immense wealth and the decay of such luxurious spaces. Additionally, it may speculate on the potential future of these mansions and whether they could be repurposed or restored.",
+  "model": "gpt-4o-mini"
+}

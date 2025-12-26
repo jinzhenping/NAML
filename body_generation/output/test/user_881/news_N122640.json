@@ -1,0 +1,21 @@
+{
+  "user_id": 881,
+  "candidate_news_id": "N122640",
+  "candidate_title": "This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.",
+  "user_history_count": 10,
+  "user_history": [
+    "Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday",
+    "Kenya Moore Says Marc Daly Split Was 'Mutual,' Adds 'There's Always Hope' for Reconciliation",
+    "A foster mom was arrested in an adoption scheme",
+    "Lori Loughlin Knows a Trial Would Make Things Worse for Her Daughters",
+    "Woods made the right call keeping Reed in the U.S. fold",
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Jerry Jones hopes loss to Vikings isn't 'terminal'",
+    "Donald Trump Jr walks out of Triggered book launch after heckling   from supporters",
+    "Teresa Giudice Opens Up About Her Future With Husband Joe and the Cheating Rumors (Exclusive)"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday\"\n\"Kenya Moore Says Marc Daly Split Was 'Mutual,' Adds 'There's Always Hope' for Reconciliation\"\n\"A foster mom was arrested in an adoption scheme\"\n\"Lori Loughlin Knows a Trial Would Make Things Worse for Her Daughters\"\n\"Woods made the right call keeping Reed in the U.S. fold\"\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Jerry Jones hopes loss to Vikings isn't 'terminal'\"\n\"Donald Trump Jr walks out of Triggered book launch after heckling   from supporters\"\n\"Teresa Giudice Opens Up About Her Future With Husband Joe and the Cheating Rumors (Exclusive)\"\n\n[Candidate News Title]\n\"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent incident involving Myles Garrett and the repercussions of his actions during a game, which may include a call for a suspension for the remainder of the season. It is expected to provide an overview of the events leading up to the altercation, including any context about previous conduct or disciplinary actions taken against Garrett. The piece may also explore the implications of this incident for both Garrett's career and the team's performance, as well as reactions from fans and analysts regarding the appropriateness of the proposed disciplinary measures.",
+  "model": "gpt-4o-mini"
+}

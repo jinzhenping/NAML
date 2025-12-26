@@ -1,0 +1,21 @@
+{
+  "user_id": 521,
+  "candidate_news_id": "N56999",
+  "candidate_title": "Why 17-Year-Old Can't Get Out of Her Seatbelt",
+  "user_history_count": 10,
+  "user_history": [
+    "Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Orangutan granted legal personhood moves to Florida",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "Subtle Signs You May Have Clogged Arteries",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+    "Why Kate & Meghan Were on Different Balconies for Remembrance Sunday",
+    "I'm Child-Free and Couldn't Be Happier About It. What's So Bad About That?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Orangutan granted legal personhood moves to Florida\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"Subtle Signs You May Have Clogged Arteries\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\"Why Kate & Meghan Were on Different Balconies for Remembrance Sunday\"\n\"I'm Child-Free and Couldn't Be Happier About It. What's So Bad About That?\"\n\n[Candidate News Title]\n\"Why 17-Year-Old Can't Get Out of Her Seatbelt\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Why 17-Year-Old Can't Get Out of Her Seatbelt\" may explore the circumstances surrounding a young individual's inability to exit a vehicle safely. Readers might expect to learn about the specific situation that led to this incident, possibly addressing factors such as the design of modern seatbelt systems, safety regulations, or even psychological elements that could contribute to such a scenario. The piece is likely to provide insights into broader implications for vehicle safety and the importance of understanding how seatbelts function, while also considering the potential risks involved in emergency situations.",
+  "model": "gpt-4o-mini"
+}

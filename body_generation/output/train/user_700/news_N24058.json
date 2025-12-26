@@ -1,0 +1,16 @@
+{
+  "user_id": 700,
+  "candidate_news_id": "N24058",
+  "candidate_title": "These are the best times to visit New York City",
+  "user_history_count": 5,
+  "user_history": [
+    "Bag Explodes While Being Loaded On Volaris Flight At Midway Airport",
+    "Popeyes announces return date of its chicken sandwich and takes a dig at Chick-fil-A",
+    "A flight attendant reveals what it takes to work on Emirates' first class",
+    "Crash in EB lanes of Mathews Bridge causing heavy delays Friday",
+    "Ask the Captain: How easy is it for a pilot to enter a hijacking code by mistake?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bag Explodes While Being Loaded On Volaris Flight At Midway Airport\"\n\"Popeyes announces return date of its chicken sandwich and takes a dig at Chick-fil-A\"\n\"A flight attendant reveals what it takes to work on Emirates' first class\"\n\"Crash in EB lanes of Mathews Bridge causing heavy delays Friday\"\n\"Ask the Captain: How easy is it for a pilot to enter a hijacking code by mistake?\"\n\"\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"These are the best times to visit New York City\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"These are the best times to visit New York City,\" you can expect to read about optimal seasons or months for travel to New York, based on factors such as weather, tourist activity, and local events. The article may discuss specific times of the year that offer the best experiences for visitors, such as cultural festivals or holiday events, alongside practical tips for planning a visit. Additionally, it could outline considerations like accommodation prices and crowd levels during peak tourist seasons, helping you make informed travel decisions.",
+  "model": "gpt-4o-mini"
+}

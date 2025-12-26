@@ -1,0 +1,317 @@
+[
+  {
+    "user_id": 512,
+    "candidate_news_id": "N105956",
+    "candidate_title": "Husband of missing woman arrested, booked on murder charges",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"Husband of missing woman arrested, booked on murder charges\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to detail the recent arrest of the husband of a missing woman, who has been booked on murder charges. Readers can expect information about the circumstances surrounding her disappearance, including any relevant timelines and previous investigations. The piece may also cover the husband's background and any potential motives suggested by law enforcement. Additionally, it could provide insights into the community's reaction and the ongoing search for the missing woman, highlighting the complexities of the case as it unfolds.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N83491",
+    "candidate_title": "At NATO summit, Trump to stress US allies' defense spending",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"At NATO summit, Trump to stress US allies' defense spending\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss the upcoming NATO summit where former President Trump is expected to emphasize the importance of defense spending among US allies. Readers may anticipate insights into Trump's strategies for strengthening alliances and ensuring adequate financial contributions from member countries. The piece could also explore the context of these discussions, particularly in light of recent geopolitical challenges and the shifting dynamics of international relations. Overall, the article may provide a detailed overview of the summit's agenda and its implications for global security.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N48833",
+    "candidate_title": "85 Thanksgiving Recipes You Can Make Ahead",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"85 Thanksgiving Recipes You Can Make Ahead\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In reading the article titled \"85 Thanksgiving Recipes You Can Make Ahead,\" the user is likely expecting a comprehensive collection of recipes that can help streamline their holiday meal preparation. The article may detail a variety of dishes, including appetizers, main courses, and desserts, that can be prepped in advance, allowing for a more relaxed Thanksgiving experience. It is likely to include tips on storage and reheating, as well as suggestions for time-saving techniques. Overall, the user may find practical guidance to enhance their holiday cooking efficiency.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N123209",
+    "candidate_title": "Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user may encounter an overview of the recent apology issued by Survivor contestants Missy Byrd and Elizabeth Beisel regarding their actions during the show. The piece is likely to provide context surrounding the incident that prompted the apologies, possibly including reactions from fellow contestants or fans. Additionally, it may explore themes of accountability and public perception within reality television, highlighting how contestants navigate the consequences of their behavior on and off the screen. Overall, readers can expect a straightforward account of the situation, along with insights into its broader implications.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N2756",
+    "candidate_title": "AP Interview: Evo Morales wants UN mediation in Bolivia",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"AP Interview: Evo Morales wants UN mediation in Bolivia\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If the user clicks on the article titled \"AP Interview: Evo Morales wants UN mediation in Bolivia,\" they are likely expecting an informative overview of the current political situation in Bolivia, particularly regarding Evo Morales' request for United Nations intervention. The article may detail the reasons behind his call for mediation, such as ongoing political tensions or conflicts within the country. Additionally, it could provide context about Morales' political history and implications of UN involvement in national affairs. Overall, the user may gain insights into both local and international perspectives on this matter, though specific outcomes or responses from the UN are uncertain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N69938",
+    "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage,\" you can expect to read about a private meeting between the two prominent figures at Markle's residence. The article is likely to detail the context of their gathering, exploring potential discussions around current social issues or political matters, given both women's influential roles. Additionally, it may provide insights into their friendship and shared interests, while also speculating on the implications of this meeting for their public personas and future collaborations.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N21018",
+    "candidate_title": "3 Indiana judges suspended after a night of drinking turned into a White Castle brawl",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"3 Indiana judges suspended after a night of drinking turned into a White Castle brawl\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to read about an incident involving three judges from Indiana who were suspended following an altercation that escalated during a night of drinking. The report may provide details about the events leading up to the brawl, including the judges' actions and any consequences they may face. Additionally, it could touch on the broader implications of such behavior for public officials and the legal system. The article is likely to explore the context of the incident, though the specifics of what triggered the altercation are uncertain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N38042",
+    "candidate_title": "Ocasio-Cortez: 'Trump himself is clearly not satisfied with only one article of impeachment'",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"Ocasio-Cortez: 'Trump himself is clearly not satisfied with only one article of impeachment'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Ocasio-Cortez: 'Trump himself is clearly not satisfied with only one article of impeachment',\" you may expect a discussion centered on the political dynamics surrounding impeachment proceedings against former President Trump, particularly from the perspective of Congresswoman Alexandria Ocasio-Cortez. The article is likely to explore her comments regarding Trump's dissatisfaction with the current articles of impeachment, possibly providing context about the political implications and reactions from various stakeholders. Additionally, it may touch on the broader implications for the Democratic Party and future legislative actions.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N85943",
+    "candidate_title": "Did Trump just commit witness tampering? I asked 7 legal experts.",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"Did Trump just commit witness tampering? I asked 7 legal experts.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to find an analysis of potential legal implications surrounding former President Donald Trump, particularly focusing on allegations of witness tampering. It may include perspectives from various legal experts who could provide insights into the severity of the accusations, the potential consequences for Trump, and comparisons to similar cases in the past. Additionally, the piece might explore the broader context of legal challenges he faces, although the specifics of any legal proceedings are likely to remain speculative and uncertain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N33378",
+    "candidate_title": "Comics - 'Half Full' by Maria Scrivan",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"Comics - 'Half Full' by Maria Scrivan\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on \"Comics - 'Half Full' by Maria Scrivan,\" you may expect to read about a comic strip that humorously explores everyday situations and relatable themes, likely showcasing Maria Scrivan's distinctive art style and wit. The comic could feature characters navigating common life challenges or quirks, providing a lighthearted perspective. Given your interest in diverse topics, including personal stories and unique occurrences, the comic may resonate with you through its clever commentary on modern life.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N110308",
+    "candidate_title": "US teacher killed in Dominican Republic had dream to retire there: Family",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"US teacher killed in Dominican Republic had dream to retire there: Family\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to provide an overview of the tragic circumstances surrounding the death of a US teacher in the Dominican Republic, focusing on her aspirations to retire there. It may delve into her background, highlighting her career and the dreams she had for her future, as well as insights from family members about her life and ambitions. Additionally, the piece could explore the details of the incident that led to her death, providing context about safety concerns for tourists in the region. Overall, the article is expected to convey both the personal story of the teacher and the broader implications of her untimely passing.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N112536",
+    "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses a specific location in the United States that has experienced consistently warm temperatures, surpassing 80 degrees since March. Readers may expect to learn about the geographical characteristics contributing to this climate, such as local weather patterns or geographical features. Additionally, the piece might explore the implications of such weather on the community, including lifestyle, tourism, or agriculture. It could also highlight any unusual weather trends or records associated with this prolonged heat, although the exact details remain uncertain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N89764",
+    "candidate_title": "Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the ongoing investigation surrounding a woman's death that occurred after she was taken to the hospital by NFL player Montae Nicholson. Readers can expect details about the circumstances leading to her hospitalization and any available information regarding the police inquiry. The piece may also explore Nicholson's involvement and how it has drawn public attention, along with potential implications for the player and the team. It could provide insights into the police's findings so far, though specific conclusions may not yet be available.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N107472",
+    "candidate_title": "Actresses who've played Queen Elizabeth II",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"Actresses who've played Queen Elizabeth II\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Actresses who've played Queen Elizabeth II,\" the user is likely to find a detailed exploration of various actresses who have portrayed the iconic British monarch in film and television. The piece may include notable performances, such as those by Helen Mirren and Claire Foy, along with insights into the historical context of these portrayals. Additionally, the article could discuss the impact of these roles on the actresses' careers and how public perception of Queen Elizabeth II has evolved through these interpretations. This examination may provide a blend of biographical information and cultural commentary.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 512,
+    "candidate_news_id": "N28873",
+    "candidate_title": "WH record of Trump's 1st call with Ukraine president differs from earlier description",
+    "user_history_count": 10,
+    "user_history": [
+      "A man dies in Hawaii after falling into a lava tube in his yard",
+      "Christina Anstead shares new pic of son Hudson at 2 months old",
+      "40 Fun Facts About Jennifer Aniston",
+      "This Is How Long Wine Lasts After You've Opened The Bottle",
+      "Australian tourist killed by elephant in Namibia",
+      "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+      "18 Quiet Dogs That Don't Bark (Too Much)"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"WH record of Trump's 1st call with Ukraine president differs from earlier description\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"WH record of Trump's 1st call with Ukraine president differs from earlier description,\" you may expect to read an analysis of the discrepancies between the White House's official account of the call and previous statements made by officials. The article likely discusses the context of the call, its implications for U.S.-Ukraine relations, and reactions from political figures. Additionally, it could explore how these differences might affect public perception and ongoing investigations related to the call and its aftermath.",
+    "model": "gpt-4o-mini"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "user_id": 311,
+  "candidate_news_id": "N34044",
+  "candidate_title": "This is it, this is the luckiest break in the history of golf",
+  "user_history_count": 8,
+  "user_history": [
+    "Assad Sends Syrian Troops North as Turkish Offensive Escalates",
+    "Thousands in Germany, France protest Turkish push into Syria",
+    "AP Top 25: Ohio State jumps Clemson to 3rd; Wisconsin falls",
+    "Syria's Assad vows support for Kurds against Turkey assault",
+    "Report: Florida State considering firing Willie Taggart, pursuing Urban Meyer",
+    "Trump isn't 'bringing our soldiers back home' from Syria",
+    "Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him",
+    "Israel says overnight strike on Gaza house killed Islamic Jihad commander"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Assad Sends Syrian Troops North as Turkish Offensive Escalates\"\n\"Thousands in Germany, France protest Turkish push into Syria\"\n\"AP Top 25: Ohio State jumps Clemson to 3rd; Wisconsin falls\"\n\"Syria's Assad vows support for Kurds against Turkey assault\"\n\"Report: Florida State considering firing Willie Taggart, pursuing Urban Meyer\"\n\"Trump isn't 'bringing our soldiers back home' from Syria\"\n\"Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him\"\n\"Israel says overnight strike on Gaza house killed Islamic Jihad commander\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"This is it, this is the luckiest break in the history of golf\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"This is it, this is the luckiest break in the history of golf\" is likely to explore a significant moment in golf history, potentially focusing on a specific incident or player whose fortunate circumstances led to a remarkable achievement. Readers may expect detailed accounts of the event itself, including the players involved and the context in which this \"lucky break\" occurred. Additionally, the piece could include insights into how this moment has been perceived within the golfing community and its impact on the sport. It is possible that the article may also discuss the broader implications of luck in sports and how it can influence outcomes in competitive play.",
+  "model": "gpt-4o-mini"
+}

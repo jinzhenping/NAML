@@ -1,0 +1,21 @@
+{
+  "user_id": 459,
+  "candidate_news_id": "N14848",
+  "candidate_title": "Mural of activist Greta Thunberg going up in San Francisco",
+  "user_history_count": 10,
+  "user_history": [
+    "Clippers set bad precedent resting Kawhi Leonard against Bucks",
+    "Gordon Hayward is finally, truly back",
+    "Bucks hold off Clippers 129-124 for 4th win in a row",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "NBA fines Clippers $50K for Kawhi 'load management' drama",
+    "What Happens When a Plane Collides with a Flock of Birds?",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Intelligence community unveils plans for disclosing foreign electoral interference; promises no 'partisan politics'",
+    "Kremlin: no official reply to invitation for Trump to visit Moscow",
+    "What Happens When a Plane Collides with a Flock of Birds?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Clippers set bad precedent resting Kawhi Leonard against Bucks\"\n\"Gordon Hayward is finally, truly back\"\n\"Bucks hold off Clippers 129-124 for 4th win in a row\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"NBA fines Clippers $50K for Kawhi 'load management' drama\"\n\"What Happens When a Plane Collides with a Flock of Birds?\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Intelligence community unveils plans for disclosing foreign electoral interference; promises no 'partisan politics'\"\n\"Kremlin: no official reply to invitation for Trump to visit Moscow\"\n\"What Happens When a Plane Collides with a Flock of Birds?\"\n\n[Candidate News Title]\n\"Mural of activist Greta Thunberg going up in San Francisco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the mural of activist Greta Thunberg going up in San Francisco is likely to discuss the significance of the artwork in relation to climate activism and public awareness. It may provide details on the mural's location, the artist involved, and any community reactions or events surrounding its unveiling. Additionally, the piece could explore Thunberg's impact as a global figure in environmental issues, reflecting on how such public art can influence local and broader discussions about climate change.",
+  "model": "gpt-4o-mini"
+}

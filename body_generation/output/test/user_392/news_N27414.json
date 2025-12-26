@@ -1,0 +1,21 @@
+{
+  "user_id": 392,
+  "candidate_news_id": "N27414",
+  "candidate_title": "2020 Toyota Supra Review: Why the Supra Is a Finalist and the BMW Z4 Isn't",
+  "user_history_count": 10,
+  "user_history": [
+    "Star witness expected in trial of man accused of killing fiancée",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "6 Perfect Holiday Party Dress Ideas to Copy Through New Year's",
+    "Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer",
+    "California Woman Contracts Parasitic Worms in Her Eye After Going on a Trail Run",
+    "A 13-year-old murder suspect who escaped in North Carolina is back in custody",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Hospital says 26 infants, 27 adult patients possibly exposed to tuberculosis",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+    "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Star witness expected in trial of man accused of killing fiancée\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"6 Perfect Holiday Party Dress Ideas to Copy Through New Year's\"\n\"Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer\"\n\"California Woman Contracts Parasitic Worms in Her Eye After Going on a Trail Run\"\n\"A 13-year-old murder suspect who escaped in North Carolina is back in custody\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Hospital says 26 infants, 27 adult patients possibly exposed to tuberculosis\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\n[Candidate News Title]\n\"2020 Toyota Supra Review: Why the Supra Is a Finalist and the BMW Z4 Isn't\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide a comprehensive review of the 2020 Toyota Supra, highlighting its performance features, design elements, and technology compared to competitors like the BMW Z4. Readers may expect a detailed analysis of driving experience, fuel efficiency, and the car's overall value proposition in the sports car market. It could also discuss user feedback and expert opinions on the Supra’s handling and aesthetics. Additionally, the article may include comparisons in pricing and specifications, helping readers understand why the Supra is considered a finalist in its class.",
+  "model": "gpt-4o-mini"
+}

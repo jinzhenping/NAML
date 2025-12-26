@@ -1,0 +1,21 @@
+{
+  "user_id": 81,
+  "candidate_news_id": "N119988",
+  "candidate_title": "Small Canadian island irate that Americans keep opening their mail",
+  "user_history_count": 10,
+  "user_history": [
+    "Why you should take the stairs at the Eiffel Tower, the Reichstag and Italy's cathedrals",
+    "Indian Just Threw Down The Gauntlet In The V-Twin Power Wars",
+    "Matt Tifft will miss rest of season after suffering seizure at Martinsville",
+    "Biden on being denied communion: 'I'm a practicing Catholic, I practice my faith'",
+    "Collector's items that are actually worthless today",
+    "Big 12 fines K-State, TCU, reprimands Kansas over Week 9 field-storming incidents",
+    "Michigan State standout linebacker Joe Bachie suspended by Big Ten for failed drug test",
+    "How Can a $1000 Motorcycle Jacket Prove Its Worth?",
+    "Student barred from reselling Krispy Kreme now teaming up with the doughnut chain",
+    "Far-reaching snowstorm may take shape over US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why you should take the stairs at the Eiffel Tower, the Reichstag and Italy's cathedrals\"\n\"Indian Just Threw Down The Gauntlet In The V-Twin Power Wars\"\n\"Matt Tifft will miss rest of season after suffering seizure at Martinsville\"\n\"Biden on being denied communion: 'I'm a practicing Catholic, I practice my faith'\"\n\"Collector's items that are actually worthless today\"\n\"Big 12 fines K-State, TCU, reprimands Kansas over Week 9 field-storming incidents\"\n\"Michigan State standout linebacker Joe Bachie suspended by Big Ten for failed drug test\"\n\"How Can a $1000 Motorcycle Jacket Prove Its Worth?\"\n\"Student barred from reselling Krispy Kreme now teaming up with the doughnut chain\"\n\"Far-reaching snowstorm may take shape over US\"\n\n[Candidate News Title]\n\"Small Canadian island irate that Americans keep opening their mail\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the tensions between a small Canadian island community and American residents who have been inadvertently opening their mail. It may explore the implications of this behavior on privacy and local regulations, highlighting specific incidents or examples that illustrate the community's frustrations. The piece could also touch on the broader context of cross-border interactions and how they impact local residents, possibly including perspectives from both the islanders and those involved in the mail opening. Overall, the article is expected to provide a balanced examination of the situation, focusing on the nuances of the residents' concerns.",
+  "model": "gpt-4o-mini"
+}

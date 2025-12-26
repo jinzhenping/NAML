@@ -1,0 +1,21 @@
+{
+  "user_id": 471,
+  "candidate_news_id": "N24701",
+  "candidate_title": "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case",
+  "user_history_count": 10,
+  "user_history": [
+    "South Florida principal who made controversial comments about the Holocaust is fired",
+    "Why am I a scaredy cat and you're not? The science of fright",
+    "Barneys Is Sold for Scrap, Ending an Era",
+    "Florida air show crash: Pilot killed when plane crashes",
+    "For the first time ever, a US cheese is named best in the world",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "Three Bradenton men found guilty of four murders and multiple drug and firearms offenses",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"South Florida principal who made controversial comments about the Holocaust is fired\"\n\"Why am I a scaredy cat and you're not? The science of fright\"\n\"Barneys Is Sold for Scrap, Ending an Era\"\n\"Florida air show crash: Pilot killed when plane crashes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"Three Bradenton men found guilty of four murders and multiple drug and firearms offenses\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\n[Candidate News Title]\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read the article about Kodak Black being sentenced to over three years in prison for a weapons case, you can expect a factual account of the legal proceedings surrounding his case. The article will likely outline the charges against him, details of the sentencing, and any statements made by the judge or the defense. It may also provide context about Kodak Black's previous legal issues and public persona, as well as potential implications of this sentencing on his career. Overall, the content is likely to focus on the judicial aspects rather than personal narratives.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 402,
+  "candidate_news_id": "N43723",
+  "candidate_title": "Quinnipiac honors veterans with ceremony",
+  "user_history_count": 10,
+  "user_history": [
+    "Facing Investigation, Giuliani Needed a Lawyer, but Firms Stayed Away",
+    "Time to start your student loan payments? Here's what you need to know to avoid mistakes",
+    "Gross! What you need to know and do if your hotel room has bedbugs",
+    "Lawmakers react to Governor's revised transportation plan",
+    "Trump apparently wanted Ukraine to investigate Hillary Clinton in addition to the Bidens: State Department official",
+    "House GOP looks to protect Trump by raising doubts about motives of his deputies",
+    "Trump campaign launching black outreach effort for 2020",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings",
+    "The Infertility Secret I Kept From My Mother"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Facing Investigation, Giuliani Needed a Lawyer, but Firms Stayed Away\"\n\"Time to start your student loan payments? Here's what you need to know to avoid mistakes\"\n\"Gross! What you need to know and do if your hotel room has bedbugs\"\n\"Lawmakers react to Governor's revised transportation plan\"\n\"Trump apparently wanted Ukraine to investigate Hillary Clinton in addition to the Bidens: State Department official\"\n\"House GOP looks to protect Trump by raising doubts about motives of his deputies\"\n\"Trump campaign launching black outreach effort for 2020\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings\"\n\"The Infertility Secret I Kept From My Mother\"\n\n[Candidate News Title]\n\"Quinnipiac honors veterans with ceremony\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Quinnipiac honors veterans with ceremony,\" you may expect to read about a recent event recognizing the contributions and sacrifices of veterans in connection with Quinnipiac University. The article is likely to describe the ceremony's key details, such as notable speakers, the context of the event, and any specific honors awarded to veterans. Additionally, it could provide insights into the university's ongoing commitment to supporting veterans and fostering community awareness about their service.",
+  "model": "gpt-4o-mini"
+}

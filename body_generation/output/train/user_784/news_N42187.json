@@ -1,0 +1,21 @@
+{
+  "user_id": 784,
+  "candidate_news_id": "N42187",
+  "candidate_title": "China's pork crisis is bigger than you think",
+  "user_history_count": 10,
+  "user_history": [
+    "How Much Advil Is Too Much?",
+    "Pelosi says Trump notified Russians of Baghdadi raid before telling congressional leaders",
+    "The Amazing All-You-Can-Eat Restaurant in Every State",
+    "Bigger than bin Laden? 3 striking things about Trump's announcement that Baghdadi is dead.",
+    "A 2,000-pound great white shark is swimming off the coast of Florida",
+    "The best sandwich shop in every US state and DC",
+    "Judge reopens Covington Catholic High student's defamation suit against Washington Post",
+    "25 Foods and Drinks That Are Wrecking Your Teeth and Gums",
+    "You Have to Try These Famous Sandwiches in Every State",
+    "Latest Australia shark attack sparks tourism concerns"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"How Much Advil Is Too Much?\"\n\"Pelosi says Trump notified Russians of Baghdadi raid before telling congressional leaders\"\n\"The Amazing All-You-Can-Eat Restaurant in Every State\"\n\"Bigger than bin Laden? 3 striking things about Trump's announcement that Baghdadi is dead.\"\n\"A 2,000-pound great white shark is swimming off the coast of Florida\"\n\"The best sandwich shop in every US state and DC\"\n\"Judge reopens Covington Catholic High student's defamation suit against Washington Post\"\n\"25 Foods and Drinks That Are Wrecking Your Teeth and Gums\"\n\"You Have to Try These Famous Sandwiches in Every State\"\n\"Latest Australia shark attack sparks tourism concerns\"\n\n[Candidate News Title]\n\"China's pork crisis is bigger than you think\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"China's pork crisis is bigger than you think,\" the user might expect a thorough examination of the current challenges facing China's pork industry. This could include details about the impact of disease outbreaks, such as African swine fever, and how these issues have affected pork production and prices. Additionally, the article may explore the broader implications for global markets and food security, particularly given China's significant role in pork consumption. The piece is likely to highlight both economic factors and potential policy responses, but it may also speculate on how these challenges could evolve in the near future.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 319,
+  "candidate_news_id": "N46641",
+  "candidate_title": "Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "Star witness expected in trial of man accused of killing fiancée",
+    "Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer",
+    "Father, daughter charged with raping woman, leaving her to die in desert",
+    "3 arrested in $7 million mortgage fraud that targeted the elderly",
+    "'No body, no crime,' Patrick Frazee said before fiancée vanished, friend testifies",
+    "MTSU football player Zeke Cobb arrested on two rape charges",
+    "Shakira reflects on her career-threatening injury, depression in 2017",
+    "Unidentified remains found in woods during search for missing 5-year-old",
+    "A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.",
+    "Plouffe becomes latest ex-MLBer to implicate Astros in sign-stealing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Star witness expected in trial of man accused of killing fiancée\"\n\"Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer\"\n\"Father, daughter charged with raping woman, leaving her to die in desert\"\n\"3 arrested in $7 million mortgage fraud that targeted the elderly\"\n\"'No body, no crime,' Patrick Frazee said before fiancée vanished, friend testifies\"\n\"MTSU football player Zeke Cobb arrested on two rape charges\"\n\"Shakira reflects on her career-threatening injury, depression in 2017\"\n\"Unidentified remains found in woods during search for missing 5-year-old\"\n\"A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.\"\n\"Plouffe becomes latest ex-MLBer to implicate Astros in sign-stealing\"\n\n[Candidate News Title]\n\"Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely details the circumstances surrounding the death of Anthony Grundy, a former North Carolina State and NBA player, who reportedly died from a stabbing, according to police reports. It may provide information on the event leading to his death, including any details about the location and individuals involved. Additionally, the article could explore Grundy's background, his career in basketball, and any notable achievements he had during his time as a player. It is likely to include reactions from the community and statements from law enforcement, although specific details may vary.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 679,
+  "candidate_news_id": "N123968",
+  "candidate_title": "Ford v Ferrari: the real story",
+  "user_history_count": 10,
+  "user_history": [
+    "A 2,000-pound great white shark is swimming off the coast of Florida",
+    "How to pay off your mortgage early: 4 methods that work",
+    "How to pay off your mortgage early: 4 methods that work",
+    "Mississippi woman found after being missing for days by writing S.O.S. with rocks",
+    "Where have Cape Town's great whites gone?",
+    "Latest Australia shark attack sparks tourism concerns",
+    "Exactly Why You Keep Waking up in the Middle of the Night, According to Doctors",
+    "NFL midseason report cards: 32 things we learned while grading the teams",
+    "27 Money Moves to Make Now to Prepare for 2020",
+    "Get a Peek At What Home Trends Are for 2020"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A 2,000-pound great white shark is swimming off the coast of Florida\"\n\"How to pay off your mortgage early: 4 methods that work\"\n\"How to pay off your mortgage early: 4 methods that work\"\n\"Mississippi woman found after being missing for days by writing S.O.S. with rocks\"\n\"Where have Cape Town's great whites gone?\"\n\"Latest Australia shark attack sparks tourism concerns\"\n\"Exactly Why You Keep Waking up in the Middle of the Night, According to Doctors\"\n\"NFL midseason report cards: 32 things we learned while grading the teams\"\n\"27 Money Moves to Make Now to Prepare for 2020\"\n\"Get a Peek At What Home Trends Are for 2020\"\n\n[Candidate News Title]\n\"Ford v Ferrari: the real story\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read \"Ford v Ferrari: the real story,\" you may expect an informative exploration of the historical rivalry between the Ford and Ferrari automotive brands, particularly focusing on their competition during the 1960s at the 24 Hours of Le Mans. The article is likely to delve into the motivations behind Ford's decision to challenge Ferrari, the engineering feats involved in their race cars, and the broader implications of this rivalry on automotive culture. Additionally, it may provide insights into key figures involved in this story, such as Carroll Shelby and Enzo Ferrari, while contextualizing their impact on motorsport history.",
+  "model": "gpt-4o-mini"
+}

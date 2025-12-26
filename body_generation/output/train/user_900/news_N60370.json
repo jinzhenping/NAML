@@ -1,0 +1,21 @@
+{
+  "user_id": 900,
+  "candidate_news_id": "N60370",
+  "candidate_title": "House Democrat: 'Sham' investigation of Bidens will not dominate impeachment hearings",
+  "user_history_count": 10,
+  "user_history": [
+    "Mayfield's postgame outfit gets all the memes",
+    "Ex-NFL player Winslow Jr takes plea deal before rape retrial",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Trump called woman who says he sexually assaulted her, phone records show",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Four ways Trump's tax returns could come to light",
+    "Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'",
+    "Accused killer's girlfriend reveals Colorado mom's last words",
+    "Sharks' Kane sued by Vegas casino over gambling IOUs",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mayfield's postgame outfit gets all the memes\"\n\"Ex-NFL player Winslow Jr takes plea deal before rape retrial\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Trump called woman who says he sexually assaulted her, phone records show\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Four ways Trump's tax returns could come to light\"\n\"Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'\"\n\"Accused killer's girlfriend reveals Colorado mom's last words\"\n\"Sharks' Kane sued by Vegas casino over gambling IOUs\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\n[Candidate News Title]\n\"House Democrat: 'Sham' investigation of Bidens will not dominate impeachment hearings\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a discussion on the ongoing impeachment hearings involving House Democrats and their stance on the investigations into the Biden family. The piece may outline the Democratic perspective, characterizing the investigations as politically motivated or a \"sham.\" It could provide insights into how this viewpoint will influence the proceedings and the strategies that Democrats plan to employ during the hearings. Furthermore, it is likely to include reactions from key Democratic figures, which may shed light on the broader implications for the party.",
+  "model": "gpt-4o-mini"
+}

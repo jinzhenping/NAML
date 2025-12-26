@@ -1,0 +1,21 @@
+{
+  "user_id": 652,
+  "candidate_news_id": "N49456",
+  "candidate_title": "Here are the new income tax brackets for 2020",
+  "user_history_count": 10,
+  "user_history": [
+    "Kristen Stewart on Rupert Sanders affair: 'The slut-shaming that went down was so absurd'",
+    "Costco unveils holiday savings with early Black Friday deals",
+    "My wife and I have bailed out our son, yet we have the daughter-in-law from hell",
+    "McConnell Dismisses Impeachment Updates: 'It Would Not Lead to a Removal'",
+    "EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million",
+    "19 Things You'll Need To Sacrifice Now for a Healthy Retirement",
+    "Jennifer Aniston looks amazing in a makeup-free selfie, plus more news",
+    "Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic",
+    "The biggest royal scandals of the past decade",
+    "10 Landscaping Must-Dos to Help Your Plants Survive the Winter"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kristen Stewart on Rupert Sanders affair: 'The slut-shaming that went down was so absurd'\"\n\"Costco unveils holiday savings with early Black Friday deals\"\n\"My wife and I have bailed out our son, yet we have the daughter-in-law from hell\"\n\"McConnell Dismisses Impeachment Updates: 'It Would Not Lead to a Removal'\"\n\"EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million\"\n\"19 Things You'll Need To Sacrifice Now for a Healthy Retirement\"\n\"Jennifer Aniston looks amazing in a makeup-free selfie, plus more news\"\n\"Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic\"\n\"The biggest royal scandals of the past decade\"\n\"10 Landscaping Must-Dos to Help Your Plants Survive the Winter\"\n\n[Candidate News Title]\n\"Here are the new income tax brackets for 2020\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Here are the new income tax brackets for 2020,\" you can expect a clear and informative overview of the updated income tax brackets set to take effect for the year. The article will likely outline the specific income thresholds for each tax bracket, detailing how these changes may affect individual taxpayers and households. Additionally, it could provide insights into potential implications for tax planning and financial strategies. Overall, the content is likely to focus on the practical aspects of these updates, helping readers understand their financial responsibilities in the coming year.",
+  "model": "gpt-4o-mini"
+}

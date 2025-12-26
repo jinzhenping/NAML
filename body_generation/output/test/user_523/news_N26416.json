@@ -1,0 +1,21 @@
+{
+  "user_id": 523,
+  "candidate_news_id": "N26416",
+  "candidate_title": "White House: NSC Ukraine expert wrote summary of April Trump-Zelensky call that conflicts with rough transcript",
+  "user_history_count": 10,
+  "user_history": [
+    "He was one of the first prisoners released under Trump's criminal justice reform law. Now he's accused of murder.",
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads",
+    "In a shift, Warren responds to Biden's 'angry' comment",
+    "5 Reasons A Senate Trial Would Be A Nightmare For Democrats",
+    "Adam Schiff's 'ham sandwich': Not an inquiry, just a show",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "Chris Wallace: Impeachment witness William Taylor 'was very damaging to the president'",
+    "These Are America's Favorite Liquor Brands",
+    "Lawmakers, More Polite in Private, Get Aggressive in Public Hearing",
+    "Impeachment Hearings Open With Revelation on Trump's Ukraine Pressure"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"He was one of the first prisoners released under Trump's criminal justice reform law. Now he's accused of murder.\"\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\"In a shift, Warren responds to Biden's 'angry' comment\"\n\"5 Reasons A Senate Trial Would Be A Nightmare For Democrats\"\n\"Adam Schiff's 'ham sandwich': Not an inquiry, just a show\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"Chris Wallace: Impeachment witness William Taylor 'was very damaging to the president'\"\n\"These Are America's Favorite Liquor Brands\"\n\"Lawmakers, More Polite in Private, Get Aggressive in Public Hearing\"\n\"Impeachment Hearings Open With Revelation on Trump's Ukraine Pressure\"\n\n[Candidate News Title]\n\"White House: NSC Ukraine expert wrote summary of April Trump-Zelensky call that conflicts with rough transcript\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a summary written by a National Security Council expert regarding a call between Trump and Zelensky that reportedly conflicts with the rough transcript previously released. Readers might expect to learn about the implications of this discrepancy for ongoing investigations into Trump's actions regarding Ukraine, as well as how it fits into the broader context of impeachment proceedings. The piece could also explore the potential motivations behind the expert’s summary and how it may impact public perception and political discourse surrounding the administration's dealings with Ukraine.",
+  "model": "gpt-4o-mini"
+}

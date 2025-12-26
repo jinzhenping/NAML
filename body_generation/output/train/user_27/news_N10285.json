@@ -1,0 +1,21 @@
+{
+  "user_id": 27,
+  "candidate_news_id": "N10285",
+  "candidate_title": "4 reasons you shouldn't max out your 401(k)",
+  "user_history_count": 10,
+  "user_history": [
+    "Brett McMurphy's College Football Bowl Projections After Week 7",
+    "Silver: China requested for Rockets' Morey to be fired",
+    "After throwing a punch, Dabo Swinney made CB Andrew Booth ride the manager bus back to Clemson",
+    "Judge: Brad Pitt, others can be sued over New Orleans homes",
+    "Jeff Bezos is set to lose his crown as world's richest person",
+    "Tent Spent: We Try Luxury Camping in a $100,000 Airstream",
+    "China is willing to buy $20 billion worth of US farm goods",
+    "The richest country music stars",
+    "Wild & wonderful treasures of SEMA 2019   US edition",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Brett McMurphy's College Football Bowl Projections After Week 7\"\n\"Silver: China requested for Rockets' Morey to be fired\"\n\"After throwing a punch, Dabo Swinney made CB Andrew Booth ride the manager bus back to Clemson\"\n\"Judge: Brad Pitt, others can be sued over New Orleans homes\"\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Tent Spent: We Try Luxury Camping in a $100,000 Airstream\"\n\"China is willing to buy $20 billion worth of US farm goods\"\n\"The richest country music stars\"\n\"Wild & wonderful treasures of SEMA 2019   US edition\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\n[Candidate News Title]\n\"4 reasons you shouldn't max out your 401(k)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"4 reasons you shouldn't max out your 401(k),\" the user can likely expect a detailed examination of the potential drawbacks of contributing the maximum allowed to a 401(k) retirement plan. The discussion may cover topics such as the impact on liquidity, tax implications, and the opportunity cost of tying up funds in retirement accounts. Additionally, the article is likely to highlight alternative investment options that could provide more immediate benefits. This analysis could help readers better understand their financial decisions, but it may also suggest that balancing retirement contributions with other financial goals is important.",
+  "model": "gpt-4o-mini"
+}

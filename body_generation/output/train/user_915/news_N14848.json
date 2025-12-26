@@ -1,0 +1,18 @@
+{
+  "user_id": 915,
+  "candidate_news_id": "N14848",
+  "candidate_title": "Mural of activist Greta Thunberg going up in San Francisco",
+  "user_history_count": 7,
+  "user_history": [
+    "'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says",
+    "Danica Patrick shared a sweet message congratulating Aaron Rodgers on perfect game",
+    "Missing West Point cadet found dead, officials say",
+    "50 Foods You Should Never Eat, According to Health Experts",
+    "Medication side effects: Time to call the doctor",
+    "Kirk Cousins is playing at an MVP level. Here's why it won't last.",
+    "4 big takeaways from Fiona Hill's and Alexander Vindman's transcripts"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says\"\n\"Danica Patrick shared a sweet message congratulating Aaron Rodgers on perfect game\"\n\"Missing West Point cadet found dead, officials say\"\n\"50 Foods You Should Never Eat, According to Health Experts\"\n\"Medication side effects: Time to call the doctor\"\n\"Kirk Cousins is playing at an MVP level. Here's why it won't last.\"\n\"4 big takeaways from Fiona Hill's and Alexander Vindman's transcripts\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Mural of activist Greta Thunberg going up in San Francisco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the mural of activist Greta Thunberg going up in San Francisco is likely to discuss the significance of the mural as a tribute to Thunberg's environmental activism. It may provide details about the artist behind the mural, the location’s relevance, and any community reactions to the installation. Additionally, the piece could explore how this mural fits into broader discussions on climate change and activism, highlighting the impact of visual art in promoting social issues. Overall, the article is expected to shed light on the intersection of art and activism.",
+  "model": "gpt-4o-mini"
+}

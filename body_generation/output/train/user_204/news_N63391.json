@@ -1,0 +1,21 @@
+{
+  "user_id": 204,
+  "candidate_news_id": "N63391",
+  "candidate_title": "A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000",
+  "user_history_count": 10,
+  "user_history": [
+    "NFL Week 8 Power Rankings: Old-school football rules the day",
+    "NFL Week 8 Power Rankings: Old-school football rules the day",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "Astros fire assistant GM Brandon Taubman for 'inappropriate comments'",
+    "NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "Far-reaching snowstorm may take shape over US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL Week 8 Power Rankings: Old-school football rules the day\"\n\"NFL Week 8 Power Rankings: Old-school football rules the day\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"Astros fire assistant GM Brandon Taubman for 'inappropriate comments'\"\n\"NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"Far-reaching snowstorm may take shape over US\"\n\n[Candidate News Title]\n\"A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article about the decommissioned nuclear missile complex in Arizona, you may expect to read about the history and significance of the site, including details on its construction and the reasons for its abandonment. The article is likely to discuss the current sale price of $400,000 and the potential implications of such a sale, including interest from investors or collectors. Additionally, it could explore the broader context of similar sites and the challenges associated with their maintenance and preservation.",
+  "model": "gpt-4o-mini"
+}

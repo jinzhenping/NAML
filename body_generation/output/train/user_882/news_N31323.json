@@ -1,0 +1,21 @@
+{
+  "user_id": 882,
+  "candidate_news_id": "N31323",
+  "candidate_title": "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+  "user_history_count": 10,
+  "user_history": [
+    "The Best Cruise Lines in the World: 2019 Readers' Choice Awards",
+    "Free Rodney Reed: 100,000 Sign Petition to Stop Execution of Death Row Inmate in Texas",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "A 13-year-old murder suspect who escaped in North Carolina is back in custody",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "New York City man apprehended for punching woman, 53, outside church, police say",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Best Cruise Lines in the World: 2019 Readers' Choice Awards\"\n\"Free Rodney Reed: 100,000 Sign Petition to Stop Execution of Death Row Inmate in Texas\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"A 13-year-old murder suspect who escaped in North Carolina is back in custody\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"New York City man apprehended for punching woman, 53, outside church, police say\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\n[Candidate News Title]\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about a humorous incident involving a dog who reacts dramatically when her owner decides to take the stairs instead of the elevator. The piece may describe the dog's behavior, detailing the tantrum and the specific actions that led to the amusing scene. Additionally, it could explore themes related to pet behavior and the bond between pets and their owners. The article is likely to provide insights into why dogs may react in such a way, possibly touching on their understanding of routines and preferences.",
+  "model": "gpt-4o-mini"
+}

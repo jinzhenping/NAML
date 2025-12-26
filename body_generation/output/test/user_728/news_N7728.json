@@ -1,0 +1,21 @@
+{
+  "user_id": 728,
+  "candidate_news_id": "N7728",
+  "candidate_title": "Trump hammers Dems for impeachment focus at Louisiana rally: 'We did nothing wrong -- and they're doing nothing'",
+  "user_history_count": 10,
+  "user_history": [
+    "20 Places to Go for Thanksgiving in America",
+    "When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon",
+    "American suspected of ISIS connections trapped in no man's land between Turkish, Greek borders: reports",
+    "Cat \"repeatedly\" breaks his friends out of animal shelter",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "Deval Patrick Will Enter 2020 Presidential Race on Thursday",
+    "Watch Kelly Clarkson's Kids Interview Their Hero Jason Momoa In The Cutest Video Ever",
+    "Biggest celeb weddings of the last decade",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "South Carolina teen gets life in prison for deadly elementary school shooting"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"20 Places to Go for Thanksgiving in America\"\n\"When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon\"\n\"American suspected of ISIS connections trapped in no man's land between Turkish, Greek borders: reports\"\n\"Cat \"repeatedly\" breaks his friends out of animal shelter\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\"Watch Kelly Clarkson's Kids Interview Their Hero Jason Momoa In The Cutest Video Ever\"\n\"Biggest celeb weddings of the last decade\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\n[Candidate News Title]\n\"Trump hammers Dems for impeachment focus at Louisiana rally: 'We did nothing wrong -- and they're doing nothing'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect a detailed account of former President Trump's recent remarks at a rally in Louisiana, where he criticizes Democratic leaders for their focus on impeachment. The article is likely to outline his claims of innocence regarding any wrongdoing and highlight his assertion that Democrats are not addressing pressing issues. Additionally, it may include reactions from the audience, context about the political landscape, and commentary on how this rally fits into the larger narrative of the ongoing impeachment discussions.",
+  "model": "gpt-4o-mini"
+}

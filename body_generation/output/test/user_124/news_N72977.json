@@ -1,0 +1,21 @@
+{
+  "user_id": 124,
+  "candidate_news_id": "N72977",
+  "candidate_title": "Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs",
+  "user_history_count": 10,
+  "user_history": [
+    "Barn Find: Large Collection Of Pontiac Firebirds Uncovered",
+    "Chris Paul feels he got 'stabbed in the back' with trade from Rockets",
+    "Cat \"repeatedly\" breaks his friends out of animal shelter",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "Ohio State star Chase Young to miss one more game, return vs. Penn State",
+    "Where will the Colin Kaepernick story go from here?",
+    "Ford v Ferrari: the real story",
+    "American Outdoor to split into two firms, separating its gun business",
+    "How to get Halle Berry's 6-pack abs without spending 4 hours a day at the gym",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Barn Find: Large Collection Of Pontiac Firebirds Uncovered\"\n\"Chris Paul feels he got 'stabbed in the back' with trade from Rockets\"\n\"Cat \"repeatedly\" breaks his friends out of animal shelter\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"Ohio State star Chase Young to miss one more game, return vs. Penn State\"\n\"Where will the Colin Kaepernick story go from here?\"\n\"Ford v Ferrari: the real story\"\n\"American Outdoor to split into two firms, separating its gun business\"\n\"How to get Halle Berry's 6-pack abs without spending 4 hours a day at the gym\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\n[Candidate News Title]\n\"Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may find an exploration of Taylor Swift's ongoing conflict with music industry figures Scooter Braun and Scott Borchetta regarding her ability to perform her older hits at the American Music Awards (AMAs). The piece is likely to detail the background of their relationship, including how it relates to her past music rights and the implications for her career. Additionally, it could touch on Swift's statements about this situation, providing insight into her perspective and the broader impact on artists' rights in the music industry.",
+  "model": "gpt-4o-mini"
+}

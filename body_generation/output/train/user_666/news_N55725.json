@@ -1,0 +1,21 @@
+{
+  "user_id": 666,
+  "candidate_news_id": "N55725",
+  "candidate_title": "Israel says overnight strike on Gaza house killed Islamic Jihad commander",
+  "user_history_count": 10,
+  "user_history": [
+    "Best, worst QB performances from NFL Week 9",
+    "Top takeaways from Sunday's Week 9 NFL action",
+    "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "I Took the 30-Day Squat Challenge and Here's What Happened",
+    "How the Panthers will approach their breakup with Cam Newton before 2020 season",
+    "Whitney Houston's Best Friend Robyn Crawford Breaks Her Silence on Their Love Affair in New Memoir",
+    "Where will Cam Newton play in 2020? Ranking the 7 best fits, from Panthers to Dolphins",
+    "Ford's Mach E Electric SUV Spied Looking...Interesting",
+    "Who is NFL's most overlooked top-performing player in 2019 season?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Best, worst QB performances from NFL Week 9\"\n\"Top takeaways from Sunday's Week 9 NFL action\"\n\"Severe weather shifts boat stuck on Niagara Falls rocks for 101 years\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"I Took the 30-Day Squat Challenge and Here's What Happened\"\n\"How the Panthers will approach their breakup with Cam Newton before 2020 season\"\n\"Whitney Houston's Best Friend Robyn Crawford Breaks Her Silence on Their Love Affair in New Memoir\"\n\"Where will Cam Newton play in 2020? Ranking the 7 best fits, from Panthers to Dolphins\"\n\"Ford's Mach E Electric SUV Spied Looking...Interesting\"\n\"Who is NFL's most overlooked top-performing player in 2019 season?\"\n\n[Candidate News Title]\n\"Israel says overnight strike on Gaza house killed Islamic Jihad commander\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Israel says overnight strike on Gaza house killed Islamic Jihad commander\" is likely to provide an overview of a recent military operation conducted by Israeli forces in Gaza. Readers can expect details regarding the circumstances of the strike, including its timing and location, as well as the identity of the targeted Islamic Jihad commander. The article may also explore the implications of this action on the ongoing conflict in the region and any potential responses from Palestinian factions or international observers.",
+  "model": "gpt-4o-mini"
+}

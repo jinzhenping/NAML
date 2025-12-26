@@ -1,0 +1,21 @@
+{
+  "user_id": 342,
+  "candidate_news_id": "N99744",
+  "candidate_title": "How to Get Rid of Skin Tags, According to a Dermatologist",
+  "user_history_count": 10,
+  "user_history": [
+    "Inside the world's largest plane, which has a wingspan longer than a football field and a mysterious new owner",
+    "Giuliani may have identified secret friend 'Charles' with accidental text",
+    "​'My Annoying Cough Turned Out To Be Lung Cancer'",
+    "Why you shouldn't start your car and leave it idle in cold weather",
+    "I moved from the US to the UK. Here are the 8 things that surprised me the most.",
+    "American Outdoor to split into two firms, separating its gun business",
+    "Powell's Warning to Congress About the Next Recession",
+    "WATCH: ODOT video shows blinding conditions causing chain-reaction crashes on Summit County highway",
+    "Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal",
+    "Browns cut WR Antonio Callaway hours before kickoff amid reported substance-abuse ban"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Inside the world's largest plane, which has a wingspan longer than a football field and a mysterious new owner\"\n\"Giuliani may have identified secret friend 'Charles' with accidental text\"\n\"​'My Annoying Cough Turned Out To Be Lung Cancer'\"\n\"Why you shouldn't start your car and leave it idle in cold weather\"\n\"I moved from the US to the UK. Here are the 8 things that surprised me the most.\"\n\"American Outdoor to split into two firms, separating its gun business\"\n\"Powell's Warning to Congress About the Next Recession\"\n\"WATCH: ODOT video shows blinding conditions causing chain-reaction crashes on Summit County highway\"\n\"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\"\n\"Browns cut WR Antonio Callaway hours before kickoff amid reported substance-abuse ban\"\n\n[Candidate News Title]\n\"How to Get Rid of Skin Tags, According to a Dermatologist\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"How to Get Rid of Skin Tags, According to a Dermatologist\" is likely to provide practical advice on the causes and removal methods for skin tags, which are common benign growths on the skin. Readers may expect insights from dermatological experts on both at-home treatments and professional procedures, along with information on when it might be necessary to seek medical attention. Additionally, it could explore the potential risks associated with self-removal and emphasize proper skin care practices. Overall, the content is likely to be informative, focusing on effective solutions and best practices for managing skin tags.",
+  "model": "gpt-4o-mini"
+}

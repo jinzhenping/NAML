@@ -1,0 +1,21 @@
+{
+  "user_id": 685,
+  "candidate_news_id": "N5287",
+  "candidate_title": "Deadly Arctic blast breaks records set more than 100 years ago",
+  "user_history_count": 10,
+  "user_history": [
+    "Trade deadline: Which Seahawks could be dealt?",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "F1/NASCAR Texas clash 'asinine,' says Tony Stewart",
+    "Kyle Larson demands penalties for intentional spins after 'B.S.' caution",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Three Monster Energy Series teams penalized for lug-nut infractions at Texas",
+    "Sportsbook offering refunds on bets made on Mitch Trubisky winning MVP",
+    "25 celebrities who emerged as superstars in the 2010s",
+    "Trump to spend $300 million on border wall \"quality assurance\""
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trade deadline: Which Seahawks could be dealt?\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"F1/NASCAR Texas clash 'asinine,' says Tony Stewart\"\n\"Kyle Larson demands penalties for intentional spins after 'B.S.' caution\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Three Monster Energy Series teams penalized for lug-nut infractions at Texas\"\n\"Sportsbook offering refunds on bets made on Mitch Trubisky winning MVP\"\n\"25 celebrities who emerged as superstars in the 2010s\"\n\"Trump to spend $300 million on border wall \"quality assurance\"\"\n\n[Candidate News Title]\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent severe Arctic weather event that has resulted in record-breaking low temperatures, surpassing those set over a century ago. It may provide an overview of the geographical areas most affected, the duration of the cold wave, and any notable impacts on daily life or infrastructure. Additionally, the article could include expert commentary on the implications of such extreme weather patterns in the context of climate change. Overall, readers can expect a factual account of the event's significance and potential consequences.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 82,
+  "candidate_news_id": "N18190",
+  "candidate_title": "30 Best Black Friday Deals from Costco",
+  "user_history_count": 10,
+  "user_history": [
+    "FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says",
+    "How I Got Lung Cancer at 31 Without Ever Smoking a Single Cigarette",
+    "Fast food cashier and manager fired for refusing to serve police officer",
+    "Winners, losers from Seahawks' wild overtime win over 49ers on 'Monday Night Football'",
+    "Unexpected Signs of an Unhealthy Heart",
+    "Supreme Court Appears Ready to Let Trump End DACA Program",
+    "US Coast Guard is searching for two missing boaters after a storm capsized their vessel",
+    "Dean Foods files for bankruptcy",
+    "Instagram-famous pilot reveals secrets people don't know about the job",
+    "Answers remain elusive in Virginia Beach shooting rampage"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says\"\n\"How I Got Lung Cancer at 31 Without Ever Smoking a Single Cigarette\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"Winners, losers from Seahawks' wild overtime win over 49ers on 'Monday Night Football'\"\n\"Unexpected Signs of an Unhealthy Heart\"\n\"Supreme Court Appears Ready to Let Trump End DACA Program\"\n\"US Coast Guard is searching for two missing boaters after a storm capsized their vessel\"\n\"Dean Foods files for bankruptcy\"\n\"Instagram-famous pilot reveals secrets people don't know about the job\"\n\"Answers remain elusive in Virginia Beach shooting rampage\"\n\n[Candidate News Title]\n\"30 Best Black Friday Deals from Costco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"30 Best Black Friday Deals from Costco,\" you may expect a curated list of significant discounts and offers available at Costco during the Black Friday sales event. The article is likely to highlight popular categories such as electronics, home goods, and groceries, providing insights into which items offer the best value. Additionally, it could include tips on how to navigate the shopping experience at Costco during this busy season, helping you maximize your savings and make informed purchasing decisions.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 818,
+  "candidate_news_id": "N113723",
+  "candidate_title": "Zlatan Ibrahimovic Announces Departure From LA Galaxy With 'You're Welcome'",
+  "user_history_count": 10,
+  "user_history": [
+    "Flight shaming is gaining traction and could cost airlines billions",
+    "'Potentially historic wind event' over weekend could inflame California wildfires",
+    "Helena Bonham Carter Calls Her Romance With 32-Year-Old Rye Dag Holmboe 'Unexpected Magic'",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Thousands lose power as severe thunderstorms sweep north",
+    "A way-too-early look at the favorites to win the 2020 World Series",
+    "Patriots wanted a test. Now, they need some answers",
+    "Far-reaching snowstorm may take shape over US",
+    "Alex Anthopoulos investigation proves the MLBPA is watching and will be heard"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Flight shaming is gaining traction and could cost airlines billions\"\n\"'Potentially historic wind event' over weekend could inflame California wildfires\"\n\"Helena Bonham Carter Calls Her Romance With 32-Year-Old Rye Dag Holmboe 'Unexpected Magic'\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Thousands lose power as severe thunderstorms sweep north\"\n\"A way-too-early look at the favorites to win the 2020 World Series\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Alex Anthopoulos investigation proves the MLBPA is watching and will be heard\"\n\n[Candidate News Title]\n\"Zlatan Ibrahimovic Announces Departure From LA Galaxy With 'You're Welcome'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about Zlatan Ibrahimovic's announcement regarding his departure from LA Galaxy, which may include details about his time with the team and the impact of his presence in Major League Soccer. The piece could also explore the reactions from fans and teammates, as well as potential future career moves for Ibrahimovic. Additionally, it might discuss the implications of his exit for LA Galaxy and the league as a whole, highlighting how his departure could affect team dynamics and fan engagement.",
+  "model": "gpt-4o-mini"
+}

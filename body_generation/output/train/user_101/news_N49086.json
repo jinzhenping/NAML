@@ -1,0 +1,21 @@
+{
+  "user_id": 101,
+  "candidate_news_id": "N49086",
+  "candidate_title": "Pittsburghers Celebrate World Kindness Day By Honoring Mister Rogers",
+  "user_history_count": 10,
+  "user_history": [
+    "8 Financial Mistakes in Your 20s that Can Haunt You Later",
+    "Ford hopes 'Mustang-inspired' SUV will shock Tesla, electric vehicle world",
+    "30 Christmas Gifts Under $25 for Grandma and Grandpa",
+    "Don't Save Too Little, or Too Much",
+    "Get a Leg up on Thanksgiving with 3 Classy Appetizers You Can Make WAY Ahead (like NOW)",
+    "How Much You Can Change Your Abs in 2 Weeks",
+    "These Thanksgiving Cupcakes Will Steal the Spotlight From the Turkey",
+    "Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV",
+    "9 Vegetables You Shouldn't Eat Raw",
+    "The first thing 14 lottery winners have bought after finding out they were rich"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"8 Financial Mistakes in Your 20s that Can Haunt You Later\"\n\"Ford hopes 'Mustang-inspired' SUV will shock Tesla, electric vehicle world\"\n\"30 Christmas Gifts Under $25 for Grandma and Grandpa\"\n\"Don't Save Too Little, or Too Much\"\n\"Get a Leg up on Thanksgiving with 3 Classy Appetizers You Can Make WAY Ahead (like NOW)\"\n\"How Much You Can Change Your Abs in 2 Weeks\"\n\"These Thanksgiving Cupcakes Will Steal the Spotlight From the Turkey\"\n\"Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV\"\n\"9 Vegetables You Shouldn't Eat Raw\"\n\"The first thing 14 lottery winners have bought after finding out they were rich\"\n\n[Candidate News Title]\n\"Pittsburghers Celebrate World Kindness Day By Honoring Mister Rogers\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Pittsburghers Celebrate World Kindness Day By Honoring Mister Rogers,\" the user may expect to read about local events and activities commemorating the legacy of Fred Rogers, a beloved figure known for his contributions to children's television and kindness advocacy. The piece is likely to detail how residents of Pittsburgh, reflecting on Rogers’ impact, engage in various acts of kindness and community service. It could include anecdotes or highlights from the celebrations, as well as insights into how Mister Rogers' messages continue to resonate in today's society.",
+  "model": "gpt-4o-mini"
+}

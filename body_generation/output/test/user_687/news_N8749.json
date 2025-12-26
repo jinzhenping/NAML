@@ -1,0 +1,21 @@
+{
+  "user_id": 687,
+  "candidate_news_id": "N8749",
+  "candidate_title": "Emails Outline Anti-Immigration Group's Connection to Stephen Miller",
+  "user_history_count": 10,
+  "user_history": [
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "Stars Who Served in the Military",
+    "11-year-old boy dies after being shot in chest",
+    "Mother of missing 5-year-old Taylor Williams now person of interest in child's disappearance",
+    "You Must Never Vote for Bloomberg",
+    "Mother of missing Florida girl charged; human remains found",
+    "Insiders predict: NFL Week 11 winners",
+    "Missouri high school football coach, team under fire for 'illegal' prayer after complaint from atheist group",
+    "South Carolina teen gets life in prison for deadly elementary school shooting",
+    "Popeyes stabbing: Suspect arrested in fatal attack after waiting in line for sandwich"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Stars Who Served in the Military\"\n\"11-year-old boy dies after being shot in chest\"\n\"Mother of missing 5-year-old Taylor Williams now person of interest in child's disappearance\"\n\"You Must Never Vote for Bloomberg\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"Insiders predict: NFL Week 11 winners\"\n\"Missouri high school football coach, team under fire for 'illegal' prayer after complaint from atheist group\"\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\"Popeyes stabbing: Suspect arrested in fatal attack after waiting in line for sandwich\"\n\n[Candidate News Title]\n\"Emails Outline Anti-Immigration Group's Connection to Stephen Miller\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Emails Outline Anti-Immigration Group's Connection to Stephen Miller\" is likely to examine the correspondence and communications that highlight the ties between Stephen Miller, a prominent figure in immigration policy, and an anti-immigration group. Readers can expect a detailed analysis of the content of these emails, possibly including insights into the strategies and motivations behind the group's actions. It may also explore the implications of these connections on broader immigration debates and policies, offering context on how Miller's influence has shaped public discourse.",
+  "model": "gpt-4o-mini"
+}

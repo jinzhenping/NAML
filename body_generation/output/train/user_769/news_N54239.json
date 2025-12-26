@@ -1,0 +1,21 @@
+{
+  "user_id": 769,
+  "candidate_news_id": "N54239",
+  "candidate_title": "America's Most and Least Popular Senators",
+  "user_history_count": 10,
+  "user_history": [
+    "Why you should buy your tires from Costco",
+    "Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days",
+    "15 top luxury SUVs that will keep you pampered during fall",
+    "Meteorologist calls out body-shamer: 'I will not be strapping myself into a girdle'",
+    "Fox News contributor: 'Most likely' outcome is Trump doesn't run in 2020",
+    "Will Teresa Giudice and Joe Giudice Get Divorced? 'I Don't See It Working,' She Says",
+    "A couple's attempt to re-create a picture-perfect engagement photo with a bottle of Champagne totally backfired, but the result is going viral",
+    "1,000-HP Hennessey Maximus Gladiator Is Heading To SEMA",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why you should buy your tires from Costco\"\n\"Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days\"\n\"15 top luxury SUVs that will keep you pampered during fall\"\n\"Meteorologist calls out body-shamer: 'I will not be strapping myself into a girdle'\"\n\"Fox News contributor: 'Most likely' outcome is Trump doesn't run in 2020\"\n\"Will Teresa Giudice and Joe Giudice Get Divorced? 'I Don't See It Working,' She Says\"\n\"A couple's attempt to re-create a picture-perfect engagement photo with a bottle of Champagne totally backfired, but the result is going viral\"\n\"1,000-HP Hennessey Maximus Gladiator Is Heading To SEMA\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\n[Candidate News Title]\n\"America's Most and Least Popular Senators\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"America's Most and Least Popular Senators,\" the user can expect an analysis of the current approval ratings of various U.S. senators. It is likely to present a ranking of senators based on their popularity among constituents, highlighting those who have garnered significant support as well as those facing challenges in their approval. The article may also delve into the factors contributing to these ratings, such as recent legislation, public statements, or political events that could influence public perception. Overall, the content will provide a snapshot of the political landscape in relation to individual senator popularity.",
+  "model": "gpt-4o-mini"
+}

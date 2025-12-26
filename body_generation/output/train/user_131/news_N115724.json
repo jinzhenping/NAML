@@ -1,0 +1,21 @@
+{
+  "user_id": 131,
+  "candidate_news_id": "N115724",
+  "candidate_title": "The 12 Texas cities everyone in the country is moving to",
+  "user_history_count": 10,
+  "user_history": [
+    "Sergeant runs 15K in SWAT gear, saves a life and gets engaged in 1 day",
+    "40 Best Belly-Shrinking Foods",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "What Is Clean Fasting, and How Will It Help You Speed Up Weight Loss?",
+    "12 Fall Landscaping Mistakes to Know and Avoid",
+    "Florida woman files federal lawsuit to keep her emotional support chickens",
+    "Bogus Warren Quote Ignites Immigration Anger",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Sergeant runs 15K in SWAT gear, saves a life and gets engaged in 1 day\"\n\"40 Best Belly-Shrinking Foods\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"What Is Clean Fasting, and How Will It Help You Speed Up Weight Loss?\"\n\"12 Fall Landscaping Mistakes to Know and Avoid\"\n\"Florida woman files federal lawsuit to keep her emotional support chickens\"\n\"Bogus Warren Quote Ignites Immigration Anger\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\n[Candidate News Title]\n\"The 12 Texas cities everyone in the country is moving to\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The 12 Texas cities everyone in the country is moving to,\" the user is likely to find an overview of various Texas cities that are currently experiencing significant population growth. The content may include specific factors contributing to this trend, such as job opportunities, cost of living, and quality of life in these areas. The article could also highlight demographic shifts and provide insights into what makes these cities appealing to new residents. Overall, the user may expect a blend of statistical data and qualitative descriptions of each city’s unique characteristics.",
+  "model": "gpt-4o-mini"
+}

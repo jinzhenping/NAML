@@ -1,0 +1,21 @@
+{
+  "user_id": 878,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "How a preacher sent gunmen into Burkina Faso's schools",
+    "Innocent Woman: Chicago Police Handcuffed Me While I Was Naked During Wrong Raid",
+    "Signs of Dementia: 8 Tips For Talking to Your Older Parents",
+    "Divers salvage 100-year-old liquor from WWI shipwreck",
+    "Celebrity plastic surgery transformations",
+    "Celine Dion Shares What She Misses Most About Late Husband Rene Angelil",
+    "No, Not Everyone Is Beautiful, And We'd All Be Better Off If We Stopped Saying We Are",
+    "WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist",
+    "Jury in trial of Trump adviser Stone ends first day of deliberations without verdict",
+    "15 Household Mainstays from Your Childhood That You Won't Find in New Homes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"How a preacher sent gunmen into Burkina Faso's schools\"\n\"Innocent Woman: Chicago Police Handcuffed Me While I Was Naked During Wrong Raid\"\n\"Signs of Dementia: 8 Tips For Talking to Your Older Parents\"\n\"Divers salvage 100-year-old liquor from WWI shipwreck\"\n\"Celebrity plastic surgery transformations\"\n\"Celine Dion Shares What She Misses Most About Late Husband Rene Angelil\"\n\"No, Not Everyone Is Beautiful, And We'd All Be Better Off If We Stopped Saying We Are\"\n\"WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist\"\n\"Jury in trial of Trump adviser Stone ends first day of deliberations without verdict\"\n\"15 Household Mainstays from Your Childhood That You Won't Find in New Homes\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive,\" the user is likely to find a curated selection of innovative and practical technology products that cater to various interests and age groups. The piece may highlight a range of gadgets, from smart home devices to portable tech accessories, emphasizing their functionality and appeal as gift options. Readers can expect insights into the latest trends in technology and recommendations that align with popular consumer preferences, making it easier to choose thoughtful gifts for friends and family.",
+  "model": "gpt-4o-mini"
+}

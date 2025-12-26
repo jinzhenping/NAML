@@ -1,0 +1,21 @@
+{
+  "user_id": 949,
+  "candidate_news_id": "N70523",
+  "candidate_title": "Opinion: From 0-3 to the playoffs? Mike Tomlin has Steelers back on track to make NFL history",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Brady frustrated with Patriots about Brown, Gordon",
+    "NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever",
+    "Greg Cote: Disgraced NBA referee Tim Donaghy opens up about the game-fixing scandal he caused",
+    "2019 NFL Trade Deadline grades: Rams clear up cap space by shipping Aqib Talib to Dolphins",
+    "Kobe Bryant would not even return for a guaranteed title: 'I like my rings the hard way'",
+    "Anthony Davis on possibly joining hometown Bulls: 'I mean, I am a free agent next year'",
+    "Gordon Hayward is finally, truly back",
+    "What Paul George's impending return means for the Clippers",
+    "Injured Cowboys DL Daniel Ross arrested on drug, gun charges",
+    "Did your NFL team mess up by not drafting Lamar Jackson?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Brady frustrated with Patriots about Brown, Gordon\"\n\"NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever\"\n\"Greg Cote: Disgraced NBA referee Tim Donaghy opens up about the game-fixing scandal he caused\"\n\"2019 NFL Trade Deadline grades: Rams clear up cap space by shipping Aqib Talib to Dolphins\"\n\"Kobe Bryant would not even return for a guaranteed title: 'I like my rings the hard way'\"\n\"Anthony Davis on possibly joining hometown Bulls: 'I mean, I am a free agent next year'\"\n\"Gordon Hayward is finally, truly back\"\n\"What Paul George's impending return means for the Clippers\"\n\"Injured Cowboys DL Daniel Ross arrested on drug, gun charges\"\n\"Did your NFL team mess up by not drafting Lamar Jackson?\"\n\n[Candidate News Title]\n\"Opinion: From 0-3 to the playoffs? Mike Tomlin has Steelers back on track to make NFL history\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Opinion: From 0-3 to the playoffs? Mike Tomlin has Steelers back on track to make NFL history,\" you can expect a discussion around the Pittsburgh Steelers' recent turnaround in performance following a challenging start to the season. The article may analyze Mike Tomlin's coaching strategies and adjustments that have revitalized the team's prospects, possibly highlighting key players who have contributed to this resurgence. Additionally, it could speculate on the historical significance of such a turnaround and what it means for the team's playoff chances moving forward.",
+  "model": "gpt-4o-mini"
+}

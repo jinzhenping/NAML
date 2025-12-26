@@ -1,0 +1,21 @@
+{
+  "user_id": 592,
+  "candidate_news_id": "N25253",
+  "candidate_title": "In impeachment hearings, Donald Trump is the one blocking firsthand witnesses",
+  "user_history_count": 10,
+  "user_history": [
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "Monday Measure: Why Clemson deserves playoff inclusion (and more respect)",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Is the Alabama Football Dynasty Ending?",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "Why the College Football Playoff selection committee can't make a case for Alabama",
+    "Supreme Court Justices Couldn't Stop Interrupting Each Other During DACA Oral Arguments",
+    "Powell's Warning to Congress About the Next Recession"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"Monday Measure: Why Clemson deserves playoff inclusion (and more respect)\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Is the Alabama Football Dynasty Ending?\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Why the College Football Playoff selection committee can't make a case for Alabama\"\n\"Supreme Court Justices Couldn't Stop Interrupting Each Other During DACA Oral Arguments\"\n\"Powell's Warning to Congress About the Next Recession\"\n\n[Candidate News Title]\n\"In impeachment hearings, Donald Trump is the one blocking firsthand witnesses\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"In impeachment hearings, Donald Trump is the one blocking firsthand witnesses,\" you may expect a detailed examination of the current impeachment proceedings involving Donald Trump. The article is likely to discuss the implications of Trump's actions in obstructing witness testimonies and how this affects the overall legal and political landscape. It could also provide insights into the reactions from various political figures and the potential consequences for the impeachment process. Additionally, the article may explore the broader context of these hearings within the ongoing political discourse.",
+  "model": "gpt-4o-mini"
+}

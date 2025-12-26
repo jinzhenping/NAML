@@ -1,0 +1,18 @@
+{
+  "user_id": 25,
+  "candidate_news_id": "N13521",
+  "candidate_title": "20 IRS audit red flags",
+  "user_history_count": 7,
+  "user_history": [
+    "​20 Funny Things People in the 1970s Were Totally Guilty of Doing",
+    "Prince Harry acknowledges tensions with William in ITV interview",
+    "A wellness influencer told her Instagram followers that shampoo causes weight gain, but nutrition experts are calling her comments 'madness'",
+    "Hocus Pocus: What the Cast Has Been Up to Since 1993",
+    "Eating This One Food Before 8 a.m. Could Flatten Your Belly",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "Walmart's Pre-Holiday Deals Are Live Right Now"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"​20 Funny Things People in the 1970s Were Totally Guilty of Doing\"\n\"Prince Harry acknowledges tensions with William in ITV interview\"\n\"A wellness influencer told her Instagram followers that shampoo causes weight gain, but nutrition experts are calling her comments 'madness'\"\n\"Hocus Pocus: What the Cast Has Been Up to Since 1993\"\n\"Eating This One Food Before 8 a.m. Could Flatten Your Belly\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Walmart's Pre-Holiday Deals Are Live Right Now\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"20 IRS audit red flags\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read the article titled \"20 IRS audit red flags,\" you may expect an informative overview of common factors that could trigger an audit by the IRS. The piece is likely to outline specific behaviors or financial practices that may raise suspicion, such as unusually high deductions or discrepancies in reported income. Additionally, it could include expert insights or examples to illustrate these red flags, helping readers understand the importance of proper tax reporting and compliance. This could be particularly relevant for individuals looking to avoid potential audits in their financial planning.",
+  "model": "gpt-4o-mini"
+}

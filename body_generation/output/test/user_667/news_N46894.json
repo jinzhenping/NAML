@@ -1,0 +1,21 @@
+{
+  "user_id": 667,
+  "candidate_news_id": "N46894",
+  "candidate_title": "How much turkey do you need to buy per person?",
+  "user_history_count": 10,
+  "user_history": [
+    "LeBron James says need for load management starts at AAU level: 'AAU coaches couldn't give a damn about a kid'",
+    "Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media",
+    "Nonsmoking mom of 4 thought she had asthma, but it was late-stage lung cancer",
+    "Bolivia's Jeanine Anez declares herself acting president as Evo Morales vows to fight from abroad",
+    "Les Miles Has Some Thoughts on the Shape of the Earth",
+    "Husband, 106, and wife, 105, are named world's oldest living couple",
+    "Americans now have a record $14 trillion in debt",
+    "Stocks close higher on optimism over China trade deal",
+    "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case",
+    "Deval Patrick Will Enter 2020 Presidential Race on Thursday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"LeBron James says need for load management starts at AAU level: 'AAU coaches couldn't give a damn about a kid'\"\n\"Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media\"\n\"Nonsmoking mom of 4 thought she had asthma, but it was late-stage lung cancer\"\n\"Bolivia's Jeanine Anez declares herself acting president as Evo Morales vows to fight from abroad\"\n\"Les Miles Has Some Thoughts on the Shape of the Earth\"\n\"Husband, 106, and wife, 105, are named world's oldest living couple\"\n\"Americans now have a record $14 trillion in debt\"\n\"Stocks close higher on optimism over China trade deal\"\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\n[Candidate News Title]\n\"How much turkey do you need to buy per person?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"How much turkey do you need to buy per person?\", you may expect to find practical guidelines on determining the appropriate amount of turkey to purchase for holiday gatherings. The article could cover factors such as the size of the gathering, age demographics of the attendees, and whether other dishes will be served. Additionally, it is likely to provide tips on portion sizes—possibly suggesting a range based on the number of guests—to help ensure that everyone is adequately fed without excessive leftovers.",
+  "model": "gpt-4o-mini"
+}

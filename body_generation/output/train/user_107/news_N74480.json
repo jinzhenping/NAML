@@ -1,0 +1,21 @@
+{
+  "user_id": 107,
+  "candidate_news_id": "N74480",
+  "candidate_title": "When to Use Your Oven's Convection Function",
+  "user_history_count": 10,
+  "user_history": [
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Clippers set bad precedent resting Kawhi Leonard against Bucks",
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "Ask Mr. Dad: 'Bad dad' can't connect with kids through play",
+    "EU ambassador's miraculous 'now I remember' moment",
+    "Holocaust survivor under guard amid death threats",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Republicans urge Bevin to provide proof of election fraud or concede"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Clippers set bad precedent resting Kawhi Leonard against Bucks\"\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"Ask Mr. Dad: 'Bad dad' can't connect with kids through play\"\n\"EU ambassador's miraculous 'now I remember' moment\"\n\"Holocaust survivor under guard amid death threats\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Republicans urge Bevin to provide proof of election fraud or concede\"\n\n[Candidate News Title]\n\"When to Use Your Oven's Convection Function\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"When to Use Your Oven's Convection Function,\" they may expect a detailed explanation of how convection ovens operate compared to traditional ovens. The article is likely to outline the benefits of using the convection setting, such as improved heat circulation and reduced cooking times for certain dishes. It may also provide practical tips on when to opt for convection versus standard baking, potentially including specific cooking scenarios or types of food that yield better results with this function. Overall, the content will likely aim to enhance the user's cooking knowledge and efficiency in the kitchen.",
+  "model": "gpt-4o-mini"
+}

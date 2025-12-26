@@ -1,0 +1,18 @@
+{
+  "user_id": 393,
+  "candidate_news_id": "N61065",
+  "candidate_title": "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+  "user_history_count": 7,
+  "user_history": [
+    "50 Delicious Dutch Oven Recipes",
+    "11 popular American-Chinese foods that you won't actually find in China",
+    "Biggest celebrity breakups of the decade",
+    "You're never too old! Celebrities who found love after 40",
+    "Week in celebrity photos for Oct. 21-25, 2019",
+    "Week in celebrity photos for Oct. 28-Nov. 1, 2019",
+    "These Brides Got Married in the Hawaiian Jungle, and There Was a Tiny Horse Involved - It Was Wild!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"50 Delicious Dutch Oven Recipes\"\n\"11 popular American-Chinese foods that you won't actually find in China\"\n\"Biggest celebrity breakups of the decade\"\n\"You're never too old! Celebrities who found love after 40\"\n\"Week in celebrity photos for Oct. 21-25, 2019\"\n\"Week in celebrity photos for Oct. 28-Nov. 1, 2019\"\n\"These Brides Got Married in the Hawaiian Jungle, and There Was a Tiny Horse Involved - It Was Wild!\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\", you can expect a straightforward overview of Lamar Odom's engagement to Sabrina Parr, including details about the engagement itself and possibly a description of the ring. The article may provide insights into their relationship, touching on how they met and their journey together. Additionally, it could include quotes or reactions from Odom or Parr, as well as commentary from fans or celebrity watchers, contextualizing the significance of their engagement within the realm of celebrity relationships.",
+  "model": "gpt-4o-mini"
+}

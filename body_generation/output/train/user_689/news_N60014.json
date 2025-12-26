@@ -1,0 +1,21 @@
+{
+  "user_id": 689,
+  "candidate_news_id": "N60014",
+  "candidate_title": "Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this",
+  "user_history_count": 10,
+  "user_history": [
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "Bill Belichick punts on why he let Josh Gordon go to Seattle",
+    "Antonio Brown posts picture of misspelled name on Patriots key card, calls it 'disrespect'",
+    "Everything We Think We Know About the 2020 Ford Bronco",
+    "Celeb couples with big age gaps",
+    "1970 Dodge Charger destroyed by man sick of lowballers   he showed them!",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Holocaust survivor under guard amid death threats"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"Bill Belichick punts on why he let Josh Gordon go to Seattle\"\n\"Antonio Brown posts picture of misspelled name on Patriots key card, calls it 'disrespect'\"\n\"Everything We Think We Know About the 2020 Ford Bronco\"\n\"Celeb couples with big age gaps\"\n\"1970 Dodge Charger destroyed by man sick of lowballers   he showed them!\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Holocaust survivor under guard amid death threats\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this\" is likely to explore the significance of Kaepernick's workout as a moment of opportunity within the context of his controversial history in the NFL. Readers can expect a discussion on the implications of his return to the sport, including the challenges he faced and the broader societal issues tied to his activism. The piece may also analyze public and league reactions, providing insights into how this event reflects ongoing debates about race and sports in America.",
+  "model": "gpt-4o-mini"
+}

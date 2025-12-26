@@ -1,0 +1,21 @@
+{
+  "user_id": 603,
+  "candidate_news_id": "N16244",
+  "candidate_title": "Eager to witness 'history,' people, protesters huddle outside Trump impeachment inquiry hearing",
+  "user_history_count": 10,
+  "user_history": [
+    "Former US Senator Kay Hagan dead at 66",
+    "9 Abandoned Mansions That Will Make Your Toes Curl",
+    "Windsor Castle's Inner Hall Opens to the Public for First Time in 150 Years",
+    "What the royals would earn in the real world",
+    "Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news",
+    "14 Parenting Rules the Royals Have to Follow",
+    "J.C. Penney Plots a Comeback: Less Clutter, More Yoga Classes",
+    "Brian Tarantina, 'Marvelous Mrs. Maisel' and 'Gilmore Girls' Actor, Dies at 60",
+    "Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update",
+    "2019 WWE Survivor Series matches, card, date, location, start time, rumors, predictions"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former US Senator Kay Hagan dead at 66\"\n\"9 Abandoned Mansions That Will Make Your Toes Curl\"\n\"Windsor Castle's Inner Hall Opens to the Public for First Time in 150 Years\"\n\"What the royals would earn in the real world\"\n\"Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news\"\n\"14 Parenting Rules the Royals Have to Follow\"\n\"J.C. Penney Plots a Comeback: Less Clutter, More Yoga Classes\"\n\"Brian Tarantina, 'Marvelous Mrs. Maisel' and 'Gilmore Girls' Actor, Dies at 60\"\n\"Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update\"\n\"2019 WWE Survivor Series matches, card, date, location, start time, rumors, predictions\"\n\n[Candidate News Title]\n\"Eager to witness 'history,' people, protesters huddle outside Trump impeachment inquiry hearing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide an overview of the ongoing impeachment inquiry involving former President Trump, detailing the scene outside the hearing as supporters and protesters gather in anticipation. Readers may expect insights into the motivations of those attending, the broader implications of the inquiry, and key moments from the proceedings. Additionally, the piece could touch on the political atmosphere surrounding the inquiry and offer context regarding public opinion. Overall, it will aim to inform about the dynamics at play during this significant event in American politics.",
+  "model": "gpt-4o-mini"
+}

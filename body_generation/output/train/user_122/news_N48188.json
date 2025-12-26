@@ -1,0 +1,21 @@
+{
+  "user_id": 122,
+  "candidate_news_id": "N48188",
+  "candidate_title": "45 Abandoned Places Around the World That Are Eerily Beautiful",
+  "user_history_count": 10,
+  "user_history": [
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "Most Underrated College Football Teams After 9 Weeks: Louisville, SMU, and Others",
+    "Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news",
+    "Walmart's Pre-Holiday Deals Are Live Right Now",
+    "Las Vegas adopts ban on sleeping, camping on streets, sidewalks",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Mezcal vs. Tequila What Are the Differences?",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Happy Friday! What if You Always Had It Off? Why Don't You?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"Most Underrated College Football Teams After 9 Weeks: Louisville, SMU, and Others\"\n\"Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news\"\n\"Walmart's Pre-Holiday Deals Are Live Right Now\"\n\"Las Vegas adopts ban on sleeping, camping on streets, sidewalks\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Mezcal vs. Tequila What Are the Differences?\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Happy Friday! What if You Always Had It Off? Why Don't You?\"\n\n[Candidate News Title]\n\"45 Abandoned Places Around the World That Are Eerily Beautiful\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"45 Abandoned Places Around the World That Are Eerily Beautiful,\" you can expect a detailed exploration of various abandoned sites globally, highlighting their unique aesthetics and historical significance. The article may provide insights into the reasons for their abandonment, such as economic decline or natural disasters, and showcase captivating visuals that illustrate their eerie beauty. You might also find information about how these locations have become tourist attractions or subjects of fascination for urban explorers and photographers, offering a blend of intrigue and education.",
+  "model": "gpt-4o-mini"
+}

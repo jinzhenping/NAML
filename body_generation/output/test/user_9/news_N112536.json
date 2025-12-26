@@ -1,0 +1,21 @@
+{
+  "user_id": 9,
+  "candidate_news_id": "N112536",
+  "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+  "user_history_count": 10,
+  "user_history": [
+    "Mississippi woman found after being missing for days by writing S.O.S. with rocks",
+    "Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights",
+    "The News In Cartoons",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "President Trump says UFC reception was 'like walking into a Trump Rally'",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Hugh Hefner's son Cooper weds 'Harry Potter' actress",
+    "Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.",
+    "Senior Trump official embellished résumé, had face on fake Time cover"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mississippi woman found after being missing for days by writing S.O.S. with rocks\"\n\"Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights\"\n\"The News In Cartoons\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"President Trump says UFC reception was 'like walking into a Trump Rally'\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Hugh Hefner's son Cooper weds 'Harry Potter' actress\"\n\"Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a specific region in the United States that has experienced unseasonably warm temperatures, remaining above 80 degrees since March. Readers may find information about the location's climate patterns, potential impacts on local agriculture or wildlife, and how such temperatures compare to historical averages. Additionally, the article could explore the implications of this weather on tourism and outdoor activities, as well as any discussions among residents regarding climate change. Overall, it may provide insights into both the current conditions and broader environmental trends.",
+  "model": "gpt-4o-mini"
+}

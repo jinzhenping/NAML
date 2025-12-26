@@ -1,0 +1,21 @@
+{
+  "user_id": 712,
+  "candidate_news_id": "N127836",
+  "candidate_title": "Ruth Bader Ginsburg misses court due to illness",
+  "user_history_count": 10,
+  "user_history": [
+    "Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo",
+    "This Asteroid May Actually Be the Smallest Dwarf Planet in Solar System",
+    "The world's largest nuclear power producer is melting down",
+    "New York lawmakers are considering a ban on tackle football for kids under 12",
+    "Hocus Pocus: What the Cast Has Been Up to Since 1993",
+    "Fisherman faces prison, fine for cruel act on rare fish",
+    "Jorge Masvidal says he's 'dead serious' about wanting to box against Canelo Alvarez",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Snow crab sells for record price in Japan",
+    "'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo\"\n\"This Asteroid May Actually Be the Smallest Dwarf Planet in Solar System\"\n\"The world's largest nuclear power producer is melting down\"\n\"New York lawmakers are considering a ban on tackle football for kids under 12\"\n\"Hocus Pocus: What the Cast Has Been Up to Since 1993\"\n\"Fisherman faces prison, fine for cruel act on rare fish\"\n\"Jorge Masvidal says he's 'dead serious' about wanting to box against Canelo Alvarez\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Snow crab sells for record price in Japan\"\n\"'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint\"\n\n[Candidate News Title]\n\"Ruth Bader Ginsburg misses court due to illness\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss Ruth Bader Ginsburg's recent absence from court due to illness, providing details about her health status and the implications of her absence for ongoing cases. It may cover the context of her role in the Supreme Court, including her contributions to significant rulings and her influence on legal discourse. Additionally, the article could include reactions from colleagues or legal experts regarding her health and what it means for the court's functioning. This situation may raise questions about her ability to fulfill her duties moving forward.",
+  "model": "gpt-4o-mini"
+}

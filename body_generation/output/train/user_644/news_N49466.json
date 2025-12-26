@@ -1,0 +1,21 @@
+{
+  "user_id": 644,
+  "candidate_news_id": "N49466",
+  "candidate_title": "3 awful reasons to take Social Security benefits at 65",
+  "user_history_count": 10,
+  "user_history": [
+    "Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "I Took the 30-Day Squat Challenge and Here's What Happened",
+    "Trump wanted Barr to hold news conference saying the president broke no laws in call with Ukrainian leader",
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads",
+    "As public hearings loom, Pence aide meets with U.S. House committees",
+    "Far-reaching snowstorm may take shape over US",
+    "The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "Woods made the right call keeping Reed in the U.S. fold"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"I Took the 30-Day Squat Challenge and Here's What Happened\"\n\"Trump wanted Barr to hold news conference saying the president broke no laws in call with Ukrainian leader\"\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\"As public hearings loom, Pence aide meets with U.S. House committees\"\n\"Far-reaching snowstorm may take shape over US\"\n\"The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"Woods made the right call keeping Reed in the U.S. fold\"\n\n[Candidate News Title]\n\"3 awful reasons to take Social Security benefits at 65\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In reading \"3 awful reasons to take Social Security benefits at 65,\" the user is likely to expect an informative discussion on potential drawbacks of early Social Security benefits. The article may outline specific reasons why opting for benefits at this age could be disadvantageous, possibly including reduced monthly payments, the impact on long-term financial stability, and considerations related to health care costs. Additionally, it could provide insights into alternative strategies for maximizing Social Security benefits in the context of retirement planning.",
+  "model": "gpt-4o-mini"
+}

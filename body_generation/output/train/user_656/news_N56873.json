@@ -1,0 +1,21 @@
+{
+  "user_id": 656,
+  "candidate_news_id": "N56873",
+  "candidate_title": "Can you answer these real Jeopardy questions about TV shows?",
+  "user_history_count": 10,
+  "user_history": [
+    "9 Types of Retirement Income That Are Tax-Free",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "New York police officer shot, suspect dead in overnight confrontation",
+    "Original Delta Airlines Flight Attendant Dies at 103",
+    "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+    "Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard",
+    "Order! Order! Britain's speaker quits Brexit hotseat",
+    "2nd sister of Knicks' Bullock killed in Baltimore",
+    "DOJ sues Walmart for allegedly discriminating against a Navy reserve officer",
+    "My late sister stole my inheritance and swindled our mother"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"9 Types of Retirement Income That Are Tax-Free\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"New York police officer shot, suspect dead in overnight confrontation\"\n\"Original Delta Airlines Flight Attendant Dies at 103\"\n\"Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony\"\n\"Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard\"\n\"Order! Order! Britain's speaker quits Brexit hotseat\"\n\"2nd sister of Knicks' Bullock killed in Baltimore\"\n\"DOJ sues Walmart for allegedly discriminating against a Navy reserve officer\"\n\"My late sister stole my inheritance and swindled our mother\"\n\n[Candidate News Title]\n\"Can you answer these real Jeopardy questions about TV shows?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you decide to click on the article titled \"Can you answer these real Jeopardy questions about TV shows?\", you are likely expecting a quiz format that challenges your knowledge of television series featured on the popular game show. The article may include a variety of questions that cover different genres and eras of TV, allowing you to test your familiarity with iconic shows and characters. Additionally, it could provide insights into the types of questions that contestants face, possibly offering a glimpse into the show's trivia style and how it engages its audience.",
+  "model": "gpt-4o-mini"
+}

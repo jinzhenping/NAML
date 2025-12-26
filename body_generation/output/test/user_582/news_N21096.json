@@ -1,0 +1,21 @@
+{
+  "user_id": 582,
+  "candidate_news_id": "N21096",
+  "candidate_title": "60 of the Most Adorable Animal Pictures That Will Make You Say \"Awww\"",
+  "user_history_count": 10,
+  "user_history": [
+    "Caterpillar lays off 120 workers as trade war hits sales",
+    "Ex-NFL player Winslow Jr takes plea deal before rape retrial",
+    "Week 9 winners, losers: Russell Wilson taking lead in MVP race; Adam Gase in trouble",
+    "Our 41 Favorite Fall Cakes",
+    "Vanna White hosts 'Wheel of Fortune' after Sajak has surgery",
+    "Heisman Watch: Joe Burrow is the frontrunner, and there's not a close second",
+    "Dean Foods files for bankruptcy",
+    "Here are the best cruise lines for families, couples and those on a budget",
+    "Hardee's Thanksgiving In A Box Comes With Stuffing-Coated Chicken Tenders And Sweet Potato Waffle Fries",
+    "11 reasons to watch Week 11 of the 2019 NFL season"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Caterpillar lays off 120 workers as trade war hits sales\"\n\"Ex-NFL player Winslow Jr takes plea deal before rape retrial\"\n\"Week 9 winners, losers: Russell Wilson taking lead in MVP race; Adam Gase in trouble\"\n\"Our 41 Favorite Fall Cakes\"\n\"Vanna White hosts 'Wheel of Fortune' after Sajak has surgery\"\n\"Heisman Watch: Joe Burrow is the frontrunner, and there's not a close second\"\n\"Dean Foods files for bankruptcy\"\n\"Here are the best cruise lines for families, couples and those on a budget\"\n\"Hardee's Thanksgiving In A Box Comes With Stuffing-Coated Chicken Tenders And Sweet Potato Waffle Fries\"\n\"11 reasons to watch Week 11 of the 2019 NFL season\"\n\n[Candidate News Title]\n\"60 of the Most Adorable Animal Pictures That Will Make You Say \"Awww\"\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"60 of the Most Adorable Animal Pictures That Will Make You Say 'Awww',\" you may expect a curated collection of charming and heartwarming images featuring various animals. The article is likely to showcase a diverse range of species, from common pets like dogs and cats to more exotic animals, highlighting their cute behaviors or unique characteristics. Alongside the visuals, there could be brief descriptions or fun facts about each animal, providing context and enhancing the viewer's appreciation for the content.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 368,
+  "candidate_news_id": "N25751",
+  "candidate_title": "This Arctic blast is in its final day. But the cold isn't over quite yet",
+  "user_history_count": 10,
+  "user_history": [
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Teresa Giudice, daughters reunite with Joe in Italy: See the pic!",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Teresa Giudice, daughters reunite with Joe in Italy: See the pic!",
+    "Tristan Thompson Drops Flirty Comment on Ex Khloe Kardashian's Instagram"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Teresa Giudice, daughters reunite with Joe in Italy: See the pic!\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Teresa Giudice, daughters reunite with Joe in Italy: See the pic!\"\n\"Tristan Thompson Drops Flirty Comment on Ex Khloe Kardashian's Instagram\"\n\n[Candidate News Title]\n\"This Arctic blast is in its final day. But the cold isn't over quite yet\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"This Arctic blast is in its final day. But the cold isn't over quite yet,\" you may expect to read about the current weather conditions associated with the Arctic blast, detailing how it has impacted various regions. The article is likely to include information on temperature drops and potential weather advisories, as well as forecasts indicating the continuation of cold weather patterns in certain areas. Additionally, it may discuss any lingering effects of this weather system and offer tips for staying safe during the extreme cold.",
+  "model": "gpt-4o-mini"
+}

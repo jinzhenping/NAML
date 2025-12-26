@@ -1,0 +1,21 @@
+{
+  "user_id": 110,
+  "candidate_news_id": "N19586",
+  "candidate_title": "Experts Explain Why You Might Want to Stop Sleeping on Your Stomach and How to Do It",
+  "user_history_count": 10,
+  "user_history": [
+    "Sex offenders sue sheriff who put 'no trick-or-treat' signs in their front yards",
+    "Smart watch calls 911 after 2 hikers fall off cliff",
+    "The toxic bubble of technical debt threatening America",
+    "Airbnb bans 'party houses' following Halloween shooting",
+    "Jepkosgei claims NYC Marathon in women's upset victory",
+    "How I Got Lung Cancer at 31 Without Ever Smoking a Single Cigarette",
+    "Opinions | Trump is in trouble. Tuesday's elections are proof.",
+    "Iran downs drone over southern port city - IRNA",
+    "Republicans are throwing Giuliani under the bus. But there's a problem.",
+    "Apple AirPods (2019) vs Apple AirPods: what's the difference?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Sex offenders sue sheriff who put 'no trick-or-treat' signs in their front yards\"\n\"Smart watch calls 911 after 2 hikers fall off cliff\"\n\"The toxic bubble of technical debt threatening America\"\n\"Airbnb bans 'party houses' following Halloween shooting\"\n\"Jepkosgei claims NYC Marathon in women's upset victory\"\n\"How I Got Lung Cancer at 31 Without Ever Smoking a Single Cigarette\"\n\"Opinions | Trump is in trouble. Tuesday's elections are proof.\"\n\"Iran downs drone over southern port city - IRNA\"\n\"Republicans are throwing Giuliani under the bus. But there's a problem.\"\n\"Apple AirPods (2019) vs Apple AirPods: what's the difference?\"\n\n[Candidate News Title]\n\"Experts Explain Why You Might Want to Stop Sleeping on Your Stomach and How to Do It\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the potential health implications of sleeping on one’s stomach, a position that may not be ideal for spinal alignment and could lead to discomfort or pain over time. It may explain the physiological reasons behind why this sleeping posture might be problematic, including impacts on neck and back health. Additionally, the article could offer practical suggestions for transitioning to alternative sleeping positions, such as on the side or back, which may promote better rest and overall well-being.",
+  "model": "gpt-4o-mini"
+}

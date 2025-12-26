@@ -1,0 +1,21 @@
+{
+  "user_id": 325,
+  "candidate_news_id": "N112536",
+  "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+  "user_history_count": 10,
+  "user_history": [
+    "Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days",
+    "Bill Macy, Bea Arthur's Husband on 'Maude,' Dies at 97",
+    "Willie Brown, Hall of Famer and Raiders legend, dies at 78",
+    "'Dancing With the Stars': 'Devastated' Christie Brinkley sobbed over Sailor's elimination",
+    "This Honda F1 V-10 Is the Perfect Engine for Your Dream Swap",
+    "Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "Redskins name rookie Dwayne Haskins starter for rest of season"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days\"\n\"Bill Macy, Bea Arthur's Husband on 'Maude,' Dies at 97\"\n\"Willie Brown, Hall of Famer and Raiders legend, dies at 78\"\n\"'Dancing With the Stars': 'Devastated' Christie Brinkley sobbed over Sailor's elimination\"\n\"This Honda F1 V-10 Is the Perfect Engine for Your Dream Swap\"\n\"Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"Redskins name rookie Dwayne Haskins starter for rest of season\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"There's a place in the US where it's been over 80 degrees since March,\" you may expect to learn about a specific location in the United States that has experienced unusually warm temperatures throughout a significant part of the year. The article is likely to provide details about the climate patterns in this area, possibly discussing how such weather conditions could impact local lifestyles, businesses, or tourism. Additionally, it may explore the implications of this ongoing warmth in the context of broader climate trends, while speculating on how such anomalies might affect future weather patterns in the region.",
+  "model": "gpt-4o-mini"
+}

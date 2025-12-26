@@ -1,0 +1,21 @@
+{
+  "user_id": 637,
+  "candidate_news_id": "N100207",
+  "candidate_title": "9 Incredible Places You'd Never Even Think To Spend Thanksgiving",
+  "user_history_count": 10,
+  "user_history": [
+    "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+    "How To Open a Can Without a Can Opener",
+    "2019 Gold Glove Award winners announced; Lorenzo Cain finally included",
+    "This Copycat Cracker Barrel Hashbrown Casserole Recipe Is the Ultimate One-Dish Breakfast",
+    "Meghan McCain GOES IN on Donald Trump Jr. on 'The View'",
+    "The Perfect Family Road Trip along Florida's 30A",
+    "The 25 richest families in America",
+    "Donald Trump Jr. says 'View' hosts 'tried to smear me': 'They were totally triggered'",
+    "See the most expensive watch ever sold at auction",
+    "What Is a Sleep Divorce and Should You Get One?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"How To Open a Can Without a Can Opener\"\n\"2019 Gold Glove Award winners announced; Lorenzo Cain finally included\"\n\"This Copycat Cracker Barrel Hashbrown Casserole Recipe Is the Ultimate One-Dish Breakfast\"\n\"Meghan McCain GOES IN on Donald Trump Jr. on 'The View'\"\n\"The Perfect Family Road Trip along Florida's 30A\"\n\"The 25 richest families in America\"\n\"Donald Trump Jr. says 'View' hosts 'tried to smear me': 'They were totally triggered'\"\n\"See the most expensive watch ever sold at auction\"\n\"What Is a Sleep Divorce and Should You Get One?\"\n\n[Candidate News Title]\n\"9 Incredible Places You'd Never Even Think To Spend Thanksgiving\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"9 Incredible Places You'd Never Even Think To Spend Thanksgiving\" is likely to explore unique and unconventional destinations for celebrating the Thanksgiving holiday. Readers may expect a description of various locations that offer distinct experiences, possibly highlighting local traditions, activities, or culinary offerings that differ from the typical Thanksgiving setting. The piece could include insights into why these places are special choices for the holiday, such as their cultural significance or scenic beauty. Overall, the article may provide inspiration for those looking to break away from traditional Thanksgiving norms and seek out new adventures.",
+  "model": "gpt-4o-mini"
+}

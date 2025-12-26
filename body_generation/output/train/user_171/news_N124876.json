@@ -1,0 +1,21 @@
+{
+  "user_id": 171,
+  "candidate_news_id": "N124876",
+  "candidate_title": "Pregnant firefighter tackles bushfires: 'I don't care if you don't like it'",
+  "user_history_count": 10,
+  "user_history": [
+    "Latest Australia shark attack sparks tourism concerns",
+    "'Extreme haunted' house is 'torture chamber' in disguise, says petition to close it",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'",
+    "Kentucky man dies trying to save sons from Florida rip current during family trip",
+    "Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Pregnant Florida woman uses AR-15 to fatally shoot armed intruder",
+    "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+    "A controversial comedian and a former child star are eliminated on 'Masked Singer'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Latest Australia shark attack sparks tourism concerns\"\n\"'Extreme haunted' house is 'torture chamber' in disguise, says petition to close it\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'\"\n\"Kentucky man dies trying to save sons from Florida rip current during family trip\"\n\"Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Pregnant Florida woman uses AR-15 to fatally shoot armed intruder\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"A controversial comedian and a former child star are eliminated on 'Masked Singer'\"\n\n[Candidate News Title]\n\"Pregnant firefighter tackles bushfires: 'I don't care if you don't like it'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Pregnant firefighter tackles bushfires: 'I don't care if you don't like it',\" the user can expect to read about the experiences of a firefighter who is managing the dual challenges of pregnancy and responding to bushfire emergencies. The piece may explore the complexities and physical demands of her role, as well as the reactions she receives from the public and her colleagues regarding her decision to continue working in such a demanding environment. Additionally, it is likely to highlight her perspectives on gender roles in firefighting and the importance of representation in traditionally male-dominated fields.",
+  "model": "gpt-4o-mini"
+}

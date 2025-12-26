@@ -1,0 +1,422 @@
+[
+  {
+    "user_id": 558,
+    "candidate_news_id": "N71001",
+    "candidate_title": "Liver transplant leads to unbreakable bond between strangers",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Liver transplant leads to unbreakable bond between strangers\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Liver transplant leads to unbreakable bond between strangers\" is likely to explore the profound connections that can develop between organ donors and recipients. It may provide insights into the personal stories of those involved in a liver transplant, highlighting the transformative impact of such medical procedures on their lives. Additionally, the piece could discuss the broader implications of organ donation, including the emotional and social dimensions that accompany these life-saving acts. Overall, readers can expect a thoughtful examination of how shared experiences in critical health situations can forge lasting relationships.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N125192",
+    "candidate_title": "Brady on Kaepernick workout: 'Pretty cool that he's getting that opportunity'",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Brady on Kaepernick workout: 'Pretty cool that he's getting that opportunity'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Brady on Kaepernick workout: 'Pretty cool that he's getting that opportunity',\" the user may expect to read about Tom Brady's perspective on Colin Kaepernick's recent workout opportunities. The piece is likely to explore Brady's comments regarding Kaepernick's skills and the significance of the workout in the context of Kaepernick's career and ongoing discussions about social justice in sports. Additionally, there may be insights into how such opportunities are perceived within the NFL community and their potential impact on Kaepernick's future prospects in professional football.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N39259",
+    "candidate_title": "Explainer: Is it illegal for Trump or Congress to name the impeachment whistleblower?",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Explainer: Is it illegal for Trump or Congress to name the impeachment whistleblower?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, readers may expect a thorough exploration of the legal implications surrounding the identity of the impeachment whistleblower, particularly focusing on whether it is illegal for figures like Trump or members of Congress to disclose this information. The piece is likely to outline the relevant laws and precedents that govern whistleblower protections, as well as the potential consequences of naming the whistleblower. Additionally, it could provide insights into the ongoing political discourse related to this topic, reflecting on how it may impact the impeachment proceedings and the broader political landscape.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N112536",
+    "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"There's a place in the US where it's been over 80 degrees since March\" is likely to provide an overview of a specific location in the United States that has experienced unusually warm temperatures for an extended period. Readers may expect to learn about the climate conditions that have contributed to this phenomenon, including geographical and meteorological factors. Additionally, the article could explore the impact of such weather patterns on local residents and businesses, as well as any relevant implications for tourism or environmental trends.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N87928",
+    "candidate_title": "50 Best Movie Sequels of All Time",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"50 Best Movie Sequels of All Time\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"50 Best Movie Sequels of All Time,\" the user can expect a comprehensive overview of notable sequels that have made a significant impact in cinema history. The piece is likely to discuss a variety of films across different genres, highlighting their critical and commercial success while possibly addressing how these sequels compare to their original films. Additionally, it may include insights into the reasons behind their popularity, such as character development or plot continuation. Overall, the article could provide a thoughtful reflection on the evolution of sequels in the film industry.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N57663",
+    "candidate_title": "Nurses face an epidemic of workplace violence",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Nurses face an epidemic of workplace violence\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Nurses face an epidemic of workplace violence\" is likely to discuss the increasing incidents of violence against nurses in healthcare settings. Readers may expect an overview of the types of violence nurses encounter, such as physical assaults and verbal abuse, along with statistics highlighting the severity of the issue. The article could also explore potential causes, including high-stress environments and patient behaviors, as well as suggestions for improving workplace safety. Furthermore, it may include insights from healthcare professionals on the impact of such violence on nurses' well-being and job satisfaction.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N103036",
+    "candidate_title": "If you were shocked by Kodak Black's prison term, wait and see what comes next",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"If you were shocked by Kodak Black's prison term, wait and see what comes next\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"If you were shocked by Kodak Black's prison term, wait and see what comes next,\" the user is likely to find an analysis of Kodak Black’s recent sentencing, including the specifics of the charges and the implications for his future. The piece may delve into the legal circumstances surrounding his case and how they relate to broader trends in the criminal justice system. Additionally, it could explore potential future developments, such as appeals or public reactions, which may provide insight into the artist's career trajectory moving forward.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N17488",
+    "candidate_title": "Iran moves on ultra-cheap petrol, starts rationing",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Iran moves on ultra-cheap petrol, starts rationing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses Iran's recent decision to implement rationing measures for ultra-cheap petrol, a move that could have significant implications for both the domestic economy and international relations. Readers may expect to find details about the reasons behind this decision, such as economic pressures or political factors influencing fuel prices. Additionally, the piece might explore how this rationing affects everyday citizens and the broader implications for Iran's energy policy. It is possible that the article will also touch on public reactions and any potential future developments in this ongoing situation.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N21018",
+    "candidate_title": "3 Indiana judges suspended after a night of drinking turned into a White Castle brawl",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"3 Indiana judges suspended after a night of drinking turned into a White Castle brawl\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses an incident involving three Indiana judges who were suspended following a night of drinking that escalated into a brawl at a White Castle restaurant. Readers can expect details about the circumstances leading to the suspension, including any official statements from the judicial system or the judges themselves. The piece may also explore the implications of this event on their careers and the broader legal community, as well as any potential disciplinary actions that could arise from the incident. Overall, it is likely to provide an informative overview of the situation and its potential repercussions.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N45027",
+    "candidate_title": "Colin Furze made a real version of Junkrat's RIP-tire from 'Overwatch'",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Colin Furze made a real version of Junkrat's RIP-tire from 'Overwatch'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article about Colin Furze creating a real version of Junkrat's RIP-tire from 'Overwatch,' you may expect to read about the design and construction process behind this unique project. The article is likely to detail the materials used, the challenges Furze faced during the build, and any innovative techniques he applied to bring this gaming concept to life. Additionally, it could explore the intersection of gaming culture and engineering, highlighting how such creations resonate with fans and enthusiasts alike.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N108495",
+    "candidate_title": "Darvish doesn't blame 2017 WS struggles vs. Astros on sign-stealing",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Darvish doesn't blame 2017 WS struggles vs. Astros on sign-stealing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user may expect to read about Yu Darvish's reflections on his performance during the 2017 World Series against the Houston Astros, particularly in relation to the sign-stealing controversy. The piece is likely to detail Darvish's perspective on whether he attributes his struggles in that series to the Astros' alleged sign-stealing practices. Additionally, the article might explore the broader implications of the controversy within Major League Baseball, including reactions from other players and how it has affected public perception of the game.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N41896",
+    "candidate_title": "MacBook Pro first look: Apple fixes the keyboard on its pricey new 16-inch portable",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"MacBook Pro first look: Apple fixes the keyboard on its pricey new 16-inch portable\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, readers can expect a detailed overview of the new MacBook Pro, particularly focusing on the improvements made to the keyboard design, which has been a point of contention in previous models. The piece is likely to cover the specifications and features of the 16-inch portable, including its performance capabilities, battery life, and any enhancements in display technology. Additionally, it may discuss how these changes compare to earlier versions and what this means for users seeking a reliable and efficient laptop experience.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N52371",
+    "candidate_title": "Intimidation among key takeaways from the Trump impeachment hearing with Marie Yovanovitch",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Intimidation among key takeaways from the Trump impeachment hearing with Marie Yovanovitch\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to find a detailed analysis of the recent impeachment hearing involving former President Trump, with a specific focus on the testimony of Marie Yovanovitch. Readers can expect to learn about the significant moments from the hearing, including key takeaways related to the alleged intimidation tactics discussed. The article may also provide context about Yovanovitch's role, her experiences, and how her testimony fits into the broader narrative of the impeachment proceedings. This could enhance the understanding of the political implications surrounding the event.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N55801",
+    "candidate_title": "High tides surge through Venice, locals rush to protect art",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"High tides surge through Venice, locals rush to protect art\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the recent high tides affecting Venice, focusing on how local residents are responding to the rising water levels. It may provide insight into the measures taken to protect the city's renowned art and historical landmarks from potential damage. Additionally, the piece could explore the broader implications of climate change on Venice's infrastructure and tourism. Overall, readers can expect a detailed account of the current situation along with possible forecasts about future weather patterns impacting the city.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N63206",
+    "candidate_title": "Christopher Reeve's Son Remembers Dad 15 Years After His Death: His Legacy 'Will Always Live On'",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Christopher Reeve's Son Remembers Dad 15 Years After His Death: His Legacy 'Will Always Live On'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the reader may expect to learn about Christopher Reeve's son as he reflects on his father's legacy 15 years after Reeve's passing. The piece is likely to explore the impact of Reeve's life and career, particularly his advocacy for spinal cord injury research and his role as a cultural icon. Additionally, it may include personal anecdotes or insights from his son that highlight how Reeve's values and accomplishments continue to influence their family and others. The article could also touch on the broader significance of Reeve's legacy in today's context.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N87236",
+    "candidate_title": "Stars   They're Just Like Us!",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Stars   They're Just Like Us!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you choose to click on \"Stars – They're Just Like Us!\", you may find an exploration of the everyday lives of celebrities, highlighting their relatable moments and experiences. The article is likely to discuss how famous individuals engage in common activities, such as grocery shopping or running errands, thereby bridging the gap between celebrity culture and ordinary life. You might also encounter anecdotes or light-hearted comparisons that illustrate the human side of stars, emphasizing that they, too, face similar challenges and routines as the general public.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N110025",
+    "candidate_title": "California man convicted of torture-murder dies on death row",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"California man convicted of torture-murder dies on death row\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the recent death of a California man who was convicted of torture-murder and was serving time on death row. Readers can expect details about the case, including background information on the crime and the legal proceedings that led to his conviction. The article may also explore the implications of his death on the ongoing discussions about the death penalty and the conditions of inmates on death row. Additionally, there could be insights into the responses from the victim's family and public opinion regarding the case.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N21356",
+    "candidate_title": "5 arrested in connection with deadly shooting at Airbnb Halloween party",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"5 arrested in connection with deadly shooting at Airbnb Halloween party\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the recent arrests related to a deadly shooting that occurred at an Airbnb Halloween party. It may provide details about the events leading up to the shooting, the identity of the suspects, and any potential motives behind the incident. The piece is expected to include information from law enforcement sources, along with insights into the broader implications for safety at rental properties during large gatherings. Additionally, it could explore community reactions and responses to the tragedy, emphasizing the need for enhanced security measures in similar settings.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N66180",
+    "candidate_title": "Camila Cabello Explains the Sweet Meaning Behind Her First Tattoo",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Camila Cabello Explains the Sweet Meaning Behind Her First Tattoo\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Camila Cabello Explains the Sweet Meaning Behind Her First Tattoo,\" the user is likely to find an exploration of the inspiration and significance behind Cabello's tattoo choice. The piece may delve into the personal story or sentiment that motivated her to get the tattoo, as well as any cultural or artistic influences involved. Additionally, it could include Cabello's reflections on how this tattoo represents her identity or experiences. Overall, readers can expect a thoughtful discussion of the intersection between personal expression and art.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 558,
+    "candidate_news_id": "N18258",
+    "candidate_title": "Russia lands forces at former U.S. air base in northern Syria",
+    "user_history_count": 10,
+    "user_history": [
+      "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+      "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+      "College gymnast dies following training accident in Connecticut",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Bad news, seniors: Your Medicare costs are going up",
+      "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+      "Ex-Astros say team electronically stole signs during 2017 season",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession",
+      "Hillary Clinton, get real",
+      "Home Values in These Cities Have Grown the Most Since the Last Recession"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Russia lands forces at former U.S. air base in northern Syria\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Russia lands forces at former U.S. air base in northern Syria\" is likely to provide an overview of the recent deployment of Russian military personnel to a former U.S. air base, detailing the strategic implications of this action in the region. Readers may expect to find information about the geopolitical context, including the response from the U.S. and other nations, as well as potential impacts on ongoing conflicts in Syria. The article could also explore how this development fits into broader narratives of military presence and influence in the area.",
+    "model": "gpt-4o-mini"
+  }
+]

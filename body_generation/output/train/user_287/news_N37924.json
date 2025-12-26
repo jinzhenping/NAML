@@ -1,0 +1,21 @@
+{
+  "user_id": 287,
+  "candidate_news_id": "N37924",
+  "candidate_title": "A Texas woman was legally declared dead while still alive",
+  "user_history_count": 10,
+  "user_history": [
+    "Under shroud of secrecy US weapons arrive in Yemen despite Congressional outrage",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Dangerous fugitive in case of slain couple caught, authorities say",
+    "Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer",
+    "'Coup has started,' whistleblower's attorney said in 2017 posts calling for impeachment",
+    "Trump back in Louisiana to rally support for GOP gubernatorial candidate",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "Elk Grove PD: 2 arrested after nearly 1,400 plants found in illegal pot grow",
+    "Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says",
+    "Horrific details emerge in 'barbaric' murder of 1999 Jane Doe"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Under shroud of secrecy US weapons arrive in Yemen despite Congressional outrage\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Dangerous fugitive in case of slain couple caught, authorities say\"\n\"Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer\"\n\"'Coup has started,' whistleblower's attorney said in 2017 posts calling for impeachment\"\n\"Trump back in Louisiana to rally support for GOP gubernatorial candidate\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"Elk Grove PD: 2 arrested after nearly 1,400 plants found in illegal pot grow\"\n\"Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says\"\n\"Horrific details emerge in 'barbaric' murder of 1999 Jane Doe\"\n\n[Candidate News Title]\n\"A Texas woman was legally declared dead while still alive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"A Texas woman was legally declared dead while still alive,\" the user can likely expect a detailed account of the unusual legal circumstances surrounding this case. The piece may explore the implications of being declared dead in a legal context, including how it affects personal and financial matters for the individual and their family. Additionally, it could provide insight into the processes that led to this declaration and any potential legal recourse available to the woman. The article is likely to highlight the broader implications of such legal errors and their societal impact, while also mentioning key figures involved in the case.",
+  "model": "gpt-4o-mini"
+}

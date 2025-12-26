@@ -1,0 +1,21 @@
+{
+  "user_id": 148,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 10,
+  "user_history": [
+    "Patriots trade DL Bennett to Cowboys",
+    "Celebs celebrate Halloween 2019",
+    "Celebrity Headshots from Before They Were Famous",
+    "See what your favorite country music stars looked like at the beginning of their careers",
+    "Why Emma Watson Is Calling Herself 'Self-Partnered' Ahead of Turning 30",
+    "Patriots rookie is saving and investing 90% of his paychecks so he can 'live like a prince' for the rest of his life",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Toyota Mega Cruiser: Did You Know Toyota Made a Hummer H1 Lookalike?",
+    "This little Montana town is full of Power Wagons and Mustangs"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Patriots trade DL Bennett to Cowboys\"\n\"Celebs celebrate Halloween 2019\"\n\"Celebrity Headshots from Before They Were Famous\"\n\"See what your favorite country music stars looked like at the beginning of their careers\"\n\"Why Emma Watson Is Calling Herself 'Self-Partnered' Ahead of Turning 30\"\n\"Patriots rookie is saving and investing 90% of his paychecks so he can 'live like a prince' for the rest of his life\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Toyota Mega Cruiser: Did You Know Toyota Made a Hummer H1 Lookalike?\"\n\"This little Montana town is full of Power Wagons and Mustangs\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"The most talked about movie moments of the 2010s,\" you may expect a detailed exploration of significant film scenes that captured public attention during the decade. The article is likely to highlight key movies and their iconic moments, discussing why these scenes resonated with audiences and became part of popular culture. It could also include commentary on the impact of these moments on the film industry and reflections from critics or fans, providing a comprehensive look at how the 2010s shaped cinematic storytelling.",
+  "model": "gpt-4o-mini"
+}

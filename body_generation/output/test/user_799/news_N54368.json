@@ -1,0 +1,21 @@
+{
+  "user_id": 799,
+  "candidate_news_id": "N54368",
+  "candidate_title": "South Carolina teen gets life in prison for deadly elementary school shooting",
+  "user_history_count": 10,
+  "user_history": [
+    "Bag Explodes While Being Loaded On Volaris Flight At Midway Airport",
+    "Freshman Georgia Southern offensive lineman Jordan Wiggins dies at 18",
+    "Ronnie Ortiz-Magro Dodges Felony Domestic Violence Charge Over Alleged Fight With Jen Harley",
+    "Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family",
+    "Model Belle Lucia   Who Was Shamed for Her Small Bump   Shares Her Post-Baby 'Pregnancy Transformation'",
+    "Airline Passenger Faked Pregnancy by Stuffing Items Under Dress to Avoid Baggage Fee",
+    "Is It Really Faster to Fly East Than West?",
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "16 transgender celebrities who are changing television",
+    "RHOP's Monique Samuels Charged With Assault After Incident With Candiace Dillard"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bag Explodes While Being Loaded On Volaris Flight At Midway Airport\"\n\"Freshman Georgia Southern offensive lineman Jordan Wiggins dies at 18\"\n\"Ronnie Ortiz-Magro Dodges Felony Domestic Violence Charge Over Alleged Fight With Jen Harley\"\n\"Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family\"\n\"Model Belle Lucia   Who Was Shamed for Her Small Bump   Shares Her Post-Baby 'Pregnancy Transformation'\"\n\"Airline Passenger Faked Pregnancy by Stuffing Items Under Dress to Avoid Baggage Fee\"\n\"Is It Really Faster to Fly East Than West?\"\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"16 transgender celebrities who are changing television\"\n\"RHOP's Monique Samuels Charged With Assault After Incident With Candiace Dillard\"\n\n[Candidate News Title]\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on a South Carolina teen receiving a life sentence for a deadly elementary school shooting is likely to provide an overview of the incident, including details about the shooting itself, the motivations behind it, and the legal proceedings that followed. Readers can expect a discussion of the impact on the community and possibly insights into the broader issues surrounding school safety and gun violence. The article may also explore the teen's background and any relevant factors that contributed to the crime, offering a comprehensive look at the tragic event.",
+  "model": "gpt-4o-mini"
+}

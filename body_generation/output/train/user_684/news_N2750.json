@@ -1,0 +1,21 @@
+{
+  "user_id": 684,
+  "candidate_news_id": "N2750",
+  "candidate_title": "Man cuffed for eating sandwich on train platform gets an apology",
+  "user_history_count": 10,
+  "user_history": [
+    "Matt Lauer allegations: Megyn Kelly lauds Meredith Vieira, Ann Curry",
+    "7 changes coming to Social Security in 2020",
+    "Elijah Cummings to 'lie in state' in Capitol's Statuary Hall in new arrangement",
+    "Miley Cyrus clarifies Instagram remarks about sexuality being a choice, plus more news",
+    "Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn",
+    "U.S. Rep. John Conyers, civil rights icon and former dean of Congress, dies at 90",
+    "A man went viral for snubbing Mitch McConnell at Elijah Cummings's memorial. He says there's more to the story.",
+    "Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion",
+    "Ex-evangelical pastor says supporting Trump has been 'damaging' to church",
+    "Anthony Mackie and wife quietly divorced last year: Report"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Matt Lauer allegations: Megyn Kelly lauds Meredith Vieira, Ann Curry\"\n\"7 changes coming to Social Security in 2020\"\n\"Elijah Cummings to 'lie in state' in Capitol's Statuary Hall in new arrangement\"\n\"Miley Cyrus clarifies Instagram remarks about sexuality being a choice, plus more news\"\n\"Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn\"\n\"U.S. Rep. John Conyers, civil rights icon and former dean of Congress, dies at 90\"\n\"A man went viral for snubbing Mitch McConnell at Elijah Cummings's memorial. He says there's more to the story.\"\n\"Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion\"\n\"Ex-evangelical pastor says supporting Trump has been 'damaging' to church\"\n\"Anthony Mackie and wife quietly divorced last year: Report\"\n\n[Candidate News Title]\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about a man being cuffed for eating a sandwich on a train platform is likely to discuss the circumstances surrounding the incident, including any relevant local laws or regulations regarding food consumption in public transit areas. It may also explore the implications of the incident, such as public reactions to law enforcement's response and any subsequent apologies that were issued. Additionally, it could highlight broader themes related to enforcement practices and public behavior norms. The piece may include quotes from the individual involved or witnesses, providing a clearer picture of the event.",
+  "model": "gpt-4o-mini"
+}

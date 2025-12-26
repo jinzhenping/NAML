@@ -1,0 +1,21 @@
+{
+  "user_id": 644,
+  "candidate_news_id": "N80770",
+  "candidate_title": "Judge agrees Alabama Islamic State recruit is not US citizen",
+  "user_history_count": 10,
+  "user_history": [
+    "Giuliani may have identified secret friend 'Charles' with accidental text",
+    "Donald Trump Jr. says 'View' hosts 'tried to smear me': 'They were totally triggered'",
+    "SpaceX set to launch another 60 Starlink internet satellites",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Uber chief called the murder of Jamal Khashoggi 'a serious mistake'",
+    "Madonna sued because of late start to concert",
+    "Bode Miller delivered his twin boys after midwife didn't make it time for the birth",
+    "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case",
+    "Georgia executes man convicted of killing convenience store clerk",
+    "Family told to take down Christmas display because it's too soon to decorate"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Giuliani may have identified secret friend 'Charles' with accidental text\"\n\"Donald Trump Jr. says 'View' hosts 'tried to smear me': 'They were totally triggered'\"\n\"SpaceX set to launch another 60 Starlink internet satellites\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Uber chief called the murder of Jamal Khashoggi 'a serious mistake'\"\n\"Madonna sued because of late start to concert\"\n\"Bode Miller delivered his twin boys after midwife didn't make it time for the birth\"\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\"Georgia executes man convicted of killing convenience store clerk\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\n[Candidate News Title]\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a recent ruling in which a judge determined that an individual, who was recruited by the Islamic State from Alabama, does not hold U.S. citizenship. It may outline the legal arguments presented in court, the implications of this decision for the individual involved, and the broader context surrounding issues of citizenship and national security. Additionally, the piece could explore potential ramifications for similar cases in the future, highlighting ongoing debates about citizenship rights and the impact of terrorism-related charges.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 923,
+  "candidate_news_id": "N31855",
+  "candidate_title": "The 25 most iconic film quotes",
+  "user_history_count": 10,
+  "user_history": [
+    "Latest Australia shark attack sparks tourism concerns",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Mixed martial arts star McGregor convicted of assault, fined 1,000 euro",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Faith Hill's ultimatum made Tim McGraw get healthy",
+    "Faith Hill's ultimatum made Tim McGraw get healthy",
+    "Phoenix dad pleads to manslaughter after claiming to protect daughter at gas station"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Latest Australia shark attack sparks tourism concerns\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Mixed martial arts star McGregor convicted of assault, fined 1,000 euro\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Faith Hill's ultimatum made Tim McGraw get healthy\"\n\"Faith Hill's ultimatum made Tim McGraw get healthy\"\n\"Phoenix dad pleads to manslaughter after claiming to protect daughter at gas station\"\n\n[Candidate News Title]\n\"The 25 most iconic film quotes\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read \"The 25 most iconic film quotes,\" you can expect a detailed exploration of memorable lines from various films that have significantly impacted popular culture. The article is likely to categorize these quotes by their relevance, context, or the films they originate from, potentially offering insights into the scenes in which they were delivered. Additionally, it may discuss the influence of these quotes on cinematic history and their resonance with audiences over time. Overall, this piece could serve as a nostalgic reflection on film dialogue that has become ingrained in everyday language.",
+  "model": "gpt-4o-mini"
+}

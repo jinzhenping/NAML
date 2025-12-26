@@ -1,0 +1,21 @@
+{
+  "user_id": 621,
+  "candidate_news_id": "N18468",
+  "candidate_title": "Belichick mocks social media in comments on Garrett incident",
+  "user_history_count": 10,
+  "user_history": [
+    "2 murder suspects escape from jail, still on the run",
+    "BART worker rescues man from oncoming train",
+    "Man stabbed to death outside Popeyes after fight over chicken sandwich, police say",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Tourists stabbed in Jordanian city near Roman ruins: police",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "Three school workers charged in death of special needs student",
+    "4 frat deaths this month. 2 this week alone. What's going on with fraternity hazing?",
+    "Answers remain elusive in Virginia Beach shooting rampage",
+    "Oregon school bus driver accused of DUI after crashing bus with 10 students"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"2 murder suspects escape from jail, still on the run\"\n\"BART worker rescues man from oncoming train\"\n\"Man stabbed to death outside Popeyes after fight over chicken sandwich, police say\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Tourists stabbed in Jordanian city near Roman ruins: police\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"Three school workers charged in death of special needs student\"\n\"4 frat deaths this month. 2 this week alone. What's going on with fraternity hazing?\"\n\"Answers remain elusive in Virginia Beach shooting rampage\"\n\"Oregon school bus driver accused of DUI after crashing bus with 10 students\"\n\n[Candidate News Title]\n\"Belichick mocks social media in comments on Garrett incident\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Belichick mocks social media in comments on Garrett incident,\" the user may expect to read about New England Patriots coach Bill Belichick's responses to recent events involving a player named Garrett. The article is likely to detail Belichick's critique of social media's role in shaping public perception and may provide context on the incident itself, including any controversies or discussions it has sparked in the sports community. Furthermore, the piece could explore how Belichick's views reflect broader trends in sports media and athlete behavior online.",
+  "model": "gpt-4o-mini"
+}

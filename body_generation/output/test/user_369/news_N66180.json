@@ -1,0 +1,20 @@
+{
+  "user_id": 369,
+  "candidate_news_id": "N66180",
+  "candidate_title": "Camila Cabello Explains the Sweet Meaning Behind Her First Tattoo",
+  "user_history_count": 9,
+  "user_history": [
+    "29 Thanksgiving Menus That Will Make November So Much Easier",
+    "Grading the biggest NFL deals ahead of the 2019 trade deadline",
+    "Harden-Westbrook argument goes viral",
+    "Frustrated Antonio Brown has active morning on Twitter",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Burning questions for CFB's biggest Week 11 games",
+    "Luke Falk files injury grievance against Jets",
+    "The Most Popular Family Dinners from Every Decade"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"29 Thanksgiving Menus That Will Make November So Much Easier\"\n\"Grading the biggest NFL deals ahead of the 2019 trade deadline\"\n\"Harden-Westbrook argument goes viral\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Burning questions for CFB's biggest Week 11 games\"\n\"Luke Falk files injury grievance against Jets\"\n\"The Most Popular Family Dinners from Every Decade\"\n\"\"\n\n[Candidate News Title]\n\"Camila Cabello Explains the Sweet Meaning Behind Her First Tattoo\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Camila Cabello Explains the Sweet Meaning Behind Her First Tattoo,\" the user might expect to read about the personal significance of Cabello's tattoo, including the inspiration behind it and what it represents in her life. The piece is likely to delve into her artistic choices and how they relate to her journey as a musician and individual. Additionally, it may explore the broader context of tattoo culture among celebrities and how such body art can convey personal stories and milestones. Overall, the article could provide insight into Cabello's personality and values through the lens of her tattoo.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 530,
+  "candidate_news_id": "N20990",
+  "candidate_title": "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+  "user_history_count": 10,
+  "user_history": [
+    "Chicago high school athletes' parents sue for kids' right to compete during teachers strike",
+    "Dad Lied About 4-Year-Old's Role In Double Shooting: Report",
+    "8 spooky Halloween tricks you didn't know your Echo could do",
+    "These Workers Retire Earlier Than Anyone Else! And It's Not Who You Think!",
+    "NFL fines Tyreek Hill $10K for flashing peace sign at defense during TD again",
+    "President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'",
+    "Trump botches a boast about giving away his presidential salary",
+    "Authorities identify Iowa woman killed in explosion during gender reveal party",
+    "Flynn hearing canceled after lawyer claims FBI manipulated files",
+    "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chicago high school athletes' parents sue for kids' right to compete during teachers strike\"\n\"Dad Lied About 4-Year-Old's Role In Double Shooting: Report\"\n\"8 spooky Halloween tricks you didn't know your Echo could do\"\n\"These Workers Retire Earlier Than Anyone Else! And It's Not Who You Think!\"\n\"NFL fines Tyreek Hill $10K for flashing peace sign at defense during TD again\"\n\"President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'\"\n\"Trump botches a boast about giving away his presidential salary\"\n\"Authorities identify Iowa woman killed in explosion during gender reveal party\"\n\"Flynn hearing canceled after lawyer claims FBI manipulated files\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent ban imposed on the son of a Chinese billionaire, detailing the specific restrictions he faces, such as limitations on flying first class, playing golf, purchasing property, and nightlife activities like clubbing. Readers may expect to learn about the context behind these restrictions, possibly related to legal or social issues surrounding wealth and privilege in China. The piece could explore the implications of such bans on the lifestyle of affluent individuals and how public perception might be shifting in response to wealth inequality.",
+  "model": "gpt-4o-mini"
+}

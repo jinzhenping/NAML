@@ -1,0 +1,21 @@
+{
+  "user_id": 998,
+  "candidate_news_id": "N98178",
+  "candidate_title": "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+  "user_history_count": 10,
+  "user_history": [
+    "McDonald's Fires CEO Steve Easterbrook After Relationship With Employee",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "California firefighters get a little help from Matthew McConaughey",
+    "As Warren Gains in Race, Wall Street Sounds the Alarm",
+    "Tom Brady explains why he's angry at this point in the football season",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "Antonio Brown is exposing Roger Goodell's unchecked power to shut players out of the NFL",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "Oops! Olivia Munn Didn't Mean to Debut Relationship With Tucker Roberts"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's Fires CEO Steve Easterbrook After Relationship With Employee\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"California firefighters get a little help from Matthew McConaughey\"\n\"As Warren Gains in Race, Wall Street Sounds the Alarm\"\n\"Tom Brady explains why he's angry at this point in the football season\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"Antonio Brown is exposing Roger Goodell's unchecked power to shut players out of the NFL\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"Oops! Olivia Munn Didn't Mean to Debut Relationship With Tucker Roberts\"\n\n[Candidate News Title]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Charles Rogers, a former Michigan State football and Detroit Lions star, is likely to provide an overview of his life, career, and recent passing at the age of 38. Readers may expect details regarding his achievements in college football and his time in the NFL, along with insights into his impact on the teams he played for. The piece may also touch upon the circumstances surrounding his death, which could include reactions from former teammates, coaches, and fans. Overall, it is likely to highlight both his athletic contributions and the legacy he leaves behind.",
+  "model": "gpt-4o-mini"
+}

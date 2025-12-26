@@ -1,0 +1,21 @@
+{
+  "user_id": 424,
+  "candidate_news_id": "N68520",
+  "candidate_title": "Trump Organization ordered to pay $290,000 after losing battle against Scottish wind farm",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Ezekiel Elliott's dad investigated after police shoot wild cat near his home",
+    "Quiet Riot Drummer Reveals Stage-Four Cancer Diagnosis",
+    "Why the Patriots made a very un-Patriots trade for Mohamed Sanu",
+    "Willie Brown, Hall of Famer and Raiders legend, dies at 78",
+    "Harden-Westbrook argument goes viral",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Woman found dead in Ohio home was likely killed by her Great Danes, police say",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Ezekiel Elliott's dad investigated after police shoot wild cat near his home\"\n\"Quiet Riot Drummer Reveals Stage-Four Cancer Diagnosis\"\n\"Why the Patriots made a very un-Patriots trade for Mohamed Sanu\"\n\"Willie Brown, Hall of Famer and Raiders legend, dies at 78\"\n\"Harden-Westbrook argument goes viral\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Woman found dead in Ohio home was likely killed by her Great Danes, police say\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\n[Candidate News Title]\n\"Trump Organization ordered to pay $290,000 after losing battle against Scottish wind farm\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent ruling against the Trump Organization, which has been ordered to pay $290,000 following a legal dispute with a Scottish wind farm. Readers can expect an overview of the case, including key points of contention and the implications of the ruling for the Trump Organization. Additionally, the article may explore the broader context of the Trump Organization's business interests in Scotland and the challenges they face in navigating local regulations. It is likely to provide insights into how this ruling could affect future dealings or public perception of the organization.",
+  "model": "gpt-4o-mini"
+}

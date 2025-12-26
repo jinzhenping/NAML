@@ -1,0 +1,21 @@
+{
+  "user_id": 572,
+  "candidate_news_id": "N129416",
+  "candidate_title": "Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties",
+  "user_history_count": 10,
+  "user_history": [
+    "See what your favorite stars look like without makeup",
+    "Donald Trump Jr walks out of Triggered book launch after heckling   from supporters",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores",
+    "3 awful reasons to take Social Security benefits at 65",
+    "Celebrity plastic surgery transformations",
+    "40 Nutrition Experts Told Us The Foods You Should Be Eating Every Day",
+    "7 Surprising Features That Boost Your Home Value",
+    "Dean Foods files for bankruptcy",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"See what your favorite stars look like without makeup\"\n\"Donald Trump Jr walks out of Triggered book launch after heckling   from supporters\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores\"\n\"3 awful reasons to take Social Security benefits at 65\"\n\"Celebrity plastic surgery transformations\"\n\"40 Nutrition Experts Told Us The Foods You Should Be Eating Every Day\"\n\"7 Surprising Features That Boost Your Home Value\"\n\"Dean Foods files for bankruptcy\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\n[Candidate News Title]\n\"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties,\" the user can expect to read about a dispute between Taylor Swift's representative and the Big Machine record label regarding unpaid royalties. The article is likely to detail the nature of the claims, including the specific amount mentioned and the context surrounding the financial disagreement. Additionally, it may provide insights into Swift's ongoing legal battles with her former label and how this situation fits into her broader narrative of artist rights and music ownership.",
+  "model": "gpt-4o-mini"
+}

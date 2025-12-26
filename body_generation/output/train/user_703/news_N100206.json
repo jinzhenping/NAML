@@ -1,0 +1,21 @@
+{
+  "user_id": 703,
+  "candidate_news_id": "N100206",
+  "candidate_title": "Top 100 country songs of all time",
+  "user_history_count": 10,
+  "user_history": [
+    "Burning questions for CFB's biggest Week 10 games",
+    "Burning questions for CFB's biggest Week 10 games",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+    "Trump wanted Barr to hold news conference saying the president broke no laws in call with Ukrainian leader",
+    "Report: Deion a candidate for Florida State coaching job",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "'Absent yourself': Transcripts reveal what Schiff told Gaetz when he crashed secure hearing",
+    "5 struggling teams that can still make NFL playoffs",
+    "Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Burning questions for CFB's biggest Week 10 games\"\n\"Burning questions for CFB's biggest Week 10 games\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Trump wanted Barr to hold news conference saying the president broke no laws in call with Ukrainian leader\"\n\"Report: Deion a candidate for Florida State coaching job\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"'Absent yourself': Transcripts reveal what Schiff told Gaetz when he crashed secure hearing\"\n\"5 struggling teams that can still make NFL playoffs\"\n\"Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings\"\n\n[Candidate News Title]\n\"Top 100 country songs of all time\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Top 100 country songs of all time\" is likely to provide a comprehensive list of the most influential and popular country songs throughout history, potentially spanning various decades and styles within the genre. Readers can expect to see song titles paired with notable artists, descriptions of their impact on country music, and possibly insights into the cultural significance of these tracks. The article may also include discussions about the criteria used for selection, such as chart performance or critical acclaim, giving readers a deeper understanding of what makes these songs stand out.",
+  "model": "gpt-4o-mini"
+}

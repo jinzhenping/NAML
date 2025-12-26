@@ -1,0 +1,21 @@
+{
+  "user_id": 366,
+  "candidate_news_id": "N49790",
+  "candidate_title": "Browns apologize to Mason Rudolph, call Myles Garrett's actions 'unacceptable'",
+  "user_history_count": 10,
+  "user_history": [
+    "Lawmakers, social media users praise photo of Pelosi confronting Trump",
+    "'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "Michelle Pfeiffer initially blamed herself after #MeToo moment: 'I should've known'",
+    "Orlando Scandrick rips Eagles: They have 'accountability issues'",
+    "Frustrated Antonio Brown has active morning on Twitter",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Cincinnati Bengals WR A.J. Green: 'I can't go out there when I'm not 100 percent'",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lawmakers, social media users praise photo of Pelosi confronting Trump\"\n\"'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"Michelle Pfeiffer initially blamed herself after #MeToo moment: 'I should've known'\"\n\"Orlando Scandrick rips Eagles: They have 'accountability issues'\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Cincinnati Bengals WR A.J. Green: 'I can't go out there when I'm not 100 percent'\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this\"\n\n[Candidate News Title]\n\"Browns apologize to Mason Rudolph, call Myles Garrett's actions 'unacceptable'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Browns apologize to Mason Rudolph, call Myles Garrett's actions 'unacceptable,'\" the user may expect to read about the Cleveland Browns' response to a recent incident involving player Myles Garrett and quarterback Mason Rudolph. The piece is likely to detail the Browns' public apology to Rudolph, emphasizing the team's stance on accountability and sportsmanship in the wake of the controversial actions taken by Garrett during a game. Additionally, it may explore the implications of this incident for team dynamics and player reputations in the NFL.",
+  "model": "gpt-4o-mini"
+}

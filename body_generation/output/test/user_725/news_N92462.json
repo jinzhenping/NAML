@@ -1,0 +1,21 @@
+{
+  "user_id": 725,
+  "candidate_news_id": "N92462",
+  "candidate_title": "Kentucky woman charged in death of woman missing since May",
+  "user_history_count": 10,
+  "user_history": [
+    "Chefs reveal the 9 most common mistakes people make when cooking pasta",
+    "Boss pays off his employee's mortgage to allow him to retire early",
+    "Debunking the week's tabloid stories: Nov. 1, 2019",
+    "Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet",
+    "5 Dallas Restaurant Closures to Know About Right Now",
+    "Alex Anthopoulos investigation proves the MLBPA is watching and will be heard",
+    "'It's cool to be cold': Confessions of frigid-weather fanatics",
+    "See The People's Choice Awards Nominees, Then and Now",
+    "'I think her last heartbeat was when we got her out of the car': Dallas police failed to give medical treatment to woman who died in custody",
+    "It is time to acknowledge Dak Prescott as the big-time quarterback that he is"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chefs reveal the 9 most common mistakes people make when cooking pasta\"\n\"Boss pays off his employee's mortgage to allow him to retire early\"\n\"Debunking the week's tabloid stories: Nov. 1, 2019\"\n\"Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet\"\n\"5 Dallas Restaurant Closures to Know About Right Now\"\n\"Alex Anthopoulos investigation proves the MLBPA is watching and will be heard\"\n\"'It's cool to be cold': Confessions of frigid-weather fanatics\"\n\"See The People's Choice Awards Nominees, Then and Now\"\n\"'I think her last heartbeat was when we got her out of the car': Dallas police failed to give medical treatment to woman who died in custody\"\n\"It is time to acknowledge Dak Prescott as the big-time quarterback that he is\"\n\n[Candidate News Title]\n\"Kentucky woman charged in death of woman missing since May\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Kentucky woman charged in death of woman missing since May\" likely provides an overview of a criminal case involving the charge against a Kentucky woman related to a missing person's death. Readers can expect details about the circumstances leading to the charge, including any relevant background on the missing woman and the timeline of events. The piece may also explore the legal implications of the charge, as well as insights from law enforcement or family members. Additionally, it could highlight the ongoing investigation and community reactions to this incident.",
+  "model": "gpt-4o-mini"
+}

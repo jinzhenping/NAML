@@ -1,0 +1,21 @@
+{
+  "user_id": 368,
+  "candidate_news_id": "N123462",
+  "candidate_title": "Court puts hold on Rodney Reed's scheduled execution",
+  "user_history_count": 10,
+  "user_history": [
+    "Teresa Giudice, daughters reunite with Joe in Italy: See the pic!",
+    "Tristan Thompson Drops Flirty Comment on Ex Khloe Kardashian's Instagram",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Senior Trump official embellished résumé, had face on fake Time cover",
+    "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say",
+    "Aaron Carter admitted to Florida hospital",
+    "Celine Dion Shares What She Misses Most About Late Husband Rene Angelil",
+    "Richard Sherman tells NFL players to save their money and prepare for a strike",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Teresa Giudice, daughters reunite with Joe in Italy: See the pic!\"\n\"Tristan Thompson Drops Flirty Comment on Ex Khloe Kardashian's Instagram\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\"Aaron Carter admitted to Florida hospital\"\n\"Celine Dion Shares What She Misses Most About Late Husband Rene Angelil\"\n\"Richard Sherman tells NFL players to save their money and prepare for a strike\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\n[Candidate News Title]\n\"Court puts hold on Rodney Reed's scheduled execution\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a recent decision by a court regarding Rodney Reed's scheduled execution, which has been put on hold. Readers can expect details about the legal arguments presented, the implications of the court's ruling, and any relevant background on Reed's case, which has garnered significant attention over the years. Additionally, the piece may explore the reactions from both supporters advocating for his exoneration and those who oppose delays in the execution process. Overall, the coverage should provide a clear overview of the situation without delving into sensationalism.",
+  "model": "gpt-4o-mini"
+}

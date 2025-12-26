@@ -1,0 +1,21 @@
+{
+  "user_id": 550,
+  "candidate_news_id": "N78699",
+  "candidate_title": "Rep. Ilhan Omar is accused of 'dog whistle' anti-Semitism after she posts tweet implying billionaire businessman Leon Cooperman is only supporting Michael Bloomberg's presidential run because he is Jewish",
+  "user_history_count": 10,
+  "user_history": [
+    "Police: Disruptive passenger on flight from Charlotte causes diversion",
+    "Allegations against Biden 'not credible,' testified US official now touted by Trump",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "Beshear vs. Bevin: Kentucky governor's race could be decided by state legislature",
+    "Pro disqualified from Q-School for failing to sign scorecard",
+    "Warren holding first campaign events in North Carolina",
+    "College football Week 11: Picks and preview",
+    "Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears",
+    "Ranking the College Football Teams Most Likely to Enter December Unbeaten",
+    "Previewing every key matchup in LSU-Alabama showdown"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Police: Disruptive passenger on flight from Charlotte causes diversion\"\n\"Allegations against Biden 'not credible,' testified US official now touted by Trump\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"Beshear vs. Bevin: Kentucky governor's race could be decided by state legislature\"\n\"Pro disqualified from Q-School for failing to sign scorecard\"\n\"Warren holding first campaign events in North Carolina\"\n\"College football Week 11: Picks and preview\"\n\"Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears\"\n\"Ranking the College Football Teams Most Likely to Enter December Unbeaten\"\n\"Previewing every key matchup in LSU-Alabama showdown\"\n\n[Candidate News Title]\n\"Rep. Ilhan Omar is accused of 'dog whistle' anti-Semitism after she posts tweet implying billionaire businessman Leon Cooperman is only supporting Michael Bloomberg's presidential run because he is Jewish\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article about Rep. Ilhan Omar's tweet regarding billionaire businessman Leon Cooperman, they are likely to expect an analysis of the accusations of anti-Semitism that have emerged in response to her statement. The article may explore the context of Omar's tweet, examining both her intentions and the reactions from various political figures, including those who support and oppose her views. Additionally, it could provide insights into the broader implications of such allegations on the political landscape, particularly regarding the dynamics of Jewish support in presidential campaigns.",
+  "model": "gpt-4o-mini"
+}

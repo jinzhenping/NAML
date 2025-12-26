@@ -1,0 +1,21 @@
+{
+  "user_id": 574,
+  "candidate_news_id": "N55792",
+  "candidate_title": "Stars Who Served in the Military",
+  "user_history_count": 10,
+  "user_history": [
+    "Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days",
+    "Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence",
+    "Unprecedented movement detected on California earthquake fault capable of 8.0 temblor",
+    "11 of the Most Inspirational Weight-Loss Transformations",
+    "This Halloween Corn Maze Wedding Is Dark, Sophisticated, and Bone-Chillingly Beautiful",
+    "Trump education official to resign and call for mass student loan forgiveness",
+    "Micha Got Stronger With BBG in 18 Months, and Just Look at Her Transformation!",
+    "Jennifer Lawrence Hired A Food Truck For Her Wedding And The Owner Had No Idea Who She Was",
+    "Dentist who gives free smile makeovers to Brazil's poorest proudly reveals their life-changing transformations in uplifting before and after photos",
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days\"\n\"Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence\"\n\"Unprecedented movement detected on California earthquake fault capable of 8.0 temblor\"\n\"11 of the Most Inspirational Weight-Loss Transformations\"\n\"This Halloween Corn Maze Wedding Is Dark, Sophisticated, and Bone-Chillingly Beautiful\"\n\"Trump education official to resign and call for mass student loan forgiveness\"\n\"Micha Got Stronger With BBG in 18 Months, and Just Look at Her Transformation!\"\n\"Jennifer Lawrence Hired A Food Truck For Her Wedding And The Owner Had No Idea Who She Was\"\n\"Dentist who gives free smile makeovers to Brazil's poorest proudly reveals their life-changing transformations in uplifting before and after photos\"\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\n[Candidate News Title]\n\"Stars Who Served in the Military\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Stars Who Served in the Military\" is likely to explore the backgrounds of various celebrities who have had military service, detailing their experiences and contributions. Readers can expect to learn about notable figures from the entertainment industry who served in different branches of the armed forces, possibly including insights into their motivations for joining and how their service impacted their later careers. The piece may also highlight any specific roles or achievements these stars accomplished during their time in the military, providing a unique perspective on their lives beyond Hollywood.",
+  "model": "gpt-4o-mini"
+}

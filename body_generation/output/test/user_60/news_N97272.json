@@ -1,0 +1,21 @@
+{
+  "user_id": 60,
+  "candidate_news_id": "N97272",
+  "candidate_title": "Alex Rodriguez Jokingly Talks About Marrying Jennifer Lopez During Super Bowl Halftime Show",
+  "user_history_count": 10,
+  "user_history": [
+    "Prince Harry and Meghan Markle are taking a royal respite",
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US",
+    "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+    "The Best Trader Joe's Desserts for Your Thanksgiving Dinner Table",
+    "Joanna Gaines reveals her family's favorite recipes in new cookbook",
+    "98 Cool Gifts Rising in Sales on the Internet - They're Less Than $25, After All",
+    "Priscilla and Lisa Marie Presley are Not on the Same Page for Elvis Biopic",
+    "John Legend Is PEOPLE's Sexiest Man Alive 2019: 'I'm Excited but a Little Scared at the Same Time'",
+    "Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Prince Harry and Meghan Markle are taking a royal respite\"\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\"The Best Trader Joe's Desserts for Your Thanksgiving Dinner Table\"\n\"Joanna Gaines reveals her family's favorite recipes in new cookbook\"\n\"98 Cool Gifts Rising in Sales on the Internet - They're Less Than $25, After All\"\n\"Priscilla and Lisa Marie Presley are Not on the Same Page for Elvis Biopic\"\n\"John Legend Is PEOPLE's Sexiest Man Alive 2019: 'I'm Excited but a Little Scared at the Same Time'\"\n\"Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance\"\n\n[Candidate News Title]\n\"Alex Rodriguez Jokingly Talks About Marrying Jennifer Lopez During Super Bowl Halftime Show\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the user can expect to read about Alex Rodriguez's playful comments regarding the possibility of marrying Jennifer Lopez during the Super Bowl halftime show. The piece may delve into the context of Rodriguez's remarks, possibly highlighting the couple's relationship history and their public appearances together. Additionally, it is likely to include reactions from fans and media, as well as any relevant background information about their time in the spotlight. Overall, the article seems poised to offer a light-hearted take on a celebrity moment that intertwines sports and entertainment.",
+  "model": "gpt-4o-mini"
+}

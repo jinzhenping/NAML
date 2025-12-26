@@ -1,0 +1,21 @@
+{
+  "user_id": 491,
+  "candidate_news_id": "N102458",
+  "candidate_title": "50 amazing gifts for every type of person and budget",
+  "user_history_count": 10,
+  "user_history": [
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him",
+    "The Best Live TV Musicals of the Last 10 Years",
+    "8 television shows that didn't age well",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "From cat names to fruit, here are 11 bizarre things celebrities have tried to trademark",
+    "'The Little Mermaid Live!': TV Review",
+    "Top 10 NFL quarterbacks heading into Week 10",
+    "Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52",
+    "17 Movie Soundtracks Every Kid from the '70s Loved"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him\"\n\"The Best Live TV Musicals of the Last 10 Years\"\n\"8 television shows that didn't age well\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"From cat names to fruit, here are 11 bizarre things celebrities have tried to trademark\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Top 10 NFL quarterbacks heading into Week 10\"\n\"Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52\"\n\"17 Movie Soundtracks Every Kid from the '70s Loved\"\n\n[Candidate News Title]\n\"50 amazing gifts for every type of person and budget\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect a curated list of gift ideas that cater to a wide range of interests and budgets, likely including options for various occasions and recipients. The piece may provide insights into popular trends in gifting, recommendations for unique or creative items, and possibly highlight products that are particularly well-received. Additionally, the article could feature a mix of price points, making it accessible for different financial situations, which aligns with the user’s apparent interest in diverse cultural topics and lifestyle trends.",
+  "model": "gpt-4o-mini"
+}

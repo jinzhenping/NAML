@@ -1,0 +1,21 @@
+{
+  "user_id": 283,
+  "candidate_news_id": "N30206",
+  "candidate_title": "Cows swept away by Hurricane Dorian found alive   but how?",
+  "user_history_count": 10,
+  "user_history": [
+    "James Mattis mocks Trump's bone spurs",
+    "Subtle Signs You May Have Clogged Arteries",
+    "50 Home Décor Horrors You Can't Look Away From",
+    "Lane Kiffin seemed to enjoy getting fined $5K for a blind ref meme, calls out LeBron James",
+    "Mohamed Sanu Can't Contain Excitement Over Trade To Patriots On Twitter",
+    "Amazon's $1.5 million political gambit backfires in Seattle City Council election",
+    "Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage",
+    "'Brutal' Arctic blast is affecting 200 million people from Chicago to Texas, and it isn't over yet",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"James Mattis mocks Trump's bone spurs\"\n\"Subtle Signs You May Have Clogged Arteries\"\n\"50 Home Décor Horrors You Can't Look Away From\"\n\"Lane Kiffin seemed to enjoy getting fined $5K for a blind ref meme, calls out LeBron James\"\n\"Mohamed Sanu Can't Contain Excitement Over Trade To Patriots On Twitter\"\n\"Amazon's $1.5 million political gambit backfires in Seattle City Council election\"\n\"Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage\"\n\"'Brutal' Arctic blast is affecting 200 million people from Chicago to Texas, and it isn't over yet\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\n[Candidate News Title]\n\"Cows swept away by Hurricane Dorian found alive   but how?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the surprising survival of cows that were swept away by Hurricane Dorian, offering insights into how they managed to endure the extreme conditions. It may detail the circumstances surrounding their discovery and the response from local farmers or animal welfare organizations. Additionally, the piece could explore the broader implications of such events on livestock management and disaster preparedness. Readers may find the article informative regarding the resilience of animals in the face of natural disasters and the measures taken to track and recover lost livestock.",
+  "model": "gpt-4o-mini"
+}

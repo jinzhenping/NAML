@@ -1,0 +1,21 @@
+{
+  "user_id": 787,
+  "candidate_news_id": "N87928",
+  "candidate_title": "50 Best Movie Sequels of All Time",
+  "user_history_count": 10,
+  "user_history": [
+    "The 25 richest families in America",
+    "Photos of Celebrities at the Airport Are Here to Inspire Your Holiday Travel Style",
+    "100 Books Everyone Should Read Before They Die",
+    "Disney+: All the Original TV Shows and Movies Set for Streaming Platform (Photos)",
+    "1990s Mall Rats Will Definitely Remember These Iconic Stores and Activities",
+    "105 Black Friday Deals You Can Start Shopping Today",
+    "17 Movie Soundtracks Every Kid from the '80s Loved",
+    "How the biggest stars of the decade have changed",
+    "9 Amazing Transgender Women Who Changed History",
+    "23 Worst Things You Can Say to a New Parent"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 25 richest families in America\"\n\"Photos of Celebrities at the Airport Are Here to Inspire Your Holiday Travel Style\"\n\"100 Books Everyone Should Read Before They Die\"\n\"Disney+: All the Original TV Shows and Movies Set for Streaming Platform (Photos)\"\n\"1990s Mall Rats Will Definitely Remember These Iconic Stores and Activities\"\n\"105 Black Friday Deals You Can Start Shopping Today\"\n\"17 Movie Soundtracks Every Kid from the '80s Loved\"\n\"How the biggest stars of the decade have changed\"\n\"9 Amazing Transgender Women Who Changed History\"\n\"23 Worst Things You Can Say to a New Parent\"\n\n[Candidate News Title]\n\"50 Best Movie Sequels of All Time\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"50 Best Movie Sequels of All Time\" is likely to present a curated list of sequels that have made a significant impact on cinema. Readers can expect to learn about various films that not only expanded upon their original narratives but also achieved commercial and critical success. Specific details may include notable sequels from different genres, highlighting their contributions to film culture and audience reception. Additionally, the article may explore the reasons behind the success of these sequels, such as strong character development or innovative storytelling, though this is not guaranteed.",
+  "model": "gpt-4o-mini"
+}

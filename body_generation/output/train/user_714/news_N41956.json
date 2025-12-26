@@ -1,0 +1,21 @@
+{
+  "user_id": 714,
+  "candidate_news_id": "N41956",
+  "candidate_title": "12 Photos Show What It's Really Like To Grow Up Trans",
+  "user_history_count": 10,
+  "user_history": [
+    "Raiders vs. Packers highlights | Week 7",
+    "NFL Power Rankings: Rodgers looks like a legit MVP, as the Eagles have serious problems.",
+    "Elton John Has Not Seen 'Bohemian Rhapsody' And Refuses To Watch It",
+    "Ben Affleck is dating again, using Raya app",
+    "NFL QB power rankings: Aaron Rodgers back to being the best; Mitchell Trubisky still isn't the worst",
+    "Chiefs star TE Travis Kelce 'disgusted with how I played' against Packers in loss",
+    "Michigan man sentenced in toss of rock off overpass that killed vehicle passenger",
+    "The world's largest nuclear power producer is melting down",
+    "Outrage in Spain over verdict in gang sex attack on teen",
+    "Cause determined in Jessi Combs' fatal speed record crash"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Raiders vs. Packers highlights | Week 7\"\n\"NFL Power Rankings: Rodgers looks like a legit MVP, as the Eagles have serious problems.\"\n\"Elton John Has Not Seen 'Bohemian Rhapsody' And Refuses To Watch It\"\n\"Ben Affleck is dating again, using Raya app\"\n\"NFL QB power rankings: Aaron Rodgers back to being the best; Mitchell Trubisky still isn't the worst\"\n\"Chiefs star TE Travis Kelce 'disgusted with how I played' against Packers in loss\"\n\"Michigan man sentenced in toss of rock off overpass that killed vehicle passenger\"\n\"The world's largest nuclear power producer is melting down\"\n\"Outrage in Spain over verdict in gang sex attack on teen\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\n[Candidate News Title]\n\"12 Photos Show What It's Really Like To Grow Up Trans\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"12 Photos Show What It's Really Like To Grow Up Trans,\" you might expect a visual exploration of the experiences faced by transgender individuals during their formative years. The piece is likely to include a series of photographs accompanied by narratives or descriptions that highlight both the challenges and milestones encountered in growing up trans. Additionally, it could provide insights into family dynamics, social interactions, and the journey of self-acceptance. The article may also touch on societal perceptions and the evolving conversation around gender identity.",
+  "model": "gpt-4o-mini"
+}

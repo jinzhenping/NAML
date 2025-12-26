@@ -1,0 +1,21 @@
+{
+  "user_id": 93,
+  "candidate_news_id": "N120089",
+  "candidate_title": "The Hottest Tech Gifts This Holiday Season",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump's Deal Allowing 3D-Printed Guns Online Deemed Illegal",
+    "GOP senators to meet with Turkey's Erdoğan, Trump amid tensions",
+    "Ruth Bader Ginsburg misses court due to illness",
+    "Georgia executes man convicted of killing convenience store clerk",
+    "MTA hires Chief Transformation Officer to oversee shake-up",
+    "A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina",
+    "Impeachment Hearings Open With Revelation on Trump's Ukraine Pressure",
+    "The Trump Organization Is Suing Dean & DeLuca for $16 Million in Damages",
+    "U.S. Vows to Defend South Korea With Full Military Force Following Pyongyang Threats",
+    "This is what the trade war looks like in bourbon country"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump's Deal Allowing 3D-Printed Guns Online Deemed Illegal\"\n\"GOP senators to meet with Turkey's Erdoğan, Trump amid tensions\"\n\"Ruth Bader Ginsburg misses court due to illness\"\n\"Georgia executes man convicted of killing convenience store clerk\"\n\"MTA hires Chief Transformation Officer to oversee shake-up\"\n\"A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina\"\n\"Impeachment Hearings Open With Revelation on Trump's Ukraine Pressure\"\n\"The Trump Organization Is Suing Dean & DeLuca for $16 Million in Damages\"\n\"U.S. Vows to Defend South Korea With Full Military Force Following Pyongyang Threats\"\n\"This is what the trade war looks like in bourbon country\"\n\n[Candidate News Title]\n\"The Hottest Tech Gifts This Holiday Season\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The Hottest Tech Gifts This Holiday Season\" is likely to provide a curated list of popular and innovative technology products that are trending as gift options for the upcoming holiday season. It may include details on gadgets such as smart home devices, wearables, and the latest consumer electronics, highlighting their features and benefits. Additionally, the article could discuss pricing trends and recommendations based on consumer reviews or expert opinions, helping readers make informed decisions about tech gifts. Overall, it is expected to serve as a practical guide for shoppers looking to find the best tech gifts this year.",
+  "model": "gpt-4o-mini"
+}

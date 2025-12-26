@@ -1,0 +1,21 @@
+{
+  "user_id": 463,
+  "candidate_news_id": "N9432",
+  "candidate_title": "George Conway: 'Republicans Were Fundamentally Illogical and Incoherent'",
+  "user_history_count": 10,
+  "user_history": [
+    "Kate Beckinsale is a knockout in corset dress adorned with white feathers at 'Farming' premiere",
+    "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "Waiting for Bolton: A Capital Speculates on What He Will Say",
+    "The Student Vote Is Surging. So Are Efforts to Suppress It.",
+    "Patriots reportedly release kicker Mike Nugent",
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "3 'health' products that are a waste of money, according to dietitians"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kate Beckinsale is a knockout in corset dress adorned with white feathers at 'Farming' premiere\"\n\"Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"Waiting for Bolton: A Capital Speculates on What He Will Say\"\n\"The Student Vote Is Surging. So Are Efforts to Suppress It.\"\n\"Patriots reportedly release kicker Mike Nugent\"\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"3 'health' products that are a waste of money, according to dietitians\"\n\n[Candidate News Title]\n\"George Conway: 'Republicans Were Fundamentally Illogical and Incoherent'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find George Conway discussing the current state of the Republican Party, particularly focusing on its logical inconsistencies and lack of coherence in political discourse. Conway, known for his critical stance on various Republican policies and figures, may provide insights into how these issues impact party unity and voter perception. The piece could also explore specific examples of recent actions or statements by Republican leaders that Conway considers illogical, thereby shedding light on broader trends within the party.",
+  "model": "gpt-4o-mini"
+}

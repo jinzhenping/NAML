@@ -1,0 +1,21 @@
+{
+  "user_id": 742,
+  "candidate_news_id": "N36266",
+  "candidate_title": "Neil Young Says U.S. Citizenship Application Delayed By Marijuana Use",
+  "user_history_count": 10,
+  "user_history": [
+    "Hundreds of thousands of people in California are downriver of a dam that 'could fail'",
+    "Caterpillar lays off 120 workers as trade war hits sales",
+    "Greg Norman upset Tiger Woods didn't respond to his handwritten letter: \"Maybe Tiger just dislikes me\"",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Couch: Getting 'exposed' at the Champions Classic is part of MSU's Final Four process",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet",
+    "See Mercury glide across the sun in rare sky show"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Hundreds of thousands of people in California are downriver of a dam that 'could fail'\"\n\"Caterpillar lays off 120 workers as trade war hits sales\"\n\"Greg Norman upset Tiger Woods didn't respond to his handwritten letter: \"Maybe Tiger just dislikes me\"\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Couch: Getting 'exposed' at the Champions Classic is part of MSU's Final Four process\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet\"\n\"See Mercury glide across the sun in rare sky show\"\n\n[Candidate News Title]\n\"Neil Young Says U.S. Citizenship Application Delayed By Marijuana Use\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, it is likely that Neil Young discusses the challenges he has faced in obtaining U.S. citizenship, specifically citing delays attributed to his past marijuana use. The piece may delve into the broader implications of marijuana's legal status and how it intersects with immigration policies. Additionally, it could touch on Young's views regarding the evolving perception of cannabis in society and its potential impact on individuals seeking citizenship. This examination might provide insights into the complexities of legal processes surrounding marijuana use and citizenship applications.",
+  "model": "gpt-4o-mini"
+}

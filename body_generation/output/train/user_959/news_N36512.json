@@ -1,0 +1,21 @@
+{
+  "user_id": 959,
+  "candidate_news_id": "N36512",
+  "candidate_title": "Cowboys have questionable red zone calls in loss to Vikings",
+  "user_history_count": 10,
+  "user_history": [
+    "TobyMac says late son 'had an untamable grand personality,' shares last text exchange",
+    "Cranes remove bus partially swallowed by Pittsburgh sinkhole",
+    "Jets trade DL Leonard Williams to Giants",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "South Florida principal who made controversial comments about the Holocaust is fired",
+    "Baker Mayfield is on an island and Browns should be deeply concerned",
+    "100 greatest movie quotes from 100 years of film",
+    "Mayfield's postgame outfit gets all the memes",
+    "Will Freddie Kitchens be one and done in Cleveland?",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"TobyMac says late son 'had an untamable grand personality,' shares last text exchange\"\n\"Cranes remove bus partially swallowed by Pittsburgh sinkhole\"\n\"Jets trade DL Leonard Williams to Giants\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"South Florida principal who made controversial comments about the Holocaust is fired\"\n\"Baker Mayfield is on an island and Browns should be deeply concerned\"\n\"100 greatest movie quotes from 100 years of film\"\n\"Mayfield's postgame outfit gets all the memes\"\n\"Will Freddie Kitchens be one and done in Cleveland?\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\n[Candidate News Title]\n\"Cowboys have questionable red zone calls in loss to Vikings\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Cowboys have questionable red zone calls in loss to Vikings,\" the user can expect a detailed analysis of the Dallas Cowboys' offensive strategies, particularly focusing on their decision-making during crucial red zone situations in a recent game against the Minnesota Vikings. The piece may critically evaluate specific plays that were deemed ineffective or poorly executed, potentially highlighting the implications of these decisions on the game's outcome. Additionally, it is likely to include commentary from analysts or coaches regarding the team's performance and possible adjustments needed moving forward.",
+  "model": "gpt-4o-mini"
+}

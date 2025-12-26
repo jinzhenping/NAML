@@ -1,0 +1,21 @@
+{
+  "user_id": 4,
+  "candidate_news_id": "N115611",
+  "candidate_title": "American Towns That Used to Be Poor but Are Now Rich",
+  "user_history_count": 10,
+  "user_history": [
+    "Popeyes Has Blessed Us With A Boozy Pie To Pair With Its Returned Chicken Sandwich",
+    "Rudolph makes 1-handed catch of Cousins' jump pass for TD",
+    "Should You Think Twice About Washing Your Hands on a Plane?",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal",
+    "Cars Americans Drive the Most",
+    "Why Do We Celebrate Thanksgiving and Why Does It Fall on a Thursday?",
+    "Impeachment Hearings Open With Revelation on Trump's Ukraine Pressure",
+    "Insiders predict: NFL Week 11 winners",
+    "40 Fascinating Marriage Tips From People Who've Been Married for 40 Years"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Popeyes Has Blessed Us With A Boozy Pie To Pair With Its Returned Chicken Sandwich\"\n\"Rudolph makes 1-handed catch of Cousins' jump pass for TD\"\n\"Should You Think Twice About Washing Your Hands on a Plane?\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\"Cars Americans Drive the Most\"\n\"Why Do We Celebrate Thanksgiving and Why Does It Fall on a Thursday?\"\n\"Impeachment Hearings Open With Revelation on Trump's Ukraine Pressure\"\n\"Insiders predict: NFL Week 11 winners\"\n\"40 Fascinating Marriage Tips From People Who've Been Married for 40 Years\"\n\n[Candidate News Title]\n\"American Towns That Used to Be Poor but Are Now Rich\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"American Towns That Used to Be Poor but Are Now Rich\" is likely to explore the transformation of various towns across the United States that have experienced significant economic growth. Readers may expect detailed examples of specific towns, highlighting the factors that contributed to their revitalization, such as new industries, investments, or changes in demographics. Additionally, the article could provide insights into the social and economic impacts of these changes on the local communities. Overall, it may serve to illustrate broader trends in economic development and urban renewal in America.",
+  "model": "gpt-4o-mini"
+}

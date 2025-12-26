@@ -1,0 +1,19 @@
+{
+  "user_id": 552,
+  "candidate_news_id": "N17038",
+  "candidate_title": "Pair Of 'New' 1987 Buick Grand Nationals Pulled From Garage After 30 Years",
+  "user_history_count": 8,
+  "user_history": [
+    "Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care",
+    "Deer fatally attacks hunter who shot him",
+    "Adam DeVine Is Engaged to Actress Chloe Bridges! 'Have Fun Planning the Wedding,' He Jokes",
+    "NFL fines Tyreek Hill $10K for flashing peace sign at defense during TD again",
+    "Celebs celebrate Halloween 2019",
+    "John Travolta Shares Rare Photo of Son Ben, 8, in Plane Cockpit: He's 'Taking My Place!'",
+    "The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers",
+    "Shawn Mendes and Camila Cabello Enjoy Steamy Makeout Session at L.A. Clippers Game"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care\"\n\"Deer fatally attacks hunter who shot him\"\n\"Adam DeVine Is Engaged to Actress Chloe Bridges! 'Have Fun Planning the Wedding,' He Jokes\"\n\"NFL fines Tyreek Hill $10K for flashing peace sign at defense during TD again\"\n\"Celebs celebrate Halloween 2019\"\n\"John Travolta Shares Rare Photo of Son Ben, 8, in Plane Cockpit: He's 'Taking My Place!'\"\n\"The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers\"\n\"Shawn Mendes and Camila Cabello Enjoy Steamy Makeout Session at L.A. Clippers Game\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Pair Of 'New' 1987 Buick Grand Nationals Pulled From Garage After 30 Years\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the discovery of two 1987 Buick Grand Nationals that were recently pulled from a garage after being stored for 30 years. Readers can expect details about the condition of the vehicles, including any notable features or modifications that may have been made over the years. The piece may also explore the significance of the Buick Grand National in automotive history, particularly its performance and popularity during the late 1980s. Additionally, it could touch on the owners' experiences with the cars and their plans for restoration or display, providing insight into the classic car culture.",
+  "model": "gpt-4o-mini"
+}

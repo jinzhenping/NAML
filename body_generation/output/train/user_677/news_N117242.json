@@ -1,0 +1,21 @@
+{
+  "user_id": 677,
+  "candidate_news_id": "N117242",
+  "candidate_title": "These Are America's Favorite Liquor Brands",
+  "user_history_count": 10,
+  "user_history": [
+    "Family of slain ISIS hostage says they secretly met with her captors in Iraq",
+    "Judge rules deputies can't put 'no trick-or-treat' signs in sex offenders' yards",
+    "Senate rejects Democratic effort to undo Obamacare changes",
+    "Narcissists may be bad friends and partners, but they're likely happier than you",
+    "Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights",
+    "Your Twin Flame Is Different Than Your Soul Mate, but Still Just as Impactful",
+    "Hugh Hefner's son Cooper weds 'Harry Potter' actress",
+    "Donald Trump Is All Alone",
+    "'Prepare to die' Trump adviser Stone texted witness, trial jury hears",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Family of slain ISIS hostage says they secretly met with her captors in Iraq\"\n\"Judge rules deputies can't put 'no trick-or-treat' signs in sex offenders' yards\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"Narcissists may be bad friends and partners, but they're likely happier than you\"\n\"Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights\"\n\"Your Twin Flame Is Different Than Your Soul Mate, but Still Just as Impactful\"\n\"Hugh Hefner's son Cooper weds 'Harry Potter' actress\"\n\"Donald Trump Is All Alone\"\n\"'Prepare to die' Trump adviser Stone texted witness, trial jury hears\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\n[Candidate News Title]\n\"These Are America's Favorite Liquor Brands\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"These Are America's Favorite Liquor Brands\" is likely to provide an overview of the most popular liquor brands in the United States, possibly including insights into consumer preferences and trends in the beverage industry. It may discuss the criteria used to determine these favorites, such as sales data or surveys, and could highlight specific brands that are particularly well-liked among different demographics. Additionally, the article might explore factors influencing brand popularity, such as marketing strategies or cultural shifts in drinking habits.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 132,
+  "candidate_news_id": "N23721",
+  "candidate_title": "Kate Middleton Took Public Transit to Her Royal Engagement Today",
+  "user_history_count": 10,
+  "user_history": [
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump",
+    "Flight Attendants Have a Secret Language You Didn't Know About",
+    "Hey, Millennials, look out below! Gen Z may already be catching up in the salary race",
+    "Kanye West is teaming up with pastor Joel Osteen: Details",
+    "The Sexiest Photos Ever of Our 29 Sexiest Men Alive",
+    "Celebrity property roundup: the winners and losers of 2019",
+    "11 Unique and Quirky Cruise Destinations",
+    "New Report Exposes Dolphin Cruelty in Travel Industry",
+    "Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump\"\n\"Flight Attendants Have a Secret Language You Didn't Know About\"\n\"Hey, Millennials, look out below! Gen Z may already be catching up in the salary race\"\n\"Kanye West is teaming up with pastor Joel Osteen: Details\"\n\"The Sexiest Photos Ever of Our 29 Sexiest Men Alive\"\n\"Celebrity property roundup: the winners and losers of 2019\"\n\"11 Unique and Quirky Cruise Destinations\"\n\"New Report Exposes Dolphin Cruelty in Travel Industry\"\n\"Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom\"\n\n[Candidate News Title]\n\"Kate Middleton Took Public Transit to Her Royal Engagement Today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Kate Middleton taking public transit to her royal engagement, the user may expect to learn about the circumstances surrounding her decision to use public transportation, as well as the reactions from the public and media. It could detail the significance of this choice in relation to her royal duties and the impact it has on the perception of the monarchy's accessibility. Additionally, the article is likely to provide insights into the specific engagement she attended and may touch on how this reflects her approach to modernizing royal traditions.",
+  "model": "gpt-4o-mini"
+}

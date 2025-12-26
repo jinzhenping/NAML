@@ -1,0 +1,21 @@
+{
+  "user_id": 687,
+  "candidate_news_id": "N92459",
+  "candidate_title": "Trump's sports kick is about politics, but fans have a say",
+  "user_history_count": 10,
+  "user_history": [
+    "Philadelphia man charged with five murders between 2011 and 2017",
+    "Ex-NFL player Winslow Jr takes plea deal before rape retrial",
+    "Third time's (not always) the charm: From silver screen icons to a world heavyweight boxer - celebs who've been married more than three times",
+    "13-year-old charged with two murders escapes custody in North Carolina",
+    "Florida deputy arrested for child abuse after slamming teen to the ground by her throat",
+    "Poll: 62% of Trump fans say they support him no matter what",
+    "New Mexico DE Nahje Flowers dies at 21",
+    "Accused killer's girlfriend reveals Colorado mom's last words",
+    "Mystery surrounds the last person missing from Camp Fire that left 85 dead in California",
+    "Previewing every key matchup in LSU-Alabama showdown"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Philadelphia man charged with five murders between 2011 and 2017\"\n\"Ex-NFL player Winslow Jr takes plea deal before rape retrial\"\n\"Third time's (not always) the charm: From silver screen icons to a world heavyweight boxer - celebs who've been married more than three times\"\n\"13-year-old charged with two murders escapes custody in North Carolina\"\n\"Florida deputy arrested for child abuse after slamming teen to the ground by her throat\"\n\"Poll: 62% of Trump fans say they support him no matter what\"\n\"New Mexico DE Nahje Flowers dies at 21\"\n\"Accused killer's girlfriend reveals Colorado mom's last words\"\n\"Mystery surrounds the last person missing from Camp Fire that left 85 dead in California\"\n\"Previewing every key matchup in LSU-Alabama showdown\"\n\n[Candidate News Title]\n\"Trump's sports kick is about politics, but fans have a say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read \"Trump's sports kick is about politics, but fans have a say,\" you may expect an exploration of how former President Trump's involvement in sports intersects with political themes and public opinion. The article is likely to discuss recent events or statements where Trump has utilized sports to engage with his supporters, while also examining the perspectives of fans and how they respond to his influence in this arena. Additionally, it may delve into the implications of this relationship for both sports and politics, highlighting differing views among the public on Trump's actions.",
+  "model": "gpt-4o-mini"
+}

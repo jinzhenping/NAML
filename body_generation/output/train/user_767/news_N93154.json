@@ -1,0 +1,21 @@
+{
+  "user_id": 767,
+  "candidate_news_id": "N93154",
+  "candidate_title": "Eww York: Darnold, Jets hold on to beat Jones, Giants 34-27",
+  "user_history_count": 10,
+  "user_history": [
+    "Coast Guard searches for man who fell from cruise off Texas",
+    "'Game of Thrones' Creators David Benioff and DB Weiss No Longer Developing New 'Star Wars' Trilogy",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Week in celebrity photos for Oct. 28-Nov. 1, 2019",
+    "11 Best Shows to See in Las Vegas",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "The Best Live TV Musicals of the Last 10 Years",
+    "Weird balls of ice have covered a beach in Finland",
+    "1 Family's Adoption Photo Shoot Is on Point, but the Touching Story Behind It Is Everything",
+    "At stressful time, Boy Scouts top boss goes on medical leave"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Coast Guard searches for man who fell from cruise off Texas\"\n\"'Game of Thrones' Creators David Benioff and DB Weiss No Longer Developing New 'Star Wars' Trilogy\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Week in celebrity photos for Oct. 28-Nov. 1, 2019\"\n\"11 Best Shows to See in Las Vegas\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"The Best Live TV Musicals of the Last 10 Years\"\n\"Weird balls of ice have covered a beach in Finland\"\n\"1 Family's Adoption Photo Shoot Is on Point, but the Touching Story Behind It Is Everything\"\n\"At stressful time, Boy Scouts top boss goes on medical leave\"\n\n[Candidate News Title]\n\"Eww York: Darnold, Jets hold on to beat Jones, Giants 34-27\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Eww York: Darnold, Jets hold on to beat Jones, Giants 34-27,\" the user can expect a detailed recap of the recent NFL game between the New York Jets and the New York Giants. The article is likely to cover key moments of the game, including standout performances by players such as Sam Darnold and Daniel Jones, as well as pivotal plays that contributed to the Jets' victory. Additionally, it may provide insights into team strategies, player statistics, and implications for both teams' seasons moving forward.",
+  "model": "gpt-4o-mini"
+}

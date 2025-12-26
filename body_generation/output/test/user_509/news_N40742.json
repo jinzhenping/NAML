@@ -1,0 +1,21 @@
+{
+  "user_id": 509,
+  "candidate_news_id": "N40742",
+  "candidate_title": "THEN AND NOW: What all your favorite '90s stars are doing today",
+  "user_history_count": 10,
+  "user_history": [
+    "Why the Patriots made a very un-Patriots trade for Mohamed Sanu",
+    "This fast food chain has the best fries, according to customers",
+    "Newly Signed Raven Makes Comeback After Losing Job, Ring",
+    "Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo",
+    "Tim Ryan drops out of presidential race",
+    "The 50 most expensive top boarding schools in America",
+    "You Have to Try These Famous Sandwiches in Every State",
+    "'Rich Kids' Stars Morgan Stewart and Brendan Fitzpatrick to Divorce After 3 Years of Marriage",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Here's the Best Small Town in Every State"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why the Patriots made a very un-Patriots trade for Mohamed Sanu\"\n\"This fast food chain has the best fries, according to customers\"\n\"Newly Signed Raven Makes Comeback After Losing Job, Ring\"\n\"Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo\"\n\"Tim Ryan drops out of presidential race\"\n\"The 50 most expensive top boarding schools in America\"\n\"You Have to Try These Famous Sandwiches in Every State\"\n\"'Rich Kids' Stars Morgan Stewart and Brendan Fitzpatrick to Divorce After 3 Years of Marriage\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Here's the Best Small Town in Every State\"\n\n[Candidate News Title]\n\"THEN AND NOW: What all your favorite '90s stars are doing today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"THEN AND NOW: What all your favorite '90s stars are doing today,\" you can likely expect a retrospective look at popular celebrities from the 1990s, detailing their career trajectories and current activities. The article may highlight notable figures from television, film, and music, providing insights into how these stars have evolved over the years. Additionally, it could include information about any significant changes in their personal lives or public personas since their peak fame, offering a balanced view of their journeys from the past to the present.",
+  "model": "gpt-4o-mini"
+}

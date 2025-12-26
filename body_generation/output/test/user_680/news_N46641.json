@@ -1,0 +1,21 @@
+{
+  "user_id": 680,
+  "candidate_news_id": "N46641",
+  "candidate_title": "Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "Dean Foods files for bankruptcy",
+    "Chrysler prodded sellers to absorb glut of 40,000 unordered cars, dealers say",
+    "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "5 Ways Cruise Lines Are Becoming More Environmentally Friendly",
+    "Travel etiquette: The final word on the right to recline",
+    "Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "U.S. Vows to Defend South Korea With Full Military Force Following Pyongyang Threats"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dean Foods files for bankruptcy\"\n\"Chrysler prodded sellers to absorb glut of 40,000 unordered cars, dealers say\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"5 Ways Cruise Lines Are Becoming More Environmentally Friendly\"\n\"Travel etiquette: The final word on the right to recline\"\n\"Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"U.S. Vows to Defend South Korea With Full Military Force Following Pyongyang Threats\"\n\n[Candidate News Title]\n\"Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the death of former North Carolina State and NBA player Anthony Grundy is likely to provide details surrounding the incident, including the circumstances of the stabbing and any official statements from authorities. Readers can expect information on Grundy's background, highlighting his achievements in basketball and any notable contributions to the sport. Additionally, the piece may discuss the broader implications of violence in communities and the response from fans and fellow athletes. It could also include insights into the investigation and any potential legal ramifications.",
+  "model": "gpt-4o-mini"
+}

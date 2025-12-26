@@ -1,0 +1,21 @@
+{
+  "user_id": 465,
+  "candidate_news_id": "N46894",
+  "candidate_title": "How much turkey do you need to buy per person?",
+  "user_history_count": 10,
+  "user_history": [
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "South Florida principal who made controversial comments about the Holocaust is fired",
+    "ISIS names successor to slain leader al-Baghdadi",
+    "Report: Patriots release Gordon from injured reserve",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Top 100 country songs of all time",
+    "Ford v Ferrari: the real story",
+    "The 1 reason you shouldn't hesitate to claim Social Security early",
+    "'Literally people are like, 'Are you Matt Damon?' and I'm like, 'No, no, I'm not''",
+    "LASIK eye surgery should be taken off market, ex-FDA adviser says"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"South Florida principal who made controversial comments about the Holocaust is fired\"\n\"ISIS names successor to slain leader al-Baghdadi\"\n\"Report: Patriots release Gordon from injured reserve\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Top 100 country songs of all time\"\n\"Ford v Ferrari: the real story\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\"'Literally people are like, 'Are you Matt Damon?' and I'm like, 'No, no, I'm not''\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\n[Candidate News Title]\n\"How much turkey do you need to buy per person?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find information regarding the appropriate amount of turkey to purchase per person for a gathering, such as a holiday dinner. The content may include guidelines on estimating serving sizes based on factors like age and appetite, along with tips for planning leftovers. Additionally, it could provide insights into different types of turkey, including whole birds versus pre-cut options, and may discuss preparation methods to ensure the meal is enjoyable. Overall, the article aims to help readers make informed decisions for their meal planning.",
+  "model": "gpt-4o-mini"
+}

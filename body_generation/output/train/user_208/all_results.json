@@ -1,0 +1,317 @@
+[
+  {
+    "user_id": 208,
+    "candidate_news_id": "N7937",
+    "candidate_title": "Dean Foods files for bankruptcy",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"Dean Foods files for bankruptcy\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Dean Foods files for bankruptcy,\" you can expect a report detailing the financial struggles faced by Dean Foods, a major player in the dairy industry. The article is likely to outline the reasons behind the bankruptcy filing, including factors such as declining milk consumption and increased competition. Additionally, it may discuss the implications for employees, suppliers, and consumers, as well as potential plans for restructuring or selling assets. Overall, the article will provide a comprehensive overview of this significant development in the food industry.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N119838",
+    "candidate_title": "Bucs release former first-round pick Vernon Hargreaves",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"Bucs release former first-round pick Vernon Hargreaves\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Bucs release former first-round pick Vernon Hargreaves\" is likely to provide an overview of the Tampa Bay Buccaneers' decision to part ways with Hargreaves, including details on his tenure with the team and the reasons behind his release. Readers may expect insights into Hargreaves' performance, any injuries he may have faced, and how this move impacts the Buccaneers' roster moving forward. Additionally, the article could explore potential implications for Hargreaves' future in the NFL, as he may seek to sign with another team.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N76434",
+    "candidate_title": "Report: Election vendors are 'prime targets,' need oversight",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"Report: Election vendors are 'prime targets,' need oversight\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If the user clicks on the article titled \"Report: Election vendors are 'prime targets,' need oversight,\" they may expect to read about the vulnerabilities and challenges faced by election vendors, particularly in the context of recent concerns over election security. The article is likely to discuss the importance of oversight in safeguarding the election process, potentially highlighting specific incidents or trends that illustrate why these vendors are considered prime targets for various threats. It could also explore recommendations for improving oversight and ensuring the integrity of electoral systems.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N100073",
+    "candidate_title": "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article about why Prince Harry wore his remembrance poppy differently from the rest of the Royal Family, the user can expect a discussion of the symbolism and significance of the remembrance poppy, particularly in relation to royal traditions. The piece may explore Harry's personal motivations for his choice, possibly reflecting his views on military service and remembrance. Additionally, the article could provide insights into how this decision aligns or contrasts with the practices of other family members, thereby shedding light on his evolving relationship with the monarchy and public perception.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N38902",
+    "candidate_title": "Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'\" is likely to explore the positive relationship between the two country music artists. Readers can expect to find details about their friendship, including specific instances where they have supported each other in their careers. Additionally, the article may delve into the broader theme of camaraderie among women in the music industry. It could also highlight recent projects or events they have collaborated on or attended together, showcasing their mutual admiration and respect.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N102111",
+    "candidate_title": "Huge bear uses tree to scratch its back",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"Huge bear uses tree to scratch its back\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Huge bear uses tree to scratch its back,\" the user is likely expecting a straightforward account of a bear engaging in a natural behavior, specifically using a tree for scratching. The piece may provide context about the bear's habitat and typical behaviors, highlighting how such actions are common among wildlife. Additionally, it could include observations on the bear's size and the surrounding environment, possibly discussing the implications of this behavior for understanding bear habits. Overall, the article is likely to deliver a descriptive overview of this encounter with minimal sensationalism.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N95962",
+    "candidate_title": "US Forest Service shuts down vandalized Georgia park feature",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"US Forest Service shuts down vandalized Georgia park feature\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the recent decision by the US Forest Service to shut down a specific feature in a Georgia park that has been vandalized. Readers may expect to learn about the nature of the vandalism, the particular features affected, and the reasons behind the closure. Additionally, the article could provide context regarding the park's significance, any ongoing efforts to restore it, and the implications for visitors. This closure may also be linked to broader themes of public safety and environmental preservation in national parks.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N1378",
+    "candidate_title": "Subprime mortgages keep minting cash for former Bear Stearns banker",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"Subprime mortgages keep minting cash for former Bear Stearns banker\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The user is likely to expect an informative analysis of the current state of subprime mortgages, particularly focusing on how they are generating significant profits for bankers, including those from Bear Stearns. The article may delve into the reasons why this financial strategy has resurfaced, discussing the implications for the housing market and broader economy. Additionally, it could explore the risks associated with subprime lending practices and the potential consequences for borrowers. Overall, the user may be looking for insights into the dynamics of this segment of the financial industry.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N36861",
+    "candidate_title": "60+ Restaurants Where Veterans Eat for Free on Veterans Day This Year",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"60+ Restaurants Where Veterans Eat for Free on Veterans Day This Year\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"60+ Restaurants Where Veterans Eat for Free on Veterans Day This Year,\" the user can likely expect a comprehensive list of participating restaurants offering complimentary meals to veterans on Veterans Day. The content may include specific names and locations of the restaurants, along with any requirements or special menu items available for veterans. Additionally, there could be helpful information on how to take advantage of these offers, including any necessary identification or reservation details. This article is likely designed to assist veterans in finding meaningful ways to celebrate the day.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N24150",
+    "candidate_title": "Flight Attendants Have a Secret Language You Didn't Know About",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"Flight Attendants Have a Secret Language You Didn't Know About\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Flight Attendants Have a Secret Language You Didn't Know About\" is likely to explore the unique communication methods employed by flight attendants during flights. Readers may expect to learn about specific codes or phrases that help crew members convey important information discreetly and efficiently, ensuring passenger safety and comfort. Additionally, the article could provide insights into how these communication techniques have evolved over time and their significance in the aviation industry, offering a glimpse into the often-overlooked aspects of airline operations.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N94850",
+    "candidate_title": "Winners, losers from Seahawks' wild overtime win over 49ers on 'Monday Night Football'",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"Winners, losers from Seahawks' wild overtime win over 49ers on 'Monday Night Football'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect a detailed analysis of the recent overtime game between the Seattle Seahawks and the San Francisco 49ers on 'Monday Night Football.' It will likely cover the key moments that defined the match, including standout performances from players, critical plays that influenced the outcome, and any significant statistics. Additionally, the piece may discuss the implications of the game's result on both teams' standings and playoff prospects, providing context for fans interested in the current NFL landscape.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N33378",
+    "candidate_title": "Comics - 'Half Full' by Maria Scrivan",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"Comics - 'Half Full' by Maria Scrivan\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Comics - 'Half Full' by Maria Scrivan,\" the user is likely expecting a continuation of the comic series that explores everyday life through humor and relatable scenarios. The content may focus on themes such as optimism versus pessimism in daily situations, reflecting on the challenges and joys of life with a lighthearted twist. Given the user's interest in previous comic titles, it is likely that this piece will blend witty observations with engaging illustrations, appealing to both casual readers and comic enthusiasts.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N60370",
+    "candidate_title": "House Democrat: 'Sham' investigation of Bidens will not dominate impeachment hearings",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"House Democrat: 'Sham' investigation of Bidens will not dominate impeachment hearings\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to provide an overview of recent developments in the impeachment hearings involving President Biden and the allegations surrounding his family. It may detail the perspectives of House Democrats, particularly focusing on their characterization of the investigation as a \"sham.\" Readers can expect information about the political context, key players involved, and how these hearings might impact the broader political landscape. Additionally, the article could explore the implications for the upcoming elections and public opinion regarding the impeachment process.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N93232",
+    "candidate_title": "Taliban to release 2 professors in prisoner swap",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"Taliban to release 2 professors in prisoner swap\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article on the Taliban's decision to release two professors in a prisoner swap is likely to provide details on the circumstances surrounding their captivity and the negotiations that led to this exchange. Readers may expect an overview of the implications of the swap for international relations, particularly in the context of U.S.-Taliban interactions. Additionally, the article could discuss the backgrounds of the professors involved and how this event fits into broader trends of hostage negotiations. Overall, it may offer insights into the ongoing complexities of the situation in Afghanistan.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 208,
+    "candidate_news_id": "N30899",
+    "candidate_title": "College gymnast dies following training accident in Connecticut",
+    "user_history_count": 10,
+    "user_history": [
+      "World Series Game 6 Highlights: Nationals vs. Astros",
+      "Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes",
+      "Indianapolis Colts Midpoint Draft Order",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+      "Comics - '9 to 5' by Harley Schwadron",
+      "Jacoby Brissett likely has knee sprain",
+      "Cowboys vs. Giants highlights | Week 9",
+      "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+      "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World Series Game 6 Highlights: Nationals vs. Astros\"\n\"Autopsy: 8-foot python fatally strangled Indiana woman in house with 140 snakes\"\n\"Indianapolis Colts Midpoint Draft Order\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Jacoby Brissett likely has knee sprain\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\n[Candidate News Title]\n\"College gymnast dies following training accident in Connecticut\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely provides an account of a tragic incident involving a college gymnast who died following a training accident in Connecticut. Readers can expect details about the circumstances of the accident, including where it occurred and any relevant information about the gymnast's background or training regimen. The piece may also touch on the impact of such incidents on college athletics and the safety measures that institutions might implement to prevent similar occurrences in the future.",
+    "model": "gpt-4o-mini"
+  }
+]

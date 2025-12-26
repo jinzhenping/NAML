@@ -1,0 +1,21 @@
+{
+  "user_id": 919,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 10,
+  "user_history": [
+    "Is Ellen DeGeneres the ultimate property flipper?",
+    "Man who advocated caning for adultery gets caned for adultery",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "Actress Accuses Roman Polanski of Raping Her in 1975",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "The biggest wastes of money in 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Is Ellen DeGeneres the ultimate property flipper?\"\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"Actress Accuses Roman Polanski of Raping Her in 1975\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"The biggest wastes of money in 2019\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The most talked about movie moments of the 2010s,\" you are likely to read an analysis of significant scenes from various films that sparked conversation and debate during that decade. The article may explore why certain moments resonated with audiences, highlighting both critical and popular responses. You can expect discussions on themes such as societal impact, memorable performances, and cultural relevance, alongside notable examples from various genres. Additionally, the piece could reflect on how these moments influenced subsequent cinematic trends or the film industry as a whole.",
+  "model": "gpt-4o-mini"
+}

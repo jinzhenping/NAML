@@ -1,0 +1,21 @@
+{
+  "user_id": 239,
+  "candidate_news_id": "N120089",
+  "candidate_title": "The Hottest Tech Gifts This Holiday Season",
+  "user_history_count": 10,
+  "user_history": [
+    "Lindsay Lohan's dad weighs in on her relationship with the Saudi crown prince",
+    "Fall TV Scheduling Hits & Misses (2019)",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "When Costars Clash: 13 Onscreen Pairs Who Were Allegedly Feuding Offscreen",
+    "'The Little Mermaid Live!': TV Review",
+    "Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'",
+    "Mark Ruffalo Wants to Set Up Jennifer Aniston on a Date",
+    "10 Thanksgiving dishes you should just buy at the store",
+    "100 Incredible Christmas Tree Decorating Ideas",
+    "17 Outdated Office Etiquette Rules That Are So Laughable Today"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lindsay Lohan's dad weighs in on her relationship with the Saudi crown prince\"\n\"Fall TV Scheduling Hits & Misses (2019)\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"When Costars Clash: 13 Onscreen Pairs Who Were Allegedly Feuding Offscreen\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'\"\n\"Mark Ruffalo Wants to Set Up Jennifer Aniston on a Date\"\n\"10 Thanksgiving dishes you should just buy at the store\"\n\"100 Incredible Christmas Tree Decorating Ideas\"\n\"17 Outdated Office Etiquette Rules That Are So Laughable Today\"\n\n[Candidate News Title]\n\"The Hottest Tech Gifts This Holiday Season\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect a curated list of the hottest tech gifts for the upcoming holiday season, highlighting popular gadgets and innovative products that are likely to appeal to a wide range of consumers. It may cover items such as smart home devices, wearable technology, and the latest in entertainment electronics, providing insights on their features and potential value. Additionally, the article could include tips on selecting gifts based on different interests or age groups, making it a useful guide for holiday shopping.",
+  "model": "gpt-4o-mini"
+}

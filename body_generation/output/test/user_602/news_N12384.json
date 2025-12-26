@@ -1,0 +1,21 @@
+{
+  "user_id": 602,
+  "candidate_news_id": "N12384",
+  "candidate_title": "Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day",
+  "user_history_count": 10,
+  "user_history": [
+    "MLB free-agent rumors: Braves making Madison Bumgarner a priority, report says",
+    "This is Exactly How Long You Should Keep Thanksgiving Leftovers",
+    "200 Shocking Home Photos You Have to See",
+    "Clemson routs NC State, claims ACC Atlantic title",
+    "Burrow, LSU might've just buried Alabama's CFP hopes",
+    "Stars Who Served in the Military",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say",
+    "The 1 reason you shouldn't hesitate to claim Social Security early",
+    "These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"MLB free-agent rumors: Braves making Madison Bumgarner a priority, report says\"\n\"This is Exactly How Long You Should Keep Thanksgiving Leftovers\"\n\"200 Shocking Home Photos You Have to See\"\n\"Clemson routs NC State, claims ACC Atlantic title\"\n\"Burrow, LSU might've just buried Alabama's CFP hopes\"\n\"Stars Who Served in the Military\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\"\n\n[Candidate News Title]\n\"Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day,\" you may expect to read about a heartwarming initiative where a hospital dresses newborns in outfits inspired by Fred Rogers to celebrate World Kindness Day. The article could detail the hospital's motivation for this unique approach to promote kindness and community spirit, possibly including reactions from parents and staff. Additionally, it may highlight the significance of Fred Rogers' legacy in promoting compassion and understanding among children and adults alike.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 201,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "18 things to avoid at the dollar store",
+    "This fast food chain has the best fries, according to customers",
+    "What we know about the military dog injured in the al-Baghdadi raid",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Inside the creepy, abandoned villages deep in the New Jersey Pine Barrens that were once bustling towns and are now home to something much more mysterious",
+    "10 of the best fast-food taco chains across the US",
+    "15 secrets of the $4.99 Costco rotisserie chicken",
+    "Popeyes' chicken sandwich is back on the menu, but it seems smaller and less exciting the second time around",
+    "See the most expensive watch ever sold at auction",
+    "This is Chick-fil-A's most-ordered menu item"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"18 things to avoid at the dollar store\"\n\"This fast food chain has the best fries, according to customers\"\n\"What we know about the military dog injured in the al-Baghdadi raid\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Inside the creepy, abandoned villages deep in the New Jersey Pine Barrens that were once bustling towns and are now home to something much more mysterious\"\n\"10 of the best fast-food taco chains across the US\"\n\"15 secrets of the $4.99 Costco rotisserie chicken\"\n\"Popeyes' chicken sandwich is back on the menu, but it seems smaller and less exciting the second time around\"\n\"See the most expensive watch ever sold at auction\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive,\" the user can expect a curated selection of innovative and practical tech products that cater to a wide range of interests and budgets. The piece is likely to highlight items such as gadgets, accessories, and smart devices that are popular among consumers. Readers may find detailed descriptions of the features and benefits of each product, as well as suggestions for different occasions, such as holidays or birthdays. Additionally, the article could provide insights into current tech trends and what makes these gifts appealing to various demographics.",
+  "model": "gpt-4o-mini"
+}

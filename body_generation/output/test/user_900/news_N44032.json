@@ -1,0 +1,21 @@
+{
+  "user_id": 900,
+  "candidate_news_id": "N44032",
+  "candidate_title": "GoFundMe Honors Good Samaritans at First Heroes Celebration: 'Amazing Things Are Happening'",
+  "user_history_count": 10,
+  "user_history": [
+    "Senior Trump official embellished résumé, had face on fake Time cover",
+    "Petition To 'Bring Back' Don Cherry Gains Traction After Hockey Commentator Fired For Comments About Immigrants",
+    "NFL Week 11 Power Rankings: Upsets rule, and a new team at the top",
+    "Mother of missing Florida girl charged; human remains found",
+    "Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\"",
+    "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+    "Giants face PR mess: If Gabe Kapler is innocent, is Farhan Zaidi guilty?",
+    "Panthers QB Cam Newton would reportedly welcome trade to Bears",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "Condemned Killer Of Former Child Actor Dies On San Quentin's Death Row"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"Petition To 'Bring Back' Don Cherry Gains Traction After Hockey Commentator Fired For Comments About Immigrants\"\n\"NFL Week 11 Power Rankings: Upsets rule, and a new team at the top\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\"\"\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\"Giants face PR mess: If Gabe Kapler is innocent, is Farhan Zaidi guilty?\"\n\"Panthers QB Cam Newton would reportedly welcome trade to Bears\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Condemned Killer Of Former Child Actor Dies On San Quentin's Death Row\"\n\n[Candidate News Title]\n\"GoFundMe Honors Good Samaritans at First Heroes Celebration: 'Amazing Things Are Happening'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"GoFundMe Honors Good Samaritans at First Heroes Celebration: 'Amazing Things Are Happening'\" is likely to discuss an event recognizing individuals who have made significant contributions to their communities through acts of kindness and support. Readers may expect to learn about the specific good deeds that prompted the honors, as well as insights into the impact of these actions on the recipients and their communities. The piece could also highlight testimonials from beneficiaries or organizers, illustrating the positive influence of crowdfunding platforms in facilitating these charitable efforts.",
+  "model": "gpt-4o-mini"
+}

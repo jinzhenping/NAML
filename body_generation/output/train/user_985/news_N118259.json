@@ -1,0 +1,21 @@
+{
+  "user_id": 985,
+  "candidate_news_id": "N118259",
+  "candidate_title": "20 Fast Food Restaurants Then and Now",
+  "user_history_count": 10,
+  "user_history": [
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'",
+    "Salmon Recalled In Michigan",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned",
+    "Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'",
+    "America's Largest Home Also Has the Most Amazing Christmas Decorations",
+    "Dad thought he dressed toddler daughter in a hat, but he was hilariously wrong",
+    "Everyday heroes step up to help lone Waffle House employee"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'\"\n\"Salmon Recalled In Michigan\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned\"\n\"Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'\"\n\"America's Largest Home Also Has the Most Amazing Christmas Decorations\"\n\"Dad thought he dressed toddler daughter in a hat, but he was hilariously wrong\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\n[Candidate News Title]\n\"20 Fast Food Restaurants Then and Now\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"20 Fast Food Restaurants Then and Now,\" the user is likely to find a comparative analysis of well-known fast food chains, detailing their evolution over the years. The piece may cover changes in menu offerings, branding, and customer experience, reflecting broader trends in the food industry. Additionally, it could provide insights into how these restaurants have adapted to shifts in consumer preferences and health considerations. Overall, the user can expect a historical overview that highlights significant milestones and transformations within the fast food sector.",
+  "model": "gpt-4o-mini"
+}

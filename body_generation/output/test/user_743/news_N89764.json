@@ -1,0 +1,20 @@
+{
+  "user_id": 743,
+  "candidate_news_id": "N89764",
+  "candidate_title": "Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital",
+  "user_history_count": 9,
+  "user_history": [
+    "UFC champ Khabib Nurmagomedov seen training in a freezing river, because of course",
+    "'Old Town Road' becomes the second country single to reach top-selling Diamond status",
+    "UFC says Nate Diaz not suspended, Jorge Masvidal fight cleared to go on as planned",
+    "'When I smelled that smoke ... here we go again': Weary Californians seek shelter amid latest wildfire outbreak",
+    "Man wins $1 million in the lottery for the second time",
+    "Republicans urge Bevin to provide proof of election fraud or concede",
+    "Justin Bieber Says Popeyes Chicken Sandwich Is 'Not Worth the Hype'",
+    "College gymnast dies following training accident in Connecticut",
+    "Celebrity plastic surgery transformations"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"UFC champ Khabib Nurmagomedov seen training in a freezing river, because of course\"\n\"'Old Town Road' becomes the second country single to reach top-selling Diamond status\"\n\"UFC says Nate Diaz not suspended, Jorge Masvidal fight cleared to go on as planned\"\n\"'When I smelled that smoke ... here we go again': Weary Californians seek shelter amid latest wildfire outbreak\"\n\"Man wins $1 million in the lottery for the second time\"\n\"Republicans urge Bevin to provide proof of election fraud or concede\"\n\"Justin Bieber Says Popeyes Chicken Sandwich Is 'Not Worth the Hype'\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Celebrity plastic surgery transformations\"\n\"\"\n\n[Candidate News Title]\n\"Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely reports on the investigation into the circumstances surrounding a woman's death, which occurred after she was taken to a hospital by Montae Nicholson, a player for the Washington Redskins. Readers can expect details regarding the police's involvement and any preliminary findings related to the case. The article may also explore the implications of this incident for Nicholson and the wider community, as well as any statements from law enforcement or the team. Overall, it appears to touch on themes of athlete conduct and public safety.",
+  "model": "gpt-4o-mini"
+}

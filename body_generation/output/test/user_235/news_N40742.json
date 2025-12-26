@@ -1,0 +1,21 @@
+{
+  "user_id": 235,
+  "candidate_news_id": "N40742",
+  "candidate_title": "THEN AND NOW: What all your favorite '90s stars are doing today",
+  "user_history_count": 10,
+  "user_history": [
+    "Yardbarker's NFL Week 9 game-by-game analysis, grades",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "The Sudafed Solution to the Vaping Problem",
+    "This girl nails the wave pool   then fails the exit spectacularly",
+    "Sneaky reason why Ravens, not Patriots, are AFC's best",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "39 Appetizers for a Crowd That Are Easy and Unexpected",
+    "Winners, losers from Seahawks' wild overtime win over 49ers on 'Monday Night Football'",
+    "Bad news, seniors: Your Medicare costs are going up",
+    "4 reasons you shouldn't max out your 401(k)"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Yardbarker's NFL Week 9 game-by-game analysis, grades\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"The Sudafed Solution to the Vaping Problem\"\n\"This girl nails the wave pool   then fails the exit spectacularly\"\n\"Sneaky reason why Ravens, not Patriots, are AFC's best\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"39 Appetizers for a Crowd That Are Easy and Unexpected\"\n\"Winners, losers from Seahawks' wild overtime win over 49ers on 'Monday Night Football'\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\n[Candidate News Title]\n\"THEN AND NOW: What all your favorite '90s stars are doing today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"THEN AND NOW: What all your favorite '90s stars are doing today,\" you may expect an exploration of the current lives and careers of iconic celebrities from the 1990s. The piece is likely to provide updates on their professional endeavors, personal milestones, and any notable changes since their peak fame. You might find a mix of well-known actors, musicians, and television personalities, along with insights into how they have adapted to the evolving entertainment landscape. Additionally, the article could offer a nostalgic look back at their most memorable roles or contributions from that era.",
+  "model": "gpt-4o-mini"
+}

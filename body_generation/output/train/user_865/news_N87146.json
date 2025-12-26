@@ -1,0 +1,21 @@
+{
+  "user_id": 865,
+  "candidate_news_id": "N87146",
+  "candidate_title": "Comics - 'Pluggers' by Gary Brookins",
+  "user_history_count": 10,
+  "user_history": [
+    "Latest Australia shark attack sparks tourism concerns",
+    "The megaprojects that changed countries forever",
+    "Snow crab sells for record price in Japan",
+    "100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season",
+    "The Infertility Secret I Kept From My Mother",
+    "The Single Biggest Shopping Day? Nov. 11, in China",
+    "Subway just released a sandwich with green eggs and ham",
+    "Meghan Markle Smudged Makeup on a Fan's Coat & He Reacted Perfectly",
+    "Is Miss USA Ready for Its First Woman In a Wheelchair?",
+    "Ashley Graham Says She Has a Major Case of Pregnancy Brain But What Is That?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Latest Australia shark attack sparks tourism concerns\"\n\"The megaprojects that changed countries forever\"\n\"Snow crab sells for record price in Japan\"\n\"100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season\"\n\"The Infertility Secret I Kept From My Mother\"\n\"The Single Biggest Shopping Day? Nov. 11, in China\"\n\"Subway just released a sandwich with green eggs and ham\"\n\"Meghan Markle Smudged Makeup on a Fan's Coat & He Reacted Perfectly\"\n\"Is Miss USA Ready for Its First Woman In a Wheelchair?\"\n\"Ashley Graham Says She Has a Major Case of Pregnancy Brain But What Is That?\"\n\n[Candidate News Title]\n\"Comics - 'Pluggers' by Gary Brookins\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Comics - 'Pluggers' by Gary Brookins,\" you may expect a discussion centered around the comic strip \"Pluggers,\" which often humorously depicts the everyday lives and quirks of ordinary people. The article is likely to provide insights into the themes and characters that characterize the strip, possibly touching on its cultural relevance and its appeal to a specific demographic. Additionally, it could explore how the comic reflects societal norms or trends, offering a glimpse into how humor is used to comment on contemporary life.",
+  "model": "gpt-4o-mini"
+}

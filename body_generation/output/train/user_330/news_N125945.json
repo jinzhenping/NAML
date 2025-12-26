@@ -1,0 +1,21 @@
+{
+  "user_id": 330,
+  "candidate_news_id": "N125945",
+  "candidate_title": "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+  "user_history_count": 10,
+  "user_history": [
+    "Two women joined GM more than a decade ago. Their futures couldn't be more different",
+    "Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn",
+    "Bollinger's B1 and B2 electric off-roaders are gonna cost a whole heap of cash",
+    "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+    "I Gave Up On Love, And It Was One Of The Best Decisions I Ever Made",
+    "Moparized Jeep Wrangler Gets Tube-Door Skins and Mirrors for SEMA",
+    "Former Rep. Katie Hill's father pushes for prosecution of 'evil' estranged husband",
+    "Tensions, tears, trauma: the Democratic voters suffering under Trump",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Teresa Giudice, daughters reunite with Joe in Italy: See the pic!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Two women joined GM more than a decade ago. Their futures couldn't be more different\"\n\"Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn\"\n\"Bollinger's B1 and B2 electric off-roaders are gonna cost a whole heap of cash\"\n\"Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge\"\n\"I Gave Up On Love, And It Was One Of The Best Decisions I Ever Made\"\n\"Moparized Jeep Wrangler Gets Tube-Door Skins and Mirrors for SEMA\"\n\"Former Rep. Katie Hill's father pushes for prosecution of 'evil' estranged husband\"\n\"Tensions, tears, trauma: the Democratic voters suffering under Trump\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Teresa Giudice, daughters reunite with Joe in Italy: See the pic!\"\n\n[Candidate News Title]\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout,\" the user can expect a discussion centered on Tamron Hall's decision to depart from the Today Show, which may include insights into her reasons for leaving and her future plans. The piece is likely to touch on her reflections regarding the television industry and might also highlight her comments about Megyn Kelly's financial settlement, providing context on the dynamics between prominent figures in media. Additionally, the article could explore the implications of these departures for viewers and the broader media landscape.",
+  "model": "gpt-4o-mini"
+}

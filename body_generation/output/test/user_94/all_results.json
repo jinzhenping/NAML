@@ -1,0 +1,317 @@
+[
+  {
+    "user_id": 94,
+    "candidate_news_id": "N123209",
+    "candidate_title": "Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions,\" the user can expect to read about the recent controversies involving the two contestants from the reality show \"Survivor.\" The piece is likely to detail the specific actions that led to their apologies, providing context about the situation and the reactions from fans and fellow contestants. Additionally, it may explore the implications of their behavior on their public image and the broader conversation surrounding accountability within reality television.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N100425",
+    "candidate_title": "The most talked about movie moments of the 2010s",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on \"The most talked about movie moments of the 2010s,\" you can expect an overview of significant scenes and events from films during that decade that sparked widespread discussion or controversy. The article is likely to highlight key moments that resonated with audiences, such as surprising plot twists, memorable performances, or cultural impacts. Additionally, it may delve into how these moments shaped film trends or influenced popular culture. Overall, the piece could provide a reflective look at how these cinematic highlights have left a lasting impression on viewers and the industry alike.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N32286",
+    "candidate_title": "A third of boomers make this critical retirement mistake",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"A third of boomers make this critical retirement mistake\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect to explore common pitfalls that many baby boomers encounter when planning for retirement. It may discuss critical financial decisions, such as mismanagement of savings, underestimating healthcare costs, or failing to diversify investments. The piece is likely to provide insights into the long-term implications of these mistakes and may suggest strategies for avoiding them, ultimately aiming to help readers make informed choices about their retirement plans.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N79671",
+    "candidate_title": "Billionaires' success boils down to 3 simple traits, a new report says",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"Billionaires' success boils down to 3 simple traits, a new report says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Billionaires' success boils down to 3 simple traits, a new report says\" is likely to explore key characteristics that contribute to the success of wealthy individuals. Readers can expect an analysis of common traits shared by billionaires, possibly including qualities such as resilience, strategic thinking, and risk-taking. The report may include examples of well-known billionaires to illustrate these traits in action. Additionally, it could delve into how these characteristics can be cultivated or adopted by others aspiring to achieve similar success, although this aspect is less certain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N122944",
+    "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, readers may expect to explore the reasons behind McDonald's decision to keep the Filet-O-Fish on their menu, despite its relatively niche popularity compared to other items. The piece is likely to discuss historical context, consumer demand, and marketing strategies that contribute to the sandwich's enduring presence. Additionally, it could delve into insights from market research or customer feedback that highlight why this particular offering continues to resonate with a segment of the fast-food audience. Overall, the article aims to provide a comprehensive understanding of the Filet-O-Fish's role in McDonald's menu strategy.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N39628",
+    "candidate_title": "Husky saves the day after sister gets stuck in onesie pajama",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"Husky saves the day after sister gets stuck in onesie pajama\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Husky saves the day after sister gets stuck in onesie pajama,\" the user can likely expect a light-hearted narrative about a dog's quick thinking and problem-solving abilities. The piece may detail the circumstances surrounding the incident, including how the sister became stuck and the dog's actions in coming to her aid. Additionally, the article might explore the bond between the pet and its owner, highlighting the dog's intelligence and loyalty in a relatable family scenario.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N106885",
+    "candidate_title": "Oregon may face ICE push-back on new limits for courthouse arrests",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"Oregon may face ICE push-back on new limits for courthouse arrests\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss the implications of Oregon's new legislation aimed at limiting arrests by Immigration and Customs Enforcement (ICE) in courthouses, highlighting potential push-back from federal authorities. It may delve into the legal and social ramifications of this policy, examining how it could affect individuals seeking justice in the court system, particularly within immigrant communities. Additionally, the article might explore past incidents of ICE enforcement in courthouses and provide insights from legal experts or advocates on the challenges and benefits of these new limits.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N22627",
+    "candidate_title": "Best royal photos of the decade",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"Best royal photos of the decade\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If the user clicks on \"Best royal photos of the decade,\" they are likely expecting a curated collection of notable and visually striking photographs featuring members of various royal families from the past ten years. The article may highlight key events, milestones, and public appearances that have defined royal family narratives, showcasing their influence and presence in modern culture. Additionally, it could provide context for each image, explaining its significance or the occasion it commemorates, appealing to the user’s interest in royal affairs and familial connections.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N27034",
+    "candidate_title": "Porzingis forgets which locker room to go to at Madison Square Garden",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"Porzingis forgets which locker room to go to at Madison Square Garden\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Porzingis forgets which locker room to go to at Madison Square Garden,\" the user may expect to read about a light-hearted incident involving NBA player Kristaps Porzingis. The piece is likely to provide details about the mix-up, possibly including humorous commentary from teammates or analysts. It could also touch on Porzingis's career and his recent performances, contextualizing the event within his journey in the league. Furthermore, the article may explore reactions from fans and media, highlighting the playful side of professional sports.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N67588",
+    "candidate_title": "He was a member of a boy band in the 90s. Now he's an ER doctor in Dallas",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"He was a member of a boy band in the 90s. Now he's an ER doctor in Dallas\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely explores the unique journey of a former boy band member who transitioned into a career as an ER doctor in Dallas. Readers can expect to learn about his experiences in the music industry during the 90s, including insights into the challenges and triumphs he faced as a performer. Additionally, the piece may discuss how he made the shift to medicine, detailing his motivations and the rigorous training involved. This combination of pop culture and medical career development could provide an intriguing look at the diverse paths individuals can take in life.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N50175",
+    "candidate_title": "Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect to find an overview of recent developments in celebrity relationships, with a focus on Demi Lovato's new boyfriend and other notable love life updates from various celebrities. The piece may discuss the implications of these relationships on their public personas and provide insight into the dynamics of celebrity dating, including any challenges they face in the public eye. Additionally, it could highlight social media reactions or comments from fans regarding these romantic news items, offering a glimpse into the current trends in celebrity culture.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N32993",
+    "candidate_title": "Nine-year-old child genius to graduate from Dutch university",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"Nine-year-old child genius to graduate from Dutch university\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Nine-year-old child genius to graduate from Dutch university,\" the user can expect to learn about a remarkable young individual who has achieved an academic milestone typically reserved for much older students. The piece is likely to provide insights into the child's exceptional abilities, the fields of study they are engaged in, and the implications of such early academic success. Additionally, the article may explore how this unique situation has influenced the child's upbringing and educational environment, highlighting the challenges and support systems involved in nurturing such talent.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N30532",
+    "candidate_title": "Female Thunderbird pilot inspiring others to chase their dreams",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"Female Thunderbird pilot inspiring others to chase their dreams\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article about the female Thunderbird pilot is likely to highlight her journey in pursuing a career in aviation, emphasizing the challenges she overcame and the inspiration she provides to others, particularly women in male-dominated fields. It may detail her experiences during training, insights into the aviation industry, and the significance of her role as a pilot in the Thunderbird team. Additionally, the piece could explore her motivations and the impact she hopes to have on aspiring pilots, illustrating how her achievements may encourage others to chase their dreams in similar paths.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N26667",
+    "candidate_title": "Why This Couple Is Getting a 'Sleep Divorce'",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"Why This Couple Is Getting a 'Sleep Divorce'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Why This Couple Is Getting a 'Sleep Divorce'\" is likely to explore the concept of couples choosing to sleep separately to improve their overall relationship quality. Readers may expect insights into the reasons behind this trend, such as differing sleep habits, personal space needs, or health issues. The article could also discuss the potential benefits of such an arrangement, including improved sleep quality and reduced conflict. Additionally, it may include expert opinions or anecdotes from couples who have adopted this practice, providing a balanced view on its effectiveness.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 94,
+    "candidate_news_id": "N91390",
+    "candidate_title": "Funny celeb pics for November 2019",
+    "user_history_count": 10,
+    "user_history": [
+      "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+      "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+      "'The Little Mermaid Live!': TV Review",
+      "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+      "Watch: Cowboys announce black cat as starter for 'SNF'",
+      "How a speech pathologist is teaching her dog to 'speak'",
+      "Country music's biggest scandals",
+      "Stephen Curry calls out Michael Jordan for being a 'hater'",
+      "Dean Foods files for bankruptcy",
+      "Travel etiquette: The final word on the right to recline"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Watch: Cowboys announce black cat as starter for 'SNF'\"\n\"How a speech pathologist is teaching her dog to 'speak'\"\n\"Country music's biggest scandals\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Travel etiquette: The final word on the right to recline\"\n\n[Candidate News Title]\n\"Funny celeb pics for November 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect a collection of humorous and entertaining celebrity photos from November 2019, showcasing a variety of moments that highlight the lighter side of celebrity life. The imagery may feature candid shots, funny poses, or amusing situations involving popular figures in the entertainment industry. Additionally, there could be brief captions or context for each photo, providing insight into the circumstances surrounding the images. The article is likely to appeal to those interested in pop culture and lighthearted entertainment, offering a playful glimpse into the world of celebrities.",
+    "model": "gpt-4o-mini"
+  }
+]

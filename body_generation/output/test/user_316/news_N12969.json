@@ -1,0 +1,21 @@
+{
+  "user_id": 316,
+  "candidate_news_id": "N12969",
+  "candidate_title": "41 home design shortcuts from the experts",
+  "user_history_count": 10,
+  "user_history": [
+    "Insiders predict: NFL week 10 winners",
+    "Nike hit with another damning op-ed: 'I was emotionally and physically abused'",
+    "As L.A. ports automate, some workers are cheering on the robots",
+    "Flight Attendants Have a Secret Language You Didn't Know About",
+    "AP Top 25: LSU landslide No. 1; Minnesota jumps into top 10",
+    "7 Women Share What It's Really Like To Work On A Cruise Ship",
+    "Five questions the second College Football Playoff rankings will answer",
+    "Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary",
+    "Harrods accused of ruining the spirit of Christmas after limiting Santa visits to customers who spend over $2,500",
+    "College football rankings: The Bottom 25 congratulates Jim Delany on his latest masterpiece"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Insiders predict: NFL week 10 winners\"\n\"Nike hit with another damning op-ed: 'I was emotionally and physically abused'\"\n\"As L.A. ports automate, some workers are cheering on the robots\"\n\"Flight Attendants Have a Secret Language You Didn't Know About\"\n\"AP Top 25: LSU landslide No. 1; Minnesota jumps into top 10\"\n\"7 Women Share What It's Really Like To Work On A Cruise Ship\"\n\"Five questions the second College Football Playoff rankings will answer\"\n\"Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary\"\n\"Harrods accused of ruining the spirit of Christmas after limiting Santa visits to customers who spend over $2,500\"\n\"College football rankings: The Bottom 25 congratulates Jim Delany on his latest masterpiece\"\n\n[Candidate News Title]\n\"41 home design shortcuts from the experts\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"41 home design shortcuts from the experts,\" you may expect to find a collection of practical tips and strategies aimed at enhancing home aesthetics and functionality. The article is likely to cover a variety of design shortcuts that can simplify the home decorating process, potentially including advice on space optimization, color coordination, and the use of materials that are both stylish and cost-effective. Additionally, it may feature insights from industry professionals, offering readers expert opinions on how to achieve a polished look in their living spaces with minimal effort.",
+  "model": "gpt-4o-mini"
+}

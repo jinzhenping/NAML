@@ -1,0 +1,20 @@
+{
+  "user_id": 877,
+  "candidate_news_id": "N123077",
+  "candidate_title": "Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage",
+  "user_history_count": 9,
+  "user_history": [
+    "NFL winners, losers: Cowboys need to rebound, Patriots keep winning",
+    "Disney World's Skyliner system up and running for tests, reports say",
+    "Report: Ezekiel Elliott's dad investigated after police shoot wild cat near his home",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged",
+    "America's best inexpensive steakhouses",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "This Is What the 2020 Toyota Supra Should've Looked Like From the Start",
+    "The Curious Pasta Dish I Found on My Solo Trip to Italy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL winners, losers: Cowboys need to rebound, Patriots keep winning\"\n\"Disney World's Skyliner system up and running for tests, reports say\"\n\"Report: Ezekiel Elliott's dad investigated after police shoot wild cat near his home\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged\"\n\"America's best inexpensive steakhouses\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"This Is What the 2020 Toyota Supra Should've Looked Like From the Start\"\n\"The Curious Pasta Dish I Found on My Solo Trip to Italy\"\n\"\"\n\n[Candidate News Title]\n\"Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent controversy surrounding Drake's surprise appearance as a festival headliner, detailing the mixed reactions from fans, including reports of him being booed off stage. It may explore the reasons behind the divided opinions, such as expectations for the performance, the festival's context, and Drake's popularity. Additionally, the piece could provide insights into social media reactions and any potential implications for future festival lineups. Overall, readers can expect a balanced overview of the event and its reception among attendees.",
+  "model": "gpt-4o-mini"
+}

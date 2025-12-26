@@ -1,0 +1,21 @@
+{
+  "user_id": 14,
+  "candidate_news_id": "N117695",
+  "candidate_title": "Prince Harry and Prince William's Rift Is \"One of the Main Reasons\" the Sussexes Are Skipping Royal Christmas",
+  "user_history_count": 10,
+  "user_history": [
+    "Obama calls out call-out culture: \"That's not activism\"",
+    "Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights",
+    "Police rescue abducted teen girl; 34-year-old man taken into custody",
+    "BEL MOONEY: My family disowned me when I said I was a woman",
+    "Solange Knowles splits with husband ahead of anniversary",
+    "Kevin Hart Makes First Official Appearance at People's Choice Awards 2019 Following Near-Fatal Accident",
+    "Jenna Dewan flaunts her baby bump in red gown at People's Choice Awards",
+    "2019 People's Choice Awards fashion hits and misses",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Obama calls out call-out culture: \"That's not activism\"\"\n\"Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights\"\n\"Police rescue abducted teen girl; 34-year-old man taken into custody\"\n\"BEL MOONEY: My family disowned me when I said I was a woman\"\n\"Solange Knowles splits with husband ahead of anniversary\"\n\"Kevin Hart Makes First Official Appearance at People's Choice Awards 2019 Following Near-Fatal Accident\"\n\"Jenna Dewan flaunts her baby bump in red gown at People's Choice Awards\"\n\"2019 People's Choice Awards fashion hits and misses\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\n[Candidate News Title]\n\"Prince Harry and Prince William's Rift Is \"One of the Main Reasons\" the Sussexes Are Skipping Royal Christmas\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the ongoing tensions between Prince Harry and Prince William, highlighting how their strained relationship may be influencing the decision of the Sussexes to forgo the traditional Royal Christmas celebrations. Readers can expect an exploration of the background behind the rift, possibly including insights into personal and familial dynamics within the royal family. Additionally, the article may speculate on the implications of this choice for both the Sussexes and the broader royal family, providing context on how public perception of their relationship has evolved over time.",
+  "model": "gpt-4o-mini"
+}

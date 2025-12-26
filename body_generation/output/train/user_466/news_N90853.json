@@ -1,0 +1,21 @@
+{
+  "user_id": 466,
+  "candidate_news_id": "N90853",
+  "candidate_title": "Maggert holes out to win Champions finale; McCarron takes Schwab Cup",
+  "user_history_count": 10,
+  "user_history": [
+    "Food Network star Carl Ruiz died of clogged arteries",
+    "Elton John calls Michael Jackson 'mentally ill,' Tina Turner a 'nightmare' in new book",
+    "Red Hot Chili Peppers' Flea Marries Designer Melody Ehsani",
+    "Read the full statement on the additional charges against parents in the college scandal",
+    "Reunited after decades apart, high school sweethearts wed at 80",
+    "30+ Fall Slow-Cooker Recipes Even Cozier Than Your Favorite Sweater",
+    "Six photographers share their favorite Audrey Hepburn images in a new book celebrating the Hollywood actress 26 years after her death",
+    "27 Keto Ground Beef Recipes for When You're Sick of Chicken",
+    "'If you see a need, try to fill it': Wisconsin teen hopes to inspire others",
+    "Celebrity Headshots from Before They Were Famous"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Food Network star Carl Ruiz died of clogged arteries\"\n\"Elton John calls Michael Jackson 'mentally ill,' Tina Turner a 'nightmare' in new book\"\n\"Red Hot Chili Peppers' Flea Marries Designer Melody Ehsani\"\n\"Read the full statement on the additional charges against parents in the college scandal\"\n\"Reunited after decades apart, high school sweethearts wed at 80\"\n\"30+ Fall Slow-Cooker Recipes Even Cozier Than Your Favorite Sweater\"\n\"Six photographers share their favorite Audrey Hepburn images in a new book celebrating the Hollywood actress 26 years after her death\"\n\"27 Keto Ground Beef Recipes for When You're Sick of Chicken\"\n\"'If you see a need, try to fill it': Wisconsin teen hopes to inspire others\"\n\"Celebrity Headshots from Before They Were Famous\"\n\n[Candidate News Title]\n\"Maggert holes out to win Champions finale; McCarron takes Schwab Cup\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent performance of golfer Maggert, who secured victory in the Champions Tour finale, highlighting key moments of the match and his overall strategy. It may also provide insights into McCarron's performance as he contended for the Schwab Cup, detailing the competitive landscape of the tournament. Additionally, the piece could include commentary on the implications of these outcomes for the players' careers and future tournaments, offering a broader context within the world of professional golf.",
+  "model": "gpt-4o-mini"
+}

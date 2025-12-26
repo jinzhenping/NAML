@@ -1,0 +1,21 @@
+{
+  "user_id": 730,
+  "candidate_news_id": "N54368",
+  "candidate_title": "South Carolina teen gets life in prison for deadly elementary school shooting",
+  "user_history_count": 10,
+  "user_history": [
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "John Legend clarifies his recent Kanye West comments, plus more news",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon",
+    "Gwen Stefani Sets the Record Straight on That Diamond Ring at 2019 People's Choice Awards",
+    "Signs of Dementia: 8 Tips For Talking to Your Older Parents",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "Jennifer Lopez Just Got a Teeny Chop to Her Blond Lob, but it Changed the Entire Look",
+    "Pete Davidson, Kaia Gerber seen on yet another date: Fresh details on their new romance"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"John Legend clarifies his recent Kanye West comments, plus more news\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon\"\n\"Gwen Stefani Sets the Record Straight on That Diamond Ring at 2019 People's Choice Awards\"\n\"Signs of Dementia: 8 Tips For Talking to Your Older Parents\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"Jennifer Lopez Just Got a Teeny Chop to Her Blond Lob, but it Changed the Entire Look\"\n\"Pete Davidson, Kaia Gerber seen on yet another date: Fresh details on their new romance\"\n\n[Candidate News Title]\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on the South Carolina teen receiving a life sentence for a deadly elementary school shooting is likely to provide a detailed account of the incident, including the background of the shooter, the circumstances surrounding the shooting, and the legal proceedings that led to the sentencing. It may discuss the implications of this case on school safety and gun control debates, as well as reactions from the community and families affected by the tragedy. The article is likely to explore the broader context of youth violence and may include insights from legal experts on the ramifications of such a sentence.",
+  "model": "gpt-4o-mini"
+}

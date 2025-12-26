@@ -1,0 +1,21 @@
+{
+  "user_id": 246,
+  "candidate_news_id": "N24001",
+  "candidate_title": "17 Outdated Office Etiquette Rules That Are So Laughable Today",
+  "user_history_count": 10,
+  "user_history": [
+    "How Each Zodiac Sign Knows They've Found Their Soulmate",
+    "Randy Moss takes a perfect dig at Joe Buck's infamous 'disgusting act' call",
+    "Local News Anchor Discovers She Has Rare Form of Cancer Caused by Pregnancy: 'It's Very Complicated'",
+    "Singer stands up to heckler who told her to take shirt off",
+    "Trash to treasure: Everest garbage given new lease of life",
+    "2020 Airstream Caravel Is a Miniature Hotel Room on Wheels",
+    "Martin worries about amputation after breaking right leg",
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Missing college student's parents meet with mother of Natalee Holloway"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"How Each Zodiac Sign Knows They've Found Their Soulmate\"\n\"Randy Moss takes a perfect dig at Joe Buck's infamous 'disgusting act' call\"\n\"Local News Anchor Discovers She Has Rare Form of Cancer Caused by Pregnancy: 'It's Very Complicated'\"\n\"Singer stands up to heckler who told her to take shirt off\"\n\"Trash to treasure: Everest garbage given new lease of life\"\n\"2020 Airstream Caravel Is a Miniature Hotel Room on Wheels\"\n\"Martin worries about amputation after breaking right leg\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\n[Candidate News Title]\n\"17 Outdated Office Etiquette Rules That Are So Laughable Today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"17 Outdated Office Etiquette Rules That Are So Laughable Today,\" you may expect a discussion on traditional workplace norms that have become obsolete in modern settings. The article is likely to highlight specific rules that once held significance but are now seen as impractical or overly formal, such as dress codes or communication protocols. It may also explore how evolving workplace cultures and attitudes, influenced by technology and changing social dynamics, have rendered these rules irrelevant. Overall, the piece could provide a reflective look at the transformation of office etiquette over time.",
+  "model": "gpt-4o-mini"
+}

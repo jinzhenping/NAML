@@ -1,0 +1,21 @@
+{
+  "user_id": 36,
+  "candidate_news_id": "N102668",
+  "candidate_title": "Beat the crowds at these abandoned U.S. national parks",
+  "user_history_count": 10,
+  "user_history": [
+    "Bette Midler mocks Lori Loughlin's college admission scandal",
+    "Fashion hits and misses from the 2019 Hollywood Film Awards",
+    "Her cancer surgery was a success. Then a genetic condition let a chemo drug ravage her body",
+    "Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly",
+    "Jennifer Lopez Reacts to Lisa Rinna Dressing Up as Her for Halloween: 'She Looked Awesome'",
+    "Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness",
+    "Chris Brown is having a yard sale at his house",
+    "Week in celebrity photos for Nov. 4-8, 2019",
+    "17 of the Most Iconic Movie Songs of All Time",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bette Midler mocks Lori Loughlin's college admission scandal\"\n\"Fashion hits and misses from the 2019 Hollywood Film Awards\"\n\"Her cancer surgery was a success. Then a genetic condition let a chemo drug ravage her body\"\n\"Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly\"\n\"Jennifer Lopez Reacts to Lisa Rinna Dressing Up as Her for Halloween: 'She Looked Awesome'\"\n\"Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness\"\n\"Chris Brown is having a yard sale at his house\"\n\"Week in celebrity photos for Nov. 4-8, 2019\"\n\"17 of the Most Iconic Movie Songs of All Time\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\n[Candidate News Title]\n\"Beat the crowds at these abandoned U.S. national parks\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Beat the crowds at these abandoned U.S. national parks\" is likely to provide insights into lesser-known national parks that offer solitude and natural beauty away from the typical tourist hotspots. Readers may expect to learn about specific parks that have been largely overlooked, along with details on unique features, such as scenic views or historical significance. The article could also discuss practical tips for visiting these locations, including the best times to go and activities available, allowing for a peaceful outdoor experience.",
+  "model": "gpt-4o-mini"
+}

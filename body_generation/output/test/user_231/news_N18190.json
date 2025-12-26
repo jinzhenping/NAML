@@ -1,0 +1,21 @@
+{
+  "user_id": 231,
+  "candidate_news_id": "N18190",
+  "candidate_title": "30 Best Black Friday Deals from Costco",
+  "user_history_count": 10,
+  "user_history": [
+    "Felicity Huffman Smiles as She Begins Community Service Following Prison Release",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "A guide to the 2019 People's Choice Awards nominees' significant others",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'",
+    "Sean Spicer voted off 'Dancing With the Stars' after weeks of controversy with low scores, judicial frustration",
+    "Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance",
+    "Harry and Meghan Revive Feud Rumors By Staying Away From the Royal Family's Christmas"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Felicity Huffman Smiles as She Begins Community Service Following Prison Release\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\"Sean Spicer voted off 'Dancing With the Stars' after weeks of controversy with low scores, judicial frustration\"\n\"Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance\"\n\"Harry and Meghan Revive Feud Rumors By Staying Away From the Royal Family's Christmas\"\n\n[Candidate News Title]\n\"30 Best Black Friday Deals from Costco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a comprehensive overview of the best Black Friday deals available at Costco, focusing on a variety of product categories. It may include specifics about discounts on electronics, home goods, and groceries, along with tips for maximizing savings during the shopping event. The article could also highlight any special promotions or limited-time offers that Costco is providing, helping readers to strategize their purchases effectively. Overall, it aims to serve as a guide for informed shopping during the holiday season.",
+  "model": "gpt-4o-mini"
+}

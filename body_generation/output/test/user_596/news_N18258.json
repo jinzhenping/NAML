@@ -1,0 +1,21 @@
+{
+  "user_id": 596,
+  "candidate_news_id": "N18258",
+  "candidate_title": "Russia lands forces at former U.S. air base in northern Syria",
+  "user_history_count": 10,
+  "user_history": [
+    "Failed operation underlines Mexico chaos",
+    "After throwing a punch, Dabo Swinney made CB Andrew Booth ride the manager bus back to Clemson",
+    "Megyn Kelly Claps Back After Being Told to 'Just Fade Away and Enjoy Large Pot of Money'",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "What I Wish My Dad Told Me More Growing Up, According to 10 Men",
+    "She Fought for Muslim Women. Then She Was Found Dead.",
+    "Best Ski Resorts in the US",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Comparing Forbes 400 lists from 1982 and 2019 shows how differently wealth is tracked today",
+    "Country music's biggest scandals"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Failed operation underlines Mexico chaos\"\n\"After throwing a punch, Dabo Swinney made CB Andrew Booth ride the manager bus back to Clemson\"\n\"Megyn Kelly Claps Back After Being Told to 'Just Fade Away and Enjoy Large Pot of Money'\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"What I Wish My Dad Told Me More Growing Up, According to 10 Men\"\n\"She Fought for Muslim Women. Then She Was Found Dead.\"\n\"Best Ski Resorts in the US\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Comparing Forbes 400 lists from 1982 and 2019 shows how differently wealth is tracked today\"\n\"Country music's biggest scandals\"\n\n[Candidate News Title]\n\"Russia lands forces at former U.S. air base in northern Syria\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Russia lands forces at former U.S. air base in northern Syria\" is likely to provide an overview of recent military developments involving Russian troops in a strategically significant area. Readers may expect insights into the implications of this deployment for regional security dynamics and U.S. interests in Syria. The article may also discuss the historical context of the air base and the potential responses from the U.S. and its allies. It is likely to highlight the geopolitical significance of this move and its possible impact on ongoing conflicts in the region.",
+  "model": "gpt-4o-mini"
+}

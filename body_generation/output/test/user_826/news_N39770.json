@@ -1,0 +1,21 @@
+{
+  "user_id": 826,
+  "candidate_news_id": "N39770",
+  "candidate_title": "Dow tops 28,000 for first time, capping 4-week win streak",
+  "user_history_count": 10,
+  "user_history": [
+    "The Hospital on a Mission to Bring Home-Cooked Meals to Its Patients",
+    "Wild & wonderful treasures of SEMA 2019   US edition",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "I Was 24 & Had Just Scored My Dream Job In Fashion. Then An Accident In The Hamptons Changed Everything.",
+    "Man who inherited 6 figures shares advice he'd give his younger self",
+    "Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'",
+    "My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.",
+    "Three school workers charged in death of special needs student",
+    "Here's the Best Small Town in Every State",
+    "Powerful side-by-side portraits show people over 100 years old next to their younger selves"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Hospital on a Mission to Bring Home-Cooked Meals to Its Patients\"\n\"Wild & wonderful treasures of SEMA 2019   US edition\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"I Was 24 & Had Just Scored My Dream Job In Fashion. Then An Accident In The Hamptons Changed Everything.\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'\"\n\"My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.\"\n\"Three school workers charged in death of special needs student\"\n\"Here's the Best Small Town in Every State\"\n\"Powerful side-by-side portraits show people over 100 years old next to their younger selves\"\n\n[Candidate News Title]\n\"Dow tops 28,000 for first time, capping 4-week win streak\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find an overview of the recent performance of the Dow Jones Industrial Average, particularly its achievement in surpassing the 28,000 mark for the first time. The piece may provide insights into the factors contributing to this milestone, such as economic indicators, market trends, or significant events influencing investor sentiment. Additionally, it could explore the implications of this win streak for the broader financial landscape and what it might mean for future market movements. The analysis is likely to be data-driven and objective, focusing on factual information rather than speculative commentary.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,19 @@
+{
+  "user_id": 352,
+  "candidate_news_id": "N86352",
+  "candidate_title": "I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)",
+  "user_history_count": 8,
+  "user_history": [
+    "'Be water': Police swoop as Hong Kong protests shift tactics",
+    "Tatu Kamau: Kenyan female doctor in court to legalize female genital mutilation",
+    "'All my friends are dead'",
+    "U.S. health officials link childhood trauma to adult illness",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math",
+    "Ugly From the Outset: Hong Kong's Day of Widespread Violence",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Be water': Police swoop as Hong Kong protests shift tactics\"\n\"Tatu Kamau: Kenyan female doctor in court to legalize female genital mutilation\"\n\"'All my friends are dead'\"\n\"U.S. health officials link childhood trauma to adult illness\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math\"\n\"Ugly From the Outset: Hong Kong's Day of Widespread Violence\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The user is likely expecting to read about a simple and effective method for managing overeating, particularly focusing on a Sunday routine that takes minimal time to implement. The article may outline specific strategies or tips to help individuals regain control over their eating habits, possibly including meal planning or mindfulness techniques. Additionally, it could provide insights into the benefits of establishing a weekly practice aimed at promoting healthier eating patterns, though the exact details and effectiveness of this approach remain uncertain.",
+  "model": "gpt-4o-mini"
+}

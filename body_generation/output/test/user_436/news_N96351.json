@@ -1,0 +1,21 @@
+{
+  "user_id": 436,
+  "candidate_news_id": "N96351",
+  "candidate_title": "Why I'm Done Celebrating The Accomplishments Of Couples",
+  "user_history_count": 10,
+  "user_history": [
+    "Trailer - Autonomy",
+    "They bought a 1 euro house in Italy -- here's what happened next",
+    "Powell's Warning to Congress About the Next Recession",
+    "Manafort's 2016 Gambit: A Back Channel From Trump Camp to Labor",
+    "Answers remain elusive in Virginia Beach shooting rampage",
+    "Turkey's Erdoğan showed propaganda film about Kurds during White House meeting: report",
+    "2020 Kia Telluride Pros and Cons Review: The Heartland Kia",
+    "Chad Wolf confirmed as acting Homeland Security chief",
+    "Amid Trump impeachment drama, Ukrainians ponder a Putin meeting",
+    "This is what the trade war looks like in bourbon country"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trailer - Autonomy\"\n\"They bought a 1 euro house in Italy -- here's what happened next\"\n\"Powell's Warning to Congress About the Next Recession\"\n\"Manafort's 2016 Gambit: A Back Channel From Trump Camp to Labor\"\n\"Answers remain elusive in Virginia Beach shooting rampage\"\n\"Turkey's Erdoğan showed propaganda film about Kurds during White House meeting: report\"\n\"2020 Kia Telluride Pros and Cons Review: The Heartland Kia\"\n\"Chad Wolf confirmed as acting Homeland Security chief\"\n\"Amid Trump impeachment drama, Ukrainians ponder a Putin meeting\"\n\"This is what the trade war looks like in bourbon country\"\n\n[Candidate News Title]\n\"Why I'm Done Celebrating The Accomplishments Of Couples\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Why I'm Done Celebrating The Accomplishments Of Couples\" is likely to explore the author's perspective on societal expectations surrounding coupledom and the celebration of traditional milestones like weddings and anniversaries. It may discuss the pressures and assumptions placed on individuals in relationships, contrasting these with personal experiences or observations about the value of independence and self-fulfillment. The piece could also speculate on the changing dynamics in modern relationships and the growing acceptance of diverse lifestyles, suggesting that the author may question the relevance of conventional celebrations in today’s context.",
+  "model": "gpt-4o-mini"
+}

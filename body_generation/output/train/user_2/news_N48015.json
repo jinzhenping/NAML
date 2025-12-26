@@ -1,0 +1,21 @@
+{
+  "user_id": 2,
+  "candidate_news_id": "N48015",
+  "candidate_title": "Abandoned 'unicorn' puppy has a tail on its head",
+  "user_history_count": 10,
+  "user_history": [
+    "30 Foods That Are Never Worth The Calories",
+    "Nashville's top 3 food stands to visit now",
+    "9 Vegetables You Shouldn't Eat Raw",
+    "The #1 Worst Menu Option at 76 Popular Restaurants",
+    "Duluth Trading Co. makes Tennessee debut with Franklin location",
+    "Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say",
+    "Mystery surrounds the last person missing from Camp Fire that left 85 dead in California",
+    "Nike hit with another damning op-ed: 'I was emotionally and physically abused'",
+    "Brazilian journalist assaults Glenn Greenwald on air",
+    "The 2019 NFL mid-season All-Pro team"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"30 Foods That Are Never Worth The Calories\"\n\"Nashville's top 3 food stands to visit now\"\n\"9 Vegetables You Shouldn't Eat Raw\"\n\"The #1 Worst Menu Option at 76 Popular Restaurants\"\n\"Duluth Trading Co. makes Tennessee debut with Franklin location\"\n\"Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say\"\n\"Mystery surrounds the last person missing from Camp Fire that left 85 dead in California\"\n\"Nike hit with another damning op-ed: 'I was emotionally and physically abused'\"\n\"Brazilian journalist assaults Glenn Greenwald on air\"\n\"The 2019 NFL mid-season All-Pro team\"\n\n[Candidate News Title]\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about an abandoned 'unicorn' puppy is likely to provide a detailed account of the unusual circumstances surrounding the animal, which may include its distinctive physical traits, such as having a tail on its head. Readers can expect information on how the puppy was found, any efforts for its care or adoption, and possibly insights into the reactions from the community or animal welfare organizations. It may also discuss the broader implications of animal abandonment and the importance of responsible pet ownership. Overall, the article could explore both the specific story of this puppy and related themes in animal rescue.",
+  "model": "gpt-4o-mini"
+}

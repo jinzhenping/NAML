@@ -1,0 +1,20 @@
+{
+  "user_id": 20,
+  "candidate_news_id": "N56873",
+  "candidate_title": "Can you answer these real Jeopardy questions about TV shows?",
+  "user_history_count": 9,
+  "user_history": [
+    "Four-metre king cobra wrestled from sewer in Thailand",
+    "Harley-Davidson halts production of new electric motorcycles",
+    "​20 Funny Things People in the 1970s Were Totally Guilty of Doing",
+    "Forde-Yard Dash: This is how bad the playoff picture can get",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "The 13 coolest   and creepiest   ghost towns around the world",
+    "Deer fatally attacks hunter who shot him",
+    "How To Open a Can Without a Can Opener",
+    "Patriots wanted a test. Now, they need some answers"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Four-metre king cobra wrestled from sewer in Thailand\"\n\"Harley-Davidson halts production of new electric motorcycles\"\n\"​20 Funny Things People in the 1970s Were Totally Guilty of Doing\"\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"The 13 coolest   and creepiest   ghost towns around the world\"\n\"Deer fatally attacks hunter who shot him\"\n\"How To Open a Can Without a Can Opener\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"\"\n\n[Candidate News Title]\n\"Can you answer these real Jeopardy questions about TV shows?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to encounter a series of trivia questions related to various television shows, drawing on the format popularized by the game show \"Jeopardy!\" The content may challenge readers' knowledge of iconic series, characters, and memorable moments in TV history. It could also provide insights into how these shows have influenced popular culture over the years. Additionally, the article may include hints or context for each question, allowing readers to engage more deeply with the material.",
+  "model": "gpt-4o-mini"
+}

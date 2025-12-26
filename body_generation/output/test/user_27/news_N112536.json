@@ -1,0 +1,21 @@
+{
+  "user_id": 27,
+  "candidate_news_id": "N112536",
+  "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+  "user_history_count": 10,
+  "user_history": [
+    "After throwing a punch, Dabo Swinney made CB Andrew Booth ride the manager bus back to Clemson",
+    "Judge: Brad Pitt, others can be sued over New Orleans homes",
+    "Jeff Bezos is set to lose his crown as world's richest person",
+    "Tent Spent: We Try Luxury Camping in a $100,000 Airstream",
+    "China is willing to buy $20 billion worth of US farm goods",
+    "The richest country music stars",
+    "Wild & wonderful treasures of SEMA 2019   US edition",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump",
+    "Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\""
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"After throwing a punch, Dabo Swinney made CB Andrew Booth ride the manager bus back to Clemson\"\n\"Judge: Brad Pitt, others can be sued over New Orleans homes\"\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Tent Spent: We Try Luxury Camping in a $100,000 Airstream\"\n\"China is willing to buy $20 billion worth of US farm goods\"\n\"The richest country music stars\"\n\"Wild & wonderful treasures of SEMA 2019   US edition\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump\"\n\"Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\"\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a specific location in the United States that has experienced unusually high temperatures, exceeding 80 degrees Fahrenheit since March. Readers may expect to learn about the geographical and climatic factors contributing to this prolonged warm weather, as well as its implications for local residents and businesses. The piece could also explore how this trend compares to historical weather patterns in the area and may highlight any potential impacts on agriculture or tourism. Overall, the article is expected to provide a detailed examination of this climate phenomenon.",
+  "model": "gpt-4o-mini"
+}

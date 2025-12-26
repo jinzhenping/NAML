@@ -1,0 +1,21 @@
+{
+  "user_id": 500,
+  "candidate_news_id": "N107472",
+  "candidate_title": "Actresses who've played Queen Elizabeth II",
+  "user_history_count": 10,
+  "user_history": [
+    "Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019",
+    "Airline passengers share photos of their worst in-flight meals",
+    "Report: Timberwolves 'fuming' over NBA's ruling in Karl-Anthony Towns-Joel Embiid fight",
+    "Vikings' Thielen (hamstring) questionable for Kansas City game",
+    "U.S. Not Willing to Become 'a Real Enemy of China,' State Media Says Amid Tensions on Human Rights, Taiwan",
+    "Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet",
+    "15 secrets of the $4.99 Costco rotisserie chicken",
+    "College football Week 11: Picks and preview",
+    "I Was A Psychic Phone Line Operator. Here's What Really Happened Behind The Scenes.",
+    "Read George Kent Full Opening Statement at the First Public Hearing in Trump's Impeachment Inquiry"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019\"\n\"Airline passengers share photos of their worst in-flight meals\"\n\"Report: Timberwolves 'fuming' over NBA's ruling in Karl-Anthony Towns-Joel Embiid fight\"\n\"Vikings' Thielen (hamstring) questionable for Kansas City game\"\n\"U.S. Not Willing to Become 'a Real Enemy of China,' State Media Says Amid Tensions on Human Rights, Taiwan\"\n\"Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet\"\n\"15 secrets of the $4.99 Costco rotisserie chicken\"\n\"College football Week 11: Picks and preview\"\n\"I Was A Psychic Phone Line Operator. Here's What Really Happened Behind The Scenes.\"\n\"Read George Kent Full Opening Statement at the First Public Hearing in Trump's Impeachment Inquiry\"\n\n[Candidate News Title]\n\"Actresses who've played Queen Elizabeth II\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In reading about \"Actresses who've played Queen Elizabeth II,\" the user may expect a detailed overview of various actresses who have portrayed the iconic British monarch throughout film and television history. The article is likely to include notable performances, such as those by Helen Mirren and Claire Foy, discussing the context of their portrayals and the historical periods they represent. Additionally, it may explore the impact these portrayals have had on public perception of Queen Elizabeth II and how each actress brought her unique interpretation to the role. Overall, the user could find insights into the artistic choices and challenges faced by these actresses in embodying such a significant figure.",
+  "model": "gpt-4o-mini"
+}

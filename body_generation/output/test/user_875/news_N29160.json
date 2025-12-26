@@ -1,0 +1,21 @@
+{
+  "user_id": 875,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 10,
+  "user_history": [
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Giuliani may have identified secret friend 'Charles' with accidental text",
+    "Why Do Cats Meow?",
+    "Gabbard Lawyers Demand Clinton Retract 'Defamatory' Russian Asset Comments",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "Senior Trump official embellished résumé, had face on fake Time cover",
+    "Trump warns Wall Street his defeat would endanger market gains",
+    "A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent",
+    "Rep. Tim Ryan endorses Biden in Democratic primary"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Giuliani may have identified secret friend 'Charles' with accidental text\"\n\"Why Do Cats Meow?\"\n\"Gabbard Lawyers Demand Clinton Retract 'Defamatory' Russian Asset Comments\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"Trump warns Wall Street his defeat would endanger market gains\"\n\"A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses Colin Kaepernick's potential return to professional football, exploring his past controversies and the factors that have contributed to his absence from the league. It may analyze the current landscape of the NFL and how teams might perceive Kaepernick's skills and activism. The piece could also delve into public opinion surrounding his return and how it relates to broader discussions about race and social justice in sports. Overall, readers can expect a balanced examination of the implications of Kaepernick's opportunity, though the specifics of the situation remain uncertain.",
+  "model": "gpt-4o-mini"
+}

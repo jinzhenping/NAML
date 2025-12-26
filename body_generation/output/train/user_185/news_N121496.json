@@ -1,0 +1,21 @@
+{
+  "user_id": 185,
+  "candidate_news_id": "N121496",
+  "candidate_title": "Philadelphia's open concept bathroom has the internet talking",
+  "user_history_count": 10,
+  "user_history": [
+    "Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet",
+    "This Ford GT40 Movie Rig From \"Ford V Ferrari\" Looks Absurd",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Joanna Gaines dons a gorgeous black dress for Magnolia Journal cover",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!",
+    "Kristen Stewart Just Made Leather Bras a Thing, and We're All For It",
+    "Snow crab sells for record price in Japan",
+    "Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'",
+    "Chevrolet Performance Reveals New Small Block Crate Engine"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet\"\n\"This Ford GT40 Movie Rig From \"Ford V Ferrari\" Looks Absurd\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Joanna Gaines dons a gorgeous black dress for Magnolia Journal cover\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\"Kristen Stewart Just Made Leather Bras a Thing, and We're All For It\"\n\"Snow crab sells for record price in Japan\"\n\"Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'\"\n\"Chevrolet Performance Reveals New Small Block Crate Engine\"\n\n[Candidate News Title]\n\"Philadelphia's open concept bathroom has the internet talking\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Philadelphia's open concept bathroom has the internet talking,\" you may expect an exploration of the latest trends in bathroom design, particularly focusing on the open concept style popularized in modern homes. The article is likely to discuss the aesthetic and functional aspects of such designs, highlighting how they promote a sense of space and light. It may also include examples of notable open concept bathrooms, user reactions, and insights into why this trend has garnered significant attention on social media.",
+  "model": "gpt-4o-mini"
+}

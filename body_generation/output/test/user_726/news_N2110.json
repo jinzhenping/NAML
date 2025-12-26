@@ -1,0 +1,21 @@
+{
+  "user_id": 726,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Three school workers charged in death of special needs student",
+    "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case",
+    "Ford v Ferrari: the real story",
+    "West Hollywood school administrator embroiled in college admissions scandal pleads guilty",
+    "How to Make Cornbread Without a Recipe",
+    "A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent",
+    "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say",
+    "Aaron Carter admitted to Florida hospital"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Three school workers charged in death of special needs student\"\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\"Ford v Ferrari: the real story\"\n\"West Hollywood school administrator embroiled in college admissions scandal pleads guilty\"\n\"How to Make Cornbread Without a Recipe\"\n\"A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent\"\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\"Aaron Carter admitted to Florida hospital\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive,\" you can expect a curated list of innovative and appealing tech gadgets that are suitable for various occasions, such as holidays, birthdays, or special events. The article is likely to highlight items ranging from practical devices to fun and unique gifts, providing descriptions of their features and potential uses. There may also be suggestions for different budgets, ensuring that readers can find something that fits their needs. Overall, the focus will be on contemporary technology that brings convenience or enjoyment to everyday life.",
+  "model": "gpt-4o-mini"
+}

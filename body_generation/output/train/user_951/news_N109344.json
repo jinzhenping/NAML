@@ -1,0 +1,20 @@
+{
+  "user_id": 951,
+  "candidate_news_id": "N109344",
+  "candidate_title": "10 Gazans dead as Israel hit on militant chief sparks rocket barrage",
+  "user_history_count": 9,
+  "user_history": [
+    "The World's 10 Fastest Growing Tourist Destinations",
+    "CNN Poll: Biden's lead in Democratic primary hits widest margin since April",
+    "3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian",
+    "45 Sneaky Signs You're Unhealthier Than You May Think",
+    "119 Countries Face Shortage Of Blood Supply",
+    "Police: Off-Duty Dallas Officer Mistakenly Shoots, Injures Adult Son Thinking He Was An Intruder",
+    "America's cheapest cities where everyone wants to live right now",
+    "How to pay off your mortgage early: 4 methods that work",
+    "40 conservative groups sign ethics complaint against Pelosi"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The World's 10 Fastest Growing Tourist Destinations\"\n\"CNN Poll: Biden's lead in Democratic primary hits widest margin since April\"\n\"3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian\"\n\"45 Sneaky Signs You're Unhealthier Than You May Think\"\n\"119 Countries Face Shortage Of Blood Supply\"\n\"Police: Off-Duty Dallas Officer Mistakenly Shoots, Injures Adult Son Thinking He Was An Intruder\"\n\"America's cheapest cities where everyone wants to live right now\"\n\"How to pay off your mortgage early: 4 methods that work\"\n\"40 conservative groups sign ethics complaint against Pelosi\"\n\"\"\n\n[Candidate News Title]\n\"10 Gazans dead as Israel hit on militant chief sparks rocket barrage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely reports on a recent escalation in violence in Gaza, detailing the aftermath of an Israeli strike targeting a militant leader, which resulted in the deaths of ten individuals. Readers may expect to find information about the broader implications of this incident, including reactions from both Israeli and Palestinian officials, as well as insights into the ongoing conflict. The piece could also discuss the potential for increased tensions in the region and the impact on civilian life, providing context on the current humanitarian situation in Gaza.",
+  "model": "gpt-4o-mini"
+}

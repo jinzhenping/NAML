@@ -1,0 +1,21 @@
+{
+  "user_id": 379,
+  "candidate_news_id": "N19586",
+  "candidate_title": "Experts Explain Why You Might Want to Stop Sleeping on Your Stomach and How to Do It",
+  "user_history_count": 10,
+  "user_history": [
+    "John Travolta Shares Rare Photo of Son Ben, 8, in Plane Cockpit: He's 'Taking My Place!'",
+    "Joe Giudice Calls His Family 'Italian Strong' During Reunion with Wife Teresa and Their Daughters",
+    "Best country music albums of all time",
+    "Kris Jenner Celebrates Corey Gamble's 39th Birthday with Kim, Kourtney and Khloé Kardashian",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Israel says overnight strike on Gaza house killed Islamic Jihad commander",
+    "Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "Top Putin aide named by MH17 airliner investigators",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"John Travolta Shares Rare Photo of Son Ben, 8, in Plane Cockpit: He's 'Taking My Place!'\"\n\"Joe Giudice Calls His Family 'Italian Strong' During Reunion with Wife Teresa and Their Daughters\"\n\"Best country music albums of all time\"\n\"Kris Jenner Celebrates Corey Gamble's 39th Birthday with Kim, Kourtney and Khloé Kardashian\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Israel says overnight strike on Gaza house killed Islamic Jihad commander\"\n\"Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"Top Putin aide named by MH17 airliner investigators\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\n[Candidate News Title]\n\"Experts Explain Why You Might Want to Stop Sleeping on Your Stomach and How to Do It\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers may expect to learn about the potential drawbacks of sleeping on one's stomach and the health implications associated with this position. It is likely that experts will provide insights into how stomach sleeping can affect spinal alignment and overall sleep quality, along with practical advice on transitioning to healthier sleep positions. The article could also include tips on how to adjust sleeping habits and may address common misconceptions about various sleep positions, offering a balanced view on the topic.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,18 @@
+{
+  "user_id": 936,
+  "candidate_news_id": "N77011",
+  "candidate_title": "Raised an only child, Southgate woman, 92, learns she has 19 half siblings",
+  "user_history_count": 7,
+  "user_history": [
+    "Should you eat red meat or not? A dietitian explains the latest nutrition science",
+    "Man accused in probe of Giuliani associates is freed on bail",
+    "Trump's Syria letter reportedly made Erdogan so angry, he threw it in the trash",
+    "Netanyahu says he can't form a government after election deadlock",
+    "Mayfield's postgame outfit gets all the memes",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Fisherman faces prison, fine for cruel act on rare fish"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Should you eat red meat or not? A dietitian explains the latest nutrition science\"\n\"Man accused in probe of Giuliani associates is freed on bail\"\n\"Trump's Syria letter reportedly made Erdogan so angry, he threw it in the trash\"\n\"Netanyahu says he can't form a government after election deadlock\"\n\"Mayfield's postgame outfit gets all the memes\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Fisherman faces prison, fine for cruel act on rare fish\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Raised an only child, Southgate woman, 92, learns she has 19 half siblings\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Raised an only child, Southgate woman, 92, learns she has 19 half siblings\" is likely to explore the surprising discovery of a 92-year-old woman who, after living as an only child, finds out she has a large number of half-siblings. Readers may expect to learn about the circumstances that led to this revelation, possibly including insights into her family history and the implications of such a discovery at her age. The article could delve into the emotional and social aspects of reuniting with newfound family members, as well as the broader themes of family dynamics and personal identity.",
+  "model": "gpt-4o-mini"
+}

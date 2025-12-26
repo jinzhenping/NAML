@@ -1,0 +1,21 @@
+{
+  "user_id": 970,
+  "candidate_news_id": "N23452",
+  "candidate_title": "Five Great Holiday Cruises Worth Taking",
+  "user_history_count": 10,
+  "user_history": [
+    "Former NFL lineman Justin Bannan arrested for attempted murder",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "Phoenix police officer involved in viral video stop of couple fired",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "In A Reversal, Joe Biden Wants A Super PAC",
+    "Nationals closer Sean Doolittle says he won't join team's White House visit",
+    "Rodgers rips Packers' road focus after blowout loss to Bolts",
+    "What Gas Stations Were Like In 1957",
+    "Retired Mesa PD detective says former Chief Batista was only part of the problem"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former NFL lineman Justin Bannan arrested for attempted murder\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"Phoenix police officer involved in viral video stop of couple fired\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"In A Reversal, Joe Biden Wants A Super PAC\"\n\"Nationals closer Sean Doolittle says he won't join team's White House visit\"\n\"Rodgers rips Packers' road focus after blowout loss to Bolts\"\n\"What Gas Stations Were Like In 1957\"\n\"Retired Mesa PD detective says former Chief Batista was only part of the problem\"\n\n[Candidate News Title]\n\"Five Great Holiday Cruises Worth Taking\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Five Great Holiday Cruises Worth Taking\" is likely to provide a detailed overview of recommended cruise options for the holiday season, highlighting various itineraries, destinations, and onboard experiences. It may include specifics about the types of cruises available, such as family-friendly or luxury options, and discuss features like entertainment, dining, and accommodations. Additionally, the article could touch on factors to consider when choosing a cruise, such as pricing, duration, and unique offerings, aimed at helping readers make informed travel decisions during the festive period.",
+  "model": "gpt-4o-mini"
+}

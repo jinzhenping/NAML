@@ -1,0 +1,21 @@
+{
+  "user_id": 741,
+  "candidate_news_id": "N89210",
+  "candidate_title": "New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November",
+  "user_history_count": 10,
+  "user_history": [
+    "NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "South Florida principal who made controversial comments about the Holocaust is fired",
+    "Patriots wanted a test. Now, they need some answers",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Chargers owner Dean Spanos shoots down report of possible London move with expletive-laden denial",
+    "The Latest: Kansas City to remove King's name from street",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"South Florida principal who made controversial comments about the Holocaust is fired\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Chargers owner Dean Spanos shoots down report of possible London move with expletive-laden denial\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\n[Candidate News Title]\n\"New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November,\" the user is likely to find a detailed overview of the latest content being released on Netflix for the month. This may include popular films and series, as well as any anticipated titles that could attract viewers’ attention. The article might highlight a mix of genres and possibly mention any notable cast members or creators involved, providing insights into what audiences can expect. Additionally, it could speculate on the potential impact of these releases on viewer engagement or trends in streaming preferences.",
+  "model": "gpt-4o-mini"
+}

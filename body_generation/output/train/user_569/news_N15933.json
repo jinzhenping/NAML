@@ -1,0 +1,16 @@
+{
+  "user_id": 569,
+  "candidate_news_id": "N15933",
+  "candidate_title": "10 Things to Know Before You Go to Las Vegas",
+  "user_history_count": 5,
+  "user_history": [
+    "If Jason Garrett would be in high demand, why haven't the Cowboys extended him?",
+    "Here's What Bill Belichick Told Patriots' Defense In Sideline Huddles Vs. Jets",
+    "TV reporter fired after climbing on cars live at auto show",
+    "The 13 Best Places to See the Northern Lights",
+    "Will Freddie Kitchens be one and done in Cleveland?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"If Jason Garrett would be in high demand, why haven't the Cowboys extended him?\"\n\"Here's What Bill Belichick Told Patriots' Defense In Sideline Huddles Vs. Jets\"\n\"TV reporter fired after climbing on cars live at auto show\"\n\"The 13 Best Places to See the Northern Lights\"\n\"Will Freddie Kitchens be one and done in Cleveland?\"\n\"\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"10 Things to Know Before You Go to Las Vegas\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"10 Things to Know Before You Go to Las Vegas,\" the user can likely expect a comprehensive overview of essential information for planning a trip to Las Vegas. This may include practical tips on accommodations, dining options, and entertainment choices, as well as insights into local attractions and events that are popular with visitors. Additionally, the article could touch on important logistical considerations, such as transportation and budgeting advice, ensuring travelers are well-prepared for their experience in the city.",
+  "model": "gpt-4o-mini"
+}

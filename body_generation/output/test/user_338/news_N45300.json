@@ -1,0 +1,21 @@
+{
+  "user_id": 338,
+  "candidate_news_id": "N45300",
+  "candidate_title": "Latin GRAMMYs 2019: Best Moments of the Night!",
+  "user_history_count": 10,
+  "user_history": [
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "NBA Fines Clippers $50K For Doc Rivers' Statements On Kawhi's Health",
+    "Reporter Can't Stop Laughing After Cat Interrupts News Segment",
+    "Woman Destroys Her Car at Drive-Thru While Trying to Get a Popeyes Chicken Sandwich",
+    "13 Ways You're Shortening the Life of Your Car",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "Amazon's $1.5 million political gambit backfires in Seattle City Council election",
+    "Fast food cashier and manager fired for refusing to serve police officer",
+    "I've had it with this former friend",
+    "Ford v Ferrari: the real story"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"NBA Fines Clippers $50K For Doc Rivers' Statements On Kawhi's Health\"\n\"Reporter Can't Stop Laughing After Cat Interrupts News Segment\"\n\"Woman Destroys Her Car at Drive-Thru While Trying to Get a Popeyes Chicken Sandwich\"\n\"13 Ways You're Shortening the Life of Your Car\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"Amazon's $1.5 million political gambit backfires in Seattle City Council election\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"I've had it with this former friend\"\n\"Ford v Ferrari: the real story\"\n\n[Candidate News Title]\n\"Latin GRAMMYs 2019: Best Moments of the Night!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Latin GRAMMYs 2019: Best Moments of the Night!\", you are likely expecting a recap of the highlights from the event, focusing on key performances, notable awards, and memorable appearances. The article may cover standout moments from the ceremony, including speeches from prominent artists and any unexpected occurrences that took place during the show. Additionally, it could provide insights into the cultural significance of the awards in the Latin music industry and how this year's event compared to previous ones. Overall, the piece is expected to offer a comprehensive overview of the festivities, celebrating the achievements in Latin music.",
+  "model": "gpt-4o-mini"
+}

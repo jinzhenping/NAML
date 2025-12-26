@@ -1,0 +1,21 @@
+{
+  "user_id": 361,
+  "candidate_news_id": "N74875",
+  "candidate_title": "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal",
+  "user_history_count": 10,
+  "user_history": [
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "1 dead, 10 sickened after multistate Salmonella outbreak linked to ground beef",
+    "Even 'Project Runway' Couldn't Save Zac Posen",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Mother Is Freed After 15 Years in Prison for Father's Abuse",
+    "Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids",
+    "Chevrolet Performance Reveals New Small Block Crate Engine"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"1 dead, 10 sickened after multistate Salmonella outbreak linked to ground beef\"\n\"Even 'Project Runway' Couldn't Save Zac Posen\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Mother Is Freed After 15 Years in Prison for Father's Abuse\"\n\"Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids\"\n\"Chevrolet Performance Reveals New Small Block Crate Engine\"\n\n[Candidate News Title]\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about the recent sentencing of a father involved in the college admissions scandal, where a judge referred to him as a \"thief.\" The piece may outline the details of the case, including the specific actions that led to the lengthy prison sentence, as well as the broader implications this case has on the college admissions process and public perception of fairness in education. Additionally, it could provide context regarding other related cases within the scandal, highlighting the legal ramifications faced by those involved.",
+  "model": "gpt-4o-mini"
+}

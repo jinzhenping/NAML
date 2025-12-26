@@ -1,0 +1,21 @@
+{
+  "user_id": 477,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 10,
+  "user_history": [
+    "Under Construction in Texas: The First New Section of Border Wall",
+    "Man lost his house over $8.41 in unpaid property taxes",
+    "Why You Should Go to New Orleans This Winter",
+    "American families fleeing Mexico arrive in Arizona days after cartel massacre",
+    "Dean Foods files for bankruptcy",
+    "The 12 Texas cities everyone in the country is moving to",
+    "Red and Blue Economies Are Heading in Sharply Different Directions",
+    "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+    "The 1 reason you shouldn't hesitate to claim Social Security early",
+    "Powell's Warning to Congress About the Next Recession"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Under Construction in Texas: The First New Section of Border Wall\"\n\"Man lost his house over $8.41 in unpaid property taxes\"\n\"Why You Should Go to New Orleans This Winter\"\n\"American families fleeing Mexico arrive in Arizona days after cartel massacre\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\"Red and Blue Economies Are Heading in Sharply Different Directions\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\"Powell's Warning to Congress About the Next Recession\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Opinion: Colin Kaepernick is about to get what he deserves: a chance,\" you may expect a discussion on Kaepernick's career, particularly focusing on his past protests and their impact on professional sports. The article could explore the evolving landscape of accountability in sports and how public sentiment may be shifting in favor of giving him an opportunity to return to the NFL. Additionally, it might analyze the broader implications of Kaepernick's potential comeback within the context of social justice and athlete activism.",
+  "model": "gpt-4o-mini"
+}

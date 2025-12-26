@@ -1,0 +1,19 @@
+{
+  "user_id": 181,
+  "candidate_news_id": "N33078",
+  "candidate_title": "Former U.S. President Carter recovering in hospital after successful brain procedure",
+  "user_history_count": 8,
+  "user_history": [
+    "Former NFL lineman Justin Bannan arrested for attempted murder",
+    "Tiger Woods starts slow as Jason Day runs away with Japan Skins title with $210K",
+    "Charlize Theron Says Playing Megyn Kelly Was 'Harder' Than Portraying a Serial Killer",
+    "Frustrated with season so far, Melvin Gordon appears to regret his holdout",
+    "Deer fatally attacks hunter who shot him",
+    "Report: Brady frustrated with Patriots about Brown, Gordon",
+    "Redskins' Haskins calls out Peterson on Twitter",
+    "Cornell student, 18, found dead in gorge after frat party, reports say"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former NFL lineman Justin Bannan arrested for attempted murder\"\n\"Tiger Woods starts slow as Jason Day runs away with Japan Skins title with $210K\"\n\"Charlize Theron Says Playing Megyn Kelly Was 'Harder' Than Portraying a Serial Killer\"\n\"Frustrated with season so far, Melvin Gordon appears to regret his holdout\"\n\"Deer fatally attacks hunter who shot him\"\n\"Report: Brady frustrated with Patriots about Brown, Gordon\"\n\"Redskins' Haskins calls out Peterson on Twitter\"\n\"Cornell student, 18, found dead in gorge after frat party, reports say\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Former U.S. President Carter recovering in hospital after successful brain procedure\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about former U.S. President Carter is likely to provide an update on his health following a successful brain procedure. Readers may expect details regarding the nature of the procedure, the reasons for his hospitalization, and any statements from family members or medical professionals about his recovery progress. Additionally, it could include context about Carter's recent public engagements or health challenges. The piece may also touch upon his legacy and contributions, reflecting on his status as a respected figure in American politics.",
+  "model": "gpt-4o-mini"
+}

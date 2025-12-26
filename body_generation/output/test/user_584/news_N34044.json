@@ -1,0 +1,21 @@
+{
+  "user_id": 584,
+  "candidate_news_id": "N34044",
+  "candidate_title": "This is it, this is the luckiest break in the history of golf",
+  "user_history_count": 10,
+  "user_history": [
+    "Sonoma State Students Arrested For Ransacking Empty Dorms During Kincade Fire",
+    "Man who inherited 6 figures shares advice he'd give his younger self",
+    "Ronnie Ortiz-Magro pleads not guilty to 7 charges",
+    "Snow crab sells for record price in Japan",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Nike will look into runner Mary Cain's allegations of abuse",
+    "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say",
+    "49ers' Joe Staley back on shelf after having finger surgery",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "Aaron Carter admitted to Florida hospital"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Sonoma State Students Arrested For Ransacking Empty Dorms During Kincade Fire\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Ronnie Ortiz-Magro pleads not guilty to 7 charges\"\n\"Snow crab sells for record price in Japan\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Nike will look into runner Mary Cain's allegations of abuse\"\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\"49ers' Joe Staley back on shelf after having finger surgery\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"Aaron Carter admitted to Florida hospital\"\n\n[Candidate News Title]\n\"This is it, this is the luckiest break in the history of golf\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"This is it, this is the luckiest break in the history of golf,\" you may expect to read about a significant moment in golf that is being described as remarkably fortunate. The piece could likely detail an unexpected event or stroke during a recent tournament that led to a pivotal outcome, perhaps highlighting the reactions of players or commentators. Additionally, it may provide context about the implications of this moment within the sport, addressing how it may affect player standings or future competitions.",
+  "model": "gpt-4o-mini"
+}

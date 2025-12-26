@@ -1,0 +1,21 @@
+{
+  "user_id": 444,
+  "candidate_news_id": "N86352",
+  "candidate_title": "I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)",
+  "user_history_count": 10,
+  "user_history": [
+    "USA TODAY/Suffolk Poll: Biden's lead over Warren narrows in a turbulent Democratic field",
+    "Lifestyle changes improved cognition in people at risk for Alzheimers, study shows",
+    "A year from Election Day, Democratic contenders extend leads over Trump: POLL",
+    "This 73-Year-Old Fitness Fanatic Is Defying Expectations On Every Level",
+    "'Rich Dad, Poor Dad' Robert Kiyosaki says this is 'the only rule' for getting and staying rich",
+    "This type of exercise engages 86% of your muscles here's how to work it into your fitness routine",
+    "19 Things You'll Need To Sacrifice Now for a Healthy Retirement",
+    "Michael Bloomberg Officially Joins 2020 Race, President Trump Blasts 'Little Michael' Over Sudden Change Of Heart",
+    "Celebrity plastic surgery transformations",
+    "6 Reasons to Run On the Treadmill Instead of Outside"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"USA TODAY/Suffolk Poll: Biden's lead over Warren narrows in a turbulent Democratic field\"\n\"Lifestyle changes improved cognition in people at risk for Alzheimers, study shows\"\n\"A year from Election Day, Democratic contenders extend leads over Trump: POLL\"\n\"This 73-Year-Old Fitness Fanatic Is Defying Expectations On Every Level\"\n\"'Rich Dad, Poor Dad' Robert Kiyosaki says this is 'the only rule' for getting and staying rich\"\n\"This type of exercise engages 86% of your muscles here's how to work it into your fitness routine\"\n\"19 Things You'll Need To Sacrifice Now for a Healthy Retirement\"\n\"Michael Bloomberg Officially Joins 2020 Race, President Trump Blasts 'Little Michael' Over Sudden Change Of Heart\"\n\"Celebrity plastic surgery transformations\"\n\"6 Reasons to Run On the Treadmill Instead of Outside\"\n\n[Candidate News Title]\n\"I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!),\" the user is likely to encounter practical advice focused on managing eating habits and promoting healthier lifestyle choices. The content may outline a specific strategy or routine that can be implemented on Sundays to help curb overeating during meals. Additionally, it could discuss the potential benefits of this practice, such as improved portion control or enhanced mindfulness around food. Overall, the article is expected to provide actionable insights that align with the user’s interest in health and wellness.",
+  "model": "gpt-4o-mini"
+}

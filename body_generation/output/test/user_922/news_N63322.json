@@ -1,0 +1,21 @@
+{
+  "user_id": 922,
+  "candidate_news_id": "N63322",
+  "candidate_title": "Bevin concedes in Kentucky governor's race",
+  "user_history_count": 10,
+  "user_history": [
+    "How to spend your retirement savings without triggering a tax penalty",
+    "The one reason to claim Social Security at 62 that no one ever talks about",
+    "Broadway Actress Laurel Griggs Dies at Age 13",
+    "Kaiser Permanente CEO Bernard Tyson dies at 60",
+    "4 injured in shooting at adult club in Kansas City, Missouri",
+    "Alibaba breaks Singles Day record of more than $30 billion in sales and climbing",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "Are Stores Open on Veterans Day? Target, Aldi, Walmart and More",
+    "16 Signs You're at Risk for Diabetes",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"How to spend your retirement savings without triggering a tax penalty\"\n\"The one reason to claim Social Security at 62 that no one ever talks about\"\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Kaiser Permanente CEO Bernard Tyson dies at 60\"\n\"4 injured in shooting at adult club in Kansas City, Missouri\"\n\"Alibaba breaks Singles Day record of more than $30 billion in sales and climbing\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Are Stores Open on Veterans Day? Target, Aldi, Walmart and More\"\n\"16 Signs You're at Risk for Diabetes\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\n[Candidate News Title]\n\"Bevin concedes in Kentucky governor's race\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Bevin concedes in Kentucky governor's race,\" the user can expect a detailed account of the recent gubernatorial election results in Kentucky, focusing on former Governor Matt Bevin's decision to concede. The article is likely to provide context about the election, including voter turnout, key issues that influenced the race, and the implications of Bevin's concession for the state's political landscape. Additionally, it may include reactions from both Bevin and his opponent, as well as insights into how this outcome could affect future elections or policy decisions in Kentucky.",
+  "model": "gpt-4o-mini"
+}

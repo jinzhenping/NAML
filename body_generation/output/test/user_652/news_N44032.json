@@ -1,0 +1,21 @@
+{
+  "user_id": 652,
+  "candidate_news_id": "N44032",
+  "candidate_title": "GoFundMe Honors Good Samaritans at First Heroes Celebration: 'Amazing Things Are Happening'",
+  "user_history_count": 10,
+  "user_history": [
+    "19 Things You'll Need To Sacrifice Now for a Healthy Retirement",
+    "Jennifer Aniston looks amazing in a makeup-free selfie, plus more news",
+    "Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic",
+    "The biggest royal scandals of the past decade",
+    "10 Landscaping Must-Dos to Help Your Plants Survive the Winter",
+    "The last time Kentucky fought over a gubernatorial election, the governor got killed",
+    "Climate change could end mortgages as we know them",
+    "10 Landscaping Must-Dos to Help Your Plants Survive the Winter",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "I'm 55 and have no retirement savings: What should I do?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"19 Things You'll Need To Sacrifice Now for a Healthy Retirement\"\n\"Jennifer Aniston looks amazing in a makeup-free selfie, plus more news\"\n\"Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic\"\n\"The biggest royal scandals of the past decade\"\n\"10 Landscaping Must-Dos to Help Your Plants Survive the Winter\"\n\"The last time Kentucky fought over a gubernatorial election, the governor got killed\"\n\"Climate change could end mortgages as we know them\"\n\"10 Landscaping Must-Dos to Help Your Plants Survive the Winter\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"I'm 55 and have no retirement savings: What should I do?\"\n\n[Candidate News Title]\n\"GoFundMe Honors Good Samaritans at First Heroes Celebration: 'Amazing Things Are Happening'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"GoFundMe Honors Good Samaritans at First Heroes Celebration: 'Amazing Things Are Happening',\" you can expect a detailed overview of a recent event recognizing individuals who have made significant contributions to their communities through acts of kindness and support. The piece may highlight specific stories of these good Samaritans, discussing the impact of their actions and how they embody the spirit of generosity. Additionally, the article is likely to explore the role of platforms like GoFundMe in facilitating community support and raising awareness for various causes, providing examples of successful campaigns that illustrate this trend.",
+  "model": "gpt-4o-mini"
+}

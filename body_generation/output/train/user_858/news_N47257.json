@@ -1,0 +1,21 @@
+{
+  "user_id": 858,
+  "candidate_news_id": "N47257",
+  "candidate_title": "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+  "user_history_count": 10,
+  "user_history": [
+    "Lay's Newest Flavor Is Grilled Cheese And Tomato Soup, So It's About To Get Real Cozy 'Round Here",
+    "Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence",
+    "The 100 Best Snacks You're Not Making",
+    "Gretchen Wilson booted from New Mexico hotel",
+    "$42 million price cut on tech billionaire's Silicon Valley monster mansion",
+    "This Is What Happens When You Take Ibuprofen Too Often, According to a Doctor",
+    "Highest paid musicians in 2019",
+    "World's largest treehouse burns to the ground",
+    "Snow crab sells for record price in Japan",
+    "America's Largest Home Also Has the Most Amazing Christmas Decorations"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lay's Newest Flavor Is Grilled Cheese And Tomato Soup, So It's About To Get Real Cozy 'Round Here\"\n\"Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence\"\n\"The 100 Best Snacks You're Not Making\"\n\"Gretchen Wilson booted from New Mexico hotel\"\n\"$42 million price cut on tech billionaire's Silicon Valley monster mansion\"\n\"This Is What Happens When You Take Ibuprofen Too Often, According to a Doctor\"\n\"Highest paid musicians in 2019\"\n\"World's largest treehouse burns to the ground\"\n\"Snow crab sells for record price in Japan\"\n\"America's Largest Home Also Has the Most Amazing Christmas Decorations\"\n\n[Candidate News Title]\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers may anticipate an informative overview of Rip Taylor's recent passing, including details about his cause of death and the memorial service planned for later this month. The piece is likely to explore Taylor's contributions to entertainment, touching on his career highlights and legacy as a comedian and actor. Additionally, there could be insights into how fans and the entertainment community are honoring his memory. Overall, the article is expected to provide a respectful reflection on his life and impact on the industry.",
+  "model": "gpt-4o-mini"
+}

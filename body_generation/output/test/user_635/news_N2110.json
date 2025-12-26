@@ -1,0 +1,21 @@
+{
+  "user_id": 635,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "Fox legal analyst Napolitano emerges as Trump critic",
+    "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "Matt Kuchar returns to Mayakoba saying he's learned from caddie-payment scandal mistakes",
+    "See the most expensive watch ever sold at auction",
+    "At donor dinner, Giuliani associate said he discussed Ukraine with Trump, according to people familiar with his account",
+    "Trump's Deal Allowing 3D-Printed Guns Online Deemed Illegal",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "Video shows a Boeing 737 plane carrying 196 people burst into flames just after landing at an Egyptian airport",
+    "Former Cuyahoga County Jail Director pleads not guilty to additional criminal charges"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"Matt Kuchar returns to Mayakoba saying he's learned from caddie-payment scandal mistakes\"\n\"See the most expensive watch ever sold at auction\"\n\"At donor dinner, Giuliani associate said he discussed Ukraine with Trump, according to people familiar with his account\"\n\"Trump's Deal Allowing 3D-Printed Guns Online Deemed Illegal\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"Video shows a Boeing 737 plane carrying 196 people burst into flames just after landing at an Egyptian airport\"\n\"Former Cuyahoga County Jail Director pleads not guilty to additional criminal charges\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\" is likely to present a curated list of innovative and useful technology gifts suitable for various occasions. Readers can expect to find a range of products, including gadgets, accessories, and smart devices that appeal to tech enthusiasts and general consumers alike. The content may highlight unique features, price ranges, and potential uses for each item, catering to diverse interests and preferences. It is likely that the article will also provide some insights into current tech trends or popular items that have garnered attention in recent months.",
+  "model": "gpt-4o-mini"
+}

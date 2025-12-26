@@ -1,0 +1,21 @@
+{
+  "user_id": 460,
+  "candidate_news_id": "N15424",
+  "candidate_title": "Sterling K. Brown Emotionally Recalls Seeing His Dad for the Last Time Before His Death",
+  "user_history_count": 10,
+  "user_history": [
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Top 7 Mistakes to Avoid When Removing Snow",
+    "Insiders predict: NFL week 10 winners",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "60+ Restaurants Where Veterans Eat for Free on Veterans Day This Year",
+    "55 Restaurants That Serve an Amazing Thanksgiving Dinner",
+    "Southwest's Spring Travel Sale Includes $39 One-way Tickets"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Top 7 Mistakes to Avoid When Removing Snow\"\n\"Insiders predict: NFL week 10 winners\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"60+ Restaurants Where Veterans Eat for Free on Veterans Day This Year\"\n\"55 Restaurants That Serve an Amazing Thanksgiving Dinner\"\n\"Southwest's Spring Travel Sale Includes $39 One-way Tickets\"\n\n[Candidate News Title]\n\"Sterling K. Brown Emotionally Recalls Seeing His Dad for the Last Time Before His Death\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Sterling K. Brown Emotionally Recalls Seeing His Dad for the Last Time Before His Death,\" you might expect a reflective account from the actor regarding his relationship with his father. The piece could provide insights into their bond and the impact of his father's passing on Brown's life and career. It may also explore themes of family, loss, and memory, perhaps detailing specific moments or conversations that highlight their connection. Overall, the article is likely to offer a personal narrative that resonates with readers interested in celebrity stories intertwined with familial themes.",
+  "model": "gpt-4o-mini"
+}

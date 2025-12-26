@@ -1,0 +1,21 @@
+{
+  "user_id": 950,
+  "candidate_news_id": "N129958",
+  "candidate_title": "How the 2020 Corvette C8 Turned This Vette Hater Into a Believer",
+  "user_history_count": 10,
+  "user_history": [
+    "20 home renovations that kill your home's value",
+    "I tried to order everything on Taco Bell's secret menu, and it was a total disaster",
+    "American-Made Cheese Named World's Best for the First Time Ever",
+    "Photos of the Day",
+    "14 celebrities you didn't know hold world records",
+    "Rise and Grind: A Hot Dog Success Story",
+    "What's behind the 'mystery surcharge' at some California gas stations?",
+    "Walmart Sparks Panic and Confusion in the Dish-Soap Aisle",
+    "SNL's Michael Che Under Fire on Twitter for Calling Caitlyn Jenner a 'Fella' on Weekend Update",
+    "Ben Affleck Breaks Silence After \"Slip\" In Sobriety"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"20 home renovations that kill your home's value\"\n\"I tried to order everything on Taco Bell's secret menu, and it was a total disaster\"\n\"American-Made Cheese Named World's Best for the First Time Ever\"\n\"Photos of the Day\"\n\"14 celebrities you didn't know hold world records\"\n\"Rise and Grind: A Hot Dog Success Story\"\n\"What's behind the 'mystery surcharge' at some California gas stations?\"\n\"Walmart Sparks Panic and Confusion in the Dish-Soap Aisle\"\n\"SNL's Michael Che Under Fire on Twitter for Calling Caitlyn Jenner a 'Fella' on Weekend Update\"\n\"Ben Affleck Breaks Silence After \"Slip\" In Sobriety\"\n\n[Candidate News Title]\n\"How the 2020 Corvette C8 Turned This Vette Hater Into a Believer\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In reading the article titled \"How the 2020 Corvette C8 Turned This Vette Hater Into a Believer,\" the user may expect to explore the transformative qualities of the 2020 Corvette C8, particularly how it has changed perceptions among skeptics of the brand. The article is likely to discuss specific features of the C8, such as its design, performance enhancements, and technological innovations, which could contribute to a newfound appreciation for the Corvette among those who previously dismissed it. Additionally, it may include personal anecdotes or testimonials from individuals who experienced a change in their views regarding the car.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 630,
+  "candidate_news_id": "N121440",
+  "candidate_title": "How to Make Buttermilk At Home With Just 2 Ingredients",
+  "user_history_count": 10,
+  "user_history": [
+    "Every Must-See Photo of Stars Celebrating Halloween 2019",
+    "Celebrity Headshots from Before They Were Famous",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Kristen Stewart Just Made Leather Bras a Thing, and We're All For It",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "A guide to the 2019 People's Choice Awards nominees' significant others",
+    "A guide to the 2019 People's Choice Awards nominees' significant others",
+    "2019 People's Choice Awards: Instagrams & Twitpics",
+    "Look of the Day",
+    "See what your favorite stars look like without makeup"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"Celebrity Headshots from Before They Were Famous\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Kristen Stewart Just Made Leather Bras a Thing, and We're All For It\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\"2019 People's Choice Awards: Instagrams & Twitpics\"\n\"Look of the Day\"\n\"See what your favorite stars look like without makeup\"\n\n[Candidate News Title]\n\"How to Make Buttermilk At Home With Just 2 Ingredients\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to find a straightforward guide on how to create buttermilk at home using just two ingredients, likely highlighting the simplicity and practicality of the process. The content could include a brief explanation of why homemade buttermilk is a useful substitute in various recipes, along with step-by-step instructions for preparing it. Additionally, there may be tips on how to incorporate this homemade version into cooking and baking, particularly in dishes where buttermilk is traditionally used, offering a convenient solution for those looking to enhance their culinary skills.",
+  "model": "gpt-4o-mini"
+}

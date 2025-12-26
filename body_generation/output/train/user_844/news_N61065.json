@@ -1,0 +1,19 @@
+{
+  "user_id": 844,
+  "candidate_news_id": "N61065",
+  "candidate_title": "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+  "user_history_count": 8,
+  "user_history": [
+    "Subtle Signs You May Have Clogged Arteries",
+    "Mark Hurd, Oracle CEO who led 3 tech companies, dies at 62",
+    "Trump education official to resign and call for mass student loan forgiveness",
+    "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Winners, losers from Cowboys' win over Giants on 'Monday Night Football'",
+    "Emma Watson Says She Rejects the Word Single: 'I Call It Being Self-Partnered'",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Subtle Signs You May Have Clogged Arteries\"\n\"Mark Hurd, Oracle CEO who led 3 tech companies, dies at 62\"\n\"Trump education official to resign and call for mass student loan forgiveness\"\n\"Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Winners, losers from Cowboys' win over Giants on 'Monday Night Football'\"\n\"Emma Watson Says She Rejects the Word Single: 'I Call It Being Self-Partnered'\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\", you can expect to read about the recent engagement of former NBA player Lamar Odom to Sabrina Parr. The article is likely to provide details about the engagement announcement, including how they met, their relationship history, and possibly insights about the engagement ring itself. Additionally, it may touch on Odom's life after basketball and his journey towards personal recovery, as well as Parr's background. Overall, you might find a blend of personal milestones and public interest surrounding their relationship.",
+  "model": "gpt-4o-mini"
+}

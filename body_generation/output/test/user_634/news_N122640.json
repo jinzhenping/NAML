@@ -1,0 +1,21 @@
+{
+  "user_id": 634,
+  "candidate_news_id": "N122640",
+  "candidate_title": "This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.",
+  "user_history_count": 10,
+  "user_history": [
+    "Kylie Jenner and her bestie get surgery together, plus more news",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "Giuliani Is Drawing Attention to Hunter Biden's Work in Romania. But There's a Problem.",
+    "White House: John Kelly 'was totally unequipped to handle the genius of our great President'",
+    "Saturday takeaways: Oklahoma upset shakes up College Football Playoff picture",
+    "Fact Checker: Trump's shiny new talking point about income growth",
+    "UK to hold rare December election with Brexit on table",
+    "Trump denies knowing lobbyist who boasted of inside access to administration",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Rep. Tim Ryan endorses Biden in Democratic primary"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kylie Jenner and her bestie get surgery together, plus more news\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"Giuliani Is Drawing Attention to Hunter Biden's Work in Romania. But There's a Problem.\"\n\"White House: John Kelly 'was totally unequipped to handle the genius of our great President'\"\n\"Saturday takeaways: Oklahoma upset shakes up College Football Playoff picture\"\n\"Fact Checker: Trump's shiny new talking point about income growth\"\n\"UK to hold rare December election with Brexit on table\"\n\"Trump denies knowing lobbyist who boasted of inside access to administration\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\n[Candidate News Title]\n\"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack,\" you may expect a detailed analysis of the recent incident involving Myles Garrett and the implications of his actions in the context of professional football. The article is likely to discuss the events leading up to the incident, the reactions from players and coaches, and the potential disciplinary actions that could follow. It might also explore the broader impact on Garrett's career and the team's dynamics, as well as opinions from sports analysts regarding player conduct and safety in the league.",
+  "model": "gpt-4o-mini"
+}

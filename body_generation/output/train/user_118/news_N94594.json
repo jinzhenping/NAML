@@ -1,0 +1,21 @@
+{
+  "user_id": 118,
+  "candidate_news_id": "N94594",
+  "candidate_title": "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+  "user_history_count": 10,
+  "user_history": [
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "New Delhi's toxic, polluted air chokes city's 20 million people, and the haze can be seen from space",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Rick Perry, top Trump administration aides scheduled to testify in impeachment inquiry",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral",
+    "Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you",
+    "Brain scans don't lie: The minds of girls and boys are equal in math",
+    "Must-See Fashion Police Moments to Swoon Over This Week",
+    "Jon Gruden, Raiders take victory lap as they've left Antonio Brown mistake in dust"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"New Delhi's toxic, polluted air chokes city's 20 million people, and the haze can be seen from space\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Rick Perry, top Trump administration aides scheduled to testify in impeachment inquiry\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral\"\n\"Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you\"\n\"Brain scans don't lie: The minds of girls and boys are equal in math\"\n\"Must-See Fashion Police Moments to Swoon Over This Week\"\n\"Jon Gruden, Raiders take victory lap as they've left Antonio Brown mistake in dust\"\n\n[Candidate News Title]\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely recounts the story of a teenager who received a long-awaited response to a message he placed in a bottle nine years ago. It may detail the journey of the bottle, which traveled over 3,000 miles, and the circumstances surrounding the teenager's original message. Readers can expect to learn about the content of the message, the sender's thoughts and feelings upon receiving the reply, and possibly the implications of such a unique form of communication. This narrative could highlight themes of patience, connection, and the unexpected ways in which people can reach each other across distances.",
+  "model": "gpt-4o-mini"
+}

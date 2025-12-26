@@ -1,0 +1,21 @@
+{
+  "user_id": 690,
+  "candidate_news_id": "N72601",
+  "candidate_title": "Cooper testimony highlights Defense Dept. concerns over aid holdup, transcript shows",
+  "user_history_count": 10,
+  "user_history": [
+    "Mississippi woman found after being missing for days by writing S.O.S. with rocks",
+    "Here's Why McDonald's Keeps Bringing Back the McRib",
+    "Kevin McAleenan resolves standoff and will testify at threats hearing on Wednesday",
+    "California fires: San Bernardino homes burn and strong winds threaten to stoke other blazes",
+    "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+    "Trump says poor treatment and high taxes prompted permanent residence change",
+    "New Orleans' Second Oldest Restaurant Is Moving",
+    "Tom Draper, Black Music Industry Pioneer, Dies at 79",
+    "Florida air show crash: Pilot killed when plane crashes",
+    "4 mistakes that'll stunt your 401(k)'s growth"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mississippi woman found after being missing for days by writing S.O.S. with rocks\"\n\"Here's Why McDonald's Keeps Bringing Back the McRib\"\n\"Kevin McAleenan resolves standoff and will testify at threats hearing on Wednesday\"\n\"California fires: San Bernardino homes burn and strong winds threaten to stoke other blazes\"\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"Trump says poor treatment and high taxes prompted permanent residence change\"\n\"New Orleans' Second Oldest Restaurant Is Moving\"\n\"Tom Draper, Black Music Industry Pioneer, Dies at 79\"\n\"Florida air show crash: Pilot killed when plane crashes\"\n\"4 mistakes that'll stunt your 401(k)'s growth\"\n\n[Candidate News Title]\n\"Cooper testimony highlights Defense Dept. concerns over aid holdup, transcript shows\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent testimony from Cooper regarding concerns within the Defense Department related to the hold-up of aid. Readers can expect an overview of the key points from the transcript, including any implications for military funding and the impact on ongoing operations. The piece may provide insights into the political dynamics at play, particularly how this situation could affect future aid packages. Overall, the article should offer a balanced analysis of the issues surrounding government aid and defense strategy.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,20 @@
+{
+  "user_id": 601,
+  "candidate_news_id": "N13322",
+  "candidate_title": "Rape victim rejects judge's offer: $150,000 for her, reduced sentence for attacker",
+  "user_history_count": 9,
+  "user_history": [
+    "BackStoppers to help family of St. Louis County officer killed in Illinois crash",
+    "Hundreds Of Rats Formerly Living With Woman In Van Are Up For Adoption",
+    "U.S. soldiers who fought alongside Kurds blast Trump's Syria retreat",
+    "Coast Guard searching for man who went overboard from Carnival cruise ship off Texas",
+    "Jury awards $19 million to St. Louis County police sergeant who says he was told to tone down his 'gayness'",
+    "Customer tips O'Fallon bartender Powerball ticket that turns into $50,000 winner",
+    "Man wins $1 million in the lottery for the second time",
+    "691,145 Californians left last year: What state did they go to?",
+    "Suspect dies after carjacking ends in semi-truck crash in Soulard"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"BackStoppers to help family of St. Louis County officer killed in Illinois crash\"\n\"Hundreds Of Rats Formerly Living With Woman In Van Are Up For Adoption\"\n\"U.S. soldiers who fought alongside Kurds blast Trump's Syria retreat\"\n\"Coast Guard searching for man who went overboard from Carnival cruise ship off Texas\"\n\"Jury awards $19 million to St. Louis County police sergeant who says he was told to tone down his 'gayness'\"\n\"Customer tips O'Fallon bartender Powerball ticket that turns into $50,000 winner\"\n\"Man wins $1 million in the lottery for the second time\"\n\"691,145 Californians left last year: What state did they go to?\"\n\"Suspect dies after carjacking ends in semi-truck crash in Soulard\"\n\"\"\n\n[Candidate News Title]\n\"Rape victim rejects judge's offer: $150,000 for her, reduced sentence for attacker\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent case in which a rape victim has refused a judge's offer of $150,000 in exchange for a reduced sentence for her attacker. Readers may expect to find details about the legal implications of such plea deals, the victim's reasoning behind her decision, and reactions from legal experts or advocacy groups. Additionally, the piece could explore broader themes related to justice for victims of sexual assault, including societal attitudes toward sentencing and the complexities of victim-offender negotiations in the judicial system.",
+  "model": "gpt-4o-mini"
+}

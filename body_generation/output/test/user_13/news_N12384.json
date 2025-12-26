@@ -1,0 +1,21 @@
+{
+  "user_id": 13,
+  "candidate_news_id": "N12384",
+  "candidate_title": "Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day",
+  "user_history_count": 10,
+  "user_history": [
+    "Biden on being denied communion: 'I'm a practicing Catholic, I practice my faith'",
+    "Here's how the Fed rate cut affects you",
+    "Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "Even 'Project Runway' Couldn't Save Zac Posen",
+    "Bears' Khalil Mack calls out Eagles C Jason Kelce's controversial tactics in offsides penalties",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "Hey, Millennials, look out below! Gen Z may already be catching up in the salary race",
+    "Parent of Sears, Kmart laying off hundreds at Hoffman Estates headquarters"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Biden on being denied communion: 'I'm a practicing Catholic, I practice my faith'\"\n\"Here's how the Fed rate cut affects you\"\n\"Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Even 'Project Runway' Couldn't Save Zac Posen\"\n\"Bears' Khalil Mack calls out Eagles C Jason Kelce's controversial tactics in offsides penalties\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"Hey, Millennials, look out below! Gen Z may already be catching up in the salary race\"\n\"Parent of Sears, Kmart laying off hundreds at Hoffman Estates headquarters\"\n\n[Candidate News Title]\n\"Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day\" is likely to discuss a heartwarming initiative undertaken by a hospital to celebrate World Kindness Day. Readers can expect details about how the hospital dressed newborns in costumes inspired by the iconic children's television host, Mister Rogers, highlighting the positive impact of such gestures on community spirit. The piece may also explore the significance of kindness in healthcare settings and provide insights into similar initiatives that promote joy and compassion in the community.",
+  "model": "gpt-4o-mini"
+}

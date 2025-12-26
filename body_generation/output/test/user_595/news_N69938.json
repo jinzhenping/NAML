@@ -1,0 +1,21 @@
+{
+  "user_id": 595,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "Meghan Markle and Prince Harry Step Out for One of Their Most Emotional Events of the Year",
+    "Duchess Meghan Describes 'Really Challenging' Life as New Royal: I'm Not OK",
+    "Duchess Meghan Returns to Public Eye After Africa Tour Documentary Airs",
+    "Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family",
+    "Reduce Stomach Bloating: 9 Daily Habits That Flatten Your Belly",
+    "Singer Lauren Alaina Has Lost 25 Lbs. on Dancing with the Stars: 'None of My Clothes Fit'",
+    "Trick-or-treater, 7, critically injured in Chicago shooting",
+    "My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder",
+    "Pink on Why She Didn't Headline the 2019 Super Bowl Halftime Show After Offer",
+    "Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan Markle and Prince Harry Step Out for One of Their Most Emotional Events of the Year\"\n\"Duchess Meghan Describes 'Really Challenging' Life as New Royal: I'm Not OK\"\n\"Duchess Meghan Returns to Public Eye After Africa Tour Documentary Airs\"\n\"Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family\"\n\"Reduce Stomach Bloating: 9 Daily Habits That Flatten Your Belly\"\n\"Singer Lauren Alaina Has Lost 25 Lbs. on Dancing with the Stars: 'None of My Clothes Fit'\"\n\"Trick-or-treater, 7, critically injured in Chicago shooting\"\n\"My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder\"\n\"Pink on Why She Didn't Headline the 2019 Super Bowl Halftime Show After Offer\"\n\"Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent meeting between Meghan Markle and Hillary Clinton at Frogmore Cottage, highlighting the nature of their relationship and shared interests. Readers may expect insights into their conversation topics, which could range from personal experiences to issues related to women's empowerment and social activism. Additionally, the article might explore the implications of this meeting within the context of Meghan's ongoing public presence and her evolving role in the royal family. Overall, it may provide a blend of details about their interaction and broader themes surrounding their respective influences.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 101,
+  "candidate_news_id": "N46555",
+  "candidate_title": "Federal Prosecutors Probe Giuliani's Links to Ukrainian Energy Projects",
+  "user_history_count": 10,
+  "user_history": [
+    "30 Christmas Gifts Under $25 for Grandma and Grandpa",
+    "Don't Save Too Little, or Too Much",
+    "Get a Leg up on Thanksgiving with 3 Classy Appetizers You Can Make WAY Ahead (like NOW)",
+    "How Much You Can Change Your Abs in 2 Weeks",
+    "These Thanksgiving Cupcakes Will Steal the Spotlight From the Turkey",
+    "Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV",
+    "9 Vegetables You Shouldn't Eat Raw",
+    "The first thing 14 lottery winners have bought after finding out they were rich",
+    "I moved from the US to the UK. Here are the 8 things that surprised me the most.",
+    "How to Get the Best Walmart Black Friday 2019 Deals"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"30 Christmas Gifts Under $25 for Grandma and Grandpa\"\n\"Don't Save Too Little, or Too Much\"\n\"Get a Leg up on Thanksgiving with 3 Classy Appetizers You Can Make WAY Ahead (like NOW)\"\n\"How Much You Can Change Your Abs in 2 Weeks\"\n\"These Thanksgiving Cupcakes Will Steal the Spotlight From the Turkey\"\n\"Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV\"\n\"9 Vegetables You Shouldn't Eat Raw\"\n\"The first thing 14 lottery winners have bought after finding out they were rich\"\n\"I moved from the US to the UK. Here are the 8 things that surprised me the most.\"\n\"How to Get the Best Walmart Black Friday 2019 Deals\"\n\n[Candidate News Title]\n\"Federal Prosecutors Probe Giuliani's Links to Ukrainian Energy Projects\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Federal Prosecutors Probe Giuliani's Links to Ukrainian Energy Projects,\" you can expect a detailed examination of the ongoing investigation into Rudy Giuliani's potential connections with Ukrainian energy initiatives. The piece is likely to cover the background of the inquiry, including the legal implications of Giuliani's actions and any relevant political context that may arise from these developments. Additionally, the article may explore how these links could impact the broader landscape of U.S.-Ukraine relations, though this aspect is not certain.",
+  "model": "gpt-4o-mini"
+}

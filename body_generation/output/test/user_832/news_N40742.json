@@ -1,0 +1,21 @@
+{
+  "user_id": 832,
+  "candidate_news_id": "N40742",
+  "candidate_title": "THEN AND NOW: What all your favorite '90s stars are doing today",
+  "user_history_count": 10,
+  "user_history": [
+    "EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million",
+    "A Military Camera Said 'Made in U.S.A.' The Screen Was in Chinese.",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "How to Winterize a House",
+    "Stars Who Served in the Military",
+    "40 Celebrities You Forgot Used to Rock Long Hair",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway",
+    "Three Classic Cars Stolen From CA Car Show"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million\"\n\"A Military Camera Said 'Made in U.S.A.' The Screen Was in Chinese.\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"How to Winterize a House\"\n\"Stars Who Served in the Military\"\n\"40 Celebrities You Forgot Used to Rock Long Hair\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway\"\n\"Three Classic Cars Stolen From CA Car Show\"\n\n[Candidate News Title]\n\"THEN AND NOW: What all your favorite '90s stars are doing today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"THEN AND NOW: What all your favorite '90s stars are doing today,\" the user is likely to find an exploration of the current lives and careers of various celebrities who gained fame in the 1990s. The piece may detail how these stars have evolved over the years, including their professional pursuits, personal developments, and any notable changes in their public personas. Readers can expect to see a mix of familiar faces and possibly some lesser-known figures, providing a nostalgic look back at their past achievements and how they have navigated their post-fame lives.",
+  "model": "gpt-4o-mini"
+}

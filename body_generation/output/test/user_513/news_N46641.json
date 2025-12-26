@@ -1,0 +1,21 @@
+{
+  "user_id": 513,
+  "candidate_news_id": "N46641",
+  "candidate_title": "Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "Extremely Dangerous Murder Suspects Still On Run After Monterey Jail Break",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned",
+    "U.S.-born ISIS bride thinks she 'deserves a second chance'",
+    "Man lost his house over $8.41 in unpaid property taxes",
+    "Republican moderate breaks with party over identifying whistleblower",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Senior Trump official embellished résumé, had face on fake Time cover",
+    "FBI busts $6 million iPhone and iPad counterfeit ring",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Extremely Dangerous Murder Suspects Still On Run After Monterey Jail Break\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned\"\n\"U.S.-born ISIS bride thinks she 'deserves a second chance'\"\n\"Man lost his house over $8.41 in unpaid property taxes\"\n\"Republican moderate breaks with party over identifying whistleblower\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"FBI busts $6 million iPhone and iPad counterfeit ring\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\n[Candidate News Title]\n\"Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the death of former North Carolina State and NBA player Anthony Grundy is likely to provide a factual account of the circumstances surrounding his stabbing. Readers can expect details about the incident, including the location, time, and any known motives or suspects involved. It may also include information about Grundy's basketball career and his impact on the sport, as well as reactions from family, friends, and the basketball community. The article could explore the broader implications of violence within sports or public figures, though these angles may not be thoroughly developed.",
+  "model": "gpt-4o-mini"
+}

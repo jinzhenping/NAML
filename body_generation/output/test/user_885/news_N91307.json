@@ -1,0 +1,21 @@
+{
+  "user_id": 885,
+  "candidate_news_id": "N91307",
+  "candidate_title": "Golfer and girlfriend pull amazing trick shot",
+  "user_history_count": 10,
+  "user_history": [
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "Debunking the week's tabloid stories: Nov. 1, 2019",
+    "Take action: Join MSN, LinkedIn and Team Rubicon in helping veterans become thriving civilians",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Why McDonald's had no choice but to fire CEO Steve Easterbrook for his relationship with an employee",
+    "Popular Selena tribute singer from San Fernando Valley detained by ICE in Texas",
+    "'Baby Trump' balloon slashed at Alabama appearance",
+    "Rape victim rejects judge's offer: $150,000 for her, reduced sentence for attacker",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"Debunking the week's tabloid stories: Nov. 1, 2019\"\n\"Take action: Join MSN, LinkedIn and Team Rubicon in helping veterans become thriving civilians\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Why McDonald's had no choice but to fire CEO Steve Easterbrook for his relationship with an employee\"\n\"Popular Selena tribute singer from San Fernando Valley detained by ICE in Texas\"\n\"'Baby Trump' balloon slashed at Alabama appearance\"\n\"Rape victim rejects judge's offer: $150,000 for her, reduced sentence for attacker\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\n[Candidate News Title]\n\"Golfer and girlfriend pull amazing trick shot\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Golfer and girlfriend pull amazing trick shot,\" the user can expect to read about a notable moment involving a golfer and his partner showcasing an impressive trick shot. The piece may detail the setting of this event, possibly highlighting a golf course or a casual environment where the trick was performed. It is likely to include descriptions of the skill involved, as well as any reactions from onlookers or social media, considering the trend of viral sports moments. Additionally, there may be commentary on the popularity of trick shots in golf and how they engage fans and the golfing community.",
+  "model": "gpt-4o-mini"
+}

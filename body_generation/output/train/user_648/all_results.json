@@ -1,0 +1,317 @@
+[
+  {
+    "user_id": 648,
+    "candidate_news_id": "N29544",
+    "candidate_title": "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to provide details about Walmart's recently released Black Friday ad, highlighting significant deals on popular electronics, including a $129 Apple Watch and various TV offers. The piece may include information on doorbuster deals that are expected to attract shoppers during the holiday season, as well as insights into how these promotions compare to previous years. Additionally, it could discuss the overall trends in consumer behavior during Black Friday sales and the impact of these deals on the retail market.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N63391",
+    "candidate_title": "A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the unique opportunity presented by a decommissioned nuclear missile complex in Arizona that is currently on the market for $400,000. Readers can expect details about the history and significance of the site, including its operational past and the reasons for its decommissioning. There may also be insights into the potential uses for such a property, whether for investment, restoration, or as a historical landmark. Additionally, the article could explore the implications of purchasing a site with military heritage, which may raise questions about its future and maintenance.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N66534",
+    "candidate_title": "20 Ways You're Not Prepping Your Home for Winter, According to Experts",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"20 Ways You're Not Prepping Your Home for Winter, According to Experts\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"20 Ways You're Not Prepping Your Home for Winter, According to Experts\" is likely to provide practical advice on how to prepare a home for the winter months. Readers may expect to find detailed tips on insulation, heating system maintenance, and weatherproofing techniques that can help prevent damage and reduce energy costs. It could discuss common oversights that homeowners make during winter preparation, and may emphasize the importance of addressing these issues to ensure safety and comfort. Overall, the piece is intended to guide readers in effectively winterizing their homes.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N51163",
+    "candidate_title": "Family told to take down Christmas display because it's too soon to decorate",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses a family's recent experience with local authorities regarding their Christmas display. Readers can expect to learn about the reasons cited for the request to take down the decorations, possibly focusing on community guidelines or the timing of holiday displays. Additionally, the article may explore public reactions to the decision, including opinions from neighbors or local residents. This situation could reflect broader themes of community standards and the evolving nature of holiday traditions, particularly in a time when such displays may provoke differing views on appropriateness.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N25756",
+    "candidate_title": "A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses a controversial tax break originally intended to assist low-income individuals, which may have inadvertently benefitted a wealthy GOP donor associated with a luxury superyacht marina. It could detail the implications of this appropriation, examining how such policies can sometimes favor affluent interests over their intended beneficiaries. Additionally, the piece might explore the broader context of tax reforms and their impact on economic inequality, providing insight into the ongoing debate about wealth distribution in America.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N11682",
+    "candidate_title": "Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely presents a detailed account of a recent incident at O'Hare Airport in Chicago, where a plane skidded off the runway. Readers can expect information on the circumstances surrounding the event, including weather conditions and any technical malfunctions that may have contributed. The piece may also discuss the response from emergency services and the impact on airport operations. Additionally, it could provide insights into safety protocols and how such incidents are typically managed. Overall, the article is likely to offer a clear overview of the situation while speculating about potential causes of the incident.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N82205",
+    "candidate_title": "How Long Is a Cold Contagious?",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"How Long Is a Cold Contagious?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"How Long Is a Cold Contagious?\", the user can expect a detailed exploration of the contagious nature of cold viruses, including the typical duration during which an infected person can transmit the virus to others. The article is likely to discuss factors that influence this timeframe, such as the stage of illness and individual immune responses. Additionally, it may provide insights into preventive measures to reduce the risk of spreading colds, potentially appealing to readers interested in health and well-being.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N44136",
+    "candidate_title": "Gwen Stefani Sets the Record Straight on That Diamond Ring at 2019 People's Choice Awards",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"Gwen Stefani Sets the Record Straight on That Diamond Ring at 2019 People's Choice Awards\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect an informative overview of Gwen Stefani's recent comments regarding a diamond ring she wore during the 2019 People's Choice Awards. The piece is likely to clarify any rumors or speculation surrounding the significance of the ring, possibly touching on its design or the context in which she wore it. Additionally, it may explore Stefani's fashion choices at the event and how this particular accessory has been perceived by fans and media alike. Overall, the article could provide insights into the intersection of celebrity culture and personal expression.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N111088",
+    "candidate_title": "How Russia Meddles Abroad for Profit: Cash, Trolls and a Cult Leader",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"How Russia Meddles Abroad for Profit: Cash, Trolls and a Cult Leader\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"How Russia Meddles Abroad for Profit: Cash, Trolls and a Cult Leader,\" you may expect a detailed examination of Russia's influence operations beyond its borders, focusing on financial motives, the use of social media trolls, and the role of influential figures. The article is likely to explore various methods employed by the Russian government to manipulate public opinion and gain economic advantages in other countries, potentially highlighting specific case studies or events. Additionally, it could provide insights into the implications of these activities for international relations and domestic politics in target nations.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N90968",
+    "candidate_title": "Mets' Alonso, Astros' Alvarez named Rookies of the Year",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"Mets' Alonso, Astros' Alvarez named Rookies of the Year\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the recent recognition of Mets' first baseman Pete Alonso and Astros' outfielder Yordan Alvarez as the Rookies of the Year in Major League Baseball. Readers may expect to find details on their impressive statistics, key performances during the season, and how their contributions have impacted their respective teams. The piece could also provide context about the criteria for the award and highlight their potential for future success in the league. Overall, the article is expected to inform readers about the accomplishments of these players and their significance in the sport.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N67937",
+    "candidate_title": "Powerful side-by-side portraits show people over 100 years old next to their younger selves",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"Powerful side-by-side portraits show people over 100 years old next to their younger selves\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely presents a compelling visual comparison of individuals who are over 100 years old alongside portraits of their younger selves, illustrating the passage of time and the changes in appearance and life experiences. Readers may expect to learn about the life stories of these centenarians, possibly highlighting their health, longevity, and perspectives on aging. Additionally, the article could explore themes related to the wisdom gained over a century, as well as the societal changes witnessed by these individuals throughout their lives.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N34971",
+    "candidate_title": "How to Winterize a House",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"How to Winterize a House\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"How to Winterize a House,\" the user can expect a detailed overview of essential steps and tips for preparing a home for the winter season. This may include guidance on insulating pipes, checking heating systems, and sealing windows to prevent drafts. Additionally, the article could provide insights into maintenance tasks like cleaning gutters and inspecting roofs to avoid winter-related damage. Overall, it is likely to serve as a practical resource for homeowners looking to protect their property during colder months.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N14614",
+    "candidate_title": "Google's totally creepy, totally legal health-data harvesting",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"Google's totally creepy, totally legal health-data harvesting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Google's totally creepy, totally legal health-data harvesting,\" the user is likely to find an exploration of how Google collects and utilizes health-related data from users. This piece may detail the mechanisms through which the tech giant gathers this information, including user consent, data privacy issues, and the implications for personal health management. Additionally, it could discuss the ethical considerations surrounding such practices, emphasizing the balance between technological advancement and user privacy rights. The article is likely to raise questions about transparency and the potential consequences of this data collection on individual autonomy.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N23201",
+    "candidate_title": "Number of $1 million retirement nest eggs hits a new high",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"Number of $1 million retirement nest eggs hits a new high\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Number of $1 million retirement nest eggs hits a new high\" is likely to provide an overview of the increasing trend in individuals amassing retirement savings of $1 million or more. It may discuss the implications of this growth on financial security and retirement planning, highlighting factors contributing to this rise, such as investment strategies and economic conditions. Additionally, the article could explore the demographics of those achieving this milestone, possibly offering insights into age groups or regions where this trend is most pronounced. Overall, it may present a balanced view of how this financial benchmark reflects broader economic patterns.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 648,
+    "candidate_news_id": "N10673",
+    "candidate_title": "Abandoned mansions of the world's billionaires",
+    "user_history_count": 10,
+    "user_history": [
+      "Bust of Orville Wright found on North Carolina beach",
+      "Bay Area earthquakes struck on unusual section of San Andreas fault",
+      "Americans now need at least $500,000 a year to enter the top 1 percent",
+      "The 10 Hardest Math Problems That Remain Unsolved",
+      "'Priceless' finds that turned out to be worthless",
+      "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+      "The world's cutest homes are beyond beautiful",
+      "Video captures terrifying moment woman slips at Grand Canyon"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"Abandoned mansions of the world's billionaires\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Abandoned mansions of the world's billionaires\" is likely to explore the intriguing world of opulent properties that have been left behind by their wealthy owners. Readers may expect a detailed examination of several notable abandoned estates, highlighting their architectural features, historical significance, and the circumstances that led to their neglect. The piece could also provide insights into the cultural and economic implications of these properties, as well as the contrast between immense wealth and the decay of such luxurious spaces. Additionally, it may speculate on the potential future of these mansions and whether they could be repurposed or restored.",
+    "model": "gpt-4o-mini"
+  }
+]

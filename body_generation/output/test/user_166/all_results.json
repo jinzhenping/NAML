@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 166,
+    "candidate_news_id": "N112536",
+    "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+    "user_history_count": 10,
+    "user_history": [
+      "US Rep. Ilhan Omar divorces husband in Minnesota",
+      "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+      "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+      "College gymnast dies following training accident in Connecticut",
+      "Hyatt is eliminating travel-sized plastic toiletries",
+      "Three school workers charged in death of special needs student",
+      "Beat the crowds at these abandoned U.S. national parks",
+      "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+      "4 reasons you shouldn't max out your 401(k)",
+      "West Hollywood school administrator embroiled in college admissions scandal pleads guilty"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Hyatt is eliminating travel-sized plastic toiletries\"\n\"Three school workers charged in death of special needs student\"\n\"Beat the crowds at these abandoned U.S. national parks\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"West Hollywood school administrator embroiled in college admissions scandal pleads guilty\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"There's a place in the US where it's been over 80 degrees since March,\" you may expect to read about a specific location in the United States experiencing unusually warm weather. The article is likely to provide details about the climate conditions in that area, potentially discussing the geographical factors contributing to the sustained high temperatures. It may also explore the implications of this warm weather on local residents and businesses, as well as any related environmental concerns. Overall, the piece is expected to inform you about this unique weather phenomenon and its effects.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 166,
+    "candidate_news_id": "N120086",
+    "candidate_title": "This Easy Trick Will Defrost Your Car Window In Seconds",
+    "user_history_count": 10,
+    "user_history": [
+      "US Rep. Ilhan Omar divorces husband in Minnesota",
+      "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+      "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+      "College gymnast dies following training accident in Connecticut",
+      "Hyatt is eliminating travel-sized plastic toiletries",
+      "Three school workers charged in death of special needs student",
+      "Beat the crowds at these abandoned U.S. national parks",
+      "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+      "4 reasons you shouldn't max out your 401(k)",
+      "West Hollywood school administrator embroiled in college admissions scandal pleads guilty"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Hyatt is eliminating travel-sized plastic toiletries\"\n\"Three school workers charged in death of special needs student\"\n\"Beat the crowds at these abandoned U.S. national parks\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"West Hollywood school administrator embroiled in college admissions scandal pleads guilty\"\n\n[Candidate News Title]\n\"This Easy Trick Will Defrost Your Car Window In Seconds\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"This Easy Trick Will Defrost Your Car Window In Seconds,\" you can expect to read about a simple and effective method for quickly removing ice or frost from car windows during winter months. The article may outline a specific technique, potentially involving household items or tools that can help expedite the defrosting process without damaging the glass. Additionally, it could provide tips on preventative measures to avoid frost build-up altogether, making your morning routine more efficient and hassle-free.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 166,
+    "candidate_news_id": "N34044",
+    "candidate_title": "This is it, this is the luckiest break in the history of golf",
+    "user_history_count": 10,
+    "user_history": [
+      "US Rep. Ilhan Omar divorces husband in Minnesota",
+      "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+      "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+      "College gymnast dies following training accident in Connecticut",
+      "Hyatt is eliminating travel-sized plastic toiletries",
+      "Three school workers charged in death of special needs student",
+      "Beat the crowds at these abandoned U.S. national parks",
+      "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+      "4 reasons you shouldn't max out your 401(k)",
+      "West Hollywood school administrator embroiled in college admissions scandal pleads guilty"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Hyatt is eliminating travel-sized plastic toiletries\"\n\"Three school workers charged in death of special needs student\"\n\"Beat the crowds at these abandoned U.S. national parks\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"West Hollywood school administrator embroiled in college admissions scandal pleads guilty\"\n\n[Candidate News Title]\n\"This is it, this is the luckiest break in the history of golf\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"This is it, this is the luckiest break in the history of golf\" is likely to explore a significant event or moment in golf history that is characterized by an unexpected or fortuitous occurrence. Readers may expect to learn about a specific incident where a golfer experienced an unusual stroke of luck during a crucial moment in a tournament or match. The piece could delve into the details of the event, including the players involved and the impact of this moment on the game. Additionally, it may provide insights into how such instances are viewed within the golfing community, reflecting on luck's role in sports.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 166,
+    "candidate_news_id": "N56602",
+    "candidate_title": "The Kardashians Face Backlash Over 'Insensitive' Family Food Fight in KUWTK Clip",
+    "user_history_count": 10,
+    "user_history": [
+      "US Rep. Ilhan Omar divorces husband in Minnesota",
+      "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+      "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+      "College gymnast dies following training accident in Connecticut",
+      "Hyatt is eliminating travel-sized plastic toiletries",
+      "Three school workers charged in death of special needs student",
+      "Beat the crowds at these abandoned U.S. national parks",
+      "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+      "4 reasons you shouldn't max out your 401(k)",
+      "West Hollywood school administrator embroiled in college admissions scandal pleads guilty"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Hyatt is eliminating travel-sized plastic toiletries\"\n\"Three school workers charged in death of special needs student\"\n\"Beat the crowds at these abandoned U.S. national parks\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"West Hollywood school administrator embroiled in college admissions scandal pleads guilty\"\n\n[Candidate News Title]\n\"The Kardashians Face Backlash Over 'Insensitive' Family Food Fight in KUWTK Clip\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If the user clicks on the article about the Kardashians facing backlash over an \"insensitive\" family food fight, they are likely expecting to read about the recent controversy surrounding the show's portrayal of family dynamics and conflicts. The article may provide details on the specific incident that sparked criticism, including reactions from viewers and social media commentary. It could also explore the broader implications of such portrayals on public perception of the Kardashian family, as well as insights into how reality television often blurs the lines between scripted and unscripted moments.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 166,
+    "candidate_news_id": "N89764",
+    "candidate_title": "Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital",
+    "user_history_count": 10,
+    "user_history": [
+      "US Rep. Ilhan Omar divorces husband in Minnesota",
+      "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+      "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+      "College gymnast dies following training accident in Connecticut",
+      "Hyatt is eliminating travel-sized plastic toiletries",
+      "Three school workers charged in death of special needs student",
+      "Beat the crowds at these abandoned U.S. national parks",
+      "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+      "4 reasons you shouldn't max out your 401(k)",
+      "West Hollywood school administrator embroiled in college admissions scandal pleads guilty"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Hyatt is eliminating travel-sized plastic toiletries\"\n\"Three school workers charged in death of special needs student\"\n\"Beat the crowds at these abandoned U.S. national parks\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"West Hollywood school administrator embroiled in college admissions scandal pleads guilty\"\n\n[Candidate News Title]\n\"Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to provide details about the ongoing investigation into the circumstances surrounding a woman's death, which reportedly occurred after she was taken to a hospital by Montae Nicholson, a player for the Washington Redskins. Readers may expect information on the initial findings from law enforcement, any potential involvement of Nicholson, and the broader implications of the case. Additionally, the article could explore the community's reaction and any relevant background on Nicholson's career. Overall, it may present a factual account of the events leading up to the investigation without delving into speculative narratives.",
+    "model": "gpt-4o-mini"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "user_id": 274,
+  "candidate_news_id": "N43085",
+  "candidate_title": "Cold weather: 70% of the country will experience freezing temperatures this week",
+  "user_history_count": 5,
+  "user_history": [
+    "Body of missing Alabama girl found; 2 being charged",
+    "Jeff Bezos is set to lose his crown as world's richest person",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "A sneak peek at Hudson Yards' Edge to open March 2020",
+    "Catherine Deneuve Hospitalized After Mild Stroke"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"A sneak peek at Hudson Yards' Edge to open March 2020\"\n\"Catherine Deneuve Hospitalized After Mild Stroke\"\n\"\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Cold weather: 70% of the country will experience freezing temperatures this week\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide an overview of the impending cold weather affecting a significant portion of the country, with an emphasis on the expected freezing temperatures that could impact daily life. It may detail specific areas that are forecasted to experience the coldest conditions and possibly include advice on how to prepare for such weather, including tips for staying warm and safe. Additionally, the article could discuss the potential effects on travel and outdoor activities during this cold snap, although these aspects remain uncertain.",
+  "model": "gpt-4o-mini"
+}

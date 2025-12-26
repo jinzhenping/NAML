@@ -1,0 +1,21 @@
+{
+  "user_id": 790,
+  "candidate_news_id": "N91865",
+  "candidate_title": "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+  "user_history_count": 10,
+  "user_history": [
+    "Why Would Russia, China and Iran Plan Joint Naval Exercises?",
+    "Jennifer Lawrence Hired A Food Truck For Her Wedding And The Owner Had No Idea Who She Was",
+    "Netanyahu says he can't form a government after election deadlock",
+    "Women as young as 27 who are going prematurely gray show off their natural hair",
+    "Getty fire becomes a spectacle that underscores LA's inherent dangers",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet",
+    "This 'new' strain of HIV is actually a good thing",
+    "College gymnast dies following training accident in Connecticut",
+    "Teen survivor recalls horrifying details of ambush in Mexico that killed 9"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why Would Russia, China and Iran Plan Joint Naval Exercises?\"\n\"Jennifer Lawrence Hired A Food Truck For Her Wedding And The Owner Had No Idea Who She Was\"\n\"Netanyahu says he can't form a government after election deadlock\"\n\"Women as young as 27 who are going prematurely gray show off their natural hair\"\n\"Getty fire becomes a spectacle that underscores LA's inherent dangers\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet\"\n\"This 'new' strain of HIV is actually a good thing\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Teen survivor recalls horrifying details of ambush in Mexico that killed 9\"\n\n[Candidate News Title]\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"LASIK eye surgery should be taken off market, ex-FDA adviser says\" is likely to discuss concerns raised by a former FDA adviser regarding the safety and efficacy of LASIK eye surgery. Readers may expect to find an overview of the adviser’s arguments, which could include references to potential risks associated with the procedure and calls for reevaluation of its approval status. The article might also touch on statistics related to LASIK outcomes and possibly include comments from medical professionals or patients to provide a broader perspective on the ongoing debate surrounding this popular vision correction surgery.",
+  "model": "gpt-4o-mini"
+}

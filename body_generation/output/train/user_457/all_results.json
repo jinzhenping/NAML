@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 457,
+    "candidate_news_id": "N100602",
+    "candidate_title": "A US cargo ship carrying 1,400 tonnes of TNT that sank at the end of the River Thames in 1944 is posing a threat to London from its salty grave",
+    "user_history_count": 10,
+    "user_history": [
+      "All-women Delta crew flies 120 girls to NASA headquarters to inspire female aviators",
+      "Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border",
+      "Egypt unveils discovery of 30 ancient coffins with mummies inside",
+      "Google completes first drone delivery in the US",
+      "UPS and CVS plan to deliver prescriptions via drone",
+      "21 Things You Never Knew About America's 'Royal' Families",
+      "The SkyCam work on Michigan's opening kick return touchdown was incredible",
+      "Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area",
+      "Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape",
+      "High school football player asks to pray with opponent whose mother has cancer"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All-women Delta crew flies 120 girls to NASA headquarters to inspire female aviators\"\n\"Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border\"\n\"Egypt unveils discovery of 30 ancient coffins with mummies inside\"\n\"Google completes first drone delivery in the US\"\n\"UPS and CVS plan to deliver prescriptions via drone\"\n\"21 Things You Never Knew About America's 'Royal' Families\"\n\"The SkyCam work on Michigan's opening kick return touchdown was incredible\"\n\"Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area\"\n\"Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape\"\n\"High school football player asks to pray with opponent whose mother has cancer\"\n\n[Candidate News Title]\n\"A US cargo ship carrying 1,400 tonnes of TNT that sank at the end of the River Thames in 1944 is posing a threat to London from its salty grave\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the discovery of a US cargo ship that sank in 1944 while carrying a significant amount of TNT, which is now posing a potential threat to London. The piece may explore the historical context of the ship's sinking, the implications of its cargo for current safety measures in the area, and any efforts being made to assess or mitigate the risks associated with this underwater hazard. Additionally, it could detail the environmental and logistical challenges faced by authorities in addressing this situation.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 457,
+    "candidate_news_id": "N31766",
+    "candidate_title": "3 dead, dozens injured as Australia wildfires raze homes",
+    "user_history_count": 10,
+    "user_history": [
+      "All-women Delta crew flies 120 girls to NASA headquarters to inspire female aviators",
+      "Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border",
+      "Egypt unveils discovery of 30 ancient coffins with mummies inside",
+      "Google completes first drone delivery in the US",
+      "UPS and CVS plan to deliver prescriptions via drone",
+      "21 Things You Never Knew About America's 'Royal' Families",
+      "The SkyCam work on Michigan's opening kick return touchdown was incredible",
+      "Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area",
+      "Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape",
+      "High school football player asks to pray with opponent whose mother has cancer"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All-women Delta crew flies 120 girls to NASA headquarters to inspire female aviators\"\n\"Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border\"\n\"Egypt unveils discovery of 30 ancient coffins with mummies inside\"\n\"Google completes first drone delivery in the US\"\n\"UPS and CVS plan to deliver prescriptions via drone\"\n\"21 Things You Never Knew About America's 'Royal' Families\"\n\"The SkyCam work on Michigan's opening kick return touchdown was incredible\"\n\"Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area\"\n\"Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape\"\n\"High school football player asks to pray with opponent whose mother has cancer\"\n\n[Candidate News Title]\n\"3 dead, dozens injured as Australia wildfires raze homes\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"3 dead, dozens injured as Australia wildfires raze homes,\" the user can likely expect a detailed account of the recent wildfires in Australia, highlighting the tragic loss of life and the impact on local communities. The piece may provide insights into the causes of the fires, the regions affected, and the response from emergency services. Additionally, it could discuss the broader implications of such natural disasters, including environmental concerns and the challenges faced by residents in rebuilding their lives.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 457,
+    "candidate_news_id": "N99507",
+    "candidate_title": "AP FACT CHECK: Trump's wildfire tweets not grounded in facts",
+    "user_history_count": 10,
+    "user_history": [
+      "All-women Delta crew flies 120 girls to NASA headquarters to inspire female aviators",
+      "Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border",
+      "Egypt unveils discovery of 30 ancient coffins with mummies inside",
+      "Google completes first drone delivery in the US",
+      "UPS and CVS plan to deliver prescriptions via drone",
+      "21 Things You Never Knew About America's 'Royal' Families",
+      "The SkyCam work on Michigan's opening kick return touchdown was incredible",
+      "Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area",
+      "Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape",
+      "High school football player asks to pray with opponent whose mother has cancer"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All-women Delta crew flies 120 girls to NASA headquarters to inspire female aviators\"\n\"Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border\"\n\"Egypt unveils discovery of 30 ancient coffins with mummies inside\"\n\"Google completes first drone delivery in the US\"\n\"UPS and CVS plan to deliver prescriptions via drone\"\n\"21 Things You Never Knew About America's 'Royal' Families\"\n\"The SkyCam work on Michigan's opening kick return touchdown was incredible\"\n\"Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area\"\n\"Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape\"\n\"High school football player asks to pray with opponent whose mother has cancer\"\n\n[Candidate News Title]\n\"AP FACT CHECK: Trump's wildfire tweets not grounded in facts\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you choose to read the article titled \"AP FACT CHECK: Trump's wildfire tweets not grounded in facts,\" you can expect a detailed examination of recent statements made by former President Trump regarding wildfires. The piece is likely to analyze specific claims he made, assessing their accuracy and providing context based on expert opinions or statistics. Additionally, the article may explore the broader implications of misinformation in political discourse, particularly how it affects public understanding of environmental issues. Overall, it aims to clarify the truth behind the tweets while considering their impact on public perception.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 457,
+    "candidate_news_id": "N121958",
+    "candidate_title": "130,000 Books Donated to Fort Worth ISD Elementary Schools",
+    "user_history_count": 10,
+    "user_history": [
+      "All-women Delta crew flies 120 girls to NASA headquarters to inspire female aviators",
+      "Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border",
+      "Egypt unveils discovery of 30 ancient coffins with mummies inside",
+      "Google completes first drone delivery in the US",
+      "UPS and CVS plan to deliver prescriptions via drone",
+      "21 Things You Never Knew About America's 'Royal' Families",
+      "The SkyCam work on Michigan's opening kick return touchdown was incredible",
+      "Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area",
+      "Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape",
+      "High school football player asks to pray with opponent whose mother has cancer"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All-women Delta crew flies 120 girls to NASA headquarters to inspire female aviators\"\n\"Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border\"\n\"Egypt unveils discovery of 30 ancient coffins with mummies inside\"\n\"Google completes first drone delivery in the US\"\n\"UPS and CVS plan to deliver prescriptions via drone\"\n\"21 Things You Never Knew About America's 'Royal' Families\"\n\"The SkyCam work on Michigan's opening kick return touchdown was incredible\"\n\"Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area\"\n\"Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape\"\n\"High school football player asks to pray with opponent whose mother has cancer\"\n\n[Candidate News Title]\n\"130,000 Books Donated to Fort Worth ISD Elementary Schools\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article about the donation of 130,000 books to Fort Worth ISD elementary schools is likely to provide an overview of the initiative aimed at enhancing literacy and educational resources for young students. It may detail the organizations involved in the donation process, the selection of schools benefiting from the books, and the anticipated impact on students' reading skills and academic performance. Additionally, it could highlight any community involvement or events associated with the donation, illustrating the collaborative effort to promote education in the area.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 457,
+    "candidate_news_id": "N14848",
+    "candidate_title": "Mural of activist Greta Thunberg going up in San Francisco",
+    "user_history_count": 10,
+    "user_history": [
+      "All-women Delta crew flies 120 girls to NASA headquarters to inspire female aviators",
+      "Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border",
+      "Egypt unveils discovery of 30 ancient coffins with mummies inside",
+      "Google completes first drone delivery in the US",
+      "UPS and CVS plan to deliver prescriptions via drone",
+      "21 Things You Never Knew About America's 'Royal' Families",
+      "The SkyCam work on Michigan's opening kick return touchdown was incredible",
+      "Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area",
+      "Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape",
+      "High school football player asks to pray with opponent whose mother has cancer"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All-women Delta crew flies 120 girls to NASA headquarters to inspire female aviators\"\n\"Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border\"\n\"Egypt unveils discovery of 30 ancient coffins with mummies inside\"\n\"Google completes first drone delivery in the US\"\n\"UPS and CVS plan to deliver prescriptions via drone\"\n\"21 Things You Never Knew About America's 'Royal' Families\"\n\"The SkyCam work on Michigan's opening kick return touchdown was incredible\"\n\"Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area\"\n\"Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape\"\n\"High school football player asks to pray with opponent whose mother has cancer\"\n\n[Candidate News Title]\n\"Mural of activist Greta Thunberg going up in San Francisco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the installation of a mural dedicated to activist Greta Thunberg in San Francisco, highlighting her role in environmental activism. Readers may expect an overview of the mural's significance, including details about its artistic elements and the location chosen for its display. The piece might also touch on the broader context of climate activism in the city and Thunberg's influence on the movement. Additionally, it could explore reactions from local residents and activists, though the specifics of these responses remain uncertain.",
+    "model": "gpt-4o-mini"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "user_id": 739,
+  "candidate_news_id": "N54368",
+  "candidate_title": "South Carolina teen gets life in prison for deadly elementary school shooting",
+  "user_history_count": 10,
+  "user_history": [
+    "Subtropical Storm Rebekah forms in north Atlantic",
+    "15-year-old boy charged with attempted murder in Little Village shooting that wounded 7-year-old trick-or-treater",
+    "Florida air show crash: Pilot killed when plane crashes",
+    "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+    "Bette Midler mocks Lori Loughlin's college admission scandal",
+    "California authorities found and destroyed $1 billion worth of marijuana plants",
+    "Alexandria Ocasio-Cortez to join Bernie Sanders on campaign trail in Iowa",
+    "U.S.-born ISIS bride thinks she 'deserves a second chance'",
+    "Father, daughter charged with raping woman, leaving her to die in desert",
+    "College gymnast dies following training accident in Connecticut"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Subtropical Storm Rebekah forms in north Atlantic\"\n\"15-year-old boy charged with attempted murder in Little Village shooting that wounded 7-year-old trick-or-treater\"\n\"Florida air show crash: Pilot killed when plane crashes\"\n\"1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef\"\n\"Bette Midler mocks Lori Loughlin's college admission scandal\"\n\"California authorities found and destroyed $1 billion worth of marijuana plants\"\n\"Alexandria Ocasio-Cortez to join Bernie Sanders on campaign trail in Iowa\"\n\"U.S.-born ISIS bride thinks she 'deserves a second chance'\"\n\"Father, daughter charged with raping woman, leaving her to die in desert\"\n\"College gymnast dies following training accident in Connecticut\"\n\n[Candidate News Title]\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the sentencing of a South Carolina teenager who received a life imprisonment term for their involvement in a deadly shooting at an elementary school. Readers can expect an overview of the incident, including details about the shooting itself, the court proceedings, and the implications of the sentence. The piece may also explore the broader context of school shootings in the United States and how such incidents have impacted local communities. Additionally, it could touch on any statements made by the victims' families or the community response to the tragedy.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 10,
+  "candidate_news_id": "N48015",
+  "candidate_title": "Abandoned 'unicorn' puppy has a tail on its head",
+  "user_history_count": 10,
+  "user_history": [
+    "Have a little piece of extra skin? Everything you need to know about skin tags",
+    "Ranking the 32 best NFL rookies so far in 2019",
+    "Obama calls out call-out culture: \"That's not activism\"",
+    "What 25 dogs were bred for",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "Young and the Restless Star William Wintersole Dies at 88",
+    "The 2019 NFL mid-season All-Pro team",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Opinion: President Trump's increased interest in public sporting events hardly a coincidence",
+    "Report: Stephen A. Smith strikes massive new deal with ESPN"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Have a little piece of extra skin? Everything you need to know about skin tags\"\n\"Ranking the 32 best NFL rookies so far in 2019\"\n\"Obama calls out call-out culture: \"That's not activism\"\"\n\"What 25 dogs were bred for\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"Young and the Restless Star William Wintersole Dies at 88\"\n\"The 2019 NFL mid-season All-Pro team\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Opinion: President Trump's increased interest in public sporting events hardly a coincidence\"\n\"Report: Stephen A. Smith strikes massive new deal with ESPN\"\n\n[Candidate News Title]\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Abandoned 'unicorn' puppy has a tail on its head\" is likely to discuss the unusual case of a puppy that has a tail on its head, which may be referred to as a \"unicorn\" due to its distinctive appearance. Readers can expect details about the puppy's background, including how it was found and its current status after being abandoned. There may also be discussions regarding the medical implications of the puppy's condition and the response from animal shelters or rescue organizations. Additionally, the article could explore public reactions and opinions on such unique animals, but this is uncertain.",
+  "model": "gpt-4o-mini"
+}

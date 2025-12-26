@@ -1,0 +1,21 @@
+{
+  "user_id": 78,
+  "candidate_news_id": "N127134",
+  "candidate_title": "Deval Patrick Will Enter 2020 Presidential Race on Thursday",
+  "user_history_count": 10,
+  "user_history": [
+    "Birmingham couple charged with murder after abducted 3-year-old's body found in dumpster",
+    "A heartbreaking photo of a dog riding a bus alone went viral, and now people want to adopt her",
+    "3 children, 1 adult found dead in Deer Park home",
+    "John Witherspoon Dies: Comedian & 'Friday' Star Was 77",
+    "Stubborn dog is annoyed after being asked to get off couch",
+    "Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'",
+    "Young trick-or-treater refills stranger's empty candy bowl with his own",
+    "Man arrested for allegedly handing out razor blades with Halloween candy",
+    "13-year-old charged with two murders escapes custody in North Carolina",
+    "More than 130,000 pounds of ground beef recalled for possible plastic contamination"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Birmingham couple charged with murder after abducted 3-year-old's body found in dumpster\"\n\"A heartbreaking photo of a dog riding a bus alone went viral, and now people want to adopt her\"\n\"3 children, 1 adult found dead in Deer Park home\"\n\"John Witherspoon Dies: Comedian & 'Friday' Star Was 77\"\n\"Stubborn dog is annoyed after being asked to get off couch\"\n\"Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"Man arrested for allegedly handing out razor blades with Halloween candy\"\n\"13-year-old charged with two murders escapes custody in North Carolina\"\n\"More than 130,000 pounds of ground beef recalled for possible plastic contamination\"\n\n[Candidate News Title]\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Deval Patrick entering the 2020 presidential race is likely to provide details on his decision to run, including the motivations behind his candidacy and his political background. Readers may expect insights into his campaign strategy, key issues he plans to address, and how he aims to differentiate himself from other candidates. Additionally, the article could discuss the potential impact of his entry on the Democratic primary landscape, as well as reactions from political analysts and fellow candidates. Overall, the piece is expected to offer a comprehensive overview of Patrick's political ambitions and the context surrounding his announcement.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 988,
+  "candidate_news_id": "N78371",
+  "candidate_title": "Alabama-LSU rivalry is back because the Tigers transformed under Ed Orgeron",
+  "user_history_count": 10,
+  "user_history": [
+    "Sen. Dianne Feinstein renews call for racing to be suspended at Santa Anita Park after latest horse death",
+    "Today in History: November 5",
+    "Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Man Goes To Adoption Event And Finds His Long-Lost Dog",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Republicans urge Bevin to provide proof of election fraud or concede",
+    "Everyday heroes step up to help lone Waffle House employee"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Sen. Dianne Feinstein renews call for racing to be suspended at Santa Anita Park after latest horse death\"\n\"Today in History: November 5\"\n\"Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Man Goes To Adoption Event And Finds His Long-Lost Dog\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Republicans urge Bevin to provide proof of election fraud or concede\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\n[Candidate News Title]\n\"Alabama-LSU rivalry is back because the Tigers transformed under Ed Orgeron\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the Alabama-LSU rivalry is likely to explore the recent transformation of the LSU Tigers under head coach Ed Orgeron, highlighting key strategies and changes that have contributed to their resurgence in college football. Readers may expect to learn about specific game highlights, player performances, and the historical context of the rivalry, which adds depth to the current season's narrative. The piece could also discuss the implications of this rivalry on both teams' standings and fan engagement, providing a comprehensive overview of the upcoming matchup.",
+  "model": "gpt-4o-mini"
+}

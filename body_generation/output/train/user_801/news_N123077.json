@@ -1,0 +1,21 @@
+{
+  "user_id": 801,
+  "candidate_news_id": "N123077",
+  "candidate_title": "Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage",
+  "user_history_count": 10,
+  "user_history": [
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "I went to Peter Luger after it received zero stars from New York Times",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "12 Attractions That Are So Creepy, They Are Off-Limits to Tourists",
+    "The 50 Best Shows on TV, From Star Trek: Discovery to Schitt's Creek",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Week in celebrity photos for Nov. 4-8, 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"I went to Peter Luger after it received zero stars from New York Times\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"12 Attractions That Are So Creepy, They Are Off-Limits to Tourists\"\n\"The 50 Best Shows on TV, From Star Trek: Discovery to Schitt's Creek\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Week in celebrity photos for Nov. 4-8, 2019\"\n\n[Candidate News Title]\n\"Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the mixed reactions from fans regarding Drake's recent performance as a surprise headliner at a music festival, where he was reportedly booed off stage. It may explore the reasons behind the divided opinions among attendees, such as expectations for the performance or the nature of the setlist. Additionally, the piece could provide context about Drake's recent activities and how they align with fan sentiments, along with insights from social media reactions or commentary from music critics.",
+  "model": "gpt-4o-mini"
+}

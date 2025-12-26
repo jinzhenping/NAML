@@ -1,0 +1,21 @@
+{
+  "user_id": 11,
+  "candidate_news_id": "N110079",
+  "candidate_title": "Browns' Kitchens: Garrett 'will learn from' suspension",
+  "user_history_count": 10,
+  "user_history": [
+    "The world's largest nuclear power producer is melting down",
+    "Smugglers are sawing through new sections of Trump's border wall",
+    "Tiffany Likely to Play Hard to Get as LVMH Awaits Answer",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "Xerox considers takeover offer for PC maker HP - WSJ",
+    "Sharon Stone Recreates 'Basic Instinct' Scene 27 Years After Film's Release",
+    "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+    "Japanese women are fighting for the right to wear glasses to the office",
+    "Fast food cashier and manager fired for refusing to serve police officer",
+    "Family told to take down Christmas display because it's too soon to decorate"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The world's largest nuclear power producer is melting down\"\n\"Smugglers are sawing through new sections of Trump's border wall\"\n\"Tiffany Likely to Play Hard to Get as LVMH Awaits Answer\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"Xerox considers takeover offer for PC maker HP - WSJ\"\n\"Sharon Stone Recreates 'Basic Instinct' Scene 27 Years After Film's Release\"\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\"Japanese women are fighting for the right to wear glasses to the office\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\n[Candidate News Title]\n\"Browns' Kitchens: Garrett 'will learn from' suspension\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Browns' Kitchens and Garrett's suspension, the user is likely to expect an analysis of the circumstances surrounding the suspension, including any comments from Garrett regarding the situation. The piece may also provide insights into the implications of this suspension for the Browns' team dynamics and strategy moving forward. Additionally, there could be discussion on how similar situations have affected other players in the league, highlighting the broader context of player conduct and team management.",
+  "model": "gpt-4o-mini"
+}

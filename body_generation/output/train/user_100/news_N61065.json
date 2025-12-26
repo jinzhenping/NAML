@@ -1,0 +1,21 @@
+{
+  "user_id": 100,
+  "candidate_news_id": "N61065",
+  "candidate_title": "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+  "user_history_count": 10,
+  "user_history": [
+    "Over 70 Female British Politicians Sign Letter Supporting Meghan Markle",
+    "Apple is laying the groundwork for an iPhone subscription",
+    "This Is What Queen Elizabeth Is Doing About the Prince William-Prince Harry Feud",
+    "Goats Munching on Vegetation Helped Save the Reagan Presidential Library in California Wildfire",
+    "My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder",
+    "Cole issues classy statement thanking fans, Astros' organization",
+    "John Legend clarifies his recent Kanye West comments, plus more news",
+    "Opinion: One thing we know at midpoint of NFL season is that it's time for Baker Mayfield to grow up",
+    "Will Freddie Kitchens be one and done in Cleveland?",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Over 70 Female British Politicians Sign Letter Supporting Meghan Markle\"\n\"Apple is laying the groundwork for an iPhone subscription\"\n\"This Is What Queen Elizabeth Is Doing About the Prince William-Prince Harry Feud\"\n\"Goats Munching on Vegetation Helped Save the Reagan Presidential Library in California Wildfire\"\n\"My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder\"\n\"Cole issues classy statement thanking fans, Astros' organization\"\n\"John Legend clarifies his recent Kanye West comments, plus more news\"\n\"Opinion: One thing we know at midpoint of NFL season is that it's time for Baker Mayfield to grow up\"\n\"Will Freddie Kitchens be one and done in Cleveland?\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\n[Candidate News Title]\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to read about Lamar Odom's recent engagement to Sabrina Parr, including details about the engagement ring and the couple's relationship timeline. The piece may provide insights into their journey together, highlighting notable moments leading up to the proposal. Additionally, there could be commentary on Odom's personal growth and changes since his previous public struggles. Overall, the article is likely to offer a blend of personal anecdotes and relevant context regarding their engagement.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 227,
+  "candidate_news_id": "N100152",
+  "candidate_title": "The 25 richest families in America",
+  "user_history_count": 10,
+  "user_history": [
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "13-year-old charged with two murders escapes custody in North Carolina",
+    "Woman arrested for 1996 murder of baby girl found dead in reservoir",
+    "Jamie Lee Curtis Opens Up About Being 20 Years Sober, Going Public With Her Addiction",
+    "Your DNA Profile is Private? A Florida Judge Just Said Otherwise",
+    "Driver Files Lawsuit After Large Chunk Of Concrete Falls From Brooklyn Overpass, Strikes Taxi",
+    "Injured Cowboys DL Daniel Ross arrested on drug, gun charges",
+    "Man Goes To Adoption Event And Finds His Long-Lost Dog",
+    "Another Palm Beach County juror may be jailed in new contempt case",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"13-year-old charged with two murders escapes custody in North Carolina\"\n\"Woman arrested for 1996 murder of baby girl found dead in reservoir\"\n\"Jamie Lee Curtis Opens Up About Being 20 Years Sober, Going Public With Her Addiction\"\n\"Your DNA Profile is Private? A Florida Judge Just Said Otherwise\"\n\"Driver Files Lawsuit After Large Chunk Of Concrete Falls From Brooklyn Overpass, Strikes Taxi\"\n\"Injured Cowboys DL Daniel Ross arrested on drug, gun charges\"\n\"Man Goes To Adoption Event And Finds His Long-Lost Dog\"\n\"Another Palm Beach County juror may be jailed in new contempt case\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\n[Candidate News Title]\n\"The 25 richest families in America\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The 25 Richest Families in America\" is likely to provide an overview of the wealthiest familial dynasties in the United States, detailing their estimated net worth, sources of income, and perhaps their historical significance. Readers may expect to learn about how these families have accumulated and maintained their wealth over generations, as well as insights into their business ventures and philanthropic efforts. It could also explore the impact of wealth on social dynamics and public perception. Overall, the article may offer a glimpse into the lifestyles and influence of America’s richest families.",
+  "model": "gpt-4o-mini"
+}

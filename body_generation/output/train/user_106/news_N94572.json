@@ -1,0 +1,19 @@
+{
+  "user_id": 106,
+  "candidate_news_id": "N94572",
+  "candidate_title": "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+  "user_history_count": 8,
+  "user_history": [
+    "Plans pushed back to explode 2 cranes in New Orleans",
+    "Here are the lawmakers who are not seeking reelection to Congress in 2020",
+    "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+    "Kellogg's agrees to stop calling its sugary cereals 'healthy'",
+    "Democrats vow not to delay impeachment probe as witnesses ignore subpoenas",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Lil Pump bit by snake on set of music video"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Plans pushed back to explode 2 cranes in New Orleans\"\n\"Here are the lawmakers who are not seeking reelection to Congress in 2020\"\n\"Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony\"\n\"Kellogg's agrees to stop calling its sugary cereals 'healthy'\"\n\"Democrats vow not to delay impeachment probe as witnesses ignore subpoenas\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Lil Pump bit by snake on set of music video\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"'It's not over': Sarah Palin says she is fighting to repair her marriage,\" the user is likely expecting to read about Sarah Palin's personal life, specifically her efforts to reconcile her marriage. The piece may delve into the challenges she faces and the steps she is taking to address any issues, possibly including statements from Palin about her commitment to her family. Additionally, it could provide context regarding her relationship history and how it intersects with her public persona, though the specifics remain uncertain.",
+  "model": "gpt-4o-mini"
+}

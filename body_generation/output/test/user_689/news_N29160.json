@@ -1,0 +1,21 @@
+{
+  "user_id": 689,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 10,
+  "user_history": [
+    "The 1 reason you shouldn't hesitate to claim Social Security early",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+    "Tom Brady's trainer hints at how long QB intends to keep playing",
+    "'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say",
+    "Sam Adams Releases a $210 Beer This Week, and the ABV Will Knock Your Socks Off",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk",
+    "'Literally people are like, 'Are you Matt Damon?' and I'm like, 'No, no, I'm not''"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\"Tom Brady's trainer hints at how long QB intends to keep playing\"\n\"'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\"Sam Adams Releases a $210 Beer This Week, and the ABV Will Knock Your Socks Off\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\"'Literally people are like, 'Are you Matt Damon?' and I'm like, 'No, no, I'm not''\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Opinion: Colin Kaepernick is about to get what he deserves: a chance,\" they are likely to encounter a discussion surrounding Kaepernick's potential return to professional football. The article may explore the circumstances that have led to his absence from the league, including his controversial kneeling protest, and how recent developments in the NFL could open doors for his comeback. Additionally, it could analyze public sentiment about Kaepernick and the broader implications of his return for the sport and social justice discussions.",
+  "model": "gpt-4o-mini"
+}

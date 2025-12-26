@@ -1,0 +1,21 @@
+{
+  "user_id": 218,
+  "candidate_news_id": "N107637",
+  "candidate_title": "Russell Wilson vs. 49ers' No. 1 defense: Monday night's prime-time matchup",
+  "user_history_count": 10,
+  "user_history": [
+    "Fort Worth shooting: Officers weren't asked to do welfare check. Here's how it changed things",
+    "Unprecedented movement detected on California earthquake fault capable of 8.0 temblor",
+    "Winners and losers from Week 8 in college football led by Wisconsin, Oregon",
+    "These Amazing Recipes Will Bring Your Feast of the Seven Fishes to the Next Level",
+    "The world's largest nuclear power producer is melting down",
+    "Obama calls out call-out culture: \"That's not activism\"",
+    "Explosive new wildfire drives thousands from homes near Los Angeles",
+    "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+    "President Donald Trump gets mixed reaction at UFC 244 in historic milestone for MMA",
+    "Patriots wanted a test. Now, they need some answers"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Fort Worth shooting: Officers weren't asked to do welfare check. Here's how it changed things\"\n\"Unprecedented movement detected on California earthquake fault capable of 8.0 temblor\"\n\"Winners and losers from Week 8 in college football led by Wisconsin, Oregon\"\n\"These Amazing Recipes Will Bring Your Feast of the Seven Fishes to the Next Level\"\n\"The world's largest nuclear power producer is melting down\"\n\"Obama calls out call-out culture: \"That's not activism\"\"\n\"Explosive new wildfire drives thousands from homes near Los Angeles\"\n\"1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef\"\n\"President Donald Trump gets mixed reaction at UFC 244 in historic milestone for MMA\"\n\"Patriots wanted a test. Now, they need some answers\"\n\n[Candidate News Title]\n\"Russell Wilson vs. 49ers' No. 1 defense: Monday night's prime-time matchup\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers can expect an analysis of the upcoming prime-time matchup between Russell Wilson and the 49ers' top-ranked defense. It is likely to cover key statistics and performance insights from both Wilson's recent games and the 49ers' defensive strategies. The piece may also explore potential challenges for Wilson, considering the strength of the defense, and discuss how these factors could influence the outcome of the game. Additionally, expert opinions or predictions regarding the matchup's significance in the broader context of the season could be included.",
+  "model": "gpt-4o-mini"
+}

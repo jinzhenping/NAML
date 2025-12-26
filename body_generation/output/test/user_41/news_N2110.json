@@ -1,0 +1,21 @@
+{
+  "user_id": 41,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Winners, losers from Seahawks' wild overtime win over 49ers on 'Monday Night Football'",
+    "Donald Trump Jr slams The View Host Sunny Hostin by asking what it's like to be paid by a network that 'protected pedophile - rapist Jeffrey Epstein' in war of words on Twitter",
+    "This Guy Lost 30 Pounds and Gained a Rock-Hard Six Pack",
+    "8 Secret Spots You Never Knew Existed in Disney Parks",
+    "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+    "Deval Patrick Will Enter 2020 Presidential Race on Thursday",
+    "If NCAA has to punish somebody in Wiseman debacle, blame Penny",
+    "Tense TV: CNN's Blitzer asks Kellyanne Conway about husband"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Winners, losers from Seahawks' wild overtime win over 49ers on 'Monday Night Football'\"\n\"Donald Trump Jr slams The View Host Sunny Hostin by asking what it's like to be paid by a network that 'protected pedophile - rapist Jeffrey Epstein' in war of words on Twitter\"\n\"This Guy Lost 30 Pounds and Gained a Rock-Hard Six Pack\"\n\"8 Secret Spots You Never Knew Existed in Disney Parks\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\"If NCAA has to punish somebody in Wiseman debacle, blame Penny\"\n\"Tense TV: CNN's Blitzer asks Kellyanne Conway about husband\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\" is likely to present a curated list of innovative and trendy tech gadgets suitable for various occasions, such as holidays or birthdays. Readers can expect descriptions of each item, highlighting unique features and potential uses, catering to diverse interests and age groups. It may also include recommendations for both budget-friendly options and high-end products. Overall, the piece is designed to inform readers about the latest tech trends, helping them identify appealing gifts for friends or family.",
+  "model": "gpt-4o-mini"
+}

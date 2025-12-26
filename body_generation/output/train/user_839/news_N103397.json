@@ -1,0 +1,19 @@
+{
+  "user_id": 839,
+  "candidate_news_id": "N103397",
+  "candidate_title": "GOP senator defends calling Pelosi 'dumb': 'What I said was accurate'",
+  "user_history_count": 8,
+  "user_history": [
+    "Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care",
+    "Prince Harry acknowledges tensions with William in ITV interview",
+    "What Judge Judy's husband got her for her 77th birthday",
+    "Melania Trump receives warm welcome on first solo Capitol Hill visit amid Syria, impeachment drama",
+    "40 conservative groups sign ethics complaint against Pelosi",
+    "Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Here are the 96 Sears and Kmart stores that are closing next"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care\"\n\"Prince Harry acknowledges tensions with William in ITV interview\"\n\"What Judge Judy's husband got her for her 77th birthday\"\n\"Melania Trump receives warm welcome on first solo Capitol Hill visit amid Syria, impeachment drama\"\n\"40 conservative groups sign ethics complaint against Pelosi\"\n\"Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"GOP senator defends calling Pelosi 'dumb': 'What I said was accurate'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a recent statement made by a GOP senator in which he defends his description of Speaker Nancy Pelosi as \"dumb,\" arguing that his remark was factual rather than derogatory. Readers can expect an exploration of the context surrounding this comment, including any relevant political debates or controversies that may have arisen from it. The piece may also provide insights into the senator's motivations and the reactions from both his supporters and critics, highlighting the broader implications of such remarks in the current political climate.",
+  "model": "gpt-4o-mini"
+}

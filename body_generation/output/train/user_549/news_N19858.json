@@ -1,0 +1,21 @@
+{
+  "user_id": 549,
+  "candidate_news_id": "N19858",
+  "candidate_title": "100 vintage baby names coming back into style",
+  "user_history_count": 10,
+  "user_history": [
+    "San Francisco District Attorney race too close to call",
+    "Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka",
+    "40 Fun Facts About Jennifer Aniston",
+    "Inside the Sheikh of Dubai's 800-acre Kentucky horse farm",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "Catherine Deneuve Hospitalized After Mild Stroke",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "A year after deadly fire, Paradise pauses to remember",
+    "Debunking the week's tabloid stories: Nov. 8, 2019",
+    "Trump noncommittal on backing Jeff Sessions for Senate"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"San Francisco District Attorney race too close to call\"\n\"Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"Inside the Sheikh of Dubai's 800-acre Kentucky horse farm\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"Catherine Deneuve Hospitalized After Mild Stroke\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"A year after deadly fire, Paradise pauses to remember\"\n\"Debunking the week's tabloid stories: Nov. 8, 2019\"\n\"Trump noncommittal on backing Jeff Sessions for Senate\"\n\n[Candidate News Title]\n\"100 vintage baby names coming back into style\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"100 vintage baby names coming back into style,\" the user can expect a detailed exploration of names that have seen a resurgence in popularity. It is likely to highlight various names from the past, discussing their origins and cultural significance, as well as trends in naming conventions that have contributed to their revival. The piece may also provide insights into why parents are increasingly drawn to these vintage choices, possibly touching on themes of nostalgia and individuality in modern parenting.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 805,
+  "candidate_news_id": "N21018",
+  "candidate_title": "3 Indiana judges suspended after a night of drinking turned into a White Castle brawl",
+  "user_history_count": 10,
+  "user_history": [
+    "Jets trade DL Leonard Williams to Giants",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+    "Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory",
+    "Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage",
+    "Man cuffed for eating sandwich on train platform gets an apology",
+    "Fox legal analyst Napolitano emerges as Trump critic"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jets trade DL Leonard Williams to Giants\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory\"\n\"Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\n[Candidate News Title]\n\"3 Indiana judges suspended after a night of drinking turned into a White Castle brawl\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article regarding the suspension of three Indiana judges after a night of drinking that escalated into a brawl at a White Castle, the user can expect to read about the circumstances surrounding the incident and the implications for the judges involved. The piece is likely to outline the details of the altercation, including any available accounts of how the situation developed. Additionally, it may explore the potential repercussions for the judges' careers and the broader impact on the judicial system in Indiana, reflecting on how such behavior could undermine public trust in judicial authority.",
+  "model": "gpt-4o-mini"
+}

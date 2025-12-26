@@ -1,0 +1,21 @@
+{
+  "user_id": 682,
+  "candidate_news_id": "N30899",
+  "candidate_title": "College gymnast dies following training accident in Connecticut",
+  "user_history_count": 10,
+  "user_history": [
+    "Greg Schiano reportedly making 'significant demands' in Rutgers talks",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia",
+    "Holocaust survivor under guard amid death threats",
+    "Accused killer's girlfriend reveals Colorado mom's last words",
+    "Opinion: Mad at Clippers for sitting Kawhi Leonard? Get used to it",
+    "Napoleon Bonaparte's general believed unearthed in Russia",
+    "What does Michael Jordan think about load management? 'You're paid to play 82 games'",
+    "'Prepare to die' Trump adviser Stone texted witness, trial jury hears",
+    "James Brolin On the Hollywood Advice He Gave Son Josh: 'Don't Be a Leading Man, Ever'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Greg Schiano reportedly making 'significant demands' in Rutgers talks\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\"Holocaust survivor under guard amid death threats\"\n\"Accused killer's girlfriend reveals Colorado mom's last words\"\n\"Opinion: Mad at Clippers for sitting Kawhi Leonard? Get used to it\"\n\"Napoleon Bonaparte's general believed unearthed in Russia\"\n\"What does Michael Jordan think about load management? 'You're paid to play 82 games'\"\n\"'Prepare to die' Trump adviser Stone texted witness, trial jury hears\"\n\"James Brolin On the Hollywood Advice He Gave Son Josh: 'Don't Be a Leading Man, Ever'\"\n\n[Candidate News Title]\n\"College gymnast dies following training accident in Connecticut\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the college gymnast who died following a training accident in Connecticut is likely to detail the circumstances surrounding the tragic event, including the location and nature of the training session. It may provide insights into the gymnast's background, such as her achievements and contributions to her team or college. Additionally, the piece could explore the broader implications for athlete safety in gymnastics and similar sports, highlighting any previous concerns or incidents. Overall, the article is expected to offer a factual account while reflecting on the impact of the incident on the gymnastics community.",
+  "model": "gpt-4o-mini"
+}

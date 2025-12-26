@@ -1,0 +1,21 @@
+{
+  "user_id": 840,
+  "candidate_news_id": "N122944",
+  "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+  "user_history_count": 10,
+  "user_history": [
+    "AOC brings star power to Iowa for Sanders",
+    "Nikki Haley: I was asked by Cabinet members to take sides against the president",
+    "Mahomes with stunning 63-yard jump-pass touchdown",
+    "Titans rally late to stun Chiefs, spoil Mahomes' return",
+    "The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "After push from Perry, backers got huge gas deal in Ukraine",
+    "Ahead of this week's rematch, Tom Brady says he's still not quite over Super Bowl loss to Eagles",
+    "What Joe Biden Actually Did in Ukraine",
+    "Family Brings Snow Inside So Obsessed Indoor Cat Can Play In It"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"AOC brings star power to Iowa for Sanders\"\n\"Nikki Haley: I was asked by Cabinet members to take sides against the president\"\n\"Mahomes with stunning 63-yard jump-pass touchdown\"\n\"Titans rally late to stun Chiefs, spoil Mahomes' return\"\n\"The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"After push from Perry, backers got huge gas deal in Ukraine\"\n\"Ahead of this week's rematch, Tom Brady says he's still not quite over Super Bowl loss to Eagles\"\n\"What Joe Biden Actually Did in Ukraine\"\n\"Family Brings Snow Inside So Obsessed Indoor Cat Can Play In It\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu,\" the user is likely to find an exploration of the strategic decisions behind McDonald’s menu offerings, particularly focusing on the Filet-O-Fish sandwich. The piece may delve into historical sales data, consumer preferences, and marketing strategies that have contributed to its enduring presence on the menu. Additionally, it could discuss the cultural and seasonal factors influencing its popularity, especially during Lent. Overall, the article is expected to provide insights into the fast-food giant's business approach and customer engagement tactics.",
+  "model": "gpt-4o-mini"
+}

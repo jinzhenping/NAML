@@ -1,0 +1,21 @@
+{
+  "user_id": 238,
+  "candidate_news_id": "N95525",
+  "candidate_title": "105 Black Friday Deals You Can Start Shopping Today",
+  "user_history_count": 10,
+  "user_history": [
+    "High school soccer: Chloe DeLyser sets record for most goals scored",
+    "Six teams on upset alert in NFL Week 7",
+    "Ricky Williams' Heisman sells for auction-record $504,000",
+    "Gastonia, N.C. woman's social media post about stranger's act of kindness goes viral",
+    "Are Kylie Jenner and Travis Scott rekindling their romance? Plus, more news",
+    "The Internet Is Banding Together to Support Meghan Markle After She Opened Up About Her Mental Health",
+    "We Tried Jeni's New Holiday Flavors Here's How They Taste",
+    "Search for missing local woman ends after her body found near San Antonio College",
+    "TobyMac says late son 'had an untamable grand personality,' shares last text exchange",
+    "A 2,000-pound great white shark is swimming off the coast of Florida"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"High school soccer: Chloe DeLyser sets record for most goals scored\"\n\"Six teams on upset alert in NFL Week 7\"\n\"Ricky Williams' Heisman sells for auction-record $504,000\"\n\"Gastonia, N.C. woman's social media post about stranger's act of kindness goes viral\"\n\"Are Kylie Jenner and Travis Scott rekindling their romance? Plus, more news\"\n\"The Internet Is Banding Together to Support Meghan Markle After She Opened Up About Her Mental Health\"\n\"We Tried Jeni's New Holiday Flavors Here's How They Taste\"\n\"Search for missing local woman ends after her body found near San Antonio College\"\n\"TobyMac says late son 'had an untamable grand personality,' shares last text exchange\"\n\"A 2,000-pound great white shark is swimming off the coast of Florida\"\n\n[Candidate News Title]\n\"105 Black Friday Deals You Can Start Shopping Today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"105 Black Friday Deals You Can Start Shopping Today,\" the user is likely expecting a comprehensive list of early Black Friday discounts across various categories, such as electronics, home goods, and fashion. The content may highlight notable deals from popular retailers and outline any significant savings or promotions that consumers can take advantage of ahead of the official shopping holiday. Additionally, the article could provide tips on how to navigate the sales effectively. However, it is uncertain whether the deals will be exclusive or available to a wider audience.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 758,
+  "candidate_news_id": "N24150",
+  "candidate_title": "Flight Attendants Have a Secret Language You Didn't Know About",
+  "user_history_count": 10,
+  "user_history": [
+    "Are Snow and Winter Tires Worth It?",
+    "Potential Florida State football coaching targets",
+    "P.J. Fleck signs extension with Minnesota amid USC, Florida State rumors",
+    "Opinion: Bob Stoops, Urban Meyer are out so Florida State, USC must manage search expectations",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+    "Nolan Ryan leaves advisory role, won't return as Astros shuffle front office",
+    "NFL coach has theory about why Trubisky is struggling",
+    "Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment",
+    "Report: Ex-Red Sox GM Ben Cherington a candidate for Pirates' head of baseball ops"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Are Snow and Winter Tires Worth It?\"\n\"Potential Florida State football coaching targets\"\n\"P.J. Fleck signs extension with Minnesota amid USC, Florida State rumors\"\n\"Opinion: Bob Stoops, Urban Meyer are out so Florida State, USC must manage search expectations\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Nolan Ryan leaves advisory role, won't return as Astros shuffle front office\"\n\"NFL coach has theory about why Trubisky is struggling\"\n\"Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment\"\n\"Report: Ex-Red Sox GM Ben Cherington a candidate for Pirates' head of baseball ops\"\n\n[Candidate News Title]\n\"Flight Attendants Have a Secret Language You Didn't Know About\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article \"Flight Attendants Have a Secret Language You Didn't Know About,\" you can expect to learn about the unique communication methods used by flight attendants, which may include specific jargon or signals employed to maintain efficiency and manage passenger interactions discreetly. The article is likely to provide insights into how this specialized language enhances teamwork and ensures safety during flights. Additionally, it might explore the cultural or operational significance of these communication techniques within the aviation industry, highlighting their practical applications in everyday scenarios.",
+  "model": "gpt-4o-mini"
+}

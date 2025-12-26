@@ -1,0 +1,19 @@
+{
+  "user_id": 563,
+  "candidate_news_id": "N95541",
+  "candidate_title": "Opinion: NFL should suspend Browns' Myles Garrett for rest of season   at minimum   for helmet swing",
+  "user_history_count": 8,
+  "user_history": [
+    "Deer fatally attacks hunter who shot him",
+    "Hundreds mourn slain girl at funeral in Alabama's major city",
+    "Bartender tipped with winning $50K lottery ticket",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Deer fatally attacks hunter who shot him\"\n\"Hundreds mourn slain girl at funeral in Alabama's major city\"\n\"Bartender tipped with winning $50K lottery ticket\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Opinion: NFL should suspend Browns' Myles Garrett for rest of season   at minimum   for helmet swing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Opinion: NFL should suspend Browns' Myles Garrett for rest of season at minimum for helmet swing,\" you can expect a discussion centered on the implications of Garrett's actions during a recent game. The article is likely to analyze the severity of the incident, including a breakdown of the on-field altercation and its consequences for player safety in the NFL. Additionally, it may explore opinions on disciplinary measures that the league should consider, reflecting on past cases of player suspensions and public reactions to similar incidents.",
+  "model": "gpt-4o-mini"
+}

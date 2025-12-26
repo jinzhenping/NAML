@@ -1,0 +1,21 @@
+{
+  "user_id": 367,
+  "candidate_news_id": "N30582",
+  "candidate_title": "Opinion: Baylor football back on top four years after sexual assault scandal rocked campus",
+  "user_history_count": 10,
+  "user_history": [
+    "19 Mysterious Old Home Features That Aren't Useful Anymore",
+    "The one restaurant you need to visit in every state",
+    "Missing West Point cadet found dead, officials say",
+    "2 helicopters collide in midair as pilots herd deer: FAA",
+    "The 1000-Horsepower Club",
+    "The Eeriest Small Towns in America",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "What this week's 5 biggest upsets mean for the NFL playoff picture",
+    "Additional details emerge surrounding Colin Kaepernick's NFL workout",
+    "A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"19 Mysterious Old Home Features That Aren't Useful Anymore\"\n\"The one restaurant you need to visit in every state\"\n\"Missing West Point cadet found dead, officials say\"\n\"2 helicopters collide in midair as pilots herd deer: FAA\"\n\"The 1000-Horsepower Club\"\n\"The Eeriest Small Towns in America\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"What this week's 5 biggest upsets mean for the NFL playoff picture\"\n\"Additional details emerge surrounding Colin Kaepernick's NFL workout\"\n\"A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000\"\n\n[Candidate News Title]\n\"Opinion: Baylor football back on top four years after sexual assault scandal rocked campus\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Opinion: Baylor football back on top four years after sexual assault scandal rocked campus\" is likely to discuss the recent resurgence of Baylor University's football program in the context of its past controversies. Readers may expect an analysis of how the team has managed to regain competitive status following the fallout from the sexual assault scandal that affected the campus. Additionally, the piece could explore the implications of this turnaround for the university's image and the community, as well as the perspectives of fans and stakeholders regarding the program's future.",
+  "model": "gpt-4o-mini"
+}

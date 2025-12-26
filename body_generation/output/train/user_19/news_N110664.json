@@ -1,0 +1,21 @@
+{
+  "user_id": 19,
+  "candidate_news_id": "N110664",
+  "candidate_title": "Davis' 26 send Lakers past Heat 95-80 for 7th straight win",
+  "user_history_count": 10,
+  "user_history": [
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Cubans were once privileged migrants to the United States. Now they're stuck at the border, like everyone else.",
+    "Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "Look of the day: Ashley Graham's latest sizzling maternity look & more celeb style",
+    "Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet",
+    "A controversial comedian and a former child star are eliminated on 'Masked Singer'",
+    "The first Ford Mustang owner kept the car. It's now worth $350,000",
+    "Trailer - The Photograph"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Cubans were once privileged migrants to the United States. Now they're stuck at the border, like everyone else.\"\n\"Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"Look of the day: Ashley Graham's latest sizzling maternity look & more celeb style\"\n\"Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet\"\n\"A controversial comedian and a former child star are eliminated on 'Masked Singer'\"\n\"The first Ford Mustang owner kept the car. It's now worth $350,000\"\n\"Trailer - The Photograph\"\n\n[Candidate News Title]\n\"Davis' 26 send Lakers past Heat 95-80 for 7th straight win\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely provides an overview of the recent game where the Los Angeles Lakers defeated the Miami Heat, emphasizing key moments and performances, particularly focusing on Anthony Davis's contribution to the team's success. Readers may expect to find a breakdown of the game statistics, including Davis's points and rebounds, as well as insights into the Lakers' overall strategy during their seventh consecutive win. Additionally, the article could explore how this victory impacts the team's standing in the league and what it might mean for the upcoming games.",
+  "model": "gpt-4o-mini"
+}

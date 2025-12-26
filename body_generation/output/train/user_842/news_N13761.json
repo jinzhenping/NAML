@@ -1,0 +1,17 @@
+{
+  "user_id": 842,
+  "candidate_news_id": "N13761",
+  "candidate_title": "Celebrity plastic surgery transformations",
+  "user_history_count": 6,
+  "user_history": [
+    "A Texas mom is going to prison after putting her son through unnecessary medical procedures",
+    "Hong Kong government withdraws bill that sparked protests",
+    "Will Teresa Giudice and Joe Giudice Get Divorced? 'I Don't See It Working,' She Says",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids",
+    "'You're not a serial killer, right?' victim text messaged man before she died"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A Texas mom is going to prison after putting her son through unnecessary medical procedures\"\n\"Hong Kong government withdraws bill that sparked protests\"\n\"Will Teresa Giudice and Joe Giudice Get Divorced? 'I Don't See It Working,' She Says\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids\"\n\"'You're not a serial killer, right?' victim text messaged man before she died\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Celebrity plastic surgery transformations\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Celebrity plastic surgery transformations\" likely explores various high-profile individuals who have undergone significant cosmetic procedures. Readers may expect to find a discussion on the reasons behind these transformations, including the pressures of public life and personal choices. The piece could detail specific cases, highlighting notable before-and-after images, and may touch on the societal implications of cosmetic surgery within celebrity culture. Additionally, it is likely to examine the evolving standards of beauty and how they influence public perception and personal identity in the entertainment industry.",
+  "model": "gpt-4o-mini"
+}

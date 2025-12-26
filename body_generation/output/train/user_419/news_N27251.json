@@ -1,0 +1,19 @@
+{
+  "user_id": 419,
+  "candidate_news_id": "N27251",
+  "candidate_title": "Evo Morales of Bolivia Accepts Asylum in Mexico",
+  "user_history_count": 8,
+  "user_history": [
+    "Dutch family found in cellar 'waiting for end of time'",
+    "Take a Hot Lap in the 2020 C8 Corvette",
+    "Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight",
+    "Failed operation underlines Mexico chaos",
+    "How Much Power Does the 2020 Chevrolet Corvette Really Make? We Take it to the Dyno and Find Out",
+    "Ex-All-Star slugger Josh Hamilton charged with child injury",
+    "A foster mom was arrested in an adoption scheme",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dutch family found in cellar 'waiting for end of time'\"\n\"Take a Hot Lap in the 2020 C8 Corvette\"\n\"Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight\"\n\"Failed operation underlines Mexico chaos\"\n\"How Much Power Does the 2020 Chevrolet Corvette Really Make? We Take it to the Dyno and Find Out\"\n\"Ex-All-Star slugger Josh Hamilton charged with child injury\"\n\"A foster mom was arrested in an adoption scheme\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Evo Morales of Bolivia Accepts Asylum in Mexico\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent decision by Evo Morales, the former president of Bolivia, to accept asylum in Mexico. It may outline the circumstances surrounding his departure from Bolivia, particularly the political turmoil that led to his resignation. Additionally, the piece could provide context regarding the implications of his asylum on Bolivia's political landscape and international relations, as well as potential reactions from various political factions within Bolivia. Overall, the article is expected to offer a factual account of the situation, though it may also speculate on the future of Morales's political ambitions and influence.",
+  "model": "gpt-4o-mini"
+}

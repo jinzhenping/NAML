@@ -1,0 +1,21 @@
+{
+  "user_id": 946,
+  "candidate_news_id": "N21018",
+  "candidate_title": "3 Indiana judges suspended after a night of drinking turned into a White Castle brawl",
+  "user_history_count": 10,
+  "user_history": [
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "'Craziest game I've ever been a part of'': Analysis from Seahawks' thrilling OT win over 49ers",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "No, referee did not get Geno Smith's coin toss call wrong",
+    "Petition To 'Bring Back' Don Cherry Gains Traction After Hockey Commentator Fired For Comments About Immigrants",
+    "Petition To 'Bring Back' Don Cherry Gains Traction After Hockey Commentator Fired For Comments About Immigrants",
+    "40 Restaurant Meals You Should Never Eat After 40",
+    "Cherry disappointed with MacLean's apology: 'He buried me'",
+    "Brian Cashman expresses interest in Madison Bumgarner",
+    "Panthers QB Cam Newton would reportedly welcome trade to Bears"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"'Craziest game I've ever been a part of'': Analysis from Seahawks' thrilling OT win over 49ers\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"No, referee did not get Geno Smith's coin toss call wrong\"\n\"Petition To 'Bring Back' Don Cherry Gains Traction After Hockey Commentator Fired For Comments About Immigrants\"\n\"Petition To 'Bring Back' Don Cherry Gains Traction After Hockey Commentator Fired For Comments About Immigrants\"\n\"40 Restaurant Meals You Should Never Eat After 40\"\n\"Cherry disappointed with MacLean's apology: 'He buried me'\"\n\"Brian Cashman expresses interest in Madison Bumgarner\"\n\"Panthers QB Cam Newton would reportedly welcome trade to Bears\"\n\n[Candidate News Title]\n\"3 Indiana judges suspended after a night of drinking turned into a White Castle brawl\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely details an incident involving three judges from Indiana who were suspended following a night of drinking that escalated into a brawl at a White Castle restaurant. Readers may expect to learn about the circumstances leading to the altercation, including any relevant background information on the judges involved and the implications of their suspension. The piece could also explore the reactions from the judicial community and the public regarding the behavior of these officials, raising questions about accountability and professional conduct in the legal system.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,20 @@
+{
+  "user_id": 856,
+  "candidate_news_id": "N31174",
+  "candidate_title": "Broadway Actress Laurel Griggs Dies at Age 13",
+  "user_history_count": 9,
+  "user_history": [
+    "Mad About You Star Helen Hunt Taken to Hospital After Car Is T-Boned and Rolls Over in Accident",
+    "Why it's so hard for planes to land on water",
+    "Why it's so hard for planes to land on water",
+    "11-month-old clinging to life after being shot four times in back seat of car",
+    "This restored 1968 Winnebago is beyond adorable",
+    "Iowa grandmother killed at gender reveal was 45 feet away from 'pipe bomb'; she died instantly, authorities say",
+    "Trailer - After the Wedding",
+    "Every Must-See Photo of Stars Celebrating Halloween 2019",
+    "Future Jeep Grand Cherokee, Wagoneer, Ram Plans On Track"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mad About You Star Helen Hunt Taken to Hospital After Car Is T-Boned and Rolls Over in Accident\"\n\"Why it's so hard for planes to land on water\"\n\"Why it's so hard for planes to land on water\"\n\"11-month-old clinging to life after being shot four times in back seat of car\"\n\"This restored 1968 Winnebago is beyond adorable\"\n\"Iowa grandmother killed at gender reveal was 45 feet away from 'pipe bomb'; she died instantly, authorities say\"\n\"Trailer - After the Wedding\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"Future Jeep Grand Cherokee, Wagoneer, Ram Plans On Track\"\n\"\"\n\n[Candidate News Title]\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Broadway Actress Laurel Griggs Dies at Age 13\" is likely to provide information about the young actress's life, including her notable performances and contributions to the theater community. It may detail the circumstances surrounding her passing, as well as reactions from family, friends, and fans. Additionally, the article could discuss her rising career in Broadway, highlighting any significant roles she played and the impact she had on those around her. Overall, readers can expect a factual account of her achievements and the response to her untimely death.",
+  "model": "gpt-4o-mini"
+}

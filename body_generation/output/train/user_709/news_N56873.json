@@ -1,0 +1,21 @@
+{
+  "user_id": 709,
+  "candidate_news_id": "N56873",
+  "candidate_title": "Can you answer these real Jeopardy questions about TV shows?",
+  "user_history_count": 10,
+  "user_history": [
+    "Anthony Davis MRI on thumb comes back clean",
+    "Atatiana Jefferson had moved in with her mom to take care of her. Police shot her through a bedroom window",
+    "Off to the World Series, these Nationals have proved everyone wrong",
+    "Zion, 8, saw his aunt Atatiana Jefferson get shot. Family is trying to help him cope",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "Chrissy Teigen Gushes Over John Legend After He Misses His Flight to be With Her",
+    "Shaquille O'Neal's sister has died of cancer",
+    "MLB bans women who flashed their chests behind home plate during Game 5 of World Series",
+    "Queen Elizabeth and Michelle Obama Shared 'Instant, Mutual Warmth' When They Broke Royal Protocol",
+    "Hannah Brown Reflects on \"Really Defeating\" Dancing With the Stars Experience in Candid Post"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Anthony Davis MRI on thumb comes back clean\"\n\"Atatiana Jefferson had moved in with her mom to take care of her. Police shot her through a bedroom window\"\n\"Off to the World Series, these Nationals have proved everyone wrong\"\n\"Zion, 8, saw his aunt Atatiana Jefferson get shot. Family is trying to help him cope\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"Chrissy Teigen Gushes Over John Legend After He Misses His Flight to be With Her\"\n\"Shaquille O'Neal's sister has died of cancer\"\n\"MLB bans women who flashed their chests behind home plate during Game 5 of World Series\"\n\"Queen Elizabeth and Michelle Obama Shared 'Instant, Mutual Warmth' When They Broke Royal Protocol\"\n\"Hannah Brown Reflects on \"Really Defeating\" Dancing With the Stars Experience in Candid Post\"\n\n[Candidate News Title]\n\"Can you answer these real Jeopardy questions about TV shows?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Can you answer these real Jeopardy questions about TV shows?\", you may expect a quiz-style format that tests your knowledge of various television series featured in the popular game show Jeopardy. The content is likely to present a selection of actual Jeopardy questions, possibly categorized by difficulty or related themes, inviting readers to engage interactively. Additionally, the article could provide some context or trivia about the shows included, enhancing the overall experience for fans of television and game shows alike.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 504,
+  "candidate_news_id": "N40645",
+  "candidate_title": "Hockey legend Bobby Orr calls firing of analyst Don Cherry disgraceful",
+  "user_history_count": 10,
+  "user_history": [
+    "Even in NBA's 3-point heavy small-ball era, here's how some teams are still finding success by going big",
+    "Parent of Sears, Kmart laying off hundreds at Hoffman Estates headquarters",
+    "Nets star LeVert undergoes surgery, to miss several weeks",
+    "American woman apparently strangled in the Dominican Republic",
+    "Mayor Lightfoot Tries To Walk Back Claim Of $54 Million Uber 'Payoff' To Black Ministers; 'They're Trying To Divide And Conquer'",
+    "Browns cut WR Antonio Callaway hours before kickoff amid reported substance-abuse ban",
+    "The Warriors' big D'Angelo Russell conundrum",
+    "Richard Sherman tells NFL players to save their money and prepare for a strike",
+    "Aaron Carter admitted to Florida hospital",
+    "I Took Out A $20,000 Loan To Get Married... To Myself"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Even in NBA's 3-point heavy small-ball era, here's how some teams are still finding success by going big\"\n\"Parent of Sears, Kmart laying off hundreds at Hoffman Estates headquarters\"\n\"Nets star LeVert undergoes surgery, to miss several weeks\"\n\"American woman apparently strangled in the Dominican Republic\"\n\"Mayor Lightfoot Tries To Walk Back Claim Of $54 Million Uber 'Payoff' To Black Ministers; 'They're Trying To Divide And Conquer'\"\n\"Browns cut WR Antonio Callaway hours before kickoff amid reported substance-abuse ban\"\n\"The Warriors' big D'Angelo Russell conundrum\"\n\"Richard Sherman tells NFL players to save their money and prepare for a strike\"\n\"Aaron Carter admitted to Florida hospital\"\n\"I Took Out A $20,000 Loan To Get Married... To Myself\"\n\n[Candidate News Title]\n\"Hockey legend Bobby Orr calls firing of analyst Don Cherry disgraceful\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article about Bobby Orr's comments on the firing of Don Cherry, you may expect a detailed examination of the situation surrounding Cherry's dismissal, including Orr's perspective on the decision. The article is likely to provide context about Cherry's history as a hockey analyst and his controversial remarks that led to his firing. Additionally, it may explore broader themes related to sports commentary, the responsibilities of analysts, and the implications of such firings on the sports community. This analysis could shed light on differing viewpoints within hockey culture regarding free speech and accountability.",
+  "model": "gpt-4o-mini"
+}

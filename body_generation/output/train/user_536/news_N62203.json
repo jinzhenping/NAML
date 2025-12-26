@@ -1,0 +1,20 @@
+{
+  "user_id": 536,
+  "candidate_news_id": "N62203",
+  "candidate_title": "Stephen Curry calls out Michael Jordan for being a 'hater'",
+  "user_history_count": 9,
+  "user_history": [
+    "Elton John calls Michael Jackson 'mentally ill,' Tina Turner a 'nightmare' in new book",
+    "Democrats grapple with impeachment timing as evidence piles up",
+    "Trump's visit to Chicago creates stir before he even arrives",
+    "Queen Elizabeth and Michelle Obama Shared 'Instant, Mutual Warmth' When They Broke Royal Protocol",
+    "White House releases photo of Trump, advisers monitoring al-Baghdadi raid in Situation Room",
+    "Analysis: Trump's Presidency on Treacherous New Ground After House Vote",
+    "House Votes To Move Impeachment Inquiry To Public Hearings",
+    "Trump Taxes: Appeals Court Rules President Must Turn Over 8 Years of Tax Returns",
+    "Clippers set bad precedent resting Kawhi Leonard against Bucks"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Elton John calls Michael Jackson 'mentally ill,' Tina Turner a 'nightmare' in new book\"\n\"Democrats grapple with impeachment timing as evidence piles up\"\n\"Trump's visit to Chicago creates stir before he even arrives\"\n\"Queen Elizabeth and Michelle Obama Shared 'Instant, Mutual Warmth' When They Broke Royal Protocol\"\n\"White House releases photo of Trump, advisers monitoring al-Baghdadi raid in Situation Room\"\n\"Analysis: Trump's Presidency on Treacherous New Ground After House Vote\"\n\"House Votes To Move Impeachment Inquiry To Public Hearings\"\n\"Trump Taxes: Appeals Court Rules President Must Turn Over 8 Years of Tax Returns\"\n\"Clippers set bad precedent resting Kawhi Leonard against Bucks\"\n\"\"\n\n[Candidate News Title]\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Stephen Curry calls out Michael Jordan for being a 'hater',\" the user is likely to expect a discussion on Curry's recent comments regarding Jordan, particularly in the context of their respective legacies in basketball. The piece may explore the dynamics between the two players, including any specific incidents or remarks that led to Curry's critique. Additionally, it could provide insights into how this exchange reflects broader conversations about player rivalries and respect within the NBA. Overall, the article is likely to shed light on the implications of such statements in the sports community.",
+  "model": "gpt-4o-mini"
+}

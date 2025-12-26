@@ -1,0 +1,21 @@
+{
+  "user_id": 575,
+  "candidate_news_id": "N98362",
+  "candidate_title": "New buzz on possibility of Major League Soccer in Charlotte",
+  "user_history_count": 10,
+  "user_history": [
+    "One family built Forever 21 and fueled its collapse",
+    "100 famous NFL players who played for teams you forgot about",
+    "Curry breaks left hand in another embarrassing Warriors loss",
+    "Devonte Graham's 'significant jump' has Hornets reassessing just how good he can be",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Shia LaBeouf Spoke to His Dad for the First Time in 7 Years After Court-Mandated 'Head Camp'",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations",
+    "The 2019 NFL mid-season All-Pro team"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"One family built Forever 21 and fueled its collapse\"\n\"100 famous NFL players who played for teams you forgot about\"\n\"Curry breaks left hand in another embarrassing Warriors loss\"\n\"Devonte Graham's 'significant jump' has Hornets reassessing just how good he can be\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Shia LaBeouf Spoke to His Dad for the First Time in 7 Years After Court-Mandated 'Head Camp'\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations\"\n\"The 2019 NFL mid-season All-Pro team\"\n\n[Candidate News Title]\n\"New buzz on possibility of Major League Soccer in Charlotte\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"New buzz on possibility of Major League Soccer in Charlotte\" is likely to discuss the recent developments regarding the potential establishment of a Major League Soccer (MLS) team in Charlotte. It may provide insights into the motivations behind this interest, such as the city's growing population and sports culture. Additionally, the article could cover local reactions and statements from officials or sports figures supporting the initiative. There may be speculation about how a new MLS team could impact the local economy and sports landscape, although the details surrounding any official announcements remain uncertain.",
+  "model": "gpt-4o-mini"
+}

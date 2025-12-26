@@ -1,0 +1,21 @@
+{
+  "user_id": 344,
+  "candidate_news_id": "N123209",
+  "candidate_title": "Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions",
+  "user_history_count": 10,
+  "user_history": [
+    "The bucket-list attraction in every state",
+    "7 ways to save serious cash on holiday travel",
+    "The 13 Most Fun-to-Drive SUVs Under $50,000",
+    "The best time to visit Iceland and 49 other top travel destinations",
+    "Heading to Disney World For Christmas? You Won't Want to Miss These 4 New Attractions",
+    "Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka",
+    "These five mistakes could blow your holiday travel budget",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Man who inherited 6 figures shares advice he'd give his younger self",
+    "Unexpected Signs of an Unhealthy Heart"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The bucket-list attraction in every state\"\n\"7 ways to save serious cash on holiday travel\"\n\"The 13 Most Fun-to-Drive SUVs Under $50,000\"\n\"The best time to visit Iceland and 49 other top travel destinations\"\n\"Heading to Disney World For Christmas? You Won't Want to Miss These 4 New Attractions\"\n\"Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka\"\n\"These five mistakes could blow your holiday travel budget\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Unexpected Signs of an Unhealthy Heart\"\n\n[Candidate News Title]\n\"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent apologies made by Survivor contestants Missy Byrd and Elizabeth Beisel, possibly addressing their actions during the show that sparked controversy. Readers can expect an overview of the specific incidents that led to their apologies, as well as insights into the contestants' reasoning and the impact of their actions on the show's audience and community. Additionally, the article may explore public reactions and the broader implications for reality television ethics.",
+  "model": "gpt-4o-mini"
+}

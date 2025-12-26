@@ -1,0 +1,21 @@
+{
+  "user_id": 112,
+  "candidate_news_id": "N50175",
+  "candidate_title": "Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Every touchdown from every game in Week 9",
+    "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+    "Greg Norman upset Tiger Woods didn't respond to his handwritten letter: \"Maybe Tiger just dislikes me\"",
+    "Trump Taxes: Appeals Court Rules President Must Turn Over 8 Years of Tax Returns",
+    "Bannon says Stone was Trump campaign link to WikiLeaks",
+    "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Adele Lost 20 Pounds with Pilates and Cardio After Splitting From Simon Konecki"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Every touchdown from every game in Week 9\"\n\"Severe weather shifts boat stuck on Niagara Falls rocks for 101 years\"\n\"Greg Norman upset Tiger Woods didn't respond to his handwritten letter: \"Maybe Tiger just dislikes me\"\"\n\"Trump Taxes: Appeals Court Rules President Must Turn Over 8 Years of Tax Returns\"\n\"Bannon says Stone was Trump campaign link to WikiLeaks\"\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Adele Lost 20 Pounds with Pilates and Cardio After Splitting From Simon Konecki\"\n\n[Candidate News Title]\n\"Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find details about Demi Lovato's new romantic relationship, including potential insights into her boyfriend's identity and how their relationship is developing. The piece may also cover recent events in celebrity love lives, offering a broader context of notable relationships and breakups among other stars. Additionally, it could provide commentary on how these developments reflect current trends in celebrity culture. Overall, the user might expect a blend of personal updates and general celebrity news, though the specific dynamics of Lovato's relationship remain uncertain.",
+  "model": "gpt-4o-mini"
+}

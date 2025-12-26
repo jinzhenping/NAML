@@ -1,0 +1,21 @@
+{
+  "user_id": 328,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage",
+    "'Just the sweetest guy': Deputy fatally wounded by active shooter in his neighborhood in 2004 remembered",
+    "Fox legal analyst Napolitano emerges as Trump critic",
+    "Why You Should Go to New Orleans This Winter",
+    "Senior Trump official embellished résumé, had face on fake Time cover",
+    "Americans now have a record $14 trillion in debt",
+    "Stand-in president 'brings back Bible' to Bolivian politics",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "This is what the trade war looks like in bourbon country"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage\"\n\"'Just the sweetest guy': Deputy fatally wounded by active shooter in his neighborhood in 2004 remembered\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"Why You Should Go to New Orleans This Winter\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"Americans now have a record $14 trillion in debt\"\n\"Stand-in president 'brings back Bible' to Bolivian politics\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"This is what the trade war looks like in bourbon country\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely explores a recent, discreet meeting between Meghan Markle and Hillary Clinton at Frogmore Cottage, shedding light on their discussions and potential collaborations. Readers may expect insights into the nature of their relationship, particularly in light of their public personas and advocacy work. The piece could also touch on the broader implications of their meeting, including how it reflects current political and social themes, though the specifics of their conversation remain uncertain. Overall, the article is expected to provide a detailed account of this noteworthy encounter.",
+  "model": "gpt-4o-mini"
+}

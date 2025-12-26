@@ -1,0 +1,21 @@
+{
+  "user_id": 837,
+  "candidate_news_id": "N12586",
+  "candidate_title": "Popeyes Has Blessed Us With A Boozy Pie To Pair With Its Returned Chicken Sandwich",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Nearly 500 Prisoners Freed on a Single Day",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Holocaust survivor under guard amid death threats",
+    "Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?",
+    "Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years",
+    "Harry Potter's Childhood Home in England Is Now on Airbnb",
+    "Five Cheese Board Recipes For Every College Experience",
+    "From beards to bricks, history's strangest taxes",
+    "How to Split an Apple in Half With Your Bare Hands"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Nearly 500 Prisoners Freed on a Single Day\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Holocaust survivor under guard amid death threats\"\n\"Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?\"\n\"Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years\"\n\"Harry Potter's Childhood Home in England Is Now on Airbnb\"\n\"Five Cheese Board Recipes For Every College Experience\"\n\"From beards to bricks, history's strangest taxes\"\n\"How to Split an Apple in Half With Your Bare Hands\"\n\n[Candidate News Title]\n\"Popeyes Has Blessed Us With A Boozy Pie To Pair With Its Returned Chicken Sandwich\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to learn about Popeyes' introduction of a new boozy pie that is designed to complement its popular chicken sandwich, which has recently made a return to the menu. The piece is likely to detail the flavor profile of the pie, how it fits into Popeyes' overall menu strategy, and any promotional events surrounding the launch. Additionally, it may explore the growing trend of incorporating alcoholic beverages into food items, which could be a point of interest for readers looking to understand current culinary innovations.",
+  "model": "gpt-4o-mini"
+}

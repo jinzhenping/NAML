@@ -1,0 +1,21 @@
+{
+  "user_id": 2,
+  "candidate_news_id": "N58641",
+  "candidate_title": "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say",
+  "user_history_count": 10,
+  "user_history": [
+    "30 Foods That Are Never Worth The Calories",
+    "Nashville's top 3 food stands to visit now",
+    "9 Vegetables You Shouldn't Eat Raw",
+    "The #1 Worst Menu Option at 76 Popular Restaurants",
+    "Duluth Trading Co. makes Tennessee debut with Franklin location",
+    "Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say",
+    "Mystery surrounds the last person missing from Camp Fire that left 85 dead in California",
+    "Nike hit with another damning op-ed: 'I was emotionally and physically abused'",
+    "Brazilian journalist assaults Glenn Greenwald on air",
+    "The 2019 NFL mid-season All-Pro team"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"30 Foods That Are Never Worth The Calories\"\n\"Nashville's top 3 food stands to visit now\"\n\"9 Vegetables You Shouldn't Eat Raw\"\n\"The #1 Worst Menu Option at 76 Popular Restaurants\"\n\"Duluth Trading Co. makes Tennessee debut with Franklin location\"\n\"Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say\"\n\"Mystery surrounds the last person missing from Camp Fire that left 85 dead in California\"\n\"Nike hit with another damning op-ed: 'I was emotionally and physically abused'\"\n\"Brazilian journalist assaults Glenn Greenwald on air\"\n\"The 2019 NFL mid-season All-Pro team\"\n\n[Candidate News Title]\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\" is likely to provide an update on the investigation surrounding a Marine connected to a homicide case in Virginia. Readers can expect details about the discovery of the vehicle, including its condition and location, as well as insights into how this finding may impact the ongoing investigation. Additionally, the article may explore the broader context of the case, such as the circumstances of the slaying and any potential leads that law enforcement is pursuing.",
+  "model": "gpt-4o-mini"
+}

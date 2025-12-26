@@ -1,0 +1,21 @@
+{
+  "user_id": 571,
+  "candidate_news_id": "N35304",
+  "candidate_title": "Raise Billions From Billionaires? Tax Experts Say It's Not That Simple",
+  "user_history_count": 10,
+  "user_history": [
+    "Road built by biblical villain uncovered in Jerusalem",
+    "The most notable celebrity deaths of the decade",
+    "The world's largest nuclear power producer is melting down",
+    "Tom Brady explains why he's angry at this point in the football season",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers",
+    "Signs of Dementia: 8 Tips For Talking to Your Older Parents",
+    "The 50 cheapest places to buy land in America",
+    "How To Make Baked Salt & Vinegar Smashed Potatoes By Gail Simmons"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"The most notable celebrity deaths of the decade\"\n\"The world's largest nuclear power producer is melting down\"\n\"Tom Brady explains why he's angry at this point in the football season\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers\"\n\"Signs of Dementia: 8 Tips For Talking to Your Older Parents\"\n\"The 50 cheapest places to buy land in America\"\n\"How To Make Baked Salt & Vinegar Smashed Potatoes By Gail Simmons\"\n\n[Candidate News Title]\n\"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple,\" the user is likely to encounter a detailed examination of the complexities surrounding taxation of wealthy individuals. The piece may explore various proposed strategies for generating revenue from billionaires, discussing the potential benefits and challenges of such approaches. Additionally, it could provide insights from tax experts on the implications of these proposals for economic equity and public funding. The article is expected to clarify that while the idea of taxing billionaires seems straightforward, the realities of implementation may be far more intricate.",
+  "model": "gpt-4o-mini"
+}

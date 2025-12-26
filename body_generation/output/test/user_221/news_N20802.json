@@ -1,0 +1,21 @@
+{
+  "user_id": 221,
+  "candidate_news_id": "N20802",
+  "candidate_title": "Trump asks Supreme Court to shield his tax returns from prosecutors, setting up historic separation-of-powers showdown",
+  "user_history_count": 10,
+  "user_history": [
+    "Iran announces sharp rise in enriched uranium production",
+    "I was a passport to this man: Child marriage loopholes persist in U.S.",
+    "Pirates kidnap nine crew members from cargo ship off coast of Benin",
+    "Buffett has $128 billion in cash, and analysts can't figure out why he isn't spending it",
+    "Kim Kardashian, Kanye West are adding a farm to their estate: Report",
+    "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "2020 Ford Mustang Shelby GT350 vs. GT500: Which Is the Better Sports Car?",
+    "Can you answer these real Jeopardy questions about TV shows?",
+    "Family told to take down Christmas display because it's too soon to decorate"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Iran announces sharp rise in enriched uranium production\"\n\"I was a passport to this man: Child marriage loopholes persist in U.S.\"\n\"Pirates kidnap nine crew members from cargo ship off coast of Benin\"\n\"Buffett has $128 billion in cash, and analysts can't figure out why he isn't spending it\"\n\"Kim Kardashian, Kanye West are adding a farm to their estate: Report\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"2020 Ford Mustang Shelby GT350 vs. GT500: Which Is the Better Sports Car?\"\n\"Can you answer these real Jeopardy questions about TV shows?\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\n[Candidate News Title]\n\"Trump asks Supreme Court to shield his tax returns from prosecutors, setting up historic separation-of-powers showdown\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses former President Donald Trump's recent legal maneuver to request that the Supreme Court prevent the release of his tax returns to prosecutors. It may delve into the implications of this request for the ongoing legal proceedings and the potential conflict it raises regarding the separation of powers between the executive branch and the judiciary. Additionally, the piece could explore the historical context of similar cases and the possible outcomes of this unprecedented legal challenge. Overall, readers might expect a detailed analysis of the political and legal ramifications of Trump's actions.",
+  "model": "gpt-4o-mini"
+}

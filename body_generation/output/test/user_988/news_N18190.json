@@ -1,0 +1,21 @@
+{
+  "user_id": 988,
+  "candidate_news_id": "N18190",
+  "candidate_title": "30 Best Black Friday Deals from Costco",
+  "user_history_count": 10,
+  "user_history": [
+    "How Russia Meddles Abroad for Profit: Cash, Trolls and a Cult Leader",
+    "Gabbard Lawyers Demand Clinton Retract 'Defamatory' Russian Asset Comments",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "Unexpected Signs of an Unhealthy Heart",
+    "Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast",
+    "Three school workers charged in death of special needs student",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"How Russia Meddles Abroad for Profit: Cash, Trolls and a Cult Leader\"\n\"Gabbard Lawyers Demand Clinton Retract 'Defamatory' Russian Asset Comments\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"Unexpected Signs of an Unhealthy Heart\"\n\"Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast\"\n\"Three school workers charged in death of special needs student\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\n[Candidate News Title]\n\"30 Best Black Friday Deals from Costco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"30 Best Black Friday Deals from Costco,\" the user is likely to find a detailed overview of the most significant discounts and special offers available at Costco during the Black Friday shopping event. It may outline various categories, including electronics, home goods, and groceries, providing insights into the best value purchases. Additionally, the article could highlight tips for navigating the store efficiently or suggest specific items that are historically popular during this sale. Overall, it aims to assist readers in making informed choices for their holiday shopping.",
+  "model": "gpt-4o-mini"
+}

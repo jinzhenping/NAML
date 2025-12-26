@@ -1,0 +1,21 @@
+{
+  "user_id": 871,
+  "candidate_news_id": "N46894",
+  "candidate_title": "How much turkey do you need to buy per person?",
+  "user_history_count": 10,
+  "user_history": [
+    "Which NFL teams will rise, fall in second half of season?",
+    "John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet",
+    "Christina Anstead shares new pic of son Hudson at 2 months old",
+    "Meghan McCain GOES IN on Donald Trump Jr. on 'The View'",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'",
+    "Burning questions for CFB's biggest Week 11 games",
+    "Joe Giudice Calls His Family 'Italian Strong' During Reunion with Wife Teresa and Their Daughters",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'",
+    "Teresa Giudice Opens Up About Her Future With Husband Joe and the Cheating Rumors (Exclusive)"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Which NFL teams will rise, fall in second half of season?\"\n\"John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"Meghan McCain GOES IN on Donald Trump Jr. on 'The View'\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\"Burning questions for CFB's biggest Week 11 games\"\n\"Joe Giudice Calls His Family 'Italian Strong' During Reunion with Wife Teresa and Their Daughters\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'\"\n\"Teresa Giudice Opens Up About Her Future With Husband Joe and the Cheating Rumors (Exclusive)\"\n\n[Candidate News Title]\n\"How much turkey do you need to buy per person?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"How much turkey do you need to buy per person?\", you can expect to find a detailed guide that outlines the recommended quantity of turkey to purchase based on various factors such as the number of guests and their appetites. The article is likely to provide general guidelines, perhaps suggesting a specific weight per person, while also considering different contexts like whether the turkey will be the main dish or part of a larger spread. Additionally, it may offer tips on how to account for leftovers and variations for different age groups, ensuring that all your holiday meal planning needs are addressed.",
+  "model": "gpt-4o-mini"
+}

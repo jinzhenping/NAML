@@ -1,0 +1,21 @@
+{
+  "user_id": 522,
+  "candidate_news_id": "N86352",
+  "candidate_title": "I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)",
+  "user_history_count": 10,
+  "user_history": [
+    "Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says",
+    "Catherine Deneuve Hospitalized After Mild Stroke",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "The best & worst states for US veterans",
+    "'Prepare to die' Trump adviser Stone texted witness, trial jury hears",
+    "Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says\"\n\"Catherine Deneuve Hospitalized After Mild Stroke\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"The best & worst states for US veterans\"\n\"'Prepare to die' Trump adviser Stone texted witness, trial jury hears\"\n\"Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news\"\n\n[Candidate News Title]\n\"I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!),\" you are likely expecting to read about a simple and effective strategy for managing overeating during meals. The article may detail a specific practice or routine that can be implemented on Sundays to help regulate eating habits throughout the week. You might find practical tips or personal anecdotes that illustrate how this approach can lead to healthier eating patterns and possibly weight management. Overall, the focus is likely on providing a straightforward solution to a common dietary challenge.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 537,
+  "candidate_news_id": "N57319",
+  "candidate_title": "2 White House officials say Mulvaney helped coordinate Ukraine pressure campaign",
+  "user_history_count": 10,
+  "user_history": [
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Democrats vow not to delay impeachment probe as witnesses ignore subpoenas",
+    "Rep. Ilhan Omar Divorces Husband Ahmed Hirsi",
+    "Boris Johnson accused of 'suppressing' Russia report until after UK election",
+    "Grading all 32 NFL teams heading into the last eight weeks of the 2019 season",
+    "Washed? After third straight triple-double LeBron James sends message to haters",
+    "Facing Investigation, Giuliani Needed a Lawyer, but Firms Stayed Away",
+    "Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings",
+    "Bannon says Stone was Trump campaign link to WikiLeaks",
+    "Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Democrats vow not to delay impeachment probe as witnesses ignore subpoenas\"\n\"Rep. Ilhan Omar Divorces Husband Ahmed Hirsi\"\n\"Boris Johnson accused of 'suppressing' Russia report until after UK election\"\n\"Grading all 32 NFL teams heading into the last eight weeks of the 2019 season\"\n\"Washed? After third straight triple-double LeBron James sends message to haters\"\n\"Facing Investigation, Giuliani Needed a Lawyer, but Firms Stayed Away\"\n\"Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings\"\n\"Bannon says Stone was Trump campaign link to WikiLeaks\"\n\"Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says\"\n\n[Candidate News Title]\n\"2 White House officials say Mulvaney helped coordinate Ukraine pressure campaign\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the involvement of White House officials in coordinating the Ukraine pressure campaign is likely to provide insights into the role of Mick Mulvaney and other officials in the events leading up to the impeachment inquiry. Readers may expect a detailed account of how these officials allegedly facilitated communication or actions related to Ukraine, potentially shedding light on the broader implications for the Trump administration. It could also explore the political ramifications of these actions, though the specifics of their involvement may not be fully confirmed.",
+  "model": "gpt-4o-mini"
+}

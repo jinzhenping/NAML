@@ -1,0 +1,21 @@
+{
+  "user_id": 986,
+  "candidate_news_id": "N7869",
+  "candidate_title": "Morris Commercial Introduces Sentimental Electric Morris JE Van",
+  "user_history_count": 10,
+  "user_history": [
+    "Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car",
+    "Mountain skeleton may be man from Japanese internment camp",
+    "My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder",
+    "Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update",
+    "Georgia governor unveils Medicaid plan with work requirement",
+    "Tom Brady explains why he's angry at this point in the football season",
+    "2020 Performance Car of the Year",
+    "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "In speech, Bolton suggested Trump's policy decisions guided by personal interest"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car\"\n\"Mountain skeleton may be man from Japanese internment camp\"\n\"My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder\"\n\"Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update\"\n\"Georgia governor unveils Medicaid plan with work requirement\"\n\"Tom Brady explains why he's angry at this point in the football season\"\n\"2020 Performance Car of the Year\"\n\"Severe weather shifts boat stuck on Niagara Falls rocks for 101 years\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"In speech, Bolton suggested Trump's policy decisions guided by personal interest\"\n\n[Candidate News Title]\n\"Morris Commercial Introduces Sentimental Electric Morris JE Van\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the introduction of the Morris JE Van, an electric vehicle that may appeal to those interested in sustainable transportation solutions. It could provide details about the van's design, features, and intended market, as well as insights into Morris Commercial's vision for the future of electric vans. Additionally, the piece might explore the growing trend of electric commercial vehicles and how this model fits within that context. Overall, it is expected to present a factual overview of the vehicle's significance in the automotive landscape.",
+  "model": "gpt-4o-mini"
+}

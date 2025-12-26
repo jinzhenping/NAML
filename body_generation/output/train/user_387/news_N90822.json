@@ -1,0 +1,21 @@
+{
+  "user_id": 387,
+  "candidate_news_id": "N90822",
+  "candidate_title": "Inside Pirelli's Massive Formula One Tire Operation",
+  "user_history_count": 10,
+  "user_history": [
+    "California authorities found and destroyed $1 billion worth of marijuana plants",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "1 Dead After Car Veers Off 605 Freeway, Lands In Riverbed",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "China's trade with US shrinks in October despite optimism"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"California authorities found and destroyed $1 billion worth of marijuana plants\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"1 Dead After Car Veers Off 605 Freeway, Lands In Riverbed\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"China's trade with US shrinks in October despite optimism\"\n\n[Candidate News Title]\n\"Inside Pirelli's Massive Formula One Tire Operation\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Inside Pirelli's Massive Formula One Tire Operation,\" you can expect a detailed overview of how Pirelli produces tires specifically designed for Formula One racing. The article is likely to explore the intricate processes involved in tire manufacturing, including material selection and technological innovations that enhance performance on the track. Additionally, it may provide insights into the logistics of tire distribution and how the company collaborates with teams to meet their unique requirements. Overall, the piece could offer a fascinating glimpse into the role of tire technology in motorsport.",
+  "model": "gpt-4o-mini"
+}

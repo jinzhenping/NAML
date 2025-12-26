@@ -1,0 +1,21 @@
+{
+  "user_id": 782,
+  "candidate_news_id": "N5769",
+  "candidate_title": "Former U.S. top diplomat Rice concerned by shadow diplomacy on Ukraine",
+  "user_history_count": 10,
+  "user_history": [
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Far-reaching snowstorm may take shape over US",
+    "In Virginia, progressive Democrats say Green New Deal helped turn statehouse blue",
+    "Trump apparently wanted Ukraine to investigate Hillary Clinton in addition to the Bidens: State Department official",
+    "Two versions of Texas collide over gun measures and mass shootings",
+    "Bannon says Stone was Trump campaign link to WikiLeaks",
+    "Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment",
+    "Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says",
+    "Trump Courts 2020 Black Vote Betting Job Gains Draw Support",
+    "Precious metals get crushed as end-of-the-world trade implodes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Far-reaching snowstorm may take shape over US\"\n\"In Virginia, progressive Democrats say Green New Deal helped turn statehouse blue\"\n\"Trump apparently wanted Ukraine to investigate Hillary Clinton in addition to the Bidens: State Department official\"\n\"Two versions of Texas collide over gun measures and mass shootings\"\n\"Bannon says Stone was Trump campaign link to WikiLeaks\"\n\"Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment\"\n\"Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says\"\n\"Trump Courts 2020 Black Vote Betting Job Gains Draw Support\"\n\"Precious metals get crushed as end-of-the-world trade implodes\"\n\n[Candidate News Title]\n\"Former U.S. top diplomat Rice concerned by shadow diplomacy on Ukraine\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Former U.S. top diplomat Rice concerned by shadow diplomacy on Ukraine\" is likely to explore the implications of unofficial diplomatic activities surrounding the Ukraine situation. Readers may expect insights from Condoleezza Rice on how such shadow diplomacy could impact U.S. foreign policy and international relations. The piece may also address concerns about transparency and the potential consequences of these actions on diplomatic norms. Overall, it is likely to provide a nuanced analysis of the complexities involved in managing diplomatic relations in a volatile geopolitical landscape.",
+  "model": "gpt-4o-mini"
+}

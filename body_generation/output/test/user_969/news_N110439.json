@@ -1,0 +1,21 @@
+{
+  "user_id": 969,
+  "candidate_news_id": "N110439",
+  "candidate_title": "Southwest's Spring Travel Sale Includes $39 One-way Tickets",
+  "user_history_count": 10,
+  "user_history": [
+    "Porsche-Designed Superyacht Is a 135-Foot-Long Spaceship on Water",
+    "AP Top 25: Navy gives AAC 4 teams, 3rd-most by conference",
+    "Patriots wanted a test. Now, they need some answers",
+    "Michigan Lawmakers Introduce Legislation To Pay College Athletes",
+    "Next Ford F-150 Spied By Motor1.com Reader",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "As L.A. ports automate, some workers are cheering on the robots",
+    "Next Ford F-150 Spied By Motor1.com Reader"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Porsche-Designed Superyacht Is a 135-Foot-Long Spaceship on Water\"\n\"AP Top 25: Navy gives AAC 4 teams, 3rd-most by conference\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Michigan Lawmakers Introduce Legislation To Pay College Athletes\"\n\"Next Ford F-150 Spied By Motor1.com Reader\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"As L.A. ports automate, some workers are cheering on the robots\"\n\"Next Ford F-150 Spied By Motor1.com Reader\"\n\n[Candidate News Title]\n\"Southwest's Spring Travel Sale Includes $39 One-way Tickets\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Southwest's Spring Travel Sale Includes $39 One-way Tickets,\" they are likely expecting to find information about Southwest Airlines’ seasonal promotion that offers discounted flights. The article may detail the specific routes available at this price, the duration of the sale, and any terms or conditions that apply to the tickets. Additionally, it could provide insights into how these fares compare to regular prices and tips for booking, helping travelers make informed decisions about their spring travel plans.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 155,
+  "candidate_news_id": "N18478",
+  "candidate_title": "LSU, Ohio State, and Clemson control path to College Football Playoff, but who else does too?",
+  "user_history_count": 10,
+  "user_history": [
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Judge in Purdue Pharma bankruptcy case extends lawsuit protection to Sacklers",
+    "Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.",
+    "Gregg Jarrett: Whistleblower not entitled to anonymity   He's an informant acting as a Democratic operative",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "I Took the 30-Day Squat Challenge and Here's What Happened",
+    "Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'",
+    "Bogus Warren Quote Ignites Immigration Anger",
+    "Republicans urge Bevin to provide proof of election fraud or concede",
+    "One Mom's Unedited Maternity Shots Are Showing The World How Beautiful Real Can Be"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Judge in Purdue Pharma bankruptcy case extends lawsuit protection to Sacklers\"\n\"Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.\"\n\"Gregg Jarrett: Whistleblower not entitled to anonymity   He's an informant acting as a Democratic operative\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"I Took the 30-Day Squat Challenge and Here's What Happened\"\n\"Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'\"\n\"Bogus Warren Quote Ignites Immigration Anger\"\n\"Republicans urge Bevin to provide proof of election fraud or concede\"\n\"One Mom's Unedited Maternity Shots Are Showing The World How Beautiful Real Can Be\"\n\n[Candidate News Title]\n\"LSU, Ohio State, and Clemson control path to College Football Playoff, but who else does too?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide an analysis of the current landscape of college football, focusing on the dominance of LSU, Ohio State, and Clemson in the race for the College Football Playoff. It may outline the key performances and statistics that have contributed to their strong positions, while also exploring potential challengers and teams that could disrupt the established order. Additionally, the piece might examine factors like upcoming matchups and rankings that could influence playoff qualifications, although the specifics are uncertain.",
+  "model": "gpt-4o-mini"
+}

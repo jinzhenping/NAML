@@ -1,0 +1,21 @@
+{
+  "user_id": 870,
+  "candidate_news_id": "N63165",
+  "candidate_title": "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+  "user_history_count": 10,
+  "user_history": [
+    "Target kicks off its Black Friday deals this week",
+    "A woman's stalker used an app that allowed him to stop, start and track her car",
+    "It's a Boy! Pregnant Ashley Graham Reveals the Sex of Her Baby on the Way During Ellen Game",
+    "Antonio Brown blasts NFL, seems to announce retirement",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "'You're not a serial killer, right?' victim text messaged man before she died",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "NYPD Officers Recovering From Possible Fentanyl Exposure During Bronx Drug Bust",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Target kicks off its Black Friday deals this week\"\n\"A woman's stalker used an app that allowed him to stop, start and track her car\"\n\"It's a Boy! Pregnant Ashley Graham Reveals the Sex of Her Baby on the Way During Ellen Game\"\n\"Antonio Brown blasts NFL, seems to announce retirement\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"'You're not a serial killer, right?' victim text messaged man before she died\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"NYPD Officers Recovering From Possible Fentanyl Exposure During Bronx Drug Bust\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\n[Candidate News Title]\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent release of Wynonna Judd's daughter from prison after being granted parole six years early. Readers can expect to learn about the circumstances surrounding her imprisonment, the reasons for her early release, and any implications it may have for her future. Additionally, the article may provide background on her family, particularly the influence of her mother, Wynonna Judd, and how this event fits into their public narrative. It could also touch on broader themes of the justice system and parole processes.",
+  "model": "gpt-4o-mini"
+}

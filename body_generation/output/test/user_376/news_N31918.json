@@ -1,0 +1,21 @@
+{
+  "user_id": 376,
+  "candidate_news_id": "N31918",
+  "candidate_title": "Oscar Wilde's stolen ring found by Dutch 'art detective'",
+  "user_history_count": 10,
+  "user_history": [
+    "Former US Senator Kay Hagan dead at 66",
+    "Qantas grounds Boeing 737 plane with crack, inspects others",
+    "Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease",
+    "2 Murder suspects escape from Monterey County, California, Jail",
+    "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+    "Does Sleeping Poorly Increase Cancer Risk?",
+    "Celebrity plastic surgery transformations",
+    "Fox legal analyst Napolitano emerges as Trump critic",
+    "AP sources: Deval Patrick mulling Democratic White House run",
+    "Judge agrees Alabama Islamic State recruit is not US citizen"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former US Senator Kay Hagan dead at 66\"\n\"Qantas grounds Boeing 737 plane with crack, inspects others\"\n\"Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease\"\n\"2 Murder suspects escape from Monterey County, California, Jail\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Does Sleeping Poorly Increase Cancer Risk?\"\n\"Celebrity plastic surgery transformations\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"AP sources: Deval Patrick mulling Democratic White House run\"\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n[Candidate News Title]\n\"Oscar Wilde's stolen ring found by Dutch 'art detective'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Oscar Wilde's stolen ring being found by a Dutch 'art detective' is likely to explore the circumstances surrounding the ring's theft and its recent recovery. Readers may expect insights into the historical significance of the ring, including its connection to Wilde's life and work. The piece could detail the detective's methods in locating the artifact and any challenges faced during the investigation. Additionally, it may touch on broader themes of art and cultural heritage preservation, as well as the implications of recovering stolen items.",
+  "model": "gpt-4o-mini"
+}

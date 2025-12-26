@@ -1,0 +1,20 @@
+{
+  "user_id": 759,
+  "candidate_news_id": "N123462",
+  "candidate_title": "Court puts hold on Rodney Reed's scheduled execution",
+  "user_history_count": 9,
+  "user_history": [
+    "50 Home Décor Horrors You Can't Look Away From",
+    "Newly Signed Raven Makes Comeback After Losing Job, Ring",
+    "The most affordable places with the best schools",
+    "Home-Improvement Boom Is Forecast to Fizzle",
+    "United adding bigger overhead bins to avoid stowage wars   restrictions still apply",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Cowboys have questionable red zone calls in loss to Vikings",
+    "Cris Collinsworth made mistake with mention of Dak Prescott's mom"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"50 Home Décor Horrors You Can't Look Away From\"\n\"Newly Signed Raven Makes Comeback After Losing Job, Ring\"\n\"The most affordable places with the best schools\"\n\"Home-Improvement Boom Is Forecast to Fizzle\"\n\"United adding bigger overhead bins to avoid stowage wars   restrictions still apply\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Cowboys have questionable red zone calls in loss to Vikings\"\n\"Cris Collinsworth made mistake with mention of Dak Prescott's mom\"\n\"\"\n\n[Candidate News Title]\n\"Court puts hold on Rodney Reed's scheduled execution\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Court puts hold on Rodney Reed's scheduled execution\" is likely to provide an overview of the legal developments surrounding Rodney Reed's case, highlighting the reasons for the court's decision to pause the execution. Readers may expect to find details about the arguments presented by Reed's defense team, including any new evidence that may have emerged, as well as insights into the broader implications of this ruling on capital punishment discussions. Additionally, the piece may touch on public reactions and the ongoing debate related to wrongful convictions, although the exact nature of these discussions is uncertain.",
+  "model": "gpt-4o-mini"
+}

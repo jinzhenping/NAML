@@ -1,0 +1,21 @@
+{
+  "user_id": 840,
+  "candidate_news_id": "N110973",
+  "candidate_title": "Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say",
+  "user_history_count": 10,
+  "user_history": [
+    "Texas attorney convicted of scamming drug traffickers",
+    "Woman Visits Stray Dog Every Day Until He Finally Lets Her Pet Him",
+    "A way-too-early look at the favorites to win the 2020 World Series",
+    "Barneys Is Sold for Scrap, Ending an Era",
+    "Jerry Jones on Dak Prescott talks: 'We moved that needle in a positive direction this week'",
+    "Report: QB Russell Wilson wanted Seahawks to sign Antonio Brown",
+    "'Never in a million years': Dermot Shea discusses new role as NYPD commissioner",
+    "Did The Black Cat Doom The Giants? A Look At The Star Of Monday's Game",
+    "Foles will start for Jaguars over Minshew after bye week",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Texas attorney convicted of scamming drug traffickers\"\n\"Woman Visits Stray Dog Every Day Until He Finally Lets Her Pet Him\"\n\"A way-too-early look at the favorites to win the 2020 World Series\"\n\"Barneys Is Sold for Scrap, Ending an Era\"\n\"Jerry Jones on Dak Prescott talks: 'We moved that needle in a positive direction this week'\"\n\"Report: QB Russell Wilson wanted Seahawks to sign Antonio Brown\"\n\"'Never in a million years': Dermot Shea discusses new role as NYPD commissioner\"\n\"Did The Black Cat Doom The Giants? A Look At The Star Of Monday's Game\"\n\"Foles will start for Jaguars over Minshew after bye week\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\n[Candidate News Title]\n\"Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say,\" you might expect to read an overview of the cabbage soup diet, including its origins and popularity as a weight-loss method. The article is likely to examine the nutritional aspects of the diet, potential health benefits, and drawbacks, as well as expert opinions regarding its efficacy and safety. Additionally, it may provide insights into who might benefit from such a diet and who should approach it with caution, reflecting on both anecdotal experiences and scientific evidence.",
+  "model": "gpt-4o-mini"
+}

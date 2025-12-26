@@ -1,0 +1,21 @@
+{
+  "user_id": 232,
+  "candidate_news_id": "N29067",
+  "candidate_title": "Spain Is Stuck After Sanchez's Election Gamble Backfires Badly",
+  "user_history_count": 10,
+  "user_history": [
+    "Surprise, surprise: Dallas ranks as one of the most dangerous cities for drivers",
+    "Is It Time To Ban Halloween Candy?",
+    "Order! Order! Britain's speaker quits Brexit hotseat",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "What handing out full-size candy bars on Halloween says about you, according to behavioral economists",
+    "Two Disputed Judicial Nominees Could Help Trump Reach Milestone",
+    "As Warren Gains in Race, Wall Street Sounds the Alarm",
+    "More than 11,000 scientists from around the world declare a 'climate emergency'",
+    "Jerry Jones' Grandson to Start at QB for Arkansas on Saturday",
+    "QB Joe Burrow on Donald Trump attending Alabama-LSU: 'The president at the game is pretty cool'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Surprise, surprise: Dallas ranks as one of the most dangerous cities for drivers\"\n\"Is It Time To Ban Halloween Candy?\"\n\"Order! Order! Britain's speaker quits Brexit hotseat\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"What handing out full-size candy bars on Halloween says about you, according to behavioral economists\"\n\"Two Disputed Judicial Nominees Could Help Trump Reach Milestone\"\n\"As Warren Gains in Race, Wall Street Sounds the Alarm\"\n\"More than 11,000 scientists from around the world declare a 'climate emergency'\"\n\"Jerry Jones' Grandson to Start at QB for Arkansas on Saturday\"\n\"QB Joe Burrow on Donald Trump attending Alabama-LSU: 'The president at the game is pretty cool'\"\n\n[Candidate News Title]\n\"Spain Is Stuck After Sanchez's Election Gamble Backfires Badly\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Spain Is Stuck After Sanchez's Election Gamble Backfires Badly,\" the user can expect an analysis of the recent electoral situation in Spain, focusing on Prime Minister Pedro Sanchez’s political strategies and the implications of his decisions. The piece is likely to detail how Sanchez’s gamble in the elections has led to political instability or challenges for his administration. It may also explore the reactions from various political parties and the potential impacts on Spain's governance and policy direction moving forward.",
+  "model": "gpt-4o-mini"
+}

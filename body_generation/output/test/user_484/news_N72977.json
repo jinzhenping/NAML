@@ -1,0 +1,21 @@
+{
+  "user_id": 484,
+  "candidate_news_id": "N72977",
+  "candidate_title": "Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs",
+  "user_history_count": 10,
+  "user_history": [
+    "What Menopause Does to Women's Brains",
+    "French Pastry Diet For Weight Loss: Does It Work?",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "I've had it with this former friend",
+    "Children, ages 2 and 6, found wandering in the snow rescued by Wisconsin bus driver",
+    "We tasted this plant-based ice cream and can happily report it's delicious",
+    "Pro-Trump conservatives are getting trolled in real life by a far-right group",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "People Pull Together To Save A Frightened Dog Loose On Highway",
+    "Chuck E. Cheese just got major makeover   and axed the animal band"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"What Menopause Does to Women's Brains\"\n\"French Pastry Diet For Weight Loss: Does It Work?\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"I've had it with this former friend\"\n\"Children, ages 2 and 6, found wandering in the snow rescued by Wisconsin bus driver\"\n\"We tasted this plant-based ice cream and can happily report it's delicious\"\n\"Pro-Trump conservatives are getting trolled in real life by a far-right group\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"People Pull Together To Save A Frightened Dog Loose On Highway\"\n\"Chuck E. Cheese just got major makeover   and axed the animal band\"\n\n[Candidate News Title]\n\"Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to learn about Taylor Swift's ongoing conflict with music executives Scooter Braun and Scott Borchetta, particularly regarding her ability to perform her older hits at the American Music Awards. The piece could provide insights into the background of their business relationships, the implications for Swift's artistic freedom, and how this situation reflects broader issues within the music industry. Additionally, the article is likely to touch on fan reactions and the potential impact on Swift's career trajectory.",
+  "model": "gpt-4o-mini"
+}

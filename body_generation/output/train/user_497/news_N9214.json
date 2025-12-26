@@ -1,0 +1,21 @@
+{
+  "user_id": 497,
+  "candidate_news_id": "N9214",
+  "candidate_title": "Stand-in president 'brings back Bible' to Bolivian politics",
+  "user_history_count": 10,
+  "user_history": [
+    "A Texas man shot and killed his wife. He says he was sleepwalking.",
+    "Shay Mitchell Reveals Daughter's Name Alongside Precious Photo",
+    "John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet",
+    "Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week",
+    "Fresh Off the Boat Canceled After Six Seasons",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids",
+    "Meghan Markle Says That Archie Has Two Teeth and Is Crawling",
+    "Meghan Markle earns Duchess Camilla's support, royal expert says",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A Texas man shot and killed his wife. He says he was sleepwalking.\"\n\"Shay Mitchell Reveals Daughter's Name Alongside Precious Photo\"\n\"John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet\"\n\"Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week\"\n\"Fresh Off the Boat Canceled After Six Seasons\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids\"\n\"Meghan Markle Says That Archie Has Two Teeth and Is Crawling\"\n\"Meghan Markle earns Duchess Camilla's support, royal expert says\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\n[Candidate News Title]\n\"Stand-in president 'brings back Bible' to Bolivian politics\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Stand-in president 'brings back Bible' to Bolivian politics\" is likely to discuss the recent actions taken by Bolivia's interim president to reintroduce religious elements into the political landscape. The user may expect an overview of how these changes reflect the broader socio-political context in Bolivia, including reactions from various political factions and the public. Additionally, it could provide insights into the implications of intertwining religion with governance, which may have historical significance. The article may also explore how this move could influence future legislative decisions or voter sentiments in the country.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 387,
+  "candidate_news_id": "N43955",
+  "candidate_title": "A guide to the 2019 People's Choice Awards nominees' significant others",
+  "user_history_count": 10,
+  "user_history": [
+    "California authorities found and destroyed $1 billion worth of marijuana plants",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "1 Dead After Car Veers Off 605 Freeway, Lands In Riverbed",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "China's trade with US shrinks in October despite optimism"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"California authorities found and destroyed $1 billion worth of marijuana plants\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"1 Dead After Car Veers Off 605 Freeway, Lands In Riverbed\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"China's trade with US shrinks in October despite optimism\"\n\n[Candidate News Title]\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"A guide to the 2019 People's Choice Awards nominees' significant others,\" you can expect a detailed overview of the nominees for the awards and insights into their personal lives, specifically focusing on their significant others. The article may explore the relationships of these public figures, including who they are dating or married to, and possibly highlight any notable public appearances or interactions. This could provide context about their personal dynamics and how these relationships might influence their public personas, though the depth of personal detail may vary.",
+  "model": "gpt-4o-mini"
+}

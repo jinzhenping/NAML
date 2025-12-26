@@ -1,0 +1,21 @@
+{
+  "user_id": 372,
+  "candidate_news_id": "N46641",
+  "candidate_title": "Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "Snow crab sells for record price in Japan",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+    "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+    "Broadway Actress Laurel Griggs Dies at Age 13",
+    "Pac-12 suspends referee after egregious mistake during Washington State vs. Cal game",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Snow crab sells for record price in Japan\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Pac-12 suspends referee after egregious mistake during Washington State vs. Cal game\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\n[Candidate News Title]\n\"Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about former North Carolina State and NBA player Anthony Grundy's death likely provides details surrounding the circumstances of his stabbing and the police investigation that followed. Readers may expect information on the location and timing of the incident, along with any available information about the motives or suspects involved. Additionally, the article might explore Grundy's career highlights and contributions to basketball, as well as reactions from fans and the sports community. It is possible that the piece could include commentary on the implications of violence in sports contexts.",
+  "model": "gpt-4o-mini"
+}

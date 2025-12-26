@@ -1,0 +1,21 @@
+{
+  "user_id": 785,
+  "candidate_news_id": "N28863",
+  "candidate_title": "Last survivor of the Hindenburg disaster dies at age 90",
+  "user_history_count": 10,
+  "user_history": [
+    "Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves",
+    "We'd Arrest Trump For Fifth Ave Shooting, NYC Mayor Says",
+    "Astros fire assistant GM for 'inappropriate comments'",
+    "Movies Critics Hate but Audiences Love",
+    "Minus 45 degrees in October? An Arctic blast is breaking records across western and central US",
+    "World's largest White Castle runs out of burgers on day 1",
+    "Elderly mother caught in a lie",
+    "Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars",
+    "AP sources: Deval Patrick mulling Democratic White House run",
+    "Fast food cashier and manager fired for refusing to serve police officer"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves\"\n\"We'd Arrest Trump For Fifth Ave Shooting, NYC Mayor Says\"\n\"Astros fire assistant GM for 'inappropriate comments'\"\n\"Movies Critics Hate but Audiences Love\"\n\"Minus 45 degrees in October? An Arctic blast is breaking records across western and central US\"\n\"World's largest White Castle runs out of burgers on day 1\"\n\"Elderly mother caught in a lie\"\n\"Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars\"\n\"AP sources: Deval Patrick mulling Democratic White House run\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\n[Candidate News Title]\n\"Last survivor of the Hindenburg disaster dies at age 90\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the last survivor of the Hindenburg disaster, who has passed away at the age of 90, is likely to provide a detailed account of their life and experiences, particularly their connection to one of the most infamous airship disasters in history. Readers may expect to learn about the survivor's personal recollections of the Hindenburg incident, the impact it had on their life, and reflections on the historical significance of the disaster. Additionally, the article could explore how the survivor's story has contributed to the legacy of the Hindenburg and its place in aviation history.",
+  "model": "gpt-4o-mini"
+}

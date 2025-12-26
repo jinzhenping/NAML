@@ -1,0 +1,19 @@
+{
+  "user_id": 400,
+  "candidate_news_id": "N26553",
+  "candidate_title": "Joshua Jackson and Jodie Turner-Smith spark marriage speculation",
+  "user_history_count": 8,
+  "user_history": [
+    "Report: Alvin Kamara has \"high ankle-type issue\"",
+    "AP Top 25: LSU jumps to No. 2, upset drops Georgia to No. 10",
+    "Winners and losers from Week 8 in college football led by Wisconsin, Oregon",
+    "AP Poll Top 25 Projection: After Week 8",
+    "Nick Saban: Tua Tagovailoa has 'no real timetable' on return",
+    "Browns' Odell Beckham Jr. said it was his 'dream' to be teammates with Tom Brady",
+    "McConnell Dismisses Impeachment Updates: 'It Would Not Lead to a Removal'",
+    "Tua Tagovailoa again considered game-time decision with ankle injury"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Alvin Kamara has \"high ankle-type issue\"\"\n\"AP Top 25: LSU jumps to No. 2, upset drops Georgia to No. 10\"\n\"Winners and losers from Week 8 in college football led by Wisconsin, Oregon\"\n\"AP Poll Top 25 Projection: After Week 8\"\n\"Nick Saban: Tua Tagovailoa has 'no real timetable' on return\"\n\"Browns' Odell Beckham Jr. said it was his 'dream' to be teammates with Tom Brady\"\n\"McConnell Dismisses Impeachment Updates: 'It Would Not Lead to a Removal'\"\n\"Tua Tagovailoa again considered game-time decision with ankle injury\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Joshua Jackson and Jodie Turner-Smith spark marriage speculation\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Joshua Jackson and Jodie Turner-Smith is likely to explore recent developments regarding their relationship, possibly highlighting events or public appearances that have sparked speculation about marriage. Readers may expect details on any recent engagements or statements from the couple that hint at their future plans. Additionally, the piece could provide context about their relationship history and how it has evolved over time. There may be a discussion on public reactions or insights from sources close to the couple, although it is uncertain whether any official announcements will be included.",
+  "model": "gpt-4o-mini"
+}

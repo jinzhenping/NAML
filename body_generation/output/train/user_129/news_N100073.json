@@ -1,0 +1,18 @@
+{
+  "user_id": 129,
+  "candidate_news_id": "N100073",
+  "candidate_title": "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+  "user_history_count": 7,
+  "user_history": [
+    "NFL players who should be traded before the deadline",
+    "Delta offers waivers ahead of bad weather in the Northeast",
+    "Mystery Woman Kissing Singer Usher Identified As Record Exec",
+    "Robert Blake's Daughter Speaks Out for First Time About 'Traumatic Childhood' After Mom's Murder",
+    "Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence",
+    "Matt Lauer reportedly wanted royal's sister to join 'Today'",
+    "Coast Guard searches for man who fell from cruise off Texas"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL players who should be traded before the deadline\"\n\"Delta offers waivers ahead of bad weather in the Northeast\"\n\"Mystery Woman Kissing Singer Usher Identified As Record Exec\"\n\"Robert Blake's Daughter Speaks Out for First Time About 'Traumatic Childhood' After Mom's Murder\"\n\"Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence\"\n\"Matt Lauer reportedly wanted royal's sister to join 'Today'\"\n\"Coast Guard searches for man who fell from cruise off Texas\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on why Prince Harry wore his Remembrance poppy differently from the rest of the Royal Family is likely to explore the symbolism and significance behind his choice. Readers can expect an examination of the traditional use of the poppy in commemorating fallen soldiers, as well as a discussion of any personal or political statements Harry may be making through this act. The piece may also delve into the reactions of the public and media, offering insights into how this departure from royal norms reflects his evolving relationship with the monarchy.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 182,
+  "candidate_news_id": "N60088",
+  "candidate_title": "2020 Ford Bronco: Everything we know about Ford's new SUV",
+  "user_history_count": 10,
+  "user_history": [
+    "Rising California gasoline prices highlight growing divide in US",
+    "Man charged in bear-repellent attack on Trump protesters at Santa Monica Pier",
+    "California residents face another blackout (and then another after that)",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "Lori Loughlin Faces New Charges in College Scandal",
+    "A man in Brazil accidentally blew up his yard while trying to kill some cockroaches",
+    "California's legal weed profits going up in smoke",
+    "Ford Baby Bronco Bare Body Allegedly Leaked In Exclusive Photo",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Rising California gasoline prices highlight growing divide in US\"\n\"Man charged in bear-repellent attack on Trump protesters at Santa Monica Pier\"\n\"California residents face another blackout (and then another after that)\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"Lori Loughlin Faces New Charges in College Scandal\"\n\"A man in Brazil accidentally blew up his yard while trying to kill some cockroaches\"\n\"California's legal weed profits going up in smoke\"\n\"Ford Baby Bronco Bare Body Allegedly Leaked In Exclusive Photo\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\n[Candidate News Title]\n\"2020 Ford Bronco: Everything we know about Ford's new SUV\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"2020 Ford Bronco: Everything we know about Ford's new SUV,\" you can expect a comprehensive overview of the features and specifications of the 2020 Ford Bronco. The article is likely to cover aspects such as the vehicle's design, performance capabilities, and technological advancements, along with details on its various trims and configurations. Additionally, it may include insights into the anticipated market reception and comparisons with competitors in the SUV segment, helping readers understand how the Bronco fits within current automotive trends.",
+  "model": "gpt-4o-mini"
+}

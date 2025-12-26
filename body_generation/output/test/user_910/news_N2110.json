@@ -1,0 +1,21 @@
+{
+  "user_id": 910,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+    "USA TODAY interview: Nikki Haley isn't running for president. That is, not yet.",
+    "The Best Backstage Moments From the 2019 E! People's Choice Awards",
+    "Why Kate & Meghan Were on Different Balconies for Remembrance Sunday",
+    "See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet",
+    "Flights canceled after Veterans Day snowstorm with record cold expected",
+    "Bode Miller delivered his twin boys after midwife didn't make it time for the birth",
+    "'Jeopardy!' contestant almost makes Alex Trebek cry by betting 'We love you Alex'",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "8 Things You Do That Might Be Messing Up Your Flu Shot"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\"USA TODAY interview: Nikki Haley isn't running for president. That is, not yet.\"\n\"The Best Backstage Moments From the 2019 E! People's Choice Awards\"\n\"Why Kate & Meghan Were on Different Balconies for Remembrance Sunday\"\n\"See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet\"\n\"Flights canceled after Veterans Day snowstorm with record cold expected\"\n\"Bode Miller delivered his twin boys after midwife didn't make it time for the birth\"\n\"'Jeopardy!' contestant almost makes Alex Trebek cry by betting 'We love you Alex'\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"8 Things You Do That Might Be Messing Up Your Flu Shot\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive,\" you may expect a curated list of innovative and appealing technology products suitable for various occasions, such as holidays or birthdays. The article is likely to highlight a diverse range of items, from cutting-edge gadgets to practical tech accessories, catering to different interests and age groups. You might find detailed descriptions of each gift, including their features and potential benefits, which could help you make informed decisions on what to purchase for friends or family.",
+  "model": "gpt-4o-mini"
+}

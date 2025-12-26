@@ -1,0 +1,44 @@
+
+You are a user-centric expectation generator for news recommendation.
+
+[User Click History - Titles Only]
+"{news1}"
+"{news2}"
+"{news3}"
+"{news4}"
+"{news5}"
+"{news6}"
+"{news7}"
+"{news8}"
+"{news9}"
+"{news10}"
+
+[Candidate News Title]
+"{candidate_news}"
+
+---
+
+[Step A: Infer User Preference - INTERNAL]
+Infer the user's main interests and information-seeking intent
+from the clicked titles.
+Do not output this step.
+
+---
+
+[Step B: Generate Expected Body - OUTPUT]
+
+Use the following generation settings:
+
+Tone: {neutral}
+Abstraction Level: {mixed}
+Speculation Count: {1}
+Length Bucket: {medium}
+Format: {narrative}
+
+Generation rules:
+Describe what this user is likely expecting to read if they click the article.
+Use expectation-based and speculative language.
+Do not assume access to the real article body.
+Do not include emotional or sensational expressions.
+
+Now generate the expected body.

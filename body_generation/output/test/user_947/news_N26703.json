@@ -1,0 +1,19 @@
+{
+  "user_id": 947,
+  "candidate_news_id": "N26703",
+  "candidate_title": "Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame",
+  "user_history_count": 8,
+  "user_history": [
+    "Singer stands up to heckler who told her to take shirt off",
+    "Browns' Odell Beckham Jr. said it was his 'dream' to be teammates with Tom Brady",
+    "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+    "Parents of UK teen killed in road crash say they will sue the Trump administration",
+    "Why I Dropped Out Of An Ivy League College Just 3 Weeks Into Freshman Year",
+    "11-year-old boy dies after being shot in chest",
+    "51 children injured in chemical attack at Chinese kindergarten after man sprays caustic soda",
+    "U.S. Drones Appear to Show Turkish- Backed Forces Targeting Civilians"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Singer stands up to heckler who told her to take shirt off\"\n\"Browns' Odell Beckham Jr. said it was his 'dream' to be teammates with Tom Brady\"\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"Parents of UK teen killed in road crash say they will sue the Trump administration\"\n\"Why I Dropped Out Of An Ivy League College Just 3 Weeks Into Freshman Year\"\n\"11-year-old boy dies after being shot in chest\"\n\"51 children injured in chemical attack at Chinese kindergarten after man sprays caustic soda\"\n\"U.S. Drones Appear to Show Turkish- Backed Forces Targeting Civilians\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, readers may expect a discussion surrounding the incident involving Mason Rudolph, who reportedly faced criticism after being struck in the head with his own helmet during a game. The piece could analyze the reactions from fans and commentators regarding the accountability placed on Rudolph, exploring differing perspectives on whether he is receiving fair criticism. Additionally, it might delve into the implications of such incidents in professional sports, including how player safety and public perception are affected.",
+  "model": "gpt-4o-mini"
+}

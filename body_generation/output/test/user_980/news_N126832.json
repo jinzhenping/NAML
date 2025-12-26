@@ -1,0 +1,21 @@
+{
+  "user_id": 980,
+  "candidate_news_id": "N126832",
+  "candidate_title": "Ex-Envoy to Ukraine 'Devastated' as Trump Vilified Her",
+  "user_history_count": 10,
+  "user_history": [
+    "7 Women Share What It's Really Like To Work On A Cruise Ship",
+    "Comics - '9 to 5' by Harley Schwadron",
+    "Veterans Day beginning to look a lot like Christmas as cold sweeps nation; freeze coming to Florida",
+    "For three decades, one man, now 75, has cared for Philly's Vietnam and Korean War memorials",
+    "How I Got Lung Cancer at 31 Without Ever Smoking a Single Cigarette",
+    "France, Germany, Britain urge Iran to reverse nuclear deal breaches",
+    "Lance Altimeter Is A Delicious Drop-In Truck Camper Debuting At SEMA",
+    "'Stay alert': millions of Australians brace for 'catastrophic' bushfires",
+    "Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago",
+    "49ers still don't know if Jimmy Garoppolo is Super Bowl-ready"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"7 Women Share What It's Really Like To Work On A Cruise Ship\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Veterans Day beginning to look a lot like Christmas as cold sweeps nation; freeze coming to Florida\"\n\"For three decades, one man, now 75, has cared for Philly's Vietnam and Korean War memorials\"\n\"How I Got Lung Cancer at 31 Without Ever Smoking a Single Cigarette\"\n\"France, Germany, Britain urge Iran to reverse nuclear deal breaches\"\n\"Lance Altimeter Is A Delicious Drop-In Truck Camper Debuting At SEMA\"\n\"'Stay alert': millions of Australians brace for 'catastrophic' bushfires\"\n\"Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago\"\n\"49ers still don't know if Jimmy Garoppolo is Super Bowl-ready\"\n\n[Candidate News Title]\n\"Ex-Envoy to Ukraine 'Devastated' as Trump Vilified Her\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Ex-Envoy to Ukraine 'Devastated' as Trump Vilified Her\" is likely to provide an overview of the experiences and challenges faced by a former U.S. ambassador to Ukraine amid political controversies involving former President Trump. Readers can expect to learn about the envoy's reactions to criticisms and the broader implications of such political dynamics on U.S.-Ukraine relations. Additionally, the article may explore the context of her tenure and the impact of public discourse on diplomatic roles, although specific details about her statements or experiences could vary.",
+  "model": "gpt-4o-mini"
+}

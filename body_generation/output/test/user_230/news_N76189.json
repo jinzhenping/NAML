@@ -1,0 +1,21 @@
+{
+  "user_id": 230,
+  "candidate_news_id": "N76189",
+  "candidate_title": "Here's how much it will cost to travel to Africa like Meghan Markle and Prince Harry",
+  "user_history_count": 10,
+  "user_history": [
+    "'Opportunity for growth': Caddie fallout still looms over Kuchar one year later",
+    "Taylor testifies he was told Trump cared more about 'investigations' than Ukraine",
+    "A former royal bodyguard shared the challenges that come with protecting the royal family",
+    "Best royal photos of 2019",
+    "When I Bring This Pie to Thanksgiving, People Always Go For Seconds",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "I Never Imagined Being A Grandmother At 35. Here's How It Changed My Life.",
+    "See Princess Sofia of Sweden's Unexpected Green Leopard Print Dress   Complete with Tiara!",
+    "Rain pushes opening round of Mayakoba Classic to Friday",
+    "Prince Harry and Prince William's Rift Is \"One of the Main Reasons\" the Sussexes Are Skipping Royal Christmas"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Opportunity for growth': Caddie fallout still looms over Kuchar one year later\"\n\"Taylor testifies he was told Trump cared more about 'investigations' than Ukraine\"\n\"A former royal bodyguard shared the challenges that come with protecting the royal family\"\n\"Best royal photos of 2019\"\n\"When I Bring This Pie to Thanksgiving, People Always Go For Seconds\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"I Never Imagined Being A Grandmother At 35. Here's How It Changed My Life.\"\n\"See Princess Sofia of Sweden's Unexpected Green Leopard Print Dress   Complete with Tiara!\"\n\"Rain pushes opening round of Mayakoba Classic to Friday\"\n\"Prince Harry and Prince William's Rift Is \"One of the Main Reasons\" the Sussexes Are Skipping Royal Christmas\"\n\n[Candidate News Title]\n\"Here's how much it will cost to travel to Africa like Meghan Markle and Prince Harry\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the reader can expect to find a detailed breakdown of the costs associated with traveling to Africa, particularly in the context of the experiences of Meghan Markle and Prince Harry. It may cover various aspects such as airfare, accommodation, and activities, providing insights into how the couple's travel style might influence overall expenses. Additionally, there could be comparisons to typical travel costs in the region, allowing readers to gauge the financial implications of such a trip. Overall, the piece is likely to inform those interested in royal travel and tourism in Africa.",
+  "model": "gpt-4o-mini"
+}

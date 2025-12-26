@@ -1,0 +1,21 @@
+{
+  "user_id": 809,
+  "candidate_news_id": "N30582",
+  "candidate_title": "Opinion: Baylor football back on top four years after sexual assault scandal rocked campus",
+  "user_history_count": 10,
+  "user_history": [
+    "Unprecedented movement detected on California earthquake fault capable of 8.0 temblor",
+    "Week in celebrity photos for Oct. 14-18, 2019",
+    "Bag Explodes While Being Loaded On Volaris Flight At Midway Airport",
+    "Lori Loughlin's Daughters No Longer Enrolled at USC",
+    "Freshman Dem Katie Hill denies improper relationship with aide",
+    "Just in time for skating season, Trump's company scrubs his name from N.Y. ice rinks",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "The world's largest nuclear power producer is melting down",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Debunking the week's tabloid stories: Nov. 8, 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Unprecedented movement detected on California earthquake fault capable of 8.0 temblor\"\n\"Week in celebrity photos for Oct. 14-18, 2019\"\n\"Bag Explodes While Being Loaded On Volaris Flight At Midway Airport\"\n\"Lori Loughlin's Daughters No Longer Enrolled at USC\"\n\"Freshman Dem Katie Hill denies improper relationship with aide\"\n\"Just in time for skating season, Trump's company scrubs his name from N.Y. ice rinks\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"The world's largest nuclear power producer is melting down\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Debunking the week's tabloid stories: Nov. 8, 2019\"\n\n[Candidate News Title]\n\"Opinion: Baylor football back on top four years after sexual assault scandal rocked campus\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Opinion: Baylor football back on top four years after sexual assault scandal rocked campus\" is likely to discuss the resurgence of Baylor University's football program following a significant period of controversy related to a sexual assault scandal. Readers can expect an analysis of the team's recent performance and its implications for the university's reputation. The piece may also explore the broader context of how the program has managed to regain support and attention, while potentially reflecting on the ongoing challenges the university faces in addressing its past.",
+  "model": "gpt-4o-mini"
+}

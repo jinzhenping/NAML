@@ -1,0 +1,21 @@
+{
+  "user_id": 899,
+  "candidate_news_id": "N10802",
+  "candidate_title": "See the most expensive watch ever sold at auction",
+  "user_history_count": 10,
+  "user_history": [
+    "101-year-old still works at Texas State Fair",
+    "They Woke Up Like This: Celebs' Best Makeup-Free Selfies",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Scandal brings election risk for rising Democratic star",
+    "Mom who popularized gender reveals regrets it now",
+    "The most surprising celebrity hair transformations of 2019",
+    "Authorities believe 'foul play' involved in UFC star's missing stepdaughter",
+    "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+    "Week in celebrity photos for Nov. 4-8, 2019",
+    "Brian Tarantina, 'Marvelous Mrs. Maisel' and 'Gilmore Girls' Actor, Dies at 60"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"101-year-old still works at Texas State Fair\"\n\"They Woke Up Like This: Celebs' Best Makeup-Free Selfies\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Scandal brings election risk for rising Democratic star\"\n\"Mom who popularized gender reveals regrets it now\"\n\"The most surprising celebrity hair transformations of 2019\"\n\"Authorities believe 'foul play' involved in UFC star's missing stepdaughter\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"Week in celebrity photos for Nov. 4-8, 2019\"\n\"Brian Tarantina, 'Marvelous Mrs. Maisel' and 'Gilmore Girls' Actor, Dies at 60\"\n\n[Candidate News Title]\n\"See the most expensive watch ever sold at auction\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read \"See the most expensive watch ever sold at auction,\" you can expect an informative overview of the record-breaking auction event, including details about the watch itself, such as its brand, unique features, and historical significance. The article may also delve into the context of the auction, discussing factors that contributed to the high sale price and potentially highlighting other notable items sold at the same auction. Additionally, it is likely to explore the impact of such sales on the luxury watch market.",
+  "model": "gpt-4o-mini"
+}

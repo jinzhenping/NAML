@@ -1,0 +1,21 @@
+{
+  "user_id": 880,
+  "candidate_news_id": "N55801",
+  "candidate_title": "High tides surge through Venice, locals rush to protect art",
+  "user_history_count": 10,
+  "user_history": [
+    "They bought a 1 euro house in Italy -- here's what happened next",
+    "We Tested Canned Pumpkin Against the Fresh Stuff⁠ Here's the Winner",
+    "China's Commerce Ministry says trade war should be ended by removing tariffs",
+    "19 Home Renovations That Give Owners the Most Joy",
+    "Experts crack mystery of ancient Egypt's sacred bird mummies",
+    "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say",
+    "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say",
+    "'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.",
+    "Here's What It Means If You Have Ridges on Your Nails",
+    "'One in a million' deer captured on camera in Michigan woods"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"They bought a 1 euro house in Italy -- here's what happened next\"\n\"We Tested Canned Pumpkin Against the Fresh Stuff⁠ Here's the Winner\"\n\"China's Commerce Ministry says trade war should be ended by removing tariffs\"\n\"19 Home Renovations That Give Owners the Most Joy\"\n\"Experts crack mystery of ancient Egypt's sacred bird mummies\"\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\"'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.\"\n\"Here's What It Means If You Have Ridges on Your Nails\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n[Candidate News Title]\n\"High tides surge through Venice, locals rush to protect art\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent impact of high tides in Venice, detailing how local residents are responding to the flooding threat to their historic art and architecture. Readers may expect to learn about the specific measures taken by locals, such as building barriers or relocating valuable artworks to prevent damage. Additionally, the piece could provide context on Venice's ongoing challenges with rising sea levels and climate change, exploring how these factors contribute to the increasing frequency of such events.",
+  "model": "gpt-4o-mini"
+}

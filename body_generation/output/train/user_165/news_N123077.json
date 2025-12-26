@@ -1,0 +1,21 @@
+{
+  "user_id": 165,
+  "candidate_news_id": "N123077",
+  "candidate_title": "Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage",
+  "user_history_count": 10,
+  "user_history": [
+    "Cracker Barrel Has Two Thanksgiving Options This Year, and They Both Sound Delicious",
+    "Far-reaching snowstorm may take shape over US",
+    "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+    "Target, Kohl's, BJ's Wholesale Club, Old Navy among first to announce Black Friday plans",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Long-term celebrity couples who won't get married",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "50 Unique Holiday Gift Ideas for Her Under $50",
+    "Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cracker Barrel Has Two Thanksgiving Options This Year, and They Both Sound Delicious\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\"Target, Kohl's, BJ's Wholesale Club, Old Navy among first to announce Black Friday plans\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Long-term celebrity couples who won't get married\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"50 Unique Holiday Gift Ideas for Her Under $50\"\n\"Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\n[Candidate News Title]\n\"Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the mixed reactions from fans regarding Drake's recent performance as a surprise headliner at a festival. It may detail the circumstances of the performance, including the atmosphere during his set and the reasons behind the divided opinions among attendees. The piece could explore specific moments from the event that led to audience dissatisfaction, such as song choices or stage presence. Additionally, it may provide context on Drake's relationship with his fans and previous performances to better understand the varied reactions.",
+  "model": "gpt-4o-mini"
+}

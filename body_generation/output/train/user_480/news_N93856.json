@@ -1,0 +1,21 @@
+{
+  "user_id": 480,
+  "candidate_news_id": "N93856",
+  "candidate_title": "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+  "user_history_count": 10,
+  "user_history": [
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "Predicting the Cy Young and MVP Winners in MLB",
+    "Ukraine's Zelensky Bowed to Trump's Demands, Until Luck Spared Him",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"Predicting the Cy Young and MVP Winners in MLB\"\n\"Ukraine's Zelensky Bowed to Trump's Demands, Until Luck Spared Him\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\n[Candidate News Title]\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the user may expect to read about a recent public appearance by Selena Gomez and Julia Michaels, highlighting their friendship as they share a kiss and get matching arrow tattoos. The piece is likely to include details about the significance of their tattoos, as well as insights into their relationship and past collaborations. Additionally, the article could provide context about their recent activities, potentially touching on any upcoming projects or events they are involved in, further emphasizing their bond in the public eye.",
+  "model": "gpt-4o-mini"
+}

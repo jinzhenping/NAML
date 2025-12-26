@@ -1,0 +1,21 @@
+{
+  "user_id": 57,
+  "candidate_news_id": "N31855",
+  "candidate_title": "The 25 most iconic film quotes",
+  "user_history_count": 10,
+  "user_history": [
+    "Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment",
+    "See Mercury glide across the sun in rare sky show",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "This Is The Moment A Senior Shelter Dog Knew He Was Safe",
+    "Nike will look into runner Mary Cain's allegations of abuse",
+    "As Campaign Season Heats Up, Trump Has Turned the Official Into the Political",
+    "Khabib says McGregor needs 10 fights for rematch",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Jane Fonda Avoids Fifth Arrest While Protesting in D.C."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment\"\n\"See Mercury glide across the sun in rare sky show\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"This Is The Moment A Senior Shelter Dog Knew He Was Safe\"\n\"Nike will look into runner Mary Cain's allegations of abuse\"\n\"As Campaign Season Heats Up, Trump Has Turned the Official Into the Political\"\n\"Khabib says McGregor needs 10 fights for rematch\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Jane Fonda Avoids Fifth Arrest While Protesting in D.C.\"\n\n[Candidate News Title]\n\"The 25 most iconic film quotes\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on \"The 25 most iconic film quotes,\" they are likely to encounter a detailed exploration of memorable lines from various films that have left a significant impact on popular culture. The article may categorize these quotes by their influence, context within the films, or the characters who delivered them. It could also include insights into the origins of these quotes and why they resonate with audiences. Overall, readers can expect a blend of nostalgic references and analysis of how these quotes have shaped cinematic history.",
+  "model": "gpt-4o-mini"
+}

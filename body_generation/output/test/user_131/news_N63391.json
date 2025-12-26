@@ -1,0 +1,21 @@
+{
+  "user_id": 131,
+  "candidate_news_id": "N63391",
+  "candidate_title": "A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000",
+  "user_history_count": 10,
+  "user_history": [
+    "Body of missing Salvadoran trans activist found",
+    "Celtics roll over Spurs for seventh straight win",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Opinion: Rams are paying the true price of their $134 million investment in QB Jared Goff",
+    "No. 1 milk company declares bankruptcy amid drop in demand",
+    "A 25-point underdog, Evansville basketball stuns No. 1 Kentucky and the nation",
+    "This is Exactly How Long You Should Keep Thanksgiving Leftovers",
+    "Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy",
+    "Nor'easter to grind at US East Coast this weekend",
+    "For Cody Bellinger, all it took to show emotion was an MVP award and a hug from his father"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Body of missing Salvadoran trans activist found\"\n\"Celtics roll over Spurs for seventh straight win\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Opinion: Rams are paying the true price of their $134 million investment in QB Jared Goff\"\n\"No. 1 milk company declares bankruptcy amid drop in demand\"\n\"A 25-point underdog, Evansville basketball stuns No. 1 Kentucky and the nation\"\n\"This is Exactly How Long You Should Keep Thanksgiving Leftovers\"\n\"Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy\"\n\"Nor'easter to grind at US East Coast this weekend\"\n\"For Cody Bellinger, all it took to show emotion was an MVP award and a hug from his father\"\n\n[Candidate News Title]\n\"A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The user may expect the article to provide an overview of a decommissioned nuclear missile complex in Arizona that has recently been put up for sale. The piece is likely to detail the history of the site, including its significance during the Cold War and the factors contributing to its abandonment. Additionally, the article may explore the implications of the sale price of $400,000, discussing potential buyers and the future uses of such a unique property. Overall, it could present a blend of historical context and current real estate trends related to military sites.",
+  "model": "gpt-4o-mini"
+}

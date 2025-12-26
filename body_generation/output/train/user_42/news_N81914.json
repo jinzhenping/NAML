@@ -1,0 +1,17 @@
+{
+  "user_id": 42,
+  "candidate_news_id": "N81914",
+  "candidate_title": "Manafort's 2016 Gambit: A Back Channel From Trump Camp to Labor",
+  "user_history_count": 6,
+  "user_history": [
+    "Penn State warms up in custom t-shirts denouncing racist letter",
+    "15 Things You're Doing to Your Car That Mechanics Wouldn't",
+    "How Often Should You Change Synthetic Oil?",
+    "Pelosi says Trump notified Russians of Baghdadi raid before telling congressional leaders",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "WPXI-TV Weather Forecaster Charged With DUI"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Penn State warms up in custom t-shirts denouncing racist letter\"\n\"15 Things You're Doing to Your Car That Mechanics Wouldn't\"\n\"How Often Should You Change Synthetic Oil?\"\n\"Pelosi says Trump notified Russians of Baghdadi raid before telling congressional leaders\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"WPXI-TV Weather Forecaster Charged With DUI\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Manafort's 2016 Gambit: A Back Channel From Trump Camp to Labor\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read \"Manafort's 2016 Gambit: A Back Channel From Trump Camp to Labor,\" you can expect an analysis of Paul Manafort's strategic maneuvers during the 2016 election. The article may explore the connections Manafort established between the Trump campaign and labor organizations, detailing how these interactions potentially influenced political dynamics at the time. You might find insights into the implications of these back channels on both the campaign's strategy and the broader electoral landscape, as well as the legal and ethical considerations surrounding such tactics.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 227,
+  "candidate_news_id": "N123819",
+  "candidate_title": "Woman donates nearly 600 Barbies with prosthetic legs to St. Louis hospital",
+  "user_history_count": 10,
+  "user_history": [
+    "Video shows police handcuffing woman for selling churros inside Brooklyn subway station",
+    "3 Shot In Brooklyn, Investigation Ongoing",
+    "I moved from the US to the UK. Here are the 8 things that surprised me the most.",
+    "FBI busts $6 million iPhone and iPad counterfeit ring",
+    "Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year",
+    "The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable",
+    "NYPD has removed \"illegal\" database of juvenile fingerprints, Legal Aid attorneys say",
+    "Tense TV: CNN's Blitzer asks Kellyanne Conway about husband",
+    "How Amazon's quest for more, cheaper products has resulted in a flea market of fakes",
+    "Global debt surges above $250 trillion as US, China lead way"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Video shows police handcuffing woman for selling churros inside Brooklyn subway station\"\n\"3 Shot In Brooklyn, Investigation Ongoing\"\n\"I moved from the US to the UK. Here are the 8 things that surprised me the most.\"\n\"FBI busts $6 million iPhone and iPad counterfeit ring\"\n\"Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year\"\n\"The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable\"\n\"NYPD has removed \"illegal\" database of juvenile fingerprints, Legal Aid attorneys say\"\n\"Tense TV: CNN's Blitzer asks Kellyanne Conway about husband\"\n\"How Amazon's quest for more, cheaper products has resulted in a flea market of fakes\"\n\"Global debt surges above $250 trillion as US, China lead way\"\n\n[Candidate News Title]\n\"Woman donates nearly 600 Barbies with prosthetic legs to St. Louis hospital\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about a woman donating nearly 600 Barbies with prosthetic legs to a St. Louis hospital, the user is likely to find information about the initiative's background and its significance in promoting inclusivity and representation for children with disabilities. The piece may detail how the donation was organized, the response from the hospital and the community, and possibly highlight the broader impact of such efforts in raising awareness about disabilities. Additionally, it could include perspectives from the donor and medical staff, illustrating the importance of play and representation in pediatric care.",
+  "model": "gpt-4o-mini"
+}

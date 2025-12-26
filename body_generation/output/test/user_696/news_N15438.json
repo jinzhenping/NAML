@@ -1,0 +1,21 @@
+{
+  "user_id": 696,
+  "candidate_news_id": "N15438",
+  "candidate_title": "Tense TV: CNN's Blitzer asks Kellyanne Conway about husband",
+  "user_history_count": 10,
+  "user_history": [
+    "You Must Never Vote for Bloomberg",
+    "Trump, Macron to meet after French president criticized NATO",
+    "In reversal, Mulvaney says he won't sue over impeachment probe subpoena",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "'No truth whatsoever': Nikki Haley denies rumors that she's gunning for Pence's position",
+    "Movie nights, baseball, phone calls: How Trump is boosting GOP unity in impeachment inquiry",
+    "Republicans Know Trump Is Innocent They're Trying to Figure Out Why",
+    "'A big fan': Trump welcomes Turkey's Erdogan despite bipartisan concern over Syria attack",
+    "Sessions vows to 'work for' Trump endorsement",
+    "Trump heads to Louisiana to hold rally"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"You Must Never Vote for Bloomberg\"\n\"Trump, Macron to meet after French president criticized NATO\"\n\"In reversal, Mulvaney says he won't sue over impeachment probe subpoena\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"'No truth whatsoever': Nikki Haley denies rumors that she's gunning for Pence's position\"\n\"Movie nights, baseball, phone calls: How Trump is boosting GOP unity in impeachment inquiry\"\n\"Republicans Know Trump Is Innocent They're Trying to Figure Out Why\"\n\"'A big fan': Trump welcomes Turkey's Erdogan despite bipartisan concern over Syria attack\"\n\"Sessions vows to 'work for' Trump endorsement\"\n\"Trump heads to Louisiana to hold rally\"\n\n[Candidate News Title]\n\"Tense TV: CNN's Blitzer asks Kellyanne Conway about husband\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In reading the article about CNN's Blitzer interviewing Kellyanne Conway, the user is likely to expect an exploration of the dynamics between Conway and her husband, who has been publicly critical of Trump. The piece may address Conway's responses to questions about her personal and professional life, particularly in relation to her political affiliations and the current climate in the GOP. Additionally, it could touch on the broader implications of such personal conflicts in the context of Trump's influence within the party. Overall, the article is likely to provide insights into the complexities of political allegiance amidst familial ties.",
+  "model": "gpt-4o-mini"
+}

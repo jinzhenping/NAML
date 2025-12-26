@@ -1,0 +1,21 @@
+{
+  "user_id": 405,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 10,
+  "user_history": [
+    "20 Winter Wedding Color Schemes That Will Take Your Breath Away",
+    "Off-Road Diesel Truck Showdown: GMC Sierra 1500 AT4 vs. Ram 1500 Rebel",
+    "A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.",
+    "These are the best times to visit New York City",
+    "We tried every single appetizer at Olive Garden and ranked them from worst to best",
+    "Divers salvage 100-year-old liquor from WWI shipwreck",
+    "17 restaurants that will be open on Thanksgiving",
+    "Here's How To Score Buy One Get One Free Whoppers From Burger King",
+    "This is Chick-fil-A's most-ordered menu item",
+    "Stunning photos of 27 places around the world that you should visit before they disappear forever"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"20 Winter Wedding Color Schemes That Will Take Your Breath Away\"\n\"Off-Road Diesel Truck Showdown: GMC Sierra 1500 AT4 vs. Ram 1500 Rebel\"\n\"A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.\"\n\"These are the best times to visit New York City\"\n\"We tried every single appetizer at Olive Garden and ranked them from worst to best\"\n\"Divers salvage 100-year-old liquor from WWI shipwreck\"\n\"17 restaurants that will be open on Thanksgiving\"\n\"Here's How To Score Buy One Get One Free Whoppers From Burger King\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"Stunning photos of 27 places around the world that you should visit before they disappear forever\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read \"Opinion: Colin Kaepernick is about to get what he deserves: a chance,\" you might expect an analysis of Kaepernick's career and the circumstances surrounding his return to professional football. The article could explore his past controversies and activism, particularly regarding social justice, while discussing the implications of his potential signing with an NFL team. It may also examine public opinion on Kaepernick, highlighting differing perspectives on his impact in the league and broader society. Overall, the piece is likely to present a balanced view of his situation and future prospects.",
+  "model": "gpt-4o-mini"
+}

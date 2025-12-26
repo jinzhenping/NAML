@@ -1,0 +1,21 @@
+{
+  "user_id": 454,
+  "candidate_news_id": "N72229",
+  "candidate_title": "Here's How to Season a Turkey So It Actually Tastes Like Something",
+  "user_history_count": 10,
+  "user_history": [
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "Justice Dept. trying to finish report on Russia probe before Thanksgiving",
+    "Donald Trump's second term is becoming more likely",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "The Trump-era realignment is a death sentence for the GOP",
+    "Europeans look to China as global partner, shun Trump's US",
+    "Republicans are throwing Giuliani under the bus. But there's a problem.",
+    "18 things flight attendants wish you would stop doing",
+    "'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"Justice Dept. trying to finish report on Russia probe before Thanksgiving\"\n\"Donald Trump's second term is becoming more likely\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"The Trump-era realignment is a death sentence for the GOP\"\n\"Europeans look to China as global partner, shun Trump's US\"\n\"Republicans are throwing Giuliani under the bus. But there's a problem.\"\n\"18 things flight attendants wish you would stop doing\"\n\"'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint\"\n\n[Candidate News Title]\n\"Here's How to Season a Turkey So It Actually Tastes Like Something\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The user is likely expecting to read a practical guide on how to season a turkey effectively, ensuring the dish is flavorful and appealing. The article may provide insights into various seasoning techniques, including the use of herbs, spices, and marinades, as well as tips for preparation and cooking methods. Additionally, the piece could highlight common mistakes to avoid when seasoning turkey, offering readers a comprehensive approach to enhancing the taste of this traditional dish. Overall, the focus will be on achieving a well-seasoned turkey that stands out during holiday meals.",
+  "model": "gpt-4o-mini"
+}

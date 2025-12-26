@@ -1,0 +1,21 @@
+{
+  "user_id": 985,
+  "candidate_news_id": "N38861",
+  "candidate_title": "The week in entertainment history: Nov. 10-16",
+  "user_history_count": 10,
+  "user_history": [
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'",
+    "Salmon Recalled In Michigan",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned",
+    "Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'",
+    "America's Largest Home Also Has the Most Amazing Christmas Decorations",
+    "Dad thought he dressed toddler daughter in a hat, but he was hilariously wrong",
+    "Everyday heroes step up to help lone Waffle House employee"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'\"\n\"Salmon Recalled In Michigan\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned\"\n\"Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'\"\n\"America's Largest Home Also Has the Most Amazing Christmas Decorations\"\n\"Dad thought he dressed toddler daughter in a hat, but he was hilariously wrong\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\n[Candidate News Title]\n\"The week in entertainment history: Nov. 10-16\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The week in entertainment history: Nov. 10-16,\" you may expect a concise overview of significant events that occurred in the entertainment industry during that week across various years. The article is likely to highlight notable celebrity birthdays, important film or music releases, and memorable award show moments. Additionally, it might touch upon influential cultural milestones or controversies that have shaped the entertainment landscape. This retrospective could provide a blend of trivia and historical context, appealing to your interest in pop culture and human-interest stories.",
+  "model": "gpt-4o-mini"
+}

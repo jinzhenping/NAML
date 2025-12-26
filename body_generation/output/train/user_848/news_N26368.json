@@ -1,0 +1,21 @@
+{
+  "user_id": 848,
+  "candidate_news_id": "N26368",
+  "candidate_title": "Roommate, her boyfriend charged in death of missing Atlanta student",
+  "user_history_count": 10,
+  "user_history": [
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "National Rifle Association Responds to Democratic Victory in Virginia, Warns of \"Life Under a Distant Tycoon's Thumb\"",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "Trump to spend $300 million on border wall \"quality assurance\"",
+    "Plow Clears Snow-Covered Sidewalk in Green Bay",
+    "In Louisiana, Trump Attacks 'Deranged' Impeachment Inquiry and 'Radical' Governor",
+    "Excited Puppy Experiences First Snow in Southern Minnesota",
+    "Top diplomat in Ukraine directly ties Trump to quid pro quo",
+    "French leader laments NATO's 'brain death' due to US absence",
+    "Grading all 32 NFL teams heading into the last eight weeks of the 2019 season"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"National Rifle Association Responds to Democratic Victory in Virginia, Warns of \"Life Under a Distant Tycoon's Thumb\"\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"Trump to spend $300 million on border wall \"quality assurance\"\"\n\"Plow Clears Snow-Covered Sidewalk in Green Bay\"\n\"In Louisiana, Trump Attacks 'Deranged' Impeachment Inquiry and 'Radical' Governor\"\n\"Excited Puppy Experiences First Snow in Southern Minnesota\"\n\"Top diplomat in Ukraine directly ties Trump to quid pro quo\"\n\"French leader laments NATO's 'brain death' due to US absence\"\n\"Grading all 32 NFL teams heading into the last eight weeks of the 2019 season\"\n\n[Candidate News Title]\n\"Roommate, her boyfriend charged in death of missing Atlanta student\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent charges brought against a roommate and her boyfriend in connection with the death of a missing Atlanta student. It may provide details about the circumstances surrounding the student's disappearance, the investigation that led to the charges, and any evidence that authorities have gathered. Additionally, the piece could explore the implications of this case within the community and its impact on discussions surrounding safety and crime. The article is expected to clarify the legal proceedings that are forthcoming as this case develops.",
+  "model": "gpt-4o-mini"
+}

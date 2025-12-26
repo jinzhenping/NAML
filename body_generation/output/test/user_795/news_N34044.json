@@ -1,0 +1,20 @@
+{
+  "user_id": 795,
+  "candidate_news_id": "N34044",
+  "candidate_title": "This is it, this is the luckiest break in the history of golf",
+  "user_history_count": 9,
+  "user_history": [
+    "These Photos Prove Jennifer Aniston Has Barely Aged Over The Years",
+    "'DWTS' Recap: A Fan Favorite Goes Home In Yet Another Crazy Elimination",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Celebrity kids then and now: See how they've grown",
+    "Celebrity Headshots from Before They Were Famous",
+    "Best country music albums of all time",
+    "Top 100 country songs of all time",
+    "Fashion hits and misses from the 2019 Country Music Association Awards",
+    "The 2019 CMAs Ignored Female Artists Where it Really Mattered"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"These Photos Prove Jennifer Aniston Has Barely Aged Over The Years\"\n\"'DWTS' Recap: A Fan Favorite Goes Home In Yet Another Crazy Elimination\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Celebrity kids then and now: See how they've grown\"\n\"Celebrity Headshots from Before They Were Famous\"\n\"Best country music albums of all time\"\n\"Top 100 country songs of all time\"\n\"Fashion hits and misses from the 2019 Country Music Association Awards\"\n\"The 2019 CMAs Ignored Female Artists Where it Really Mattered\"\n\"\"\n\n[Candidate News Title]\n\"This is it, this is the luckiest break in the history of golf\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"This is it, this is the luckiest break in the history of golf,\" you might expect to read an exploration of a particularly notable event in golf history, possibly highlighting a significant moment where luck played a crucial role in a game-changing scenario. The article may detail the circumstances surrounding this break, including the players involved and the impact it had on the outcome of a match or tournament. It could also provide context by comparing this event to other memorable moments in golf, illustrating how luck can influence a sport that is often seen as reliant on skill.",
+  "model": "gpt-4o-mini"
+}

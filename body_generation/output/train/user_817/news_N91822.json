@@ -1,0 +1,21 @@
+{
+  "user_id": 817,
+  "candidate_news_id": "N91822",
+  "candidate_title": "Opinion: NFL owes Colin Kaepernick a fair shot at weekend workout in Atlanta",
+  "user_history_count": 10,
+  "user_history": [
+    "Chiefs QB Patrick Mahomes ruled out for Sunday Night Football vs. Packers",
+    "NFL trade tracker: Only one deal completed as buzz fizzles out at deadline",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "32 things we learned from Week 9 of NFL season",
+    "Will Freddie Kitchens be one and done in Cleveland?",
+    "Patriots wanted a test. Now, they need some answers",
+    "Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory",
+    "691,145 Californians left last year: What state did they go to?",
+    "Bill Polian: 'I was wrong' for saying Lamar Jackson should be a wide receiver in NFL",
+    "Eric Bledsoe forgot the rules of basketball on this inbound play"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chiefs QB Patrick Mahomes ruled out for Sunday Night Football vs. Packers\"\n\"NFL trade tracker: Only one deal completed as buzz fizzles out at deadline\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"32 things we learned from Week 9 of NFL season\"\n\"Will Freddie Kitchens be one and done in Cleveland?\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory\"\n\"691,145 Californians left last year: What state did they go to?\"\n\"Bill Polian: 'I was wrong' for saying Lamar Jackson should be a wide receiver in NFL\"\n\"Eric Bledsoe forgot the rules of basketball on this inbound play\"\n\n[Candidate News Title]\n\"Opinion: NFL owes Colin Kaepernick a fair shot at weekend workout in Atlanta\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Opinion: NFL owes Colin Kaepernick a fair shot at weekend workout in Atlanta,\" you can expect a discussion surrounding Kaepernick's ongoing relationship with the NFL and the implications of his past protests. The article may argue that despite his controversial history, Kaepernick deserves another opportunity to showcase his skills in a workout setting, potentially examining the broader context of player treatment and the league's response to social issues. The piece is likely to include opinions from various commentators and insights into the current state of player evaluations within the league.",
+  "model": "gpt-4o-mini"
+}

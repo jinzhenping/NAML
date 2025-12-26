@@ -1,0 +1,20 @@
+{
+  "user_id": 507,
+  "candidate_news_id": "N59297",
+  "candidate_title": "The Coolest Car Lamborghini Never Made Is Up For Sale",
+  "user_history_count": 9,
+  "user_history": [
+    "15 of the best female country music stars of all time",
+    "20 of the Best 3-Row SUVs for 2020",
+    "Massive American Dream mall to open but will shoppers come?",
+    "Future Jeep Grand Cherokee, Wagoneer, Ram Plans On Track",
+    "Exclusive: 2021 Kia Optima Could Look Like This",
+    "2021 Chevy Tahoe, Suburban To Debut On December 10",
+    "C8 Corvette Dyno Test Follow-Up: What Really Happened",
+    "Top 100 country songs of all time",
+    "The Full-Size 2022 Jeep Grand Wagoneer SUV Is Finally On Its Way"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"15 of the best female country music stars of all time\"\n\"20 of the Best 3-Row SUVs for 2020\"\n\"Massive American Dream mall to open but will shoppers come?\"\n\"Future Jeep Grand Cherokee, Wagoneer, Ram Plans On Track\"\n\"Exclusive: 2021 Kia Optima Could Look Like This\"\n\"2021 Chevy Tahoe, Suburban To Debut On December 10\"\n\"C8 Corvette Dyno Test Follow-Up: What Really Happened\"\n\"Top 100 country songs of all time\"\n\"The Full-Size 2022 Jeep Grand Wagoneer SUV Is Finally On Its Way\"\n\"\"\n\n[Candidate News Title]\n\"The Coolest Car Lamborghini Never Made Is Up For Sale\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on \"The Coolest Car Lamborghini Never Made Is Up For Sale,\" they may expect to read about an intriguing vehicle prototype or concept that Lamborghini developed but ultimately chose not to produce. The article is likely to provide details about the car's design, specifications, and the reasons behind its discontinuation. Additionally, it could explore the car's unique features and its significance within automotive history, potentially appealing to the user's interest in both cars and the automotive industry. Furthermore, the piece may discuss its current availability for purchase and the implications of owning such a rare model.",
+  "model": "gpt-4o-mini"
+}

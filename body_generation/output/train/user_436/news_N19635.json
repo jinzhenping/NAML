@@ -1,0 +1,21 @@
+{
+  "user_id": 436,
+  "candidate_news_id": "N19635",
+  "candidate_title": "2020 Kia Telluride Pros and Cons Review: The Heartland Kia",
+  "user_history_count": 10,
+  "user_history": [
+    "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+    "Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Longtime pastor of Baptist church in Chicago resigns after confessing he sexually abused a relative decades ago: 'I own my sin'",
+    "Holocaust survivor under guard amid death threats",
+    "Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "Even 2 Minutes of Exercise a Week May Lessen Risk of Dementia",
+    "Texas officer who shot woman in her home sometimes had 'tunnel vision,' review says",
+    "For 53 million Americans in low-wage jobs, a difficult road out"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Longtime pastor of Baptist church in Chicago resigns after confessing he sexually abused a relative decades ago: 'I own my sin'\"\n\"Holocaust survivor under guard amid death threats\"\n\"Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Even 2 Minutes of Exercise a Week May Lessen Risk of Dementia\"\n\"Texas officer who shot woman in her home sometimes had 'tunnel vision,' review says\"\n\"For 53 million Americans in low-wage jobs, a difficult road out\"\n\n[Candidate News Title]\n\"2020 Kia Telluride Pros and Cons Review: The Heartland Kia\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"2020 Kia Telluride Pros and Cons Review: The Heartland Kia\" is likely to provide a balanced analysis of the Kia Telluride, focusing on its strengths and weaknesses as a midsize SUV. Readers may expect to find an overview of the vehicle's performance, comfort, technology features, and safety ratings, along with comparisons to other vehicles in its class. The review could also highlight user experiences or expert opinions, helping potential buyers make informed decisions about whether the Telluride meets their needs.",
+  "model": "gpt-4o-mini"
+}

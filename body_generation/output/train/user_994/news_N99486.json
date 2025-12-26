@@ -1,0 +1,20 @@
+{
+  "user_id": 994,
+  "candidate_news_id": "N99486",
+  "candidate_title": "The best independent bakery in every state",
+  "user_history_count": 9,
+  "user_history": [
+    "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+    "High school sports with highest concussion rates revealed in new study",
+    "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+    "12 burning questions for Nationals-Astros World Series",
+    "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+    "Best Photos of the World Series",
+    "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Comics - '9 to 5' by Harley Schwadron"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"\"\n\n[Candidate News Title]\n\"The best independent bakery in every state\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The best independent bakery in every state,\" the user may expect to find a comprehensive overview of notable independent bakeries across the United States. The piece is likely to highlight unique offerings from each bakery, such as signature pastries, artisanal breads, and local specialties that set them apart. Readers may also anticipate insights into the bakery's history, its impact on the local community, and perhaps interviews with the owners or bakers. This exploration could provide a valuable resource for anyone interested in discovering local culinary gems.",
+  "model": "gpt-4o-mini"
+}

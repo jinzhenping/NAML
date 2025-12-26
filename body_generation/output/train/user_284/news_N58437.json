@@ -1,0 +1,21 @@
+{
+  "user_id": 284,
+  "candidate_news_id": "N58437",
+  "candidate_title": "Russell Wilson, Richard Sherman swap jerseys despite supposed rift",
+  "user_history_count": 10,
+  "user_history": [
+    "A 911 supervisor was streaming Netflix at work when dispatchers mishandled a shooting call",
+    "The News In Cartoons",
+    "Right now, Kyler Murray's Heisman vote would 'probably be Joe Burrow'",
+    "Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math",
+    "Seahawks: Renewed rivalry with 49ers? Not so fast",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Voters derailed rail mass transit in 1970 -- and again Tuesday",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Bannon says Stone was Trump campaign link to WikiLeaks"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A 911 supervisor was streaming Netflix at work when dispatchers mishandled a shooting call\"\n\"The News In Cartoons\"\n\"Right now, Kyler Murray's Heisman vote would 'probably be Joe Burrow'\"\n\"Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math\"\n\"Seahawks: Renewed rivalry with 49ers? Not so fast\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Voters derailed rail mass transit in 1970 -- and again Tuesday\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Bannon says Stone was Trump campaign link to WikiLeaks\"\n\n[Candidate News Title]\n\"Russell Wilson, Richard Sherman swap jerseys despite supposed rift\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to learn about the recent interaction between Russell Wilson and Richard Sherman, particularly focusing on their decision to swap jerseys despite any perceived tensions or rifts between them. The piece may provide context on their past relationship, including highlights from their time together on the Seattle Seahawks, and explore how this gesture reflects their current standing. Additionally, it could delve into the significance of this exchange in the context of team dynamics and fan reactions, though the specifics of their conversations or motivations behind the swap remain uncertain.",
+  "model": "gpt-4o-mini"
+}

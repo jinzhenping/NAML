@@ -1,0 +1,21 @@
+{
+  "user_id": 734,
+  "candidate_news_id": "N117105",
+  "candidate_title": "Roger Stone Is Convicted of Impeding Investigators in a Bid to Protect Trump",
+  "user_history_count": 10,
+  "user_history": [
+    "Former President Jimmy Carter suffers pelvic fracture after falling in Georgia home",
+    "Meghan Markle and Prince Harry are bringing Archie on his first trip to the US over Thanksgiving",
+    "42 Photos of Meghan Markle That You Forgot Existed",
+    "Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post",
+    "12 Things U.S. Presidents Have to Pay for on Their Own",
+    "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "Prince Harry and Meghan Markle are taking a royal respite",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "Meghan Markle and Prince Harry Reunite with Kate Middleton and Prince William for Remembrance Service"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former President Jimmy Carter suffers pelvic fracture after falling in Georgia home\"\n\"Meghan Markle and Prince Harry are bringing Archie on his first trip to the US over Thanksgiving\"\n\"42 Photos of Meghan Markle That You Forgot Existed\"\n\"Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post\"\n\"12 Things U.S. Presidents Have to Pay for on Their Own\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"Prince Harry and Meghan Markle are taking a royal respite\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"Meghan Markle and Prince Harry Reunite with Kate Middleton and Prince William for Remembrance Service\"\n\n[Candidate News Title]\n\"Roger Stone Is Convicted of Impeding Investigators in a Bid to Protect Trump\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Roger Stone Is Convicted of Impeding Investigators in a Bid to Protect Trump,\" you may expect to read about the details surrounding Roger Stone's conviction, including the charges he faced and the implications of his actions on the political landscape. The article is likely to provide context about Stone's relationship with former President Trump and how this conviction fits into the broader inquiry into the Trump administration's dealings. Additionally, it may explore the potential consequences for Stone and any reactions from political figures or analysts regarding this development.",
+  "model": "gpt-4o-mini"
+}

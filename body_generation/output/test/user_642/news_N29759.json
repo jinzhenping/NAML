@@ -1,0 +1,20 @@
+{
+  "user_id": 642,
+  "candidate_news_id": "N29759",
+  "candidate_title": "Santa Clarita stunned as school violence comes to their community: 'Now it's us'",
+  "user_history_count": 9,
+  "user_history": [
+    "Celebs turning 60 in 2019",
+    "NASCAR driver's car got flipped over and then stuck the landing in wild wreck at Talladega",
+    "How Often Should You Change Synthetic Oil?",
+    "He pleaded guilty to cocaine possession and was sentenced to 15 years in prison. It turned out to be powdered milk.",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "2 dead, including suspected gunman, 1 wounded in Long Beach bar shooting",
+    "Brush fire near Getty Center prompts mandatory evacuations",
+    "Early Morning Earthquakes Rattle Ventura and Los Angeles Counties",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebs turning 60 in 2019\"\n\"NASCAR driver's car got flipped over and then stuck the landing in wild wreck at Talladega\"\n\"How Often Should You Change Synthetic Oil?\"\n\"He pleaded guilty to cocaine possession and was sentenced to 15 years in prison. It turned out to be powdered milk.\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"2 dead, including suspected gunman, 1 wounded in Long Beach bar shooting\"\n\"Brush fire near Getty Center prompts mandatory evacuations\"\n\"Early Morning Earthquakes Rattle Ventura and Los Angeles Counties\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"\"\n\n[Candidate News Title]\n\"Santa Clarita stunned as school violence comes to their community: 'Now it's us'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a recent incident of school violence that has affected the Santa Clarita community, highlighting the implications for local residents and schools. It may outline the circumstances surrounding the event, including any details about the individuals involved and the community's response to an incident that many may have thought was unlikely in their area. The piece could also explore the broader context of school safety and measures being taken in response to such events, emphasizing how this particular situation has altered perceptions within the community.",
+  "model": "gpt-4o-mini"
+}

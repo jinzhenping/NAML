@@ -1,0 +1,21 @@
+{
+  "user_id": 528,
+  "candidate_news_id": "N96470",
+  "candidate_title": "ICE grabs former Irish Republican Army terrorist in Massachusetts",
+  "user_history_count": 10,
+  "user_history": [
+    "Walmart and Kroger Undercut Drugstore Chains' Prices by up to 50%",
+    "Delta Air Lines May Pull Out of Alitalia Bidding, Corriere Says",
+    "Help! My Daughter Stole My Granddaughter's College Fund.",
+    "Open all hours: the best 24/7 restaurant in every state",
+    "McDonald's Fires CEO Steve Easterbrook After Relationship With Employee",
+    "16 Effective Ways To Trick Yourself Into Saving Money",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Trader Joe's has been hiding stuffed animals in store aisles for years   here's why",
+    "Trader Joe's has been hiding stuffed animals in store aisles for years   here's why",
+    "17 photos that show the ugly truth of living in a tiny house"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Walmart and Kroger Undercut Drugstore Chains' Prices by up to 50%\"\n\"Delta Air Lines May Pull Out of Alitalia Bidding, Corriere Says\"\n\"Help! My Daughter Stole My Granddaughter's College Fund.\"\n\"Open all hours: the best 24/7 restaurant in every state\"\n\"McDonald's Fires CEO Steve Easterbrook After Relationship With Employee\"\n\"16 Effective Ways To Trick Yourself Into Saving Money\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Trader Joe's has been hiding stuffed animals in store aisles for years   here's why\"\n\"Trader Joe's has been hiding stuffed animals in store aisles for years   here's why\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\n[Candidate News Title]\n\"ICE grabs former Irish Republican Army terrorist in Massachusetts\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent arrest of a former member of the Irish Republican Army (IRA) in Massachusetts by Immigration and Customs Enforcement (ICE). Readers may expect an overview of the circumstances surrounding the arrest, including the individual's background and any potential implications related to immigration laws or security concerns. The piece could also explore the historical context of the IRA and its activities, as well as how this arrest fits into broader law enforcement trends regarding the monitoring of individuals with ties to militant groups. Overall, the article is likely to provide a factual account of the event while situating it within ongoing discussions about national security and immigration enforcement.",
+  "model": "gpt-4o-mini"
+}

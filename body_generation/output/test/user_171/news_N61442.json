@@ -1,0 +1,21 @@
+{
+  "user_id": 171,
+  "candidate_news_id": "N61442",
+  "candidate_title": "Ukraine 'invisible' as impeachment hearings focus on Washington drama",
+  "user_history_count": 10,
+  "user_history": [
+    "Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'",
+    "Kentucky man dies trying to save sons from Florida rip current during family trip",
+    "Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Pregnant Florida woman uses AR-15 to fatally shoot armed intruder",
+    "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+    "A controversial comedian and a former child star are eliminated on 'Masked Singer'",
+    "The Queen Had This Hilarious Reaction to (Unnecessary) Mouth-to-Mouth Resuscitation",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'\"\n\"Kentucky man dies trying to save sons from Florida rip current during family trip\"\n\"Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Pregnant Florida woman uses AR-15 to fatally shoot armed intruder\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"A controversial comedian and a former child star are eliminated on 'Masked Singer'\"\n\"The Queen Had This Hilarious Reaction to (Unnecessary) Mouth-to-Mouth Resuscitation\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\n[Candidate News Title]\n\"Ukraine 'invisible' as impeachment hearings focus on Washington drama\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the current focus of impeachment hearings in Washington, specifically how they overshadow critical international issues, such as the ongoing situation in Ukraine. Readers may expect an analysis of the political dynamics at play, highlighting how the impeachment process could impact U.S. foreign policy and public attention towards global conflicts. Additionally, the piece might explore the implications of this limited focus on Ukraine, which may be perceived as a significant concern among policymakers and the public alike.",
+  "model": "gpt-4o-mini"
+}

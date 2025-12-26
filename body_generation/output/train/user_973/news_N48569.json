@@ -1,0 +1,21 @@
+{
+  "user_id": 973,
+  "candidate_news_id": "N48569",
+  "candidate_title": "Russell Crowe's property scorched by Australian bushfires",
+  "user_history_count": 10,
+  "user_history": [
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "New Delhi's toxic, polluted air chokes city's 20 million people, and the haze can be seen from space",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Survivor pays tribute to 'icon' Rudy Boesch on show",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"New Delhi's toxic, polluted air chokes city's 20 million people, and the haze can be seen from space\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Survivor pays tribute to 'icon' Rudy Boesch on show\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\n[Candidate News Title]\n\"Russell Crowe's property scorched by Australian bushfires\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent bushfires in Australia and their impact on various properties, including that of actor Russell Crowe. Readers may expect to learn about the extent of the damage caused by the fires, with specific details regarding the affected areas and recovery efforts. The piece could also touch on broader themes related to climate change and the increasing frequency of such natural disasters. Additionally, it may highlight Crowe’s response to the incident and any relevant comments he has made about environmental issues, although this is not certain.",
+  "model": "gpt-4o-mini"
+}

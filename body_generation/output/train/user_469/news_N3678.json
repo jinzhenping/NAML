@@ -1,0 +1,21 @@
+{
+  "user_id": 469,
+  "candidate_news_id": "N3678",
+  "candidate_title": "Dinosaurs Lived on the Other Side of the Milky Way, NASA Scientist Shows",
+  "user_history_count": 10,
+  "user_history": [
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Jenelle Evans Obtains Temporary Restraining Order Against David Eason",
+    "Allison Ball defeats Micheal Bowman to win reelection as Kentucky's state treasurer",
+    "Kroger is rebranding with a new logo and slogan",
+    "Stars   They're Just Like Us!",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "20 Fast Food Restaurants Then and Now",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Jenelle Evans Obtains Temporary Restraining Order Against David Eason\"\n\"Allison Ball defeats Micheal Bowman to win reelection as Kentucky's state treasurer\"\n\"Kroger is rebranding with a new logo and slogan\"\n\"Stars   They're Just Like Us!\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"20 Fast Food Restaurants Then and Now\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\n[Candidate News Title]\n\"Dinosaurs Lived on the Other Side of the Milky Way, NASA Scientist Shows\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Dinosaurs Lived on the Other Side of the Milky Way, NASA Scientist Shows,\" you can expect a discussion around recent scientific findings regarding the existence of dinosaurs beyond Earth. The article may delve into the research conducted by NASA scientists, exploring how these findings challenge traditional views of dinosaur habitats and evolutionary history. Additionally, it is likely to include insights into the implications of such discoveries for our understanding of life in the universe, along with any relevant astronomical data or studies supporting these claims.",
+  "model": "gpt-4o-mini"
+}

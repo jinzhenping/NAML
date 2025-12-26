@@ -1,0 +1,21 @@
+{
+  "user_id": 648,
+  "candidate_news_id": "N63391",
+  "candidate_title": "A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000",
+  "user_history_count": 10,
+  "user_history": [
+    "Bust of Orville Wright found on North Carolina beach",
+    "Bay Area earthquakes struck on unusual section of San Andreas fault",
+    "Americans now need at least $500,000 a year to enter the top 1 percent",
+    "The 10 Hardest Math Problems That Remain Unsolved",
+    "'Priceless' finds that turned out to be worthless",
+    "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home",
+    "The world's cutest homes are beyond beautiful",
+    "Video captures terrifying moment woman slips at Grand Canyon"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bust of Orville Wright found on North Carolina beach\"\n\"Bay Area earthquakes struck on unusual section of San Andreas fault\"\n\"Americans now need at least $500,000 a year to enter the top 1 percent\"\n\"The 10 Hardest Math Problems That Remain Unsolved\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Containment now 60% on Kincade Fire in wine country as thousands of evacuees return home\"\n\"The world's cutest homes are beyond beautiful\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\n[Candidate News Title]\n\"A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the unique opportunity presented by a decommissioned nuclear missile complex in Arizona that is currently on the market for $400,000. Readers can expect details about the history and significance of the site, including its operational past and the reasons for its decommissioning. There may also be insights into the potential uses for such a property, whether for investment, restoration, or as a historical landmark. Additionally, the article could explore the implications of purchasing a site with military heritage, which may raise questions about its future and maintenance.",
+  "model": "gpt-4o-mini"
+}

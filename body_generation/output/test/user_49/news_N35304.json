@@ -1,0 +1,21 @@
+{
+  "user_id": 49,
+  "candidate_news_id": "N35304",
+  "candidate_title": "Raise Billions From Billionaires? Tax Experts Say It's Not That Simple",
+  "user_history_count": 10,
+  "user_history": [
+    "Kyoto's Gion neighborhood cracks down on photography",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Ben Affleck's Relapse Shows How Difficult Alcoholism Recovery Really Is",
+    "When Costars Clash: 13 Onscreen Pairs Who Were Allegedly Feuding Offscreen",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "The world's largest nuclear power producer is melting down",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "College gymnast dies following training accident in Connecticut"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kyoto's Gion neighborhood cracks down on photography\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Ben Affleck's Relapse Shows How Difficult Alcoholism Recovery Really Is\"\n\"When Costars Clash: 13 Onscreen Pairs Who Were Allegedly Feuding Offscreen\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"The world's largest nuclear power producer is melting down\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"College gymnast dies following training accident in Connecticut\"\n\n[Candidate News Title]\n\"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\" is likely to explore the complexities and nuances surrounding taxation of the ultra-wealthy. Readers can expect an analysis of current tax policies and proposals aimed at generating significant revenue from billionaires, as well as the potential challenges and implications tied to such measures. The piece may delve into differing expert opinions on the feasibility and effectiveness of these taxation strategies, highlighting both economic and ethical considerations in the ongoing debate about wealth distribution and fiscal responsibility.",
+  "model": "gpt-4o-mini"
+}

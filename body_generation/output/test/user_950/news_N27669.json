@@ -1,0 +1,21 @@
+{
+  "user_id": 950,
+  "candidate_news_id": "N27669",
+  "candidate_title": "The Coolest Way to See NYC Is in a Vintage Car From the Roaring '20s on This Midtown Tour",
+  "user_history_count": 10,
+  "user_history": [
+    "25 Holiday Casseroles No One Would Guess Were Healthy",
+    "School threw out hot lunches of students with over $15 debt",
+    "THEN AND NOW: What all your favorite '90s stars are doing today",
+    "I moved from the US to the UK. Here are the 8 things that surprised me the most.",
+    "Tourists needed in Venice after flooding, locals say",
+    "Eric Reid likens Colin Kaepernick workout to PR stunt: 'I'll believe it when I see it'",
+    "Beat the crowds at these abandoned U.S. national parks",
+    "Twinkies Cereal coming to a grocer near you",
+    "I wanted to learn to swim before I turned 30. Easier said than done.",
+    "Dwayne Johnson Announces 'Black Adam' 2021 Release Date"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"25 Holiday Casseroles No One Would Guess Were Healthy\"\n\"School threw out hot lunches of students with over $15 debt\"\n\"THEN AND NOW: What all your favorite '90s stars are doing today\"\n\"I moved from the US to the UK. Here are the 8 things that surprised me the most.\"\n\"Tourists needed in Venice after flooding, locals say\"\n\"Eric Reid likens Colin Kaepernick workout to PR stunt: 'I'll believe it when I see it'\"\n\"Beat the crowds at these abandoned U.S. national parks\"\n\"Twinkies Cereal coming to a grocer near you\"\n\"I wanted to learn to swim before I turned 30. Easier said than done.\"\n\"Dwayne Johnson Announces 'Black Adam' 2021 Release Date\"\n\n[Candidate News Title]\n\"The Coolest Way to See NYC Is in a Vintage Car From the Roaring '20s on This Midtown Tour\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a detailed description of a unique tour experience in New York City, focusing on the charm of exploring the city in a vintage car reminiscent of the Roaring '20s. The piece may outline the specific routes taken during the tour, notable landmarks visited, and the historical context of the vehicles used. Additionally, it could provide insights into the overall ambiance of the experience, appealing to those interested in both history and unconventional travel. The article is likely to emphasize the nostalgic elements of the tour while hinting at the potential for a memorable city exploration.",
+  "model": "gpt-4o-mini"
+}

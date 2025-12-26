@@ -1,0 +1,21 @@
+{
+  "user_id": 886,
+  "candidate_news_id": "N88472",
+  "candidate_title": "Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'",
+  "user_history_count": 10,
+  "user_history": [
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Justin Theroux Reaches Out to Ex Jennifer Aniston on Instagram for a Good Cause",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "15 of Princess Diana's best winter fashion looks",
+    "Britney Spears' Abs Are on Full Display In Her Newest Workout Video",
+    "Jessica Simpson's latest Birdie Mae post suggests she's done having kids, plus more news",
+    "Mother charged with child neglect after child found wandering",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Man who inherited 6 figures shares advice he'd give his younger self",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Justin Theroux Reaches Out to Ex Jennifer Aniston on Instagram for a Good Cause\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"15 of Princess Diana's best winter fashion looks\"\n\"Britney Spears' Abs Are on Full Display In Her Newest Workout Video\"\n\"Jessica Simpson's latest Birdie Mae post suggests she's done having kids, plus more news\"\n\"Mother charged with child neglect after child found wandering\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\n[Candidate News Title]\n\"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Lisa Vanderpump's departure from \"The Real Housewives of Beverly Hills,\" the user is likely expecting to read about her reasons for leaving the show, particularly her desire to distance herself from negativity and drama. The piece may elaborate on her experiences within the reality TV landscape and how they influenced her decision. Additionally, it could provide insights into her current projects or personal life, offering a broader context for her choice to step away from the series.",
+  "model": "gpt-4o-mini"
+}

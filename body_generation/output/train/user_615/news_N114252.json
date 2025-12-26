@@ -1,0 +1,21 @@
+{
+  "user_id": 615,
+  "candidate_news_id": "N114252",
+  "candidate_title": "Suspect arrested in murder of 6-year-old girl who was shot while asleep in her home",
+  "user_history_count": 10,
+  "user_history": [
+    "Mama June enters plea in cocaine case...",
+    "Former Teen Mom 2 Star Jenelle Evans' Ex Nathan Griffith Arrested, Charged with DWI",
+    "Todd and Julie Chrisley Fire Back at Estranged Daughter Lindsie's 'Dr. Phil' Interview (Exclusive)",
+    "7 changes coming to Social Security in 2020",
+    "Staying Friends! Hannah Brown Reacts to Tyler Cameron's Birthday Text",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Cornell student, 18, found dead in gorge after frat party, reports say",
+    "Rob Kardashian shows off incredible weight loss in new pic",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mama June enters plea in cocaine case...\"\n\"Former Teen Mom 2 Star Jenelle Evans' Ex Nathan Griffith Arrested, Charged with DWI\"\n\"Todd and Julie Chrisley Fire Back at Estranged Daughter Lindsie's 'Dr. Phil' Interview (Exclusive)\"\n\"7 changes coming to Social Security in 2020\"\n\"Staying Friends! Hannah Brown Reacts to Tyler Cameron's Birthday Text\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Cornell student, 18, found dead in gorge after frat party, reports say\"\n\"Rob Kardashian shows off incredible weight loss in new pic\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\n[Candidate News Title]\n\"Suspect arrested in murder of 6-year-old girl who was shot while asleep in her home\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to detail the recent arrest of a suspect in connection with the tragic murder of a 6-year-old girl who was shot while asleep in her home. Readers can expect to find information about the circumstances surrounding the incident, including any relevant details about the investigation and the community's response. Additionally, the piece may include background on the suspect, potential motives, and updates on legal proceedings. Overall, it appears to focus on the broader implications of such violent acts and the ongoing efforts to ensure community safety.",
+  "model": "gpt-4o-mini"
+}

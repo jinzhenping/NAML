@@ -1,0 +1,21 @@
+{
+  "user_id": 520,
+  "candidate_news_id": "N89210",
+  "candidate_title": "New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November",
+  "user_history_count": 10,
+  "user_history": [
+    "President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'",
+    "At home and in the Senate, here's the price Mitt Romney is paying for standing against Trump",
+    "Fact Checker: Trump's shiny new talking point about income growth",
+    "Billionaire's ugly divorce ignites battle over spectacular art trove",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "Biden drops to fourth among Iowa Democrats, new poll shows",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Far-reaching snowstorm may take shape over US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'\"\n\"At home and in the Senate, here's the price Mitt Romney is paying for standing against Trump\"\n\"Fact Checker: Trump's shiny new talking point about income growth\"\n\"Billionaire's ugly divorce ignites battle over spectacular art trove\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"Biden drops to fourth among Iowa Democrats, new poll shows\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Far-reaching snowstorm may take shape over US\"\n\n[Candidate News Title]\n\"New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a curated list of new movies and TV shows debuting on Netflix in November, highlighting a range of genres and themes to appeal to various viewing preferences. The content may include brief descriptions of notable titles, including original productions and popular licensed content, providing insights into their plots or themes. Additionally, it could discuss any significant trends in programming that reflect current viewer interests. Overall, readers may expect to gain a sense of what to look forward to in their upcoming streaming choices.",
+  "model": "gpt-4o-mini"
+}

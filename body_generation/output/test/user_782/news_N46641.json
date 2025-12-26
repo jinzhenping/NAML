@@ -1,0 +1,21 @@
+{
+  "user_id": 782,
+  "candidate_news_id": "N46641",
+  "candidate_title": "Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores",
+    "Bode Miller delivered his twin boys after midwife didn't make it time for the birth",
+    "Bureau of Land Management staff face relocation or resignation as agency moves West",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "4 reasons you shouldn't max out your 401(k)",
+    "Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\"",
+    "In Less Than a Decade, You Won't Be Able To Afford a Home in These Cities",
+    "'This win was for you': Josh Gordon shares emotional post about death of his brother",
+    "Top Putin aide named by MH17 airliner investigators",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores\"\n\"Bode Miller delivered his twin boys after midwife didn't make it time for the birth\"\n\"Bureau of Land Management staff face relocation or resignation as agency moves West\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\"\"\n\"In Less Than a Decade, You Won't Be Able To Afford a Home in These Cities\"\n\"'This win was for you': Josh Gordon shares emotional post about death of his brother\"\n\"Top Putin aide named by MH17 airliner investigators\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\n[Candidate News Title]\n\"Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent death of Anthony Grundy, a former North Carolina State basketball player and NBA athlete, who reportedly died in a stabbing incident. It may provide details about the circumstances surrounding his death, including any police statements or ongoing investigations. Additionally, the article could touch on Grundy's career highlights, his contributions to basketball, and reactions from the sports community regarding his untimely passing. The piece may also explore the implications of violence in sports-related contexts and community responses to such tragedies.",
+  "model": "gpt-4o-mini"
+}

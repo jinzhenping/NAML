@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 20,
+    "candidate_news_id": "N34044",
+    "candidate_title": "This is it, this is the luckiest break in the history of golf",
+    "user_history_count": 10,
+    "user_history": [
+      "Harley-Davidson halts production of new electric motorcycles",
+      "​20 Funny Things People in the 1970s Were Totally Guilty of Doing",
+      "Forde-Yard Dash: This is how bad the playoff picture can get",
+      "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+      "The 13 coolest   and creepiest   ghost towns around the world",
+      "Deer fatally attacks hunter who shot him",
+      "How To Open a Can Without a Can Opener",
+      "Patriots wanted a test. Now, they need some answers",
+      "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+      "'One in a million' deer captured on camera in Michigan woods"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Harley-Davidson halts production of new electric motorcycles\"\n\"​20 Funny Things People in the 1970s Were Totally Guilty of Doing\"\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"The 13 coolest   and creepiest   ghost towns around the world\"\n\"Deer fatally attacks hunter who shot him\"\n\"How To Open a Can Without a Can Opener\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n[Candidate News Title]\n\"This is it, this is the luckiest break in the history of golf\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"This is it, this is the luckiest break in the history of golf\" is likely to explore a significant event or moment in golf history that is characterized by an unexpected stroke of luck, potentially involving a well-known player or tournament. Readers may expect to learn about the circumstances surrounding this \"luckiest break,\" including details about the setting, the reactions of those involved, and its impact on the outcome of a game or match. The article may also include insights into how this incident is perceived within the golfing community and its significance in the broader context of the sport.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 20,
+    "candidate_news_id": "N43000",
+    "candidate_title": "Highway blockade reveals splits in Hong Kong protest movement",
+    "user_history_count": 10,
+    "user_history": [
+      "Harley-Davidson halts production of new electric motorcycles",
+      "​20 Funny Things People in the 1970s Were Totally Guilty of Doing",
+      "Forde-Yard Dash: This is how bad the playoff picture can get",
+      "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+      "The 13 coolest   and creepiest   ghost towns around the world",
+      "Deer fatally attacks hunter who shot him",
+      "How To Open a Can Without a Can Opener",
+      "Patriots wanted a test. Now, they need some answers",
+      "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+      "'One in a million' deer captured on camera in Michigan woods"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Harley-Davidson halts production of new electric motorcycles\"\n\"​20 Funny Things People in the 1970s Were Totally Guilty of Doing\"\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"The 13 coolest   and creepiest   ghost towns around the world\"\n\"Deer fatally attacks hunter who shot him\"\n\"How To Open a Can Without a Can Opener\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n[Candidate News Title]\n\"Highway blockade reveals splits in Hong Kong protest movement\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Highway blockade reveals splits in Hong Kong protest movement\" is likely to explore the recent developments within the Hong Kong protest movement, particularly focusing on how a highway blockade has exposed divisions among protesters. Readers may expect an analysis of the differing viewpoints and strategies within the movement, as well as the implications of these splits on the overall effectiveness of the protests. The piece could also provide context regarding the current political situation in Hong Kong and the responses from authorities. Overall, it aims to inform readers about the complexities and dynamics shaping the protest landscape.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 20,
+    "candidate_news_id": "N119999",
+    "candidate_title": "I've been writing about tiny homes for a year and finally spent 2 nights in a 300-foot home to see what it's all about   here's how it went",
+    "user_history_count": 10,
+    "user_history": [
+      "Harley-Davidson halts production of new electric motorcycles",
+      "​20 Funny Things People in the 1970s Were Totally Guilty of Doing",
+      "Forde-Yard Dash: This is how bad the playoff picture can get",
+      "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+      "The 13 coolest   and creepiest   ghost towns around the world",
+      "Deer fatally attacks hunter who shot him",
+      "How To Open a Can Without a Can Opener",
+      "Patriots wanted a test. Now, they need some answers",
+      "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+      "'One in a million' deer captured on camera in Michigan woods"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Harley-Davidson halts production of new electric motorcycles\"\n\"​20 Funny Things People in the 1970s Were Totally Guilty of Doing\"\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"The 13 coolest   and creepiest   ghost towns around the world\"\n\"Deer fatally attacks hunter who shot him\"\n\"How To Open a Can Without a Can Opener\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n[Candidate News Title]\n\"I've been writing about tiny homes for a year and finally spent 2 nights in a 300-foot home to see what it's all about   here's how it went\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to read about the experience of living in a tiny home, specifically a 300-foot space, which may cover both the practical aspects and personal reflections from the author’s two-night stay. The content could explore the benefits and challenges of tiny living, such as space limitations, storage solutions, and the overall lifestyle adjustments required. Additionally, it may include specific details about the design and functionality of the tiny home, offering insights that could resonate with those curious about minimalism or downsizing.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 20,
+    "candidate_news_id": "N2645",
+    "candidate_title": "RHOA's Cynthia Bailey Supports Daughter Coming Out as Sexually Fluid: 'Her Truth is Her Truth'",
+    "user_history_count": 10,
+    "user_history": [
+      "Harley-Davidson halts production of new electric motorcycles",
+      "​20 Funny Things People in the 1970s Were Totally Guilty of Doing",
+      "Forde-Yard Dash: This is how bad the playoff picture can get",
+      "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+      "The 13 coolest   and creepiest   ghost towns around the world",
+      "Deer fatally attacks hunter who shot him",
+      "How To Open a Can Without a Can Opener",
+      "Patriots wanted a test. Now, they need some answers",
+      "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+      "'One in a million' deer captured on camera in Michigan woods"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Harley-Davidson halts production of new electric motorcycles\"\n\"​20 Funny Things People in the 1970s Were Totally Guilty of Doing\"\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"The 13 coolest   and creepiest   ghost towns around the world\"\n\"Deer fatally attacks hunter who shot him\"\n\"How To Open a Can Without a Can Opener\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n[Candidate News Title]\n\"RHOA's Cynthia Bailey Supports Daughter Coming Out as Sexually Fluid: 'Her Truth is Her Truth'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article about Cynthia Bailey supporting her daughter’s coming out as sexually fluid, the user may expect to read about the dynamics of their mother-daughter relationship and the importance of acceptance and support in such personal journeys. The piece could likely explore how public figures navigate family discussions regarding identity, possibly including insights into Bailey's perspectives on sexuality and openness. Additionally, the article may touch on broader themes of representation and the significance of sharing one’s truth in today’s society, reflecting on the evolving dialogue around sexual fluidity.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 20,
+    "candidate_news_id": "N107521",
+    "candidate_title": "Why Teach Your Dog to Sit, When You Can Teach Them to Make a Sandwich Instead?",
+    "user_history_count": 10,
+    "user_history": [
+      "Harley-Davidson halts production of new electric motorcycles",
+      "​20 Funny Things People in the 1970s Were Totally Guilty of Doing",
+      "Forde-Yard Dash: This is how bad the playoff picture can get",
+      "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+      "The 13 coolest   and creepiest   ghost towns around the world",
+      "Deer fatally attacks hunter who shot him",
+      "How To Open a Can Without a Can Opener",
+      "Patriots wanted a test. Now, they need some answers",
+      "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+      "'One in a million' deer captured on camera in Michigan woods"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Harley-Davidson halts production of new electric motorcycles\"\n\"​20 Funny Things People in the 1970s Were Totally Guilty of Doing\"\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"The 13 coolest   and creepiest   ghost towns around the world\"\n\"Deer fatally attacks hunter who shot him\"\n\"How To Open a Can Without a Can Opener\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n[Candidate News Title]\n\"Why Teach Your Dog to Sit, When You Can Teach Them to Make a Sandwich Instead?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user may expect to explore unconventional and humorous approaches to dog training, specifically focusing on teaching dogs to perform tasks that are typically associated with humans, such as making a sandwich. The content is likely to provide insights into the benefits of creative training methods, along with practical tips and techniques for dog owners. Additionally, there may be anecdotes or examples illustrating the fun and engaging aspects of teaching dogs beyond basic commands, encouraging readers to think outside the box in their training efforts.",
+    "model": "gpt-4o-mini"
+  }
+]

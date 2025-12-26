@@ -1,0 +1,21 @@
+{
+  "user_id": 54,
+  "candidate_news_id": "N23721",
+  "candidate_title": "Kate Middleton Took Public Transit to Her Royal Engagement Today",
+  "user_history_count": 10,
+  "user_history": [
+    "Chubby Fingers Are Getting Their Due Thanks To Social Media Movement",
+    "Bob Kingsley, Country Radio Legend, Dead at 80",
+    "Boris Johnson can't celebrate his Brexit win for long",
+    "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+    "Adam DeVine Is Engaged to Actress Chloe Bridges! 'Have Fun Planning the Wedding,' He Jokes",
+    "A part of Windsor Castle that's been closed to the public for over 150 years just reopened   and it's been completely revamped. Take a peek inside.",
+    "Garth Brooks Got Called Out by Jimmy Carter for Taking Break During Habitat for Humanity Build",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Disney is betting everything on its Disney+ streaming service",
+    "Richard Sherman tells NFL players to save their money and prepare for a strike"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chubby Fingers Are Getting Their Due Thanks To Social Media Movement\"\n\"Bob Kingsley, Country Radio Legend, Dead at 80\"\n\"Boris Johnson can't celebrate his Brexit win for long\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Adam DeVine Is Engaged to Actress Chloe Bridges! 'Have Fun Planning the Wedding,' He Jokes\"\n\"A part of Windsor Castle that's been closed to the public for over 150 years just reopened   and it's been completely revamped. Take a peek inside.\"\n\"Garth Brooks Got Called Out by Jimmy Carter for Taking Break During Habitat for Humanity Build\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Disney is betting everything on its Disney+ streaming service\"\n\"Richard Sherman tells NFL players to save their money and prepare for a strike\"\n\n[Candidate News Title]\n\"Kate Middleton Took Public Transit to Her Royal Engagement Today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Kate Middleton taking public transit to her royal engagement, the user is likely to expect a straightforward account of the event, detailing the circumstances surrounding her choice of transportation. The piece may highlight the significance of this decision in relation to royal duties and public perception, as well as any reactions from onlookers or social media. Additionally, it could explore the implications of this choice in terms of the royal family's image and accessibility to the public, suggesting that such actions may resonate with the ongoing discussions about modernizing the monarchy.",
+  "model": "gpt-4o-mini"
+}

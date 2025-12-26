@@ -1,0 +1,20 @@
+{
+  "user_id": 877,
+  "candidate_news_id": "N5769",
+  "candidate_title": "Former U.S. top diplomat Rice concerned by shadow diplomacy on Ukraine",
+  "user_history_count": 9,
+  "user_history": [
+    "NFL winners, losers: Cowboys need to rebound, Patriots keep winning",
+    "Disney World's Skyliner system up and running for tests, reports say",
+    "Report: Ezekiel Elliott's dad investigated after police shoot wild cat near his home",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged",
+    "America's best inexpensive steakhouses",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "This Is What the 2020 Toyota Supra Should've Looked Like From the Start",
+    "The Curious Pasta Dish I Found on My Solo Trip to Italy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL winners, losers: Cowboys need to rebound, Patriots keep winning\"\n\"Disney World's Skyliner system up and running for tests, reports say\"\n\"Report: Ezekiel Elliott's dad investigated after police shoot wild cat near his home\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged\"\n\"America's best inexpensive steakhouses\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"This Is What the 2020 Toyota Supra Should've Looked Like From the Start\"\n\"The Curious Pasta Dish I Found on My Solo Trip to Italy\"\n\"\"\n\n[Candidate News Title]\n\"Former U.S. top diplomat Rice concerned by shadow diplomacy on Ukraine\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find an analysis of former U.S. top diplomat Condoleezza Rice's concerns regarding the implications of shadow diplomacy on the Ukraine conflict. The piece may explore her views on how unofficial diplomatic efforts by various parties could complicate the situation and affect U.S. foreign policy. Additionally, it might provide context on the broader geopolitical landscape, highlighting Rice's insights on international relations and the importance of official diplomatic channels. Overall, the article is expected to offer a thoughtful examination of the challenges posed by informal diplomatic activities.",
+  "model": "gpt-4o-mini"
+}

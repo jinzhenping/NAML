@@ -1,0 +1,21 @@
+{
+  "user_id": 445,
+  "candidate_news_id": "N125720",
+  "candidate_title": "Fashion hits and misses from the 2019 Country Music Association Awards",
+  "user_history_count": 10,
+  "user_history": [
+    "Elderly mother caught in a lie",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet",
+    "The Best Backstage Moments From the 2019 E! People's Choice Awards",
+    "Stars Who Served in the Military",
+    "2019 People's Choice Awards fashion hits and misses",
+    "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Elderly mother caught in a lie\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet\"\n\"The Best Backstage Moments From the 2019 E! People's Choice Awards\"\n\"Stars Who Served in the Military\"\n\"2019 People's Choice Awards fashion hits and misses\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\n[Candidate News Title]\n\"Fashion hits and misses from the 2019 Country Music Association Awards\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a detailed analysis of the fashion choices made by celebrities at the 2019 Country Music Association Awards. It may cover standout outfits, notable trends, and comparisons between different attendees’ styles. The piece could also highlight any memorable fashion moments, such as unique accessories or daring ensembles that garnered attention on the red carpet. Additionally, the article may include commentary on how these fashion statements align with broader trends in the industry, providing a comprehensive overview of the event's sartorial highlights.",
+  "model": "gpt-4o-mini"
+}

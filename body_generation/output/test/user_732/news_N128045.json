@@ -1,0 +1,21 @@
+{
+  "user_id": 732,
+  "candidate_news_id": "N128045",
+  "candidate_title": "How to Watch the Leonid Meteor Shower This Weekend",
+  "user_history_count": 10,
+  "user_history": [
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Dodge Put the Wrong Wheels on 173 New Challengers and Chargers",
+    "Neil Young Says U.S. Citizenship Application Delayed By Marijuana Use",
+    "Ryan Fitzpatrick upset about being forced off field for delayed concussion check",
+    "Fuel-theft rings fill South Florida roads with 'moving bombs'",
+    "2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+    "A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Dodge Put the Wrong Wheels on 173 New Challengers and Chargers\"\n\"Neil Young Says U.S. Citizenship Application Delayed By Marijuana Use\"\n\"Ryan Fitzpatrick upset about being forced off field for delayed concussion check\"\n\"Fuel-theft rings fill South Florida roads with 'moving bombs'\"\n\"2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\n[Candidate News Title]\n\"How to Watch the Leonid Meteor Shower This Weekend\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"How to Watch the Leonid Meteor Shower This Weekend\" is likely to provide practical information on viewing the meteor shower, including the best times and locations for optimal visibility. It may also discuss the history and significance of the Leonid meteor shower, highlighting its periodic nature and what viewers can expect in terms of meteor rates. Additionally, the article could offer tips on how to prepare for the event, such as finding a dark area away from city lights or using specific equipment for enhanced viewing. Overall, readers can expect a straightforward guide to enjoying this astronomical event.",
+  "model": "gpt-4o-mini"
+}

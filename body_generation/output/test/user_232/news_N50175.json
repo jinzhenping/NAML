@@ -1,0 +1,21 @@
+{
+  "user_id": 232,
+  "candidate_news_id": "N50175",
+  "candidate_title": "Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Spain Is Stuck After Sanchez's Election Gamble Backfires Badly",
+    "4 reasons you shouldn't max out your 401(k)",
+    "Winners and losers in second College Football Playoff rankings include LSU and Alabama",
+    "Instructions Came From Trump, Schiff Says: Impeachment Update",
+    "George Conway: 'Republicans Were Fundamentally Illogical and Incoherent'",
+    "Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy",
+    "LSU's Ed Orgeron Is College Football's Best Head Coach Right Now | McMurphy's Law",
+    "LSU's Mighty Joe Brady is making Mickey Mouse money in the college football world",
+    "Senate confirms White House lawyer as appeals court judge",
+    "Stand-in president 'brings back Bible' to Bolivian politics"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Spain Is Stuck After Sanchez's Election Gamble Backfires Badly\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"Winners and losers in second College Football Playoff rankings include LSU and Alabama\"\n\"Instructions Came From Trump, Schiff Says: Impeachment Update\"\n\"George Conway: 'Republicans Were Fundamentally Illogical and Incoherent'\"\n\"Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy\"\n\"LSU's Ed Orgeron Is College Football's Best Head Coach Right Now | McMurphy's Law\"\n\"LSU's Mighty Joe Brady is making Mickey Mouse money in the college football world\"\n\"Senate confirms White House lawyer as appeals court judge\"\n\"Stand-in president 'brings back Bible' to Bolivian politics\"\n\n[Candidate News Title]\n\"Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Demi Lovato's new boyfriend and celebrity love life news, the user is likely to find a detailed overview of recent developments in Lovato's romantic relationships, possibly highlighting her new partner and what this may indicate about her current personal life. The piece might also touch on the broader context of celebrity relationships in the entertainment industry, including any notable trends or reactions from fans and media. Additionally, the article could provide insights into how Lovato's public image has evolved with these changes, although this is uncertain.",
+  "model": "gpt-4o-mini"
+}

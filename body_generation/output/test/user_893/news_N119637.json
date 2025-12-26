@@ -1,0 +1,21 @@
+{
+  "user_id": 893,
+  "candidate_news_id": "N119637",
+  "candidate_title": "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out",
+  "user_history_count": 10,
+  "user_history": [
+    "U.S.-born ISIS bride thinks she 'deserves a second chance'",
+    "Judge includes law student's toddler during sweet swearing-in ceremony",
+    "Rep. Ilhan Omar is accused of 'dog whistle' anti-Semitism after she posts tweet implying billionaire businessman Leon Cooperman is only supporting Michael Bloomberg's presidential run because he is Jewish",
+    "12 Military-Themed TV Shows to Binge-Watch on Veterans Day",
+    "Donald Trump Jr walks out of Triggered book launch after heckling   from supporters",
+    "Top-Exit Exhausts Make Supercars So Much Better",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "Three school workers charged in death of special needs student",
+    "Student's drone footage shows whale swimming around California surfers",
+    "'Ghost ship' found in Lake Michigan"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"U.S.-born ISIS bride thinks she 'deserves a second chance'\"\n\"Judge includes law student's toddler during sweet swearing-in ceremony\"\n\"Rep. Ilhan Omar is accused of 'dog whistle' anti-Semitism after she posts tweet implying billionaire businessman Leon Cooperman is only supporting Michael Bloomberg's presidential run because he is Jewish\"\n\"12 Military-Themed TV Shows to Binge-Watch on Veterans Day\"\n\"Donald Trump Jr walks out of Triggered book launch after heckling   from supporters\"\n\"Top-Exit Exhausts Make Supercars So Much Better\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"Three school workers charged in death of special needs student\"\n\"Student's drone footage shows whale swimming around California surfers\"\n\"'Ghost ship' found in Lake Michigan\"\n\n[Candidate News Title]\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Halle Berry sharing a photo of her six-pack abs on Instagram, the user may expect to read about the actress's fitness journey and the reactions of her fans. The piece is likely to detail Berry's dedication to maintaining her physical health, possibly including her workout routines or dietary habits. Additionally, it could provide insights into the positive feedback from her followers, highlighting the impact of her post on social media. Overall, the article may explore themes of body positivity and celebrity influence on fitness culture.",
+  "model": "gpt-4o-mini"
+}

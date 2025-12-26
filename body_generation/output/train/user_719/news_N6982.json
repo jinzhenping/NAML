@@ -1,0 +1,21 @@
+{
+  "user_id": 719,
+  "candidate_news_id": "N6982",
+  "candidate_title": "California cops respond to 2 homeless men shot with arrows: report",
+  "user_history_count": 10,
+  "user_history": [
+    "Missing West Point cadet found dead, officials say",
+    "Celebrity beach cruising for 2019",
+    "Kate Beckinsale is a knockout in corset dress adorned with white feathers at 'Farming' premiere",
+    "Marine Corps vet who served in Iraq deported to El Salvador",
+    "The best celebrity couple Halloween costumes",
+    "Chasing history: Tiger Woods eyes record win No. 82 at Zozo Championship",
+    "A 2,000-pound great white shark is swimming off the coast of Florida",
+    "UK to hold rare December election with Brexit on table",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Felicity Huffman Smiles as She Begins Community Service Following Prison Release"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Missing West Point cadet found dead, officials say\"\n\"Celebrity beach cruising for 2019\"\n\"Kate Beckinsale is a knockout in corset dress adorned with white feathers at 'Farming' premiere\"\n\"Marine Corps vet who served in Iraq deported to El Salvador\"\n\"The best celebrity couple Halloween costumes\"\n\"Chasing history: Tiger Woods eyes record win No. 82 at Zozo Championship\"\n\"A 2,000-pound great white shark is swimming off the coast of Florida\"\n\"UK to hold rare December election with Brexit on table\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Felicity Huffman Smiles as She Begins Community Service Following Prison Release\"\n\n[Candidate News Title]\n\"California cops respond to 2 homeless men shot with arrows: report\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to report on a troubling incident involving two homeless men who were shot with arrows in California. Readers can expect details about the circumstances surrounding the shooting, including the location, any available information on the suspects, and the response from law enforcement. Additionally, the article may explore the broader context of homelessness and public safety issues in California, potentially including community reactions and any ongoing investigations. This piece could also touch on the implications of such violence in urban areas.",
+  "model": "gpt-4o-mini"
+}

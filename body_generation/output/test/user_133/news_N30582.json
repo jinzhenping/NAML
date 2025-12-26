@@ -1,0 +1,21 @@
+{
+  "user_id": 133,
+  "candidate_news_id": "N30582",
+  "candidate_title": "Opinion: Baylor football back on top four years after sexual assault scandal rocked campus",
+  "user_history_count": 10,
+  "user_history": [
+    "Chinese hitmen jailed over repeatedly outsourced murder",
+    "America's pile of uneaten bacon is the biggest in 48 years",
+    "Things aren't looking great for China's economy, and it may only be getting worse",
+    "Networks vying to score first Felicity Huffman's post-prison interview",
+    "GDP growth rose better than expected in the third quarter",
+    "Obama calls out call-out culture: \"That's not activism\"",
+    "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt",
+    "The 50 Best One-Hit Wonders of All Time",
+    "Ellen DeGeneres, Sandra Bullock go after 'celebrity endorsement theft industry' in lawsuit",
+    "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chinese hitmen jailed over repeatedly outsourced murder\"\n\"America's pile of uneaten bacon is the biggest in 48 years\"\n\"Things aren't looking great for China's economy, and it may only be getting worse\"\n\"Networks vying to score first Felicity Huffman's post-prison interview\"\n\"GDP growth rose better than expected in the third quarter\"\n\"Obama calls out call-out culture: \"That's not activism\"\"\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"The 50 Best One-Hit Wonders of All Time\"\n\"Ellen DeGeneres, Sandra Bullock go after 'celebrity endorsement theft industry' in lawsuit\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\n[Candidate News Title]\n\"Opinion: Baylor football back on top four years after sexual assault scandal rocked campus\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Opinion: Baylor football back on top four years after sexual assault scandal rocked campus\" is likely to discuss the resurgence of Baylor University's football program following a significant scandal that impacted its reputation. Readers may expect an analysis of the team's performance and how it has recovered in the years since the controversy, potentially highlighting key players, coaching strategies, and the university's efforts to rebuild its image. The article could also explore the broader implications for college athletics and how the university has addressed past issues, although this perspective may vary based on the author's opinion.",
+  "model": "gpt-4o-mini"
+}

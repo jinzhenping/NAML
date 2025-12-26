@@ -1,0 +1,21 @@
+{
+  "user_id": 838,
+  "candidate_news_id": "N93132",
+  "candidate_title": "Hawaiian Airlines marks 90 years with ceremonial flight",
+  "user_history_count": 10,
+  "user_history": [
+    "Michael Jordan: Steph Curry is not a Hall of Famer yet",
+    "North Texas Couple Moving Into New Home Sees It Destroyed By Tornado",
+    "Hong Kong government withdraws bill that sparked protests",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Celebs' all-time most embarrassing pop culture moments",
+    "Rihanna and Chris Brown Celebrate Drake's Birthday Separately",
+    "Charles Barkley savagely tells Klay Thompson the Warriors won't make the playoffs",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Snow crab sells for record price in Japan"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Michael Jordan: Steph Curry is not a Hall of Famer yet\"\n\"North Texas Couple Moving Into New Home Sees It Destroyed By Tornado\"\n\"Hong Kong government withdraws bill that sparked protests\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Celebs' all-time most embarrassing pop culture moments\"\n\"Rihanna and Chris Brown Celebrate Drake's Birthday Separately\"\n\"Charles Barkley savagely tells Klay Thompson the Warriors won't make the playoffs\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Snow crab sells for record price in Japan\"\n\n[Candidate News Title]\n\"Hawaiian Airlines marks 90 years with ceremonial flight\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Hawaiian Airlines marking its 90th anniversary with a ceremonial flight, the user may expect to read about the airline's historical significance and milestones achieved over the decades. The piece is likely to outline key developments in the airline's operations, including its impact on tourism in Hawaii and any notable flights or services introduced. Additionally, there may be mention of current leadership and future plans for the airline. The article could also highlight the significance of this anniversary celebration to the local community and the aviation industry.",
+  "model": "gpt-4o-mini"
+}

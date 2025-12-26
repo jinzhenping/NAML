@@ -1,0 +1,20 @@
+{
+  "user_id": 733,
+  "candidate_news_id": "N91307",
+  "candidate_title": "Golfer and girlfriend pull amazing trick shot",
+  "user_history_count": 9,
+  "user_history": [
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "Missing New Hampshire couple's bodies found buried on a Texas beach",
+    "The ransomware superhero of Normal, Illinois",
+    "45 Amazing Facts About Airplanes That Will Make Your Mind Soar",
+    "Nurses reveal 10 things they wish they could tell patients, but can't",
+    "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum",
+    "Sergeant runs 15K in SWAT gear, saves a life and gets engaged in 1 day",
+    "Vanna White hosts 'Wheel of Fortune' after Sajak has surgery",
+    "Dean Foods files for bankruptcy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"Missing New Hampshire couple's bodies found buried on a Texas beach\"\n\"The ransomware superhero of Normal, Illinois\"\n\"45 Amazing Facts About Airplanes That Will Make Your Mind Soar\"\n\"Nurses reveal 10 things they wish they could tell patients, but can't\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\"Sergeant runs 15K in SWAT gear, saves a life and gets engaged in 1 day\"\n\"Vanna White hosts 'Wheel of Fortune' after Sajak has surgery\"\n\"Dean Foods files for bankruptcy\"\n\"\"\n\n[Candidate News Title]\n\"Golfer and girlfriend pull amazing trick shot\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a description of a remarkable golfing trick shot executed by a golfer and their girlfriend, showcasing their skill and creativity. The piece may detail the setting of the shot, possibly involving a unique location or challenging conditions that highlight their abilities. Additionally, it could explore the techniques used to achieve the trick shot, as well as any reactions from spectators or social media following its release. Overall, the article is expected to provide an intriguing look at a fun and impressive feat within the golfing community.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,18 @@
+{
+  "user_id": 915,
+  "candidate_news_id": "N52435",
+  "candidate_title": "105 Most Popular Sodas Ranked by How Toxic They Are",
+  "user_history_count": 7,
+  "user_history": [
+    "'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says",
+    "Danica Patrick shared a sweet message congratulating Aaron Rodgers on perfect game",
+    "Missing West Point cadet found dead, officials say",
+    "50 Foods You Should Never Eat, According to Health Experts",
+    "Medication side effects: Time to call the doctor",
+    "Kirk Cousins is playing at an MVP level. Here's why it won't last.",
+    "4 big takeaways from Fiona Hill's and Alexander Vindman's transcripts"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says\"\n\"Danica Patrick shared a sweet message congratulating Aaron Rodgers on perfect game\"\n\"Missing West Point cadet found dead, officials say\"\n\"50 Foods You Should Never Eat, According to Health Experts\"\n\"Medication side effects: Time to call the doctor\"\n\"Kirk Cousins is playing at an MVP level. Here's why it won't last.\"\n\"4 big takeaways from Fiona Hill's and Alexander Vindman's transcripts\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article \"105 Most Popular Sodas Ranked by How Toxic They Are,\" the user can expect a detailed analysis of various soda brands and their health impacts, particularly focusing on toxic ingredients and potential health risks associated with regular consumption. The piece is likely to categorize these sodas based on their ingredient profiles, nutritional information, and expert opinions on their safety. Additionally, it may provide insights into the effects of consuming high-sugar beverages, which could help the reader make informed choices about their dietary habits.",
+  "model": "gpt-4o-mini"
+}

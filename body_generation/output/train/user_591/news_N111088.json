@@ -1,0 +1,21 @@
+{
+  "user_id": 591,
+  "candidate_news_id": "N111088",
+  "candidate_title": "How Russia Meddles Abroad for Profit: Cash, Trolls and a Cult Leader",
+  "user_history_count": 10,
+  "user_history": [
+    "Quiet Riot Drummer Reveals Stage-Four Cancer Diagnosis",
+    "Renovations To Make   and Skip   Before Selling Your Home",
+    "The Best Seafood Restaurant in All 50 States",
+    "A Chef Shares the Secret Ingredient Your Mac and Cheese Is Missing",
+    "Airline passengers share photos of their worst in-flight meals",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "The Hospital on a Mission to Bring Home-Cooked Meals to Its Patients",
+    "Why is this Bronze Age town so popular today?",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "10 of the best fast-food taco chains across the US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Quiet Riot Drummer Reveals Stage-Four Cancer Diagnosis\"\n\"Renovations To Make   and Skip   Before Selling Your Home\"\n\"The Best Seafood Restaurant in All 50 States\"\n\"A Chef Shares the Secret Ingredient Your Mac and Cheese Is Missing\"\n\"Airline passengers share photos of their worst in-flight meals\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"The Hospital on a Mission to Bring Home-Cooked Meals to Its Patients\"\n\"Why is this Bronze Age town so popular today?\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"10 of the best fast-food taco chains across the US\"\n\n[Candidate News Title]\n\"How Russia Meddles Abroad for Profit: Cash, Trolls and a Cult Leader\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"How Russia Meddles Abroad for Profit: Cash, Trolls and a Cult Leader,\" they are likely to expect an informative exploration of Russia's strategies for influencing foreign nations for economic gain. The piece may detail various methods employed, such as financial investments, online disinformation campaigns, and the role of individuals or groups that support these efforts. The article could also examine the implications of these actions on international relations and public perception. Overall, readers might anticipate a thorough analysis of the interconnectedness of profit motives and political influence in Russia's foreign affairs.",
+  "model": "gpt-4o-mini"
+}

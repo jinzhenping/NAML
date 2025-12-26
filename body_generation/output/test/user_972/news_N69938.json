@@ -1,0 +1,21 @@
+{
+  "user_id": 972,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "We Are Running Out of Air",
+    "The News In Cartoons",
+    "Holocaust survivor under guard amid death threats",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "Here's what you need to know about your 2020 taxes",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "The News In Cartoons",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "Instagram-famous pilot reveals secrets people don't know about the job",
+    "I Donated Blood for the First Time at 27, and It Ended in Signs of Cardiac Arrest"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"We Are Running Out of Air\"\n\"The News In Cartoons\"\n\"Holocaust survivor under guard amid death threats\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"Here's what you need to know about your 2020 taxes\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"The News In Cartoons\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Instagram-famous pilot reveals secrets people don't know about the job\"\n\"I Donated Blood for the First Time at 27, and It Ended in Signs of Cardiac Arrest\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about an unexpected meeting between Meghan Markle and Hillary Clinton at Frogmore Cottage. The piece may provide insights into the nature of their discussions, which could revolve around social issues, political engagement, or personal experiences. Additionally, it might explore the significance of their gathering, especially in the context of their public personas and previous advocacy work. The article may also touch on the broader implications of such a meeting, considering both women's influence in contemporary discussions surrounding feminism and activism.",
+  "model": "gpt-4o-mini"
+}

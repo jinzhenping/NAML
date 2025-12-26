@@ -1,0 +1,21 @@
+{
+  "user_id": 790,
+  "candidate_news_id": "N30899",
+  "candidate_title": "College gymnast dies following training accident in Connecticut",
+  "user_history_count": 10,
+  "user_history": [
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Security camera spots SOS from woman lost for three days in Australia",
+    "Food Network star Carl Ruiz died of clogged arteries",
+    "Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight",
+    "Why Would Russia, China and Iran Plan Joint Naval Exercises?",
+    "Jennifer Lawrence Hired A Food Truck For Her Wedding And The Owner Had No Idea Who She Was",
+    "Netanyahu says he can't form a government after election deadlock",
+    "Women as young as 27 who are going prematurely gray show off their natural hair",
+    "Getty fire becomes a spectacle that underscores LA's inherent dangers",
+    "Cause determined in Jessi Combs' fatal speed record crash"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Security camera spots SOS from woman lost for three days in Australia\"\n\"Food Network star Carl Ruiz died of clogged arteries\"\n\"Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight\"\n\"Why Would Russia, China and Iran Plan Joint Naval Exercises?\"\n\"Jennifer Lawrence Hired A Food Truck For Her Wedding And The Owner Had No Idea Who She Was\"\n\"Netanyahu says he can't form a government after election deadlock\"\n\"Women as young as 27 who are going prematurely gray show off their natural hair\"\n\"Getty fire becomes a spectacle that underscores LA's inherent dangers\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\n[Candidate News Title]\n\"College gymnast dies following training accident in Connecticut\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the college gymnast who died following a training accident in Connecticut is likely to provide a factual account of the incident, detailing the circumstances surrounding the accident and its immediate aftermath. Readers may expect information about the gymnast's background, including her achievements and the specific events leading up to the accident. The article could also explore the broader implications for safety in collegiate sports and might include reactions from coaches, teammates, and the athletic community. Overall, it aims to present a clear narrative while addressing the serious nature of training-related injuries in gymnastics.",
+  "model": "gpt-4o-mini"
+}

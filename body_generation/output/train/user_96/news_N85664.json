@@ -1,0 +1,21 @@
+{
+  "user_id": 96,
+  "candidate_news_id": "N85664",
+  "candidate_title": "Experts crack mystery of ancient Egypt's sacred bird mummies",
+  "user_history_count": 10,
+  "user_history": [
+    "Mississippi woman found after being missing for days by writing S.O.S. with rocks",
+    "Man left his wife nothing, and her stepchildren told her to scram",
+    "10 Hotels Where You Can Recreate Some of Your Favorite '80s Movie Moments",
+    "Christie Brinkley's Ex-Husband Peter Cook, 60, Engaged to Alba Jancou, 21",
+    "Woman Texts Dead Father's Phone for 4 Years & Finally Receives an Emotional Reply",
+    "Man sleeping in dumpster injured after garbage truck unloads contents into hopper",
+    "Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage",
+    "Woman in 'Carrie' costume totals car, terrifies first responders",
+    "Porsche-Designed Superyacht Is a 135-Foot-Long Spaceship on Water",
+    "Trailer - Star Wars: The Rise of Skywalker"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mississippi woman found after being missing for days by writing S.O.S. with rocks\"\n\"Man left his wife nothing, and her stepchildren told her to scram\"\n\"10 Hotels Where You Can Recreate Some of Your Favorite '80s Movie Moments\"\n\"Christie Brinkley's Ex-Husband Peter Cook, 60, Engaged to Alba Jancou, 21\"\n\"Woman Texts Dead Father's Phone for 4 Years & Finally Receives an Emotional Reply\"\n\"Man sleeping in dumpster injured after garbage truck unloads contents into hopper\"\n\"Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage\"\n\"Woman in 'Carrie' costume totals car, terrifies first responders\"\n\"Porsche-Designed Superyacht Is a 135-Foot-Long Spaceship on Water\"\n\"Trailer - Star Wars: The Rise of Skywalker\"\n\n[Candidate News Title]\n\"Experts crack mystery of ancient Egypt's sacred bird mummies\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to explore recent discoveries made by experts regarding the mummification practices of ancient Egypt, particularly focusing on the sacred birds that were intertwined with religious beliefs and rituals. Readers may expect to learn about the methodologies used in these discoveries, such as advanced imaging techniques or chemical analyses, which could shed light on the significance of these mummies in ancient Egyptian culture. Additionally, the piece may discuss the broader implications of these findings for our understanding of ancient Egyptian civilization, although specific details about the mummies' origins or the research team’s conclusions may not be fully outlined.",
+  "model": "gpt-4o-mini"
+}

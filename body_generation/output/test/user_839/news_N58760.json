@@ -1,0 +1,21 @@
+{
+  "user_id": 839,
+  "candidate_news_id": "N58760",
+  "candidate_title": "Police find 26 children behind false wall at Colorado day care",
+  "user_history_count": 10,
+  "user_history": [
+    "Prince Harry acknowledges tensions with William in ITV interview",
+    "What Judge Judy's husband got her for her 77th birthday",
+    "Melania Trump receives warm welcome on first solo Capitol Hill visit amid Syria, impeachment drama",
+    "40 conservative groups sign ethics complaint against Pelosi",
+    "Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "A former royal bodyguard shared the challenges that come with protecting the royal family"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Prince Harry acknowledges tensions with William in ITV interview\"\n\"What Judge Judy's husband got her for her 77th birthday\"\n\"Melania Trump receives warm welcome on first solo Capitol Hill visit amid Syria, impeachment drama\"\n\"40 conservative groups sign ethics complaint against Pelosi\"\n\"Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"A former royal bodyguard shared the challenges that come with protecting the royal family\"\n\n[Candidate News Title]\n\"Police find 26 children behind false wall at Colorado day care\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Police find 26 children behind false wall at Colorado day care,\" the user is likely to encounter a detailed report about a significant discovery made by law enforcement. This piece may outline the circumstances leading to the investigation of the day care, including any relevant background on the facility and the motivations for the police action. Additionally, it is expected to describe the conditions in which the children were found and the immediate response from authorities. The article could also discuss potential legal implications and the broader context of child safety and regulation within day care facilities.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 255,
+  "candidate_news_id": "N62203",
+  "candidate_title": "Stephen Curry calls out Michael Jordan for being a 'hater'",
+  "user_history_count": 10,
+  "user_history": [
+    "PHOTOS: America's Best High School Football Stadiums",
+    "IS claims responsibility for deadly Mali attacks on 50 soldiers",
+    "Patriots wanted a test. Now, they need some answers",
+    "College Football Playoff's first rankings just the first step in long debate about field",
+    "Ohio State, LSU top initial College Football Playoff rankings; Clemson at No. 5",
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!",
+    "China's trade with US shrinks in October despite optimism",
+    "Chase Young fiasco highlights absurdity of NCAA's outdated model",
+    "Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"PHOTOS: America's Best High School Football Stadiums\"\n\"IS claims responsibility for deadly Mali attacks on 50 soldiers\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"College Football Playoff's first rankings just the first step in long debate about field\"\n\"Ohio State, LSU top initial College Football Playoff rankings; Clemson at No. 5\"\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\"China's trade with US shrinks in October despite optimism\"\n\"Chase Young fiasco highlights absurdity of NCAA's outdated model\"\n\"Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\n[Candidate News Title]\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article featuring Stephen Curry calling out Michael Jordan for being a \"hater\" is likely to delve into the context of their relationship and recent comments made by Curry. Readers may expect an exploration of Curry's perspective on Jordan's criticisms, particularly regarding their differing views on basketball and player dynamics. The piece may also provide insights into how this exchange fits within the broader narrative of player rivalries and respect in the sport. Additionally, it could highlight reactions from fans and analysts, although the specifics of these responses are uncertain.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 370,
+  "candidate_news_id": "N49978",
+  "candidate_title": "Myles Garrett on attacking Mason Rudolph: 'I made a mistake, I lost my cool'",
+  "user_history_count": 10,
+  "user_history": [
+    "United Airlines to take flyers far, far away in new Star Wars-themed plane",
+    "Early to Bed, Early to Rise, Makes Me Diabetic, Depressed and Sick",
+    "$16.8 Million In Campaign Funds Went To Trump Businesses, Latest Records Reveal",
+    "Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him",
+    "This Is What Queen Elizabeth Is Doing About the Prince William-Prince Harry Feud",
+    "Even 'Project Runway' Couldn't Save Zac Posen",
+    "China Claims Tariffs Will Go, but Others Express Doubts",
+    "How To Make Baked Salt & Vinegar Smashed Potatoes By Gail Simmons",
+    "I moved from the US to the UK. Here are the 8 things that surprised me the most.",
+    "Chuck E. Cheese just got major makeover   and axed the animal band"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"United Airlines to take flyers far, far away in new Star Wars-themed plane\"\n\"Early to Bed, Early to Rise, Makes Me Diabetic, Depressed and Sick\"\n\"$16.8 Million In Campaign Funds Went To Trump Businesses, Latest Records Reveal\"\n\"Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him\"\n\"This Is What Queen Elizabeth Is Doing About the Prince William-Prince Harry Feud\"\n\"Even 'Project Runway' Couldn't Save Zac Posen\"\n\"China Claims Tariffs Will Go, but Others Express Doubts\"\n\"How To Make Baked Salt & Vinegar Smashed Potatoes By Gail Simmons\"\n\"I moved from the US to the UK. Here are the 8 things that surprised me the most.\"\n\"Chuck E. Cheese just got major makeover   and axed the animal band\"\n\n[Candidate News Title]\n\"Myles Garrett on attacking Mason Rudolph: 'I made a mistake, I lost my cool'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the user may expect to read about Myles Garrett's reflections on his altercation with Mason Rudolph, focusing on his acknowledgment of the incident as a mistake and his admission of losing control during the situation. The piece is likely to explore the context of the incident, including any reactions from fans, fellow players, or coaches, and may provide insights into Garrett's perspective on managing emotions in high-pressure situations. Additionally, it could discuss the implications of his actions for his career and the broader NFL environment regarding player conduct.",
+  "model": "gpt-4o-mini"
+}

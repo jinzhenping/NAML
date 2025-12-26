@@ -1,0 +1,21 @@
+{
+  "user_id": 35,
+  "candidate_news_id": "N85420",
+  "candidate_title": "Surviving Santa Clarita school shooting victims on road to recovery: Latest",
+  "user_history_count": 10,
+  "user_history": [
+    "5 bold predictions for MLB's offseason",
+    "JuJu Smith-Schuster: Jalen Ramsey's right, I'm not Antonio Brown",
+    "Monday Morning Minnesota: Sign Every Pitcher Edition",
+    "Five bold predictions for the 2020 Yankees",
+    "Steph Curry will need a second surgery, expects to return this season",
+    "Gwen Stefani Reveals New Nickname for Her and Blake Shelton",
+    "Wheel of Fortune's Pat Sajak Says the 'Worst Has Passed' Following Emergency Intestine Surgery",
+    "Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media",
+    "Could Red Sox and Yankees make blockbuster trade?",
+    "Astros' Justin Verlander wins second AL Cy Young Award, but this one is even sweeter"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"5 bold predictions for MLB's offseason\"\n\"JuJu Smith-Schuster: Jalen Ramsey's right, I'm not Antonio Brown\"\n\"Monday Morning Minnesota: Sign Every Pitcher Edition\"\n\"Five bold predictions for the 2020 Yankees\"\n\"Steph Curry will need a second surgery, expects to return this season\"\n\"Gwen Stefani Reveals New Nickname for Her and Blake Shelton\"\n\"Wheel of Fortune's Pat Sajak Says the 'Worst Has Passed' Following Emergency Intestine Surgery\"\n\"Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media\"\n\"Could Red Sox and Yankees make blockbuster trade?\"\n\"Astros' Justin Verlander wins second AL Cy Young Award, but this one is even sweeter\"\n\n[Candidate News Title]\n\"Surviving Santa Clarita school shooting victims on road to recovery: Latest\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Surviving Santa Clarita school shooting victims on road to recovery: Latest,\" they can expect to read about the ongoing recovery process of individuals affected by the Santa Clarita school shooting. The article is likely to detail the current status of the survivors, highlighting their physical and emotional rehabilitation efforts. Additionally, it may include insights from medical professionals or family members about the challenges and progress being made. The piece could also touch on community support initiatives in place to aid the victims and their families during this difficult time.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 52,
+  "candidate_news_id": "N73137",
+  "candidate_title": "Here Are the Biggest Deals We're Anticipating for Black Friday",
+  "user_history_count": 10,
+  "user_history": [
+    "These five mistakes could blow your holiday travel budget",
+    "Ellen DeGeneres, Sandra Bullock go after 'celebrity endorsement theft industry' in lawsuit",
+    "Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.",
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads",
+    "Holocaust survivor under guard amid death threats",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "12 Fall Landscaping Mistakes to Know and Avoid",
+    "Clippers' Kawhi Leonard on load management criticism: 'It's just disappointing'",
+    "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"These five mistakes could blow your holiday travel budget\"\n\"Ellen DeGeneres, Sandra Bullock go after 'celebrity endorsement theft industry' in lawsuit\"\n\"Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.\"\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\"Holocaust survivor under guard amid death threats\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"12 Fall Landscaping Mistakes to Know and Avoid\"\n\"Clippers' Kawhi Leonard on load management criticism: 'It's just disappointing'\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\n[Candidate News Title]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers may find a detailed overview of the most significant deals anticipated for Black Friday. The content is likely to outline various product categories that are expected to see substantial discounts, such as electronics, home goods, and apparel. Additionally, it could provide insights into specific retailers that are preparing major promotions, along with advice on when to shop for the best savings. Overall, the article is expected to serve as a guide for consumers looking to maximize their holiday shopping budget.",
+  "model": "gpt-4o-mini"
+}

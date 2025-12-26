@@ -1,0 +1,21 @@
+{
+  "user_id": 124,
+  "candidate_news_id": "N68164",
+  "candidate_title": "​'My Annoying Cough Turned Out To Be Lung Cancer'",
+  "user_history_count": 10,
+  "user_history": [
+    "Best Ski Resorts in the US",
+    "Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "45 Amazing Facts About Airplanes That Will Make Your Mind Soar",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "Here's What an 1100-HP Naturally Aspirated V8 Sounds Like",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "Mary Cain details alleged physical and emotional abuse at the hands of Nike, Alberto Salazar",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Load up on vintage trucks and SUVs crossing the block in Iowa"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Best Ski Resorts in the US\"\n\"Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"45 Amazing Facts About Airplanes That Will Make Your Mind Soar\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Here's What an 1100-HP Naturally Aspirated V8 Sounds Like\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"Mary Cain details alleged physical and emotional abuse at the hands of Nike, Alberto Salazar\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Load up on vintage trucks and SUVs crossing the block in Iowa\"\n\n[Candidate News Title]\n\"​'My Annoying Cough Turned Out To Be Lung Cancer'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"'My Annoying Cough Turned Out To Be Lung Cancer'\" is likely to provide a personal account of an individual's experience with a persistent cough, which ultimately led to a diagnosis of lung cancer. The user may expect to learn about the symptoms that prompted further medical investigation, the diagnostic process, and perhaps insights into the importance of recognizing warning signs in health. Additionally, the article could explore broader themes related to lung health, risk factors for cancer, and the significance of early detection, although specific details may vary.",
+  "model": "gpt-4o-mini"
+}

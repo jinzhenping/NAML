@@ -1,0 +1,18 @@
+{
+  "user_id": 449,
+  "candidate_news_id": "N6865",
+  "candidate_title": "Actress Accuses Roman Polanski of Raping Her in 1975",
+  "user_history_count": 7,
+  "user_history": [
+    "Solomon: Astros are Team October",
+    "Police identify 2 suspects in murder of Andre Emmett last month",
+    "Activists hope answers about 1946 lynchings will bring \"healing\"",
+    "Foster mom charged with murder in death of twins found in car",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "What No One Tells You About Weight Loss Surgery",
+    "Jillian Michaels Says Intermittent Fasting 'Isn't Actually Good For Weight Loss'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Solomon: Astros are Team October\"\n\"Police identify 2 suspects in murder of Andre Emmett last month\"\n\"Activists hope answers about 1946 lynchings will bring \"healing\"\"\n\"Foster mom charged with murder in death of twins found in car\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"What No One Tells You About Weight Loss Surgery\"\n\"Jillian Michaels Says Intermittent Fasting 'Isn't Actually Good For Weight Loss'\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Actress Accuses Roman Polanski of Raping Her in 1975\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to click on the article titled \"Actress Accuses Roman Polanski of Raping Her in 1975,\" you can expect a detailed account of the actress's allegations against the filmmaker, including the circumstances surrounding the incident and the broader implications for Polanski's career. The article may explore the historical context of the accusation, discussing how it fits into the ongoing conversation about accountability in the film industry. Additionally, it could address the actress's motivations for coming forward now and any potential responses from Polanski or his representatives.",
+  "model": "gpt-4o-mini"
+}

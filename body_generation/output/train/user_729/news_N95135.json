@@ -1,0 +1,21 @@
+{
+  "user_id": 729,
+  "candidate_news_id": "N95135",
+  "candidate_title": "20 Places to Go for Thanksgiving in America",
+  "user_history_count": 10,
+  "user_history": [
+    "Road built by biblical villain uncovered in Jerusalem",
+    "How to make hot chocolate so rich it coats your spoon",
+    "Hyundai fuel cell semi concept makes the Tesla Semi look boring",
+    "NSC official's testimony appears to contradict Rick Perry Ukraine claims",
+    "This Pomona College senior is living out of a converted school bus and saving $10,000 a year on student housing",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged",
+    "What the royals would earn in the real world",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"How to make hot chocolate so rich it coats your spoon\"\n\"Hyundai fuel cell semi concept makes the Tesla Semi look boring\"\n\"NSC official's testimony appears to contradict Rick Perry Ukraine claims\"\n\"This Pomona College senior is living out of a converted school bus and saving $10,000 a year on student housing\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged\"\n\"What the royals would earn in the real world\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"20 Places to Go for Thanksgiving in America\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"20 Places to Go for Thanksgiving in America,\" you may expect a curated list of diverse travel destinations that are particularly appealing for the Thanksgiving holiday. The article is likely to highlight locations known for their festive activities, culinary experiences, and cultural significance during this time of year. You might find specific details about events, local traditions, and accommodations that enhance the Thanksgiving experience in each place. Additionally, the article could provide insights into why these destinations are popular choices for families and travelers looking to celebrate the holiday in unique settings.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 127,
+  "candidate_news_id": "N76539",
+  "candidate_title": "19 Home Renovations That Give Owners the Most Joy",
+  "user_history_count": 10,
+  "user_history": [
+    "25 celebrities who emerged as superstars in the 2010s",
+    "Why Emma Watson Is Calling Herself 'Self-Partnered' Ahead of Turning 30",
+    "The Latest: Kansas City to remove King's name from street",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "'Knit Wits' Club for Seniors Warming Hearts Through Knitting",
+    "Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math",
+    "Why Your Older Tattoo Can Cause a New Infection or Allergy",
+    "A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too",
+    "Disney+: All the Original TV Shows and Movies Set for Streaming Platform (Photos)",
+    "Powerful side-by-side portraits show people over 100 years old next to their younger selves"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"25 celebrities who emerged as superstars in the 2010s\"\n\"Why Emma Watson Is Calling Herself 'Self-Partnered' Ahead of Turning 30\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"'Knit Wits' Club for Seniors Warming Hearts Through Knitting\"\n\"Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math\"\n\"Why Your Older Tattoo Can Cause a New Infection or Allergy\"\n\"A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too\"\n\"Disney+: All the Original TV Shows and Movies Set for Streaming Platform (Photos)\"\n\"Powerful side-by-side portraits show people over 100 years old next to their younger selves\"\n\n[Candidate News Title]\n\"19 Home Renovations That Give Owners the Most Joy\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"19 Home Renovations That Give Owners the Most Joy,\" the user is likely expecting a detailed exploration of various home improvement projects that can enhance both the aesthetic appeal and functionality of living spaces. The content may include a range of renovations, from minor updates like painting and landscaping to more significant changes such as kitchen remodels or bathroom upgrades. Additionally, it could provide insights into how these renovations can positively impact homeowners' satisfaction and well-being. The article is likely to include before-and-after examples or statistics on the value added by these projects, though the specifics may vary.",
+  "model": "gpt-4o-mini"
+}

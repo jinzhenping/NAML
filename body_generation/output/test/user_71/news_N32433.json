@@ -1,0 +1,21 @@
+{
+  "user_id": 71,
+  "candidate_news_id": "N32433",
+  "candidate_title": "Why You Shouldn't Work For Money   and What To Work For Instead",
+  "user_history_count": 10,
+  "user_history": [
+    "The 50 cheapest places to buy land in America",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "Today in History: November 14",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show",
+    "Experts crack mystery of ancient Egypt's sacred bird mummies",
+    "Answers remain elusive in Virginia Beach shooting rampage",
+    "Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 50 cheapest places to buy land in America\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Today in History: November 14\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\"\n\"Experts crack mystery of ancient Egypt's sacred bird mummies\"\n\"Answers remain elusive in Virginia Beach shooting rampage\"\n\"Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019\"\n\n[Candidate News Title]\n\"Why You Shouldn't Work For Money   and What To Work For Instead\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read \"Why You Shouldn't Work For Money and What To Work For Instead,\" you might expect a discussion centered on the philosophy of work and motivation. The article could explore alternative values that drive fulfillment beyond financial gain, such as passion, purpose, or personal growth. It may provide insights or examples of individuals who have shifted their focus from monetary compensation to pursuing meaningful work, thereby enhancing their overall satisfaction and well-being. The piece is likely to encourage readers to reflect on their own motivations and consider what truly drives their career choices.",
+  "model": "gpt-4o-mini"
+}

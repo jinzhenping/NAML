@@ -1,0 +1,21 @@
+{
+  "user_id": 978,
+  "candidate_news_id": "N49790",
+  "candidate_title": "Browns apologize to Mason Rudolph, call Myles Garrett's actions 'unacceptable'",
+  "user_history_count": 10,
+  "user_history": [
+    "Top 10 Cleaning Tips for the Inside of Your Car",
+    "See every outfit Duchess Meghan wore in 2019",
+    "This Is Exactly How Long You Need to Hold a Plank to Flatten Your Belly",
+    "What Is Jet Lag and How Can You Really Cure It?",
+    "Kate Middleton Takes Prince George and Princess Charlotte Halloween Shopping at Local Supermarket",
+    "This 30-Day Plank Challenge Will Transform Your Core in 4 Weeks",
+    "Why You Should Always Order Ginger Ale on a Flight",
+    "The Water on These Airlines Is so Bad You Shouldn't Even Wash Your Hands With It, Study Finds",
+    "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+    "There are 14 cheap days to fly left in 2019: When are they and what deals can you score?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Top 10 Cleaning Tips for the Inside of Your Car\"\n\"See every outfit Duchess Meghan wore in 2019\"\n\"This Is Exactly How Long You Need to Hold a Plank to Flatten Your Belly\"\n\"What Is Jet Lag and How Can You Really Cure It?\"\n\"Kate Middleton Takes Prince George and Princess Charlotte Halloween Shopping at Local Supermarket\"\n\"This 30-Day Plank Challenge Will Transform Your Core in 4 Weeks\"\n\"Why You Should Always Order Ginger Ale on a Flight\"\n\"The Water on These Airlines Is so Bad You Shouldn't Even Wash Your Hands With It, Study Finds\"\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\"There are 14 cheap days to fly left in 2019: When are they and what deals can you score?\"\n\n[Candidate News Title]\n\"Browns apologize to Mason Rudolph, call Myles Garrett's actions 'unacceptable'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Browns apologize to Mason Rudolph, call Myles Garrett's actions 'unacceptable',\" you can expect to read about a recent incident involving the Cleveland Browns and their player Myles Garrett. The article is likely to detail the circumstances that led to the apology directed towards Mason Rudolph, potentially including a description of the actions that were deemed unacceptable. It may also provide context about the implications of this situation for the team and its players, as well as any responses from Rudolph or other stakeholders involved.",
+  "model": "gpt-4o-mini"
+}

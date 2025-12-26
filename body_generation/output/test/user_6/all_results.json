@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 6,
+    "candidate_news_id": "N29160",
+    "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+    "user_history_count": 10,
+    "user_history": [
+      "Shepard Smith leaving Fox News",
+      "He targeted a senior at a South Florida mall to grope her, cops say. She isn't the first",
+      "5 foods you should always buy frozen instead of fresh",
+      "Cincinnati school board candidate accused of 'pretending to be black' in his ads",
+      "Clemson vs Boston College highlights: Trevor Lawrence shines, AJ Dillon breaks a record",
+      "17 photos that show the ugly truth of living in a tiny house",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Two House Democrats break ranks with Pelosi on impeachment rules vote",
+      "Hong Kong police shoot at pro-democracy protesters",
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shepard Smith leaving Fox News\"\n\"He targeted a senior at a South Florida mall to grope her, cops say. She isn't the first\"\n\"5 foods you should always buy frozen instead of fresh\"\n\"Cincinnati school board candidate accused of 'pretending to be black' in his ads\"\n\"Clemson vs Boston College highlights: Trevor Lawrence shines, AJ Dillon breaks a record\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Two House Democrats break ranks with Pelosi on impeachment rules vote\"\n\"Hong Kong police shoot at pro-democracy protesters\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Opinion: Colin Kaepernick is about to get what he deserves: a chance\" is likely to discuss the recent developments surrounding Colin Kaepernick's potential return to professional football, examining the implications of his past activism and the changing landscape of the NFL. It may provide an analysis of how public sentiment regarding Kaepernick has evolved, considering factors such as team needs, social justice movements, and the overall acceptance of players' activism in sports. Additionally, the piece could speculate on the impact of his return on both his career and the broader conversation about race and equality in athletics.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 6,
+    "candidate_news_id": "N128045",
+    "candidate_title": "How to Watch the Leonid Meteor Shower This Weekend",
+    "user_history_count": 10,
+    "user_history": [
+      "Shepard Smith leaving Fox News",
+      "He targeted a senior at a South Florida mall to grope her, cops say. She isn't the first",
+      "5 foods you should always buy frozen instead of fresh",
+      "Cincinnati school board candidate accused of 'pretending to be black' in his ads",
+      "Clemson vs Boston College highlights: Trevor Lawrence shines, AJ Dillon breaks a record",
+      "17 photos that show the ugly truth of living in a tiny house",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Two House Democrats break ranks with Pelosi on impeachment rules vote",
+      "Hong Kong police shoot at pro-democracy protesters",
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shepard Smith leaving Fox News\"\n\"He targeted a senior at a South Florida mall to grope her, cops say. She isn't the first\"\n\"5 foods you should always buy frozen instead of fresh\"\n\"Cincinnati school board candidate accused of 'pretending to be black' in his ads\"\n\"Clemson vs Boston College highlights: Trevor Lawrence shines, AJ Dillon breaks a record\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Two House Democrats break ranks with Pelosi on impeachment rules vote\"\n\"Hong Kong police shoot at pro-democracy protesters\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n[Candidate News Title]\n\"How to Watch the Leonid Meteor Shower This Weekend\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"How to Watch the Leonid Meteor Shower This Weekend\" is likely to provide practical information on viewing the meteor shower, including optimal times and locations for the best visibility. Readers can expect details on the phenomenon itself, such as its historical significance and what makes this year's shower potentially noteworthy. Additionally, it may include tips on how to enhance the viewing experience, such as minimizing light pollution and using specific equipment. Overall, the article could serve as a guide for both casual observers and astronomy enthusiasts looking to enjoy this celestial event.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 6,
+    "candidate_news_id": "N18190",
+    "candidate_title": "30 Best Black Friday Deals from Costco",
+    "user_history_count": 10,
+    "user_history": [
+      "Shepard Smith leaving Fox News",
+      "He targeted a senior at a South Florida mall to grope her, cops say. She isn't the first",
+      "5 foods you should always buy frozen instead of fresh",
+      "Cincinnati school board candidate accused of 'pretending to be black' in his ads",
+      "Clemson vs Boston College highlights: Trevor Lawrence shines, AJ Dillon breaks a record",
+      "17 photos that show the ugly truth of living in a tiny house",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Two House Democrats break ranks with Pelosi on impeachment rules vote",
+      "Hong Kong police shoot at pro-democracy protesters",
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shepard Smith leaving Fox News\"\n\"He targeted a senior at a South Florida mall to grope her, cops say. She isn't the first\"\n\"5 foods you should always buy frozen instead of fresh\"\n\"Cincinnati school board candidate accused of 'pretending to be black' in his ads\"\n\"Clemson vs Boston College highlights: Trevor Lawrence shines, AJ Dillon breaks a record\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Two House Democrats break ranks with Pelosi on impeachment rules vote\"\n\"Hong Kong police shoot at pro-democracy protesters\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n[Candidate News Title]\n\"30 Best Black Friday Deals from Costco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"30 Best Black Friday Deals from Costco,\" you may expect to find a comprehensive overview of the top discounts and promotions available at Costco during the Black Friday sales event. The article is likely to include details about specific products, such as electronics, household items, and groceries, that are being offered at significant savings. Additionally, it could provide insights into membership benefits, shopping tips, and comparisons with other retailers, helping you make informed purchasing decisions during the holiday shopping season.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 6,
+    "candidate_news_id": "N46894",
+    "candidate_title": "How much turkey do you need to buy per person?",
+    "user_history_count": 10,
+    "user_history": [
+      "Shepard Smith leaving Fox News",
+      "He targeted a senior at a South Florida mall to grope her, cops say. She isn't the first",
+      "5 foods you should always buy frozen instead of fresh",
+      "Cincinnati school board candidate accused of 'pretending to be black' in his ads",
+      "Clemson vs Boston College highlights: Trevor Lawrence shines, AJ Dillon breaks a record",
+      "17 photos that show the ugly truth of living in a tiny house",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Two House Democrats break ranks with Pelosi on impeachment rules vote",
+      "Hong Kong police shoot at pro-democracy protesters",
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shepard Smith leaving Fox News\"\n\"He targeted a senior at a South Florida mall to grope her, cops say. She isn't the first\"\n\"5 foods you should always buy frozen instead of fresh\"\n\"Cincinnati school board candidate accused of 'pretending to be black' in his ads\"\n\"Clemson vs Boston College highlights: Trevor Lawrence shines, AJ Dillon breaks a record\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Two House Democrats break ranks with Pelosi on impeachment rules vote\"\n\"Hong Kong police shoot at pro-democracy protesters\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n[Candidate News Title]\n\"How much turkey do you need to buy per person?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"How much turkey do you need to buy per person?\", the user is likely to find guidelines on calculating the appropriate amount of turkey to purchase based on various factors, such as the number of guests and serving sizes. The content may include recommendations for different occasions, like Thanksgiving or gatherings, while also addressing considerations like whether guests are light or heavy eaters. Additionally, it is likely to provide tips on how to account for bone weight and leftovers, ensuring that readers can make informed decisions for their meal planning.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 6,
+    "candidate_news_id": "N55801",
+    "candidate_title": "High tides surge through Venice, locals rush to protect art",
+    "user_history_count": 10,
+    "user_history": [
+      "Shepard Smith leaving Fox News",
+      "He targeted a senior at a South Florida mall to grope her, cops say. She isn't the first",
+      "5 foods you should always buy frozen instead of fresh",
+      "Cincinnati school board candidate accused of 'pretending to be black' in his ads",
+      "Clemson vs Boston College highlights: Trevor Lawrence shines, AJ Dillon breaks a record",
+      "17 photos that show the ugly truth of living in a tiny house",
+      "Comics - 'Half Full' by Maria Scrivan",
+      "Two House Democrats break ranks with Pelosi on impeachment rules vote",
+      "Hong Kong police shoot at pro-democracy protesters",
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shepard Smith leaving Fox News\"\n\"He targeted a senior at a South Florida mall to grope her, cops say. She isn't the first\"\n\"5 foods you should always buy frozen instead of fresh\"\n\"Cincinnati school board candidate accused of 'pretending to be black' in his ads\"\n\"Clemson vs Boston College highlights: Trevor Lawrence shines, AJ Dillon breaks a record\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Two House Democrats break ranks with Pelosi on impeachment rules vote\"\n\"Hong Kong police shoot at pro-democracy protesters\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n[Candidate News Title]\n\"High tides surge through Venice, locals rush to protect art\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"High tides surge through Venice, locals rush to protect art,\" the user may expect a detailed account of the recent high tides affecting Venice, including the impact on the city's iconic architecture and art. The piece could outline the measures taken by residents and authorities to safeguard valuable artworks and historical sites from potential water damage. Additionally, it is likely to discuss the broader implications of climate change on Venice and how this phenomenon has become increasingly frequent, drawing attention to the ongoing challenges faced by the city.",
+    "model": "gpt-4o-mini"
+  }
+]

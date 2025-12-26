@@ -1,0 +1,21 @@
+{
+  "user_id": 225,
+  "candidate_news_id": "N129416",
+  "candidate_title": "Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump attacks on Vindman trigger backlash",
+    "'I'm going to kill you:' Man arrested for robbery, assault of woman in Hickory Hill",
+    "New York writer who accused Trump of sexual assault sues him for defamation",
+    "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+    "Protesters demonstrate against Donald Trump Jr.'s appearance at UCLA",
+    "1 killed, 4 wounded in shooting at Tennessee strip club",
+    "I ate one of Meghan Markle's favorite foods from Toronto here's what I thought",
+    "Priscilla and Lisa Marie Presley are Not on the Same Page for Elvis Biopic",
+    "Violent night in Memphis leaves 19-year-old mother dead, nine others injured",
+    "The last time Kentucky fought over a gubernatorial election, the governor got killed"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump attacks on Vindman trigger backlash\"\n\"'I'm going to kill you:' Man arrested for robbery, assault of woman in Hickory Hill\"\n\"New York writer who accused Trump of sexual assault sues him for defamation\"\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\"Protesters demonstrate against Donald Trump Jr.'s appearance at UCLA\"\n\"1 killed, 4 wounded in shooting at Tennessee strip club\"\n\"I ate one of Meghan Markle's favorite foods from Toronto here's what I thought\"\n\"Priscilla and Lisa Marie Presley are Not on the Same Page for Elvis Biopic\"\n\"Violent night in Memphis leaves 19-year-old mother dead, nine others injured\"\n\"The last time Kentucky fought over a gubernatorial election, the governor got killed\"\n\n[Candidate News Title]\n\"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties,\" you may expect to read about the ongoing dispute between Taylor Swift and her former record label, Big Machine Records. The article is likely to detail the claims made by Swift's representative regarding unpaid royalties, providing context about the financial and legal complexities involved. It may also touch on previous controversies surrounding Swift's music rights and highlight the implications of this dispute for her career and the broader music industry.",
+  "model": "gpt-4o-mini"
+}

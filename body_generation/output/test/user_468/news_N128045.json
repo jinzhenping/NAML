@@ -1,0 +1,21 @@
+{
+  "user_id": 468,
+  "candidate_news_id": "N128045",
+  "candidate_title": "How to Watch the Leonid Meteor Shower This Weekend",
+  "user_history_count": 10,
+  "user_history": [
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Guess What New Car James May Just Bought",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Mid-Engine C8 Corvette Production Postponed Until February 2020",
+    "Wild & wonderful treasures of SEMA 2019   US edition",
+    "Listen to John Legend and Kelly Clarkson's updated version of 'Baby, It's Cold Outside'",
+    "Dean Foods files for bankruptcy",
+    "Ford Mustang Mach-E: Ford's First All-Electric Crossover Finally Has a Name",
+    "Ford v Ferrari: the real story",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Guess What New Car James May Just Bought\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Mid-Engine C8 Corvette Production Postponed Until February 2020\"\n\"Wild & wonderful treasures of SEMA 2019   US edition\"\n\"Listen to John Legend and Kelly Clarkson's updated version of 'Baby, It's Cold Outside'\"\n\"Dean Foods files for bankruptcy\"\n\"Ford Mustang Mach-E: Ford's First All-Electric Crossover Finally Has a Name\"\n\"Ford v Ferrari: the real story\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\n[Candidate News Title]\n\"How to Watch the Leonid Meteor Shower This Weekend\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to find information on the Leonid Meteor Shower, including the best times and locations for viewing the event this weekend. The piece may outline optimal conditions for observing the meteors, such as weather considerations and light pollution factors. Additionally, it could provide tips on how to enhance the viewing experience, possibly mentioning equipment or techniques for stargazing. Overall, the article is likely to serve as a practical guide for those interested in experiencing this astronomical event.",
+  "model": "gpt-4o-mini"
+}

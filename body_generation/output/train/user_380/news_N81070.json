@@ -1,0 +1,21 @@
+{
+  "user_id": 380,
+  "candidate_news_id": "N81070",
+  "candidate_title": "Explore 4 best low-priced diners in Tampa",
+  "user_history_count": 10,
+  "user_history": [
+    "The 50 Most Common Last Names in America",
+    "The Largest Dairy-Producing State Isn't What You Think It Is",
+    "The News In Cartoons",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Far-reaching snowstorm may take shape over US",
+    "12 Fall Landscaping Mistakes to Know and Avoid",
+    "Load up on vintage trucks and SUVs crossing the block in Iowa",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "What Gas Stations Were Like In 1957",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 50 Most Common Last Names in America\"\n\"The Largest Dairy-Producing State Isn't What You Think It Is\"\n\"The News In Cartoons\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Far-reaching snowstorm may take shape over US\"\n\"12 Fall Landscaping Mistakes to Know and Avoid\"\n\"Load up on vintage trucks and SUVs crossing the block in Iowa\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"What Gas Stations Were Like In 1957\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\n[Candidate News Title]\n\"Explore 4 best low-priced diners in Tampa\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to discover a selection of four low-priced diners in Tampa that offer affordable dining options without compromising on quality. The piece is likely to highlight each diner's unique features, such as popular menu items, the atmosphere, and perhaps even customer reviews or ratings. Additionally, it may provide insights into the types of cuisine offered, from classic American fare to local specialties. Overall, the article is intended to guide readers in finding budget-friendly places to eat in the city.",
+  "model": "gpt-4o-mini"
+}

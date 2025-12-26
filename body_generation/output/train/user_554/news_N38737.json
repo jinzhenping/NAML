@@ -1,0 +1,21 @@
+{
+  "user_id": 554,
+  "candidate_news_id": "N38737",
+  "candidate_title": "These are the words your teen applying to college needs to hear from you",
+  "user_history_count": 10,
+  "user_history": [
+    "Niecy Nash Announces Split From Husband Jay Tucker",
+    "UK police investigating crash that killed teen interview US diplomat's wife",
+    "Why Boeing can't recoup CEO's $23 million payout from crash year",
+    "50 Incredible DIY Home Projects",
+    "Mid-Engine C8 Corvette Production Postponed Until February 2020",
+    "The first Ford Mustang owner kept the car. It's now worth $350,000",
+    "9 renovation tips to boost resale value",
+    "Chevrolet Performance Reveals New Small Block Crate Engine",
+    "The 50 most expensive cars ever sold at auction",
+    "The 25 most iconic film quotes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Niecy Nash Announces Split From Husband Jay Tucker\"\n\"UK police investigating crash that killed teen interview US diplomat's wife\"\n\"Why Boeing can't recoup CEO's $23 million payout from crash year\"\n\"50 Incredible DIY Home Projects\"\n\"Mid-Engine C8 Corvette Production Postponed Until February 2020\"\n\"The first Ford Mustang owner kept the car. It's now worth $350,000\"\n\"9 renovation tips to boost resale value\"\n\"Chevrolet Performance Reveals New Small Block Crate Engine\"\n\"The 50 most expensive cars ever sold at auction\"\n\"The 25 most iconic film quotes\"\n\n[Candidate News Title]\n\"These are the words your teen applying to college needs to hear from you\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"These are the words your teen applying to college needs to hear from you,\" you may expect to find guidance aimed at parents on how to effectively communicate with their teenagers during the college application process. The article is likely to explore key phrases or supportive statements that can help alleviate stress and encourage positive attitudes in teens. It might also address the importance of parental involvement in fostering confidence and motivation as students navigate this significant transition in their lives.",
+  "model": "gpt-4o-mini"
+}

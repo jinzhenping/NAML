@@ -1,0 +1,21 @@
+{
+  "user_id": 691,
+  "candidate_news_id": "N18258",
+  "candidate_title": "Russia lands forces at former U.S. air base in northern Syria",
+  "user_history_count": 10,
+  "user_history": [
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads",
+    "The Day in Sports: Wednesday, November 6, 2019",
+    "Nurses reveal 10 things they wish they could tell patients, but can't",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "The keto diet is hard work   but this hack makes it so much easier",
+    "Mezcal vs. Tequila What Are the Differences?",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Copycat Cracker Barrel Chicken and Dumplings Recipe",
+    "81 Bean Recipes You'll Be Making All Year Long",
+    "Thanksgiving Turkey Alternatives: 5 Birds You Should Eat Instead"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\"The Day in Sports: Wednesday, November 6, 2019\"\n\"Nurses reveal 10 things they wish they could tell patients, but can't\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"The keto diet is hard work   but this hack makes it so much easier\"\n\"Mezcal vs. Tequila What Are the Differences?\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Copycat Cracker Barrel Chicken and Dumplings Recipe\"\n\"81 Bean Recipes You'll Be Making All Year Long\"\n\"Thanksgiving Turkey Alternatives: 5 Birds You Should Eat Instead\"\n\n[Candidate News Title]\n\"Russia lands forces at former U.S. air base in northern Syria\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent deployment of Russian forces at a former U.S. air base in northern Syria, providing insights into the geopolitical implications of this move. Readers can expect an analysis of the strategic importance of the air base, including its potential impact on U.S. military operations and regional stability. Additionally, the article may explore how this development fits into the broader context of U.S.-Russia relations and ongoing conflicts in Syria. Overall, it is likely to present a factual overview of the situation while considering the possible reactions from various stakeholders.",
+  "model": "gpt-4o-mini"
+}

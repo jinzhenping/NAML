@@ -1,0 +1,21 @@
+{
+  "user_id": 820,
+  "candidate_news_id": "N30350",
+  "candidate_title": "Body of missing Salvadoran trans activist found",
+  "user_history_count": 10,
+  "user_history": [
+    "Bud Light Is Releasing Its Own Hard Seltzer, and We Can't Decide Which Flavor to Try First",
+    "As L.A. ports automate, some workers are cheering on the robots",
+    "Sears says it has secured a $250 million lifeline, will close 96 stores",
+    "Attorney Alan Dershowitz countersues Virginia Giuffre for defamation",
+    "The Infertility Secret I Kept From My Mother",
+    "Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says",
+    "Mother Is Freed After 15 Years in Prison for Father's Abuse",
+    "Sessions wins endorsement from key GOP senators",
+    "Megyn Kelly Is Back to Work! Details on Her New Job",
+    "Stars turning 70 in 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bud Light Is Releasing Its Own Hard Seltzer, and We Can't Decide Which Flavor to Try First\"\n\"As L.A. ports automate, some workers are cheering on the robots\"\n\"Sears says it has secured a $250 million lifeline, will close 96 stores\"\n\"Attorney Alan Dershowitz countersues Virginia Giuffre for defamation\"\n\"The Infertility Secret I Kept From My Mother\"\n\"Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says\"\n\"Mother Is Freed After 15 Years in Prison for Father's Abuse\"\n\"Sessions wins endorsement from key GOP senators\"\n\"Megyn Kelly Is Back to Work! Details on Her New Job\"\n\"Stars turning 70 in 2019\"\n\n[Candidate News Title]\n\"Body of missing Salvadoran trans activist found\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Body of missing Salvadoran trans activist found\" is likely to provide a detailed account of the circumstances surrounding the discovery of the activist's body, including the timeline of their disappearance and any ongoing investigations. It may also discuss the implications of this event for the LGBTQ+ community in El Salvador, highlighting issues such as violence against marginalized groups and the responses from local authorities. Additionally, the article could include reactions from activists and community members, reflecting on the broader societal challenges faced by trans individuals.",
+  "model": "gpt-4o-mini"
+}

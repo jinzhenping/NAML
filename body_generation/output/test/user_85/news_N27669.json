@@ -1,0 +1,21 @@
+{
+  "user_id": 85,
+  "candidate_news_id": "N27669",
+  "candidate_title": "The Coolest Way to See NYC Is in a Vintage Car From the Roaring '20s on This Midtown Tour",
+  "user_history_count": 10,
+  "user_history": [
+    "Three school workers charged in death of special needs student",
+    "The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable",
+    "White House to use webcams to create live feed of border wall construction",
+    "17 New Cars With the Coolest-Looking Engines",
+    "A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia",
+    "American woman apparently strangled in the Dominican Republic",
+    "Most Americans say they are struggling financially",
+    "Three Classic Cars Stolen From CA Car Show",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "Doing This One Simple Thing Can Help You Make Fewer Mistakes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Three school workers charged in death of special needs student\"\n\"The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable\"\n\"White House to use webcams to create live feed of border wall construction\"\n\"17 New Cars With the Coolest-Looking Engines\"\n\"A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia\"\n\"American woman apparently strangled in the Dominican Republic\"\n\"Most Americans say they are struggling financially\"\n\"Three Classic Cars Stolen From CA Car Show\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Doing This One Simple Thing Can Help You Make Fewer Mistakes\"\n\n[Candidate News Title]\n\"The Coolest Way to See NYC Is in a Vintage Car From the Roaring '20s on This Midtown Tour\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to explore the unique experience of touring New York City in a vintage car from the 1920s, highlighting the charm and historical significance of these classic vehicles. It may detail various tour options available in Midtown, including notable landmarks and routes that enhance the nostalgic experience. Additionally, the piece could provide insights into the appeal of vintage cars for both residents and tourists, emphasizing their role in offering a distinctive perspective of the city.",
+  "model": "gpt-4o-mini"
+}

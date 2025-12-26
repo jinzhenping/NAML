@@ -1,0 +1,21 @@
+{
+  "user_id": 108,
+  "candidate_news_id": "N62024",
+  "candidate_title": "Watch: John Harbaugh shared awesome moment with Lamar Jackson",
+  "user_history_count": 10,
+  "user_history": [
+    "Woman arrested for 1996 murder of baby girl found dead in reservoir",
+    "Aqib Talib says he's \"healthy enough to play right now\"",
+    "DPS: Avondale dad arrested for driving drunk with toddler in backseat",
+    "A Texas man shot and killed his wife. He says he was sleepwalking.",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "Joanna Gaines dons a gorgeous black dress for Magnolia Journal cover",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Luke Falk files injury grievance against Jets"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Woman arrested for 1996 murder of baby girl found dead in reservoir\"\n\"Aqib Talib says he's \"healthy enough to play right now\"\"\n\"DPS: Avondale dad arrested for driving drunk with toddler in backseat\"\n\"A Texas man shot and killed his wife. He says he was sleepwalking.\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"Joanna Gaines dons a gorgeous black dress for Magnolia Journal cover\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Luke Falk files injury grievance against Jets\"\n\n[Candidate News Title]\n\"Watch: John Harbaugh shared awesome moment with Lamar Jackson\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to encounter a light-hearted moment shared between NFL coach John Harbaugh and quarterback Lamar Jackson, highlighting their relationship and camaraderie. The piece may focus on the context of the interaction, perhaps during a practice session or a team event, and could include insights into how such moments contribute to team dynamics and morale. Additionally, it is probable that the article might touch on the significance of their rapport in the context of the upcoming season, possibly suggesting how it could impact the team's performance.",
+  "model": "gpt-4o-mini"
+}

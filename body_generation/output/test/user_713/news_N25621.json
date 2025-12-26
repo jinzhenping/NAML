@@ -1,0 +1,21 @@
+{
+  "user_id": 713,
+  "candidate_news_id": "N25621",
+  "candidate_title": "Queen Elizabeth Just Rode Horseback at Age 93",
+  "user_history_count": 10,
+  "user_history": [
+    "Brain scans don't lie: The minds of girls and boys are equal in math",
+    "100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "U.S.-born ISIS bride thinks she 'deserves a second chance'",
+    "Ionescu and No. 1 Oregon stun US women's national team",
+    "Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast",
+    "American suspected of ISIS connections trapped in no man's land between Turkish, Greek borders: reports",
+    "WSU student death: Police investigating fraternity member found not breathing",
+    "4 reasons you shouldn't max out your 401(k)",
+    "LSU's Ed Orgeron Is College Football's Best Head Coach Right Now | McMurphy's Law"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Brain scans don't lie: The minds of girls and boys are equal in math\"\n\"100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"U.S.-born ISIS bride thinks she 'deserves a second chance'\"\n\"Ionescu and No. 1 Oregon stun US women's national team\"\n\"Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast\"\n\"American suspected of ISIS connections trapped in no man's land between Turkish, Greek borders: reports\"\n\"WSU student death: Police investigating fraternity member found not breathing\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"LSU's Ed Orgeron Is College Football's Best Head Coach Right Now | McMurphy's Law\"\n\n[Candidate News Title]\n\"Queen Elizabeth Just Rode Horseback at Age 93\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Queen Elizabeth Just Rode Horseback at Age 93,\" you can expect to read about the recent public appearance of Queen Elizabeth II, highlighting her notable activity of riding horseback at an advanced age. The article may provide details about the event, including the location, the context of her ride, and any commentary on her health and well-being. It is likely to discuss her long-standing connection to equestrian activities and how this reflects her enduring presence in public life, offering insights into her personal interests and the royal family's traditions.",
+  "model": "gpt-4o-mini"
+}

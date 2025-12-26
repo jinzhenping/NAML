@@ -1,0 +1,21 @@
+{
+  "user_id": 524,
+  "candidate_news_id": "N126696",
+  "candidate_title": "Maze of tunnels reveals remains of ancient Jerusalem",
+  "user_history_count": 10,
+  "user_history": [
+    "PEOPLE's Sexiest Men Alive: Still Sexy After All These Years",
+    "Lamar Odom's Son Was ''Hurt'' After Finding Out About His Dad's Engagement on Instagram",
+    "Week in celebrity photos for Nov. 11-15, 2019",
+    "Signs of Dementia: 8 Tips For Talking to Your Older Parents",
+    "What It Was Like Inside the Homes of the Pilgrims",
+    "How to Tackle Any Dark Leafy Green",
+    "Here's how much it will cost to travel to Africa like Meghan Markle and Prince Harry",
+    "The Bakery Behind Doubletree's Famous Chocolate Chip Cookie Bakes More Than 100 Million Cookies A Year",
+    "The 23 Best Kitchen Gifts Under $25 in 2019",
+    "Powerful side-by-side portraits show people over 100 years old next to their younger selves"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"PEOPLE's Sexiest Men Alive: Still Sexy After All These Years\"\n\"Lamar Odom's Son Was ''Hurt'' After Finding Out About His Dad's Engagement on Instagram\"\n\"Week in celebrity photos for Nov. 11-15, 2019\"\n\"Signs of Dementia: 8 Tips For Talking to Your Older Parents\"\n\"What It Was Like Inside the Homes of the Pilgrims\"\n\"How to Tackle Any Dark Leafy Green\"\n\"Here's how much it will cost to travel to Africa like Meghan Markle and Prince Harry\"\n\"The Bakery Behind Doubletree's Famous Chocolate Chip Cookie Bakes More Than 100 Million Cookies A Year\"\n\"The 23 Best Kitchen Gifts Under $25 in 2019\"\n\"Powerful side-by-side portraits show people over 100 years old next to their younger selves\"\n\n[Candidate News Title]\n\"Maze of tunnels reveals remains of ancient Jerusalem\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Maze of tunnels reveals remains of ancient Jerusalem\" is likely to explore the historical significance of a newly discovered network of tunnels in Jerusalem, detailing what these findings may reveal about the city's past. Readers can expect information on archaeological methods used in the excavation and the context of the artifacts found within these tunnels. Additionally, the piece may discuss the implications of these discoveries for our understanding of ancient civilizations and urban life in Jerusalem. It's possible that the article could include insights from archaeologists or historians about the importance of such archaeological sites.",
+  "model": "gpt-4o-mini"
+}

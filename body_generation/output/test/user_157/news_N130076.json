@@ -1,0 +1,21 @@
+{
+  "user_id": 157,
+  "candidate_news_id": "N130076",
+  "candidate_title": "'Charlie's Angels' stars: Where are they now?",
+  "user_history_count": 10,
+  "user_history": [
+    "Lawsuits, payouts, opioids crisis: what happened to Johnson & Johnson?",
+    "Rand Paul Called Out at California Restaurant During Lunch: 'Not Putting Up With Your Republican Bulls**t'",
+    "Clinton mocks Trump's Turkey letter with Jimmy Kimmel joke -- but move quickly appears to backfire",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "Rising California gasoline prices highlight growing divide in US",
+    "California residents face another blackout (and then another after that)",
+    "One in 5 children live below the poverty line: Here are the states with the highest number of kids dependent on free lunches",
+    "American woman apparently strangled in the Dominican Republic",
+    "Answers remain elusive in Virginia Beach shooting rampage",
+    "'Don't stay silent': Democrats lash out as GOP blocks gun measure amid school shooting"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lawsuits, payouts, opioids crisis: what happened to Johnson & Johnson?\"\n\"Rand Paul Called Out at California Restaurant During Lunch: 'Not Putting Up With Your Republican Bulls**t'\"\n\"Clinton mocks Trump's Turkey letter with Jimmy Kimmel joke -- but move quickly appears to backfire\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"Rising California gasoline prices highlight growing divide in US\"\n\"California residents face another blackout (and then another after that)\"\n\"One in 5 children live below the poverty line: Here are the states with the highest number of kids dependent on free lunches\"\n\"American woman apparently strangled in the Dominican Republic\"\n\"Answers remain elusive in Virginia Beach shooting rampage\"\n\"'Don't stay silent': Democrats lash out as GOP blocks gun measure amid school shooting\"\n\n[Candidate News Title]\n\"'Charlie's Angels' stars: Where are they now?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"'Charlie's Angels' stars: Where are they now?\", the user may expect to find an exploration of the current lives and careers of the actors who played iconic roles in the original \"Charlie's Angels\" television series and its subsequent film adaptations. The article is likely to provide updates on their professional endeavors, including any recent projects, as well as insights into their personal lives. Additionally, it may discuss how their roles in \"Charlie's Angels\" influenced their careers and public personas, offering a retrospective view on their impact in the entertainment industry.",
+  "model": "gpt-4o-mini"
+}

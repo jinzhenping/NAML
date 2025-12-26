@@ -1,0 +1,21 @@
+{
+  "user_id": 893,
+  "candidate_news_id": "N88894",
+  "candidate_title": "Smart People May Learn to Play Music Faster",
+  "user_history_count": 10,
+  "user_history": [
+    "U.S.-born ISIS bride thinks she 'deserves a second chance'",
+    "Judge includes law student's toddler during sweet swearing-in ceremony",
+    "Rep. Ilhan Omar is accused of 'dog whistle' anti-Semitism after she posts tweet implying billionaire businessman Leon Cooperman is only supporting Michael Bloomberg's presidential run because he is Jewish",
+    "12 Military-Themed TV Shows to Binge-Watch on Veterans Day",
+    "Donald Trump Jr walks out of Triggered book launch after heckling   from supporters",
+    "Top-Exit Exhausts Make Supercars So Much Better",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "Three school workers charged in death of special needs student",
+    "Student's drone footage shows whale swimming around California surfers",
+    "'Ghost ship' found in Lake Michigan"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"U.S.-born ISIS bride thinks she 'deserves a second chance'\"\n\"Judge includes law student's toddler during sweet swearing-in ceremony\"\n\"Rep. Ilhan Omar is accused of 'dog whistle' anti-Semitism after she posts tweet implying billionaire businessman Leon Cooperman is only supporting Michael Bloomberg's presidential run because he is Jewish\"\n\"12 Military-Themed TV Shows to Binge-Watch on Veterans Day\"\n\"Donald Trump Jr walks out of Triggered book launch after heckling   from supporters\"\n\"Top-Exit Exhausts Make Supercars So Much Better\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"Three school workers charged in death of special needs student\"\n\"Student's drone footage shows whale swimming around California surfers\"\n\"'Ghost ship' found in Lake Michigan\"\n\n[Candidate News Title]\n\"Smart People May Learn to Play Music Faster\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Smart People May Learn to Play Music Faster,\" you are likely to find an exploration of cognitive abilities related to music learning. The piece may discuss recent research indicating that individuals with higher intelligence or specific cognitive skills could acquire musical proficiency more rapidly than others. It might delve into the mechanisms behind this phenomenon, such as enhanced pattern recognition or memory retention, while potentially presenting examples or studies that support this claim. Overall, the article is expected to provide insights into the intersection of intelligence and musical talent.",
+  "model": "gpt-4o-mini"
+}

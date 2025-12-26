@@ -1,0 +1,21 @@
+{
+  "user_id": 990,
+  "candidate_news_id": "N74682",
+  "candidate_title": "45 Easy Handmade Christmas Ornaments to Start Making Now",
+  "user_history_count": 10,
+  "user_history": [
+    "Michael Jackson's son Prince recalls Halloweens spent with his dad",
+    "50 Coolest Amazon Items Under $50 That You'll Use All the Time",
+    "No. 19 Michigan routs No. 8 Notre Dame 45-14 in rain",
+    "Blake Lively, Jennifer Lopez's Abs, Chris Pratt and More Stars Who Won Instagram This Week",
+    "For sale: Gutted historic Ann Arbor home for $425k",
+    "'Rich Dad, Poor Dad' Robert Kiyosaki says this is 'the only rule' for getting and staying rich",
+    "This is Why Your Dog Follows You to the Bathroom",
+    "AT&T fined $60 million for throttling 'unlimited' data plans",
+    "'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'",
+    "Exactly What to Do When Your Belly Button Smells Funky"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Michael Jackson's son Prince recalls Halloweens spent with his dad\"\n\"50 Coolest Amazon Items Under $50 That You'll Use All the Time\"\n\"No. 19 Michigan routs No. 8 Notre Dame 45-14 in rain\"\n\"Blake Lively, Jennifer Lopez's Abs, Chris Pratt and More Stars Who Won Instagram This Week\"\n\"For sale: Gutted historic Ann Arbor home for $425k\"\n\"'Rich Dad, Poor Dad' Robert Kiyosaki says this is 'the only rule' for getting and staying rich\"\n\"This is Why Your Dog Follows You to the Bathroom\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'\"\n\"Exactly What to Do When Your Belly Button Smells Funky\"\n\n[Candidate News Title]\n\"45 Easy Handmade Christmas Ornaments to Start Making Now\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers can expect a curated selection of creative and easy-to-make Christmas ornaments that are suitable for various skill levels. The piece is likely to provide step-by-step instructions or ideas for crafting ornaments using inexpensive materials, which could appeal to those looking to personalize their holiday decorations. Additionally, it may include tips on where to find supplies or how to involve family members in the crafting process, enhancing the festive experience. Overall, the article aims to inspire readers to add a handmade touch to their holiday celebrations.",
+  "model": "gpt-4o-mini"
+}

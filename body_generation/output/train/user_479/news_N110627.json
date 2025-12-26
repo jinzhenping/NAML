@@ -1,0 +1,19 @@
+{
+  "user_id": 479,
+  "candidate_news_id": "N110627",
+  "candidate_title": "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+  "user_history_count": 8,
+  "user_history": [
+    "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+    "New Ford Bronco Officially Debuts in Spring 2020",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "This girl nails the wave pool   then fails the exit spectacularly",
+    "Eric Bledsoe forgot the rules of basketball on this inbound play",
+    "Far-reaching snowstorm may take shape over US",
+    "NFL coach has theory about why Trubisky is struggling",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"New Ford Bronco Officially Debuts in Spring 2020\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"This girl nails the wave pool   then fails the exit spectacularly\"\n\"Eric Bledsoe forgot the rules of basketball on this inbound play\"\n\"Far-reaching snowstorm may take shape over US\"\n\"NFL coach has theory about why Trubisky is struggling\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Scarlett Johansson Regrets Being 'Hyper-Sexualized' Early in Her Career,\" the user may expect to read about Johansson's reflections on her early roles in Hollywood and how they contributed to her public image. The piece could explore her thoughts on the pressures faced by women in the entertainment industry regarding sexualization and objectification. Additionally, it may highlight specific instances from her career where she felt this hyper-sexualization impacted her professionally and personally. Overall, the article is likely to provide insights into her evolving perspective on fame and identity.",
+  "model": "gpt-4o-mini"
+}

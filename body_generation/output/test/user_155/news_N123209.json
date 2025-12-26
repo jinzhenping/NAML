@@ -1,0 +1,21 @@
+{
+  "user_id": 155,
+  "candidate_news_id": "N123209",
+  "candidate_title": "Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions",
+  "user_history_count": 10,
+  "user_history": [
+    "Eerie photos of an abandoned airport that hasn't been touched in 25 years",
+    "Trump's Deal Allowing 3D-Printed Guns Online Deemed Illegal",
+    "Travel etiquette: The final word on the right to recline",
+    "Why US miners are still digging new mines as coal prices plunge",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "Three school workers charged in death of special needs student",
+    "House Republicans Lash Out Because They Can't Defend Trump's Conduct",
+    "If Trump Were Anyone Else …",
+    "A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent",
+    "Trump admin preparing to take over private land for border wall"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Eerie photos of an abandoned airport that hasn't been touched in 25 years\"\n\"Trump's Deal Allowing 3D-Printed Guns Online Deemed Illegal\"\n\"Travel etiquette: The final word on the right to recline\"\n\"Why US miners are still digging new mines as coal prices plunge\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"Three school workers charged in death of special needs student\"\n\"House Republicans Lash Out Because They Can't Defend Trump's Conduct\"\n\"If Trump Were Anyone Else …\"\n\"A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent\"\n\"Trump admin preparing to take over private land for border wall\"\n\n[Candidate News Title]\n\"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Survivor contestants Missy Byrd and Elizabeth Beisel is likely to address the recent controversy surrounding their actions during the show. Readers may expect an overview of the events that led to their apologies, including specific instances of behavior that drew criticism. The piece could also explore the contestants' reasoning behind their actions, the impact on their public image, and how the show's fanbase has reacted. Additionally, it may delve into broader themes of accountability and conduct in reality television, providing context for their public statements.",
+  "model": "gpt-4o-mini"
+}

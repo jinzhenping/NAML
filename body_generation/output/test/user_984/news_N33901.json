@@ -1,0 +1,21 @@
+{
+  "user_id": 984,
+  "candidate_news_id": "N33901",
+  "candidate_title": "Here's how much and who you should be tipping at American hotels",
+  "user_history_count": 10,
+  "user_history": [
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "9 things we learned from Sunday's games of Week 10 of NFL season",
+    "What to care/not care about from Week 10: Cowboys' crucial error wastes Dak's brilliance",
+    "'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores",
+    "College gymnast dies following training accident in Connecticut",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "39 Appetizers for a Crowd That Are Easy and Unexpected",
+    "Motorcyclist walks head-first into lamppost after covering his bike",
+    "Instagram-famous pilot reveals secrets people don't know about the job"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"9 things we learned from Sunday's games of Week 10 of NFL season\"\n\"What to care/not care about from Week 10: Cowboys' crucial error wastes Dak's brilliance\"\n\"'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"39 Appetizers for a Crowd That Are Easy and Unexpected\"\n\"Motorcyclist walks head-first into lamppost after covering his bike\"\n\"Instagram-famous pilot reveals secrets people don't know about the job\"\n\n[Candidate News Title]\n\"Here's how much and who you should be tipping at American hotels\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide a detailed overview of tipping practices in American hotels, outlining recommended amounts and the various individuals who typically receive tips, such as hotel staff, concierges, and housekeeping. Readers may expect insights into the cultural norms surrounding tipping, including regional variations and specific situations where tipping is considered necessary or appreciated. Additionally, the article could address common questions about when and how to tip appropriately. Overall, it aims to guide travelers in navigating the often confusing etiquette associated with tipping in the hospitality industry.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 814,
+  "candidate_news_id": "N65017",
+  "candidate_title": "Can A Ford Raptor Fully Charge A Tesla Model 3 By Towing It?",
+  "user_history_count": 10,
+  "user_history": [
+    "Bette Midler and Kathy Najimy Dish on Upcoming 'Hocus Pocus' Sequel and If They'd Be Involved",
+    "Everything We Think We Know About the 2020 Ford Bronco",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Celebrity PDA of 2019",
+    "Jenelle Evans Obtains Temporary Restraining Order Against David Eason",
+    "Look of the day: Ashley Graham's latest sizzling maternity look & more celeb style",
+    "Kroger is rebranding with a new logo and slogan",
+    "John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bette Midler and Kathy Najimy Dish on Upcoming 'Hocus Pocus' Sequel and If They'd Be Involved\"\n\"Everything We Think We Know About the 2020 Ford Bronco\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Celebrity PDA of 2019\"\n\"Jenelle Evans Obtains Temporary Restraining Order Against David Eason\"\n\"Look of the day: Ashley Graham's latest sizzling maternity look & more celeb style\"\n\"Kroger is rebranding with a new logo and slogan\"\n\"John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\n[Candidate News Title]\n\"Can A Ford Raptor Fully Charge A Tesla Model 3 By Towing It?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find an exploration of whether a Ford Raptor can effectively charge a Tesla Model 3 while towing it. The piece may discuss the technical specifications and capabilities of both vehicles, including battery capacity and towing power. It could also analyze the practicality of such a scenario, considering factors like range and charging efficiency. Additionally, the article might speculate on the implications of this capability for electric vehicle users, suggesting that it could offer a new solution for long-distance travel.",
+  "model": "gpt-4o-mini"
+}

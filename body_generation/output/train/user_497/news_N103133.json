@@ -1,0 +1,21 @@
+{
+  "user_id": 497,
+  "candidate_news_id": "N103133",
+  "candidate_title": "A Man and His Shelby G.T. 350 51 Years On",
+  "user_history_count": 10,
+  "user_history": [
+    "A Texas man shot and killed his wife. He says he was sleepwalking.",
+    "Shay Mitchell Reveals Daughter's Name Alongside Precious Photo",
+    "John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet",
+    "Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week",
+    "Fresh Off the Boat Canceled After Six Seasons",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids",
+    "Meghan Markle Says That Archie Has Two Teeth and Is Crawling",
+    "Meghan Markle earns Duchess Camilla's support, royal expert says",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A Texas man shot and killed his wife. He says he was sleepwalking.\"\n\"Shay Mitchell Reveals Daughter's Name Alongside Precious Photo\"\n\"John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet\"\n\"Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week\"\n\"Fresh Off the Boat Canceled After Six Seasons\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids\"\n\"Meghan Markle Says That Archie Has Two Teeth and Is Crawling\"\n\"Meghan Markle earns Duchess Camilla's support, royal expert says\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\n[Candidate News Title]\n\"A Man and His Shelby G.T. 350 51 Years On\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"A Man and His Shelby G.T. 350 51 Years On\" is likely to explore the long-term relationship between an individual and his classic car, the Shelby G.T. 350. Readers may expect to learn about the history of the vehicle, its significance in automotive culture, and the personal stories that have developed over the years of ownership. The piece may include details about the car's performance, maintenance, and its impact on the owner's life. Additionally, there could be insights into the broader appeal of classic cars and their role in nostalgia for car enthusiasts.",
+  "model": "gpt-4o-mini"
+}

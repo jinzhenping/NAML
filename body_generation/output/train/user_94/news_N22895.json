@@ -1,0 +1,21 @@
+{
+  "user_id": 94,
+  "candidate_news_id": "N22895",
+  "candidate_title": "Travel etiquette: The final word on the right to recline",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "The Ukrainian orphan at the center of an adoption scandal says she's a teenager, and none of her adoptive parents' claims are true",
+    "Sen. Dianne Feinstein renews call for racing to be suspended at Santa Anita Park after latest horse death",
+    "How Toys 'R' Us Went Bankrupt",
+    "Predicting the College Football Playoff Rankings for Week 11",
+    "Russian smuggling linked to 39 bodies found in truck in Britain",
+    "17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job",
+    "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+    "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+    "'The Little Mermaid Live!': TV Review"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"The Ukrainian orphan at the center of an adoption scandal says she's a teenager, and none of her adoptive parents' claims are true\"\n\"Sen. Dianne Feinstein renews call for racing to be suspended at Santa Anita Park after latest horse death\"\n\"How Toys 'R' Us Went Bankrupt\"\n\"Predicting the College Football Playoff Rankings for Week 11\"\n\"Russian smuggling linked to 39 bodies found in truck in Britain\"\n\"17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job\"\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\n[Candidate News Title]\n\"Travel etiquette: The final word on the right to recline\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Travel etiquette: The final word on the right to recline,\" the user can likely expect a comprehensive discussion on the norms and expectations surrounding airplane seating and the practice of reclining seats. The piece may address various perspectives on this topic, including the opinions of passengers who prefer to recline versus those who find it intrusive. Additionally, it could explore the etiquette of reclining during flights, potential conflicts between passengers, and suggestions for navigating these situations respectfully. Overall, the article is likely to provide insights into the ongoing debate about personal space and comfort in shared travel environments.",
+  "model": "gpt-4o-mini"
+}

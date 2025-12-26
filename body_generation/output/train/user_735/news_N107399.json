@@ -1,0 +1,18 @@
+{
+  "user_id": 735,
+  "candidate_news_id": "N107399",
+  "candidate_title": "Between 1,000 to 2,000 people get the plague every year -- including about 7 in the US",
+  "user_history_count": 7,
+  "user_history": [
+    "MLB should suspend Astros' Brandon Taubman to save the World Series",
+    "$16.8 Million In Campaign Funds Went To Trump Businesses, Latest Records Reveal",
+    "Why I Stayed in An Abusive Relationship",
+    "Impeachment inquiry focuses on White House lawyers",
+    "Sergio joins Westwood with dubious WGC distinction",
+    "I Took the 30-Day Squat Challenge and Here's What Happened",
+    "Jennifer Lopez's Incredible Looks From the Latin Grammys Deserve All the Awards"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"MLB should suspend Astros' Brandon Taubman to save the World Series\"\n\"$16.8 Million In Campaign Funds Went To Trump Businesses, Latest Records Reveal\"\n\"Why I Stayed in An Abusive Relationship\"\n\"Impeachment inquiry focuses on White House lawyers\"\n\"Sergio joins Westwood with dubious WGC distinction\"\n\"I Took the 30-Day Squat Challenge and Here's What Happened\"\n\"Jennifer Lopez's Incredible Looks From the Latin Grammys Deserve All the Awards\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Between 1,000 to 2,000 people get the plague every year -- including about 7 in the US\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article may provide an overview of the annual incidence of the plague, detailing how between 1,000 to 2,000 cases are reported globally each year, with approximately seven cases occurring in the United States. It could explore the historical context of the disease, its transmission methods, and potential symptoms, as well as preventive measures that can be taken to avoid infection. Additionally, the piece is likely to discuss the significance of these figures in relation to public health and awareness, emphasizing the ongoing relevance of plague as a health concern despite its rarity today.",
+  "model": "gpt-4o-mini"
+}

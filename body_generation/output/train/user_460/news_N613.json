@@ -1,0 +1,21 @@
+{
+  "user_id": 460,
+  "candidate_news_id": "N613",
+  "candidate_title": "Bolsonaro asks Brazilians 'not to give ammunition' to freed Lula",
+  "user_history_count": 10,
+  "user_history": [
+    "How Often Should You Change Synthetic Oil?",
+    "7 changes coming to Social Security in 2020",
+    "This Is Exactly How Long You Need to Hold a Plank to Flatten Your Belly",
+    "Backyard bungalows are becoming big business for homeowners and builders",
+    "Prefab tiny homes you can buy on Amazon",
+    "Here's how the Fed rate cut affects you",
+    "27 Essential Home Security Measures You're Not Doing",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"How Often Should You Change Synthetic Oil?\"\n\"7 changes coming to Social Security in 2020\"\n\"This Is Exactly How Long You Need to Hold a Plank to Flatten Your Belly\"\n\"Backyard bungalows are becoming big business for homeowners and builders\"\n\"Prefab tiny homes you can buy on Amazon\"\n\"Here's how the Fed rate cut affects you\"\n\"27 Essential Home Security Measures You're Not Doing\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\n[Candidate News Title]\n\"Bolsonaro asks Brazilians 'not to give ammunition' to freed Lula\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Bolsonaro asks Brazilians 'not to give ammunition' to freed Lula,\" the user may expect to read about the political dynamics in Brazil, particularly focusing on the relationship between former President Jair Bolsonaro and his rival, Luiz Inácio Lula da Silva. The piece is likely to discuss Bolsonaro's comments in the context of Brazil's political climate, possibly exploring the implications of Lula's recent release from prison and how it affects public sentiment and political strategy. Additionally, the article could provide insights into public reactions and the broader implications for governance and policy in Brazil.",
+  "model": "gpt-4o-mini"
+}

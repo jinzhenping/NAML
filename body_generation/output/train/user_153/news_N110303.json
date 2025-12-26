@@ -1,0 +1,21 @@
+{
+  "user_id": 153,
+  "candidate_news_id": "N110303",
+  "candidate_title": "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+  "user_history_count": 10,
+  "user_history": [
+    "Puppy's priceless reaction after seeing owner wear facial mask",
+    "Deer fatally attacks hunter who shot him",
+    "Coast Guard searches for man who fell from cruise off Texas",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "California man arrested on suspicion of arson as wildfires continue to rage across the state",
+    "Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Jamie Lee Curtis Opens Up About Being 20 Years Sober, Going Public With Her Addiction",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Puppy's priceless reaction after seeing owner wear facial mask\"\n\"Deer fatally attacks hunter who shot him\"\n\"Coast Guard searches for man who fell from cruise off Texas\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"California man arrested on suspicion of arson as wildfires continue to rage across the state\"\n\"Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Jamie Lee Curtis Opens Up About Being 20 Years Sober, Going Public With Her Addiction\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\n[Candidate News Title]\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent decision by the Supreme Court regarding a lawsuit against a gun manufacturer initiated by families of the Sandy Hook victims. Readers can expect an overview of the legal arguments presented, the implications of the court's refusal to block the lawsuit, and how this case fits into the broader context of gun control and liability issues in the United States. It may also touch on the reactions from both supporters and opponents of the lawsuit, as well as potential future ramifications for similar cases.",
+  "model": "gpt-4o-mini"
+}

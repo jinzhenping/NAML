@@ -1,0 +1,21 @@
+{
+  "user_id": 154,
+  "candidate_news_id": "N22659",
+  "candidate_title": "Fire Destroys Classic Porsche Cars And Parts Worth $3 Million",
+  "user_history_count": 10,
+  "user_history": [
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "President Jimmy Carter says he's 'at peace' with death during church service",
+    "Flood of Oil Is Coming, Complicating Efforts to Fight Global Warming",
+    "Celebs turning 60 in 2019",
+    "50 Weird but Wonderful Facts That Will Leave You Totally Amazed",
+    "Stars turning 70 in 2019",
+    "Iran downs drone over southern port city - IRNA",
+    "Report: Stephen A. Smith strikes massive new deal with ESPN"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"President Jimmy Carter says he's 'at peace' with death during church service\"\n\"Flood of Oil Is Coming, Complicating Efforts to Fight Global Warming\"\n\"Celebs turning 60 in 2019\"\n\"50 Weird but Wonderful Facts That Will Leave You Totally Amazed\"\n\"Stars turning 70 in 2019\"\n\"Iran downs drone over southern port city - IRNA\"\n\"Report: Stephen A. Smith strikes massive new deal with ESPN\"\n\n[Candidate News Title]\n\"Fire Destroys Classic Porsche Cars And Parts Worth $3 Million\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a significant fire that resulted in the destruction of classic Porsche cars and valuable parts, with an estimated loss of $3 million. Readers may expect details about the incident, including the location of the fire, the cause, and the impact on the car community or collectors. Additionally, the piece may provide context regarding the rarity and historical significance of the vehicles involved. There could also be insights into any ongoing investigations or recovery efforts related to the fire.",
+  "model": "gpt-4o-mini"
+}

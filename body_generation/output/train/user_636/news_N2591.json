@@ -1,0 +1,21 @@
+{
+  "user_id": 636,
+  "candidate_news_id": "N2591",
+  "candidate_title": "Meghan Markle and Prince Harry Reunite with Kate Middleton and Prince William for Remembrance Service",
+  "user_history_count": 10,
+  "user_history": [
+    "You Should Probably Stop Cooking With Vegetable Oil...Like Yesterday",
+    "The size of a bus, rare and endangered whale shark spotted off Florida coast",
+    "20 Things You Should Never Do When Cooking Bacon",
+    "Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before",
+    "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+    "Latest Australia shark attack sparks tourism concerns",
+    "Halloween snowstorm wallops the Midwest",
+    "John Legend clarifies his recent Kanye West comments, plus more news",
+    "Debunking the week's tabloid stories: Nov. 1, 2019",
+    "25 awesome gifts men actually want this year"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"You Should Probably Stop Cooking With Vegetable Oil...Like Yesterday\"\n\"The size of a bus, rare and endangered whale shark spotted off Florida coast\"\n\"20 Things You Should Never Do When Cooking Bacon\"\n\"Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Latest Australia shark attack sparks tourism concerns\"\n\"Halloween snowstorm wallops the Midwest\"\n\"John Legend clarifies his recent Kanye West comments, plus more news\"\n\"Debunking the week's tabloid stories: Nov. 1, 2019\"\n\"25 awesome gifts men actually want this year\"\n\n[Candidate News Title]\n\"Meghan Markle and Prince Harry Reunite with Kate Middleton and Prince William for Remembrance Service\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent public appearance of Meghan Markle and Prince Harry alongside Kate Middleton and Prince William during a Remembrance Service. Readers can expect a focus on the dynamics between the royal couples, possibly highlighting any notable interactions or conversations. The piece may also provide context about the significance of the event, including its historical background and the royals' roles in it. Additionally, it could explore public and media reactions to this reunion, though specific details regarding their interactions are uncertain.",
+  "model": "gpt-4o-mini"
+}

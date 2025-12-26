@@ -1,0 +1,20 @@
+{
+  "user_id": 753,
+  "candidate_news_id": "N48833",
+  "candidate_title": "85 Thanksgiving Recipes You Can Make Ahead",
+  "user_history_count": 9,
+  "user_history": [
+    "Soldier wounded searching for Bergdahl dies",
+    "'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says",
+    "Mom diagnosed with rare breast cancer during pregnancy delivers 'miracle' baby boy",
+    "Cornell student, 18, found dead in gorge after frat party, reports say",
+    "Baby dies of the same cancer his identical twin is currently battling",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet",
+    "Mother of missing Florida girl charged; human remains found"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Soldier wounded searching for Bergdahl dies\"\n\"'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says\"\n\"Mom diagnosed with rare breast cancer during pregnancy delivers 'miracle' baby boy\"\n\"Cornell student, 18, found dead in gorge after frat party, reports say\"\n\"Baby dies of the same cancer his identical twin is currently battling\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"\"\n\n[Candidate News Title]\n\"85 Thanksgiving Recipes You Can Make Ahead\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"85 Thanksgiving Recipes You Can Make Ahead,\" you can expect a comprehensive collection of recipes designed to simplify your Thanksgiving preparations. The article is likely to include a variety of dishes, ranging from traditional favorites like turkey and stuffing to innovative side dishes and desserts that can be prepared in advance. Additionally, it may provide tips on meal planning and timing, ensuring that you can enjoy the holiday without last-minute stress. Overall, the focus will be on practical and time-saving culinary ideas for the Thanksgiving feast.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 351,
+  "candidate_news_id": "N32154",
+  "candidate_title": "Porsche launches into second story of New Jersey building, killing 2",
+  "user_history_count": 10,
+  "user_history": [
+    "Forde-Yard Dash: This is how bad the playoff picture can get",
+    "Oklahoma announces Schooner wagon will not run rest of season after crash",
+    "The oldest town in every state",
+    "This Is The World Series MLB Deserves",
+    "Nationals on ropes after another home World Series loss in Game 5",
+    "10 things we learned during college football weekend",
+    "Auburn hasn't lost faith in quarterback Bo Nix, who will be happy to be home",
+    "With Carlos Beltran hire it's clear the Mets learned nothing from the Mickey Callaway mess",
+    "Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him",
+    "Monday night's win over the Giants emblematic of bigger issue for Cowboys"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Oklahoma announces Schooner wagon will not run rest of season after crash\"\n\"The oldest town in every state\"\n\"This Is The World Series MLB Deserves\"\n\"Nationals on ropes after another home World Series loss in Game 5\"\n\"10 things we learned during college football weekend\"\n\"Auburn hasn't lost faith in quarterback Bo Nix, who will be happy to be home\"\n\"With Carlos Beltran hire it's clear the Mets learned nothing from the Mickey Callaway mess\"\n\"Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him\"\n\"Monday night's win over the Giants emblematic of bigger issue for Cowboys\"\n\n[Candidate News Title]\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely details a tragic incident involving a Porsche vehicle that crashed into the second story of a building in New Jersey, resulting in the loss of two lives. Readers can expect a factual account of the event, including information about the circumstances surrounding the crash, any relevant eyewitness accounts, and the response from local authorities. Additionally, there may be a discussion of the implications of such accidents, particularly regarding vehicle safety and urban infrastructure. The article could also explore potential factors that contributed to the crash, although specifics may vary.",
+  "model": "gpt-4o-mini"
+}

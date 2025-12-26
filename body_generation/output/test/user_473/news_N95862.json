@@ -1,0 +1,21 @@
+{
+  "user_id": 473,
+  "candidate_news_id": "N95862",
+  "candidate_title": "Wendy's Is Turning 50 Years Old, And Is Gifting Us With Free Food Through 2020",
+  "user_history_count": 10,
+  "user_history": [
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "UK police say truck victims from Vietnam; 3 suspects held",
+    "Man who advocated caning for adultery gets caned for adultery",
+    "Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal",
+    "The first thing 14 lottery winners have bought after finding out they were rich",
+    "PEOPLE's Sexiest Men Alive: Still Sexy After All These Years",
+    "Nina Dobrev Out of the Hospital After 'Routine' Allergic Reaction: 'Swelling Is Basically Gone'",
+    "Small Canadian island irate that Americans keep opening their mail",
+    "Parents, students 'shaking and crying' after California school shooting",
+    "Family told to take down Christmas display because it's too soon to decorate"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"UK police say truck victims from Vietnam; 3 suspects held\"\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal\"\n\"The first thing 14 lottery winners have bought after finding out they were rich\"\n\"PEOPLE's Sexiest Men Alive: Still Sexy After All These Years\"\n\"Nina Dobrev Out of the Hospital After 'Routine' Allergic Reaction: 'Swelling Is Basically Gone'\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"Parents, students 'shaking and crying' after California school shooting\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\n[Candidate News Title]\n\"Wendy's Is Turning 50 Years Old, And Is Gifting Us With Free Food Through 2020\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Wendy's turning 50 years old is likely to discuss the fast-food chain's history and its impact on the industry over the years. Readers may expect to learn about special promotions or events planned for this milestone, possibly including free food offerings and limited-time menu items to celebrate the anniversary. Additionally, the article could provide insights into Wendy's evolution, marketing strategies, and its current standing among competitors in the fast-food market. Overall, it may highlight the brand's efforts to engage customers during this significant occasion.",
+  "model": "gpt-4o-mini"
+}

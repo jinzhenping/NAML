@@ -1,0 +1,21 @@
+{
+  "user_id": 775,
+  "candidate_news_id": "N100738",
+  "candidate_title": "These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show",
+  "user_history_count": 10,
+  "user_history": [
+    "Kylie Jenner hits Drake's Halloween party amid flirtation rumors, plus more news",
+    "Secrets of a perfect carved turkey",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Republican Lt. Gov. Reeves wins Mississippi governor's race",
+    "The 50 best films of the 2010s",
+    "Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet",
+    "Stars   They're Just Like Us!",
+    "Week in celebrity photos for Nov. 4-8, 2019",
+    "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+    "Snow crab sells for record price in Japan"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kylie Jenner hits Drake's Halloween party amid flirtation rumors, plus more news\"\n\"Secrets of a perfect carved turkey\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Republican Lt. Gov. Reeves wins Mississippi governor's race\"\n\"The 50 best films of the 2010s\"\n\"Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet\"\n\"Stars   They're Just Like Us!\"\n\"Week in celebrity photos for Nov. 4-8, 2019\"\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\"Snow crab sells for record price in Japan\"\n\n[Candidate News Title]\n\"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\" is likely to provide a visual recap of the event, highlighting key moments and notable attendees. Readers can expect to see a curated selection of photographs that showcase the performances, fashion choices, and behind-the-scenes interactions from the Country Music Association Awards. Additionally, the photos may include commentary on the significance of certain outfits or performances, giving context to the images. This article could also explore trends in celebrity appearances at the awards, offering insights into the evening's atmosphere.",
+  "model": "gpt-4o-mini"
+}

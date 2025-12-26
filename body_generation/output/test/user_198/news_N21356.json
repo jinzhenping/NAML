@@ -1,0 +1,21 @@
+{
+  "user_id": 198,
+  "candidate_news_id": "N21356",
+  "candidate_title": "5 arrested in connection with deadly shooting at Airbnb Halloween party",
+  "user_history_count": 10,
+  "user_history": [
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+    "Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'",
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'",
+    "Nick Jonas Shares Heartfelt Message to Friend Kevin Hart After Car Crash",
+    "28 Simple Ways to Shrink Your Gut",
+    "Stars who've had more than one wedding with the same spouse",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Teenage girl charged with murder after police say she tied down and killed an animal rescue advocate"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'\"\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'\"\n\"Nick Jonas Shares Heartfelt Message to Friend Kevin Hart After Car Crash\"\n\"28 Simple Ways to Shrink Your Gut\"\n\"Stars who've had more than one wedding with the same spouse\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Teenage girl charged with murder after police say she tied down and killed an animal rescue advocate\"\n\n[Candidate News Title]\n\"5 arrested in connection with deadly shooting at Airbnb Halloween party\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent arrests made in connection with a deadly shooting that occurred during a Halloween party at an Airbnb. Readers can expect details regarding the circumstances surrounding the incident, including information about the victims and any potential motives behind the shooting. The article may also provide insights into the investigation process, including the identities of the suspects and how law enforcement linked them to the crime. Additionally, it could explore the broader implications of such incidents at rental properties, reflecting on safety concerns in similar social settings.",
+  "model": "gpt-4o-mini"
+}

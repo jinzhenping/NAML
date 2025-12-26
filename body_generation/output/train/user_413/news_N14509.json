@@ -1,0 +1,21 @@
+{
+  "user_id": 413,
+  "candidate_news_id": "N14509",
+  "candidate_title": "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+    "I went to Peter Luger after it received zero stars from New York Times",
+    "Today in History: November 7",
+    "The 50 cheapest places to buy land in America",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "EU ambassador's miraculous 'now I remember' moment",
+    "McDonald's Is Going to Add Chicken to Its Breakfast Menu in 2020",
+    "Dallas Has One of America's Best All-You-Can-Eat Restaurants",
+    "Apparently, Dallas Restaurants Don't Want to Be on 'Real Housewives'",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"I went to Peter Luger after it received zero stars from New York Times\"\n\"Today in History: November 7\"\n\"The 50 cheapest places to buy land in America\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"EU ambassador's miraculous 'now I remember' moment\"\n\"McDonald's Is Going to Add Chicken to Its Breakfast Menu in 2020\"\n\"Dallas Has One of America's Best All-You-Can-Eat Restaurants\"\n\"Apparently, Dallas Restaurants Don't Want to Be on 'Real Housewives'\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses Kristen Stewart's plans to propose to her girlfriend, along with additional updates on other celebrities' romantic lives as of early November 2019. Readers may expect coverage of the context around Stewart's relationship, including any recent public appearances or statements that provide insight into her feelings and intentions. The piece could also include brief mentions of other celebrity couples and noteworthy developments in their relationships, reflecting the current trends in celebrity love stories.",
+  "model": "gpt-4o-mini"
+}

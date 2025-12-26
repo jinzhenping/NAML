@@ -1,0 +1,21 @@
+{
+  "user_id": 573,
+  "candidate_news_id": "N3623",
+  "candidate_title": "The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news",
+  "user_history_count": 10,
+  "user_history": [
+    "President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'",
+    "Bannon: Pelosi's impeachment strategy is 'winning'",
+    "One family built Forever 21 and fueled its collapse",
+    "Janet Jackson Says Son Eissa Is 'Incredibly Musical' and Copies Uncle Michael's Moves",
+    "Republicans are throwing Giuliani under the bus. But there's a problem.",
+    "A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too",
+    "Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned",
+    "The 'Blue Zones' diet: Foods that help people live to 100",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "Rep. Tim Ryan endorses Biden in Democratic primary"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'\"\n\"Bannon: Pelosi's impeachment strategy is 'winning'\"\n\"One family built Forever 21 and fueled its collapse\"\n\"Janet Jackson Says Son Eissa Is 'Incredibly Musical' and Copies Uncle Michael's Moves\"\n\"Republicans are throwing Giuliani under the bus. But there's a problem.\"\n\"A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too\"\n\"Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned\"\n\"The 'Blue Zones' diet: Foods that help people live to 100\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\n[Candidate News Title]\n\"The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide updates on the ongoing dynamics between Brad Pitt and Angelina Jolie following their highly publicized split. Readers may expect insights into their co-parenting arrangements, legal battles, and any recent public appearances or statements made by either party. Additionally, it could explore how their relationship has evolved over time, particularly in relation to their children, and may include commentary from entertainment insiders about the potential implications of their interactions. Overall, the article may offer a comprehensive view of the current status of their relationship, reflecting both personal and professional aspects.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 755,
+  "candidate_news_id": "N64785",
+  "candidate_title": "Archie's Photo Album: Prince Harry, Duchess Meghan's Royal Baby",
+  "user_history_count": 10,
+  "user_history": [
+    "12 Surprising Things You Should Never Clean with Water",
+    "Napoleon Bonaparte's general believed unearthed in Russia",
+    "Chin Hair: 7 Embarrassing Red Flags No Woman Should Ever Ignore",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "13 Ways You're Shortening the Life of Your Car",
+    "See what your favorite stars look like without makeup",
+    "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out",
+    "Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out",
+    "40 Health Habits Jennifer Lopez Swears By To Stay Insanely Fit And Young",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"12 Surprising Things You Should Never Clean with Water\"\n\"Napoleon Bonaparte's general believed unearthed in Russia\"\n\"Chin Hair: 7 Embarrassing Red Flags No Woman Should Ever Ignore\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"13 Ways You're Shortening the Life of Your Car\"\n\"See what your favorite stars look like without makeup\"\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\"Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out\"\n\"40 Health Habits Jennifer Lopez Swears By To Stay Insanely Fit And Young\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\n[Candidate News Title]\n\"Archie's Photo Album: Prince Harry, Duchess Meghan's Royal Baby\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Archie's Photo Album: Prince Harry, Duchess Meghan's Royal Baby,\" the user likely expects to explore a collection of personal photographs featuring baby Archie, offering insights into his early life and milestones. The piece may include descriptions of the images, highlighting moments shared by the royal family, as well as details about how these photos reflect their experiences as parents. Additionally, there could be commentary on the significance of these images within the context of royal family dynamics and public interest, particularly given the recent sharing of a special photo by the couple.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 93,
+  "candidate_news_id": "N29441",
+  "candidate_title": "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+  "user_history_count": 10,
+  "user_history": [
+    "Rodgers rips Packers' road focus after blowout loss to Bolts",
+    "Senate Republicans divided over whether whistleblower should testify",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Ex-NFL player Winslow Jr takes plea deal before rape retrial",
+    "Caterpillar lays off 120 workers as trade war hits sales",
+    "Cubans were once privileged migrants to the United States. Now they're stuck at the border, like everyone else.",
+    "Poll: 62% of Trump fans say they support him no matter what",
+    "Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says",
+    "The Latest: Kansas City to remove King's name from street",
+    "Before his execution, a death row inmate told his victim's family he forgives them"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Rodgers rips Packers' road focus after blowout loss to Bolts\"\n\"Senate Republicans divided over whether whistleblower should testify\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Ex-NFL player Winslow Jr takes plea deal before rape retrial\"\n\"Caterpillar lays off 120 workers as trade war hits sales\"\n\"Cubans were once privileged migrants to the United States. Now they're stuck at the border, like everyone else.\"\n\"Poll: 62% of Trump fans say they support him no matter what\"\n\"Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\n[Candidate News Title]\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Kiss canceling their \"End of the Road\" tour in Australia and New Zealand due to illness is likely to provide details on the reasons behind the cancellation, including the specific health issues affecting the band members. It may discuss the impact of this decision on fans and ticket holders, as well as any potential rescheduling plans or refunds. Furthermore, the article could explore the broader implications for the band's tour schedule and their future performances, particularly in light of the ongoing challenges artists face during times of health crises.",
+  "model": "gpt-4o-mini"
+}

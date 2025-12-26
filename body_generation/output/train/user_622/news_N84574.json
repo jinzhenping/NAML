@@ -1,0 +1,21 @@
+{
+  "user_id": 622,
+  "candidate_news_id": "N84574",
+  "candidate_title": "Who will be best team in the NFL after Week 11?",
+  "user_history_count": 10,
+  "user_history": [
+    "Andy Cohen Says He Doesn't Feel Guilty About Joe and Teresa Giudice's Legal Fate After RHONJ",
+    "Michigan apple recall: Nearly 2,300 crates could be contaminated with listeria",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder",
+    "Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet",
+    "This Year's 25 Hottest Holiday Gifts",
+    "'The Little Mermaid Live!': TV Review",
+    "'Sons Of Anarchy' Star Ron Perlman Files for Divorce After 38 Years of Marriage",
+    "Police Surprise Woman Who Anonymously Baked Pizzelle Cookies for Years in Heartwarming Video",
+    "Everything to Know About Visiting the Biltmore Estate This Christmas"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Andy Cohen Says He Doesn't Feel Guilty About Joe and Teresa Giudice's Legal Fate After RHONJ\"\n\"Michigan apple recall: Nearly 2,300 crates could be contaminated with listeria\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder\"\n\"Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet\"\n\"This Year's 25 Hottest Holiday Gifts\"\n\"'The Little Mermaid Live!': TV Review\"\n\"'Sons Of Anarchy' Star Ron Perlman Files for Divorce After 38 Years of Marriage\"\n\"Police Surprise Woman Who Anonymously Baked Pizzelle Cookies for Years in Heartwarming Video\"\n\"Everything to Know About Visiting the Biltmore Estate This Christmas\"\n\n[Candidate News Title]\n\"Who will be best team in the NFL after Week 11?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find an analysis of the current state of the NFL as teams approach the end of the regular season. It may provide insights into team performances, highlighting key statistics and player contributions that could shape playoff predictions. Additionally, the article might discuss the implications of recent games on team rankings and the potential for emerging favorites. Overall, the content is expected to inform readers about which teams are positioned as the strongest contenders in the league, though the ultimate outcome remains uncertain.",
+  "model": "gpt-4o-mini"
+}

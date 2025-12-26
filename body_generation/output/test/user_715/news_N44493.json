@@ -1,0 +1,21 @@
+{
+  "user_id": 715,
+  "candidate_news_id": "N44493",
+  "candidate_title": "How Google Interferes With Its Search Algorithms and Changes Your Results",
+  "user_history_count": 10,
+  "user_history": [
+    "Panga Boat Makes Landfall Near San Clemente Beach; Chinese, Mexican Nationals Arrested",
+    "Browns cut Jermaine Whitehead after racist Twitter rant that included death threats",
+    "Vietnam arrests 8 in connection with discovery of 39 bodies in truck in UK",
+    "Dakota Johnson's Tribute to Former Stepdad Antonio Banderas Will Leave You In Tears",
+    "Jordan attack: 8 injured during knife attack in Jerash",
+    "Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says",
+    "'I am scared all the time': Chimps and people are clashing in rural Uganda",
+    "Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media",
+    "WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist",
+    "American woman apparently strangled in the Dominican Republic"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Panga Boat Makes Landfall Near San Clemente Beach; Chinese, Mexican Nationals Arrested\"\n\"Browns cut Jermaine Whitehead after racist Twitter rant that included death threats\"\n\"Vietnam arrests 8 in connection with discovery of 39 bodies in truck in UK\"\n\"Dakota Johnson's Tribute to Former Stepdad Antonio Banderas Will Leave You In Tears\"\n\"Jordan attack: 8 injured during knife attack in Jerash\"\n\"Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says\"\n\"'I am scared all the time': Chimps and people are clashing in rural Uganda\"\n\"Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media\"\n\"WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist\"\n\"American woman apparently strangled in the Dominican Republic\"\n\n[Candidate News Title]\n\"How Google Interferes With Its Search Algorithms and Changes Your Results\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to encounter an exploration of the ways in which Google manipulates its search algorithms, potentially affecting what information users see and how it is presented. The content may delve into specific examples of algorithm changes and their implications for search results, as well as the broader impact on user experience and information accessibility. Additionally, it could discuss the motivations behind these changes and how they might align with Google's business interests. The article may also touch on concerns regarding transparency and user trust in search engines.",
+  "model": "gpt-4o-mini"
+}

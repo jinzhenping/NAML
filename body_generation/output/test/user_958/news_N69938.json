@@ -1,0 +1,21 @@
+{
+  "user_id": 958,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween",
+    "Daphne Oz Just Shared the Most Relatable Abs Photo 10 Weeks After Giving Birth",
+    "Hugh Hefner's son Cooper weds 'Harry Potter' actress",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Instagram-famous pilot reveals secrets people don't know about the job",
+    "'Unthinkable': Accused killer of Georgia college student Alexis Crawford spent holidays with victim's family",
+    "Jordyn Woods debuts shocking new look: Pic",
+    "The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You",
+    "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween\"\n\"Daphne Oz Just Shared the Most Relatable Abs Photo 10 Weeks After Giving Birth\"\n\"Hugh Hefner's son Cooper weds 'Harry Potter' actress\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Instagram-famous pilot reveals secrets people don't know about the job\"\n\"'Unthinkable': Accused killer of Georgia college student Alexis Crawford spent holidays with victim's family\"\n\"Jordyn Woods debuts shocking new look: Pic\"\n\"The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers may expect to learn about an unexpected meeting between Meghan Markle and Hillary Clinton at Frogmore Cottage, a location known for its connection to the British royal family. The piece is likely to provide insights into the context of their gathering, possibly discussing their shared interests or initiatives related to women's empowerment and social issues. Additionally, the article may touch on the significance of this meeting given both figures' public influence and the implications it might have for their respective causes. Overall, the content could blend personal anecdotes with broader themes of collaboration in activism.",
+  "model": "gpt-4o-mini"
+}

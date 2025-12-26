@@ -1,0 +1,21 @@
+{
+  "user_id": 920,
+  "candidate_news_id": "N27097",
+  "candidate_title": "Utah death-row inmate featured in best-selling book dies",
+  "user_history_count": 10,
+  "user_history": [
+    "Former DHS Secretary Kirstjen Nielsen says she left post because 'saying no' wasn't enough",
+    "Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo",
+    "Navy Reduces Punishment for SEAL in War Crimes Case",
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "The world's largest nuclear power producer is melting down",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Grading all 32 NFL teams heading into the last eight weeks of the 2019 season"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former DHS Secretary Kirstjen Nielsen says she left post because 'saying no' wasn't enough\"\n\"Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo\"\n\"Navy Reduces Punishment for SEAL in War Crimes Case\"\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"The world's largest nuclear power producer is melting down\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Grading all 32 NFL teams heading into the last eight weeks of the 2019 season\"\n\n[Candidate News Title]\n\"Utah death-row inmate featured in best-selling book dies\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the death-row inmate in Utah is likely to provide an overview of the inmate's background, potentially highlighting their crimes and the legal proceedings that led to their sentencing. It may discuss the impact of their case, particularly if it was featured in a best-selling book, and how this has influenced public perception. Additionally, the article could touch on the circumstances surrounding the inmate's death, including any relevant details about health issues or execution protocols. Overall, readers may find insights into the broader implications of the case within the context of the justice system.",
+  "model": "gpt-4o-mini"
+}

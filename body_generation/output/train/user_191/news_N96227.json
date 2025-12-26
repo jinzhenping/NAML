@@ -1,0 +1,21 @@
+{
+  "user_id": 191,
+  "candidate_news_id": "N96227",
+  "candidate_title": "Chilly down to the Gulf of Mexico: What you should know about the arctic blast",
+  "user_history_count": 10,
+  "user_history": [
+    "Stephen Curry injury update: Warriors guard to undergo CT scan (hand) to see if he'll need surgery",
+    "Trent Williams fails physical, experiencing discomfort with helmet",
+    "5 ways to get free access to services like Netflix, HBO, Hulu, Disney Plus, and Apple TV Plus",
+    "Report: Steve Belichick serving as Patriots' defensive play caller",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "12 Things U.S. Presidents Have to Pay for on Their Own",
+    "This Foster Kitten Smiling for a Photo Will Make Your Friday",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos",
+    "Chase Young fiasco highlights absurdity of NCAA's outdated model",
+    "Disney CEO Bob Iger is about to take the biggest risk of his career"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Stephen Curry injury update: Warriors guard to undergo CT scan (hand) to see if he'll need surgery\"\n\"Trent Williams fails physical, experiencing discomfort with helmet\"\n\"5 ways to get free access to services like Netflix, HBO, Hulu, Disney Plus, and Apple TV Plus\"\n\"Report: Steve Belichick serving as Patriots' defensive play caller\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"12 Things U.S. Presidents Have to Pay for on Their Own\"\n\"This Foster Kitten Smiling for a Photo Will Make Your Friday\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\"Chase Young fiasco highlights absurdity of NCAA's outdated model\"\n\"Disney CEO Bob Iger is about to take the biggest risk of his career\"\n\n[Candidate News Title]\n\"Chilly down to the Gulf of Mexico: What you should know about the arctic blast\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide an overview of the recent arctic blast affecting various regions, including the Gulf of Mexico. It may detail the weather conditions associated with this cold front, such as temperature drops and potential impacts on travel and outdoor activities. The piece could also include safety tips for residents in affected areas and how they might prepare for the cold weather. Additionally, it may highlight any unusual weather phenomena or comparisons to past arctic events, allowing readers to understand the significance of the current situation.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 356,
+  "candidate_news_id": "N47257",
+  "candidate_title": "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+  "user_history_count": 10,
+  "user_history": [
+    "Family of slain ISIS hostage says they secretly met with her captors in Iraq",
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "Trent Williams has no intention of playing despite reporting to Redskins",
+    "Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Iran Nuclear Crisis Escalates With New Inspections Report",
+    "Where will Cam Newton play in 2020? Ranking the 7 best fits, from Panthers to Dolphins"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Family of slain ISIS hostage says they secretly met with her captors in Iraq\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Trent Williams has no intention of playing despite reporting to Redskins\"\n\"Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Iran Nuclear Crisis Escalates With New Inspections Report\"\n\"Where will Cam Newton play in 2020? Ranking the 7 best fits, from Panthers to Dolphins\"\n\n[Candidate News Title]\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month,\" the user is likely to find details regarding the circumstances surrounding the comedian's passing, including possible health issues that contributed to his death. The piece may also outline the plans for a memorial service, offering specifics such as the date and location, and potentially highlight Taylor's contributions to entertainment and his impact on the comedy scene. Overall, the article is expected to provide a factual account of events surrounding his death while reflecting on his legacy.",
+  "model": "gpt-4o-mini"
+}

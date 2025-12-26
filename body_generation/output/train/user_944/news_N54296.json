@@ -1,0 +1,21 @@
+{
+  "user_id": 944,
+  "candidate_news_id": "N54296",
+  "candidate_title": "Georgia executes man convicted of killing convenience store clerk",
+  "user_history_count": 10,
+  "user_history": [
+    "$16.8 Million In Campaign Funds Went To Trump Businesses, Latest Records Reveal",
+    "Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion",
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "Trump judicial pick breaks down in tears at hearing over legal group's attack",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "8 Things on the McDonald's Secret Menu You Need to Know About",
+    "A day in the life of the top real-estate broker in Miami, who commutes by ferry to the richest ZIP code in the US and sold more than $189 million of luxury homes in 2018",
+    "Tom Draper, Black Music Industry Pioneer, Dies at 79",
+    "Debunking the week's tabloid stories: Nov. 1, 2019",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"$16.8 Million In Campaign Funds Went To Trump Businesses, Latest Records Reveal\"\n\"Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion\"\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"Trump judicial pick breaks down in tears at hearing over legal group's attack\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"8 Things on the McDonald's Secret Menu You Need to Know About\"\n\"A day in the life of the top real-estate broker in Miami, who commutes by ferry to the richest ZIP code in the US and sold more than $189 million of luxury homes in 2018\"\n\"Tom Draper, Black Music Industry Pioneer, Dies at 79\"\n\"Debunking the week's tabloid stories: Nov. 1, 2019\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\n[Candidate News Title]\n\"Georgia executes man convicted of killing convenience store clerk\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent execution of a man convicted of murdering a convenience store clerk in Georgia, detailing the circumstances surrounding the crime and the legal proceedings that led to his death. It may provide insights into the implications of the execution within the broader context of the death penalty debate in the state, including public opinion and legal challenges. Additionally, the article could explore the reactions from various stakeholders, such as victim advocacy groups and legal experts, although these aspects remain speculative.",
+  "model": "gpt-4o-mini"
+}

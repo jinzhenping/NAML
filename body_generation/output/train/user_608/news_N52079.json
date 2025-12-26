@@ -1,0 +1,21 @@
+{
+  "user_id": 608,
+  "candidate_news_id": "N52079",
+  "candidate_title": "San Diego State University freshman hurt in fraternity incident dies",
+  "user_history_count": 10,
+  "user_history": [
+    "Elton John Has Not Seen 'Bohemian Rhapsody' And Refuses To Watch It",
+    "This Is What Happens When You Take Ibuprofen Too Often, According to a Doctor",
+    "Caterpillar just flashed the latest warning sign for the global economy",
+    "Where have Cape Town's great whites gone?",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "The world's largest nuclear power producer is melting down",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "Snow crab sells for record price in Japan"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Elton John Has Not Seen 'Bohemian Rhapsody' And Refuses To Watch It\"\n\"This Is What Happens When You Take Ibuprofen Too Often, According to a Doctor\"\n\"Caterpillar just flashed the latest warning sign for the global economy\"\n\"Where have Cape Town's great whites gone?\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"The world's largest nuclear power producer is melting down\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"Snow crab sells for record price in Japan\"\n\n[Candidate News Title]\n\"San Diego State University freshman hurt in fraternity incident dies\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent death of a San Diego State University freshman following a fraternity incident, focusing on the circumstances surrounding the event and its implications for campus safety. Readers may expect details about the incident itself, including any reported actions taken by the university or fraternity involved, as well as reactions from students and faculty. Additionally, the article could explore broader themes related to fraternity culture and the challenges associated with ensuring student safety during social events. It is likely to provide context on how such incidents can impact the university community.",
+  "model": "gpt-4o-mini"
+}

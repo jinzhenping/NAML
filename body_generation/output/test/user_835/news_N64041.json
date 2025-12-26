@@ -1,0 +1,21 @@
+{
+  "user_id": 835,
+  "candidate_news_id": "N64041",
+  "candidate_title": "Victim in Kevin Hart's car accident speaks out for 1st time",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+    "Marcia Cross' anal cancer may have been linked to HPV. She wants people to know they could have the virus, too.",
+    "13 Best Fall Superfoods for Weight Loss",
+    "What Happens When a Plane Collides with a Flock of Birds?",
+    "Carrie Underwood rocks CMAs and several gorgeous outfits as host",
+    "Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal",
+    "Fashion hits and misses from the 2019 Country Music Association Awards",
+    "Teddi Mellencamp Gets Candid About Body Image In Before-And-After Weight Loss Photos"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\"Marcia Cross' anal cancer may have been linked to HPV. She wants people to know they could have the virus, too.\"\n\"13 Best Fall Superfoods for Weight Loss\"\n\"What Happens When a Plane Collides with a Flock of Birds?\"\n\"Carrie Underwood rocks CMAs and several gorgeous outfits as host\"\n\"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\"\n\"Fashion hits and misses from the 2019 Country Music Association Awards\"\n\"Teddi Mellencamp Gets Candid About Body Image In Before-And-After Weight Loss Photos\"\n\n[Candidate News Title]\n\"Victim in Kevin Hart's car accident speaks out for 1st time\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Kevin Hart's car accident, the user is likely to find details regarding the incident itself, including its circumstances and any injuries sustained. The victim's perspective may provide insights into the aftermath of the accident, potentially discussing their recovery process and feelings about the event. Additionally, the article could explore the broader implications of such accidents involving celebrities, including public safety concerns and the effects on the involved parties. It is likely to highlight how this incident has impacted Kevin Hart's life and career, though the specifics remain uncertain.",
+  "model": "gpt-4o-mini"
+}

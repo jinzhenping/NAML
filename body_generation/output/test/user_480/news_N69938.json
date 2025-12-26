@@ -1,0 +1,21 @@
+{
+  "user_id": 480,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+    "See the most expensive watch ever sold at auction",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "Opinion: Other schools can learn from Oregon's hiring of Mario Cristobal",
+    "Hernandez: Anthony Davis' impact on LeBron James apparent even when he doesn't play",
+    "Jilmar Ramos-Gomez, US citizen detained by ICE, to get $190K",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+    "A Man and His Shelby G.T. 350 51 Years On",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win",
+    "Can you answer these real Jeopardy questions about TV shows?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"See the most expensive watch ever sold at auction\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Opinion: Other schools can learn from Oregon's hiring of Mario Cristobal\"\n\"Hernandez: Anthony Davis' impact on LeBron James apparent even when he doesn't play\"\n\"Jilmar Ramos-Gomez, US citizen detained by ICE, to get $190K\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"A Man and His Shelby G.T. 350 51 Years On\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\"Can you answer these real Jeopardy questions about TV shows?\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent, private meeting between Meghan Markle and Hillary Clinton at Frogmore Cottage, emphasizing the significance of their connection, particularly in the context of women's advocacy and social issues. Readers may expect insights into the topics they discussed, which could range from political matters to personal experiences, as well as the implications of their meeting for public perception of both figures. The article may also explore how their relationship reflects broader trends in celebrity and political collaborations.",
+  "model": "gpt-4o-mini"
+}

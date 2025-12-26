@@ -1,0 +1,21 @@
+{
+  "user_id": 945,
+  "candidate_news_id": "N68562",
+  "candidate_title": "We tried McDonald's new Snickerdoodle McFlurry, and here's our honest review",
+  "user_history_count": 10,
+  "user_history": [
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "A bride and groom ordered $450 of Domino's pizza for their wedding meal because they 'couldn't decide on food'",
+    "Russian smuggling linked to 39 bodies found in truck in Britain",
+    "My wife and I have bailed out our son, yet we have the daughter-in-law from hell",
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "If You're a Fan of French Fries, You'll Love This Healthy Italian Alternative Made From Chickpeas",
+    "'The Little Mermaid Live!': TV Review",
+    "Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"A bride and groom ordered $450 of Domino's pizza for their wedding meal because they 'couldn't decide on food'\"\n\"Russian smuggling linked to 39 bodies found in truck in Britain\"\n\"My wife and I have bailed out our son, yet we have the daughter-in-law from hell\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"If You're a Fan of French Fries, You'll Love This Healthy Italian Alternative Made From Chickpeas\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\n[Candidate News Title]\n\"We tried McDonald's new Snickerdoodle McFlurry, and here's our honest review\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a review of McDonald's new Snickerdoodle McFlurry, detailing its flavor profile and texture. The piece may examine how the dessert compares to other offerings in terms of taste and quality, along with any unique ingredients that contribute to its appeal. It could also include insights from taste testers and their overall impressions of the item. Additionally, readers might expect information about the dessert's availability and whether it aligns with current consumer trends in fast food desserts.",
+  "model": "gpt-4o-mini"
+}

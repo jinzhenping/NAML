@@ -1,0 +1,21 @@
+{
+  "user_id": 763,
+  "candidate_news_id": "N18190",
+  "candidate_title": "30 Best Black Friday Deals from Costco",
+  "user_history_count": 10,
+  "user_history": [
+    "Confirmed: Even Base 2020 C8 Corvettes Hit 60 MPH in 3.0 Seconds Flat",
+    "Stunning photos of redheads from around the world",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "What It Was Like Inside the Homes of the Pilgrims",
+    "SEMA 2019: Cars and Trucks Gone Wild",
+    "Lance Altimeter Is A Delicious Drop-In Truck Camper Debuting At SEMA",
+    "Donald Trump Jr slams The View Host Sunny Hostin by asking what it's like to be paid by a network that 'protected pedophile - rapist Jeffrey Epstein' in war of words on Twitter",
+    "Fast food cashier and manager fired for refusing to serve police officer",
+    "2020 Chevrolet Blazer RS: Pros And Cons",
+    "Deval Patrick Will Enter 2020 Presidential Race on Thursday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Confirmed: Even Base 2020 C8 Corvettes Hit 60 MPH in 3.0 Seconds Flat\"\n\"Stunning photos of redheads from around the world\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"What It Was Like Inside the Homes of the Pilgrims\"\n\"SEMA 2019: Cars and Trucks Gone Wild\"\n\"Lance Altimeter Is A Delicious Drop-In Truck Camper Debuting At SEMA\"\n\"Donald Trump Jr slams The View Host Sunny Hostin by asking what it's like to be paid by a network that 'protected pedophile - rapist Jeffrey Epstein' in war of words on Twitter\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"2020 Chevrolet Blazer RS: Pros And Cons\"\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\n[Candidate News Title]\n\"30 Best Black Friday Deals from Costco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"30 Best Black Friday Deals from Costco,\" the user is likely to find a detailed overview of various products available at significant discounts during the Black Friday sales event. The piece may highlight a range of categories, such as electronics, home goods, and groceries, providing insights into the best value options and potential savings. Additionally, it could include tips on how to navigate the sale effectively, such as popular items to watch for and time-sensitive deals. Overall, the article aims to assist readers in maximizing their shopping experience while ensuring they are informed about the most attractive offers available at Costco during this shopping season.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 661,
+  "candidate_news_id": "N105407",
+  "candidate_title": "'One in a million' deer captured on camera in Michigan woods",
+  "user_history_count": 10,
+  "user_history": [
+    "The 1000-Horsepower Club",
+    "The Absolute Best Casseroles of 2019",
+    "Report: NFL considers allowing a Chargers move to London",
+    "15 Old-School Dishes Making a Comeback at Restaurants",
+    "Butternut Squash + Bacon = Fall's Favorite Riff on Macaroni & Cheese",
+    "Forget What You've Heard About Not Serving Seafood With Dairy",
+    "Kroger is rebranding with a new logo and slogan",
+    "30 Thanksgiving Casserole Recipes",
+    "This Copycat Cracker Barrel Hashbrown Casserole Recipe Is the Ultimate One-Dish Breakfast",
+    "Creative Recipes That Let You Step Outside the Thanksgiving Box"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 1000-Horsepower Club\"\n\"The Absolute Best Casseroles of 2019\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"15 Old-School Dishes Making a Comeback at Restaurants\"\n\"Butternut Squash + Bacon = Fall's Favorite Riff on Macaroni & Cheese\"\n\"Forget What You've Heard About Not Serving Seafood With Dairy\"\n\"Kroger is rebranding with a new logo and slogan\"\n\"30 Thanksgiving Casserole Recipes\"\n\"This Copycat Cracker Barrel Hashbrown Casserole Recipe Is the Ultimate One-Dish Breakfast\"\n\"Creative Recipes That Let You Step Outside the Thanksgiving Box\"\n\n[Candidate News Title]\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"'One in a million' deer captured on camera in Michigan woods,\" the user is likely to read about a rare sighting of a unique deer, possibly characterized by unusual coloration or physical traits that set it apart from typical deer in the area. The piece may delve into the significance of such rare occurrences in wildlife and conservation discussions, including insights from experts on the implications of genetic anomalies in animal populations. Additionally, the article could feature information on the location of the sighting and community reactions, though specifics remain uncertain.",
+  "model": "gpt-4o-mini"
+}

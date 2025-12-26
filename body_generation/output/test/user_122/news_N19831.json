@@ -1,0 +1,21 @@
+{
+  "user_id": 122,
+  "candidate_news_id": "N19831",
+  "candidate_title": "Bill Russell finally accepts Basketball Hall of Fame ring",
+  "user_history_count": 10,
+  "user_history": [
+    "Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news",
+    "Walmart's Pre-Holiday Deals Are Live Right Now",
+    "Las Vegas adopts ban on sleeping, camping on streets, sidewalks",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Mezcal vs. Tequila What Are the Differences?",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Happy Friday! What if You Always Had It Off? Why Don't You?",
+    "The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping",
+    "Husband, 106, and wife, 105, are named world's oldest living couple"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news\"\n\"Walmart's Pre-Holiday Deals Are Live Right Now\"\n\"Las Vegas adopts ban on sleeping, camping on streets, sidewalks\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Mezcal vs. Tequila What Are the Differences?\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Happy Friday! What if You Always Had It Off? Why Don't You?\"\n\"The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping\"\n\"Husband, 106, and wife, 105, are named world's oldest living couple\"\n\n[Candidate News Title]\n\"Bill Russell finally accepts Basketball Hall of Fame ring\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Bill Russell finally accepts Basketball Hall of Fame ring,\" they are likely to learn about the recent ceremony where basketball legend Bill Russell received his long-awaited Hall of Fame ring. The article may detail the significance of this event in the context of Russell's illustrious career, highlighting his contributions to basketball and his impact on the sport. Additionally, it could provide insights into the ceremony itself, mentioning any notable attendees or speeches made during the occasion.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 105,
+  "candidate_news_id": "N62577",
+  "candidate_title": "AP source: 2nd US official heard Trump call with Sondland",
+  "user_history_count": 10,
+  "user_history": [
+    "Kellyanne Conway defends her comments in viral phone interview: 'Exactly none of it is anyone's business'",
+    "Essex truck deaths: Parents of Vietnamese woman feared dead say they were told it was a 'safe route'",
+    "What America's Governors Are Paid in Every State",
+    "Bride asks her 4 grandmothers to be flower girls",
+    "Trump botches a boast about giving away his presidential salary",
+    "Ex-All-Star slugger Josh Hamilton charged with child injury",
+    "2nd sister of Knicks' Bullock killed in Baltimore",
+    "Orioles' Chris Davis sets record with $3M donation to University of Maryland Children's Hospital",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "Family Reunited With Dog Who Had Been Missing Since August While Waiting in Line to Adopt Cat"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kellyanne Conway defends her comments in viral phone interview: 'Exactly none of it is anyone's business'\"\n\"Essex truck deaths: Parents of Vietnamese woman feared dead say they were told it was a 'safe route'\"\n\"What America's Governors Are Paid in Every State\"\n\"Bride asks her 4 grandmothers to be flower girls\"\n\"Trump botches a boast about giving away his presidential salary\"\n\"Ex-All-Star slugger Josh Hamilton charged with child injury\"\n\"2nd sister of Knicks' Bullock killed in Baltimore\"\n\"Orioles' Chris Davis sets record with $3M donation to University of Maryland Children's Hospital\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"Family Reunited With Dog Who Had Been Missing Since August While Waiting in Line to Adopt Cat\"\n\n[Candidate News Title]\n\"AP source: 2nd US official heard Trump call with Sondland\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"AP source: 2nd US official heard Trump call with Sondland\" is likely to provide an account of recent developments regarding the impeachment inquiry into former President Trump. Readers can expect to learn about the involvement of a second U.S. official who reportedly overheard a conversation between Trump and Gordon Sondland, the U.S. ambassador to the European Union. This could shed light on the implications of the call for the ongoing investigation, as well as the context surrounding it. The article may also explore the significance of this testimony and its potential impact on the political landscape.",
+  "model": "gpt-4o-mini"
+}

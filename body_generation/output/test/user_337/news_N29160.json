@@ -1,0 +1,21 @@
+{
+  "user_id": 337,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 10,
+  "user_history": [
+    "Venezuelans buy gas with cigarettes to battle inflation",
+    "Navy lieutenant and wife charged with defrauding the United States",
+    "Coast Guard searching for man who went overboard from Carnival cruise ship off Texas",
+    "3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian",
+    "Jeff Bezos is set to lose his crown as world's richest person",
+    "Frustrated Antonio Brown has active morning on Twitter",
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+    "This Is How Much It Really Takes to Lose One Pound",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Venezuelans buy gas with cigarettes to battle inflation\"\n\"Navy lieutenant and wife charged with defrauding the United States\"\n\"Coast Guard searching for man who went overboard from Carnival cruise ship off Texas\"\n\"3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian\"\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"This Is How Much It Really Takes to Lose One Pound\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Opinion: Colin Kaepernick is about to get what he deserves: a chance,\" you might expect a discussion on Kaepernick's potential return to professional football after a long absence. The article could provide insights into the current state of the NFL, including any teams that may be looking for a quarterback or are open to signing him. Additionally, it may explore the implications of his previous protests and how public sentiment towards him has evolved. The piece is likely to delve into arguments for and against his return, emphasizing the broader context of his impact on sports and social issues.",
+  "model": "gpt-4o-mini"
+}

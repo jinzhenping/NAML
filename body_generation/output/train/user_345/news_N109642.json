@@ -1,0 +1,21 @@
+{
+  "user_id": 345,
+  "candidate_news_id": "N109642",
+  "candidate_title": "Eerie photos of an abandoned airport that hasn't been touched in 25 years",
+  "user_history_count": 10,
+  "user_history": [
+    "Yankees plan to go all relievers in ALCS Game 4 vs. Astros",
+    "Wrong-way driver killed in crash on U.S. 301 in Riverview",
+    "Opinion: With elimination race on deck, NASCAR champ Joey Logano could have his hands full",
+    "Michael Jordan: Steph Curry is not a Hall of Famer yet",
+    "Frustrated with season so far, Melvin Gordon appears to regret his holdout",
+    "Winners and losers from NBA's opening night",
+    "Martin Truex Jr. gets redemption with Martinsville win",
+    "Former NFL GM blasts Gus Malzahn, Auburn: 'Worst offense I've ever seen'",
+    "Felicity Huffman Smiles as She Begins Community Service Following Prison Release",
+    "Butler, Dragic lead Heat over Suns 124-108"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Yankees plan to go all relievers in ALCS Game 4 vs. Astros\"\n\"Wrong-way driver killed in crash on U.S. 301 in Riverview\"\n\"Opinion: With elimination race on deck, NASCAR champ Joey Logano could have his hands full\"\n\"Michael Jordan: Steph Curry is not a Hall of Famer yet\"\n\"Frustrated with season so far, Melvin Gordon appears to regret his holdout\"\n\"Winners and losers from NBA's opening night\"\n\"Martin Truex Jr. gets redemption with Martinsville win\"\n\"Former NFL GM blasts Gus Malzahn, Auburn: 'Worst offense I've ever seen'\"\n\"Felicity Huffman Smiles as She Begins Community Service Following Prison Release\"\n\"Butler, Dragic lead Heat over Suns 124-108\"\n\n[Candidate News Title]\n\"Eerie photos of an abandoned airport that hasn't been touched in 25 years\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Eerie photos of an abandoned airport that hasn't been touched in 25 years,\" you might expect to see a collection of haunting images showcasing the decay and neglect of the airport over time. The article could provide insights into the history of the airport, including reasons for its abandonment and any interesting stories or events associated with it. Additionally, it may explore themes of urban exploration and the passage of time, highlighting how nature has reclaimed the space.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 957,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 10,
+  "user_history": [
+    "Jane Fonda spends night in jail after latest climate change protest",
+    "Your Thanksgiving Needs These Easy And Delicious Side Dishes",
+    "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+    "California firefighters get a little help from Matthew McConaughey",
+    "Bette Midler mocks Lori Loughlin's college admission scandal",
+    "Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet",
+    "These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED",
+    "Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say",
+    "16 Signs You're at Risk for Diabetes",
+    "18 Ingredients Nutritionists Say Should Be Banned From Your Kitchen"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jane Fonda spends night in jail after latest climate change protest\"\n\"Your Thanksgiving Needs These Easy And Delicious Side Dishes\"\n\"1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef\"\n\"California firefighters get a little help from Matthew McConaughey\"\n\"Bette Midler mocks Lori Loughlin's college admission scandal\"\n\"Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet\"\n\"These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED\"\n\"Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say\"\n\"16 Signs You're at Risk for Diabetes\"\n\"18 Ingredients Nutritionists Say Should Be Banned From Your Kitchen\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The most talked about movie moments of the 2010s,\" the user can expect a reflective overview of significant cinematic scenes that captured widespread attention over the past decade. This might include discussions on iconic performances, memorable quotes, and pivotal plot twists that resonated with audiences and sparked conversations. The article is likely to highlight both mainstream blockbusters and critically acclaimed films, providing context on why these moments became notable in popular culture. Additionally, it may touch on the impact of social media in shaping public discourse around these films.",
+  "model": "gpt-4o-mini"
+}

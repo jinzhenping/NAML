@@ -1,0 +1,21 @@
+{
+  "user_id": 386,
+  "candidate_news_id": "N2004",
+  "candidate_title": "U.S. Supreme Court weighs Comcast appeal in Byron Allen racial bias lawsuit",
+  "user_history_count": 10,
+  "user_history": [
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "Best Ski Resorts in the US",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "EarthRoamer Introduces Carbon Fiber-Bodied LTi Expedition Vehicle",
+    "Predicting landing spots for the top 25 MLB free agents",
+    "Far-reaching snowstorm may take shape over US",
+    "Nolan Ryan leaves advisory role, won't return as Astros shuffle front office",
+    "Snow crab sells for record price in Japan",
+    "Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"Best Ski Resorts in the US\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"EarthRoamer Introduces Carbon Fiber-Bodied LTi Expedition Vehicle\"\n\"Predicting landing spots for the top 25 MLB free agents\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Nolan Ryan leaves advisory role, won't return as Astros shuffle front office\"\n\"Snow crab sells for record price in Japan\"\n\"Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic\"\n\n[Candidate News Title]\n\"U.S. Supreme Court weighs Comcast appeal in Byron Allen racial bias lawsuit\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the ongoing legal case involving the U.S. Supreme Court as it deliberates on Comcast's appeal in a lawsuit brought by Byron Allen, which alleges racial bias in the company's programming decisions. Readers may expect an analysis of the legal arguments presented, the implications of the court's decision on media representation and diversity, and insights into how this case could affect similar lawsuits in the future. Additionally, the article may provide context on the broader impact of this case on the entertainment industry and civil rights.",
+  "model": "gpt-4o-mini"
+}

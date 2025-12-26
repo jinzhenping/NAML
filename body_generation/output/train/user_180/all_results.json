@@ -1,0 +1,422 @@
+[
+  {
+    "user_id": 180,
+    "candidate_news_id": "N20990",
+    "candidate_title": "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss the restrictions placed on the son of a Chinese billionaire, outlining the specific limitations imposed on his lifestyle, including bans on flying first class, playing golf, purchasing property, and going clubbing. This could reflect broader themes of wealth management, social responsibility, or government regulations regarding the behavior of affluent individuals. The article may also explore the implications of these restrictions on the son’s public image and the societal expectations surrounding the behavior of wealthy elites in China.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N38830",
+    "candidate_title": "Pro Russian hockey team tweets it wants fired Don Cherry as TV analyst to 'talk whatever he thinks'",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"Pro Russian hockey team tweets it wants fired Don Cherry as TV analyst to 'talk whatever he thinks'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the recent controversy surrounding a pro-Russian hockey team's public statement regarding former analyst Don Cherry. Readers may expect to find details about the team's tweet, its implications for Cherry's broadcasting career, and the broader context of his previous remarks and the reactions they garnered. Additionally, the piece could explore how this situation reflects ongoing tensions in sports commentary related to political stances, and may touch on fan reactions or potential repercussions for the team and Cherry himself.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N27368",
+    "candidate_title": "C8 Corvette Dyno Test Follow-Up: What Really Happened",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"C8 Corvette Dyno Test Follow-Up: What Really Happened\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"C8 Corvette Dyno Test Follow-Up: What Really Happened\" is likely to provide a detailed examination of the results and implications of recent dyno tests conducted on the C8 Corvette. Readers can expect an analysis of performance metrics, such as horsepower and torque outputs, as well as insights into any discrepancies or surprises that emerged during testing. The piece may also discuss potential modifications or tuning considerations that could enhance performance, reflecting the interests of automotive enthusiasts in understanding the capabilities of this sports car.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N99484",
+    "candidate_title": "When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you choose to read the article about Paris Jackson's wheat-blond hair, you may encounter a discussion on her recent hairstyle change and its potential impact on beauty trends. The piece is likely to describe the specifics of her hair transformation, including the shade and styling techniques used. Additionally, it might explore how this look aligns with current fashion movements, possibly offering insights into how fans and beauty enthusiasts can replicate the style. Overall, the article could provide a blend of celebrity style commentary and practical hair care tips.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N36820",
+    "candidate_title": "DIY Closet Organization Ideas That Will Make Getting Dressed so Much Easier",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"DIY Closet Organization Ideas That Will Make Getting Dressed so Much Easier\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"DIY Closet Organization Ideas That Will Make Getting Dressed so Much Easier,\" you may expect to find practical tips and innovative strategies for organizing your closet space effectively. The article is likely to cover a variety of organizational methods, such as using specific storage solutions or arranging clothing by category. Additionally, it might include visual inspiration or step-by-step guides to help streamline your daily dressing routine. Overall, the focus will be on enhancing functionality and maximizing space in a way that aligns with contemporary organization trends.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N26104",
+    "candidate_title": "Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If the user clicks on the article titled \"Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood,\" they are likely to read about a serious incident involving a road-rage shooting that occurred on a busy freeway. The article may provide details about the circumstances leading up to the shooting, the response from law enforcement, and the condition of the hospitalized driver. Additionally, it could explore broader themes related to road safety and the increasing prevalence of aggressive driving behaviors, which have become a growing concern in urban areas.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N91526",
+    "candidate_title": "Top-Exit Exhausts Make Supercars So Much Better",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"Top-Exit Exhausts Make Supercars So Much Better\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Top-Exit Exhausts Make Supercars So Much Better\" is likely to explore advancements in exhaust technology, particularly focusing on top-exit exhaust systems in high-performance vehicles. Readers can expect a discussion on how these systems enhance both the aesthetic appeal and performance of supercars by improving engine efficiency and sound quality. The article may also delve into the engineering principles behind these exhaust designs and how they impact driving experience. Additionally, there could be comparisons with traditional exhaust setups, highlighting the benefits and potential drawbacks of adopting top-exit configurations.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N110473",
+    "candidate_title": "Five questions the second College Football Playoff rankings will answer",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"Five questions the second College Football Playoff rankings will answer\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect an analysis of the upcoming College Football Playoff rankings, focusing on five key questions that will influence the selection process. The piece may explore aspects such as which teams are likely to secure top positions, potential surprises in the rankings, and how recent game performances could affect standings. Additionally, it might touch on the implications of these rankings for the teams' chances of qualifying for the playoffs, providing insight into the competitive landscape of college football this season.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N92498",
+    "candidate_title": "Country music's biggest scandals",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"Country music's biggest scandals\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Country music's biggest scandals,\" you can expect to read a detailed exploration of notable controversies and incidents within the country music industry. The article is likely to cover various events involving artists, such as public disputes, legal issues, or personal controversies that have attracted media attention. You may find discussions on how these scandals have impacted the careers of those involved and the broader implications for the country music genre. Additionally, it could provide insight into how fans and industry insiders have reacted to these events.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N89721",
+    "candidate_title": "We Test the 2020 Jeep Wrangler EcoDiesel",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"We Test the 2020 Jeep Wrangler EcoDiesel\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect a thorough review of the 2020 Jeep Wrangler EcoDiesel, focusing on its performance, fuel efficiency, and features that distinguish it from other models in the Wrangler lineup. The review may cover aspects such as off-road capabilities, comfort, and technological advancements, providing insights into how the EcoDiesel variant compares to its gasoline counterparts. Additionally, it is likely to include information on pricing and consumer reception, helping readers gauge whether this model meets their needs and preferences in the SUV market.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N42187",
+    "candidate_title": "China's pork crisis is bigger than you think",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"China's pork crisis is bigger than you think\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"China's pork crisis is bigger than you think\" is likely to explore the current state of the pork industry in China, addressing factors such as supply chain disruptions, rising prices, and the broader economic implications. Readers may expect a detailed analysis of how these challenges affect both domestic consumption and international markets, as well as insights into government responses or potential policy changes. The piece could also examine the long-term effects on food security in the region, signaling a wider impact beyond just the pork sector.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N23946",
+    "candidate_title": "30 home trends that ruled the last decade",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"30 home trends that ruled the last decade\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"30 home trends that ruled the last decade,\" the user can expect a comprehensive overview of significant design and architectural trends that have shaped residential spaces over the past ten years. The content is likely to explore various styles, materials, and innovations that have gained popularity, such as open floor plans, sustainable building practices, and the integration of smart home technology. Additionally, the article may highlight specific examples of these trends in real homes, providing insights into how they reflect changing lifestyles and preferences in home design.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N66780",
+    "candidate_title": "I'm 55 and have no retirement savings: What should I do?",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"I'm 55 and have no retirement savings: What should I do?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"I'm 55 and have no retirement savings: What should I do?\", you can expect to read about practical strategies and options available for individuals in similar situations. The article is likely to discuss various approaches to building retirement savings at a later stage in life, such as increasing contributions to retirement accounts, exploring investment opportunities, and considering alternative income sources. Additionally, it may outline the importance of financial planning and provide tips on how to manage expenses effectively. Overall, the piece is intended to offer actionable advice while addressing the challenges faced by those who have not yet started saving for retirement.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N61065",
+    "candidate_title": "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article regarding Lamar Odom's engagement to Sabrina Parr, you can expect to read about the details surrounding their relationship and the engagement announcement. The article is likely to include information about the couple's history, how the proposal took place, and perhaps a description of the engagement ring, which may be highlighted for its significance. Additionally, it could touch on reactions from fans or notable figures in the media, providing context to their engagement within the broader landscape of celebrity news.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N63622",
+    "candidate_title": "New Report Exposes Dolphin Cruelty in Travel Industry",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"New Report Exposes Dolphin Cruelty in Travel Industry\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"New Report Exposes Dolphin Cruelty in Travel Industry\" is likely to detail findings related to the treatment of dolphins in various travel and entertainment settings, such as marine parks and tourist attractions. The report may cover specific cases of animal welfare violations, highlighting practices that contribute to the suffering of these marine mammals. Additionally, it could provide insights from animal rights organizations and expert opinions on the implications of these findings for the travel industry. Overall, the content is expected to raise awareness about dolphin welfare and prompt discussions on ethical tourism practices.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N73469",
+    "candidate_title": "USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to report on the recent death of a USC student found in off-campus housing, marking a troubling increase in the semester's death toll to nine. It may provide details about the circumstances surrounding the student's death, including any relevant background information about the student and the implications for campus safety. Additionally, the coverage could explore how this incident fits into broader concerns about student well-being and mental health, as well as any reactions from the university community or administrative responses to address these issues.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N19569",
+    "candidate_title": "Audi E-Tron S Possibly Spied Testing At The Nurburgring Again",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"Audi E-Tron S Possibly Spied Testing At The Nurburgring Again\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article about the Audi E-Tron S likely discusses recent sightings of the vehicle being tested at the Nürburgring, a well-known racetrack in Germany. Readers can expect insights into the car's performance specifications, design tweaks, and potential enhancements compared to previous models. The coverage may also touch on the significance of these tests for Audi's electric vehicle strategy and market positioning. It is possible that the article will speculate on how the E-Tron S may compete against other luxury electric SUVs in terms of technology and driving dynamics.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N106991",
+    "candidate_title": "18 Quiet Dogs That Don't Bark (Too Much)",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"18 Quiet Dogs That Don't Bark (Too Much),\" the user is likely to find a curated list of dog breeds known for their relatively low barking tendencies. It may provide insights into the characteristics of these breeds, along with reasons why they are considered quieter than others. The article could also explore factors such as temperament, training tips, and suitability for various living environments, making it relevant for potential dog owners seeking a calmer pet. Overall, readers may expect practical information that aids in selecting a breed that aligns with their lifestyle.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N93643",
+    "candidate_title": "FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss recent regulatory scrutiny faced by Southwest Airlines concerning the maintenance of 38 of its jets. Readers can expect details about the FAA's concerns and the potential implications for the airline's operations and safety standards. The piece may also touch on the broader context of airline maintenance practices and regulatory compliance. Additionally, it could provide insights into the airline's response to the FAA's threats and any potential disruptions to flight schedules that may arise from this situation.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N13004",
+    "candidate_title": "The world's largest trade deal could be signed in 2020",
+    "user_history_count": 10,
+    "user_history": [
+      "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+      "Young trick-or-treater refills stranger's empty candy bowl with his own",
+      "AT&T fined $60 million for throttling 'unlimited' data plans",
+      "The Latest: Kansas City to remove King's name from street",
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"The world's largest trade deal could be signed in 2020\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the potential signing of the world's largest trade deal in 2020, focusing on its implications for global commerce and economic relationships. It may cover the key nations involved, the sectors that would be most affected, and the anticipated benefits or challenges for participating countries. Additionally, the article could explore the political dynamics surrounding the negotiations and any prior agreements that laid the groundwork for this deal. Overall, it aims to provide an informative overview of what this significant trade agreement could mean for the global economy.",
+    "model": "gpt-4o-mini"
+  }
+]

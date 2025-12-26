@@ -1,0 +1,21 @@
+{
+  "user_id": 562,
+  "candidate_news_id": "N20990",
+  "candidate_title": "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+  "user_history_count": 10,
+  "user_history": [
+    "19 Mysterious Old Home Features That Aren't Useful Anymore",
+    "Steelers linebacker Anthony Chickillo arrested, facing assault charges",
+    "Prince Harry acknowledges tensions with William in ITV interview",
+    "'When you're in a hole, stop digging': Clinton lawyer Greg Craig to President Trump",
+    "Bag Explodes While Being Loaded On Volaris Flight At Midway Airport",
+    "The Jonas Brothers Slapped With $150,000 Lawsuit",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "Anonymous Trump official writing 'unprecedented' inside take",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Young and the Restless Star William Wintersole Dies at 88"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"19 Mysterious Old Home Features That Aren't Useful Anymore\"\n\"Steelers linebacker Anthony Chickillo arrested, facing assault charges\"\n\"Prince Harry acknowledges tensions with William in ITV interview\"\n\"'When you're in a hole, stop digging': Clinton lawyer Greg Craig to President Trump\"\n\"Bag Explodes While Being Loaded On Volaris Flight At Midway Airport\"\n\"The Jonas Brothers Slapped With $150,000 Lawsuit\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"Anonymous Trump official writing 'unprecedented' inside take\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Young and the Restless Star William Wintersole Dies at 88\"\n\n[Candidate News Title]\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent restrictions imposed on the son of a Chinese billionaire, detailing the specific limitations placed on his lifestyle, such as being banned from flying first class, playing golf, purchasing property, and going to clubs. It may explore the reasons behind these restrictions, which could be related to legal or social consequences stemming from his family's wealth and status. Additionally, the article might provide context about how these limitations reflect broader issues of privilege and accountability among the wealthy elite in China.",
+  "model": "gpt-4o-mini"
+}

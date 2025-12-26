@@ -1,0 +1,21 @@
+{
+  "user_id": 802,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "'Beautiful boys': Victims in Mexico ambush remembered at funerals",
+    "Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'",
+    "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+    "Horrific details emerge in 'barbaric' murder of 1999 Jane Doe",
+    "A guide to the 2019 People's Choice Awards nominees' significant others",
+    "Missing California hiker found dead at top of glacier just weeks before baby was due",
+    "John Travolta Shares Rare Photo of Son Ben, 8, in Plane Cockpit: He's 'Taking My Place!'",
+    "Photos of Celebrities at the Airport Are Here to Inspire Your Holiday Travel Style",
+    "Broadway Actress Laurel Griggs Dies at Age 13",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Beautiful boys': Victims in Mexico ambush remembered at funerals\"\n\"Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'\"\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\"Horrific details emerge in 'barbaric' murder of 1999 Jane Doe\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\"Missing California hiker found dead at top of glacier just weeks before baby was due\"\n\"John Travolta Shares Rare Photo of Son Ben, 8, in Plane Cockpit: He's 'Taking My Place!'\"\n\"Photos of Celebrities at the Airport Are Here to Inspire Your Holiday Travel Style\"\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive,\" you can expect a curated list of innovative and appealing technology gifts suitable for various occasions. The article may categorize these gifts by price range or recipient type, offering options that appeal to tech enthusiasts and casual users alike. You might find descriptions highlighting the functionality, design, and unique features of each item, helping you to identify suitable gifts for friends or family members who appreciate the latest in tech.",
+  "model": "gpt-4o-mini"
+}

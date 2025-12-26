@@ -1,0 +1,21 @@
+{
+  "user_id": 634,
+  "candidate_news_id": "N127742",
+  "candidate_title": "Justice Dept. rolls out new program to combat gun violence",
+  "user_history_count": 10,
+  "user_history": [
+    "Reactions to the College Basketball Preseason AP Top 25 Poll: Is This the Best Champions Classic Ever?",
+    "Under Armour founder Kevin Plank to step down as CEO",
+    "Kylie Jenner and her bestie get surgery together, plus more news",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "Giuliani Is Drawing Attention to Hunter Biden's Work in Romania. But There's a Problem.",
+    "White House: John Kelly 'was totally unequipped to handle the genius of our great President'",
+    "Saturday takeaways: Oklahoma upset shakes up College Football Playoff picture",
+    "Fact Checker: Trump's shiny new talking point about income growth",
+    "UK to hold rare December election with Brexit on table",
+    "Trump denies knowing lobbyist who boasted of inside access to administration"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Reactions to the College Basketball Preseason AP Top 25 Poll: Is This the Best Champions Classic Ever?\"\n\"Under Armour founder Kevin Plank to step down as CEO\"\n\"Kylie Jenner and her bestie get surgery together, plus more news\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"Giuliani Is Drawing Attention to Hunter Biden's Work in Romania. But There's a Problem.\"\n\"White House: John Kelly 'was totally unequipped to handle the genius of our great President'\"\n\"Saturday takeaways: Oklahoma upset shakes up College Football Playoff picture\"\n\"Fact Checker: Trump's shiny new talking point about income growth\"\n\"UK to hold rare December election with Brexit on table\"\n\"Trump denies knowing lobbyist who boasted of inside access to administration\"\n\n[Candidate News Title]\n\"Justice Dept. rolls out new program to combat gun violence\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Justice Dept. rolls out new program to combat gun violence\" is likely to provide an overview of a recently launched initiative by the Justice Department aimed at addressing gun violence across the country. Readers may expect details on the program's objectives, key components, and the strategies intended to reduce gun-related incidents. It could also discuss how this initiative fits into broader national efforts to tackle crime and enhance public safety. Additionally, the article may feature insights from officials or experts on the potential effectiveness of this program in curbing gun violence.",
+  "model": "gpt-4o-mini"
+}

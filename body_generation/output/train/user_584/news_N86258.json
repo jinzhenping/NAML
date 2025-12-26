@@ -1,0 +1,21 @@
+{
+  "user_id": 584,
+  "candidate_news_id": "N86258",
+  "candidate_title": "Student's drone footage shows whale swimming around California surfers",
+  "user_history_count": 10,
+  "user_history": [
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Inside the world's largest plane, which has a wingspan longer than a football field and a mysterious new owner",
+    "Far-reaching snowstorm may take shape over US",
+    "Sonoma State Students Arrested For Ransacking Empty Dorms During Kincade Fire",
+    "Man who inherited 6 figures shares advice he'd give his younger self",
+    "Ronnie Ortiz-Magro pleads not guilty to 7 charges",
+    "Snow crab sells for record price in Japan",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Nike will look into runner Mary Cain's allegations of abuse"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Inside the world's largest plane, which has a wingspan longer than a football field and a mysterious new owner\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Sonoma State Students Arrested For Ransacking Empty Dorms During Kincade Fire\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Ronnie Ortiz-Magro pleads not guilty to 7 charges\"\n\"Snow crab sells for record price in Japan\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Nike will look into runner Mary Cain's allegations of abuse\"\n\n[Candidate News Title]\n\"Student's drone footage shows whale swimming around California surfers\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a student's drone footage capturing a whale swimming near surfers in California, highlighting both the beauty of marine life and the unique perspective offered by aerial photography. Readers can expect insights into the behavior of the whale, possibly including information about its species and habitat. Additionally, the article may explore the implications of such footage for conservation efforts or public awareness of marine ecosystems. It could also touch on the technology behind drone filming and its growing popularity among enthusiasts.",
+  "model": "gpt-4o-mini"
+}

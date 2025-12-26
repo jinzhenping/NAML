@@ -1,0 +1,21 @@
+{
+  "user_id": 612,
+  "candidate_news_id": "N15655",
+  "candidate_title": "Photos of the Day",
+  "user_history_count": 10,
+  "user_history": [
+    "Here's What to Cook This Week (October 28 - November 3)",
+    "Report: Adidas working on buyout of $25 million John Wall deal amid injuries",
+    "50 secrets it's OK to keep from your partner",
+    "Fans are crazy in love with Ciara and Russell Wilson's Beyoncé and Jay-Z Halloween costumes",
+    "How Much You Can Change Your Abs in 2 Weeks",
+    "Kylie Jenner hits Drake's Halloween party amid flirtation rumors, plus more news",
+    "3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Christina Anstead shares new pic of son Hudson at 2 months old",
+    "Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's What to Cook This Week (October 28 - November 3)\"\n\"Report: Adidas working on buyout of $25 million John Wall deal amid injuries\"\n\"50 secrets it's OK to keep from your partner\"\n\"Fans are crazy in love with Ciara and Russell Wilson's Beyoncé and Jay-Z Halloween costumes\"\n\"How Much You Can Change Your Abs in 2 Weeks\"\n\"Kylie Jenner hits Drake's Halloween party amid flirtation rumors, plus more news\"\n\"3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week\"\n\n[Candidate News Title]\n\"Photos of the Day\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Photos of the Day,\" the user can expect a curated selection of images highlighting significant events, moments, or trends from around the world. This could include a range of subjects, such as celebrity appearances, notable happenings in sports, or impactful news stories that have captured public attention. The article is likely to provide brief captions or context for each photo, giving readers insight into why these images are relevant. Additionally, it may feature seasonal themes or current events, reflecting what’s trending at the moment.",
+  "model": "gpt-4o-mini"
+}

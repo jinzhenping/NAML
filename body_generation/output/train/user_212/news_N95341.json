@@ -1,0 +1,21 @@
+{
+  "user_id": 212,
+  "candidate_news_id": "N95341",
+  "candidate_title": "Next Ford F-150 Spied By Motor1.com Reader",
+  "user_history_count": 10,
+  "user_history": [
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Bills waive Tyrel Dodson after completing six-game suspension",
+    "Clippers set bad precedent resting Kawhi Leonard against Bucks",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "Florida zip line: Boy falls more than 20 feet onto concrete floor at entertainment park",
+    "Man who inherited 6 figures shares advice he'd give his younger self",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Bills waive Tyrel Dodson after completing six-game suspension\"\n\"Clippers set bad precedent resting Kawhi Leonard against Bucks\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"Florida zip line: Boy falls more than 20 feet onto concrete floor at entertainment park\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\n[Candidate News Title]\n\"Next Ford F-150 Spied By Motor1.com Reader\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to find information about the latest developments regarding the Ford F-150, particularly focusing on a new model that has been spotted by a reader of Motor1.com. The content is likely to include details about design changes, technical specifications, and potential features of the upcoming vehicle. Additionally, the article may examine how this new model compares to previous iterations of the F-150, as well as its implications for the truck market. Overall, readers might gain insights into what to anticipate from this popular vehicle in the near future.",
+  "model": "gpt-4o-mini"
+}

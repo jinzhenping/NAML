@@ -1,0 +1,21 @@
+{
+  "user_id": 233,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "These Bubble-gum Pink Lakes in Australia Are One of Nature's Most Unusual Wonders",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "The 50 most expensive cars ever sold at auction",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Snow crab sells for record price in Japan",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Hyatt is eliminating travel-sized plastic toiletries",
+    "C8 Corvette Dyno Test Follow-Up: What Really Happened"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"These Bubble-gum Pink Lakes in Australia Are One of Nature's Most Unusual Wonders\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"The 50 most expensive cars ever sold at auction\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Snow crab sells for record price in Japan\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Hyatt is eliminating travel-sized plastic toiletries\"\n\"C8 Corvette Dyno Test Follow-Up: What Really Happened\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely explores a rare and private meeting between Meghan Markle and Hillary Clinton at Frogmore Cottage, shedding light on their discussions and the context of their encounter. Readers can expect insights into the nature of their relationship, possibly highlighting shared interests or political views. The piece may also touch on the significance of their meeting in light of current events or ongoing public narratives surrounding both figures. Overall, it is likely to provide a detailed account while speculating on the implications of such a gathering.",
+  "model": "gpt-4o-mini"
+}

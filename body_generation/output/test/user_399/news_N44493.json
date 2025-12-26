@@ -1,0 +1,21 @@
+{
+  "user_id": 399,
+  "candidate_news_id": "N44493",
+  "candidate_title": "How Google Interferes With Its Search Algorithms and Changes Your Results",
+  "user_history_count": 10,
+  "user_history": [
+    "When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon",
+    "Pompeo's Impeachment Role Draws Outcry From Diplomats, Staffers",
+    "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+    "Charlize Theron Just Ditched Her Bowl Cut for a Bright Blonde Pixie",
+    "Hailey Bieber Sends Aunt Hilaria Baldwin Love After Her Second Miscarriage",
+    "See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+    "They bought a 1 euro house in Italy -- here's what happened next"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon\"\n\"Pompeo's Impeachment Role Draws Outcry From Diplomats, Staffers\"\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\"Charlize Theron Just Ditched Her Bowl Cut for a Bright Blonde Pixie\"\n\"Hailey Bieber Sends Aunt Hilaria Baldwin Love After Her Second Miscarriage\"\n\"See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"They bought a 1 euro house in Italy -- here's what happened next\"\n\n[Candidate News Title]\n\"How Google Interferes With Its Search Algorithms and Changes Your Results\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"How Google Interferes With Its Search Algorithms and Changes Your Results\" is likely to explore the mechanisms behind Google's search algorithms and how they can be influenced or modified. Readers can expect a detailed examination of factors that may affect search results, such as user data, advertising interests, and algorithmic updates. It could also discuss the implications of these changes for users seeking information, potentially highlighting concerns about transparency and fairness in search results. Additionally, the article may present examples of how these adjustments impact user experience, but the specifics of such examples remain uncertain.",
+  "model": "gpt-4o-mini"
+}

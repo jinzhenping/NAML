@@ -1,0 +1,21 @@
+{
+  "user_id": 551,
+  "candidate_news_id": "N47891",
+  "candidate_title": "Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash",
+  "user_history_count": 10,
+  "user_history": [
+    "Celebs Who Have Rocked a Mullet, From Meryl Streep to Kanye West",
+    "The 50 Best One-Hit Wonders of All Time",
+    "Rock band's tour van collides with moose in Canada: Pics",
+    "Man who advocated caning for adultery gets caned for adultery",
+    "Celebrity mug shots",
+    "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Vanna White hosts 'Wheel of Fortune' after Sajak has surgery",
+    "Arctic blast to arrive TONIGHT bringing four days of bitter winds and freezing temperatures that will break hundreds of cold weather records and could see chilliest Veteran's Day ever",
+    "These are the words your teen applying to college needs to hear from you"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebs Who Have Rocked a Mullet, From Meryl Streep to Kanye West\"\n\"The 50 Best One-Hit Wonders of All Time\"\n\"Rock band's tour van collides with moose in Canada: Pics\"\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"Celebrity mug shots\"\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Vanna White hosts 'Wheel of Fortune' after Sajak has surgery\"\n\"Arctic blast to arrive TONIGHT bringing four days of bitter winds and freezing temperatures that will break hundreds of cold weather records and could see chilliest Veteran's Day ever\"\n\"These are the words your teen applying to college needs to hear from you\"\n\n[Candidate News Title]\n\"Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article \"Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash,\" the user may expect to explore the historical context and significance of the lesser-known vehicles involved in the famous racing rivalry between Ford and Ferrari. The piece is likely to detail the competitive dynamics of the 1966 Le Mans race, highlighting the engineering innovations and strategies that led to Ford's victory. Additionally, it could provide insights into the cultural impact of this clash on motorsport and automotive history, particularly focusing on how these vehicles shaped perceptions of performance and design.",
+  "model": "gpt-4o-mini"
+}

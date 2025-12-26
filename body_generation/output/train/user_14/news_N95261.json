@@ -1,0 +1,21 @@
+{
+  "user_id": 14,
+  "candidate_news_id": "N95261",
+  "candidate_title": "Owner shocked after his 60s Porsche roadster gets stolen from classic car show in Pleasanton",
+  "user_history_count": 10,
+  "user_history": [
+    "Mel B, 44, is 'dating handsome hairdresser Rory McPhee, 31, and can't stop smiling when she's with her easygoing beau'",
+    "Family of missing teen desperate for answers: 'She would never not contact somebody'",
+    "Gina Rodriguez apologizes after using n-word in Instagram video",
+    "John Witherspoon Dies: Comedian & 'Friday' Star Was 77",
+    "Act of kindness days before Christmas ended with woman beaten to death; Suspects finally sentenced",
+    "Obama calls out call-out culture: \"That's not activism\"",
+    "Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights",
+    "Police rescue abducted teen girl; 34-year-old man taken into custody",
+    "BEL MOONEY: My family disowned me when I said I was a woman",
+    "Solange Knowles splits with husband ahead of anniversary"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mel B, 44, is 'dating handsome hairdresser Rory McPhee, 31, and can't stop smiling when she's with her easygoing beau'\"\n\"Family of missing teen desperate for answers: 'She would never not contact somebody'\"\n\"Gina Rodriguez apologizes after using n-word in Instagram video\"\n\"John Witherspoon Dies: Comedian & 'Friday' Star Was 77\"\n\"Act of kindness days before Christmas ended with woman beaten to death; Suspects finally sentenced\"\n\"Obama calls out call-out culture: \"That's not activism\"\"\n\"Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights\"\n\"Police rescue abducted teen girl; 34-year-old man taken into custody\"\n\"BEL MOONEY: My family disowned me when I said I was a woman\"\n\"Solange Knowles splits with husband ahead of anniversary\"\n\n[Candidate News Title]\n\"Owner shocked after his 60s Porsche roadster gets stolen from classic car show in Pleasanton\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the stolen Porsche roadster is likely to detail the circumstances surrounding the theft, including the location of the classic car show in Pleasanton and the reactions of the car owner. It may provide information about the car's significance, such as its model and value, which could highlight why it was a target. Additionally, the piece might discuss any ongoing investigations or law enforcement responses related to the incident. Overall, readers may expect a straightforward account of the theft and its implications for car enthusiasts and the local community.",
+  "model": "gpt-4o-mini"
+}

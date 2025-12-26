@@ -1,0 +1,21 @@
+{
+  "user_id": 607,
+  "candidate_news_id": "N107521",
+  "candidate_title": "Why Teach Your Dog to Sit, When You Can Teach Them to Make a Sandwich Instead?",
+  "user_history_count": 10,
+  "user_history": [
+    "The 30 Most Iconic Celebrity Halloween Costumes of All Time",
+    "Celeb couples with big age gaps",
+    "Man charged in bear-repellent attack on Trump protesters at Santa Monica Pier",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Democrats Move Toward Bringing Impeachment Inquiry Public",
+    "This Wedding Photo of a Canine Best Man Captures Just How Deep a Dog's Love Truly Is",
+    "Man who advocated caning for adultery gets caned for adultery",
+    "Feds release Flynn interview notes",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Neil Young Says U.S. Citizenship Application Delayed By Marijuana Use"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 30 Most Iconic Celebrity Halloween Costumes of All Time\"\n\"Celeb couples with big age gaps\"\n\"Man charged in bear-repellent attack on Trump protesters at Santa Monica Pier\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Democrats Move Toward Bringing Impeachment Inquiry Public\"\n\"This Wedding Photo of a Canine Best Man Captures Just How Deep a Dog's Love Truly Is\"\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"Feds release Flynn interview notes\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Neil Young Says U.S. Citizenship Application Delayed By Marijuana Use\"\n\n[Candidate News Title]\n\"Why Teach Your Dog to Sit, When You Can Teach Them to Make a Sandwich Instead?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to explore a humorous and unconventional approach to dog training, focusing on teaching dogs to perform unusual tasks, such as making a sandwich, rather than the typical commands like \"sit.\" The content is likely to include tips on engaging dogs in creative activities and possibly highlight the benefits of such training for mental stimulation and bonding. Additionally, the article might discuss the practicality and fun aspects of incorporating everyday tasks into training routines, allowing for a lighthearted take on traditional dog training methods.",
+  "model": "gpt-4o-mini"
+}

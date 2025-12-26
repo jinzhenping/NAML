@@ -1,0 +1,21 @@
+{
+  "user_id": 646,
+  "candidate_news_id": "N72977",
+  "candidate_title": "Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs",
+  "user_history_count": 10,
+  "user_history": [
+    "Actress Accuses Roman Polanski of Raping Her in 1975",
+    "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+    "Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage",
+    "I'm 55 and have no retirement savings: What should I do?",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "Deval Patrick Will Enter 2020 Presidential Race on Thursday",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win",
+    "Can you answer these real Jeopardy questions about TV shows?",
+    "Celebrity beach cruising for 2019",
+    "WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Actress Accuses Roman Polanski of Raping Her in 1975\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage\"\n\"I'm 55 and have no retirement savings: What should I do?\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\"Can you answer these real Jeopardy questions about TV shows?\"\n\"Celebrity beach cruising for 2019\"\n\"WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist\"\n\n[Candidate News Title]\n\"Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Taylor Swift's claims regarding Scooter Braun and Scott Borchetta, the user may expect to find detailed information about the ongoing dispute over her ability to perform her older hits at the American Music Awards (AMAs). The piece is likely to outline Swift's perspective on the situation, including her frustrations with the alleged restrictions imposed by her former label executives. Additionally, it could explore the broader implications for artists' rights and ownership of their music, raising questions about industry practices. The article may also provide context on previous interactions between Swift and Braun, helping to clarify the dynamics at play.",
+  "model": "gpt-4o-mini"
+}

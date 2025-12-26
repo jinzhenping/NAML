@@ -1,0 +1,21 @@
+{
+  "user_id": 541,
+  "candidate_news_id": "N93643",
+  "candidate_title": "FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says",
+  "user_history_count": 10,
+  "user_history": [
+    "Arizona 'Wizard Rock,' missing 1-ton boulder, mysteriously returns",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "CDC investigating salmonella outbreak linked to ground beef that killed one",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "Prince Charles Hit by One of the Most Incredible Art Hoaxes in Royal History",
+    "Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito",
+    "I ate one of Meghan Markle's favorite foods from Toronto here's what I thought",
+    "You Won't Find These Tricks in the Air Fryer Owner's Manual",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "See adorable rescued sea otters get released back into the wild"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Arizona 'Wizard Rock,' missing 1-ton boulder, mysteriously returns\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"CDC investigating salmonella outbreak linked to ground beef that killed one\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"Prince Charles Hit by One of the Most Incredible Art Hoaxes in Royal History\"\n\"Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito\"\n\"I ate one of Meghan Markle's favorite foods from Toronto here's what I thought\"\n\"You Won't Find These Tricks in the Air Fryer Owner's Manual\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"See adorable rescued sea otters get released back into the wild\"\n\n[Candidate News Title]\n\"FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article about the FAA threatening to ground 38 Southwest Airlines jets over maintenance concerns, they can expect to read about the regulatory issues surrounding the airline. The article is likely to detail the specific maintenance concerns raised by the FAA and the implications for Southwest Airlines, including potential disruptions to flight schedules. Additionally, it may provide context regarding the airline's overall safety record and any past incidents related to maintenance. The article could also explore the response from Southwest Airlines, as well as the broader impact on travelers and the aviation industry.",
+  "model": "gpt-4o-mini"
+}

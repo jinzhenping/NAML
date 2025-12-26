@@ -1,0 +1,21 @@
+{
+  "user_id": 134,
+  "candidate_news_id": "N117242",
+  "candidate_title": "These Are America's Favorite Liquor Brands",
+  "user_history_count": 10,
+  "user_history": [
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Even 'Project Runway' Couldn't Save Zac Posen",
+    "I tried to eat like Kate Middleton for a week, but I couldn't get through it without cheating",
+    "Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly",
+    "'The Little Mermaid Live!': TV Review",
+    "This stately home is having the ultimate yard sale",
+    "Already 6 Months! Prince Harry, Duchess Meghan's Son Is Trying to Talk",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "Reporter Can't Stop Laughing After Cat Interrupts News Segment",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Even 'Project Runway' Couldn't Save Zac Posen\"\n\"I tried to eat like Kate Middleton for a week, but I couldn't get through it without cheating\"\n\"Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly\"\n\"'The Little Mermaid Live!': TV Review\"\n\"This stately home is having the ultimate yard sale\"\n\"Already 6 Months! Prince Harry, Duchess Meghan's Son Is Trying to Talk\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"Reporter Can't Stop Laughing After Cat Interrupts News Segment\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\n[Candidate News Title]\n\"These Are America's Favorite Liquor Brands\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect an overview of the most popular liquor brands in America, likely highlighting key brands that resonate with consumers across various demographics. It may provide insights into the market trends that influence these preferences, such as the rise of craft spirits or the impact of social media on consumer choices. Additionally, the piece could include statistics on sales or popularity rankings, helping readers understand which brands are leading the market. Overall, the article is likely to present a factual examination of American drinking habits and brand loyalty.",
+  "model": "gpt-4o-mini"
+}

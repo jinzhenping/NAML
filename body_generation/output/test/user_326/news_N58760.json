@@ -1,0 +1,21 @@
+{
+  "user_id": 326,
+  "candidate_news_id": "N58760",
+  "candidate_title": "Police find 26 children behind false wall at Colorado day care",
+  "user_history_count": 10,
+  "user_history": [
+    "Thanksgiving side dishes: 11 unique recipes to try this season",
+    "Three school workers charged in death of special needs student",
+    "Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded",
+    "We made a 3-course feast using Chrissy Teigen's recipes, and had the best homemade pizza we've ever tasted",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "It's National Pickle Day So Here Are All The Ways To Celebrate The Momentous Occasion",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "Parents, students 'shaking and crying' after California school shooting"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Thanksgiving side dishes: 11 unique recipes to try this season\"\n\"Three school workers charged in death of special needs student\"\n\"Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded\"\n\"We made a 3-course feast using Chrissy Teigen's recipes, and had the best homemade pizza we've ever tasted\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"It's National Pickle Day So Here Are All The Ways To Celebrate The Momentous Occasion\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Parents, students 'shaking and crying' after California school shooting\"\n\n[Candidate News Title]\n\"Police find 26 children behind false wall at Colorado day care\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to learn about a recent incident where law enforcement discovered 26 children hidden behind a false wall in a Colorado daycare center. The piece is likely to detail the circumstances surrounding the discovery, including any relevant background on the daycare, the conditions of the children, and the actions taken by authorities in response. Additionally, it could provide insights into the implications of such a situation for child safety regulations and community responses. Overall, the article is expected to present a factual account of the event while addressing broader concerns regarding childcare oversight.",
+  "model": "gpt-4o-mini"
+}

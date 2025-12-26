@@ -1,0 +1,21 @@
+{
+  "user_id": 212,
+  "candidate_news_id": "N85943",
+  "candidate_title": "Did Trump just commit witness tampering? I asked 7 legal experts.",
+  "user_history_count": 10,
+  "user_history": [
+    "Jilmar Ramos-Gomez, US citizen detained by ICE, to get $190K",
+    "Olympic swimmer Ryan Lochte went from earning millions to living paycheck-to-paycheck   here's what he learned",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "Which NFL teams would be a fit for Colin Kaepernick? Ranking all from 32 to 1",
+    "Three Classic Cars Stolen From CA Car Show",
+    "Aaron Carter admitted to Florida hospital",
+    "Richard Sherman tells NFL players to save their money and prepare for a strike",
+    "Celine Dion Shares What She Misses Most About Late Husband Rene Angelil",
+    "A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jilmar Ramos-Gomez, US citizen detained by ICE, to get $190K\"\n\"Olympic swimmer Ryan Lochte went from earning millions to living paycheck-to-paycheck   here's what he learned\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Which NFL teams would be a fit for Colin Kaepernick? Ranking all from 32 to 1\"\n\"Three Classic Cars Stolen From CA Car Show\"\n\"Aaron Carter admitted to Florida hospital\"\n\"Richard Sherman tells NFL players to save their money and prepare for a strike\"\n\"Celine Dion Shares What She Misses Most About Late Husband Rene Angelil\"\n\"A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina\"\n\n[Candidate News Title]\n\"Did Trump just commit witness tampering? I asked 7 legal experts.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to encounter a detailed examination of recent developments regarding former President Donald Trump and the potential implications of his actions related to witness tampering. The piece may include insights from legal experts who analyze the situation, outlining the specific behaviors that could be interpreted as tampering and the legal consequences that may follow. Additionally, it is likely to explore the broader context of Trump's legal challenges and their significance in the political landscape, providing an informative perspective on the situation.",
+  "model": "gpt-4o-mini"
+}

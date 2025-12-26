@@ -1,0 +1,21 @@
+{
+  "user_id": 3,
+  "candidate_news_id": "N80770",
+  "candidate_title": "Judge agrees Alabama Islamic State recruit is not US citizen",
+  "user_history_count": 10,
+  "user_history": [
+    "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+    "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+    "Potential Florida State football coaching targets",
+    "Report: NFL considers allowing a Chargers move to London",
+    "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+    "105 Most Popular Sodas Ranked by How Toxic They Are",
+    "Election Day 2019: Most Important Races and What to Watch For",
+    "College gymnast dies following training accident in Connecticut",
+    "Dean Foods files for bankruptcy",
+    "The 12 Texas cities everyone in the country is moving to"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent legal decision regarding an individual accused of joining the Islamic State from Alabama, focusing on the judge's ruling that the defendant is not a U.S. citizen. Readers can expect an overview of the implications of this ruling, including potential legal challenges and its relevance to national security issues. Additionally, the article may provide context about the defendant's background and the broader implications for cases involving foreign nationals and terrorism-related charges. This analysis could highlight ongoing debates about citizenship and accountability in such cases.",
+  "model": "gpt-4o-mini"
+}

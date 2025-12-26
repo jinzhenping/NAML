@@ -1,0 +1,21 @@
+{
+  "user_id": 184,
+  "candidate_news_id": "N83995",
+  "candidate_title": "It's National Pickle Day So Here Are All The Ways To Celebrate The Momentous Occasion",
+  "user_history_count": 10,
+  "user_history": [
+    "Rare Vixen Motorhome For Sale Is One Of Nicest We've Seen",
+    "The world's largest nuclear power producer is melting down",
+    "31 TV reboots, remakes, and spin-offs that are in the works",
+    "16 of the Most Historically Inaccurate Movies Ever",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "This stately home is having the ultimate yard sale",
+    "Far-reaching snowstorm may take shape over US",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Rare Vixen Motorhome For Sale Is One Of Nicest We've Seen\"\n\"The world's largest nuclear power producer is melting down\"\n\"31 TV reboots, remakes, and spin-offs that are in the works\"\n\"16 of the Most Historically Inaccurate Movies Ever\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"This stately home is having the ultimate yard sale\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\n[Candidate News Title]\n\"It's National Pickle Day So Here Are All The Ways To Celebrate The Momentous Occasion\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article celebrating National Pickle Day, the user can expect an overview of various ways to commemorate this quirky occasion. The piece is likely to include suggestions for pickle-themed recipes, such as dishes featuring pickles or pickle-flavored snacks. Additionally, it may explore the history of pickles and their cultural significance, along with information about events or promotions related to the day across different regions. There could also be references to popular pickle brands or local pickle festivals, providing a comprehensive look at how enthusiasts can engage with this unique celebration.",
+  "model": "gpt-4o-mini"
+}

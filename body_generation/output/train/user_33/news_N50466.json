@@ -1,0 +1,21 @@
+{
+  "user_id": 33,
+  "candidate_news_id": "N50466",
+  "candidate_title": "She posted for help with a quilt. More than 1,000 answered",
+  "user_history_count": 10,
+  "user_history": [
+    "Internal NOAA emails detail blowback to Trump hurricane claims: 'This has really gotten out of hand'",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Bloomberg ready to spend 'whatever it takes' to become president",
+    "Iran downs drone over southern port city - IRNA",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Stocks close higher on optimism over China trade deal",
+    "Ex-billionaire dragged to court for unpaid $680 million loan",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "Suspect arrested in disappearance of college student",
+    "'No body, no crime,' Patrick Frazee said before fiancée vanished, friend testifies"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Internal NOAA emails detail blowback to Trump hurricane claims: 'This has really gotten out of hand'\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Bloomberg ready to spend 'whatever it takes' to become president\"\n\"Iran downs drone over southern port city - IRNA\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Stocks close higher on optimism over China trade deal\"\n\"Ex-billionaire dragged to court for unpaid $680 million loan\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"Suspect arrested in disappearance of college student\"\n\"'No body, no crime,' Patrick Frazee said before fiancée vanished, friend testifies\"\n\n[Candidate News Title]\n\"She posted for help with a quilt. More than 1,000 answered\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a community's response to an individual's request for assistance with a quilt project, which garnered significant engagement from over 1,000 people. It may explore the motivations behind the outreach, the nature of the responses received, and the impact of such collective support on the person who sought help. Additionally, the article could highlight stories of some participants or the sense of community fostered through this initiative. Overall, it may provide insights into how social media can mobilize people for creative endeavors or charitable causes.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 95,
+  "candidate_news_id": "N105282",
+  "candidate_title": "23 Worst Things You Can Say to a New Parent",
+  "user_history_count": 10,
+  "user_history": [
+    "The Absolute Best Casseroles of 2019",
+    "30 Classic Thanksgiving Recipes That Deserve a Comeback",
+    "Holocaust survivor under guard amid death threats",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "'It's cool to be cold': Confessions of frigid-weather fanatics",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Attorney Alan Dershowitz countersues Virginia Giuffre for defamation",
+    "30 Foods That Are Never Worth The Calories",
+    "Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Absolute Best Casseroles of 2019\"\n\"30 Classic Thanksgiving Recipes That Deserve a Comeback\"\n\"Holocaust survivor under guard amid death threats\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"'It's cool to be cold': Confessions of frigid-weather fanatics\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Attorney Alan Dershowitz countersues Virginia Giuffre for defamation\"\n\"30 Foods That Are Never Worth The Calories\"\n\"Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\n[Candidate News Title]\n\"23 Worst Things You Can Say to a New Parent\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"23 Worst Things You Can Say to a New Parent,\" you may expect a discussion that outlines various comments or phrases that are often considered insensitive or unhelpful to new parents. The article is likely to provide examples of these statements, explaining why they can be problematic in the context of parenting challenges. Additionally, it may offer insights into more supportive alternatives that could foster better communication and understanding. Overall, the content may serve as a guide to help individuals navigate conversations with new parents more thoughtfully.",
+  "model": "gpt-4o-mini"
+}

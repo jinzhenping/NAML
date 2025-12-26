@@ -1,0 +1,19 @@
+{
+  "user_id": 718,
+  "candidate_news_id": "N31552",
+  "candidate_title": "Why You Should Go to New Orleans This Winter",
+  "user_history_count": 8,
+  "user_history": [
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "The end of Barneys, the store that made us lust for fashion",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "California authorities found and destroyed $1 billion worth of marijuana plants",
+    "The Justice Department is fishing for details about the anonymous 'resistance' op-ed writer",
+    "Trump Tax Return Case Confronts Supreme Court With a Momentous Choice",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Jennifer Aniston looks amazing in a makeup-free selfie, plus more news"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"The end of Barneys, the store that made us lust for fashion\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"California authorities found and destroyed $1 billion worth of marijuana plants\"\n\"The Justice Department is fishing for details about the anonymous 'resistance' op-ed writer\"\n\"Trump Tax Return Case Confronts Supreme Court With a Momentous Choice\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Jennifer Aniston looks amazing in a makeup-free selfie, plus more news\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Why You Should Go to New Orleans This Winter\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Why You Should Go to New Orleans This Winter\" is likely to provide an overview of the attractions and experiences that make New Orleans a desirable winter destination. It may discuss the city's unique culture, vibrant festivals, and culinary offerings, highlighting specific events or activities that take place during the winter months. Additionally, the article could touch on practical considerations, such as weather conditions and travel tips. Overall, readers might expect insights into why visiting New Orleans in winter could enhance their travel experience, although the exact details of the recommendations remain uncertain.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 775,
+  "candidate_news_id": "N106659",
+  "candidate_title": "The Full-Size 2022 Jeep Grand Wagoneer SUV Is Finally On Its Way",
+  "user_history_count": 10,
+  "user_history": [
+    "Snow crab sells for record price in Japan",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+    "CMA Awards: Reba McEntire, Dolly Parton, Carrie Underwood to celebrate 'the year of the woman'",
+    "Photos of the Day",
+    "These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable",
+    "This is Chick-fil-A's most-ordered menu item",
+    "I moved from the US to the UK. Here are the 8 things that surprised me the most."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Snow crab sells for record price in Japan\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\"CMA Awards: Reba McEntire, Dolly Parton, Carrie Underwood to celebrate 'the year of the woman'\"\n\"Photos of the Day\"\n\"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"I moved from the US to the UK. Here are the 8 things that surprised me the most.\"\n\n[Candidate News Title]\n\"The Full-Size 2022 Jeep Grand Wagoneer SUV Is Finally On Its Way\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers can expect an overview of the 2022 Jeep Grand Wagoneer SUV, highlighting its features, specifications, and design elements that set it apart in the full-size SUV market. The piece may delve into aspects such as its performance capabilities, interior luxury, and advanced technology offerings. Additionally, there could be comparisons to previous models or competitors in the segment, along with insights into the vehicle's reception among automotive experts and potential buyers. Overall, the content is likely designed to inform readers about this significant addition to the Jeep lineup.",
+  "model": "gpt-4o-mini"
+}

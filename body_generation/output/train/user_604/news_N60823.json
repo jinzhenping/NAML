@@ -1,0 +1,21 @@
+{
+  "user_id": 604,
+  "candidate_news_id": "N60823",
+  "candidate_title": "Rising temperatures put U.S. troops at risk during training, report finds",
+  "user_history_count": 10,
+  "user_history": [
+    "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Gunmen kill 15 in southern Thailand's worst attack in years",
+    "Suspect arrested in disappearance of college student",
+    "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+    "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+    "3 charged with smuggling gun parts from US to Saudi Arabia",
+    "Nvidia Geforce users need to patch their systems now",
+    "200 Shocking Home Photos You Have to See",
+    "3 students allegedly plotted to attack their middle school: Officials"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"Rising temperatures put U.S. troops at risk during training, report finds\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the impact of rising temperatures on U.S. military training activities, highlighting concerns about how extreme heat may affect troop performance and safety. It may outline specific findings from a recent report, including data on temperature trends and potential adaptations the military might need to consider in their training protocols. Additionally, the article could explore broader implications for military readiness and operational capabilities in changing climate conditions, suggesting that adjustments may be necessary to ensure the effectiveness of U.S. forces.",
+  "model": "gpt-4o-mini"
+}

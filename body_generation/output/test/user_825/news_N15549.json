@@ -1,0 +1,21 @@
+{
+  "user_id": 825,
+  "candidate_news_id": "N15549",
+  "candidate_title": "Gospel Singer Tamela Mann Lost 40 Pounds by Overhauling Her Lifestyle",
+  "user_history_count": 10,
+  "user_history": [
+    "Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out",
+    "No. 1 milk company declares bankruptcy amid drop in demand",
+    "Cat \"repeatedly\" breaks his friends out of animal shelter",
+    "Here's How To Score Buy One Get One Free Whoppers From Burger King",
+    "How to Make Sure You Have a Seat Next to Your Family on Your Next Flight",
+    "Aviation-Inspired Travel Experiences on the East and West Coast",
+    "40 Restaurant Meals You Should Never Eat After 40",
+    "Senior Trump official embellished résumé, had face on fake Time cover",
+    "Russell Crowe's property scorched by Australian bushfires",
+    "Miranda Lambert gets candid about her public divorce and secret wedding, plus more news"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out\"\n\"No. 1 milk company declares bankruptcy amid drop in demand\"\n\"Cat \"repeatedly\" breaks his friends out of animal shelter\"\n\"Here's How To Score Buy One Get One Free Whoppers From Burger King\"\n\"How to Make Sure You Have a Seat Next to Your Family on Your Next Flight\"\n\"Aviation-Inspired Travel Experiences on the East and West Coast\"\n\"40 Restaurant Meals You Should Never Eat After 40\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"Russell Crowe's property scorched by Australian bushfires\"\n\"Miranda Lambert gets candid about her public divorce and secret wedding, plus more news\"\n\n[Candidate News Title]\n\"Gospel Singer Tamela Mann Lost 40 Pounds by Overhauling Her Lifestyle\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Gospel Singer Tamela Mann Lost 40 Pounds by Overhauling Her Lifestyle,\" you may expect to read about Mann's journey towards weight loss, focusing on the specific lifestyle changes she implemented. The article is likely to detail her approach to diet and exercise, as well as any personal insights she shares about her motivation and challenges during the process. Additionally, it could explore the impact of her transformation on her career and public image, providing context about her influence in the gospel music community.",
+  "model": "gpt-4o-mini"
+}

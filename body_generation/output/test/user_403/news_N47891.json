@@ -1,0 +1,21 @@
+{
+  "user_id": 403,
+  "candidate_news_id": "N47891",
+  "candidate_title": "Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Jim Harbaugh exploring potential NFL return",
+    "Funny celeb pics for October 2019",
+    "Here's how the Fed rate cut affects you",
+    "Here's how the Fed rate cut affects you",
+    "The 25 US cities where it's easiest to get a mortgage",
+    "Fisherman faces prison, fine for cruel act on rare fish",
+    "After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car",
+    "The first thing 14 lottery winners have bought after finding out they were rich",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Country music's biggest scandals"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Jim Harbaugh exploring potential NFL return\"\n\"Funny celeb pics for October 2019\"\n\"Here's how the Fed rate cut affects you\"\n\"Here's how the Fed rate cut affects you\"\n\"The 25 US cities where it's easiest to get a mortgage\"\n\"Fisherman faces prison, fine for cruel act on rare fish\"\n\"After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car\"\n\"The first thing 14 lottery winners have bought after finding out they were rich\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Country music's biggest scandals\"\n\n[Candidate News Title]\n\"Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash,\" you may expect a detailed exploration of the historical context surrounding the iconic Le Mans race and the specific car that played a crucial yet underappreciated role in the competition. The article is likely to delve into the technical specifications of this vehicle, its performance during the race, and how it influenced the rivalry between Ford and Ferrari. Additionally, it may discuss the broader impact of the race on automotive history and culture, providing insights into why this particular car has been overlooked in popular narratives.",
+  "model": "gpt-4o-mini"
+}

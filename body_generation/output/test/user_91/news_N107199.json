@@ -1,0 +1,21 @@
+{
+  "user_id": 91,
+  "candidate_news_id": "N107199",
+  "candidate_title": "Wilson deletes tweet of him standing over concussed Smith-Schuster",
+  "user_history_count": 10,
+  "user_history": [
+    "Missing Minnesota boy, 6, and his dog, found in cornfield by drone with thermal camera",
+    "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+    "Mountain skeleton may be man from Japanese internment camp",
+    "Frustrated Antonio Brown has active morning on Twitter",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Missing Minnesota boy, 6, and his dog, found in cornfield by drone with thermal camera\"\n\"Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge\"\n\"Mountain skeleton may be man from Japanese internment camp\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'\"\n\n[Candidate News Title]\n\"Wilson deletes tweet of him standing over concussed Smith-Schuster\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent incident involving NFL player Russell Wilson, who deleted a tweet showing him standing over a concussed player, JuJu Smith-Schuster. Readers can expect an analysis of the implications of this action, including potential reactions from fans and commentators regarding player safety and social media conduct in professional sports. The piece may also touch on the broader context of concussion protocols in the NFL and how public perceptions of these incidents are evolving.",
+  "model": "gpt-4o-mini"
+}

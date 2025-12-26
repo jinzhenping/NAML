@@ -1,0 +1,21 @@
+{
+  "user_id": 653,
+  "candidate_news_id": "N95605",
+  "candidate_title": "Houston prosecutor fired after asking about crime victim's immigration status",
+  "user_history_count": 10,
+  "user_history": [
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "Oklahoma officer convicted of 2nd-degree murder",
+    "Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Prince Harry and Meghan Markle are taking a royal respite",
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!",
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"Oklahoma officer convicted of 2nd-degree murder\"\n\"Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Prince Harry and Meghan Markle are taking a royal respite\"\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\n[Candidate News Title]\n\"Houston prosecutor fired after asking about crime victim's immigration status\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent dismissal of a Houston prosecutor who reportedly inquired about a crime victim's immigration status during a legal proceeding. Readers may expect an overview of the circumstances surrounding the prosecutor's actions, including the context of the inquiry and any legal or ethical implications it may raise. The piece could also provide insight into reactions from the legal community, victims' rights advocates, and public opinion regarding the intersection of crime and immigration status. Overall, it may aim to highlight the broader issues of justice and fairness in the legal system.",
+  "model": "gpt-4o-mini"
+}

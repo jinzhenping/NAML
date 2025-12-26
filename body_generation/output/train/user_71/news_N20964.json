@@ -1,0 +1,21 @@
+{
+  "user_id": 71,
+  "candidate_news_id": "N20964",
+  "candidate_title": "Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter",
+  "user_history_count": 10,
+  "user_history": [
+    "'Sons Of Anarchy' Star Ron Perlman Files for Divorce After 38 Years of Marriage",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness",
+    "Man Goes To Adoption Event And Finds His Long-Lost Dog",
+    "A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral",
+    "Teresa Giudice, daughters reunite with Joe in Italy: See the pic!",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "Lil Pump bit by snake on set of music video"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Sons Of Anarchy' Star Ron Perlman Files for Divorce After 38 Years of Marriage\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness\"\n\"Man Goes To Adoption Event And Finds His Long-Lost Dog\"\n\"A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral\"\n\"Teresa Giudice, daughters reunite with Joe in Italy: See the pic!\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"Lil Pump bit by snake on set of music video\"\n\n[Candidate News Title]\n\"Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a groom's heartfelt vows made to his 9-year-old stepdaughter during a wedding ceremony. Readers can expect to see details about the groom’s intention behind these vows, emphasizing the bond he shares with his stepdaughter and the significance of including her in the ceremony. The piece may explore themes of family integration and love in blended families, and it could provide insights into how such moments can strengthen familial relationships. Overall, the article is expected to present a touching yet informative look at modern family dynamics.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 26,
+  "candidate_news_id": "N96351",
+  "candidate_title": "Why I'm Done Celebrating The Accomplishments Of Couples",
+  "user_history_count": 10,
+  "user_history": [
+    "The Queen Had This Hilarious Reaction to (Unnecessary) Mouth-to-Mouth Resuscitation",
+    "Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast",
+    "'Priceless' finds that turned out to be worthless",
+    "The Shojo and Ruckus Team Will Continue Its Chinatown Takeover With Another Restaurant",
+    "Zlatan Ibrahimovic Announces Departure From LA Galaxy With 'You're Welcome'",
+    "NFL reportedly suspends Robert Nkemdiche two weeks",
+    "Arby's tells parents that 'only well behaved children' are allowed",
+    "Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'",
+    "Mo'Nique Files Race and Sex Discrimination Suit Against Netflix",
+    "Three Classic Cars Stolen From CA Car Show"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Queen Had This Hilarious Reaction to (Unnecessary) Mouth-to-Mouth Resuscitation\"\n\"Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast\"\n\"'Priceless' finds that turned out to be worthless\"\n\"The Shojo and Ruckus Team Will Continue Its Chinatown Takeover With Another Restaurant\"\n\"Zlatan Ibrahimovic Announces Departure From LA Galaxy With 'You're Welcome'\"\n\"NFL reportedly suspends Robert Nkemdiche two weeks\"\n\"Arby's tells parents that 'only well behaved children' are allowed\"\n\"Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'\"\n\"Mo'Nique Files Race and Sex Discrimination Suit Against Netflix\"\n\"Three Classic Cars Stolen From CA Car Show\"\n\n[Candidate News Title]\n\"Why I'm Done Celebrating The Accomplishments Of Couples\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the author may explore the reasons for stepping away from celebrating couple achievements, possibly examining societal pressures and expectations surrounding relationships. The piece is likely to discuss how such celebrations can overshadow individual accomplishments and personal growth, suggesting that the focus on couples may not always be beneficial. Additionally, it might provide insights into the cultural implications of couple-centric narratives and advocate for a broader recognition of personal achievements outside the context of partnerships. Overall, readers can expect a thoughtful analysis on this topic.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 100,
+  "candidate_news_id": "N18258",
+  "candidate_title": "Russia lands forces at former U.S. air base in northern Syria",
+  "user_history_count": 10,
+  "user_history": [
+    "John Legend clarifies his recent Kanye West comments, plus more news",
+    "Opinion: One thing we know at midpoint of NFL season is that it's time for Baker Mayfield to grow up",
+    "Will Freddie Kitchens be one and done in Cleveland?",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Why Kate & Meghan Were on Different Balconies for Remembrance Sunday",
+    "Week in celebrity photos for Nov. 4-8, 2019",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "Harry and Meghan Revive Feud Rumors By Staying Away From the Royal Family's Christmas",
+    "Mark Ruffalo Wants to Set Up Jennifer Aniston on a Date",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"John Legend clarifies his recent Kanye West comments, plus more news\"\n\"Opinion: One thing we know at midpoint of NFL season is that it's time for Baker Mayfield to grow up\"\n\"Will Freddie Kitchens be one and done in Cleveland?\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Why Kate & Meghan Were on Different Balconies for Remembrance Sunday\"\n\"Week in celebrity photos for Nov. 4-8, 2019\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"Harry and Meghan Revive Feud Rumors By Staying Away From the Royal Family's Christmas\"\n\"Mark Ruffalo Wants to Set Up Jennifer Aniston on a Date\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\n[Candidate News Title]\n\"Russia lands forces at former U.S. air base in northern Syria\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss Russia's recent military actions in Syria, specifically the landing of forces at a former U.S. air base in the northern region. It may provide insights into the strategic implications of this move, including how it might affect U.S. interests and the ongoing conflict in Syria. Additionally, the piece could touch on the reactions from international communities and military analysts regarding this development. Overall, readers may expect a detailed examination of the geopolitical ramifications of Russia's actions, although the exact motivations behind this deployment remain uncertain.",
+  "model": "gpt-4o-mini"
+}

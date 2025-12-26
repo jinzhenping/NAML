@@ -1,0 +1,21 @@
+{
+  "user_id": 898,
+  "candidate_news_id": "N123209",
+  "candidate_title": "Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions",
+  "user_history_count": 10,
+  "user_history": [
+    "Three school workers charged in death of special needs student",
+    "These Are America's Favorite Liquor Brands",
+    "Deputies identify St. Augustine woman found floating in Intracoastal Waterway",
+    "Don't be fooled: Costco says $75 coupon is a scam",
+    "Warrant: Neighbor of Taylor Williams says she was left home alone 'at least every other day'",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "The 1 reason you shouldn't hesitate to claim Social Security early",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Three school workers charged in death of special needs student\"\n\"These Are America's Favorite Liquor Brands\"\n\"Deputies identify St. Augustine woman found floating in Intracoastal Waterway\"\n\"Don't be fooled: Costco says $75 coupon is a scam\"\n\"Warrant: Neighbor of Taylor Williams says she was left home alone 'at least every other day'\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\n[Candidate News Title]\n\"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions,\" the user may expect to read about the recent controversy involving the contestants from the reality show \"Survivor.\" The piece is likely to outline the specific actions that prompted the apology and may provide context regarding the reactions from fans and the show's community. Additionally, it could discuss the implications of their behavior on their reputations and any potential impact on their future appearances in reality television. Overall, the article should offer a balanced view of the situation while highlighting the contestants' accountability.",
+  "model": "gpt-4o-mini"
+}

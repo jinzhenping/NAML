@@ -1,0 +1,21 @@
+{
+  "user_id": 223,
+  "candidate_news_id": "N64785",
+  "candidate_title": "Archie's Photo Album: Prince Harry, Duchess Meghan's Royal Baby",
+  "user_history_count": 10,
+  "user_history": [
+    "Broadway Actress Laurel Griggs Dies at Age 13",
+    "'RHOC' Star Meghan Edmonds' Ex-Nanny Making Money Following Cheating Scandal",
+    "You can't get the flu from the flu shot, but there are side effects",
+    "New study links insomnia with heart disease and stroke",
+    "Here's What Kate Hudson Eats in a Day to Stay Sculpted at 40",
+    "Vaping-related lung transplant performed at Detroit hospital",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case",
+    "'Lots of Tears!' Teresa Giudice Details Reuniting With Husband Joe in Italy",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"'RHOC' Star Meghan Edmonds' Ex-Nanny Making Money Following Cheating Scandal\"\n\"You can't get the flu from the flu shot, but there are side effects\"\n\"New study links insomnia with heart disease and stroke\"\n\"Here's What Kate Hudson Eats in a Day to Stay Sculpted at 40\"\n\"Vaping-related lung transplant performed at Detroit hospital\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\"'Lots of Tears!' Teresa Giudice Details Reuniting With Husband Joe in Italy\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\n[Candidate News Title]\n\"Archie's Photo Album: Prince Harry, Duchess Meghan's Royal Baby\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Archie's Photo Album: Prince Harry, Duchess Meghan's Royal Baby,\" you can expect to read about a collection of photographs featuring their son, Archie Harrison Mountbatten-Windsor. The article is likely to highlight significant moments from Archie's early life, possibly showcasing family interactions and milestones. Additionally, it may provide context about the royal family's approach to parenting and how they balance public interest with personal privacy. There could also be insights into how these images reflect the couple's experiences as new parents.",
+  "model": "gpt-4o-mini"
+}

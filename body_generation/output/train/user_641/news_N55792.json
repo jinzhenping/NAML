@@ -1,0 +1,21 @@
+{
+  "user_id": 641,
+  "candidate_news_id": "N55792",
+  "candidate_title": "Stars Who Served in the Military",
+  "user_history_count": 10,
+  "user_history": [
+    "Spend the Night in One of These Haunted Hotels",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Man with brick in his hand arrested at David Schwimmer's home",
+    "Papadopoulos seeks California seat left vacant by Rep. Hill",
+    "Tour the abandoned Outlaw House with an FBI connection",
+    "The best celebrity couple Halloween costumes",
+    "Man wanted in connection with car thefts, home invasion in Pottawatomie County",
+    "Fracking pioneer Chesapeake Energy is drowning in debt",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Spend the Night in One of These Haunted Hotels\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Man with brick in his hand arrested at David Schwimmer's home\"\n\"Papadopoulos seeks California seat left vacant by Rep. Hill\"\n\"Tour the abandoned Outlaw House with an FBI connection\"\n\"The best celebrity couple Halloween costumes\"\n\"Man wanted in connection with car thefts, home invasion in Pottawatomie County\"\n\"Fracking pioneer Chesapeake Energy is drowning in debt\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"Stars Who Served in the Military\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article \"Stars Who Served in the Military,\" the user is likely to find a detailed examination of various celebrities who have had military experience, highlighting their service in different branches of the armed forces. The piece may provide insights into how these experiences shaped their lives and careers, along with specific anecdotes or historical context surrounding their time in service. Additionally, it could explore the impact of their military background on their public personas and contributions to society. Overall, the article is expected to present a blend of biographical details and reflections on the significance of military service among well-known figures.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 250,
+  "candidate_news_id": "N56410",
+  "candidate_title": "I'm Child-Free and Couldn't Be Happier About It. What's So Bad About That?",
+  "user_history_count": 10,
+  "user_history": [
+    "Why would the Fed cut rates again with stocks near records?",
+    "Arnold Schwarzenegger among stars forced to evacuate homes as California wildfires rage",
+    "Can Daylight Saving Time Mess With Your Fitness?",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "Jane Fonda, Rosanna Arquette, Catherine Keener arrested at climate change protest: 'Women bear the brunt'",
+    "Trump wages coast-to-coast legal battle to keep tax returns hidden",
+    "Toyota Supra vs. Ford Mustang Shelby GT350: Kicking Tail!",
+    "Old tires on your car can have tragic consequences",
+    "States that are falling apart",
+    "Another Palm Beach County juror may be jailed in new contempt case"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why would the Fed cut rates again with stocks near records?\"\n\"Arnold Schwarzenegger among stars forced to evacuate homes as California wildfires rage\"\n\"Can Daylight Saving Time Mess With Your Fitness?\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"Jane Fonda, Rosanna Arquette, Catherine Keener arrested at climate change protest: 'Women bear the brunt'\"\n\"Trump wages coast-to-coast legal battle to keep tax returns hidden\"\n\"Toyota Supra vs. Ford Mustang Shelby GT350: Kicking Tail!\"\n\"Old tires on your car can have tragic consequences\"\n\"States that are falling apart\"\n\"Another Palm Beach County juror may be jailed in new contempt case\"\n\n[Candidate News Title]\n\"I'm Child-Free and Couldn't Be Happier About It. What's So Bad About That?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the author may explore the personal and societal implications of choosing a child-free lifestyle, addressing both the positive aspects and the criticisms often faced by individuals who make this choice. It could examine the reasons people opt not to have children, such as career priorities or environmental concerns, while also discussing how this decision impacts relationships and societal norms. Additionally, the piece might provide insights into the growing trend of child-free living and its acceptance in contemporary culture, offering a balanced view of the topic.",
+  "model": "gpt-4o-mini"
+}

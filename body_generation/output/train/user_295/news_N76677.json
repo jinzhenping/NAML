@@ -1,0 +1,21 @@
+{
+  "user_id": 295,
+  "candidate_news_id": "N76677",
+  "candidate_title": "A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent",
+  "user_history_count": 10,
+  "user_history": [
+    "Police Surprise Woman Who Anonymously Baked Pizzelle Cookies for Years in Heartwarming Video",
+    "Airline Apologizes After False Hijack Alarm Causes Dozens of Flight Delays",
+    "Hilary Duff Addresses Reports She's Already Married to Matthew Koma (Exclusive)",
+    "Australia sees Iceland's 10-year-old cheeseburger, raises it a 25-year-old Quarter Pounder",
+    "Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'",
+    "Airline Struggles to Explain Why Plane's Cracked Window Was Fixed With Tape",
+    "Reporter Can't Stop Laughing After Cat Interrupts News Segment",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "3 students allegedly plotted to attack their middle school: Officials"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Police Surprise Woman Who Anonymously Baked Pizzelle Cookies for Years in Heartwarming Video\"\n\"Airline Apologizes After False Hijack Alarm Causes Dozens of Flight Delays\"\n\"Hilary Duff Addresses Reports She's Already Married to Matthew Koma (Exclusive)\"\n\"Australia sees Iceland's 10-year-old cheeseburger, raises it a 25-year-old Quarter Pounder\"\n\"Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'\"\n\"Airline Struggles to Explain Why Plane's Cracked Window Was Fixed With Tape\"\n\"Reporter Can't Stop Laughing After Cat Interrupts News Segment\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about a unique rental property featuring a master suite with an unconventional 'open-concept' bathroom design that lacks both doors and privacy. The discussion may include details about the rental price of $1,200 per month and the implications of such a design choice on tenant comfort and lifestyle. Additionally, the article could explore the broader trend of open-concept living spaces in rental markets, highlighting the potential appeal and drawbacks for prospective renters.",
+  "model": "gpt-4o-mini"
+}

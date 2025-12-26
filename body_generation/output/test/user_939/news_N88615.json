@@ -1,0 +1,21 @@
+{
+  "user_id": 939,
+  "candidate_news_id": "N88615",
+  "candidate_title": "Maple Leafs GM gives interesting take on 'polarizing' players",
+  "user_history_count": 10,
+  "user_history": [
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "See All the Best Looks From the 2019 People's Choice Awards",
+    "The Giudice family reunites and more ICYMI celeb news",
+    "PEOPLE's Sexiest Men Alive: Still Sexy After All These Years",
+    "105 Black Friday Deals You Can Start Shopping Today",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "The Most Amazing Photos of a Young Dolly Parton",
+    "The Latest: Doctor accused of performing unneeded surgeries",
+    "38 men who were worthy competitors for John Legend's Sexiest Man Alive title",
+    "Pregnant Mom of 2 Who Was PTA President Is Killed After Going Outside to Check Car Alarm"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"See All the Best Looks From the 2019 People's Choice Awards\"\n\"The Giudice family reunites and more ICYMI celeb news\"\n\"PEOPLE's Sexiest Men Alive: Still Sexy After All These Years\"\n\"105 Black Friday Deals You Can Start Shopping Today\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"The Most Amazing Photos of a Young Dolly Parton\"\n\"The Latest: Doctor accused of performing unneeded surgeries\"\n\"38 men who were worthy competitors for John Legend's Sexiest Man Alive title\"\n\"Pregnant Mom of 2 Who Was PTA President Is Killed After Going Outside to Check Car Alarm\"\n\n[Candidate News Title]\n\"Maple Leafs GM gives interesting take on 'polarizing' players\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide insights into the Toronto Maple Leafs' general manager's views on players who have garnered mixed opinions from fans and analysts. It may explore the reasons behind the polarizing nature of certain players, potentially touching on their performance, public persona, and how these factors influence team dynamics and fan engagement. Additionally, the article could include quotes from the GM that shed light on his approach to managing such players and the strategies he believes are necessary for team success.",
+  "model": "gpt-4o-mini"
+}

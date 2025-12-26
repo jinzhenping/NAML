@@ -1,0 +1,21 @@
+{
+  "user_id": 890,
+  "candidate_news_id": "N113388",
+  "candidate_title": "Team Behind Digital James Dean Forms New Company to Resurrect Other Legends (EXCLUSIVE)",
+  "user_history_count": 10,
+  "user_history": [
+    "Which Royal Wore It Best?",
+    "20 award-winning photos of dogs from 2019's Dog Photographer of the Year competition",
+    "Disney World moves on from Skyliner accident, touts 1 million riders",
+    "Here's Exactly What Kristen Bell Eats in a Day to Make 39 Look Like 29",
+    "Cardio Isn't the Best Way to Burn Belly Fat - Here's What Trainers Want You to Do Instead",
+    "All the Shows Hoping to Be the Next Game of Thrones",
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "Miller Lite offers free beer for unfollowing them, Natural Light joins in",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "This Giant Cookie Cutter Makes Holiday Baking So Much Easier"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Which Royal Wore It Best?\"\n\"20 award-winning photos of dogs from 2019's Dog Photographer of the Year competition\"\n\"Disney World moves on from Skyliner accident, touts 1 million riders\"\n\"Here's Exactly What Kristen Bell Eats in a Day to Make 39 Look Like 29\"\n\"Cardio Isn't the Best Way to Burn Belly Fat - Here's What Trainers Want You to Do Instead\"\n\"All the Shows Hoping to Be the Next Game of Thrones\"\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"Miller Lite offers free beer for unfollowing them, Natural Light joins in\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"This Giant Cookie Cutter Makes Holiday Baking So Much Easier\"\n\n[Candidate News Title]\n\"Team Behind Digital James Dean Forms New Company to Resurrect Other Legends (EXCLUSIVE)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a new venture by the team responsible for digitally recreating James Dean, focusing on their plans to resurrect other iconic figures from film or music history. Readers may expect insights into the technology and methods used in these digital recreations, as well as potential projects or celebrities that the company aims to bring back to life. Additionally, the article could explore the implications of reviving these legends in contemporary media and how audiences might react to such initiatives.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,19 @@
+{
+  "user_id": 419,
+  "candidate_news_id": "N93411",
+  "candidate_title": "Ilhan Omar blasts Pete King as an 'Islamophobe' after he announces retirement: 'Good riddance'",
+  "user_history_count": 8,
+  "user_history": [
+    "Dutch family found in cellar 'waiting for end of time'",
+    "Take a Hot Lap in the 2020 C8 Corvette",
+    "Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight",
+    "Failed operation underlines Mexico chaos",
+    "How Much Power Does the 2020 Chevrolet Corvette Really Make? We Take it to the Dyno and Find Out",
+    "Ex-All-Star slugger Josh Hamilton charged with child injury",
+    "A foster mom was arrested in an adoption scheme",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dutch family found in cellar 'waiting for end of time'\"\n\"Take a Hot Lap in the 2020 C8 Corvette\"\n\"Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight\"\n\"Failed operation underlines Mexico chaos\"\n\"How Much Power Does the 2020 Chevrolet Corvette Really Make? We Take it to the Dyno and Find Out\"\n\"Ex-All-Star slugger Josh Hamilton charged with child injury\"\n\"A foster mom was arrested in an adoption scheme\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Ilhan Omar blasts Pete King as an 'Islamophobe' after he announces retirement: 'Good riddance'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the user can expect to read about Ilhan Omar's recent comments directed at Pete King following his announcement of retirement, where she labels him as an \"Islamophobe.\" The piece will likely explore the context of their political rivalry, delving into Omar's perspective on King's legacy and the broader implications of his departure from politics. It may also touch on reactions from other political figures and the impact of their exchanges on public discourse regarding Islamophobia in the U.S. political landscape.",
+  "model": "gpt-4o-mini"
+}

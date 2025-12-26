@@ -1,0 +1,21 @@
+{
+  "user_id": 998,
+  "candidate_news_id": "N104644",
+  "candidate_title": "Brett Kavanaugh calls Ruth Bader Ginsburg 'inspiration,' heaps gratitude on allies",
+  "user_history_count": 10,
+  "user_history": [
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "Owner shocked after his 60s Porsche roadster gets stolen from classic car show in Pleasanton",
+    "Kaia Gerber Attends Pete Davidson's Comedy Show in Brooklyn",
+    "Fox legal analyst Napolitano emerges as Trump critic",
+    "Russell Wilson has MVP magic as Seahawks beat 49ers in OT classic",
+    "10 Gazans dead as Israel hit on militant chief sparks rocket barrage",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say",
+    "'Born into hockey': Meet Emilie Castonguay, NHL's rare female agent who has top draft prospect as client"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Owner shocked after his 60s Porsche roadster gets stolen from classic car show in Pleasanton\"\n\"Kaia Gerber Attends Pete Davidson's Comedy Show in Brooklyn\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"Russell Wilson has MVP magic as Seahawks beat 49ers in OT classic\"\n\"10 Gazans dead as Israel hit on militant chief sparks rocket barrage\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\"'Born into hockey': Meet Emilie Castonguay, NHL's rare female agent who has top draft prospect as client\"\n\n[Candidate News Title]\n\"Brett Kavanaugh calls Ruth Bader Ginsburg 'inspiration,' heaps gratitude on allies\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss Brett Kavanaugh's recent remarks regarding Ruth Bader Ginsburg, highlighting the influence she had on him and expressing gratitude towards his allies. It may provide context about Kavanaugh's views on Ginsburg's legacy and her impact on the judiciary, as well as reflect on their differing judicial philosophies. Additionally, the piece could touch upon the current political climate and how Kavanaugh’s statements might resonate within ongoing discussions about the Supreme Court's role. Overall, readers can expect an informative overview of Kavanaugh's comments and their implications.",
+  "model": "gpt-4o-mini"
+}

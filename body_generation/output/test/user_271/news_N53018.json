@@ -1,0 +1,18 @@
+{
+  "user_id": 271,
+  "candidate_news_id": "N53018",
+  "candidate_title": "U.S. Troops Will Die If They Remain in Syria, Bashar Al-Assad Warns",
+  "user_history_count": 7,
+  "user_history": [
+    "Nebraska, Illinois to open 2021 college football season in Ireland",
+    "Nearly half of US oil refineries are in states hit by earthquakes and hurricanes",
+    "Here's A Cool Cutaway Explaining Engine Knock And Fuel Octane",
+    "Nationals' Trea Turner out on controversial interference call; manager Dave Martinez ejected in Game 6",
+    "Mayfield's postgame outfit gets all the memes",
+    "30 Best Black Friday Deals from Costco",
+    "Lexus just revealed the pricing for its first-ever luxury yacht   and a fully-loaded model will cost $4.85 million. Here's a closer look at LY 650."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Nebraska, Illinois to open 2021 college football season in Ireland\"\n\"Nearly half of US oil refineries are in states hit by earthquakes and hurricanes\"\n\"Here's A Cool Cutaway Explaining Engine Knock And Fuel Octane\"\n\"Nationals' Trea Turner out on controversial interference call; manager Dave Martinez ejected in Game 6\"\n\"Mayfield's postgame outfit gets all the memes\"\n\"30 Best Black Friday Deals from Costco\"\n\"Lexus just revealed the pricing for its first-ever luxury yacht   and a fully-loaded model will cost $4.85 million. Here's a closer look at LY 650.\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"U.S. Troops Will Die If They Remain in Syria, Bashar Al-Assad Warns\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the warnings issued by Syrian President Bashar Al-Assad regarding the potential risks to U.S. troops stationed in Syria. It may outline the geopolitical context of U.S. military presence in the region and highlight the implications of Assad's statement amidst ongoing conflicts. The article could also explore the broader impact of these tensions on U.S. foreign policy and military strategy in the Middle East. Additionally, it may provide insights into the reactions from U.S. officials or military analysts concerning the feasibility and safety of maintaining troops in the area.",
+  "model": "gpt-4o-mini"
+}

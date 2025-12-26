@@ -1,0 +1,16 @@
+{
+  "user_id": 795,
+  "candidate_news_id": "N48015",
+  "candidate_title": "Abandoned 'unicorn' puppy has a tail on its head",
+  "user_history_count": 5,
+  "user_history": [
+    "These Photos Prove Jennifer Aniston Has Barely Aged Over The Years",
+    "'DWTS' Recap: A Fan Favorite Goes Home In Yet Another Crazy Elimination",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Celebrity kids then and now: See how they've grown",
+    "Celebrity Headshots from Before They Were Famous"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"These Photos Prove Jennifer Aniston Has Barely Aged Over The Years\"\n\"'DWTS' Recap: A Fan Favorite Goes Home In Yet Another Crazy Elimination\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Celebrity kids then and now: See how they've grown\"\n\"Celebrity Headshots from Before They Were Famous\"\n\"\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In exploring the article titled \"Abandoned 'unicorn' puppy has a tail on its head,\" the user may expect to read about a unique case involving an unusual puppy that has garnered attention due to its distinctive appearance. The article is likely to provide details on the background of the puppy, including its abandonment and any efforts made for its rescue. Additionally, it may discuss the implications of the puppy’s unusual tail placement, possibly touching on reactions from the public or animal experts. Overall, the piece could highlight the broader themes of animal welfare and the charm that unique pets can bring to their communities.",
+  "model": "gpt-4o-mini"
+}

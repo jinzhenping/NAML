@@ -1,0 +1,21 @@
+{
+  "user_id": 373,
+  "candidate_news_id": "N55935",
+  "candidate_title": "Panthers QB Cam Newton would reportedly welcome trade to Bears",
+  "user_history_count": 10,
+  "user_history": [
+    "America's middle class is addicted to a new kind of credit",
+    "A Chef Shares the Secret Ingredient Your Mac and Cheese Is Missing",
+    "South Florida principal who made controversial comments about the Holocaust is fired",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "Rage Against the Machine to Reunite for 2020 Coachella",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Minnesota School Districts Considering 'Online Snow Days'",
+    "Injured Cowboys DL Daniel Ross arrested on drug, gun charges",
+    "Report: NCAA declares potential No. 1 overall pick Wiseman ineligible in shock ruling",
+    "Report: NCAA declares potential No. 1 overall pick Wiseman ineligible in shock ruling"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"America's middle class is addicted to a new kind of credit\"\n\"A Chef Shares the Secret Ingredient Your Mac and Cheese Is Missing\"\n\"South Florida principal who made controversial comments about the Holocaust is fired\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Rage Against the Machine to Reunite for 2020 Coachella\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Minnesota School Districts Considering 'Online Snow Days'\"\n\"Injured Cowboys DL Daniel Ross arrested on drug, gun charges\"\n\"Report: NCAA declares potential No. 1 overall pick Wiseman ineligible in shock ruling\"\n\"Report: NCAA declares potential No. 1 overall pick Wiseman ineligible in shock ruling\"\n\n[Candidate News Title]\n\"Panthers QB Cam Newton would reportedly welcome trade to Bears\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article regarding Cam Newton's potential interest in a trade to the Bears, the user can expect an analysis of the current situation surrounding the quarterback and the Chicago team. It may outline Newton's performance with the Panthers, the Bears' current quarterback situation, and the implications of such a trade for both teams. Additionally, the piece could provide insights into the motivations behind Newton's reported openness to a trade, possibly relating to team dynamics or personal career aspirations. This context may help readers understand the broader impact on the NFL landscape.",
+  "model": "gpt-4o-mini"
+}

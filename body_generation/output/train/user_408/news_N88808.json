@@ -1,0 +1,21 @@
+{
+  "user_id": 408,
+  "candidate_news_id": "N88808",
+  "candidate_title": "Daisy Ridley plays coy about engagement speculation",
+  "user_history_count": 10,
+  "user_history": [
+    "The Latest: Boris Johnson to ask for UK election on Dec. 12",
+    "Goldman predicts the Fed will make 2 big changes next week",
+    "10 Facts Your History Teacher Probably Skipped Over In High School",
+    "Judge rules deputies can't put 'no trick-or-treat' signs in sex offenders' yards",
+    "Science Says: How daylight saving time affects health",
+    "Buffalo Wild Wings fires workers allegedly involved in racist incident",
+    "As Warren Gains in Race, Wall Street Sounds the Alarm",
+    "Report: NFL considers allowing a Chargers move to London",
+    "Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs",
+    "The Latest: Kansas City to remove King's name from street"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Latest: Boris Johnson to ask for UK election on Dec. 12\"\n\"Goldman predicts the Fed will make 2 big changes next week\"\n\"10 Facts Your History Teacher Probably Skipped Over In High School\"\n\"Judge rules deputies can't put 'no trick-or-treat' signs in sex offenders' yards\"\n\"Science Says: How daylight saving time affects health\"\n\"Buffalo Wild Wings fires workers allegedly involved in racist incident\"\n\"As Warren Gains in Race, Wall Street Sounds the Alarm\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs\"\n\"The Latest: Kansas City to remove King's name from street\"\n\n[Candidate News Title]\n\"Daisy Ridley plays coy about engagement speculation\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Daisy Ridley plays coy about engagement speculation,\" the user can expect to read about recent public appearances and statements made by actress Daisy Ridley, particularly in relation to rumors about her engagement. The piece may detail how Ridley has addressed these speculations, possibly highlighting her responses during interviews or social media interactions. Additionally, it is likely to explore the context of these rumors, including any relevant background on her personal life and relationships, while maintaining a focus on the impact of celebrity culture on public perception.",
+  "model": "gpt-4o-mini"
+}

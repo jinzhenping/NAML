@@ -1,0 +1,21 @@
+{
+  "user_id": 514,
+  "candidate_news_id": "N51163",
+  "candidate_title": "Family told to take down Christmas display because it's too soon to decorate",
+  "user_history_count": 10,
+  "user_history": [
+    "Dakota Johnson's Tribute to Former Stepdad Antonio Banderas Will Leave You In Tears",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Helen Mirren Says it Was 'Very Flattering' to Be Mistaken for Keanu Reeves' Girlfriend",
+    "Las Vegas adopts ban on sleeping, camping on streets, sidewalks",
+    "Holocaust survivor under guard amid death threats",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Precious metals get crushed as end-of-the-world trade implodes",
+    "This Solo Dining Trend Is Changing the Way People Eat"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dakota Johnson's Tribute to Former Stepdad Antonio Banderas Will Leave You In Tears\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Helen Mirren Says it Was 'Very Flattering' to Be Mistaken for Keanu Reeves' Girlfriend\"\n\"Las Vegas adopts ban on sleeping, camping on streets, sidewalks\"\n\"Holocaust survivor under guard amid death threats\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Precious metals get crushed as end-of-the-world trade implodes\"\n\"This Solo Dining Trend Is Changing the Way People Eat\"\n\n[Candidate News Title]\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a family's experience with being asked to remove their Christmas display due to perceived premature holiday celebrations. Readers may expect details about the specific decorations involved and the community or local regulations prompting this request. The article could explore the broader implications of holiday traditions and public sentiment regarding seasonal displays. It may also touch on the reactions of neighbors and local officials, providing a glimpse into the ongoing debate about when it is socially acceptable to begin holiday preparations.",
+  "model": "gpt-4o-mini"
+}

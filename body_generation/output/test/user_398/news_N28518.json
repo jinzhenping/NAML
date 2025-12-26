@@ -1,0 +1,21 @@
+{
+  "user_id": 398,
+  "candidate_news_id": "N28518",
+  "candidate_title": "Lamar Odom is Engaged to Girlfriend Sabrina Parr -- See Her Stunning Ring!",
+  "user_history_count": 10,
+  "user_history": [
+    "Meghan Markle earns Duchess Camilla's support, royal expert says",
+    "Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "Kristen Stewart Just Made Leather Bras a Thing, and We're All For It",
+    "See what your favorite stars look like without makeup",
+    "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out",
+    "Jennifer Lopez Just Got a Teeny Chop to Her Blond Lob, but it Changed the Entire Look",
+    "Kate Middleton's Maroon Trousers Gave Her a Pop of Color During Her Charity Outing",
+    "See Princess Sofia of Sweden's Unexpected Green Leopard Print Dress   Complete with Tiara!",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan Markle earns Duchess Camilla's support, royal expert says\"\n\"Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"Kristen Stewart Just Made Leather Bras a Thing, and We're All For It\"\n\"See what your favorite stars look like without makeup\"\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\"Jennifer Lopez Just Got a Teeny Chop to Her Blond Lob, but it Changed the Entire Look\"\n\"Kate Middleton's Maroon Trousers Gave Her a Pop of Color During Her Charity Outing\"\n\"See Princess Sofia of Sweden's Unexpected Green Leopard Print Dress   Complete with Tiara!\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\n[Candidate News Title]\n\"Lamar Odom is Engaged to Girlfriend Sabrina Parr -- See Her Stunning Ring!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide details about Lamar Odom's recent engagement to girlfriend Sabrina Parr, including insights into their relationship and the significance of the engagement ring. Readers may expect to learn about the couple's journey together, possibly featuring quotes or remarks from Odom or Parr about their future plans. Additionally, the article could delve into the reactions from fans and family, as well as any public appearances or social media posts that highlight their engagement. Overall, the content may offer a blend of personal anecdotes and celebratory commentary surrounding this milestone in their lives.",
+  "model": "gpt-4o-mini"
+}

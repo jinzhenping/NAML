@@ -1,0 +1,92 @@
+[
+  {
+    "user_id": 12,
+    "candidate_news_id": "N123968",
+    "candidate_title": "Ford v Ferrari: the real story",
+    "user_history_count": 7,
+    "user_history": [
+      "Korean Pop Star Sulli Dies at 25",
+      "Should You Book a Flight Through an Airline You've Never Heard of?",
+      "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+      "Older people's most common regrets",
+      "A sneak peek at Hudson Yards' Edge to open March 2020",
+      "Man who inherited 6 figures shares advice he'd give his younger self",
+      "Porsche launches into second story of New Jersey building, killing 2"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Korean Pop Star Sulli Dies at 25\"\n\"Should You Book a Flight Through an Airline You've Never Heard of?\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Older people's most common regrets\"\n\"A sneak peek at Hudson Yards' Edge to open March 2020\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Ford v Ferrari: the real story\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Ford v Ferrari: the real story\" is likely to provide a detailed account of the historical rivalry between the two automotive giants, focusing on the events surrounding the 1966 Le Mans race. Readers may expect insights into the motivations behind Ford's decision to challenge Ferrari, as well as the key figures involved, such as Carroll Shelby and Ken Miles. The piece could also explore the impact of this competition on the automotive industry and motorsport culture, highlighting both the technical innovations and the personal stories that emerged from this iconic battle.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 12,
+    "candidate_news_id": "N44294",
+    "candidate_title": "Opinion: NFL had no choice but to send a clear message with Garrett punishment",
+    "user_history_count": 7,
+    "user_history": [
+      "Korean Pop Star Sulli Dies at 25",
+      "Should You Book a Flight Through an Airline You've Never Heard of?",
+      "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+      "Older people's most common regrets",
+      "A sneak peek at Hudson Yards' Edge to open March 2020",
+      "Man who inherited 6 figures shares advice he'd give his younger self",
+      "Porsche launches into second story of New Jersey building, killing 2"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Korean Pop Star Sulli Dies at 25\"\n\"Should You Book a Flight Through an Airline You've Never Heard of?\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Older people's most common regrets\"\n\"A sneak peek at Hudson Yards' Edge to open March 2020\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Opinion: NFL had no choice but to send a clear message with Garrett punishment\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect an analysis of the NFL's decision to impose a punishment on player Myles Garrett, focusing on the league's need to maintain discipline and uphold standards of player conduct. The piece may explore the implications of the punishment for both Garrett and the NFL, including how it reflects the league's stance on safety and sportsmanship. Additionally, it is likely to discuss the broader context of player behavior and league policies, providing insights into how such decisions are made in professional sports.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 12,
+    "candidate_news_id": "N126696",
+    "candidate_title": "Maze of tunnels reveals remains of ancient Jerusalem",
+    "user_history_count": 7,
+    "user_history": [
+      "Korean Pop Star Sulli Dies at 25",
+      "Should You Book a Flight Through an Airline You've Never Heard of?",
+      "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+      "Older people's most common regrets",
+      "A sneak peek at Hudson Yards' Edge to open March 2020",
+      "Man who inherited 6 figures shares advice he'd give his younger self",
+      "Porsche launches into second story of New Jersey building, killing 2"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Korean Pop Star Sulli Dies at 25\"\n\"Should You Book a Flight Through an Airline You've Never Heard of?\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Older people's most common regrets\"\n\"A sneak peek at Hudson Yards' Edge to open March 2020\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Maze of tunnels reveals remains of ancient Jerusalem\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Maze of tunnels reveals remains of ancient Jerusalem\" is likely to discuss archaeological findings in Jerusalem, focusing on the network of tunnels that have been uncovered. Readers can expect to learn about the historical significance of these tunnels, including their age, purpose, and the artifacts or remains discovered within them. The piece may also explore the broader implications of these findings for our understanding of ancient civilizations in the region. Additionally, it could provide insights into the methods used by archaeologists in their excavation efforts.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 12,
+    "candidate_news_id": "N86352",
+    "candidate_title": "I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)",
+    "user_history_count": 7,
+    "user_history": [
+      "Korean Pop Star Sulli Dies at 25",
+      "Should You Book a Flight Through an Airline You've Never Heard of?",
+      "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+      "Older people's most common regrets",
+      "A sneak peek at Hudson Yards' Edge to open March 2020",
+      "Man who inherited 6 figures shares advice he'd give his younger self",
+      "Porsche launches into second story of New Jersey building, killing 2"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Korean Pop Star Sulli Dies at 25\"\n\"Should You Book a Flight Through an Airline You've Never Heard of?\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Older people's most common regrets\"\n\"A sneak peek at Hudson Yards' Edge to open March 2020\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!),\" you may expect to read about a straightforward practice or routine that can help manage overeating and promote healthier eating habits. The article is likely to outline a specific activity or preparation method that can be integrated into your Sunday routine, potentially focusing on meal planning or mindful eating strategies. It could provide practical tips and insights on how this simple change might contribute to better dietary choices throughout the week, appealing to readers interested in personal improvement and health management.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 12,
+    "candidate_news_id": "N90986",
+    "candidate_title": "The Most Popular Potluck Dessert from Every Decade",
+    "user_history_count": 7,
+    "user_history": [
+      "Korean Pop Star Sulli Dies at 25",
+      "Should You Book a Flight Through an Airline You've Never Heard of?",
+      "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+      "Older people's most common regrets",
+      "A sneak peek at Hudson Yards' Edge to open March 2020",
+      "Man who inherited 6 figures shares advice he'd give his younger self",
+      "Porsche launches into second story of New Jersey building, killing 2"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Korean Pop Star Sulli Dies at 25\"\n\"Should You Book a Flight Through an Airline You've Never Heard of?\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Older people's most common regrets\"\n\"A sneak peek at Hudson Yards' Edge to open March 2020\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"The Most Popular Potluck Dessert from Every Decade\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If the user clicks on \"The Most Popular Potluck Dessert from Every Decade,\" they may expect a historical overview of dessert trends at potluck gatherings, highlighting key dishes that have defined each decade. The article could provide insights into how cultural shifts and popular ingredients influenced dessert choices over time, potentially including recipes or serving suggestions. Readers might find details on iconic desserts like Jell-O salads from the 1960s or chocolate lava cake from the 1990s, offering a nostalgic look at communal dining experiences.",
+    "model": "gpt-4o-mini"
+  }
+]

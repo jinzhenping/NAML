@@ -1,0 +1,21 @@
+{
+  "user_id": 873,
+  "candidate_news_id": "N20964",
+  "candidate_title": "Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter",
+  "user_history_count": 10,
+  "user_history": [
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "John Witherspoon Dies: Comedian & 'Friday' Star Was 77",
+    "Foie Gras Is Banned by New York City",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"John Witherspoon Dies: Comedian & 'Friday' Star Was 77\"\n\"Foie Gras Is Banned by New York City\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\n[Candidate News Title]\n\"Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter,\" the user is likely to encounter a narrative centered on a wedding ceremony where a groom expresses deep affection and commitment not only to his bride but also to her young daughter. The piece may detail the vows he crafted, highlighting the significance of his relationship with the stepdaughter and the blending of their families. It could also explore themes of family, love, and the responsibilities that come with step-parenthood, offering insights into the emotional dynamics of such unions. Overall, the article is likely to provide a touching glimpse into this unique aspect of modern family life.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 872,
+  "candidate_news_id": "N73556",
+  "candidate_title": "Report: At least 24 teams expected to attend Kaepernick's workout",
+  "user_history_count": 10,
+  "user_history": [
+    "Week in celebrity photos for Nov. 4-8, 2019",
+    "See the stars at the 2019 Baby2Baby gala",
+    "People's Choice Awards 2019: Red Carpet Fashion",
+    "The Best Backstage Moments From the 2019 E! People's Choice Awards",
+    "2019 People's Choice Awards fashion hits and misses",
+    "Week in celebrity photos for Nov. 11-15, 2019",
+    "People's Choice Awards 2019: Red Carpet Fashion",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "Funny celeb pics for November 2019",
+    "Week in celebrity photos for Nov. 11-15, 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Week in celebrity photos for Nov. 4-8, 2019\"\n\"See the stars at the 2019 Baby2Baby gala\"\n\"People's Choice Awards 2019: Red Carpet Fashion\"\n\"The Best Backstage Moments From the 2019 E! People's Choice Awards\"\n\"2019 People's Choice Awards fashion hits and misses\"\n\"Week in celebrity photos for Nov. 11-15, 2019\"\n\"People's Choice Awards 2019: Red Carpet Fashion\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"Funny celeb pics for November 2019\"\n\"Week in celebrity photos for Nov. 11-15, 2019\"\n\n[Candidate News Title]\n\"Report: At least 24 teams expected to attend Kaepernick's workout\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the upcoming workout session for Colin Kaepernick, with at least 24 NFL teams expected to attend. Readers can anticipate details about the significance of this event in relation to Kaepernick's career and the ongoing discussions about player opportunities in the league. The piece may explore the implications of team attendance for Kaepernick's potential return to football, as well as the broader context of athlete activism in the NFL. Insights into the responses from fans and analysts could also be included, providing a comprehensive view of the situation.",
+  "model": "gpt-4o-mini"
+}

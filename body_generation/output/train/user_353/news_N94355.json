@@ -1,0 +1,21 @@
+{
+  "user_id": 353,
+  "candidate_news_id": "N94355",
+  "candidate_title": "Turkey Gathered Information in the U.S. Against Its Critics",
+  "user_history_count": 10,
+  "user_history": [
+    "Amber Portwood strikes plea deal for alleged machete attack",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Best all-inclusive resorts in the world",
+    "Celeb couples with big age gaps",
+    "Zac Posen, red carpet favorite, shuts down fashion label",
+    "Rob Kardashian shows off incredible weight loss in new pic",
+    "Vicki Gunvalson suing fellow 'Housewives' star Kelly Dodd",
+    "Brian Tarantina, 'Marvelous Mrs. Maisel' and 'Gilmore Girls' Actor, Dies at 60",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Amber Portwood strikes plea deal for alleged machete attack\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Best all-inclusive resorts in the world\"\n\"Celeb couples with big age gaps\"\n\"Zac Posen, red carpet favorite, shuts down fashion label\"\n\"Rob Kardashian shows off incredible weight loss in new pic\"\n\"Vicki Gunvalson suing fellow 'Housewives' star Kelly Dodd\"\n\"Brian Tarantina, 'Marvelous Mrs. Maisel' and 'Gilmore Girls' Actor, Dies at 60\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\n[Candidate News Title]\n\"Turkey Gathered Information in the U.S. Against Its Critics\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article may discuss Turkey's efforts to gather intelligence on individuals in the United States who are critical of the Turkish government. Readers can expect to find details about the methods used for this information collection, including potential surveillance techniques or collaboration with foreign entities. The piece could also explore the implications for U.S.-Turkey relations and the impact on Turkish expatriates living in the U.S. Overall, the article is likely to provide a factual overview of the situation while addressing concerns about privacy and freedom of expression.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 515,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 10,
+  "user_history": [
+    "Why the 'extreme red flag' winds hitting L.A. region are dangerous and unpredictable",
+    "Most adults over 50 would rather die than do this",
+    "7 Rules for How to Call in Sick to Work",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+    "Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.",
+    "Icy roads and treacherous morning commute for Midwest",
+    "Subtle Signs You May Have Clogged Arteries",
+    "Deadly Arctic blast breaks records set more than 100 years ago",
+    "Nor'easter to grind at US East Coast this weekend"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why the 'extreme red flag' winds hitting L.A. region are dangerous and unpredictable\"\n\"Most adults over 50 would rather die than do this\"\n\"7 Rules for How to Call in Sick to Work\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.\"\n\"Icy roads and treacherous morning commute for Midwest\"\n\"Subtle Signs You May Have Clogged Arteries\"\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\"Nor'easter to grind at US East Coast this weekend\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The most talked about movie moments of the 2010s\" is likely to explore significant scenes and events from popular films released during that decade. Readers may expect to find an analysis of key cinematic moments that sparked discussions among audiences, as well as insights into their cultural impact. It could include notable performances, memorable quotes, or plot twists that resonated widely. Additionally, the piece may delve into how these moments reflect broader trends in filmmaking and audience engagement during the 2010s, though this remains uncertain.",
+  "model": "gpt-4o-mini"
+}

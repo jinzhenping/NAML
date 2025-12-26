@@ -1,0 +1,21 @@
+{
+  "user_id": 174,
+  "candidate_news_id": "N91238",
+  "candidate_title": "Sears is laying off hundreds of corporate employees after announcing 96 store closings",
+  "user_history_count": 10,
+  "user_history": [
+    "Pregnant Shawn Johnson Marks 2nd Anniversary of Her Miscarriage",
+    "Celebrity weddings of 2019",
+    "Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019",
+    "Staying Friends! Hannah Brown Reacts to Tyler Cameron's Birthday Text",
+    "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+    "Kylie Jenner and her bestie get surgery together, plus more news",
+    "Helen Hunt Posts First Pic Following Car Accident: 'Back at Work'",
+    "3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian",
+    "This Mom Had a Hilarious Response to a Man Who Told Her to 'Cover Up' While Breastfeeding in Public",
+    "Bruce Willis brought Demi Moore to tears after reading her book"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Pregnant Shawn Johnson Marks 2nd Anniversary of Her Miscarriage\"\n\"Celebrity weddings of 2019\"\n\"Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019\"\n\"Staying Friends! Hannah Brown Reacts to Tyler Cameron's Birthday Text\"\n\"Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge\"\n\"Kylie Jenner and her bestie get surgery together, plus more news\"\n\"Helen Hunt Posts First Pic Following Car Accident: 'Back at Work'\"\n\"3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian\"\n\"This Mom Had a Hilarious Response to a Man Who Told Her to 'Cover Up' While Breastfeeding in Public\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\n[Candidate News Title]\n\"Sears is laying off hundreds of corporate employees after announcing 96 store closings\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent decision by Sears to lay off hundreds of corporate employees amid the closure of 96 stores. Readers can expect an overview of the reasons behind these layoffs, possibly touching on the broader challenges faced by the retail industry. The article may also include insights into the impact of these changes on employees and the company's future strategies. Additionally, it could explore how this move fits within the context of Sears' ongoing struggles and transformation efforts in a competitive market.",
+  "model": "gpt-4o-mini"
+}

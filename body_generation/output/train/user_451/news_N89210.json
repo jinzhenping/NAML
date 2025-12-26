@@ -1,0 +1,21 @@
+{
+  "user_id": 451,
+  "candidate_news_id": "N89210",
+  "candidate_title": "New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November",
+  "user_history_count": 10,
+  "user_history": [
+    "How To Open a Can Without a Can Opener",
+    "Meet the Top 10 CNN Heroes of 2019",
+    "Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights",
+    "Dangers of tattoos are more than just skin deep",
+    "Kristen Stewart on 'SNL': 3 Sketches You Have to See",
+    "50 Unique Holiday Gift Ideas for Him Under $50",
+    "Martin Scorsese Elaborates on Marvel Criticism: Tentpoles Have No 'Revelation, Mystery or Genuine Emotional Danger'",
+    "Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs",
+    "Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years",
+    "Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"How To Open a Can Without a Can Opener\"\n\"Meet the Top 10 CNN Heroes of 2019\"\n\"Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights\"\n\"Dangers of tattoos are more than just skin deep\"\n\"Kristen Stewart on 'SNL': 3 Sketches You Have to See\"\n\"50 Unique Holiday Gift Ideas for Him Under $50\"\n\"Martin Scorsese Elaborates on Marvel Criticism: Tentpoles Have No 'Revelation, Mystery or Genuine Emotional Danger'\"\n\"Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs\"\n\"Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years\"\n\"Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math\"\n\n[Candidate News Title]\n\"New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a comprehensive overview of the new movies and TV shows available on Netflix for November. It may highlight a mix of genres, including both original content and licensed titles, catering to various tastes. The user could expect details on anticipated releases, brief descriptions of key titles, and perhaps mention any popular actors or directors involved. Additionally, there may be insights into themes or trends present in this month’s offerings, providing context for what viewers can look forward to.",
+  "model": "gpt-4o-mini"
+}

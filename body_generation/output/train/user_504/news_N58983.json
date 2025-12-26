@@ -1,0 +1,21 @@
+{
+  "user_id": 504,
+  "candidate_news_id": "N58983",
+  "candidate_title": "Tristan Thompson Gushes Over Ex Khloe Kardashian After Her People's Choice Win",
+  "user_history_count": 10,
+  "user_history": [
+    "Vikings WR Thielen ruled out for 'SNF' matchup vs. Cowboys",
+    "Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned",
+    "Drummond: I'm 'definitely' the best rebounder in NBA history",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Oprah Just Revealed Her 2019 Favorite Things Here Are the Best Food Picks",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "Ex-DII walk-on worked at potato chip factory before Raiders",
+    "This Is The Moment A Senior Shelter Dog Knew He Was Safe",
+    "Ramsey on matchup with Smith-Schuster: 'He's not Antonio Brown'",
+    "Jolly Joseph: Mom, churchgoer, chatty neighbor ... suspected serial killer"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Vikings WR Thielen ruled out for 'SNF' matchup vs. Cowboys\"\n\"Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned\"\n\"Drummond: I'm 'definitely' the best rebounder in NBA history\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Oprah Just Revealed Her 2019 Favorite Things Here Are the Best Food Picks\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"Ex-DII walk-on worked at potato chip factory before Raiders\"\n\"This Is The Moment A Senior Shelter Dog Knew He Was Safe\"\n\"Ramsey on matchup with Smith-Schuster: 'He's not Antonio Brown'\"\n\"Jolly Joseph: Mom, churchgoer, chatty neighbor ... suspected serial killer\"\n\n[Candidate News Title]\n\"Tristan Thompson Gushes Over Ex Khloe Kardashian After Her People's Choice Win\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to read about Tristan Thompson's recent comments regarding his ex-partner, Khloe Kardashian, following her win at the People's Choice Awards. The piece may provide insights into Thompson's reflections on their past relationship and his support for her achievements. Additionally, it could explore the public's interest in their dynamic, especially given the ongoing media attention surrounding the Kardashian family. Overall, the article is likely to shed light on the current status of their relationship amidst the backdrop of celebrity culture.",
+  "model": "gpt-4o-mini"
+}

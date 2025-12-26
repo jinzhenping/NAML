@@ -1,0 +1,21 @@
+{
+  "user_id": 960,
+  "candidate_news_id": "N74101",
+  "candidate_title": "At least 2 dead, multiple injured in California school shooting",
+  "user_history_count": 10,
+  "user_history": [
+    "Opinions | Where is Mike Pompeo? He's hiding in fear of Donald Trump.",
+    "Jeff Sessions escorted from Northwestern U. under heavy security amid 'cancel culture' protest",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Jim Boeheim rips ACC for 'stupid' money grab after disastrous opener",
+    "Russia has retaliation ready if U.S. quits Open Skies treaty - RIA",
+    "Opinions | It's too late to save yourself now, Bill Barr",
+    "Michael Bloomberg Is The Answer To A Question Nobody Is Asking",
+    "Giuliani may have identified secret friend 'Charles' with accidental text",
+    "Man cuffed for eating sandwich on train platform gets an apology",
+    "NFL could meet with Brown multiple times to discuss case"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Opinions | Where is Mike Pompeo? He's hiding in fear of Donald Trump.\"\n\"Jeff Sessions escorted from Northwestern U. under heavy security amid 'cancel culture' protest\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Jim Boeheim rips ACC for 'stupid' money grab after disastrous opener\"\n\"Russia has retaliation ready if U.S. quits Open Skies treaty - RIA\"\n\"Opinions | It's too late to save yourself now, Bill Barr\"\n\"Michael Bloomberg Is The Answer To A Question Nobody Is Asking\"\n\"Giuliani may have identified secret friend 'Charles' with accidental text\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"NFL could meet with Brown multiple times to discuss case\"\n\n[Candidate News Title]\n\"At least 2 dead, multiple injured in California school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"At least 2 dead, multiple injured in California school shooting,\" the user can expect an informative account of a tragic incident at a school in California. The report is likely to detail the circumstances surrounding the shooting, including the location, the timeline of events, and the responses from law enforcement and emergency services. Additionally, it may provide insights into the impact on the community and any ongoing investigations. The article could also touch upon broader themes related to school safety and gun violence, as well as reactions from local officials or advocacy groups.",
+  "model": "gpt-4o-mini"
+}

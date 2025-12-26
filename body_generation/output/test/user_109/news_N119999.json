@@ -1,0 +1,21 @@
+{
+  "user_id": 109,
+  "candidate_news_id": "N119999",
+  "candidate_title": "I've been writing about tiny homes for a year and finally spent 2 nights in a 300-foot home to see what it's all about   here's how it went",
+  "user_history_count": 10,
+  "user_history": [
+    "Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him",
+    "Kaitlynn Carter Recalls Falling in Love With Miley Cyrus in Candid Essay",
+    "Predicting the College Football Playoff Rankings for Week 11",
+    "Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years",
+    "Will Tua play against LSU? Nick Saban says there's 'a good chance'",
+    "Far-reaching snowstorm may take shape over US",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "Hyatt is eliminating travel-sized plastic toiletries",
+    "Bode Miller delivered his twin boys after midwife didn't make it time for the birth",
+    "Deval Patrick Will Enter 2020 Presidential Race on Thursday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him\"\n\"Kaitlynn Carter Recalls Falling in Love With Miley Cyrus in Candid Essay\"\n\"Predicting the College Football Playoff Rankings for Week 11\"\n\"Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years\"\n\"Will Tua play against LSU? Nick Saban says there's 'a good chance'\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"Hyatt is eliminating travel-sized plastic toiletries\"\n\"Bode Miller delivered his twin boys after midwife didn't make it time for the birth\"\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\n[Candidate News Title]\n\"I've been writing about tiny homes for a year and finally spent 2 nights in a 300-foot home to see what it's all about   here's how it went\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article about spending two nights in a 300-foot tiny home, you are likely to read about the practical aspects of living in such a compact space. The article may detail the experience of adjusting to the limited square footage, including how everyday activities like cooking, sleeping, and storage are managed. Additionally, it could explore the benefits and challenges of tiny home living, possibly highlighting insights on the design and functionality of these homes. Overall, the piece may provide a firsthand perspective on the tiny home lifestyle and its appeal.",
+  "model": "gpt-4o-mini"
+}

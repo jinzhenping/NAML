@@ -1,0 +1,21 @@
+{
+  "user_id": 908,
+  "candidate_news_id": "N9471",
+  "candidate_title": "'A fighter': President Jimmy Carter's neighbors know they'll say goodbye one day, but not yet",
+  "user_history_count": 10,
+  "user_history": [
+    "'The Little Mermaid Live!': TV Review",
+    "Mid-Engine C8 Corvette Production Postponed Until February 2020",
+    "Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math",
+    "Chicago Police Superintendent Eddie Johnson announces retirement",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Justice Dept. rolls out new program to combat gun violence",
+    "WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist",
+    "Three Classic Cars Stolen From CA Car Show",
+    "Dwayne Johnson Announces 'Black Adam' 2021 Release Date"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'The Little Mermaid Live!': TV Review\"\n\"Mid-Engine C8 Corvette Production Postponed Until February 2020\"\n\"Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math\"\n\"Chicago Police Superintendent Eddie Johnson announces retirement\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Justice Dept. rolls out new program to combat gun violence\"\n\"WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist\"\n\"Three Classic Cars Stolen From CA Car Show\"\n\"Dwayne Johnson Announces 'Black Adam' 2021 Release Date\"\n\n[Candidate News Title]\n\"'A fighter': President Jimmy Carter's neighbors know they'll say goodbye one day, but not yet\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about President Jimmy Carter's neighbors likely discusses their reflections on his life and legacy as they prepare for the inevitability of his passing. Readers may expect insights into how the community views Carter's contributions and character, possibly including anecdotes or descriptions of his interactions with them. It may touch on the respect and admiration they hold for him, as well as the impact he has had locally and nationally. The article could also explore themes of mortality and community support during difficult times, highlighting the connections between public figures and the communities they inhabit.",
+  "model": "gpt-4o-mini"
+}

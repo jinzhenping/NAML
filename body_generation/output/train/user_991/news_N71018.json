@@ -1,0 +1,21 @@
+{
+  "user_id": 991,
+  "candidate_news_id": "N71018",
+  "candidate_title": "Veterans Day, Record-breaking cold front, Rare Mercury transit: 5 things you need to know Monday",
+  "user_history_count": 10,
+  "user_history": [
+    "Teen 'Jeopardy!' champ donates $10,000 to cancer research in honor of Alex Trebek",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "27 Things No One Tells You About Having Diabetes",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Far-reaching snowstorm may take shape over US",
+    "Reporter Can't Stop Laughing After Cat Interrupts News Segment",
+    "An Arctic blast is coming to the eastern part of the US",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Cold weather: An Arctic blast is bringing a week of below-freezing temperatures to parts of the US",
+    "One of FBI's Most Wanted fugitives offers surrender"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Teen 'Jeopardy!' champ donates $10,000 to cancer research in honor of Alex Trebek\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"27 Things No One Tells You About Having Diabetes\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Reporter Can't Stop Laughing After Cat Interrupts News Segment\"\n\"An Arctic blast is coming to the eastern part of the US\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Cold weather: An Arctic blast is bringing a week of below-freezing temperatures to parts of the US\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\n[Candidate News Title]\n\"Veterans Day, Record-breaking cold front, Rare Mercury transit: 5 things you need to know Monday\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may find information regarding significant events and phenomena occurring on Monday, including Veterans Day observances, insights into a record-breaking cold front impacting various regions, and details about a rare Mercury transit. The piece is likely to provide an overview of how these events might affect daily life, such as travel disruptions due to weather conditions, as well as the significance of Veterans Day in honoring military service members. Additionally, it could explore why the Mercury transit is noteworthy for astronomy enthusiasts and the general public alike.",
+  "model": "gpt-4o-mini"
+}

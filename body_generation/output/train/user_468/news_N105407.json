@@ -1,0 +1,21 @@
+{
+  "user_id": 468,
+  "candidate_news_id": "N105407",
+  "candidate_title": "'One in a million' deer captured on camera in Michigan woods",
+  "user_history_count": 10,
+  "user_history": [
+    "Odell Beckham's Comments After Browns-Patriots Prove Exactly Why Giants Traded Him",
+    "Broncos QB Joe Flacco has herniated disk in neck, season, possibly career in jeopardy",
+    "Katy Perry Through The Years",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Guess What New Car James May Just Bought",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Mid-Engine C8 Corvette Production Postponed Until February 2020",
+    "Wild & wonderful treasures of SEMA 2019   US edition",
+    "Listen to John Legend and Kelly Clarkson's updated version of 'Baby, It's Cold Outside'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Odell Beckham's Comments After Browns-Patriots Prove Exactly Why Giants Traded Him\"\n\"Broncos QB Joe Flacco has herniated disk in neck, season, possibly career in jeopardy\"\n\"Katy Perry Through The Years\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Guess What New Car James May Just Bought\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Mid-Engine C8 Corvette Production Postponed Until February 2020\"\n\"Wild & wonderful treasures of SEMA 2019   US edition\"\n\"Listen to John Legend and Kelly Clarkson's updated version of 'Baby, It's Cold Outside'\"\n\n[Candidate News Title]\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about a rare instance of a unique deer species being photographed in the woods of Michigan. The piece may provide details about the characteristics that make this deer 'one in a million,' such as its unusual coloration or physical features. Additionally, the article could explore the significance of such sightings in wildlife studies and conservation efforts. The content may also include insights from wildlife experts or local residents who encountered the deer, while discussing the broader implications of biodiversity in the region.",
+  "model": "gpt-4o-mini"
+}

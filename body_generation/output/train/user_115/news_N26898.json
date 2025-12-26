@@ -1,0 +1,21 @@
+{
+  "user_id": 115,
+  "candidate_news_id": "N26898",
+  "candidate_title": "Stars who've lived with their parents",
+  "user_history_count": 10,
+  "user_history": [
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "Behind-the-scenes facts about 'Sesame Street'",
+    "The Best Trader Joe's Desserts for Your Thanksgiving Dinner Table",
+    "The Infertility Secret I Kept From My Mother",
+    "Man who inherited 6 figures shares advice he'd give his younger self",
+    "Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Is Miss USA Ready for Its First Woman In a Wheelchair?",
+    "Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week",
+    "I ate one of Meghan Markle's favorite foods from Toronto here's what I thought"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"Behind-the-scenes facts about 'Sesame Street'\"\n\"The Best Trader Joe's Desserts for Your Thanksgiving Dinner Table\"\n\"The Infertility Secret I Kept From My Mother\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Is Miss USA Ready for Its First Woman In a Wheelchair?\"\n\"Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week\"\n\"I ate one of Meghan Markle's favorite foods from Toronto here's what I thought\"\n\n[Candidate News Title]\n\"Stars who've lived with their parents\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Stars who've lived with their parents,\" you can expect to read about various celebrities who have opted to stay at home with their families, either during their rise to fame or at different stages in their careers. The piece may explore the reasons behind these decisions, such as financial considerations, cultural factors, or personal preferences. Additionally, it could highlight specific stars and provide anecdotes or insights into how living with parents has influenced their lives and careers, offering a glimpse into the more relatable aspects of celebrity life.",
+  "model": "gpt-4o-mini"
+}

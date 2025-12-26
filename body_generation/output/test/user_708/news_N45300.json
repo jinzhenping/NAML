@@ -1,0 +1,21 @@
+{
+  "user_id": 708,
+  "candidate_news_id": "N45300",
+  "candidate_title": "Latin GRAMMYs 2019: Best Moments of the Night!",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Deion a candidate for Florida State coaching job",
+    "AP FACT CHECK: Trump assails a process he swore to uphold",
+    "Trump Bid to End DACA Puts Supreme Court Back in Political Fray",
+    "Opinion: President Trump's increased interest in public sporting events hardly a coincidence",
+    "Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says",
+    "Republicans are throwing Giuliani under the bus. But there's a problem.",
+    "Megyn Kelly Is Back to Work! Details on Her New Job",
+    "Impeachment hearings go live on TV with the 1st witnesses",
+    "What Roger Stone's trial revealed about Donald Trump and WikiLeaks",
+    "Watch late night hosts recap first public impeachment hearings"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Deion a candidate for Florida State coaching job\"\n\"AP FACT CHECK: Trump assails a process he swore to uphold\"\n\"Trump Bid to End DACA Puts Supreme Court Back in Political Fray\"\n\"Opinion: President Trump's increased interest in public sporting events hardly a coincidence\"\n\"Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says\"\n\"Republicans are throwing Giuliani under the bus. But there's a problem.\"\n\"Megyn Kelly Is Back to Work! Details on Her New Job\"\n\"Impeachment hearings go live on TV with the 1st witnesses\"\n\"What Roger Stone's trial revealed about Donald Trump and WikiLeaks\"\n\"Watch late night hosts recap first public impeachment hearings\"\n\n[Candidate News Title]\n\"Latin GRAMMYs 2019: Best Moments of the Night!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Latin GRAMMYs 2019: Best Moments of the Night!\", you may expect a recap of the most notable performances, speeches, and highlights from the event. The piece is likely to cover key winners in various categories, as well as any significant moments that captured the audience's attention. Additionally, it might touch on the cultural impact of the awards and how they reflect contemporary trends in Latin music. Overall, the article is expected to provide a comprehensive overview of the event's key takeaways.",
+  "model": "gpt-4o-mini"
+}

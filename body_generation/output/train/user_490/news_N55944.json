@@ -1,0 +1,21 @@
+{
+  "user_id": 490,
+  "candidate_news_id": "N55944",
+  "candidate_title": "4 injured in shooting at adult club in Kansas City, Missouri",
+  "user_history_count": 10,
+  "user_history": [
+    "Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before",
+    "Latest Australia shark attack sparks tourism concerns",
+    "What I Wish My Dad Told Me More Growing Up, According to 10 Men",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "'People come for the selfies but won't pay $2 for pizza'",
+    "Meet Bobe, the other dog at the Baghdadi raid",
+    "A part of Windsor Castle that's been closed to the public for over 150 years just reopened   and it's been completely revamped. Take a peek inside.",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Holocaust survivor under guard amid death threats",
+    "'I am scared all the time': Chimps and people are clashing in rural Uganda"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before\"\n\"Latest Australia shark attack sparks tourism concerns\"\n\"What I Wish My Dad Told Me More Growing Up, According to 10 Men\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"'People come for the selfies but won't pay $2 for pizza'\"\n\"Meet Bobe, the other dog at the Baghdadi raid\"\n\"A part of Windsor Castle that's been closed to the public for over 150 years just reopened   and it's been completely revamped. Take a peek inside.\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Holocaust survivor under guard amid death threats\"\n\"'I am scared all the time': Chimps and people are clashing in rural Uganda\"\n\n[Candidate News Title]\n\"4 injured in shooting at adult club in Kansas City, Missouri\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"4 injured in shooting at adult club in Kansas City, Missouri\" is likely to provide a factual account of a recent violent incident at an adult entertainment venue. It may detail the circumstances surrounding the shooting, including the time and location, as well as the identities of those injured, if available. The piece could also discuss the response from local law enforcement and any ongoing investigations. Additionally, it may touch on broader implications for community safety and public concerns regarding such venues, though specific details may vary.",
+  "model": "gpt-4o-mini"
+}

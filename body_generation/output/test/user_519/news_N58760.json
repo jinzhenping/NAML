@@ -1,0 +1,21 @@
+{
+  "user_id": 519,
+  "candidate_news_id": "N58760",
+  "candidate_title": "Police find 26 children behind false wall at Colorado day care",
+  "user_history_count": 10,
+  "user_history": [
+    "Man cuffed for eating sandwich on train platform gets an apology",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "World's Most Expensive SUV Looks Like Nothing Else",
+    "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+    "The world's largest trade deal could be signed in 2020",
+    "2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway",
+    "Japan Wants You To Stop Buying All Its Skyline GT-Rs",
+    "A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent",
+    "'Lots of Tears!' Teresa Giudice Details Reuniting With Husband Joe in Italy",
+    "'A big fan': Trump welcomes Turkey's Erdogan despite bipartisan concern over Syria attack"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"World's Most Expensive SUV Looks Like Nothing Else\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"The world's largest trade deal could be signed in 2020\"\n\"2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway\"\n\"Japan Wants You To Stop Buying All Its Skyline GT-Rs\"\n\"A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent\"\n\"'Lots of Tears!' Teresa Giudice Details Reuniting With Husband Joe in Italy\"\n\"'A big fan': Trump welcomes Turkey's Erdogan despite bipartisan concern over Syria attack\"\n\n[Candidate News Title]\n\"Police find 26 children behind false wall at Colorado day care\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely reports on a significant police operation in Colorado where authorities discovered 26 children hidden behind a false wall in a daycare facility. Readers may expect details about the circumstances surrounding the discovery, including how the police were alerted and the conditions of the daycare. It could also provide information on the legal implications for the daycare operators and the welfare of the children involved. Additionally, there may be insights into broader concerns regarding childcare regulations and safety standards in the state.",
+  "model": "gpt-4o-mini"
+}

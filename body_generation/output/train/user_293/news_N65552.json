@@ -1,0 +1,21 @@
+{
+  "user_id": 293,
+  "candidate_news_id": "N65552",
+  "candidate_title": "Best country music albums of all time",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "27 handmade alternatives to buying gifts for the home",
+    "The Tastiest, Most Festive Snacks To Serve On Christmas Eve",
+    "8 television shows that didn't age well",
+    "Here's How to Correctly Store Potatoes to Keep Them Fresh",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Police Surprise Woman Who Anonymously Baked Pizzelle Cookies for Years in Heartwarming Video",
+    "Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"27 handmade alternatives to buying gifts for the home\"\n\"The Tastiest, Most Festive Snacks To Serve On Christmas Eve\"\n\"8 television shows that didn't age well\"\n\"Here's How to Correctly Store Potatoes to Keep Them Fresh\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Police Surprise Woman Who Anonymously Baked Pizzelle Cookies for Years in Heartwarming Video\"\n\"Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'\"\n\n[Candidate News Title]\n\"Best country music albums of all time\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In exploring the article titled \"Best country music albums of all time,\" the user may expect a curated list of influential and popular country music albums that have shaped the genre over the years. The article is likely to highlight key artists and their notable works, providing insights into why these albums are considered significant. It may also include brief descriptions of the themes and styles present in each album, along with their impact on both fans and the music industry as a whole. Additionally, it could touch upon the evolution of country music and how these albums reflect changing cultural trends.",
+  "model": "gpt-4o-mini"
+}

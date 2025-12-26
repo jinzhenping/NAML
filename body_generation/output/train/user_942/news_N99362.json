@@ -1,0 +1,21 @@
+{
+  "user_id": 942,
+  "candidate_news_id": "N99362",
+  "candidate_title": "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+  "user_history_count": 10,
+  "user_history": [
+    "7 biggest takeaways from the opening College Football Playoff rankings",
+    "Adorable Rescue 'Puppy' Turns Out To Be Wild Dingo",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "AP Sources: Former Attorney General Jeff Sessions to announce Alabama Senate bid on Thursday",
+    "A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Fishermen rescue deer that was swept out to sea",
+    "China Touts Fentanyl Convictions, Tackling Key Trade Talks Issue",
+    "Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito",
+    "Fire Ants and Spiders Inspire Metal That Can't Sink"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"7 biggest takeaways from the opening College Football Playoff rankings\"\n\"Adorable Rescue 'Puppy' Turns Out To Be Wild Dingo\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"AP Sources: Former Attorney General Jeff Sessions to announce Alabama Senate bid on Thursday\"\n\"A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Fishermen rescue deer that was swept out to sea\"\n\"China Touts Fentanyl Convictions, Tackling Key Trade Talks Issue\"\n\"Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito\"\n\"Fire Ants and Spiders Inspire Metal That Can't Sink\"\n\n[Candidate News Title]\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Buffalo Wild Wings reopening after a tragic chemical accident that resulted in the death of a manager, the user can expect a detailed account of the incident, including the circumstances surrounding the accident and the response from the company. The piece may also cover safety measures being implemented to prevent future occurrences and any statements from employees or local officials regarding the impact of the tragedy on the community. Additionally, it is likely to provide insights into how the reopening process will unfold and what it means for the restaurant's staff and patrons.",
+  "model": "gpt-4o-mini"
+}

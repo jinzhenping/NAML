@@ -1,0 +1,21 @@
+{
+  "user_id": 128,
+  "candidate_news_id": "N880",
+  "candidate_title": "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+  "user_history_count": 10,
+  "user_history": [
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "1 Family's Adoption Photo Shoot Is on Point, but the Touching Story Behind It Is Everything",
+    "Caring dalmatians preciously adopt tiny kitten",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "Cincinnati Zoo pairs up cute rescue dog Remus and baby cheetah Kris for a 'BFF sleepover'",
+    "Friendly deer plays with dog",
+    "Too Cute! Baby Giraffe at Czech Zoo Makes His First Public Appearance!",
+    "Holocaust survivor under guard amid death threats",
+    "Is Miss USA Ready for Its First Woman In a Wheelchair?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"1 Family's Adoption Photo Shoot Is on Point, but the Touching Story Behind It Is Everything\"\n\"Caring dalmatians preciously adopt tiny kitten\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"Cincinnati Zoo pairs up cute rescue dog Remus and baby cheetah Kris for a 'BFF sleepover'\"\n\"Friendly deer plays with dog\"\n\"Too Cute! Baby Giraffe at Czech Zoo Makes His First Public Appearance!\"\n\"Holocaust survivor under guard amid death threats\"\n\"Is Miss USA Ready for Its First Woman In a Wheelchair?\"\n\n[Candidate News Title]\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to find a collection of 65 diverse soup recipes designed to provide warmth and comfort during the fall season. The recipes are likely to include a variety of ingredients, catering to different tastes and dietary preferences, such as vegetarian, meat-based, and hearty options. Additionally, there may be tips on preparation and serving ideas to enhance the dining experience. The article could also explore seasonal flavors and highlight the nutritional benefits of the ingredients used, making it a practical resource for family meals.",
+  "model": "gpt-4o-mini"
+}

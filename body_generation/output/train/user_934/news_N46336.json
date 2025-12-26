@@ -1,0 +1,21 @@
+{
+  "user_id": 934,
+  "candidate_news_id": "N46336",
+  "candidate_title": "Despite female push, Garth Brooks bests Underwood at CMAs",
+  "user_history_count": 10,
+  "user_history": [
+    "26 places most tourists overlook that are worth adding to your bucket list",
+    "7 Things Smart Parents Do When Dealing With an Angry Teenager",
+    "The world's largest nuclear power producer is melting down",
+    "The 50 Best One-Hit Wonders of All Time",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "21 Costco Bulk Buys to Score for Thanksgiving",
+    "Holocaust survivor under guard amid death threats",
+    "Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'",
+    "Snow crab sells for record price in Japan",
+    "National Cappuccino Day 2019: Deals from Starbucks, Dunkin' Donuts and More"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"26 places most tourists overlook that are worth adding to your bucket list\"\n\"7 Things Smart Parents Do When Dealing With an Angry Teenager\"\n\"The world's largest nuclear power producer is melting down\"\n\"The 50 Best One-Hit Wonders of All Time\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"21 Costco Bulk Buys to Score for Thanksgiving\"\n\"Holocaust survivor under guard amid death threats\"\n\"Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'\"\n\"Snow crab sells for record price in Japan\"\n\"National Cappuccino Day 2019: Deals from Starbucks, Dunkin' Donuts and More\"\n\n[Candidate News Title]\n\"Despite female push, Garth Brooks bests Underwood at CMAs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect a detailed account of the recent Country Music Association Awards (CMAs), focusing on the competition between Garth Brooks and Carrie Underwood. It is likely to discuss Brooks' victory in the context of the ongoing conversation about female representation in the country music genre, highlighting any relevant performances or moments from the event that may have sparked this discussion. Additionally, the article may provide insights into the reactions from fans and critics regarding the outcomes and the overall significance of the awards in showcasing talent in the industry.",
+  "model": "gpt-4o-mini"
+}

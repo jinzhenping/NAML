@@ -1,0 +1,21 @@
+{
+  "user_id": 155,
+  "candidate_news_id": "N125945",
+  "candidate_title": "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+  "user_history_count": 10,
+  "user_history": [
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Judge in Purdue Pharma bankruptcy case extends lawsuit protection to Sacklers",
+    "Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.",
+    "Gregg Jarrett: Whistleblower not entitled to anonymity   He's an informant acting as a Democratic operative",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "I Took the 30-Day Squat Challenge and Here's What Happened",
+    "Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'",
+    "Bogus Warren Quote Ignites Immigration Anger",
+    "Republicans urge Bevin to provide proof of election fraud or concede",
+    "One Mom's Unedited Maternity Shots Are Showing The World How Beautiful Real Can Be"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Judge in Purdue Pharma bankruptcy case extends lawsuit protection to Sacklers\"\n\"Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.\"\n\"Gregg Jarrett: Whistleblower not entitled to anonymity   He's an informant acting as a Democratic operative\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"I Took the 30-Day Squat Challenge and Here's What Happened\"\n\"Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'\"\n\"Bogus Warren Quote Ignites Immigration Anger\"\n\"Republicans urge Bevin to provide proof of election fraud or concede\"\n\"One Mom's Unedited Maternity Shots Are Showing The World How Beautiful Real Can Be\"\n\n[Candidate News Title]\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Tamron Hall's departure from the Today Show, the user can expect to read about Hall's career transition, including her reasons for leaving and any reflections she shares on her time with the program. The article may also touch on her relationship with other media personalities, such as Megyn Kelly, possibly discussing Kelly's reported multimillion payout. Additionally, it could provide insights into Hall's future plans and her perspective on the current landscape of daytime television, highlighting her role as a prominent figure in the industry.",
+  "model": "gpt-4o-mini"
+}

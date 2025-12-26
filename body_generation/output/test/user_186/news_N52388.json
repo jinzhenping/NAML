@@ -1,0 +1,21 @@
+{
+  "user_id": 186,
+  "candidate_news_id": "N52388",
+  "candidate_title": "Homeless woman living in SUV with dogs moves into apartment with community's help",
+  "user_history_count": 10,
+  "user_history": [
+    "Shepard Smith leaving Fox News",
+    "NFL players who should be traded before the deadline",
+    "Rock 'n' Roll Rarities! Ultra-Rare 1966 Color Photos of The Beatles in Concert Up for Auction",
+    "A man went viral for snubbing Mitch McConnell at Elijah Cummings's memorial. He says there's more to the story.",
+    "12 Things U.S. Presidents Have to Pay for on Their Own",
+    "The Trump impeachment is all about an allegation of quid pro quo. But what does that mean?",
+    "Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito",
+    "The Best Way to Reheat Fried Chicken So It's as Crispy as Night One",
+    "Wheel of Fortune's Pat Sajak Says the 'Worst Has Passed' Following Emergency Intestine Surgery",
+    "Here's the Best Small Town in Every State"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shepard Smith leaving Fox News\"\n\"NFL players who should be traded before the deadline\"\n\"Rock 'n' Roll Rarities! Ultra-Rare 1966 Color Photos of The Beatles in Concert Up for Auction\"\n\"A man went viral for snubbing Mitch McConnell at Elijah Cummings's memorial. He says there's more to the story.\"\n\"12 Things U.S. Presidents Have to Pay for on Their Own\"\n\"The Trump impeachment is all about an allegation of quid pro quo. But what does that mean?\"\n\"Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito\"\n\"The Best Way to Reheat Fried Chicken So It's as Crispy as Night One\"\n\"Wheel of Fortune's Pat Sajak Says the 'Worst Has Passed' Following Emergency Intestine Surgery\"\n\"Here's the Best Small Town in Every State\"\n\n[Candidate News Title]\n\"Homeless woman living in SUV with dogs moves into apartment with community's help\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the story of a homeless woman who was living in her SUV with her dogs and has recently transitioned into stable housing with the help of her community. Readers can expect to learn about the circumstances that led to her initial situation, the support she received from local organizations or individuals, and the impact this change has had on her and her pets. The piece may also explore broader themes regarding homelessness and community assistance, providing insights into how collective efforts can lead to positive outcomes for those in need.",
+  "model": "gpt-4o-mini"
+}

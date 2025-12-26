@@ -1,0 +1,21 @@
+{
+  "user_id": 940,
+  "candidate_news_id": "N31174",
+  "candidate_title": "Broadway Actress Laurel Griggs Dies at Age 13",
+  "user_history_count": 10,
+  "user_history": [
+    "Erdogan says he will never allow vaping, will block e-cigarettes in Turkey",
+    "Inside Ken Fisher's private kingdom, where hardball culture reels in billions",
+    "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+    "Turkey summons US ambassador, condemns US House resolutions",
+    "Senate rejects Democratic effort to undo Obamacare changes",
+    "Order! Order! Britain's speaker quits Brexit hotseat",
+    "Iran announces sharp rise in enriched uranium production",
+    "'Catalonia has no king,' separatist protesters say during Spanish royals' visit",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Erdogan says he will never allow vaping, will block e-cigarettes in Turkey\"\n\"Inside Ken Fisher's private kingdom, where hardball culture reels in billions\"\n\"Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony\"\n\"Turkey summons US ambassador, condemns US House resolutions\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"Order! Order! Britain's speaker quits Brexit hotseat\"\n\"Iran announces sharp rise in enriched uranium production\"\n\"'Catalonia has no king,' separatist protesters say during Spanish royals' visit\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\n[Candidate News Title]\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Broadway actress Laurel Griggs, who passed away at the young age of 13, is likely to provide an overview of her career and notable performances, particularly her role in the musical \"Once\" on Broadway. Readers may expect to learn about her achievements at such a young age, including any awards or recognition she received. Additionally, the article could explore the impact of her tragic passing on the theater community and potentially include reactions from friends, family, and colleagues. Overall, the piece may aim to celebrate her brief but impactful contribution to the arts.",
+  "model": "gpt-4o-mini"
+}

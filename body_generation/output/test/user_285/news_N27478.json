@@ -1,0 +1,21 @@
+{
+  "user_id": 285,
+  "candidate_news_id": "N27478",
+  "candidate_title": "Pittsburgh Steelers quarterback Mason Rudolph on 'TNF' incident: 'I thought it was pretty cowardly'",
+  "user_history_count": 10,
+  "user_history": [
+    "27 Things No One Tells You About Having Diabetes",
+    "18 Ingredients Nutritionists Say Should Be Banned From Your Kitchen",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "The Infertility Secret I Kept From My Mother",
+    "Stars turning 70 in 2019",
+    "3 students allegedly plotted to attack their middle school: Officials",
+    "Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Jennifer Aniston offers newbie Matthew McConaughey Instagram advice: 'Don't overthink it'",
+    "Stop! Read This Guide Before You Buy an Air Fryer."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"27 Things No One Tells You About Having Diabetes\"\n\"18 Ingredients Nutritionists Say Should Be Banned From Your Kitchen\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"The Infertility Secret I Kept From My Mother\"\n\"Stars turning 70 in 2019\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\"Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Jennifer Aniston offers newbie Matthew McConaughey Instagram advice: 'Don't overthink it'\"\n\"Stop! Read This Guide Before You Buy an Air Fryer.\"\n\n[Candidate News Title]\n\"Pittsburgh Steelers quarterback Mason Rudolph on 'TNF' incident: 'I thought it was pretty cowardly'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Pittsburgh Steelers quarterback Mason Rudolph on 'TNF' incident: 'I thought it was pretty cowardly',\" they are likely to find a discussion about Mason Rudolph's comments regarding a specific incident that occurred during a Thursday Night Football game. The article may outline the context of the incident, including any relevant actions taken by players or officials, and provide Rudolph's perspective on the events that transpired. Additionally, it could delve into the implications of his remarks for team dynamics and public perception. Overall, the article is expected to present a factual account of the situation while exploring the reactions it has generated within the sports community.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 852,
+  "candidate_news_id": "N105133",
+  "candidate_title": "A popular liquid-filled toy is bursting in Target and Walmart stores after the toy company produced a batch with a quality issue",
+  "user_history_count": 10,
+  "user_history": [
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Long Beach mass shooting: At least 3 dead, 9 wounded by gunfire at home",
+    "Sophie, Countess of Wessex Shares Her Very Personal Nickname for Her Mother-in-Law, the Queen!",
+    "Police rescue abducted teen girl; 34-year-old man taken into custody",
+    "8 Questions to Ask Yourself Before Using CBD",
+    "Here's How Much Caffeine Is in Your Favorite Starbucks Drinks",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "A guide to the 2019 People's Choice Awards nominees' significant others"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Long Beach mass shooting: At least 3 dead, 9 wounded by gunfire at home\"\n\"Sophie, Countess of Wessex Shares Her Very Personal Nickname for Her Mother-in-Law, the Queen!\"\n\"Police rescue abducted teen girl; 34-year-old man taken into custody\"\n\"8 Questions to Ask Yourself Before Using CBD\"\n\"Here's How Much Caffeine Is in Your Favorite Starbucks Drinks\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\n[Candidate News Title]\n\"A popular liquid-filled toy is bursting in Target and Walmart stores after the toy company produced a batch with a quality issue\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a recent quality issue with a popular liquid-filled toy that has led to concerns among consumers, particularly as it is sold in major retail chains like Target and Walmart. It may provide details about the nature of the defect, such as the potential for the toys to burst, and the implications for safety. Additionally, the article could include information about the company's response to the issue, including any recalls or safety measures being implemented, as well as advice for parents on what to do if they own the affected toys.",
+  "model": "gpt-4o-mini"
+}

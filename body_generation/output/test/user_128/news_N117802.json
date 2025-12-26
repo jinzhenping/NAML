@@ -1,0 +1,21 @@
+{
+  "user_id": 128,
+  "candidate_news_id": "N117802",
+  "candidate_title": "Pete Davidson, Kaia Gerber Are Dating, Trying to Stay 'Low Profile'",
+  "user_history_count": 10,
+  "user_history": [
+    "Friendly deer plays with dog",
+    "Too Cute! Baby Giraffe at Czech Zoo Makes His First Public Appearance!",
+    "Holocaust survivor under guard amid death threats",
+    "Is Miss USA Ready for Its First Woman In a Wheelchair?",
+    "Rejected duckling finds a new family member: a cat",
+    "College gymnast dies following training accident in Connecticut",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "This Rescue Cat Kept Helping His Friends Escape At Their Shelter",
+    "Panda Cub Finds Cosy Spot in Wicker Basket",
+    "Aaron Carter admitted to Florida hospital"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Friendly deer plays with dog\"\n\"Too Cute! Baby Giraffe at Czech Zoo Makes His First Public Appearance!\"\n\"Holocaust survivor under guard amid death threats\"\n\"Is Miss USA Ready for Its First Woman In a Wheelchair?\"\n\"Rejected duckling finds a new family member: a cat\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"This Rescue Cat Kept Helping His Friends Escape At Their Shelter\"\n\"Panda Cub Finds Cosy Spot in Wicker Basket\"\n\"Aaron Carter admitted to Florida hospital\"\n\n[Candidate News Title]\n\"Pete Davidson, Kaia Gerber Are Dating, Trying to Stay 'Low Profile'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article about Pete Davidson and Kaia Gerber, you can expect to read about their recent relationship developments, including their efforts to maintain a low profile amid public interest. The article is likely to provide insights into how their relationship has evolved, possibly touching on their mutual interests and any public appearances or interactions they've had. Additionally, it may explore the media's coverage of their romance and how they navigate their personal lives in the spotlight.",
+  "model": "gpt-4o-mini"
+}

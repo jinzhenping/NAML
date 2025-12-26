@@ -1,0 +1,21 @@
+{
+  "user_id": 2,
+  "candidate_news_id": "N122944",
+  "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+  "user_history_count": 10,
+  "user_history": [
+    "Bucs release former first-round pick Vernon Hargreaves",
+    "Guy Fieri's 'Chicken Guy!' chain coming to Nashville and other Tennessee cities",
+    "What this week's 5 biggest upsets mean for the NFL playoff picture",
+    "Ranking the 11 most disappointing NFL teams of 2019",
+    "This is Chick-fil-A's most-ordered menu item",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+    "17 Movie Soundtracks Every Kid from the '80s Loved",
+    "Six pretenders entering the 2019 NFL home stretch",
+    "KFC Is Selling Nashville Hot Chicken And Waffles And It's The Combo We've Been Waiting For"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bucs release former first-round pick Vernon Hargreaves\"\n\"Guy Fieri's 'Chicken Guy!' chain coming to Nashville and other Tennessee cities\"\n\"What this week's 5 biggest upsets mean for the NFL playoff picture\"\n\"Ranking the 11 most disappointing NFL teams of 2019\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\"17 Movie Soundtracks Every Kid from the '80s Loved\"\n\"Six pretenders entering the 2019 NFL home stretch\"\n\"KFC Is Selling Nashville Hot Chicken And Waffles And It's The Combo We've Been Waiting For\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find an exploration of the reasons behind McDonald's decision to keep the Filet-O-Fish on their menu, despite it being less popular than other items. The discussion may cover factors such as customer demand, regional preferences, and the historical significance of the sandwich in McDonald's offerings. Additionally, it could highlight how the Filet-O-Fish fits into broader trends in fast food, including dietary considerations and competition. Overall, the piece may provide insights into the strategic choices of the fast-food giant regarding menu diversity and consumer habits.",
+  "model": "gpt-4o-mini"
+}

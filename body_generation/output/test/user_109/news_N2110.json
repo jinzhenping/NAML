@@ -1,0 +1,21 @@
+{
+  "user_id": 109,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him",
+    "Kaitlynn Carter Recalls Falling in Love With Miley Cyrus in Candid Essay",
+    "Predicting the College Football Playoff Rankings for Week 11",
+    "Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years",
+    "Will Tua play against LSU? Nick Saban says there's 'a good chance'",
+    "Far-reaching snowstorm may take shape over US",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "Hyatt is eliminating travel-sized plastic toiletries",
+    "Bode Miller delivered his twin boys after midwife didn't make it time for the birth",
+    "Deval Patrick Will Enter 2020 Presidential Race on Thursday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him\"\n\"Kaitlynn Carter Recalls Falling in Love With Miley Cyrus in Candid Essay\"\n\"Predicting the College Football Playoff Rankings for Week 11\"\n\"Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years\"\n\"Will Tua play against LSU? Nick Saban says there's 'a good chance'\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"Hyatt is eliminating travel-sized plastic toiletries\"\n\"Bode Miller delivered his twin boys after midwife didn't make it time for the birth\"\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive,\" the user is likely to find a curated list of innovative and popular technology gifts that appeal to a wide range of interests and age groups. This may include gadgets, accessories, and smart devices that are trending or highly rated for their functionality and appeal. The article could also provide brief descriptions or features of each item, highlighting their unique qualities. Readers may expect insights into how these gifts can enhance daily life or offer entertainment value, catering to tech enthusiasts and casual users alike.",
+  "model": "gpt-4o-mini"
+}

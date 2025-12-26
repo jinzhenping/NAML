@@ -1,0 +1,21 @@
+{
+  "user_id": 107,
+  "candidate_news_id": "N38585",
+  "candidate_title": "The problem opponents now face when playing Celtics",
+  "user_history_count": 10,
+  "user_history": [
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Clippers set bad precedent resting Kawhi Leonard against Bucks",
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "Ask Mr. Dad: 'Bad dad' can't connect with kids through play",
+    "EU ambassador's miraculous 'now I remember' moment",
+    "Holocaust survivor under guard amid death threats",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Republicans urge Bevin to provide proof of election fraud or concede"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Clippers set bad precedent resting Kawhi Leonard against Bucks\"\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"Ask Mr. Dad: 'Bad dad' can't connect with kids through play\"\n\"EU ambassador's miraculous 'now I remember' moment\"\n\"Holocaust survivor under guard amid death threats\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Republicans urge Bevin to provide proof of election fraud or concede\"\n\n[Candidate News Title]\n\"The problem opponents now face when playing Celtics\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to encounter an analysis of the challenges that opponents face when playing against the Boston Celtics, particularly focusing on their strategy and player dynamics. The discussion may include insights into the Celtics’ strengths, such as their defensive capabilities and offensive plays, as well as potential weaknesses that rival teams might exploit. Additionally, the article could delve into how recent game performances or injuries are influencing opposing teams' game plans. Overall, it may provide a comprehensive overview of what makes competing against the Celtics a unique challenge for other teams.",
+  "model": "gpt-4o-mini"
+}

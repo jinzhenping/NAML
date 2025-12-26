@@ -1,0 +1,21 @@
+{
+  "user_id": 585,
+  "candidate_news_id": "N99844",
+  "candidate_title": "'Baby Trump' balloon slashed while in Tuscaloosa",
+  "user_history_count": 10,
+  "user_history": [
+    "21 Trader Joe's Products That Make Dinner Especially Easy",
+    "Bill Taylor testimony: Bolton thought Trump-Zelensky call would be 'disaster'",
+    "Pentagon leader appeals to Trump to allow military justice cases to proceed unfettered",
+    "These Are the Busiest Days for Holiday Travel This Year",
+    "'Self-Partnered' Is a Meaningless New Way to Say You're Single",
+    "Fans fume after 'Wheel of Fortune' seemingly makes mistake",
+    "Nunes Once Praised Anonymous Whistleblowers. Now He Wants Trump's Exposed.",
+    "Another Palm Beach County juror may be jailed in new contempt case",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "I Kissed Dieting Goodbye, and Finally Lost 20 Pounds. Here's Why."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"21 Trader Joe's Products That Make Dinner Especially Easy\"\n\"Bill Taylor testimony: Bolton thought Trump-Zelensky call would be 'disaster'\"\n\"Pentagon leader appeals to Trump to allow military justice cases to proceed unfettered\"\n\"These Are the Busiest Days for Holiday Travel This Year\"\n\"'Self-Partnered' Is a Meaningless New Way to Say You're Single\"\n\"Fans fume after 'Wheel of Fortune' seemingly makes mistake\"\n\"Nunes Once Praised Anonymous Whistleblowers. Now He Wants Trump's Exposed.\"\n\"Another Palm Beach County juror may be jailed in new contempt case\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"I Kissed Dieting Goodbye, and Finally Lost 20 Pounds. Here's Why.\"\n\n[Candidate News Title]\n\"'Baby Trump' balloon slashed while in Tuscaloosa\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"'Baby Trump' balloon slashed while in Tuscaloosa\" is likely to detail an incident involving the inflatable caricature of Donald Trump, which has been used in protests and demonstrations. Readers may expect to learn about the circumstances surrounding the slashing of the balloon, including who was responsible and the reactions from both supporters and opponents of the former president. The article could also explore the significance of such symbols in political discourse and public demonstrations, particularly in the context of ongoing debates about Trump's influence and legacy.",
+  "model": "gpt-4o-mini"
+}

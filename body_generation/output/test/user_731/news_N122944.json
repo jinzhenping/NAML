@@ -1,0 +1,21 @@
+{
+  "user_id": 731,
+  "candidate_news_id": "N122944",
+  "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+  "user_history_count": 10,
+  "user_history": [
+    "'Baby Trump' balloon slashed at Alabama appearance",
+    "Kaiser Permanente CEO Bernard Tyson dies at 60",
+    "Navy Submarine, Missing for 75 Years, Is Found Off Okinawa",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "Amazon's $1.5 million political gambit backfires in Seattle City Council election",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Man cuffed for eating sandwich on train platform gets an apology",
+    "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+    "American woman apparently strangled in the Dominican Republic",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Baby Trump' balloon slashed at Alabama appearance\"\n\"Kaiser Permanente CEO Bernard Tyson dies at 60\"\n\"Navy Submarine, Missing for 75 Years, Is Found Off Okinawa\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Amazon's $1.5 million political gambit backfires in Seattle City Council election\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"American woman apparently strangled in the Dominican Republic\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to explore the reasons behind McDonald's decision to maintain the Filet-O-Fish on its menu, despite fluctuating consumer preferences for other items. It is likely to discuss historical context, such as the sandwich's origins and its cultural significance, as well as marketing strategies that have influenced its continued presence. Additionally, the piece might analyze customer demographics or trends that contribute to the sandwich's enduring popularity, offering insights into the fast-food giant's menu development process.",
+  "model": "gpt-4o-mini"
+}

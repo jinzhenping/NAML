@@ -1,0 +1,21 @@
+{
+  "user_id": 910,
+  "candidate_news_id": "N102262",
+  "candidate_title": "Winter weather: AAA tips to help drivers be prepared",
+  "user_history_count": 10,
+  "user_history": [
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "NASA's Curiosity rover took an eerie photo of the Mars horizon",
+    "Two years after Ohio State Fair tragedy, Gov. DeWine to sign 'Tyler's Law'",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "What It Was Like Inside the Homes of the Pilgrims",
+    "Far-reaching snowstorm may take shape over US",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Attorney Alan Dershowitz countersues Virginia Giuffre for defamation",
+    "'Beautiful boys': Victims in Mexico ambush remembered at funerals"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"NASA's Curiosity rover took an eerie photo of the Mars horizon\"\n\"Two years after Ohio State Fair tragedy, Gov. DeWine to sign 'Tyler's Law'\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"What It Was Like Inside the Homes of the Pilgrims\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Attorney Alan Dershowitz countersues Virginia Giuffre for defamation\"\n\"'Beautiful boys': Victims in Mexico ambush remembered at funerals\"\n\n[Candidate News Title]\n\"Winter weather: AAA tips to help drivers be prepared\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Winter weather: AAA tips to help drivers be prepared,\" the user can expect to find practical advice from AAA regarding safe driving during winter conditions. This may include specific tips on how to prepare a vehicle for snow and ice, recommendations for emergency kits, and guidance on adjusting driving techniques in adverse weather. The article is likely to emphasize the importance of being proactive and informed to ensure safety on the roads during the winter months, particularly in light of recent severe weather patterns.",
+  "model": "gpt-4o-mini"
+}

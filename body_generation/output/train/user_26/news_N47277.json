@@ -1,0 +1,21 @@
+{
+  "user_id": 26,
+  "candidate_news_id": "N47277",
+  "candidate_title": "The Daily Northwestern Apologizes to Student Protesters for Reporting",
+  "user_history_count": 10,
+  "user_history": [
+    "Patriots: Weekly routine kept kicker Nick Folk fresh before call",
+    "Lessons from Bill: Patriots share best Belichick sayings",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "Pete Buttigieg Says He Does Not Respect Donald Trump: 'At a Deeper Level I Don't Think He Respects Himself'",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Attorney Alan Dershowitz countersues Virginia Giuffre for defamation",
+    "The 25 most iconic film quotes",
+    "This Sturdy Cutting Board Will Last for a Lifetime and It's On Super Sale Right Now"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Patriots: Weekly routine kept kicker Nick Folk fresh before call\"\n\"Lessons from Bill: Patriots share best Belichick sayings\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"Pete Buttigieg Says He Does Not Respect Donald Trump: 'At a Deeper Level I Don't Think He Respects Himself'\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Attorney Alan Dershowitz countersues Virginia Giuffre for defamation\"\n\"The 25 most iconic film quotes\"\n\"This Sturdy Cutting Board Will Last for a Lifetime and It's On Super Sale Right Now\"\n\n[Candidate News Title]\n\"The Daily Northwestern Apologizes to Student Protesters for Reporting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The Daily Northwestern Apologizes to Student Protesters for Reporting\" may provide an overview of the recent controversy surrounding the publication's coverage of student protests. Readers can expect a detailed account of the reasons behind the apology, including potential criticisms of the reporting methods or content. It is likely to discuss the implications of this apology on journalistic integrity and the relationship between media outlets and student organizations. Additionally, the article may explore the responses from both the publication and the protesters, shedding light on the broader context of media accountability in campus environments.",
+  "model": "gpt-4o-mini"
+}

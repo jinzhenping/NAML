@@ -1,0 +1,21 @@
+{
+  "user_id": 136,
+  "candidate_news_id": "N112536",
+  "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+  "user_history_count": 10,
+  "user_history": [
+    "Man cuffed for eating sandwich on train platform gets an apology",
+    "Steph Curry will need a second surgery, expects to return this season",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "Massive Ford F-350 Mac Truck Edition Is Ready To Menace Your Society",
+    "From Cash to Carrie: All the hosts of the CMA Awards through the years",
+    "This little Montana town is full of Power Wagons and Mustangs",
+    "Barn Find: Large Collection Of Pontiac Firebirds Uncovered",
+    "In Defense Of Left Foot-Braking During Normal Street Driving",
+    "Carroll Shelby's Grandson Talks Ford v Ferrari, Cars, and the Family Business",
+    "I went to Peter Luger after it received zero stars from New York Times"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"Steph Curry will need a second surgery, expects to return this season\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"Massive Ford F-350 Mac Truck Edition Is Ready To Menace Your Society\"\n\"From Cash to Carrie: All the hosts of the CMA Awards through the years\"\n\"This little Montana town is full of Power Wagons and Mustangs\"\n\"Barn Find: Large Collection Of Pontiac Firebirds Uncovered\"\n\"In Defense Of Left Foot-Braking During Normal Street Driving\"\n\"Carroll Shelby's Grandson Talks Ford v Ferrari, Cars, and the Family Business\"\n\"I went to Peter Luger after it received zero stars from New York Times\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"There's a place in the US where it's been over 80 degrees since March,\" you may expect to read about a specific location in the United States that has experienced unusually warm temperatures for an extended period. The article is likely to provide details about the climate patterns in that area, including any geographic or meteorological factors contributing to this warmth. Additionally, it may explore the implications of such weather on local residents, businesses, and outdoor activities. Furthermore, the article could include insights into how this prolonged heat is impacting the environment or tourism in the region.",
+  "model": "gpt-4o-mini"
+}

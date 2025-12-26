@@ -1,0 +1,21 @@
+{
+  "user_id": 749,
+  "candidate_news_id": "N92463",
+  "candidate_title": "Best Dive Bar in Every State",
+  "user_history_count": 10,
+  "user_history": [
+    "Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2",
+    "40 Fun Facts About Jennifer Aniston",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Is Miss USA Ready for Its First Woman In a Wheelchair?",
+    "Jennifer Lopez's Incredible Looks From the Latin Grammys Deserve All the Awards",
+    "6 Perfect Holiday Party Dress Ideas to Copy Through New Year's",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Is Miss USA Ready for Its First Woman In a Wheelchair?\"\n\"Jennifer Lopez's Incredible Looks From the Latin Grammys Deserve All the Awards\"\n\"6 Perfect Holiday Party Dress Ideas to Copy Through New Year's\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids\"\n\n[Candidate News Title]\n\"Best Dive Bar in Every State\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Best Dive Bar in Every State\" is likely to provide an overview of popular dive bars across the United States, highlighting unique characteristics that make each bar noteworthy. Readers may expect descriptions of the ambiance, notable drink offerings, and perhaps some history or local significance of these establishments. The article could also include recommendations based on various themes, such as affordability or local culture. Additionally, it may offer insights into why dive bars continue to be cherished social hubs for communities.",
+  "model": "gpt-4o-mini"
+}

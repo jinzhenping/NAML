@@ -1,0 +1,21 @@
+{
+  "user_id": 891,
+  "candidate_news_id": "N116064",
+  "candidate_title": "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+  "user_history_count": 10,
+  "user_history": [
+    "In manufacturing Midwest, signs of trouble amid good times",
+    "Sanitation Worker Stops His Rounds to Bring in Trash Bin for Woman With Dementia",
+    "This Is What Queen Elizabeth Is Doing About the Prince William-Prince Harry Feud",
+    "Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!",
+    "1-ton boulder known as 'Wizard Rock' that disappeared from forest 'magically' returns",
+    "Massive Barn Find Collection Of 135 Vintage Vehicles Auctioned Off",
+    "American Airlines cabin crew fear return of Boeing 737 Max",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Suspect named in connection with killings of N.H. couple in Texas",
+    "China says have agreed with US to cancel tariffs in different phases"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"In manufacturing Midwest, signs of trouble amid good times\"\n\"Sanitation Worker Stops His Rounds to Bring in Trash Bin for Woman With Dementia\"\n\"This Is What Queen Elizabeth Is Doing About the Prince William-Prince Harry Feud\"\n\"Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!\"\n\"1-ton boulder known as 'Wizard Rock' that disappeared from forest 'magically' returns\"\n\"Massive Barn Find Collection Of 135 Vintage Vehicles Auctioned Off\"\n\"American Airlines cabin crew fear return of Boeing 737 Max\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Suspect named in connection with killings of N.H. couple in Texas\"\n\"China says have agreed with US to cancel tariffs in different phases\"\n\n[Candidate News Title]\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find an exploration of Ree Drummond's approach to weight loss through a low-carb diet. It may detail the principles behind this dietary choice, including potential benefits and challenges associated with reducing carbohydrate intake. The article could also provide insights into her personal journey, possibly highlighting specific meals, recipes, or lifestyle changes that contributed to her success. Additionally, readers might find tips or recommendations that align with Drummond's experiences, offering practical advice for those interested in similar dietary adjustments.",
+  "model": "gpt-4o-mini"
+}

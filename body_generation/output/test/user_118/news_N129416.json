@@ -1,0 +1,21 @@
+{
+  "user_id": 118,
+  "candidate_news_id": "N129416",
+  "candidate_title": "Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties",
+  "user_history_count": 10,
+  "user_history": [
+    "Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you",
+    "Brain scans don't lie: The minds of girls and boys are equal in math",
+    "Must-See Fashion Police Moments to Swoon Over This Week",
+    "Jon Gruden, Raiders take victory lap as they've left Antonio Brown mistake in dust",
+    "4 takeaways from the Seahawks' wild, overtime win over the 49ers",
+    "Dean Foods files for bankruptcy",
+    "The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers",
+    "Kyle Shanahan blasts 49ers WRs over dropped passes",
+    "4 reasons you shouldn't max out your 401(k)",
+    "'This win was for you': Josh Gordon shares emotional post about death of his brother"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you\"\n\"Brain scans don't lie: The minds of girls and boys are equal in math\"\n\"Must-See Fashion Police Moments to Swoon Over This Week\"\n\"Jon Gruden, Raiders take victory lap as they've left Antonio Brown mistake in dust\"\n\"4 takeaways from the Seahawks' wild, overtime win over the 49ers\"\n\"Dean Foods files for bankruptcy\"\n\"The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers\"\n\"Kyle Shanahan blasts 49ers WRs over dropped passes\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"'This win was for you': Josh Gordon shares emotional post about death of his brother\"\n\n[Candidate News Title]\n\"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Taylor Swift's representative responding to Big Machine is likely to detail the ongoing dispute over unpaid royalties, specifically the claim that Swift is owed $7.9 million. It may explore the background of her relationship with Big Machine, including the implications of her past contract and the recent developments in her music rights. Additionally, the article could provide insights into how this situation reflects broader issues in the music industry regarding artist compensation and rights management. Overall, readers can expect a focused examination of the legal and financial aspects of this high-profile case.",
+  "model": "gpt-4o-mini"
+}

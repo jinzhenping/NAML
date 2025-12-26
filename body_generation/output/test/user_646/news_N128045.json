@@ -1,0 +1,21 @@
+{
+  "user_id": 646,
+  "candidate_news_id": "N128045",
+  "candidate_title": "How to Watch the Leonid Meteor Shower This Weekend",
+  "user_history_count": 10,
+  "user_history": [
+    "Actress Accuses Roman Polanski of Raping Her in 1975",
+    "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+    "Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage",
+    "I'm 55 and have no retirement savings: What should I do?",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "Deval Patrick Will Enter 2020 Presidential Race on Thursday",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win",
+    "Can you answer these real Jeopardy questions about TV shows?",
+    "Celebrity beach cruising for 2019",
+    "WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Actress Accuses Roman Polanski of Raping Her in 1975\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage\"\n\"I'm 55 and have no retirement savings: What should I do?\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\"Can you answer these real Jeopardy questions about TV shows?\"\n\"Celebrity beach cruising for 2019\"\n\"WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist\"\n\n[Candidate News Title]\n\"How to Watch the Leonid Meteor Shower This Weekend\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"How to Watch the Leonid Meteor Shower This Weekend,\" you are likely expecting a comprehensive guide on viewing this celestial event. The article may provide details on the optimal time and location for viewing, as well as tips for maximizing your experience, such as minimizing light pollution and finding a clear sky. It could also include background information about the Leonid Meteor Shower, such as its peak activity and historical significance, along with any relevant viewing conditions or forecasts for the weekend.",
+  "model": "gpt-4o-mini"
+}

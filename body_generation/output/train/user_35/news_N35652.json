@@ -1,0 +1,17 @@
+{
+  "user_id": 35,
+  "candidate_news_id": "N35652",
+  "candidate_title": "Bolivia's Jeanine Anez declares herself acting president as Evo Morales vows to fight from abroad",
+  "user_history_count": 6,
+  "user_history": [
+    "5 NBA stars who could get traded this season (plus one who probably won't)",
+    "Potential trade targets for all 32 NFL teams at the 2019 deadline, from A.J. Green to Trent Williams",
+    "10 players receive qualifying offers",
+    "The HoopsHype Daily: Cavs GM shoots down Kevin Love trade rumors",
+    "Antonio Brown meeting with NFL next week",
+    "5 bold predictions for MLB's offseason"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"5 NBA stars who could get traded this season (plus one who probably won't)\"\n\"Potential trade targets for all 32 NFL teams at the 2019 deadline, from A.J. Green to Trent Williams\"\n\"10 players receive qualifying offers\"\n\"The HoopsHype Daily: Cavs GM shoots down Kevin Love trade rumors\"\n\"Antonio Brown meeting with NFL next week\"\n\"5 bold predictions for MLB's offseason\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Bolivia's Jeanine Anez declares herself acting president as Evo Morales vows to fight from abroad\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the political situation in Bolivia, focusing on Jeanine Anez's declaration as acting president following Evo Morales's departure from the country. Readers may expect an overview of the context surrounding this transition, including the reasons behind Morales's exit and the implications for Bolivia's governance. Additionally, it could explore reactions from various political factions and the international community. The article may also touch on potential challenges Anez could face in maintaining stability and legitimacy during her interim leadership.",
+  "model": "gpt-4o-mini"
+}

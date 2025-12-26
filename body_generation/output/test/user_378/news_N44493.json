@@ -1,0 +1,21 @@
+{
+  "user_id": 378,
+  "candidate_news_id": "N44493",
+  "candidate_title": "How Google Interferes With Its Search Algorithms and Changes Your Results",
+  "user_history_count": 10,
+  "user_history": [
+    "Butternut Squash + Bacon = Fall's Favorite Riff on Macaroni & Cheese",
+    "The best & worst states for US veterans",
+    "8-year-old girl lands record trout, gives it cute name",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Snow crab sells for record price in Japan",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "Three school workers charged in death of special needs student",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "Celebrity plastic surgery transformations"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Butternut Squash + Bacon = Fall's Favorite Riff on Macaroni & Cheese\"\n\"The best & worst states for US veterans\"\n\"8-year-old girl lands record trout, gives it cute name\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Snow crab sells for record price in Japan\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"Three school workers charged in death of special needs student\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"Celebrity plastic surgery transformations\"\n\n[Candidate News Title]\n\"How Google Interferes With Its Search Algorithms and Changes Your Results\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"How Google Interferes With Its Search Algorithms and Changes Your Results,\" you can expect a detailed examination of Google's search algorithms and the potential influences on the information presented in search results. The article may discuss various factors that affect search rankings, including algorithm updates, user behavior, and external pressures. It is likely to explore how these elements shape the visibility of content and the implications for users seeking accurate information, particularly in the context of recent discussions around transparency and bias in search engines.",
+  "model": "gpt-4o-mini"
+}

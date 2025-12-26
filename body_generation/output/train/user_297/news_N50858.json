@@ -1,0 +1,17 @@
+{
+  "user_id": 297,
+  "candidate_news_id": "N50858",
+  "candidate_title": "Long-term celebrity couples who won't get married",
+  "user_history_count": 6,
+  "user_history": [
+    "23 Cars With the Coolest Retro Designs",
+    "How I Got Lung Cancer at 31 Without Ever Smoking a Single Cigarette",
+    "This is Why Your Dog Follows You to the Bathroom",
+    "Anthony Mackie and wife quietly divorced last year: Report",
+    "AT&T fined $60 million for throttling 'unlimited' data plans",
+    "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"23 Cars With the Coolest Retro Designs\"\n\"How I Got Lung Cancer at 31 Without Ever Smoking a Single Cigarette\"\n\"This is Why Your Dog Follows You to the Bathroom\"\n\"Anthony Mackie and wife quietly divorced last year: Report\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Long-term celebrity couples who won't get married\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Long-term celebrity couples who won't get married,\" the user may expect an exploration of various high-profile relationships in Hollywood where couples have chosen to remain unmarried despite being together for an extended period. The piece is likely to highlight specific couples, discussing their reasons for avoiding marriage, which could include personal beliefs, financial considerations, or a desire for independence. Additionally, it may touch on societal perceptions of marriage and how these couples navigate their commitments without formalizing them through legal means.",
+  "model": "gpt-4o-mini"
+}

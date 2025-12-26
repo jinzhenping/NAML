@@ -1,0 +1,21 @@
+{
+  "user_id": 862,
+  "candidate_news_id": "N119999",
+  "candidate_title": "I've been writing about tiny homes for a year and finally spent 2 nights in a 300-foot home to see what it's all about   here's how it went",
+  "user_history_count": 10,
+  "user_history": [
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Must-See Fashion Police Moments to Swoon Over This Week",
+    "Mother Is Freed After 15 Years in Prison for Father's Abuse",
+    "Snow crab sells for record price in Japan",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Kristen Stewart Just Made Leather Bras a Thing, and We're All For It",
+    "'One in a million' deer captured on camera in Michigan woods"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Must-See Fashion Police Moments to Swoon Over This Week\"\n\"Mother Is Freed After 15 Years in Prison for Father's Abuse\"\n\"Snow crab sells for record price in Japan\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Kristen Stewart Just Made Leather Bras a Thing, and We're All For It\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n[Candidate News Title]\n\"I've been writing about tiny homes for a year and finally spent 2 nights in a 300-foot home to see what it's all about   here's how it went\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about spending two nights in a 300-foot tiny home, the user can likely expect a detailed account of the experience, highlighting both the advantages and challenges of living in such a compact space. The piece may cover practical aspects like the layout, amenities, and how the limited square footage affects daily activities. Additionally, it could provide insights into the lifestyle choices associated with tiny homes, including sustainability and minimalism. Overall, the article is likely to offer a balanced perspective on the tiny home trend, while reflecting on the author's personal observations and reflections during the stay.",
+  "model": "gpt-4o-mini"
+}

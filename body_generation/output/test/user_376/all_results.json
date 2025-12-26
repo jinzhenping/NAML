@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 376,
+    "candidate_news_id": "N87192",
+    "candidate_title": "Bill Gates tops Jeff Bezos as world's richest person with Amazon slide",
+    "user_history_count": 10,
+    "user_history": [
+      "Former US Senator Kay Hagan dead at 66",
+      "Qantas grounds Boeing 737 plane with crack, inspects others",
+      "Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease",
+      "2 Murder suspects escape from Monterey County, California, Jail",
+      "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+      "Does Sleeping Poorly Increase Cancer Risk?",
+      "Celebrity plastic surgery transformations",
+      "Fox legal analyst Napolitano emerges as Trump critic",
+      "AP sources: Deval Patrick mulling Democratic White House run",
+      "Judge agrees Alabama Islamic State recruit is not US citizen"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former US Senator Kay Hagan dead at 66\"\n\"Qantas grounds Boeing 737 plane with crack, inspects others\"\n\"Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease\"\n\"2 Murder suspects escape from Monterey County, California, Jail\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Does Sleeping Poorly Increase Cancer Risk?\"\n\"Celebrity plastic surgery transformations\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"AP sources: Deval Patrick mulling Democratic White House run\"\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n[Candidate News Title]\n\"Bill Gates tops Jeff Bezos as world's richest person with Amazon slide\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss the recent shift in the rankings of the world's richest individuals, highlighting how Bill Gates has overtaken Jeff Bezos amid fluctuations in Amazon's stock value. It may provide insights into the factors contributing to this change, such as market trends or investment strategies. Additionally, the article could explore the implications of this shift on the tech industry and philanthropy, particularly considering Gates' ongoing charitable initiatives. Overall, readers can expect a detailed analysis of wealth dynamics in the current economic landscape.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 376,
+    "candidate_news_id": "N114517",
+    "candidate_title": "MLB GM wants Jeff Luhnow 'banned for life' if he knew of Astros' sign-stealing",
+    "user_history_count": 10,
+    "user_history": [
+      "Former US Senator Kay Hagan dead at 66",
+      "Qantas grounds Boeing 737 plane with crack, inspects others",
+      "Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease",
+      "2 Murder suspects escape from Monterey County, California, Jail",
+      "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+      "Does Sleeping Poorly Increase Cancer Risk?",
+      "Celebrity plastic surgery transformations",
+      "Fox legal analyst Napolitano emerges as Trump critic",
+      "AP sources: Deval Patrick mulling Democratic White House run",
+      "Judge agrees Alabama Islamic State recruit is not US citizen"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former US Senator Kay Hagan dead at 66\"\n\"Qantas grounds Boeing 737 plane with crack, inspects others\"\n\"Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease\"\n\"2 Murder suspects escape from Monterey County, California, Jail\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Does Sleeping Poorly Increase Cancer Risk?\"\n\"Celebrity plastic surgery transformations\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"AP sources: Deval Patrick mulling Democratic White House run\"\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n[Candidate News Title]\n\"MLB GM wants Jeff Luhnow 'banned for life' if he knew of Astros' sign-stealing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you choose to click on the article titled \"MLB GM wants Jeff Luhnow 'banned for life' if he knew of Astros' sign-stealing,\" you may expect to read about the ongoing repercussions of the Astros' sign-stealing scandal, particularly focusing on the comments made by a Major League Baseball general manager regarding Jeff Luhnow, the former Astros executive. The article is likely to explore the implications of these statements for Luhnow's future in baseball and the broader context of accountability within the sport. It may also touch upon the league's efforts to address integrity issues and prevent similar incidents in the future.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 376,
+    "candidate_news_id": "N31918",
+    "candidate_title": "Oscar Wilde's stolen ring found by Dutch 'art detective'",
+    "user_history_count": 10,
+    "user_history": [
+      "Former US Senator Kay Hagan dead at 66",
+      "Qantas grounds Boeing 737 plane with crack, inspects others",
+      "Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease",
+      "2 Murder suspects escape from Monterey County, California, Jail",
+      "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+      "Does Sleeping Poorly Increase Cancer Risk?",
+      "Celebrity plastic surgery transformations",
+      "Fox legal analyst Napolitano emerges as Trump critic",
+      "AP sources: Deval Patrick mulling Democratic White House run",
+      "Judge agrees Alabama Islamic State recruit is not US citizen"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former US Senator Kay Hagan dead at 66\"\n\"Qantas grounds Boeing 737 plane with crack, inspects others\"\n\"Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease\"\n\"2 Murder suspects escape from Monterey County, California, Jail\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Does Sleeping Poorly Increase Cancer Risk?\"\n\"Celebrity plastic surgery transformations\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"AP sources: Deval Patrick mulling Democratic White House run\"\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n[Candidate News Title]\n\"Oscar Wilde's stolen ring found by Dutch 'art detective'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article about Oscar Wilde's stolen ring being found by a Dutch 'art detective' is likely to explore the circumstances surrounding the ring's theft and its recent recovery. Readers may expect insights into the historical significance of the ring, including its connection to Wilde's life and work. The piece could detail the detective's methods in locating the artifact and any challenges faced during the investigation. Additionally, it may touch on broader themes of art and cultural heritage preservation, as well as the implications of recovering stolen items.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 376,
+    "candidate_news_id": "N25038",
+    "candidate_title": "Parole rejected for Charles Manson follower after 50 years",
+    "user_history_count": 10,
+    "user_history": [
+      "Former US Senator Kay Hagan dead at 66",
+      "Qantas grounds Boeing 737 plane with crack, inspects others",
+      "Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease",
+      "2 Murder suspects escape from Monterey County, California, Jail",
+      "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+      "Does Sleeping Poorly Increase Cancer Risk?",
+      "Celebrity plastic surgery transformations",
+      "Fox legal analyst Napolitano emerges as Trump critic",
+      "AP sources: Deval Patrick mulling Democratic White House run",
+      "Judge agrees Alabama Islamic State recruit is not US citizen"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former US Senator Kay Hagan dead at 66\"\n\"Qantas grounds Boeing 737 plane with crack, inspects others\"\n\"Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease\"\n\"2 Murder suspects escape from Monterey County, California, Jail\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Does Sleeping Poorly Increase Cancer Risk?\"\n\"Celebrity plastic surgery transformations\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"AP sources: Deval Patrick mulling Democratic White House run\"\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n[Candidate News Title]\n\"Parole rejected for Charles Manson follower after 50 years\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article on the parole rejection for a Charles Manson follower likely discusses the decision made by the parole board after reviewing the individual's case, which has been under scrutiny for decades. It may detail the reasons for the rejection, including considerations of the crimes committed and the individual's behavior during incarceration. Additionally, the piece could provide context about the historical significance of Manson's cult and the ongoing societal implications of parole for notorious criminals. This coverage is likely to explore the legal and ethical debates surrounding parole decisions for high-profile offenders.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 376,
+    "candidate_news_id": "N65373",
+    "candidate_title": "New Jersey football game: 5 men are arrested; 3 people hurt",
+    "user_history_count": 10,
+    "user_history": [
+      "Former US Senator Kay Hagan dead at 66",
+      "Qantas grounds Boeing 737 plane with crack, inspects others",
+      "Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease",
+      "2 Murder suspects escape from Monterey County, California, Jail",
+      "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+      "Does Sleeping Poorly Increase Cancer Risk?",
+      "Celebrity plastic surgery transformations",
+      "Fox legal analyst Napolitano emerges as Trump critic",
+      "AP sources: Deval Patrick mulling Democratic White House run",
+      "Judge agrees Alabama Islamic State recruit is not US citizen"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former US Senator Kay Hagan dead at 66\"\n\"Qantas grounds Boeing 737 plane with crack, inspects others\"\n\"Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease\"\n\"2 Murder suspects escape from Monterey County, California, Jail\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Does Sleeping Poorly Increase Cancer Risk?\"\n\"Celebrity plastic surgery transformations\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"AP sources: Deval Patrick mulling Democratic White House run\"\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n[Candidate News Title]\n\"New Jersey football game: 5 men are arrested; 3 people hurt\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses a recent incident at a New Jersey football game, where five individuals were arrested and three people were injured. It may provide details about the circumstances surrounding the arrests, including potential altercations or other events leading to the injuries. The report could also explore the broader implications of such incidents on community safety and the management of public events. Additionally, it is likely to touch on any ongoing investigations or statements from law enforcement regarding the situation.",
+    "model": "gpt-4o-mini"
+  }
+]

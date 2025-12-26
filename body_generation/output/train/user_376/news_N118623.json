@@ -1,0 +1,21 @@
+{
+  "user_id": 376,
+  "candidate_news_id": "N118623",
+  "candidate_title": "Nor'easter to grind at US East Coast this weekend",
+  "user_history_count": 10,
+  "user_history": [
+    "Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight",
+    "Charles Barkley: 'At this point, Kawhi's a better player than LeBron'",
+    "Jeff Bezos lost about $7 billion on Thursday",
+    "Microsoft Wins Pentagon's $10 Billion JEDI Contract, Thwarting Amazon",
+    "Astros bounce back to take Game 3 vs. Nationals",
+    "Former US Senator Kay Hagan dead at 66",
+    "Qantas grounds Boeing 737 plane with crack, inspects others",
+    "Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease",
+    "2 Murder suspects escape from Monterey County, California, Jail",
+    "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight\"\n\"Charles Barkley: 'At this point, Kawhi's a better player than LeBron'\"\n\"Jeff Bezos lost about $7 billion on Thursday\"\n\"Microsoft Wins Pentagon's $10 Billion JEDI Contract, Thwarting Amazon\"\n\"Astros bounce back to take Game 3 vs. Nationals\"\n\"Former US Senator Kay Hagan dead at 66\"\n\"Qantas grounds Boeing 737 plane with crack, inspects others\"\n\"Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease\"\n\"2 Murder suspects escape from Monterey County, California, Jail\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\n[Candidate News Title]\n\"Nor'easter to grind at US East Coast this weekend\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Nor'easter to grind at US East Coast this weekend\" is likely to provide an overview of an impending nor'easter forecasted to impact the eastern United States. Readers can expect details about the weather patterns associated with the storm, including anticipated wind speeds, precipitation levels, and potential disruptions to travel and daily activities. The article may also discuss how this weather event could affect specific regions, highlighting any warnings or advisories issued by meteorological services. Overall, it aims to inform readers about the storm's progression and safety precautions to consider.",
+  "model": "gpt-4o-mini"
+}

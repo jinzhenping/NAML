@@ -1,0 +1,21 @@
+{
+  "user_id": 154,
+  "candidate_news_id": "N119637",
+  "candidate_title": "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out",
+  "user_history_count": 10,
+  "user_history": [
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "President Jimmy Carter says he's 'at peace' with death during church service",
+    "Flood of Oil Is Coming, Complicating Efforts to Fight Global Warming",
+    "Celebs turning 60 in 2019",
+    "50 Weird but Wonderful Facts That Will Leave You Totally Amazed",
+    "Stars turning 70 in 2019",
+    "Iran downs drone over southern port city - IRNA",
+    "Report: Stephen A. Smith strikes massive new deal with ESPN"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"President Jimmy Carter says he's 'at peace' with death during church service\"\n\"Flood of Oil Is Coming, Complicating Efforts to Fight Global Warming\"\n\"Celebs turning 60 in 2019\"\n\"50 Weird but Wonderful Facts That Will Leave You Totally Amazed\"\n\"Stars turning 70 in 2019\"\n\"Iran downs drone over southern port city - IRNA\"\n\"Report: Stephen A. Smith strikes massive new deal with ESPN\"\n\n[Candidate News Title]\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely expecting to read about Halle Berry's recent social media post featuring a photo of her impressive six-pack abs. The piece may delve into her fitness journey, discussing the routines or lifestyle choices that have contributed to her physical condition. Additionally, it could explore the public's reaction to her post, highlighting comments from fans and how it reflects current trends in celebrity fitness and body image. Overall, the article is expected to provide insights into both Berry's personal achievements and broader discussions around health and wellness in the spotlight.",
+  "model": "gpt-4o-mini"
+}

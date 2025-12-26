@@ -1,0 +1,21 @@
+{
+  "user_id": 29,
+  "candidate_news_id": "N38678",
+  "candidate_title": "Seattle Sounders 3, Toronto FC 1: Takeaways from MLS Cup",
+  "user_history_count": 10,
+  "user_history": [
+    "Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion",
+    "Collector's items that are actually worthless today",
+    "Walmart's Pre-Holiday Deals Are Live Right Now",
+    "The Best Way to Reheat Steak So It's as Savory as Night One",
+    "SCOTUS copyright case has pirate Blackbeard laughing from grave",
+    "An energy breakthrough could store solar power for decades",
+    "The Amazing All-You-Can-Eat Restaurant in Every State",
+    "Week 10 NFL mismatches: Why Jets, Bengals, Packers must be wary",
+    "Chevrolet Performance Reveals New Small Block Crate Engine",
+    "5 struggling teams that can still make NFL playoffs"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion\"\n\"Collector's items that are actually worthless today\"\n\"Walmart's Pre-Holiday Deals Are Live Right Now\"\n\"The Best Way to Reheat Steak So It's as Savory as Night One\"\n\"SCOTUS copyright case has pirate Blackbeard laughing from grave\"\n\"An energy breakthrough could store solar power for decades\"\n\"The Amazing All-You-Can-Eat Restaurant in Every State\"\n\"Week 10 NFL mismatches: Why Jets, Bengals, Packers must be wary\"\n\"Chevrolet Performance Reveals New Small Block Crate Engine\"\n\"5 struggling teams that can still make NFL playoffs\"\n\n[Candidate News Title]\n\"Seattle Sounders 3, Toronto FC 1: Takeaways from MLS Cup\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Seattle Sounders 3, Toronto FC 1: Takeaways from MLS Cup,\" the user can expect a detailed analysis of the recent match outcome, highlighting key moments, player performances, and strategic decisions made by both teams. The piece is likely to summarize the implications of this result for the Seattle Sounders in the context of their season and potential playoff prospects. Additionally, it may delve into fan reactions and the overall atmosphere during the match, providing a comprehensive overview of the event's significance in the MLS landscape.",
+  "model": "gpt-4o-mini"
+}

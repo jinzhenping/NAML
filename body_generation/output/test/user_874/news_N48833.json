@@ -1,0 +1,21 @@
+{
+  "user_id": 874,
+  "candidate_news_id": "N48833",
+  "candidate_title": "85 Thanksgiving Recipes You Can Make Ahead",
+  "user_history_count": 10,
+  "user_history": [
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis",
+    "More than 130,000 pounds of ground beef recalled for possible plastic contamination",
+    "These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "Redskins name rookie Dwayne Haskins starter for rest of season",
+    "FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says",
+    "I went to Peter Luger after it received zero stars from New York Times",
+    "The best burger and fries joint in your state",
+    "The Bakery Behind Doubletree's Famous Chocolate Chip Cookie Bakes More Than 100 Million Cookies A Year",
+    "The Bakery Behind Doubletree's Famous Chocolate Chip Cookie Bakes More Than 100 Million Cookies A Year"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\"More than 130,000 pounds of ground beef recalled for possible plastic contamination\"\n\"These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Redskins name rookie Dwayne Haskins starter for rest of season\"\n\"FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says\"\n\"I went to Peter Luger after it received zero stars from New York Times\"\n\"The best burger and fries joint in your state\"\n\"The Bakery Behind Doubletree's Famous Chocolate Chip Cookie Bakes More Than 100 Million Cookies A Year\"\n\"The Bakery Behind Doubletree's Famous Chocolate Chip Cookie Bakes More Than 100 Million Cookies A Year\"\n\n[Candidate News Title]\n\"85 Thanksgiving Recipes You Can Make Ahead\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"85 Thanksgiving Recipes You Can Make Ahead,\" the user can expect a curated collection of recipes that are designed to simplify Thanksgiving meal preparation. The article is likely to feature a variety of dishes suitable for different tastes, including appetizers, main courses, and desserts that can be prepared in advance. It may provide practical tips on how to store these dishes and suggestions for efficient meal planning. Additionally, the article could offer insights into time-saving techniques that home cooks might find helpful during the busy holiday season.",
+  "model": "gpt-4o-mini"
+}

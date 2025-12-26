@@ -1,0 +1,20 @@
+{
+  "user_id": 164,
+  "candidate_news_id": "N107637",
+  "candidate_title": "Russell Wilson vs. 49ers' No. 1 defense: Monday night's prime-time matchup",
+  "user_history_count": 9,
+  "user_history": [
+    "'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says",
+    "Shaquille O'Neal donates home to family of Atlanta boy paralyzed in shooting",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "Kanye West, with debt piling up, thanks God for $68 million tax refund",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Two teenage girls missing from Kansas City, Missouri",
+    "Far-reaching snowstorm may take shape over US",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says\"\n\"Shaquille O'Neal donates home to family of Atlanta boy paralyzed in shooting\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"Kanye West, with debt piling up, thanks God for $68 million tax refund\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Two teenage girls missing from Kansas City, Missouri\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"\"\n\n[Candidate News Title]\n\"Russell Wilson vs. 49ers' No. 1 defense: Monday night's prime-time matchup\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Russell Wilson facing off against the 49ers' top defense, the user can expect an analysis of the upcoming prime-time matchup, highlighting key statistics and player performances. The piece may delve into Wilson's recent form and strategies he might employ to counter the formidable 49ers defense, which has been performing well throughout the season. Additionally, there could be insights into how the game impacts playoff standings and the significance of this rivalry. Overall, the article is likely to provide a comprehensive overview of what fans can anticipate in this highly anticipated game.",
+  "model": "gpt-4o-mini"
+}

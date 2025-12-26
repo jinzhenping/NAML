@@ -1,0 +1,21 @@
+{
+  "user_id": 111,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 10,
+  "user_history": [
+    "6 Common Myths About the Flu Shot, Debunked",
+    "This Man Is Behind Every Single Antique You See In Cracker Barrel Stores",
+    "Nolan Ryan leaves advisory role, won't return as Astros shuffle front office",
+    "Walmart Is Starting Black Friday Early This Year With Deals On Instant Pots, Air Fryers, And More",
+    "You can't get the flu from the flu shot, but there are side effects",
+    "John Travolta Shares Rare Photo of Son Ben, 8, in Plane Cockpit: He's 'Taking My Place!'",
+    "Please Don't Yell at Your Dog!",
+    "7 Signs & Symptoms of Kidney Stones You Need to Know",
+    "American Outdoor to split into two firms, separating its gun business",
+    "Can You Reverse Type 2 Diabetes?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"6 Common Myths About the Flu Shot, Debunked\"\n\"This Man Is Behind Every Single Antique You See In Cracker Barrel Stores\"\n\"Nolan Ryan leaves advisory role, won't return as Astros shuffle front office\"\n\"Walmart Is Starting Black Friday Early This Year With Deals On Instant Pots, Air Fryers, And More\"\n\"You can't get the flu from the flu shot, but there are side effects\"\n\"John Travolta Shares Rare Photo of Son Ben, 8, in Plane Cockpit: He's 'Taking My Place!'\"\n\"Please Don't Yell at Your Dog!\"\n\"7 Signs & Symptoms of Kidney Stones You Need to Know\"\n\"American Outdoor to split into two firms, separating its gun business\"\n\"Can You Reverse Type 2 Diabetes?\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about Colin Kaepernick's potential return to professional football, which may revolve around his long-standing advocacy for social justice and the implications of his previous protests during the national anthem. The discussion could include insights into Kaepernick's readiness to return to the game, the reactions from NFL teams, and the broader cultural context surrounding his career. Additionally, it may explore how his re-entry could impact both his personal legacy and the NFL's public image. Overall, the piece is likely to present a thorough examination of Kaepernick's situation and its significance within the sports landscape.",
+  "model": "gpt-4o-mini"
+}

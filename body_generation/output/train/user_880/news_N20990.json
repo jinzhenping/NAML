@@ -1,0 +1,21 @@
+{
+  "user_id": 880,
+  "candidate_news_id": "N20990",
+  "candidate_title": "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+  "user_history_count": 10,
+  "user_history": [
+    "Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard",
+    "Stocks close higher after Fed signals pause on rate cuts",
+    "Russia-backed Syria constitution talks begin in Geneva",
+    "Daylight saving time is ending this weekend. These states want to make DST permanent",
+    "Get a Peek At What Home Trends Are for 2020",
+    "Your home may not be a mansion. But you might still have to pay a 'mansion' tax",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Most people would rather live in a haunted house than near a highway, survey says",
+    "The world's cutest homes are beyond beautiful",
+    "10 Best Home Renovations to Squeeze in Before Winter"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard\"\n\"Stocks close higher after Fed signals pause on rate cuts\"\n\"Russia-backed Syria constitution talks begin in Geneva\"\n\"Daylight saving time is ending this weekend. These states want to make DST permanent\"\n\"Get a Peek At What Home Trends Are for 2020\"\n\"Your home may not be a mansion. But you might still have to pay a 'mansion' tax\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Most people would rather live in a haunted house than near a highway, survey says\"\n\"The world's cutest homes are beyond beautiful\"\n\"10 Best Home Renovations to Squeeze in Before Winter\"\n\n[Candidate News Title]\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses recent restrictions imposed on the son of a Chinese billionaire, outlining the specific limitations on his lifestyle, such as being banned from flying first class, playing golf, purchasing property, or attending nightclubs. It may provide context regarding the reasons behind these restrictions, potentially linking them to broader social or legal issues in China. The piece could also explore the implications of such bans on the individual’s status and public perception, offering insights into the life of the wealthy under regulatory scrutiny.",
+  "model": "gpt-4o-mini"
+}

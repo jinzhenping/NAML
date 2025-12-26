@@ -1,0 +1,21 @@
+{
+  "user_id": 923,
+  "candidate_news_id": "N14848",
+  "candidate_title": "Mural of activist Greta Thunberg going up in San Francisco",
+  "user_history_count": 10,
+  "user_history": [
+    "Latest Australia shark attack sparks tourism concerns",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Mixed martial arts star McGregor convicted of assault, fined 1,000 euro",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Faith Hill's ultimatum made Tim McGraw get healthy",
+    "Faith Hill's ultimatum made Tim McGraw get healthy",
+    "Phoenix dad pleads to manslaughter after claiming to protect daughter at gas station"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Latest Australia shark attack sparks tourism concerns\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Mixed martial arts star McGregor convicted of assault, fined 1,000 euro\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Faith Hill's ultimatum made Tim McGraw get healthy\"\n\"Faith Hill's ultimatum made Tim McGraw get healthy\"\n\"Phoenix dad pleads to manslaughter after claiming to protect daughter at gas station\"\n\n[Candidate News Title]\n\"Mural of activist Greta Thunberg going up in San Francisco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the mural of activist Greta Thunberg going up in San Francisco is likely to discuss the significance of the mural in relation to environmental activism and its impact on public awareness. It may provide details about the location of the mural, the artist behind it, and the community's response to this initiative. Additionally, the piece might explore Thunberg's influence on climate change discussions, including her key messages and activism efforts. The article could also touch on the broader context of art as a medium for social change, although this is uncertain.",
+  "model": "gpt-4o-mini"
+}

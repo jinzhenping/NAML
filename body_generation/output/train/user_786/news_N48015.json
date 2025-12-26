@@ -1,0 +1,21 @@
+{
+  "user_id": 786,
+  "candidate_news_id": "N48015",
+  "candidate_title": "Abandoned 'unicorn' puppy has a tail on its head",
+  "user_history_count": 10,
+  "user_history": [
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "The Latest: Kansas City to remove King's name from street",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Antonio Brown meeting with NFL next week",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint",
+    "Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Antonio Brown meeting with NFL next week\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint\"\n\"Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the abandoned \"unicorn\" puppy is likely to provide an overview of the circumstances surrounding the puppy's unusual appearance and the situation leading to its abandonment. Readers may expect to learn about the puppy's distinctive features, such as the tail on its head, which may be a result of a genetic condition. Additionally, the piece could discuss the efforts being made by animal shelters or rescue organizations to care for the puppy and find it a new home. Overall, the article is likely to focus on the unique aspects of the puppy's story while highlighting broader themes related to animal welfare and rescue.",
+  "model": "gpt-4o-mini"
+}

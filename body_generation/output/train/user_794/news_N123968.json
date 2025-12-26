@@ -1,0 +1,21 @@
+{
+  "user_id": 794,
+  "candidate_news_id": "N123968",
+  "candidate_title": "Ford v Ferrari: the real story",
+  "user_history_count": 10,
+  "user_history": [
+    "Retired doctor, 67, gives birth in China after getting 'pregnant naturally'",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Kylie Jenner Throws Dinner for Caitlyn Jenner's 70th Birthday   See Which Kardashians Attended",
+    "US Fed cuts interest rates, signals it is on hold",
+    "Meghan Markle Personally Calls British Politician to Thank Her for Orchestrating Letter of 'Solidarity'",
+    "The One Thing Kourtney Kardashian Drinks Every Morning for Younger-Looking Skin",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "Meghan Markle Says She Doesn't Want People to Love Her, She Wants Them to Hear Her",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Retired doctor, 67, gives birth in China after getting 'pregnant naturally'\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Kylie Jenner Throws Dinner for Caitlyn Jenner's 70th Birthday   See Which Kardashians Attended\"\n\"US Fed cuts interest rates, signals it is on hold\"\n\"Meghan Markle Personally Calls British Politician to Thank Her for Orchestrating Letter of 'Solidarity'\"\n\"The One Thing Kourtney Kardashian Drinks Every Morning for Younger-Looking Skin\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"Meghan Markle Says She Doesn't Want People to Love Her, She Wants Them to Hear Her\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\n[Candidate News Title]\n\"Ford v Ferrari: the real story\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article \"Ford v Ferrari: the real story,\" the reader may expect an exploration of the historical rivalry between the Ford and Ferrari automotive brands, particularly during the 1960s when Ford sought to win at the Le Mans race. The piece could detail the motivations behind Ford's ambitious project to defeat Ferrari, possibly highlighting key figures such as Carroll Shelby and Ken Miles, as well as the technological advancements that played a crucial role in this competition. Furthermore, it is likely to examine the impact of this rivalry on both companies and the automotive industry as a whole, shedding light on the cultural significance of their showdown.",
+  "model": "gpt-4o-mini"
+}

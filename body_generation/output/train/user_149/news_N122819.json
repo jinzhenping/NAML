@@ -1,0 +1,21 @@
+{
+  "user_id": 149,
+  "candidate_news_id": "N122819",
+  "candidate_title": "See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet",
+  "user_history_count": 10,
+  "user_history": [
+    "The 25 most influential comedians to come out of 'Saturday Night Live'",
+    "Queen Elizabeth and Michelle Obama Shared 'Instant, Mutual Warmth' When They Broke Royal Protocol",
+    "American-Made Cheese Named World's Best for the First Time Ever",
+    "Texas inmate set to be executed for 2002 strangling death",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "See The People's Choice Awards Nominees, Then and Now",
+    "Floods displace hundreds of thousands in South Sudan",
+    "Prince Harry just hinted that he and Meghan Markle may want another baby",
+    "Hong Kong student dies after fall in a parking garage during weekend protests",
+    "I spent a day in Astoria, Queens, and saw why it's one of the world's coolest neighborhoods"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 25 most influential comedians to come out of 'Saturday Night Live'\"\n\"Queen Elizabeth and Michelle Obama Shared 'Instant, Mutual Warmth' When They Broke Royal Protocol\"\n\"American-Made Cheese Named World's Best for the First Time Ever\"\n\"Texas inmate set to be executed for 2002 strangling death\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"See The People's Choice Awards Nominees, Then and Now\"\n\"Floods displace hundreds of thousands in South Sudan\"\n\"Prince Harry just hinted that he and Meghan Markle may want another baby\"\n\"Hong Kong student dies after fall in a parking garage during weekend protests\"\n\"I spent a day in Astoria, Queens, and saw why it's one of the world's coolest neighborhoods\"\n\n[Candidate News Title]\n\"See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet,\" the user is likely to find a detailed exploration of innovative design solutions within a compact living space. The piece may describe how the homeowner maximizes functionality in just 270 square feet, highlighting features such as clever storage solutions and multi-purpose furniture. Additionally, it could provide insights into the lifestyle choices associated with tiny home living, including the challenges and benefits of downsizing.",
+  "model": "gpt-4o-mini"
+}

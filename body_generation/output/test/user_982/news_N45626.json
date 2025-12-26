@@ -1,0 +1,21 @@
+{
+  "user_id": 982,
+  "candidate_news_id": "N45626",
+  "candidate_title": "Most Americans say they are struggling financially",
+  "user_history_count": 10,
+  "user_history": [
+    "California regulators to open inquiry into power outages",
+    "40 Restaurant Meals You Should Never Eat After 40",
+    "A 22-year-old's heart stopped for 12 minutes. Doctors used hypothermia to help.",
+    "Three school workers charged in death of special needs student",
+    "Supreme Court Justices Couldn't Stop Interrupting Each Other During DACA Oral Arguments",
+    "Trump Jr's 'Triggered' debuts at No. 1 on NY Times bestselling list",
+    "How McDonald's really makes its money (Hint: it's not from the Dollar Menu)",
+    "Why 17-Year-Old Can't Get Out of Her Seatbelt",
+    "Lakers beat Warriors 120-94, improve to 9-2",
+    "We tried 4 brands of canned pumpkin and found the one that makes the best pumpkin pie"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"California regulators to open inquiry into power outages\"\n\"40 Restaurant Meals You Should Never Eat After 40\"\n\"A 22-year-old's heart stopped for 12 minutes. Doctors used hypothermia to help.\"\n\"Three school workers charged in death of special needs student\"\n\"Supreme Court Justices Couldn't Stop Interrupting Each Other During DACA Oral Arguments\"\n\"Trump Jr's 'Triggered' debuts at No. 1 on NY Times bestselling list\"\n\"How McDonald's really makes its money (Hint: it's not from the Dollar Menu)\"\n\"Why 17-Year-Old Can't Get Out of Her Seatbelt\"\n\"Lakers beat Warriors 120-94, improve to 9-2\"\n\"We tried 4 brands of canned pumpkin and found the one that makes the best pumpkin pie\"\n\n[Candidate News Title]\n\"Most Americans say they are struggling financially\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Most Americans say they are struggling financially\" is likely to discuss the current financial challenges faced by a significant portion of the American population. Readers may expect to find data and insights from recent surveys or studies that highlight issues such as rising living costs, inflation, and economic instability. It could also explore demographic differences in financial struggles, examining how factors like age and income level impact perceptions of financial well-being. The article may delve into potential implications of these struggles on consumer behavior and broader economic trends, although the specifics of these discussions remain uncertain.",
+  "model": "gpt-4o-mini"
+}

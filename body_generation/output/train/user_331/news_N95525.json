@@ -1,0 +1,21 @@
+{
+  "user_id": 331,
+  "candidate_news_id": "N95525",
+  "candidate_title": "105 Black Friday Deals You Can Start Shopping Today",
+  "user_history_count": 10,
+  "user_history": [
+    "Humid, windy days worse for pain, says new study",
+    "Trump says he was kidding about a border wall in Colorado, Twitter fires back",
+    "20 home renovations that kill your home's value",
+    "Former U.S. Sen. Kay Hagan dead at 66",
+    "What Causes Vertigo? 15 Things Doctors Wish You Knew",
+    "Trump, Lifelong New Yorker, Declares Himself a Resident of Florida",
+    "Why do you bruise easily? What it means and when to see a doctor",
+    "Here Are the 11 New Books You Should Read in November",
+    "How much Social Security you could get from a $75,000 salary",
+    "Trump says he told Fox to get a new pollster amid network's 'lousy' polls on support for impeachment"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Humid, windy days worse for pain, says new study\"\n\"Trump says he was kidding about a border wall in Colorado, Twitter fires back\"\n\"20 home renovations that kill your home's value\"\n\"Former U.S. Sen. Kay Hagan dead at 66\"\n\"What Causes Vertigo? 15 Things Doctors Wish You Knew\"\n\"Trump, Lifelong New Yorker, Declares Himself a Resident of Florida\"\n\"Why do you bruise easily? What it means and when to see a doctor\"\n\"Here Are the 11 New Books You Should Read in November\"\n\"How much Social Security you could get from a $75,000 salary\"\n\"Trump says he told Fox to get a new pollster amid network's 'lousy' polls on support for impeachment\"\n\n[Candidate News Title]\n\"105 Black Friday Deals You Can Start Shopping Today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"105 Black Friday Deals You Can Start Shopping Today\" is likely to provide a curated list of significant discounts and promotions available for Black Friday shopping. The content may detail various categories of products, such as electronics, home goods, and fashion, highlighting some of the best deals from popular retailers. Additionally, it could offer tips on how to navigate the sales effectively and potentially mention specific brands or items that are expected to be particularly popular this year. Overall, readers can anticipate practical information aimed at helping them make informed purchasing decisions during the shopping event.",
+  "model": "gpt-4o-mini"
+}

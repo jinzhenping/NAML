@@ -1,0 +1,19 @@
+{
+  "user_id": 343,
+  "candidate_news_id": "N38902",
+  "candidate_title": "Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'",
+  "user_history_count": 8,
+  "user_history": [
+    "Halle Berry welcomes Zoe Kravitz to the Catwoman family: 'Keep shining Queen'",
+    "Here's Jennifer Lopez Wearing the Most Extra Bejeweled Wedding Dress",
+    "Here's Jennifer Lopez Wearing the Most Extra Bejeweled Wedding Dress",
+    "Camila Cabello Denies Rumors She and Shawn Mendes Split",
+    "Keanu Reeves picked up a lot of Ali Wong swag",
+    "Demi Lovato Just Proved She's the Queen of Halloween",
+    "50 Facts So Genius You'll Feel Like Einstein",
+    "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Halle Berry welcomes Zoe Kravitz to the Catwoman family: 'Keep shining Queen'\"\n\"Here's Jennifer Lopez Wearing the Most Extra Bejeweled Wedding Dress\"\n\"Here's Jennifer Lopez Wearing the Most Extra Bejeweled Wedding Dress\"\n\"Camila Cabello Denies Rumors She and Shawn Mendes Split\"\n\"Keanu Reeves picked up a lot of Ali Wong swag\"\n\"Demi Lovato Just Proved She's the Queen of Halloween\"\n\"50 Facts So Genius You'll Feel Like Einstein\"\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up',\" the user is likely expecting to find a discussion about the supportive friendship between Carrie Underwood and Miranda Lambert. The article may cover their collaborative efforts in the music industry, highlighting how they uplift each other both personally and professionally. Specific examples of their interactions or joint projects could be included, providing insight into their camaraderie. The piece is likely to emphasize themes of female empowerment and solidarity in the entertainment world.",
+  "model": "gpt-4o-mini"
+}

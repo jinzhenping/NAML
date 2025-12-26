@@ -1,0 +1,21 @@
+{
+  "user_id": 66,
+  "candidate_news_id": "N87236",
+  "candidate_title": "Stars   They're Just Like Us!",
+  "user_history_count": 10,
+  "user_history": [
+    "What it's like to cook for Kate Middleton and Prince William, according to Giada De Laurentiis",
+    "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+    "Meghan Markle's Leather Pencil Skirt is a Powerful Statement Piece",
+    "100 books to read in a lifetime   according to Amazon Books editors",
+    "Megyn Kelly and Rose McGowan selfie sparks speculation: 'Brainstorming'",
+    "'DWTS' Recap: A Fan Favorite Goes Home In Yet Another Crazy Elimination",
+    "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+    "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup",
+    "Broadway Actress Laurel Griggs Dies at Age 13",
+    "Fashion hits and misses from the 2019 Country Music Association Awards"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"What it's like to cook for Kate Middleton and Prince William, according to Giada De Laurentiis\"\n\"Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge\"\n\"Meghan Markle's Leather Pencil Skirt is a Powerful Statement Piece\"\n\"100 books to read in a lifetime   according to Amazon Books editors\"\n\"Megyn Kelly and Rose McGowan selfie sparks speculation: 'Brainstorming'\"\n\"'DWTS' Recap: A Fan Favorite Goes Home In Yet Another Crazy Elimination\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup\"\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Fashion hits and misses from the 2019 Country Music Association Awards\"\n\n[Candidate News Title]\n\"Stars   They're Just Like Us!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Stars: They're Just Like Us!\", you may expect to read about the everyday lives of celebrities and how they navigate similar experiences to the general public. The piece is likely to highlight relatable moments in their daily routines, such as grocery shopping, family outings, or handling mundane tasks, thereby illustrating that despite their fame, they face challenges and experiences that many can identify with. This article may also include anecdotes or quotes from celebrities reflecting on their lives away from the spotlight.",
+  "model": "gpt-4o-mini"
+}

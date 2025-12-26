@@ -1,0 +1,21 @@
+{
+  "user_id": 320,
+  "candidate_news_id": "N91865",
+  "candidate_title": "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+  "user_history_count": 10,
+  "user_history": [
+    "Kanye West Gets Ridiculed for Serving Sad, Soggy Pancakes at Expensive \"Brunchella\"",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "These Indianapolis-based cats are up for adoption and in need of a good home",
+    "Teresa Giudice, daughters reunite with Joe in Italy: See the pic!",
+    "40 Celebrities and Their Vintage Doppelgangers",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Everything to Know About Visiting the Biltmore Estate This Christmas",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kanye West Gets Ridiculed for Serving Sad, Soggy Pancakes at Expensive \"Brunchella\"\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"These Indianapolis-based cats are up for adoption and in need of a good home\"\n\"Teresa Giudice, daughters reunite with Joe in Italy: See the pic!\"\n\"40 Celebrities and Their Vintage Doppelgangers\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Everything to Know About Visiting the Biltmore Estate This Christmas\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\n[Candidate News Title]\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the controversial viewpoint of an ex-FDA adviser who advocates for the removal of LASIK eye surgery from the market. It may provide an overview of the safety and efficacy concerns surrounding the procedure, including potential long-term risks that have emerged over time. The article could also explore the implications of this perspective for patients considering LASIK, as well as the broader medical community's response to these claims. Additionally, it may highlight ongoing debates regarding regulatory oversight in the field of eye care.",
+  "model": "gpt-4o-mini"
+}

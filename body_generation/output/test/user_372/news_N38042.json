@@ -1,0 +1,21 @@
+{
+  "user_id": 372,
+  "candidate_news_id": "N38042",
+  "candidate_title": "Ocasio-Cortez: 'Trump himself is clearly not satisfied with only one article of impeachment'",
+  "user_history_count": 10,
+  "user_history": [
+    "Snow crab sells for record price in Japan",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+    "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+    "Broadway Actress Laurel Griggs Dies at Age 13",
+    "Pac-12 suspends referee after egregious mistake during Washington State vs. Cal game",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Snow crab sells for record price in Japan\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Pac-12 suspends referee after egregious mistake during Washington State vs. Cal game\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\n[Candidate News Title]\n\"Ocasio-Cortez: 'Trump himself is clearly not satisfied with only one article of impeachment'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to read about Representative Alexandria Ocasio-Cortez's comments regarding former President Trump's satisfaction with the impeachment process. The piece is likely to explore her perspective on the political implications of Trump's actions and statements, potentially highlighting the complexities of the impeachment articles and the broader context of congressional dynamics. Additionally, it may include reactions from other lawmakers or political analysts. This discussion could provide insights into the ongoing debates surrounding accountability and governance in the current political landscape.",
+  "model": "gpt-4o-mini"
+}

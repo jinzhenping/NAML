@@ -1,0 +1,21 @@
+{
+  "user_id": 938,
+  "candidate_news_id": "N48912",
+  "candidate_title": "Is retirement dying? The old work model is disappearing for Boomers, Gen Xers",
+  "user_history_count": 10,
+  "user_history": [
+    "Take action: Join MSN, LinkedIn and Team Rubicon in helping veterans become thriving civilians",
+    "Joanna Gaines dons a gorgeous black dress for Magnolia Journal cover",
+    "'The Little Mermaid Live!': TV Review",
+    "Man Goes To Adoption Event And Finds His Long-Lost Dog",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Everything to Know About Visiting the Biltmore Estate This Christmas",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "'It's cool to be cold': Confessions of frigid-weather fanatics"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Take action: Join MSN, LinkedIn and Team Rubicon in helping veterans become thriving civilians\"\n\"Joanna Gaines dons a gorgeous black dress for Magnolia Journal cover\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Man Goes To Adoption Event And Finds His Long-Lost Dog\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Everything to Know About Visiting the Biltmore Estate This Christmas\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"'It's cool to be cold': Confessions of frigid-weather fanatics\"\n\n[Candidate News Title]\n\"Is retirement dying? The old work model is disappearing for Boomers, Gen Xers\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Is retirement dying? The old work model is disappearing for Boomers, Gen Xers\" is likely to explore the evolving nature of retirement and work trends among older generations. Readers may expect an analysis of how traditional retirement models are changing due to economic factors, societal shifts, and the rise of gig work. The piece could provide insights into the implications of these changes for individuals nearing retirement age and may include statistics or expert opinions on workforce participation among Boomers and Gen Xers.",
+  "model": "gpt-4o-mini"
+}

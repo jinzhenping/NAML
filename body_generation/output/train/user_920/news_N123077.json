@@ -1,0 +1,21 @@
+{
+  "user_id": 920,
+  "candidate_news_id": "N123077",
+  "candidate_title": "Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage",
+  "user_history_count": 10,
+  "user_history": [
+    "Former DHS Secretary Kirstjen Nielsen says she left post because 'saying no' wasn't enough",
+    "Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo",
+    "Navy Reduces Punishment for SEAL in War Crimes Case",
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "The world's largest nuclear power producer is melting down",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Grading all 32 NFL teams heading into the last eight weeks of the 2019 season"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former DHS Secretary Kirstjen Nielsen says she left post because 'saying no' wasn't enough\"\n\"Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo\"\n\"Navy Reduces Punishment for SEAL in War Crimes Case\"\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"The world's largest nuclear power producer is melting down\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Grading all 32 NFL teams heading into the last eight weeks of the 2019 season\"\n\n[Candidate News Title]\n\"Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the mixed reactions from fans following Drake's surprise appearance as a headliner at a recent festival, where he was reportedly booed off stage. It may explore the reasons behind the divided opinions, including fans' expectations versus the reality of his performance. Additionally, the piece could provide context about the festival itself, the audience's demographics, and Drake's previous festival appearances. This analysis may lead to a broader discussion about celebrity performances and fan engagement in live music events.",
+  "model": "gpt-4o-mini"
+}

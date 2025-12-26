@@ -1,0 +1,21 @@
+{
+  "user_id": 562,
+  "candidate_news_id": "N47891",
+  "candidate_title": "Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash",
+  "user_history_count": 10,
+  "user_history": [
+    "Prince Harry acknowledges tensions with William in ITV interview",
+    "'When you're in a hole, stop digging': Clinton lawyer Greg Craig to President Trump",
+    "Bag Explodes While Being Loaded On Volaris Flight At Midway Airport",
+    "The Jonas Brothers Slapped With $150,000 Lawsuit",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "Anonymous Trump official writing 'unprecedented' inside take",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Young and the Restless Star William Wintersole Dies at 88",
+    "Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'",
+    "Sign-stealing penalties could be \"unlike anything seen in the sport's recent history\""
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Prince Harry acknowledges tensions with William in ITV interview\"\n\"'When you're in a hole, stop digging': Clinton lawyer Greg Craig to President Trump\"\n\"Bag Explodes While Being Loaded On Volaris Flight At Midway Airport\"\n\"The Jonas Brothers Slapped With $150,000 Lawsuit\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"Anonymous Trump official writing 'unprecedented' inside take\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Young and the Restless Star William Wintersole Dies at 88\"\n\"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'\"\n\"Sign-stealing penalties could be \"unlike anything seen in the sport's recent history\"\"\n\n[Candidate News Title]\n\"Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash,\" the user is likely to encounter an exploration of the lesser-known vehicle that played a significant role in the famous race between Ford and Ferrari. The piece may delve into the historical context of the Le Mans race, highlighting the strategies and rivalries that defined this period in automotive history. Additionally, it could provide insights into the engineering and design aspects of the featured car, possibly discussing its impact on the broader narrative surrounding the competition. Overall, the reader might expect a detailed account that combines historical analysis with technical specifics, shedding light on an often-overlooked element of this iconic rivalry.",
+  "model": "gpt-4o-mini"
+}

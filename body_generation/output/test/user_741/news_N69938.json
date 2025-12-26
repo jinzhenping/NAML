@@ -1,0 +1,21 @@
+{
+  "user_id": 741,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "Patriots wanted a test. Now, they need some answers",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Chargers owner Dean Spanos shoots down report of possible London move with expletive-laden denial",
+    "The Latest: Kansas City to remove King's name from street",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "Cowboys have questionable red zone calls in loss to Vikings",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "Chris Paul feels he got 'stabbed in the back' with trade from Rockets",
+    "Georgia executes man convicted of killing convenience store clerk"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Patriots wanted a test. Now, they need some answers\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Chargers owner Dean Spanos shoots down report of possible London move with expletive-laden denial\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"Cowboys have questionable red zone calls in loss to Vikings\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"Chris Paul feels he got 'stabbed in the back' with trade from Rockets\"\n\"Georgia executes man convicted of killing convenience store clerk\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage,\" they may expect to read about a private meeting between the two prominent figures, exploring the context and implications of their gathering. The article is likely to provide details on the location, potentially discussing Frogmore Cottage's significance, and may touch on the topics they discussed, considering both women’s high-profile backgrounds in politics and social issues. Additionally, the piece could speculate on the impact of their meeting on public perceptions or future collaborations, although these aspects remain uncertain.",
+  "model": "gpt-4o-mini"
+}

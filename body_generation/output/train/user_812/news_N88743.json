@@ -1,0 +1,21 @@
+{
+  "user_id": 812,
+  "candidate_news_id": "N88743",
+  "candidate_title": "33 Surprising Reasons To Lose Weight",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Jaguars QB Gardner Minshew could be playing for his job Sunday",
+    "12 Things U.S. Presidents Have to Pay for on Their Own",
+    "Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory",
+    "Does it matter what time of day you eat carbs? Experts weigh in",
+    "8 Most Common Health Issues Veterans Face",
+    "Democrats discussing multiple articles of impeachment against Trump",
+    "50 great places for an early retirement in the US",
+    "NFL coach has theory about why Trubisky is struggling",
+    "Mezcal vs. Tequila What Are the Differences?",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Jaguars QB Gardner Minshew could be playing for his job Sunday\"\n\"12 Things U.S. Presidents Have to Pay for on Their Own\"\n\"Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory\"\n\"Does it matter what time of day you eat carbs? Experts weigh in\"\n\"8 Most Common Health Issues Veterans Face\"\n\"Democrats discussing multiple articles of impeachment against Trump\"\n\"50 great places for an early retirement in the US\"\n\"NFL coach has theory about why Trubisky is struggling\"\n\"Mezcal vs. Tequila What Are the Differences?\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\n[Candidate News Title]\n\"33 Surprising Reasons To Lose Weight\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read \"33 Surprising Reasons To Lose Weight,\" you can expect an informative exploration of various factors that may contribute to weight loss beyond the typical diet and exercise advice. The article is likely to cover a range of surprising influences, such as psychological aspects, social environments, or even specific habits that might not commonly be associated with weight management. It could provide insights into how these factors interplay with physical health and lifestyle choices, offering a broader understanding of the complexities involved in losing weight.",
+  "model": "gpt-4o-mini"
+}

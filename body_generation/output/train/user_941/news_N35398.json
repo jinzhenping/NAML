@@ -1,0 +1,21 @@
+{
+  "user_id": 941,
+  "candidate_news_id": "N35398",
+  "candidate_title": "Here's what comfort food looks like in 26 countries around the world",
+  "user_history_count": 10,
+  "user_history": [
+    "21 Vegan Thanksgiving Recipes Even the Meat Eaters Will Love",
+    "Tickets On Sale For Holiday Season At Newport Mansions",
+    "Stars we lost in 2019",
+    "21 Vegan Thanksgiving Recipes Even the Meat Eaters Will Love",
+    "Here's Exactly What Kristen Bell Eats in a Day to Make 39 Look Like 29",
+    "15+ Easy Ideas For Christmas Pork Roasts",
+    "Have a little piece of extra skin? Everything you need to know about skin tags",
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Bogus Warren Quote Ignites Immigration Anger"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"21 Vegan Thanksgiving Recipes Even the Meat Eaters Will Love\"\n\"Tickets On Sale For Holiday Season At Newport Mansions\"\n\"Stars we lost in 2019\"\n\"21 Vegan Thanksgiving Recipes Even the Meat Eaters Will Love\"\n\"Here's Exactly What Kristen Bell Eats in a Day to Make 39 Look Like 29\"\n\"15+ Easy Ideas For Christmas Pork Roasts\"\n\"Have a little piece of extra skin? Everything you need to know about skin tags\"\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Bogus Warren Quote Ignites Immigration Anger\"\n\n[Candidate News Title]\n\"Here's what comfort food looks like in 26 countries around the world\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Here's what comfort food looks like in 26 countries around the world\" is likely to explore the diverse interpretations of comfort food across various cultures. Readers may expect descriptions of traditional dishes that evoke a sense of nostalgia or warmth, highlighting ingredients and cooking methods unique to each country. The piece could also provide insights into how these foods reflect cultural identities and values. Additionally, it may include visuals or anecdotes that illustrate the significance of comfort food in social gatherings or familial settings, offering a blend of culinary exploration and cultural commentary.",
+  "model": "gpt-4o-mini"
+}

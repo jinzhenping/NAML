@@ -1,0 +1,21 @@
+{
+  "user_id": 225,
+  "candidate_news_id": "N2794",
+  "candidate_title": "'They give us the gift us dedication': Hundreds celebrate veterans at Veterans' Day Ceremony",
+  "user_history_count": 10,
+  "user_history": [
+    "America's largest auto retailer sells customers defective used cars, report says",
+    "Archaeologists open ancient coffins in Egypt",
+    "'When you're in a hole, stop digging': Clinton lawyer Greg Craig to President Trump",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "White House: John Kelly 'was totally unequipped to handle the genius of our great President'",
+    "Fox News contributor: 'Most likely' outcome is Trump doesn't run in 2020",
+    "18th-century shipwreck discovered after 40-year search",
+    "Trump attacks on Vindman trigger backlash",
+    "'I'm going to kill you:' Man arrested for robbery, assault of woman in Hickory Hill",
+    "New York writer who accused Trump of sexual assault sues him for defamation"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"America's largest auto retailer sells customers defective used cars, report says\"\n\"Archaeologists open ancient coffins in Egypt\"\n\"'When you're in a hole, stop digging': Clinton lawyer Greg Craig to President Trump\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"White House: John Kelly 'was totally unequipped to handle the genius of our great President'\"\n\"Fox News contributor: 'Most likely' outcome is Trump doesn't run in 2020\"\n\"18th-century shipwreck discovered after 40-year search\"\n\"Trump attacks on Vindman trigger backlash\"\n\"'I'm going to kill you:' Man arrested for robbery, assault of woman in Hickory Hill\"\n\"New York writer who accused Trump of sexual assault sues him for defamation\"\n\n[Candidate News Title]\n\"'They give us the gift us dedication': Hundreds celebrate veterans at Veterans' Day Ceremony\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"'They give us the gift of dedication': Hundreds celebrate veterans at Veterans' Day Ceremony\" is likely to provide a detailed account of a recent Veterans' Day event honoring those who have served in the military. Readers can expect to find descriptions of the ceremony, including speeches made by officials or veterans, and perhaps personal stories shared by attendees that highlight the significance of the day. It may also touch on themes of patriotism and community support for veterans, illustrating how the public acknowledges their sacrifices. Overall, the piece could serve to reflect on the importance of honoring veterans in contemporary society.",
+  "model": "gpt-4o-mini"
+}

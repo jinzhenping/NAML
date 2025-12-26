@@ -1,0 +1,21 @@
+{
+  "user_id": 766,
+  "candidate_news_id": "N114935",
+  "candidate_title": "Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary",
+  "user_history_count": 10,
+  "user_history": [
+    "MLB world reacts to Astros' seventh-inning collapse in Game 2 of World Series",
+    "Kevin Hart Spotted for the First Time Since Serious Car Accident: Pics",
+    "Deer fatally attacks hunter who shot him",
+    "Solomon: Hinch's move in 7th questionable but not indefensible",
+    "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+    "Mystery surrounds the last person missing from Camp Fire that left 85 dead in California",
+    "The 50 Best Shows on TV, From Star Trek: Discovery to Schitt's Creek",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Astros owner Jim Crane hires his son and Reid Ryan has new role with team"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"MLB world reacts to Astros' seventh-inning collapse in Game 2 of World Series\"\n\"Kevin Hart Spotted for the First Time Since Serious Car Accident: Pics\"\n\"Deer fatally attacks hunter who shot him\"\n\"Solomon: Hinch's move in 7th questionable but not indefensible\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Mystery surrounds the last person missing from Camp Fire that left 85 dead in California\"\n\"The 50 Best Shows on TV, From Star Trek: Discovery to Schitt's Creek\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Astros owner Jim Crane hires his son and Reid Ryan has new role with team\"\n\n[Candidate News Title]\n\"Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about Wendy's introduction of Birthday Cake Frostys in celebration of the fast-food chain's 50th anniversary. The piece may detail the flavors and ingredients of this limited-time offering, as well as the promotional context surrounding its launch. Additionally, the article could provide insights into how this new product aligns with Wendy's marketing strategies and customer engagement efforts, reflecting trends in the fast-food industry. Overall, it aims to inform readers about this unique menu addition and its significance to the brand's history.",
+  "model": "gpt-4o-mini"
+}

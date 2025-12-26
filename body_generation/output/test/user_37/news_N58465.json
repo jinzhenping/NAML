@@ -1,0 +1,17 @@
+{
+  "user_id": 37,
+  "candidate_news_id": "N58465",
+  "candidate_title": "Supporting your adult children can ruin your retirement plans",
+  "user_history_count": 6,
+  "user_history": [
+    "'The Masked Singer' Recap: A Grammy Winner Is Revealed As The Skeleton",
+    "James Mattis mocks Trump's bone spurs",
+    "Bag Explodes While Being Loaded On Volaris Flight At Midway Airport",
+    "NFL Week 8 Power Rankings: Old-school football rules the day",
+    "Obama calls out call-out culture: \"That's not activism\"",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'The Masked Singer' Recap: A Grammy Winner Is Revealed As The Skeleton\"\n\"James Mattis mocks Trump's bone spurs\"\n\"Bag Explodes While Being Loaded On Volaris Flight At Midway Airport\"\n\"NFL Week 8 Power Rankings: Old-school football rules the day\"\n\"Obama calls out call-out culture: \"That's not activism\"\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Supporting your adult children can ruin your retirement plans\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Supporting your adult children can ruin your retirement plans\" is likely to explore the financial implications of providing ongoing support to adult children. Readers may expect to find insights into how such assistance can impact savings and retirement goals, possibly discussing the balance between familial obligations and personal financial security. It could also highlight case studies or expert opinions on the long-term effects of these choices. Additionally, the article may offer strategies for maintaining financial independence while still being supportive, but this is uncertain and would depend on the author's approach.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 808,
+  "candidate_news_id": "N54322",
+  "candidate_title": "Mezcal vs. Tequila What Are the Differences?",
+  "user_history_count": 10,
+  "user_history": [
+    "Dez Bryant plans to reach out to NFL teams in two weeks",
+    "Does Georgia's future schedule hint that playoff expansion is coming?",
+    "Predicting landing spots for the top 25 MLB free agents",
+    "US believes reports Turkey misused US-supplied weapons in Syria incursion are 'credible'",
+    "Nolan Ryan leaves advisory role, won't return as Astros shuffle front office",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "Pete Buttigieg Says He Does Not Respect Donald Trump: 'At a Deeper Level I Don't Think He Respects Himself'",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup",
+    "The Best Thanksgiving Brunch Recipes to Start Turkey Day off on a Delicious Note"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dez Bryant plans to reach out to NFL teams in two weeks\"\n\"Does Georgia's future schedule hint that playoff expansion is coming?\"\n\"Predicting landing spots for the top 25 MLB free agents\"\n\"US believes reports Turkey misused US-supplied weapons in Syria incursion are 'credible'\"\n\"Nolan Ryan leaves advisory role, won't return as Astros shuffle front office\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"Pete Buttigieg Says He Does Not Respect Donald Trump: 'At a Deeper Level I Don't Think He Respects Himself'\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup\"\n\"The Best Thanksgiving Brunch Recipes to Start Turkey Day off on a Delicious Note\"\n\n[Candidate News Title]\n\"Mezcal vs. Tequila What Are the Differences?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Mezcal vs. Tequila: What Are the Differences?\", you can expect a detailed exploration of the distinctions between these two popular Mexican spirits. The article is likely to cover aspects such as the ingredients used, production methods, and flavor profiles that set mezcal apart from tequila. Additionally, it may delve into the cultural significance of each spirit and how they are traditionally consumed. This piece could also include insights into the growing popularity of mezcal in recent years, highlighting its unique characteristics compared to tequila.",
+  "model": "gpt-4o-mini"
+}

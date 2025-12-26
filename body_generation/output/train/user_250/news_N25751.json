@@ -1,0 +1,21 @@
+{
+  "user_id": 250,
+  "candidate_news_id": "N25751",
+  "candidate_title": "This Arctic blast is in its final day. But the cold isn't over quite yet",
+  "user_history_count": 10,
+  "user_history": [
+    "Why would the Fed cut rates again with stocks near records?",
+    "Arnold Schwarzenegger among stars forced to evacuate homes as California wildfires rage",
+    "Can Daylight Saving Time Mess With Your Fitness?",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "Jane Fonda, Rosanna Arquette, Catherine Keener arrested at climate change protest: 'Women bear the brunt'",
+    "Trump wages coast-to-coast legal battle to keep tax returns hidden",
+    "Toyota Supra vs. Ford Mustang Shelby GT350: Kicking Tail!",
+    "Old tires on your car can have tragic consequences",
+    "States that are falling apart",
+    "Another Palm Beach County juror may be jailed in new contempt case"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why would the Fed cut rates again with stocks near records?\"\n\"Arnold Schwarzenegger among stars forced to evacuate homes as California wildfires rage\"\n\"Can Daylight Saving Time Mess With Your Fitness?\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"Jane Fonda, Rosanna Arquette, Catherine Keener arrested at climate change protest: 'Women bear the brunt'\"\n\"Trump wages coast-to-coast legal battle to keep tax returns hidden\"\n\"Toyota Supra vs. Ford Mustang Shelby GT350: Kicking Tail!\"\n\"Old tires on your car can have tragic consequences\"\n\"States that are falling apart\"\n\"Another Palm Beach County juror may be jailed in new contempt case\"\n\n[Candidate News Title]\n\"This Arctic blast is in its final day. But the cold isn't over quite yet\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the current Arctic blast and its implications for weather patterns, emphasizing that while this particular cold snap is ending, colder temperatures may persist in certain regions. The piece could provide details on how this weather system is affecting local climates and may include forecasts or warnings about potential winter weather conditions in the coming days. Additionally, it may examine how this cold wave could impact daily life, including travel and outdoor activities, highlighting the importance of staying informed as conditions evolve.",
+  "model": "gpt-4o-mini"
+}

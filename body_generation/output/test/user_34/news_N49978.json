@@ -1,0 +1,21 @@
+{
+  "user_id": 34,
+  "candidate_news_id": "N49978",
+  "candidate_title": "Myles Garrett on attacking Mason Rudolph: 'I made a mistake, I lost my cool'",
+  "user_history_count": 10,
+  "user_history": [
+    "'The Little Mermaid Live!': TV Review",
+    "EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million",
+    "Never spend more than this amount of your income on a car, says finance expert and millionaire",
+    "The environmental toll of cremating the dead",
+    "Stop! Read This Guide Before You Buy an Air Fryer.",
+    "Audi E-Tron S Possibly Spied Testing At The Nurburgring Again",
+    "15 secrets of the $4.99 Costco rotisserie chicken",
+    "Helping veterans launch startups: 'There's a level of resilience that a lot of people in the military have, which is great for running your own business'",
+    "The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable",
+    "Miranda Lambert gets candid about her public divorce and secret wedding, plus more news"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'The Little Mermaid Live!': TV Review\"\n\"EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million\"\n\"Never spend more than this amount of your income on a car, says finance expert and millionaire\"\n\"The environmental toll of cremating the dead\"\n\"Stop! Read This Guide Before You Buy an Air Fryer.\"\n\"Audi E-Tron S Possibly Spied Testing At The Nurburgring Again\"\n\"15 secrets of the $4.99 Costco rotisserie chicken\"\n\"Helping veterans launch startups: 'There's a level of resilience that a lot of people in the military have, which is great for running your own business'\"\n\"The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable\"\n\"Miranda Lambert gets candid about her public divorce and secret wedding, plus more news\"\n\n[Candidate News Title]\n\"Myles Garrett on attacking Mason Rudolph: 'I made a mistake, I lost my cool'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the user can expect a discussion centered on Myles Garrett's reflections regarding his previous altercation with Mason Rudolph. It is likely to delve into Garrett's acknowledgment of his actions during the incident, where he may express regret and the impact of losing control in that moment. The piece could also explore the broader implications of such actions in professional sports, including discussions on sportsmanship and player conduct. Overall, the article is expected to provide insights into Garrett's perspective and the context surrounding the event.",
+  "model": "gpt-4o-mini"
+}

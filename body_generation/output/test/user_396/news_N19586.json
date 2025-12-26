@@ -1,0 +1,21 @@
+{
+  "user_id": 396,
+  "candidate_news_id": "N19586",
+  "candidate_title": "Experts Explain Why You Might Want to Stop Sleeping on Your Stomach and How to Do It",
+  "user_history_count": 10,
+  "user_history": [
+    "Meghan McCain GOES IN on Donald Trump Jr. on 'The View'",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "More than 130,000 pounds of ground beef recalled for possible plastic contamination",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "Jennifer Aniston looks amazing in a makeup-free selfie, plus more news",
+    "Actress Accuses Roman Polanski of Raping Her in 1975",
+    "Duke reports minor violation after Coach K mentions name of unsigned recruit",
+    "Subtle Signs You're Eating Too Much Sugar",
+    "Fox legal analyst Napolitano emerges as Trump critic",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan McCain GOES IN on Donald Trump Jr. on 'The View'\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"More than 130,000 pounds of ground beef recalled for possible plastic contamination\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Jennifer Aniston looks amazing in a makeup-free selfie, plus more news\"\n\"Actress Accuses Roman Polanski of Raping Her in 1975\"\n\"Duke reports minor violation after Coach K mentions name of unsigned recruit\"\n\"Subtle Signs You're Eating Too Much Sugar\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\n[Candidate News Title]\n\"Experts Explain Why You Might Want to Stop Sleeping on Your Stomach and How to Do It\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to encounter an exploration of the potential health implications of sleeping on one’s stomach. It may discuss how this position can affect spinal alignment and overall comfort, possibly leading to neck and back pain. The piece could also offer suggestions on how to transition to alternative sleeping positions, like side or back sleeping, and provide tips for making this change easier. Additionally, it may include expert opinions on the benefits of proper sleep posture, emphasizing overall well-being.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 331,
+  "candidate_news_id": "N39770",
+  "candidate_title": "Dow tops 28,000 for first time, capping 4-week win streak",
+  "user_history_count": 10,
+  "user_history": [
+    "What Causes Vertigo? 15 Things Doctors Wish You Knew",
+    "Trump, Lifelong New Yorker, Declares Himself a Resident of Florida",
+    "Why do you bruise easily? What it means and when to see a doctor",
+    "Here Are the 11 New Books You Should Read in November",
+    "How much Social Security you could get from a $75,000 salary",
+    "Trump says he told Fox to get a new pollster amid network's 'lousy' polls on support for impeachment",
+    "Megyn Kelly Is Back to Work! Details on Her New Job",
+    "Martha Stewart shares the family favorites she serves during the holidays, including adding cream cheese to her mashed potatoes",
+    "Nurse took in disabled teen, then tortured and killed her, police say.",
+    "Miniature Cow Plays in Northern Ohio Snow"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"What Causes Vertigo? 15 Things Doctors Wish You Knew\"\n\"Trump, Lifelong New Yorker, Declares Himself a Resident of Florida\"\n\"Why do you bruise easily? What it means and when to see a doctor\"\n\"Here Are the 11 New Books You Should Read in November\"\n\"How much Social Security you could get from a $75,000 salary\"\n\"Trump says he told Fox to get a new pollster amid network's 'lousy' polls on support for impeachment\"\n\"Megyn Kelly Is Back to Work! Details on Her New Job\"\n\"Martha Stewart shares the family favorites she serves during the holidays, including adding cream cheese to her mashed potatoes\"\n\"Nurse took in disabled teen, then tortured and killed her, police say.\"\n\"Miniature Cow Plays in Northern Ohio Snow\"\n\n[Candidate News Title]\n\"Dow tops 28,000 for first time, capping 4-week win streak\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Dow tops 28,000 for first time, capping 4-week win streak\" is likely to provide an overview of the recent performance of the Dow Jones Industrial Average, highlighting its milestone of surpassing 28,000 points. Readers may expect a discussion on the factors contributing to this rise, such as economic indicators, investor sentiment, and key market trends over the past month. Additionally, the article could delve into potential implications for investors and the broader economy, while analyzing whether this upward trajectory may continue in the near future.",
+  "model": "gpt-4o-mini"
+}

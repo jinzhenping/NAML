@@ -1,0 +1,21 @@
+{
+  "user_id": 142,
+  "candidate_news_id": "N96351",
+  "candidate_title": "Why I'm Done Celebrating The Accomplishments Of Couples",
+  "user_history_count": 10,
+  "user_history": [
+    "Unexpected Signs of an Unhealthy Heart",
+    "Roger Stone trial: Former top Trump official details campaign's dealings on WikiLeaks, and suggests Trump was in the know",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+    "People Pull Together To Save A Frightened Dog Loose On Highway",
+    "Pompeo 'on shifting sand' as impeachment probe reveals his role in Ukraine pressure campaign",
+    "Cat completely destroys toilet roll",
+    "Family Brings Snow Inside So Obsessed Indoor Cat Can Play In It",
+    "Cellphone call from Ukraine could compound Trump's troubles",
+    "Archie's Photo Album: Prince Harry, Duchess Meghan's Royal Baby",
+    "Pierce Brosnan's Sons Paris and Dylan Named 2020 Golden Globe Ambassadors"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Unexpected Signs of an Unhealthy Heart\"\n\"Roger Stone trial: Former top Trump official details campaign's dealings on WikiLeaks, and suggests Trump was in the know\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\"People Pull Together To Save A Frightened Dog Loose On Highway\"\n\"Pompeo 'on shifting sand' as impeachment probe reveals his role in Ukraine pressure campaign\"\n\"Cat completely destroys toilet roll\"\n\"Family Brings Snow Inside So Obsessed Indoor Cat Can Play In It\"\n\"Cellphone call from Ukraine could compound Trump's troubles\"\n\"Archie's Photo Album: Prince Harry, Duchess Meghan's Royal Baby\"\n\"Pierce Brosnan's Sons Paris and Dylan Named 2020 Golden Globe Ambassadors\"\n\n[Candidate News Title]\n\"Why I'm Done Celebrating The Accomplishments Of Couples\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Why I'm Done Celebrating The Accomplishments Of Couples,\" the user is likely to encounter a reflective discussion on the societal focus on couples' achievements and milestones. The piece may explore the reasons behind a shift in perspective, emphasizing themes of individuality and the importance of personal accomplishments over collective ones. It could also touch on the pressures that societal expectations place on relationships and how this affects personal identity. The author may share personal anecdotes or observations that illustrate these points, though the specifics of such examples are uncertain.",
+  "model": "gpt-4o-mini"
+}

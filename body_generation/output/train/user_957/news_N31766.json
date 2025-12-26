@@ -1,0 +1,21 @@
+{
+  "user_id": 957,
+  "candidate_news_id": "N31766",
+  "candidate_title": "3 dead, dozens injured as Australia wildfires raze homes",
+  "user_history_count": 10,
+  "user_history": [
+    "Cailtyn Jenner, Khloe Kardashian's relationship remains strained as Caitlyn turns 70, plus more news",
+    "Meg Ryan Steps Out Sans Engagement Ring Amid Report She and John Mellencamp Split",
+    "Jane Fonda to spend night in jail after climate protest in DC",
+    "Kendall Jenner Celebrates Her Birthday Early With Rob Kardashian, Leonardo DiCaprio, Hailey Bieber and More",
+    "Jane Fonda spends night in jail after latest climate change protest",
+    "Your Thanksgiving Needs These Easy And Delicious Side Dishes",
+    "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+    "California firefighters get a little help from Matthew McConaughey",
+    "Bette Midler mocks Lori Loughlin's college admission scandal",
+    "Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cailtyn Jenner, Khloe Kardashian's relationship remains strained as Caitlyn turns 70, plus more news\"\n\"Meg Ryan Steps Out Sans Engagement Ring Amid Report She and John Mellencamp Split\"\n\"Jane Fonda to spend night in jail after climate protest in DC\"\n\"Kendall Jenner Celebrates Her Birthday Early With Rob Kardashian, Leonardo DiCaprio, Hailey Bieber and More\"\n\"Jane Fonda spends night in jail after latest climate change protest\"\n\"Your Thanksgiving Needs These Easy And Delicious Side Dishes\"\n\"1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef\"\n\"California firefighters get a little help from Matthew McConaughey\"\n\"Bette Midler mocks Lori Loughlin's college admission scandal\"\n\"Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet\"\n\n[Candidate News Title]\n\"3 dead, dozens injured as Australia wildfires raze homes\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide an overview of the devastating impact of recent wildfires in Australia, highlighting the loss of life and the number of individuals injured. It may detail how these fires have destroyed homes and affected communities, potentially discussing the causes of the fires and the response from local authorities. Additionally, the article could include insights on the broader implications of climate change related to such disasters, emphasizing the ongoing challenges faced by firefighters and emergency services.",
+  "model": "gpt-4o-mini"
+}

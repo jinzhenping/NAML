@@ -1,0 +1,21 @@
+{
+  "user_id": 620,
+  "candidate_news_id": "N45782",
+  "candidate_title": "Dwayne Johnson Announces 'Black Adam' 2021 Release Date",
+  "user_history_count": 10,
+  "user_history": [
+    "Prince Harry and Meghan Markle are taking a royal respite",
+    "Chris Brown Hosting Yard Sale At Tarzana Home, Posts Address Online",
+    "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+    "John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "25 Walmart Holiday Gift Bargains",
+    "Walmart Is Starting Black Friday Early This Year With Deals On Instant Pots, Air Fryers, And More",
+    "Target, Kohl's, BJ's Wholesale Club, Old Navy among first to announce Black Friday plans"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Prince Harry and Meghan Markle are taking a royal respite\"\n\"Chris Brown Hosting Yard Sale At Tarzana Home, Posts Address Online\"\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"25 Walmart Holiday Gift Bargains\"\n\"Walmart Is Starting Black Friday Early This Year With Deals On Instant Pots, Air Fryers, And More\"\n\"Target, Kohl's, BJ's Wholesale Club, Old Navy among first to announce Black Friday plans\"\n\n[Candidate News Title]\n\"Dwayne Johnson Announces 'Black Adam' 2021 Release Date\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find information regarding Dwayne Johnson's announcement of the release date for the film \"Black Adam,\" which may include details about the film's production timeline, its significance within the DC Comics universe, and any promotional activities planned leading up to the release. The user might expect insights into the film's cast and crew, as well as potential plot points or themes that could be explored. There may also be commentary on how this release fits into the broader landscape of superhero films, providing context for fans and followers of the genre.",
+  "model": "gpt-4o-mini"
+}

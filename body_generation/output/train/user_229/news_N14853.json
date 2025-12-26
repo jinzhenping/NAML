@@ -1,0 +1,21 @@
+{
+  "user_id": 229,
+  "candidate_news_id": "N14853",
+  "candidate_title": "Biden knocks left-wing of Democratic Party: 'We shouldn't abolish ICE'",
+  "user_history_count": 10,
+  "user_history": [
+    "What's the Deal With the Toyota Supra?",
+    "Indian Just Threw Down The Gauntlet In The V-Twin Power Wars",
+    "Think Twice Before Flying with Your Pet. Here's Why.",
+    "Think Twice Before Flying with Your Pet. Here's Why.",
+    "California's legal weed profits going up in smoke",
+    "Chrissy Teigen Gushes Over John Legend After He Misses His Flight to be With Her",
+    "The One Thing Kourtney Kardashian Drinks Every Morning for Younger-Looking Skin",
+    "8 Questions to Ask Yourself Before Using CBD",
+    "2019 and 2020 Full-Size Pickup Truck Rankings",
+    "11 tips for surviving a long-haul flight in economy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"What's the Deal With the Toyota Supra?\"\n\"Indian Just Threw Down The Gauntlet In The V-Twin Power Wars\"\n\"Think Twice Before Flying with Your Pet. Here's Why.\"\n\"Think Twice Before Flying with Your Pet. Here's Why.\"\n\"California's legal weed profits going up in smoke\"\n\"Chrissy Teigen Gushes Over John Legend After He Misses His Flight to be With Her\"\n\"The One Thing Kourtney Kardashian Drinks Every Morning for Younger-Looking Skin\"\n\"8 Questions to Ask Yourself Before Using CBD\"\n\"2019 and 2020 Full-Size Pickup Truck Rankings\"\n\"11 tips for surviving a long-haul flight in economy\"\n\n[Candidate News Title]\n\"Biden knocks left-wing of Democratic Party: 'We shouldn't abolish ICE'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Biden knocks left-wing of Democratic Party: 'We shouldn't abolish ICE,'\" the user may expect to read about President Biden's stance on immigration policy and his criticisms of more progressive elements within his party. The piece is likely to provide context regarding the ongoing debates over U.S. immigration enforcement, particularly around the role of ICE. Additionally, it could explore the implications of Biden's remarks for party unity and the upcoming elections, along with potential responses from left-wing lawmakers.",
+  "model": "gpt-4o-mini"
+}

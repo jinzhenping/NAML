@@ -1,0 +1,21 @@
+{
+  "user_id": 610,
+  "candidate_news_id": "N94594",
+  "candidate_title": "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Jayce Tingler hired as Padres manager",
+    "Girardi to Phillies will have long-term ramifications in NL East",
+    "34 impulse purchases on Amazon you'll actually use all the time",
+    "Chance the Rapper on 'SNL': 3 Sketches You Have to See",
+    "A couple's attempt to re-create a picture-perfect engagement photo with a bottle of Champagne totally backfired, but the result is going viral",
+    "Little Feat Guitarist Paul Barrere Dead at 71",
+    "A wellness influencer told her Instagram followers that shampoo causes weight gain, but nutrition experts are calling her comments 'madness'",
+    "Walmart Sparks Panic and Confusion in the Dish-Soap Aisle",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Pence aide said Trump's July 25 call with Ukraine was political and not a normal diplomatic call"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Jayce Tingler hired as Padres manager\"\n\"Girardi to Phillies will have long-term ramifications in NL East\"\n\"34 impulse purchases on Amazon you'll actually use all the time\"\n\"Chance the Rapper on 'SNL': 3 Sketches You Have to See\"\n\"A couple's attempt to re-create a picture-perfect engagement photo with a bottle of Champagne totally backfired, but the result is going viral\"\n\"Little Feat Guitarist Paul Barrere Dead at 71\"\n\"A wellness influencer told her Instagram followers that shampoo causes weight gain, but nutrition experts are calling her comments 'madness'\"\n\"Walmart Sparks Panic and Confusion in the Dish-Soap Aisle\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Pence aide said Trump's July 25 call with Ukraine was political and not a normal diplomatic call\"\n\n[Candidate News Title]\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to recount the story of a teenager who received a long-awaited response to a message in a bottle he sent out nine years ago. Readers may expect to learn about the journey of the bottle, including its travels across 3,000 miles of water before finally being found. The article could provide insights into the teen's motivations for sending the message and the significance of receiving a reply after such a long time. Additionally, it may touch on themes of hope, connection, and the unexpected ways that communication can transcend time and distance.",
+  "model": "gpt-4o-mini"
+}

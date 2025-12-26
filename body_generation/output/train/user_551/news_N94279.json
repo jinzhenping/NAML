@@ -1,0 +1,17 @@
+{
+  "user_id": 551,
+  "candidate_news_id": "N94279",
+  "candidate_title": "Do you have the right to recline your airline airplane seat? No, and here's why",
+  "user_history_count": 6,
+  "user_history": [
+    "Stars we lost in 2019",
+    "Celebs Who Have Rocked a Mullet, From Meryl Streep to Kanye West",
+    "The 50 Best One-Hit Wonders of All Time",
+    "Rock band's tour van collides with moose in Canada: Pics",
+    "Man who advocated caning for adultery gets caned for adultery",
+    "Celebrity mug shots"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Stars we lost in 2019\"\n\"Celebs Who Have Rocked a Mullet, From Meryl Streep to Kanye West\"\n\"The 50 Best One-Hit Wonders of All Time\"\n\"Rock band's tour van collides with moose in Canada: Pics\"\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"Celebrity mug shots\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Do you have the right to recline your airline airplane seat? No, and here's why\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Do you have the right to recline your airline airplane seat? No, and here's why,\" you may expect a discussion centered around the etiquette and legalities of reclining seats on airplanes. The article could explore various perspectives on this topic, possibly highlighting passenger rights, airline policies, and the implications of seat reclining on fellow travelers' comfort. Additionally, it may include specific examples or anecdotes illustrating conflicts that arise during flights, providing a balanced view on whether reclining should be considered a personal right or a courtesy.",
+  "model": "gpt-4o-mini"
+}

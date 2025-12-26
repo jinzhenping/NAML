@@ -1,0 +1,21 @@
+{
+  "user_id": 292,
+  "candidate_news_id": "N48833",
+  "candidate_title": "85 Thanksgiving Recipes You Can Make Ahead",
+  "user_history_count": 10,
+  "user_history": [
+    "10 more bodies found at mass grave near US-Mexico border, bringing total to 58, officials say",
+    "Notorious Serial Killer Samuel Little Confessed To 5 Murders In South Florida",
+    "Massive hole in the wall of Lower East Side NYCHA building",
+    "Turkey starts repatriation of captured Islamic State militants: media",
+    "The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping",
+    "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say",
+    "Trump DC hotel sales pitch boasts of millions to be made from foreign governments",
+    "How this couple built a $100 million company without killing each other",
+    "Police searching park with bloodhounds for missing woman",
+    "Chad Wolf confirmed as acting Homeland Security chief"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"10 more bodies found at mass grave near US-Mexico border, bringing total to 58, officials say\"\n\"Notorious Serial Killer Samuel Little Confessed To 5 Murders In South Florida\"\n\"Massive hole in the wall of Lower East Side NYCHA building\"\n\"Turkey starts repatriation of captured Islamic State militants: media\"\n\"The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping\"\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\"Trump DC hotel sales pitch boasts of millions to be made from foreign governments\"\n\"How this couple built a $100 million company without killing each other\"\n\"Police searching park with bloodhounds for missing woman\"\n\"Chad Wolf confirmed as acting Homeland Security chief\"\n\n[Candidate News Title]\n\"85 Thanksgiving Recipes You Can Make Ahead\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"85 Thanksgiving Recipes You Can Make Ahead,\" the user can expect a collection of diverse and practical recipes designed to streamline Thanksgiving meal preparation. The piece is likely to include a variety of dishes, ranging from appetizers to desserts, that can be prepared in advance, allowing for a more relaxed holiday experience. Additionally, it may provide tips on storage and reheating, catering to different dietary preferences. Overall, the article could serve as a helpful resource for those looking to simplify their Thanksgiving cooking while still enjoying a festive meal.",
+  "model": "gpt-4o-mini"
+}

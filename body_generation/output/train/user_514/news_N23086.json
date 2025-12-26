@@ -1,0 +1,21 @@
+{
+  "user_id": 514,
+  "candidate_news_id": "N23086",
+  "candidate_title": "The Best Backstage Moments From the 2019 E! People's Choice Awards",
+  "user_history_count": 10,
+  "user_history": [
+    "Dakota Johnson's Tribute to Former Stepdad Antonio Banderas Will Leave You In Tears",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Helen Mirren Says it Was 'Very Flattering' to Be Mistaken for Keanu Reeves' Girlfriend",
+    "Las Vegas adopts ban on sleeping, camping on streets, sidewalks",
+    "Holocaust survivor under guard amid death threats",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Precious metals get crushed as end-of-the-world trade implodes",
+    "This Solo Dining Trend Is Changing the Way People Eat"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dakota Johnson's Tribute to Former Stepdad Antonio Banderas Will Leave You In Tears\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Helen Mirren Says it Was 'Very Flattering' to Be Mistaken for Keanu Reeves' Girlfriend\"\n\"Las Vegas adopts ban on sleeping, camping on streets, sidewalks\"\n\"Holocaust survivor under guard amid death threats\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Precious metals get crushed as end-of-the-world trade implodes\"\n\"This Solo Dining Trend Is Changing the Way People Eat\"\n\n[Candidate News Title]\n\"The Best Backstage Moments From the 2019 E! People's Choice Awards\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In clicking on \"The Best Backstage Moments From the 2019 E! People's Choice Awards,\" the user may expect to read about notable interactions and events that occurred behind the scenes during this entertainment award ceremony. The article is likely to highlight amusing or heartwarming exchanges between celebrities, as well as any memorable incidents that provide insight into the personalities of the attendees. Additionally, it could include details about the atmosphere at the event and the reactions of stars to their wins and losses, giving readers a closer look at the entertainment industry beyond the public eye.",
+  "model": "gpt-4o-mini"
+}

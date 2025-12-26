@@ -1,0 +1,21 @@
+{
+  "user_id": 696,
+  "candidate_news_id": "N60370",
+  "candidate_title": "House Democrat: 'Sham' investigation of Bidens will not dominate impeachment hearings",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Potential new USC AD told he cannot pursue Urban Meyer, could back out",
+    "BART worker rescues man from oncoming train",
+    "Heisman Race 2019: Why LSU-Alabama Won't Eliminate the Losing Quarterback",
+    "Jeff Sessions escorted from Northwestern U. under heavy security amid 'cancel culture' protest",
+    "Opinions | Where is Mike Pompeo? He's hiding in fear of Donald Trump.",
+    "Greg Schiano reportedly making 'significant demands' in Rutgers talks",
+    "Rand Paul blocks Senate resolution backing protection for whistleblowers",
+    "US: Saudis recruited Twitter workers to spy on critics",
+    "Opinions | It's too late to save yourself now, Bill Barr",
+    "Attorney Alan Dershowitz countersues Virginia Giuffre for defamation"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Potential new USC AD told he cannot pursue Urban Meyer, could back out\"\n\"BART worker rescues man from oncoming train\"\n\"Heisman Race 2019: Why LSU-Alabama Won't Eliminate the Losing Quarterback\"\n\"Jeff Sessions escorted from Northwestern U. under heavy security amid 'cancel culture' protest\"\n\"Opinions | Where is Mike Pompeo? He's hiding in fear of Donald Trump.\"\n\"Greg Schiano reportedly making 'significant demands' in Rutgers talks\"\n\"Rand Paul blocks Senate resolution backing protection for whistleblowers\"\n\"US: Saudis recruited Twitter workers to spy on critics\"\n\"Opinions | It's too late to save yourself now, Bill Barr\"\n\"Attorney Alan Dershowitz countersues Virginia Giuffre for defamation\"\n\n[Candidate News Title]\n\"House Democrat: 'Sham' investigation of Bidens will not dominate impeachment hearings\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the ongoing impeachment hearings involving the Bidens, focusing on the House Democrat's characterization of the investigation as a \"sham.\" Readers may expect insights into the political dynamics at play, including the motivations behind the impeachment efforts and potential implications for the Democratic Party. The piece could also explore the responses from both sides of the aisle regarding the legitimacy of the investigations. Overall, the article may provide a critical analysis of how these developments might impact the broader political landscape.",
+  "model": "gpt-4o-mini"
+}

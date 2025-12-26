@@ -1,0 +1,21 @@
+{
+  "user_id": 309,
+  "candidate_news_id": "N80272",
+  "candidate_title": "Thousands of people have problems accessing Disney+, and they're not happy",
+  "user_history_count": 10,
+  "user_history": [
+    "Deer fatally attacks hunter who shot him",
+    "Kelly Ripa responds to backlash over son in 'extreme poverty' joke",
+    "All of Heidi Klum's Halloween Costumes Over the Years",
+    "Six photographers share their favorite Audrey Hepburn images in a new book celebrating the Hollywood actress 26 years after her death",
+    "This Pomona College senior is living out of a converted school bus and saving $10,000 a year on student housing",
+    "Fans are crazy in love with Ciara and Russell Wilson's Beyoncé and Jay-Z Halloween costumes",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "40 Fun Facts About Jennifer Aniston",
+    "Today in History: November 7",
+    "Comparing Forbes 400 lists from 1982 and 2019 shows how differently wealth is tracked today"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Deer fatally attacks hunter who shot him\"\n\"Kelly Ripa responds to backlash over son in 'extreme poverty' joke\"\n\"All of Heidi Klum's Halloween Costumes Over the Years\"\n\"Six photographers share their favorite Audrey Hepburn images in a new book celebrating the Hollywood actress 26 years after her death\"\n\"This Pomona College senior is living out of a converted school bus and saving $10,000 a year on student housing\"\n\"Fans are crazy in love with Ciara and Russell Wilson's Beyoncé and Jay-Z Halloween costumes\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"Today in History: November 7\"\n\"Comparing Forbes 400 lists from 1982 and 2019 shows how differently wealth is tracked today\"\n\n[Candidate News Title]\n\"Thousands of people have problems accessing Disney+, and they're not happy\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent widespread issues users are experiencing with Disney+ access, detailing the nature of these problems and the responses from frustrated subscribers. It may provide insights into specific technical difficulties, such as login failures or streaming interruptions, as well as highlight the impact of these issues on user satisfaction. Additionally, the piece could include reactions from social media or forums, illustrating the community's sentiment. Overall, readers can expect a clear overview of the situation, along with potential solutions or statements from Disney+.",
+  "model": "gpt-4o-mini"
+}

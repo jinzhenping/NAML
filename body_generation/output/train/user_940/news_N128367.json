@@ -1,0 +1,21 @@
+{
+  "user_id": 940,
+  "candidate_news_id": "N128367",
+  "candidate_title": "Supreme Court Appears Ready to Let Trump End DACA Program",
+  "user_history_count": 10,
+  "user_history": [
+    "Erdogan says he will never allow vaping, will block e-cigarettes in Turkey",
+    "Inside Ken Fisher's private kingdom, where hardball culture reels in billions",
+    "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+    "Turkey summons US ambassador, condemns US House resolutions",
+    "Senate rejects Democratic effort to undo Obamacare changes",
+    "Order! Order! Britain's speaker quits Brexit hotseat",
+    "Iran announces sharp rise in enriched uranium production",
+    "'Catalonia has no king,' separatist protesters say during Spanish royals' visit",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Erdogan says he will never allow vaping, will block e-cigarettes in Turkey\"\n\"Inside Ken Fisher's private kingdom, where hardball culture reels in billions\"\n\"Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony\"\n\"Turkey summons US ambassador, condemns US House resolutions\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"Order! Order! Britain's speaker quits Brexit hotseat\"\n\"Iran announces sharp rise in enriched uranium production\"\n\"'Catalonia has no king,' separatist protesters say during Spanish royals' visit\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\n[Candidate News Title]\n\"Supreme Court Appears Ready to Let Trump End DACA Program\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Supreme Court Appears Ready to Let Trump End DACA Program\" is likely to explore the context and implications of the Supreme Court's current stance regarding the Deferred Action for Childhood Arrivals (DACA) program. Readers can expect an overview of the legal arguments presented in the case, insights into the potential impact on undocumented immigrants brought to the U.S. as children, and reactions from various stakeholders, including lawmakers and advocacy groups. The piece may also speculate on how the decision could influence immigration policy moving forward.",
+  "model": "gpt-4o-mini"
+}

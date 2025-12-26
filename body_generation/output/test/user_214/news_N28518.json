@@ -1,0 +1,21 @@
+{
+  "user_id": 214,
+  "candidate_news_id": "N28518",
+  "candidate_title": "Lamar Odom is Engaged to Girlfriend Sabrina Parr -- See Her Stunning Ring!",
+  "user_history_count": 10,
+  "user_history": [
+    "Mother of missing Florida girl charged; human remains found",
+    "Celebrity plastic surgery transformations",
+    "Family Reunited With Dog Who Had Been Missing Since August While Waiting in Line to Adopt Cat",
+    "Dad took 11-month-old to drug deal as 'human shield'. The baby was shot.",
+    "'It's the biggest gift I've ever gotten:' Iraq War veteran who lost leg and suffered significant trauma will come home to a hero's house in Glastonbury",
+    "They bought a 1 euro house in Italy -- here's what happened next",
+    "Kelsey Grammer shreds 'Housewives' ex Camille, dubs her 'pathetic'",
+    "Funny celeb pics for November 2019",
+    "Georgia executes man convicted of killing convenience store clerk",
+    "Mother-in-law poses as teenage boy to catch man in child porn case"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mother of missing Florida girl charged; human remains found\"\n\"Celebrity plastic surgery transformations\"\n\"Family Reunited With Dog Who Had Been Missing Since August While Waiting in Line to Adopt Cat\"\n\"Dad took 11-month-old to drug deal as 'human shield'. The baby was shot.\"\n\"'It's the biggest gift I've ever gotten:' Iraq War veteran who lost leg and suffered significant trauma will come home to a hero's house in Glastonbury\"\n\"They bought a 1 euro house in Italy -- here's what happened next\"\n\"Kelsey Grammer shreds 'Housewives' ex Camille, dubs her 'pathetic'\"\n\"Funny celeb pics for November 2019\"\n\"Georgia executes man convicted of killing convenience store clerk\"\n\"Mother-in-law poses as teenage boy to catch man in child porn case\"\n\n[Candidate News Title]\n\"Lamar Odom is Engaged to Girlfriend Sabrina Parr -- See Her Stunning Ring!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article about Lamar Odom's engagement to Sabrina Parr, you can expect to read about the details surrounding their relationship and the announcement of their engagement. The article is likely to cover aspects such as the significance of the engagement ring and any statements made by Odom or Parr regarding their future plans together. Additionally, there may be some context provided about Odom's personal journey and how it has influenced his current relationship. Overall, the piece may offer insights into their partnership and what this new chapter means for both individuals.",
+  "model": "gpt-4o-mini"
+}

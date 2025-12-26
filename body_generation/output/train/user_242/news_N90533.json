@@ -1,0 +1,17 @@
+{
+  "user_id": 242,
+  "candidate_news_id": "N90533",
+  "candidate_title": "NFL reviewing Detroit Lions' handling of Matthew Stafford injury report",
+  "user_history_count": 6,
+  "user_history": [
+    "'Maleficent: Mistress of Evil' Gives Disney Another No. 1 Box Office Weekend",
+    "4 QB trade options for Bears to move past Trubisky",
+    "'Joker' Posts Strong $55 Million Box Office Weekend While 'Gemini Man' Struggles",
+    "Celebs celebrate Halloween 2019",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Solange Knowles splits with husband ahead of anniversary"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Maleficent: Mistress of Evil' Gives Disney Another No. 1 Box Office Weekend\"\n\"4 QB trade options for Bears to move past Trubisky\"\n\"'Joker' Posts Strong $55 Million Box Office Weekend While 'Gemini Man' Struggles\"\n\"Celebs celebrate Halloween 2019\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Solange Knowles splits with husband ahead of anniversary\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"NFL reviewing Detroit Lions' handling of Matthew Stafford injury report\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the NFL's ongoing review of the Detroit Lions' management of quarterback Matthew Stafford's injury report. Readers can expect an overview of the circumstances surrounding Stafford's injury, including any potential implications for the team's performance and decision-making. The piece may also touch on the league's protocols regarding injury disclosures and the significance of transparency in player health. Additionally, it could explore how this situation might affect the Lions' strategy moving forward, though the specifics of any disciplinary actions or outcomes are uncertain.",
+  "model": "gpt-4o-mini"
+}

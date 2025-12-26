@@ -1,0 +1,20 @@
+{
+  "user_id": 222,
+  "candidate_news_id": "N33901",
+  "candidate_title": "Here's how much and who you should be tipping at American hotels",
+  "user_history_count": 9,
+  "user_history": [
+    "Doing it for the 'gram? Royal Caribbean says no to that, bans guests for life",
+    "How Toys 'R' Us Went Bankrupt",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Airbnb Loses New Jersey Home-Share War by a Landslide",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos",
+    "Cat \"repeatedly\" breaks his friends out of animal shelter",
+    "Family Reunited With Dog Who Had Been Missing Since August While Waiting in Line to Adopt Cat"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Doing it for the 'gram? Royal Caribbean says no to that, bans guests for life\"\n\"How Toys 'R' Us Went Bankrupt\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Airbnb Loses New Jersey Home-Share War by a Landslide\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\"Cat \"repeatedly\" breaks his friends out of animal shelter\"\n\"Family Reunited With Dog Who Had Been Missing Since August While Waiting in Line to Adopt Cat\"\n\"\"\n\n[Candidate News Title]\n\"Here's how much and who you should be tipping at American hotels\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Here's how much and who you should be tipping at American hotels,\" you may expect a detailed guide outlining the customary tipping practices in hotel settings across the United States. The article is likely to cover various hotel staff members, such as bellhops, housekeeping, and concierges, specifying recommended tip amounts based on service quality and hotel type. Additionally, it may provide insights into regional differences in tipping norms and the importance of tipping in the hospitality industry, helping you navigate these social expectations effectively.",
+  "model": "gpt-4o-mini"
+}

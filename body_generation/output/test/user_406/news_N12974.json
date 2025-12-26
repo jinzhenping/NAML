@@ -1,0 +1,18 @@
+{
+  "user_id": 406,
+  "candidate_news_id": "N12974",
+  "candidate_title": "Apple bans vaping apps from the App Store",
+  "user_history_count": 7,
+  "user_history": [
+    "Mad About You Star Helen Hunt Taken to Hospital After Car Is T-Boned and Rolls Over in Accident",
+    "'The Masked Singer' Recap: A Grammy Winner Is Revealed As The Skeleton",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Unexpected ingredients that go great with eggs",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "The best independent bakery in every state",
+    "40+ Ridiculously Good Gluten-Free Thanksgiving Recipes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mad About You Star Helen Hunt Taken to Hospital After Car Is T-Boned and Rolls Over in Accident\"\n\"'The Masked Singer' Recap: A Grammy Winner Is Revealed As The Skeleton\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Unexpected ingredients that go great with eggs\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"The best independent bakery in every state\"\n\"40+ Ridiculously Good Gluten-Free Thanksgiving Recipes\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Apple bans vaping apps from the App Store\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on \"Apple bans vaping apps from the App Store\" is likely to discuss Apple's recent decision to remove vaping-related applications from its platform, highlighting the reasons behind this move. It may explore the implications for app developers and users, as well as the broader context of health concerns associated with vaping. The piece could provide insights into how this ban aligns with regulatory pressures and public health initiatives. Additionally, it may include perspectives from health advocates or industry experts, although the specifics of these viewpoints may not be fully detailed.",
+  "model": "gpt-4o-mini"
+}

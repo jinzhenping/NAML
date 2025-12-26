@@ -1,0 +1,21 @@
+{
+  "user_id": 811,
+  "candidate_news_id": "N84430",
+  "candidate_title": "The 1 reason you shouldn't hesitate to claim Social Security early",
+  "user_history_count": 10,
+  "user_history": [
+    "Las Vegas adopts ban on sleeping, camping on streets, sidewalks",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "Joanna Gaines reveals her family's favorite recipes in new cookbook",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment",
+    "I Was A Psychic Phone Line Operator. Here's What Really Happened Behind The Scenes.",
+    "This Is The Moment A Senior Shelter Dog Knew He Was Safe",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Must-See Fashion Police Moments to Swoon Over This Week"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Las Vegas adopts ban on sleeping, camping on streets, sidewalks\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"Joanna Gaines reveals her family's favorite recipes in new cookbook\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment\"\n\"I Was A Psychic Phone Line Operator. Here's What Really Happened Behind The Scenes.\"\n\"This Is The Moment A Senior Shelter Dog Knew He Was Safe\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Must-See Fashion Police Moments to Swoon Over This Week\"\n\n[Candidate News Title]\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about the implications and considerations surrounding the early claiming of Social Security benefits. It may discuss the financial consequences of taking benefits sooner rather than later, including potential reductions in monthly payments and the long-term impact on retirement income. The article could also explore various scenarios where early claiming might be advantageous, such as health concerns or immediate financial needs, while providing insights into how individuals can make informed decisions based on their personal circumstances.",
+  "model": "gpt-4o-mini"
+}

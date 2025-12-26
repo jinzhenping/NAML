@@ -1,0 +1,21 @@
+{
+  "user_id": 693,
+  "candidate_news_id": "N71394",
+  "candidate_title": "PG&E is offering $13.5 billion in compensation to wildfire victims",
+  "user_history_count": 10,
+  "user_history": [
+    "Rick Perry, top Trump administration aides scheduled to testify in impeachment inquiry",
+    "Kelsey Berreth Murder Suspect's Secret Ex: He 'Told Me to Take Care of the Problem'",
+    "The 50 cheapest places to buy land in America",
+    "Far-reaching snowstorm may take shape over US",
+    "45 Amazing Facts About Airplanes That Will Make Your Mind Soar",
+    "How Einstein's Greatest Theory Has Evolved Over the Century",
+    "House leaders demand FAA answer why it overruled its own engineers' safety concerns about Boeing 737 Max",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Two dead following explosion involving 18-wheeler in Texas",
+    "Bloomberg to pass on Iowa, NH, focus on Super Tuesday states"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Rick Perry, top Trump administration aides scheduled to testify in impeachment inquiry\"\n\"Kelsey Berreth Murder Suspect's Secret Ex: He 'Told Me to Take Care of the Problem'\"\n\"The 50 cheapest places to buy land in America\"\n\"Far-reaching snowstorm may take shape over US\"\n\"45 Amazing Facts About Airplanes That Will Make Your Mind Soar\"\n\"How Einstein's Greatest Theory Has Evolved Over the Century\"\n\"House leaders demand FAA answer why it overruled its own engineers' safety concerns about Boeing 737 Max\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Two dead following explosion involving 18-wheeler in Texas\"\n\"Bloomberg to pass on Iowa, NH, focus on Super Tuesday states\"\n\n[Candidate News Title]\n\"PG&E is offering $13.5 billion in compensation to wildfire victims\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about PG&E offering $13.5 billion in compensation to wildfire victims is likely to detail the company's response to the devastating wildfires in California and the legal implications surrounding them. Readers can expect to find information on the compensation process, including how victims can access funds and any stipulations that may apply. The article may also discuss the broader context of PG&E's financial challenges and the impact of these wildfires on the company's operational policies. Additionally, it could explore reactions from affected communities and stakeholders involved in the settlement process.",
+  "model": "gpt-4o-mini"
+}

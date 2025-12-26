@@ -1,0 +1,21 @@
+{
+  "user_id": 977,
+  "candidate_news_id": "N92905",
+  "candidate_title": "The Unlikely Star of My Family's Thanksgiving Table",
+  "user_history_count": 10,
+  "user_history": [
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'",
+    "The 2019 NFL mid-season All-Pro team",
+    "Will Tua play against LSU? Nick Saban says there's 'a good chance'",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "50 Unique Holiday Gift Ideas for Her Under $50",
+    "Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary",
+    "These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show",
+    "This Arctic blast is in its final day. But the cold isn't over quite yet",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'\"\n\"The 2019 NFL mid-season All-Pro team\"\n\"Will Tua play against LSU? Nick Saban says there's 'a good chance'\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"50 Unique Holiday Gift Ideas for Her Under $50\"\n\"Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary\"\n\"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\"\n\"This Arctic blast is in its final day. But the cold isn't over quite yet\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\n[Candidate News Title]\n\"The Unlikely Star of My Family's Thanksgiving Table\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The Unlikely Star of My Family's Thanksgiving Table\" is likely to explore the unique and perhaps unconventional dishes that can take center stage during Thanksgiving celebrations. Readers may expect insights into how these dishes become favorites, possibly including personal anecdotes or recipes that highlight their appeal. The piece could also touch on themes of family traditions and the ways in which different culinary influences shape the holiday experience. Overall, it seems intended to inspire readers to think creatively about their own Thanksgiving menus.",
+  "model": "gpt-4o-mini"
+}

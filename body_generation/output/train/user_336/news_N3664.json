@@ -1,0 +1,21 @@
+{
+  "user_id": 336,
+  "candidate_news_id": "N3664",
+  "candidate_title": "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+  "user_history_count": 10,
+  "user_history": [
+    "Chrissy Teigen's Mom and Dad Are Getting Divorced",
+    "N&N: Roberto Perez named Defensive Player of the Year",
+    "2019 Wilson Defensive Player of the Year Award winners announced",
+    "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "MLB Silver Slugger Award winners for 2019 season announced",
+    "Jets' Adams clears air with Douglas, Gase about trade talk",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chrissy Teigen's Mom and Dad Are Getting Divorced\"\n\"N&N: Roberto Perez named Defensive Player of the Year\"\n\"2019 Wilson Defensive Player of the Year Award winners announced\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"MLB Silver Slugger Award winners for 2019 season announced\"\n\"Jets' Adams clears air with Douglas, Gase about trade talk\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'\"\n\n[Candidate News Title]\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the untimely death of Broadway star Laurel Griggs, who suffered an asthma attack at the young age of 13. Readers can expect information about her background in theater, including her notable performances and contributions to the arts. The article may also provide details about the circumstances surrounding her health issues and the impact of her passing on her family and the Broadway community. Additionally, it could touch on the broader conversation regarding asthma management and awareness, particularly among young performers.",
+  "model": "gpt-4o-mini"
+}

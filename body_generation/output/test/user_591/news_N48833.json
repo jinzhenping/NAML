@@ -1,0 +1,21 @@
+{
+  "user_id": 591,
+  "candidate_news_id": "N48833",
+  "candidate_title": "85 Thanksgiving Recipes You Can Make Ahead",
+  "user_history_count": 10,
+  "user_history": [
+    "Renovations To Make   and Skip   Before Selling Your Home",
+    "The Best Seafood Restaurant in All 50 States",
+    "A Chef Shares the Secret Ingredient Your Mac and Cheese Is Missing",
+    "Airline passengers share photos of their worst in-flight meals",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "The Hospital on a Mission to Bring Home-Cooked Meals to Its Patients",
+    "Why is this Bronze Age town so popular today?",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "10 of the best fast-food taco chains across the US",
+    "Fast food cashier and manager fired for refusing to serve police officer"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Renovations To Make   and Skip   Before Selling Your Home\"\n\"The Best Seafood Restaurant in All 50 States\"\n\"A Chef Shares the Secret Ingredient Your Mac and Cheese Is Missing\"\n\"Airline passengers share photos of their worst in-flight meals\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"The Hospital on a Mission to Bring Home-Cooked Meals to Its Patients\"\n\"Why is this Bronze Age town so popular today?\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"10 of the best fast-food taco chains across the US\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\n[Candidate News Title]\n\"85 Thanksgiving Recipes You Can Make Ahead\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"85 Thanksgiving Recipes You Can Make Ahead\" is likely to provide a diverse range of recipes designed for ease and convenience during the Thanksgiving holiday. Readers can expect to find a variety of dishes that cater to different dietary preferences and cooking skill levels, with an emphasis on make-ahead options to help streamline holiday preparations. It may include appetizers, main courses, and sides that can be prepped in advance, allowing for a more relaxed cooking experience on the day of the celebration.",
+  "model": "gpt-4o-mini"
+}

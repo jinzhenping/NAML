@@ -1,0 +1,21 @@
+{
+  "user_id": 335,
+  "candidate_news_id": "N55935",
+  "candidate_title": "Panthers QB Cam Newton would reportedly welcome trade to Bears",
+  "user_history_count": 10,
+  "user_history": [
+    "Biden on being denied communion: 'I'm a practicing Catholic, I practice my faith'",
+    "Martin worries about amputation after breaking right leg",
+    "How To Open a Can Without a Can Opener",
+    "Jason Garrett indicates Cowboys want Michael Bennett on sideline for national anthem",
+    "How Howie Kendrick became a Nationals legend during their World Series run",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "The Latest: Kansas City to remove King's name from street",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Biden on being denied communion: 'I'm a practicing Catholic, I practice my faith'\"\n\"Martin worries about amputation after breaking right leg\"\n\"How To Open a Can Without a Can Opener\"\n\"Jason Garrett indicates Cowboys want Michael Bennett on sideline for national anthem\"\n\"How Howie Kendrick became a Nationals legend during their World Series run\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\n[Candidate News Title]\n\"Panthers QB Cam Newton would reportedly welcome trade to Bears\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about the current situation of Panthers quarterback Cam Newton, who reportedly has an interest in a potential trade to the Chicago Bears. The piece may explore the implications of such a move for both teams, including how Newton's experience and skills could benefit the Bears as they seek to strengthen their roster. Additionally, it could provide insights into the factors influencing Newton's desire for a trade, including his performance and the dynamics within the Panthers organization.",
+  "model": "gpt-4o-mini"
+}

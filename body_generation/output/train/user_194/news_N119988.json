@@ -1,0 +1,21 @@
+{
+  "user_id": 194,
+  "candidate_news_id": "N119988",
+  "candidate_title": "Small Canadian island irate that Americans keep opening their mail",
+  "user_history_count": 10,
+  "user_history": [
+    "Stephen Strasburg's stellar performance sets up dramatic Game 7 of the World Series",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Goats Munching on Vegetation Helped Save the Reagan Presidential Library in California Wildfire",
+    "Nationals win first World Series title, storming back on Astros in Game 7, 6-2",
+    "What I Wish My Dad Told Me More Growing Up, According to 10 Men",
+    "Why You Should Always Close the Door Before You Go to Bed",
+    "Joel Embiid, Karl-Anthony Towns likely facing multi-game bans for roles in brawl",
+    "8 Questions to Ask Yourself Before Using CBD",
+    "Jane Fonda, Rosanna Arquette, Catherine Keener arrested at climate change protest: 'Women bear the brunt'",
+    "Pence denies Trump did anything wrong in call with Ukrainian president"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Stephen Strasburg's stellar performance sets up dramatic Game 7 of the World Series\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Goats Munching on Vegetation Helped Save the Reagan Presidential Library in California Wildfire\"\n\"Nationals win first World Series title, storming back on Astros in Game 7, 6-2\"\n\"What I Wish My Dad Told Me More Growing Up, According to 10 Men\"\n\"Why You Should Always Close the Door Before You Go to Bed\"\n\"Joel Embiid, Karl-Anthony Towns likely facing multi-game bans for roles in brawl\"\n\"8 Questions to Ask Yourself Before Using CBD\"\n\"Jane Fonda, Rosanna Arquette, Catherine Keener arrested at climate change protest: 'Women bear the brunt'\"\n\"Pence denies Trump did anything wrong in call with Ukrainian president\"\n\n[Candidate News Title]\n\"Small Canadian island irate that Americans keep opening their mail\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the growing tensions between a small Canadian island community and American residents who have been reportedly opening their mail. It may explore the reasons behind the locals' frustration, including concerns over privacy and respect for borders. The piece could also provide insight into the island's unique characteristics, such as its demographics and local customs, which might contribute to the community's reaction. Additionally, it is likely to touch on any legal or logistical implications regarding mail handling between the two countries.",
+  "model": "gpt-4o-mini"
+}

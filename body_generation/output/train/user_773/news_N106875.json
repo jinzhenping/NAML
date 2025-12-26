@@ -1,0 +1,21 @@
+{
+  "user_id": 773,
+  "candidate_news_id": "N106875",
+  "candidate_title": "Nurse took in disabled teen, then tortured and killed her, police say.",
+  "user_history_count": 10,
+  "user_history": [
+    "Meghan Markle earns Duchess Camilla's support, royal expert says",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Mother Is Freed After 15 Years in Prison for Father's Abuse",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "Ashley Graham Says She Has a Major Case of Pregnancy Brain But What Is That?",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week",
+    "Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan Markle earns Duchess Camilla's support, royal expert says\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Mother Is Freed After 15 Years in Prison for Father's Abuse\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"Ashley Graham Says She Has a Major Case of Pregnancy Brain But What Is That?\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week\"\n\"Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned\"\n\n[Candidate News Title]\n\"Nurse took in disabled teen, then tortured and killed her, police say.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely details a troubling case involving a nurse accused of taking in a disabled teenager, only to allegedly subject her to severe abuse that resulted in her death. Readers can expect to find information about the circumstances leading to the incident, the legal actions taken by authorities, and the responses from the community. It may also explore the background of both the nurse and the victim, providing context on their lives prior to the tragic event. Additionally, the article could touch on broader issues regarding caregiver responsibilities and the protection of vulnerable individuals.",
+  "model": "gpt-4o-mini"
+}

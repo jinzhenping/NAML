@@ -1,0 +1,21 @@
+{
+  "user_id": 465,
+  "candidate_news_id": "N100073",
+  "candidate_title": "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+  "user_history_count": 10,
+  "user_history": [
+    "The Best Cruise Lines in the World: 2019 Readers' Choice Awards",
+    "Dad Lied About 4-Year-Old's Role In Double Shooting: Report",
+    "'Slender Man' survivor's brother: 'I couldn't believe... that kind of thing' happened",
+    "Bill Belichick: 'It's a possibility' Isaiah Wynn will begin practicing",
+    "US Fed cuts interest rates, signals it is on hold",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "South Florida principal who made controversial comments about the Holocaust is fired",
+    "ISIS names successor to slain leader al-Baghdadi",
+    "Report: Patriots release Gordon from injured reserve",
+    "Before his execution, a death row inmate told his victim's family he forgives them"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Best Cruise Lines in the World: 2019 Readers' Choice Awards\"\n\"Dad Lied About 4-Year-Old's Role In Double Shooting: Report\"\n\"'Slender Man' survivor's brother: 'I couldn't believe... that kind of thing' happened\"\n\"Bill Belichick: 'It's a possibility' Isaiah Wynn will begin practicing\"\n\"US Fed cuts interest rates, signals it is on hold\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"South Florida principal who made controversial comments about the Holocaust is fired\"\n\"ISIS names successor to slain leader al-Baghdadi\"\n\"Report: Patriots release Gordon from injured reserve\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\n[Candidate News Title]\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family,\" the user is likely expecting an exploration of the significance behind Prince Harry's choice of poppy style during a remembrance event. The piece may discuss the traditional use of the poppy in honoring military sacrifices and how variations in its display can reflect personal beliefs or messages. It could also examine any reactions from the royal family or the public regarding this choice, providing insights into its broader implications within royal customs and contemporary discussions about remembrance.",
+  "model": "gpt-4o-mini"
+}

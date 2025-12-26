@@ -1,0 +1,21 @@
+{
+  "user_id": 17,
+  "candidate_news_id": "N24958",
+  "candidate_title": "2019 Los Angeles Auto Show Preview",
+  "user_history_count": 10,
+  "user_history": [
+    "American families fleeing Mexico arrive in Arizona days after cartel massacre",
+    "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+    "What happens in your body when you sneeze?",
+    "Homeless encampment in Hollywood continues to grow, residents say",
+    "Opinion: Rams are paying the true price of their $134 million investment in QB Jared Goff",
+    "Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood",
+    "Heisman Watch: Joe Burrow is the frontrunner, and there's not a close second",
+    "USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9",
+    "FBI, ATF, Sheriff's Investigators Converge On Suspected Saugus High Shooter's Home",
+    "'One in a million' deer captured on camera in Michigan woods"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"American families fleeing Mexico arrive in Arizona days after cartel massacre\"\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\"What happens in your body when you sneeze?\"\n\"Homeless encampment in Hollywood continues to grow, residents say\"\n\"Opinion: Rams are paying the true price of their $134 million investment in QB Jared Goff\"\n\"Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood\"\n\"Heisman Watch: Joe Burrow is the frontrunner, and there's not a close second\"\n\"USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9\"\n\"FBI, ATF, Sheriff's Investigators Converge On Suspected Saugus High Shooter's Home\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n[Candidate News Title]\n\"2019 Los Angeles Auto Show Preview\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"2019 Los Angeles Auto Show Preview\" is likely to provide an overview of the upcoming auto show, highlighting key features and anticipated vehicle reveals. Readers may expect information on notable manufacturers participating, innovative technologies being showcased, and any special events planned during the show. Additionally, the article could discuss trends in the automotive industry, such as the increasing focus on electric vehicles and sustainable practices. Overall, it aims to prepare the audience for what to expect at this significant automotive event in Los Angeles.",
+  "model": "gpt-4o-mini"
+}

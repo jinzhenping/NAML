@@ -1,0 +1,21 @@
+{
+  "user_id": 61,
+  "candidate_news_id": "N118266",
+  "candidate_title": "WATCH: Trump Greeted by Cheers at LSU-Alabama Football Game",
+  "user_history_count": 10,
+  "user_history": [
+    "1967 Chevy Corvette Destroys Supercars",
+    "Former Seminoles star Deion Sanders is not candidate for Florida State football coaching job",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Jennifer Aniston looks amazing in a makeup-free selfie, plus more news",
+    "Vanna White hosts 'Wheel of Fortune' after Sajak has surgery",
+    "The Oprah's Favorite Things 2019 List Is Here!",
+    "The most famous hotel in every state",
+    "Who tore down the Berlin Wall? Not David Hasselhoff, but Germans still love him",
+    "Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says",
+    "Under Construction in Texas: The First New Section of Border Wall"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"1967 Chevy Corvette Destroys Supercars\"\n\"Former Seminoles star Deion Sanders is not candidate for Florida State football coaching job\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Jennifer Aniston looks amazing in a makeup-free selfie, plus more news\"\n\"Vanna White hosts 'Wheel of Fortune' after Sajak has surgery\"\n\"The Oprah's Favorite Things 2019 List Is Here!\"\n\"The most famous hotel in every state\"\n\"Who tore down the Berlin Wall? Not David Hasselhoff, but Germans still love him\"\n\"Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says\"\n\"Under Construction in Texas: The First New Section of Border Wall\"\n\n[Candidate News Title]\n\"WATCH: Trump Greeted by Cheers at LSU-Alabama Football Game\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent event where former President Donald Trump received a warm reception during a football game between LSU and Alabama. Readers may expect to learn about the context of his appearance, including any remarks he made or interactions with fans. Additionally, the piece could explore the significance of Trump's presence at a high-profile sporting event, particularly in relation to his political influence and public image. It may also touch upon audience reactions and any broader implications for his political standing.",
+  "model": "gpt-4o-mini"
+}

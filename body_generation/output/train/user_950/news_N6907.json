@@ -1,0 +1,21 @@
+{
+  "user_id": 950,
+  "candidate_news_id": "N6907",
+  "candidate_title": "National Cappuccino Day 2019: Deals from Starbucks, Dunkin' Donuts and More",
+  "user_history_count": 10,
+  "user_history": [
+    "20 home renovations that kill your home's value",
+    "I tried to order everything on Taco Bell's secret menu, and it was a total disaster",
+    "American-Made Cheese Named World's Best for the First Time Ever",
+    "Photos of the Day",
+    "14 celebrities you didn't know hold world records",
+    "Rise and Grind: A Hot Dog Success Story",
+    "What's behind the 'mystery surcharge' at some California gas stations?",
+    "Walmart Sparks Panic and Confusion in the Dish-Soap Aisle",
+    "SNL's Michael Che Under Fire on Twitter for Calling Caitlyn Jenner a 'Fella' on Weekend Update",
+    "Ben Affleck Breaks Silence After \"Slip\" In Sobriety"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"20 home renovations that kill your home's value\"\n\"I tried to order everything on Taco Bell's secret menu, and it was a total disaster\"\n\"American-Made Cheese Named World's Best for the First Time Ever\"\n\"Photos of the Day\"\n\"14 celebrities you didn't know hold world records\"\n\"Rise and Grind: A Hot Dog Success Story\"\n\"What's behind the 'mystery surcharge' at some California gas stations?\"\n\"Walmart Sparks Panic and Confusion in the Dish-Soap Aisle\"\n\"SNL's Michael Che Under Fire on Twitter for Calling Caitlyn Jenner a 'Fella' on Weekend Update\"\n\"Ben Affleck Breaks Silence After \"Slip\" In Sobriety\"\n\n[Candidate News Title]\n\"National Cappuccino Day 2019: Deals from Starbucks, Dunkin' Donuts and More\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a comprehensive overview of National Cappuccino Day, including various promotions and deals offered by popular coffee chains such as Starbucks and Dunkin' Donuts. The piece may detail specific offers, like discounts or special menu items available for a limited time, appealing to coffee enthusiasts looking to indulge in their favorite beverages. Additionally, the article could explore the significance of the day in celebrating cappuccino culture, enhancing the reader's understanding of this beverage's popularity and its role in social settings.",
+  "model": "gpt-4o-mini"
+}

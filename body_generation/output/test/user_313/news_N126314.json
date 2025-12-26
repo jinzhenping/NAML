@@ -1,0 +1,21 @@
+{
+  "user_id": 313,
+  "candidate_news_id": "N126314",
+  "candidate_title": "Uber and Mayor Lightfoot battle over raising ride-hailing fees and congestion",
+  "user_history_count": 10,
+  "user_history": [
+    "How Clippers Lou Williams will help Kawhi Leonard, Paul George form 'Big Three'",
+    "LeBron scores 32, AD adds 21 in Lakers' 95-86 win over Jazz",
+    "Rodgers, Jones star for Packers in 31-24 victory over Chiefs",
+    "Report: Dodgers likely to pursue Francisco Lindor trade",
+    "Anthony Davis is why you always trade for the superstar if you can",
+    "Clippers resting Kawhi Leonard for nationally televised game at Jazz",
+    "Arizona transfer Baker receives waiver, eligible immediately",
+    "Michigan basketball has changed a lot in 2019, but here's what's the same: Zavier Simpson",
+    "LeBron gets triple-double, credits Dwight Howard for 'Superman' performance",
+    "Davis' 26 send Lakers past Heat 95-80 for 7th straight win"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"How Clippers Lou Williams will help Kawhi Leonard, Paul George form 'Big Three'\"\n\"LeBron scores 32, AD adds 21 in Lakers' 95-86 win over Jazz\"\n\"Rodgers, Jones star for Packers in 31-24 victory over Chiefs\"\n\"Report: Dodgers likely to pursue Francisco Lindor trade\"\n\"Anthony Davis is why you always trade for the superstar if you can\"\n\"Clippers resting Kawhi Leonard for nationally televised game at Jazz\"\n\"Arizona transfer Baker receives waiver, eligible immediately\"\n\"Michigan basketball has changed a lot in 2019, but here's what's the same: Zavier Simpson\"\n\"LeBron gets triple-double, credits Dwight Howard for 'Superman' performance\"\n\"Davis' 26 send Lakers past Heat 95-80 for 7th straight win\"\n\n[Candidate News Title]\n\"Uber and Mayor Lightfoot battle over raising ride-hailing fees and congestion\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Uber and Mayor Lightfoot battle over raising ride-hailing fees and congestion,\" they are likely expecting to read about the ongoing discussions and potential conflicts between Uber and the city's administration regarding proposed increases in ride-hailing fees. The article may provide insights into the reasons behind these fee hikes, such as addressing congestion issues in urban areas, and could include perspectives from both Uber representatives and city officials. Additionally, it is likely to touch on how these changes might impact drivers and passengers in Chicago.",
+  "model": "gpt-4o-mini"
+}

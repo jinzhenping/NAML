@@ -1,0 +1,21 @@
+{
+  "user_id": 992,
+  "candidate_news_id": "N55725",
+  "candidate_title": "Israel says overnight strike on Gaza house killed Islamic Jihad commander",
+  "user_history_count": 10,
+  "user_history": [
+    "50 Home Décor Horrors You Can't Look Away From",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+    "Coast Guard searches for man who fell from cruise off Texas",
+    "Dog The Bounty Hunter Is Cutting Out White Foods After His Recent Health Scare",
+    "Halloween snowstorm wallops the Midwest",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "27 handmade alternatives to buying gifts for the home",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Before his execution, a death row inmate told his victim's family he forgives them"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"50 Home Décor Horrors You Can't Look Away From\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge\"\n\"Coast Guard searches for man who fell from cruise off Texas\"\n\"Dog The Bounty Hunter Is Cutting Out White Foods After His Recent Health Scare\"\n\"Halloween snowstorm wallops the Midwest\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"27 handmade alternatives to buying gifts for the home\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\n[Candidate News Title]\n\"Israel says overnight strike on Gaza house killed Islamic Jihad commander\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Israel says overnight strike on Gaza house killed Islamic Jihad commander\" is likely to report on a recent military operation conducted by Israeli forces, which resulted in the death of a key figure associated with Islamic Jihad. Readers can expect details about the circumstances surrounding the strike, including the location and any potential implications for ongoing conflicts in the region. The piece may also provide context regarding the broader situation in Gaza, such as reactions from both Israeli and Palestinian authorities, as well as insights into the significance of the commander’s death in the current geopolitical landscape.",
+  "model": "gpt-4o-mini"
+}

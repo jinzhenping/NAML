@@ -1,0 +1,21 @@
+{
+  "user_id": 315,
+  "candidate_news_id": "N50389",
+  "candidate_title": "Astros can make history if Bregman wins MVP",
+  "user_history_count": 10,
+  "user_history": [
+    "Verlander, Astros can clinch World Series vs Nats in Game 6",
+    "Kate Upton gets ratio'd on Twitter for defending controversial interference call",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "MLB free-agent predictions: Rankings, rumors for the top players on the market",
+    "Top 20 MLB free-agent position players",
+    "40 Best Belly-Shrinking Foods",
+    "Here's What Kate Hudson Eats in a Day to Stay Sculpted at 40",
+    "The Best Beaches in Hawaii to Visit in Your Lifetime",
+    "Gerrit Cole and Stephen Strasburg will cash in on their postseason dominance",
+    "Loved One Gave You Down Payment Money? You'll Need a Mortgage Gift Letter"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Verlander, Astros can clinch World Series vs Nats in Game 6\"\n\"Kate Upton gets ratio'd on Twitter for defending controversial interference call\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"MLB free-agent predictions: Rankings, rumors for the top players on the market\"\n\"Top 20 MLB free-agent position players\"\n\"40 Best Belly-Shrinking Foods\"\n\"Here's What Kate Hudson Eats in a Day to Stay Sculpted at 40\"\n\"The Best Beaches in Hawaii to Visit in Your Lifetime\"\n\"Gerrit Cole and Stephen Strasburg will cash in on their postseason dominance\"\n\"Loved One Gave You Down Payment Money? You'll Need a Mortgage Gift Letter\"\n\n[Candidate News Title]\n\"Astros can make history if Bregman wins MVP\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the significance of Alex Bregman's potential MVP win in the context of the Houston Astros' season and legacy. It may detail how Bregman's performance has contributed to the team's success and the historical implications of his achievement if he secures the award. Additionally, the piece could explore comparisons with other MVP candidates and highlight key statistics that support Bregman's candidacy. Overall, the article may provide insights into the Astros' quest for greatness and the impact of individual accolades on team dynamics.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 188,
+  "candidate_news_id": "N54368",
+  "candidate_title": "South Carolina teen gets life in prison for deadly elementary school shooting",
+  "user_history_count": 10,
+  "user_history": [
+    "105 Black Friday Deals You Can Start Shopping Today",
+    "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case",
+    "American woman apparently strangled in the Dominican Republic",
+    "Answers remain elusive in Virginia Beach shooting rampage",
+    "7 Type 2 Diabetes Symptoms That Are So Subtle, You Might Miss Them",
+    "Miranda Lambert Is Pretty in Pink at 2019 CMA Awards With Husband Brendan McLoughlin",
+    "Marcia Cross' anal cancer may have been linked to HPV. She wants people to know they could have the virus, too.",
+    "North Korea says Trump administration sought reopening of nuclear talks",
+    "Nor'easter to grind at US East Coast this weekend",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"105 Black Friday Deals You Can Start Shopping Today\"\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\"American woman apparently strangled in the Dominican Republic\"\n\"Answers remain elusive in Virginia Beach shooting rampage\"\n\"7 Type 2 Diabetes Symptoms That Are So Subtle, You Might Miss Them\"\n\"Miranda Lambert Is Pretty in Pink at 2019 CMA Awards With Husband Brendan McLoughlin\"\n\"Marcia Cross' anal cancer may have been linked to HPV. She wants people to know they could have the virus, too.\"\n\"North Korea says Trump administration sought reopening of nuclear talks\"\n\"Nor'easter to grind at US East Coast this weekend\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\n[Candidate News Title]\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"South Carolina teen gets life in prison for deadly elementary school shooting,\" the user may expect a detailed account of the case surrounding the sentencing of a teenager involved in a tragic school shooting incident. The piece is likely to cover the events leading up to the shooting, the legal proceedings, and the implications of the sentence on the community and the victims' families. Additionally, it may explore broader themes of gun violence in schools and the legal ramifications for minors involved in such serious crimes. The article could also provide insights into the motivations behind the shooting, though this aspect may remain speculative.",
+  "model": "gpt-4o-mini"
+}

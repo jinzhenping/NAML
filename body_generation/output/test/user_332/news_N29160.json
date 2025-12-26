@@ -1,0 +1,21 @@
+{
+  "user_id": 332,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 10,
+  "user_history": [
+    "2nd Michigan State receiver enters transfer portal",
+    "Forde-Yard Dash: This is how bad the playoff picture can get",
+    "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+    "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+    "Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged",
+    "New Mexico DE Nahje Flowers dies at 21",
+    "Cold blast to leave much of US shivering",
+    "Snow crab sells for record price in Japan",
+    "10 biggest disappointments from college football's wild Week 11",
+    "Tourists, Venetians slosh through flooded lagoon city"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"2nd Michigan State receiver enters transfer portal\"\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged\"\n\"New Mexico DE Nahje Flowers dies at 21\"\n\"Cold blast to leave much of US shivering\"\n\"Snow crab sells for record price in Japan\"\n\"10 biggest disappointments from college football's wild Week 11\"\n\"Tourists, Venetians slosh through flooded lagoon city\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may encounter a discussion surrounding Colin Kaepernick's potential return to the NFL, focusing on the context of his career and the circumstances that have led to this moment. The piece is likely to explore Kaepernick's impact on the sport, including his activism and the public's divided response to it. Additionally, it may analyze the current state of the NFL and how teams are assessing quarterback talent. Speculatively, the article could highlight the challenges Kaepernick might face in regaining a position in the league, as well as what a second chance could signify for him and the broader conversation about sports and social justice.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 131,
+  "candidate_news_id": "N120089",
+  "candidate_title": "The Hottest Tech Gifts This Holiday Season",
+  "user_history_count": 10,
+  "user_history": [
+    "Body of missing Salvadoran trans activist found",
+    "Celtics roll over Spurs for seventh straight win",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Opinion: Rams are paying the true price of their $134 million investment in QB Jared Goff",
+    "No. 1 milk company declares bankruptcy amid drop in demand",
+    "A 25-point underdog, Evansville basketball stuns No. 1 Kentucky and the nation",
+    "This is Exactly How Long You Should Keep Thanksgiving Leftovers",
+    "Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy",
+    "Nor'easter to grind at US East Coast this weekend",
+    "For Cody Bellinger, all it took to show emotion was an MVP award and a hug from his father"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Body of missing Salvadoran trans activist found\"\n\"Celtics roll over Spurs for seventh straight win\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Opinion: Rams are paying the true price of their $134 million investment in QB Jared Goff\"\n\"No. 1 milk company declares bankruptcy amid drop in demand\"\n\"A 25-point underdog, Evansville basketball stuns No. 1 Kentucky and the nation\"\n\"This is Exactly How Long You Should Keep Thanksgiving Leftovers\"\n\"Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy\"\n\"Nor'easter to grind at US East Coast this weekend\"\n\"For Cody Bellinger, all it took to show emotion was an MVP award and a hug from his father\"\n\n[Candidate News Title]\n\"The Hottest Tech Gifts This Holiday Season\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The Hottest Tech Gifts This Holiday Season,\" you can expect an overview of popular technology products that are trending as gifts for the upcoming holiday season. The article is likely to highlight various gadgets such as smart devices, gaming consoles, or wearable technology, providing insights into their features and potential appeal to different demographics. Additionally, it may include price ranges and recommendations based on user preferences or current market trends, helping you navigate the options available this year.",
+  "model": "gpt-4o-mini"
+}

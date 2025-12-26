@@ -1,0 +1,21 @@
+{
+  "user_id": 931,
+  "candidate_news_id": "N54239",
+  "candidate_title": "America's Most and Least Popular Senators",
+  "user_history_count": 10,
+  "user_history": [
+    "Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech",
+    "25 awesome gifts men actually want this year",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Under shroud of secrecy US weapons arrive in Yemen despite Congressional outrage",
+    "Chevrolet Somehow Makes One (1) Electric Pickup Truck",
+    "'Sons Of Anarchy' Star Ron Perlman Files for Divorce After 38 Years of Marriage",
+    "Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.",
+    "Snow crab sells for record price in Japan",
+    "Turkish patrol kills protester amid shaky truce in NE Syria",
+    "Fracking pioneer Chesapeake Energy is drowning in debt"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech\"\n\"25 awesome gifts men actually want this year\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Under shroud of secrecy US weapons arrive in Yemen despite Congressional outrage\"\n\"Chevrolet Somehow Makes One (1) Electric Pickup Truck\"\n\"'Sons Of Anarchy' Star Ron Perlman Files for Divorce After 38 Years of Marriage\"\n\"Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.\"\n\"Snow crab sells for record price in Japan\"\n\"Turkish patrol kills protester amid shaky truce in NE Syria\"\n\"Fracking pioneer Chesapeake Energy is drowning in debt\"\n\n[Candidate News Title]\n\"America's Most and Least Popular Senators\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"America's Most and Least Popular Senators\" is likely to explore the approval ratings of various U.S. senators, providing insights into public opinion regarding their performance and policies. Readers may expect to see a breakdown of the factors influencing these ratings, such as recent legislative actions, constituents' concerns, and party affiliation. The piece could also include comparisons between the most and least popular figures, discussing trends in political sentiment across different states or demographics. Overall, it appears to be an informative analysis of the current political landscape.",
+  "model": "gpt-4o-mini"
+}

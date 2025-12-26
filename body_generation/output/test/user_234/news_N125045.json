@@ -1,0 +1,21 @@
+{
+  "user_id": 234,
+  "candidate_news_id": "N125045",
+  "candidate_title": "George Conway and Trump Jr. trade personal insults during impeachment hearing",
+  "user_history_count": 10,
+  "user_history": [
+    "Solange Knowles splits with husband ahead of anniversary",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "'Midway' Surprises 'Doctor Sleep' to Win Box Office Battle With $17 Million Debut",
+    "97-year-old WWII veteran takes ride in B-17 bomber for Veteran's Day",
+    "Best country music albums of all time",
+    "The 50 cheapest places to buy land in America",
+    "The 50 cheapest places to buy land in America",
+    "The 50 cheapest places to buy land in America",
+    "Beat the crowds at these abandoned U.S. national parks"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Solange Knowles splits with husband ahead of anniversary\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"'Midway' Surprises 'Doctor Sleep' to Win Box Office Battle With $17 Million Debut\"\n\"97-year-old WWII veteran takes ride in B-17 bomber for Veteran's Day\"\n\"Best country music albums of all time\"\n\"The 50 cheapest places to buy land in America\"\n\"The 50 cheapest places to buy land in America\"\n\"The 50 cheapest places to buy land in America\"\n\"Beat the crowds at these abandoned U.S. national parks\"\n\n[Candidate News Title]\n\"George Conway and Trump Jr. trade personal insults during impeachment hearing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to read about a contentious exchange between George Conway and Donald Trump Jr. during an impeachment hearing, focusing on the personal insults exchanged between the two figures. The piece is likely to provide context regarding the political climate surrounding the impeachment proceedings, detailing their respective positions and the implications of their remarks. Additionally, it could explore the broader significance of such personal attacks in the current political discourse, illustrating how they reflect ongoing tensions within the Republican party.",
+  "model": "gpt-4o-mini"
+}

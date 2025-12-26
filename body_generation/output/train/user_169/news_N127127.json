@@ -1,0 +1,21 @@
+{
+  "user_id": 169,
+  "candidate_news_id": "N127127",
+  "candidate_title": "UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push",
+  "user_history_count": 10,
+  "user_history": [
+    "Couple's haunting wedding photo captures California wildfire raging nearby",
+    "Emilia Clarke Reacts to the 'Game of Thrones' Prequel News (Exclusive)",
+    "10 Unexpected Ways To Bond With A Cat",
+    "Kentucky man dies trying to save sons from Florida rip current during family trip",
+    "Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call",
+    "Every Must-See Photo of Stars Celebrating Halloween 2019",
+    "What Is Brown Butter and Should You Be Using It?",
+    "The Ultimate Guide to Mushrooms",
+    "The seedless lemon revolution has taken root in California",
+    "Lamborghini's long shot mission to take its super fast cars into the electric age"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Couple's haunting wedding photo captures California wildfire raging nearby\"\n\"Emilia Clarke Reacts to the 'Game of Thrones' Prequel News (Exclusive)\"\n\"10 Unexpected Ways To Bond With A Cat\"\n\"Kentucky man dies trying to save sons from Florida rip current during family trip\"\n\"Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"What Is Brown Butter and Should You Be Using It?\"\n\"The Ultimate Guide to Mushrooms\"\n\"The seedless lemon revolution has taken root in California\"\n\"Lamborghini's long shot mission to take its super fast cars into the electric age\"\n\n[Candidate News Title]\n\"UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the UK bakery chain's recommendation to switch from jelly doughnuts to ring doughnuts as part of a healthy-eating initiative may reflect broader trends in the food industry towards healthier alternatives. The piece is likely to explore the rationale behind this shift, possibly discussing nutritional comparisons between the two types of doughnuts and how consumer preferences are evolving. Additionally, the article could include reactions from customers and experts regarding this change, shedding light on the challenges and opportunities faced by bakeries in promoting healthier options.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 499,
+  "candidate_news_id": "N49790",
+  "candidate_title": "Browns apologize to Mason Rudolph, call Myles Garrett's actions 'unacceptable'",
+  "user_history_count": 10,
+  "user_history": [
+    "Why Trump's tariffs haven't revitalized American steelmakers",
+    "South Dakota executes man in '92 slaying of former co-worker",
+    "IHSA Challenges Ruling That Allowed CPS Cross-Country Runners To Advance Despite Recent Teachers' Strike",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Snow crab sells for record price in Japan",
+    "Rare 1838 coin could sell for $500K",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why Trump's tariffs haven't revitalized American steelmakers\"\n\"South Dakota executes man in '92 slaying of former co-worker\"\n\"IHSA Challenges Ruling That Allowed CPS Cross-Country Runners To Advance Despite Recent Teachers' Strike\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Snow crab sells for record price in Japan\"\n\"Rare 1838 coin could sell for $500K\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\n[Candidate News Title]\n\"Browns apologize to Mason Rudolph, call Myles Garrett's actions 'unacceptable'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to address the recent apology issued by the Cleveland Browns to quarterback Mason Rudolph, focusing on the context surrounding Myles Garrett's actions, which the team has deemed \"unacceptable.\" Readers may expect an analysis of the incident that led to the apology, including details about the game in question and its implications for team dynamics and player relationships. Additionally, the article might explore the reactions from fans and analysts, and delve into how the team's response could affect their reputation and future interactions within the league.",
+  "model": "gpt-4o-mini"
+}

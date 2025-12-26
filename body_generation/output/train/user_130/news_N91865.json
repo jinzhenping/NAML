@@ -1,0 +1,21 @@
+{
+  "user_id": 130,
+  "candidate_news_id": "N91865",
+  "candidate_title": "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+  "user_history_count": 10,
+  "user_history": [
+    "Everything We Think We Know About the 2020 Ford Bronco",
+    "Jepkosgei wins NYC in 1st marathon, Kamworor takes men's",
+    "2021 Chevy Tahoe, Suburban To Debut On December 10",
+    "Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV",
+    "55-year-old woman struck and killed by car in Sarasota",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Wild & wonderful treasures of SEMA 2019   US edition",
+    "This Is What the 2020 Toyota Supra Should've Looked Like From the Start",
+    "Bloomberg ready to spend 'whatever it takes' to become president",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Everything We Think We Know About the 2020 Ford Bronco\"\n\"Jepkosgei wins NYC in 1st marathon, Kamworor takes men's\"\n\"2021 Chevy Tahoe, Suburban To Debut On December 10\"\n\"Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV\"\n\"55-year-old woman struck and killed by car in Sarasota\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Wild & wonderful treasures of SEMA 2019   US edition\"\n\"This Is What the 2020 Toyota Supra Should've Looked Like From the Start\"\n\"Bloomberg ready to spend 'whatever it takes' to become president\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\n[Candidate News Title]\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent claims made by a former FDA adviser regarding LASIK eye surgery, suggesting that it should be removed from the market due to safety concerns. Readers can expect an analysis of the potential risks associated with the procedure, including complications and long-term effects, as well as insights into the regulatory landscape surrounding LASIK. The piece may also explore the implications of such a recommendation for patients considering the surgery, as well as the broader medical community's response to these assertions.",
+  "model": "gpt-4o-mini"
+}

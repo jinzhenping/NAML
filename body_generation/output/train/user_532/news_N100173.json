@@ -1,0 +1,21 @@
+{
+  "user_id": 532,
+  "candidate_news_id": "N100173",
+  "candidate_title": "Britney Spears Reveals Her Secret Cheat Meal In All Its Chocolaty Glory",
+  "user_history_count": 10,
+  "user_history": [
+    "Chevy Says This Isn't a Mid-Engine C8 Corvette Hybrid Prototype",
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+    "First Look! SEMA 2019 Move-In Gallery Inside the Las Vegas Convention Center",
+    "GM sells its Lordstown Assembly plant to electric truck start-up",
+    "Snow crab sells for record price in Japan",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chevy Says This Isn't a Mid-Engine C8 Corvette Hybrid Prototype\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"First Look! SEMA 2019 Move-In Gallery Inside the Las Vegas Convention Center\"\n\"GM sells its Lordstown Assembly plant to electric truck start-up\"\n\"Snow crab sells for record price in Japan\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\n[Candidate News Title]\n\"Britney Spears Reveals Her Secret Cheat Meal In All Its Chocolaty Glory\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Britney Spears Reveals Her Secret Cheat Meal In All Its Chocolaty Glory,\" you can expect to read about Britney Spears sharing insights into her dietary habits, particularly focusing on a favorite indulgent meal that features chocolate. The article may delve into the details of her culinary preferences, possibly discussing how she balances her health-conscious lifestyle with occasional treats. Additionally, it could provide context on her journey with food and fitness, reflecting her evolving relationship with these aspects of her life.",
+  "model": "gpt-4o-mini"
+}

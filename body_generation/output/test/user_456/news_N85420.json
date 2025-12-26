@@ -1,0 +1,21 @@
+{
+  "user_id": 456,
+  "candidate_news_id": "N85420",
+  "candidate_title": "Surviving Santa Clarita school shooting victims on road to recovery: Latest",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Nearly 500 Prisoners Freed on a Single Day",
+    "25 Walmart Holiday Gift Bargains",
+    "'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'",
+    "It's a Boy! Pregnant Ashley Graham Reveals the Sex of Her Baby on the Way During Ellen Game",
+    "Teresa Giudice, daughters reunite with Joe in Italy: See the pic!",
+    "I Kissed Dieting Goodbye, and Finally Lost 20 Pounds. Here's Why.",
+    "Walmart's Website Has a Secret Section Filled With a Ton Old-School Toys and Games",
+    "The People's Choice Awards Red Carpet Was Like a Casting Call For the Hottest Dresses of the Year"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Nearly 500 Prisoners Freed on a Single Day\"\n\"25 Walmart Holiday Gift Bargains\"\n\"'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'\"\n\"It's a Boy! Pregnant Ashley Graham Reveals the Sex of Her Baby on the Way During Ellen Game\"\n\"Teresa Giudice, daughters reunite with Joe in Italy: See the pic!\"\n\"I Kissed Dieting Goodbye, and Finally Lost 20 Pounds. Here's Why.\"\n\"Walmart's Website Has a Secret Section Filled With a Ton Old-School Toys and Games\"\n\"The People's Choice Awards Red Carpet Was Like a Casting Call For the Hottest Dresses of the Year\"\n\n[Candidate News Title]\n\"Surviving Santa Clarita school shooting victims on road to recovery: Latest\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the ongoing recovery efforts of victims from the Santa Clarita school shooting, focusing on their physical and emotional healing journeys. It may provide updates on their medical treatments, rehabilitation processes, and the support systems in place for them, including community resources and family involvement. Additionally, the article could highlight testimonials or stories from the survivors, shedding light on the challenges they face during recovery. Overall, it is likely to offer insights into the broader impact of the incident on the victims and their families.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 516,
+  "candidate_news_id": "N12258",
+  "candidate_title": "For a healthy heart, eat the biggest meal early in the day",
+  "user_history_count": 10,
+  "user_history": [
+    "'Angel' car saves Arizona family after smashing into suspected drunk driver running red light, video shows",
+    "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+    "World's largest White Castle runs out of burgers on day 1",
+    "A 2,000-pound great white shark is swimming off the coast of Florida",
+    "Man wearing 'Jesus Saves' race bib collapses, saved by man named Jesus",
+    "The best celebrity couple Halloween costumes",
+    "Trump tweets fake image of him putting medal around dog from al-Baghdadi raid",
+    "Bachelor in Paradise's Demi Burnett and Kristian Haggerty Break Up",
+    "She fought for human rights on a tiny island that banned guns. Then she was shot dead.",
+    "National Sandwich Day: Where to score free subs and meal deals Sunday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Angel' car saves Arizona family after smashing into suspected drunk driver running red light, video shows\"\n\"Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge\"\n\"World's largest White Castle runs out of burgers on day 1\"\n\"A 2,000-pound great white shark is swimming off the coast of Florida\"\n\"Man wearing 'Jesus Saves' race bib collapses, saved by man named Jesus\"\n\"The best celebrity couple Halloween costumes\"\n\"Trump tweets fake image of him putting medal around dog from al-Baghdadi raid\"\n\"Bachelor in Paradise's Demi Burnett and Kristian Haggerty Break Up\"\n\"She fought for human rights on a tiny island that banned guns. Then she was shot dead.\"\n\"National Sandwich Day: Where to score free subs and meal deals Sunday\"\n\n[Candidate News Title]\n\"For a healthy heart, eat the biggest meal early in the day\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the importance of meal timing for heart health, suggesting that consuming the largest meal earlier in the day may be beneficial. It may outline how this practice can influence metabolism and weight management, possibly referencing studies that connect meal timing with cardiovascular health. Additionally, the piece could provide practical tips for structuring meals throughout the day, highlighting foods that are particularly advantageous for heart health. Overall, it is expected to present a balanced view on dietary choices and their potential impacts on well-being.",
+  "model": "gpt-4o-mini"
+}

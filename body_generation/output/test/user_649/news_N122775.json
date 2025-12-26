@@ -1,0 +1,21 @@
+{
+  "user_id": 649,
+  "candidate_news_id": "N122775",
+  "candidate_title": "I'm A Queer Woman Dating A Trans Man   & No One Knows",
+  "user_history_count": 10,
+  "user_history": [
+    "Cook leads Vikings to 28-24 prime-time road win over Cowboys",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Utah death-row inmate featured in best-selling book dies",
+    "Fox legal analyst Napolitano emerges as Trump critic",
+    "Dean Foods files for bankruptcy",
+    "These Are America's Favorite Liquor Brands",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "George Conway: 'Republicans Were Fundamentally Illogical and Incoherent'",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+    "Browns cut WR Antonio Callaway hours before kickoff amid reported substance-abuse ban"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cook leads Vikings to 28-24 prime-time road win over Cowboys\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"Dean Foods files for bankruptcy\"\n\"These Are America's Favorite Liquor Brands\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"George Conway: 'Republicans Were Fundamentally Illogical and Incoherent'\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\"Browns cut WR Antonio Callaway hours before kickoff amid reported substance-abuse ban\"\n\n[Candidate News Title]\n\"I'm A Queer Woman Dating A Trans Man   & No One Knows\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely explores the experiences of a queer woman who is dating a trans man, focusing on the dynamics of their relationship and the societal perceptions they navigate. Readers may expect insights into the challenges and joys of being part of a non-traditional couple, as well as discussions around identity and representation within the LGBTQ+ community. The piece could also touch on the reactions from friends, family, and the broader public, providing a nuanced perspective on love and acceptance in diverse relationships.",
+  "model": "gpt-4o-mini"
+}

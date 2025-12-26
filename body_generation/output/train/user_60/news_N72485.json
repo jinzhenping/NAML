@@ -1,0 +1,21 @@
+{
+  "user_id": 60,
+  "candidate_news_id": "N72485",
+  "candidate_title": "See what your favorite stars look like without makeup",
+  "user_history_count": 10,
+  "user_history": [
+    "The Best Things to Add to Your Home For Fall Décor",
+    "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+    "35 Landscaping Plants You'll Love If You Hate Fall Yard Work",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post",
+    "New details on why Meg Ryan, John Mellencamp split, plus more news",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Prince Harry and Meghan Markle are taking a royal respite",
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Best Things to Add to Your Home For Fall Décor\"\n\"1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef\"\n\"35 Landscaping Plants You'll Love If You Hate Fall Yard Work\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post\"\n\"New details on why Meg Ryan, John Mellencamp split, plus more news\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Prince Harry and Meghan Markle are taking a royal respite\"\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\n[Candidate News Title]\n\"See what your favorite stars look like without makeup\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers may expect to see a compilation of images showcasing various celebrities without their makeup. The piece is likely to highlight the natural beauty of these stars, providing insights into their everyday appearances. Additionally, it may discuss the significance of makeup in the lives of public figures and how it impacts their image. The article could include commentary on societal perceptions of beauty and self-image, and it may also feature reactions from fans or the celebrities themselves regarding their unfiltered looks.",
+  "model": "gpt-4o-mini"
+}

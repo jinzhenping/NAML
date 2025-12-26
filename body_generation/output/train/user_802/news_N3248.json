@@ -1,0 +1,21 @@
+{
+  "user_id": 802,
+  "candidate_news_id": "N3248",
+  "candidate_title": "Disney is betting everything on its Disney+ streaming service",
+  "user_history_count": 10,
+  "user_history": [
+    "The most notable celebrity deaths of the decade",
+    "Baby elephants take part in adorable \"play fight\"",
+    "Sophie, Countess of Wessex Shares Her Very Personal Nickname for Her Mother-in-Law, the Queen!",
+    "The Rock's Gnarly Palm Is a Testament to Life Without Lifting Gloves",
+    "Clumsy baby elephant falls into watering hole",
+    "Vintage Photos of Disneyland Back in the Day",
+    "Loved ones arrive for funerals of 9 members of American family slain in Mexico",
+    "Accused killer's girlfriend reveals Colorado mom's last words",
+    "'Beautiful boys': Victims in Mexico ambush remembered at funerals",
+    "Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The most notable celebrity deaths of the decade\"\n\"Baby elephants take part in adorable \"play fight\"\"\n\"Sophie, Countess of Wessex Shares Her Very Personal Nickname for Her Mother-in-Law, the Queen!\"\n\"The Rock's Gnarly Palm Is a Testament to Life Without Lifting Gloves\"\n\"Clumsy baby elephant falls into watering hole\"\n\"Vintage Photos of Disneyland Back in the Day\"\n\"Loved ones arrive for funerals of 9 members of American family slain in Mexico\"\n\"Accused killer's girlfriend reveals Colorado mom's last words\"\n\"'Beautiful boys': Victims in Mexico ambush remembered at funerals\"\n\"Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'\"\n\n[Candidate News Title]\n\"Disney is betting everything on its Disney+ streaming service\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Disney is betting everything on its Disney+ streaming service,\" the user can likely expect a detailed overview of Disney's strategic focus on its streaming platform. This may include insights into recent investments, content expansions, and market competition as Disney aims to enhance its subscriber base and profitability. Additionally, the article might discuss the challenges Disney+ faces in the evolving media landscape and how these efforts reflect broader trends in entertainment consumption. Overall, it should provide a comprehensive look at Disney's commitment to its streaming future.",
+  "model": "gpt-4o-mini"
+}

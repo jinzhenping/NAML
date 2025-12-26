@@ -1,0 +1,21 @@
+{
+  "user_id": 809,
+  "candidate_news_id": "N6293",
+  "candidate_title": "3 arrested in $7 million mortgage fraud that targeted the elderly",
+  "user_history_count": 10,
+  "user_history": [
+    "Kim Kardashian Puts Kanye West in His Place After He Asks 'Who' Her Sexy Met Gala Look Is for",
+    "Unprecedented movement detected on California earthquake fault capable of 8.0 temblor",
+    "Week in celebrity photos for Oct. 14-18, 2019",
+    "Bag Explodes While Being Loaded On Volaris Flight At Midway Airport",
+    "Lori Loughlin's Daughters No Longer Enrolled at USC",
+    "Freshman Dem Katie Hill denies improper relationship with aide",
+    "Just in time for skating season, Trump's company scrubs his name from N.Y. ice rinks",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "The world's largest nuclear power producer is melting down",
+    "Here are the 96 Sears and Kmart stores that are closing next"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kim Kardashian Puts Kanye West in His Place After He Asks 'Who' Her Sexy Met Gala Look Is for\"\n\"Unprecedented movement detected on California earthquake fault capable of 8.0 temblor\"\n\"Week in celebrity photos for Oct. 14-18, 2019\"\n\"Bag Explodes While Being Loaded On Volaris Flight At Midway Airport\"\n\"Lori Loughlin's Daughters No Longer Enrolled at USC\"\n\"Freshman Dem Katie Hill denies improper relationship with aide\"\n\"Just in time for skating season, Trump's company scrubs his name from N.Y. ice rinks\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"The world's largest nuclear power producer is melting down\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\n[Candidate News Title]\n\"3 arrested in $7 million mortgage fraud that targeted the elderly\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent arrest of three individuals involved in a significant mortgage fraud scheme that targeted elderly victims, amounting to approximately $7 million. Readers can expect to learn about the methods used by the suspects to defraud vulnerable homeowners, as well as any details regarding the investigation and law enforcement's actions. The piece may also include commentary on the broader implications of such scams and the importance of protecting the elderly from financial exploitation.",
+  "model": "gpt-4o-mini"
+}

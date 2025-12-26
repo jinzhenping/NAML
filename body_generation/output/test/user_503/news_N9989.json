@@ -1,0 +1,21 @@
+{
+  "user_id": 503,
+  "candidate_news_id": "N9989",
+  "candidate_title": "Bill Plaschke: Trout and Bellinger deserve MVPs, but fans deserve more in postseason",
+  "user_history_count": 10,
+  "user_history": [
+    "Tristan Thompson Drops Flirty Comment on Ex Khloe Kardashian's Instagram",
+    "Teresa Giudice, daughters reunite with Joe in Italy: See the pic!",
+    "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+    "In a shift, Warren responds to Biden's 'angry' comment",
+    "Ilhan Omar tweet called anti-Semitic 'dog whistle'; tennis great Martina Navratilova among critics",
+    "Tennessee judge holds lawyer's baby as he swears her into the state bar in viral video",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "Lamar Odom's Son Was ''Hurt'' After Finding Out About His Dad's Engagement on Instagram",
+    "Kaley Cuoco Says Having 'Separate Lives' Has Helped Her Marriage to Karl Cook",
+    "Victim in Kevin Hart's car accident speaks out for 1st time"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Tristan Thompson Drops Flirty Comment on Ex Khloe Kardashian's Instagram\"\n\"Teresa Giudice, daughters reunite with Joe in Italy: See the pic!\"\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\"In a shift, Warren responds to Biden's 'angry' comment\"\n\"Ilhan Omar tweet called anti-Semitic 'dog whistle'; tennis great Martina Navratilova among critics\"\n\"Tennessee judge holds lawyer's baby as he swears her into the state bar in viral video\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"Lamar Odom's Son Was ''Hurt'' After Finding Out About His Dad's Engagement on Instagram\"\n\"Kaley Cuoco Says Having 'Separate Lives' Has Helped Her Marriage to Karl Cook\"\n\"Victim in Kevin Hart's car accident speaks out for 1st time\"\n\n[Candidate News Title]\n\"Bill Plaschke: Trout and Bellinger deserve MVPs, but fans deserve more in postseason\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the performances of baseball players Mike Trout and Cody Bellinger, highlighting their achievements and contributions to their respective teams in the current season. It may analyze their statistics and the impact they have on the postseason, while also addressing fans' expectations for more exciting and competitive playoff experiences. The piece could explore the broader context of Major League Baseball’s postseason structure and how it affects player recognition, though specific details on awards or postseason matchups may not be included.",
+  "model": "gpt-4o-mini"
+}

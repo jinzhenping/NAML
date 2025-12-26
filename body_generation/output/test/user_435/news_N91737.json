@@ -1,0 +1,21 @@
+{
+  "user_id": 435,
+  "candidate_news_id": "N91737",
+  "candidate_title": "13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid",
+  "user_history_count": 10,
+  "user_history": [
+    "WATCH: Cruise Ship Navigates Tiny Corinth Canal",
+    "Boris Johnson Loses a Critical Brexit Vote, Throwing the Process Into Disarray",
+    "Where have Cape Town's great whites gone?",
+    "Kim Kardashian West says she's gained 18 pounds in the past year",
+    "Kate Beckinsale and Len Wiseman Finalize Divorce 4 Years After Split",
+    "See Vin Diesel's 21st birthday post to Paul Walker's daughter Meadow",
+    "2 brides lifted a 253-pound barbell together after exchanging vows to celebrate their marriage",
+    "Student's drone footage shows whale swimming around California surfers",
+    "Richard Sherman tells NFL players to save their money and prepare for a strike",
+    "The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"WATCH: Cruise Ship Navigates Tiny Corinth Canal\"\n\"Boris Johnson Loses a Critical Brexit Vote, Throwing the Process Into Disarray\"\n\"Where have Cape Town's great whites gone?\"\n\"Kim Kardashian West says she's gained 18 pounds in the past year\"\n\"Kate Beckinsale and Len Wiseman Finalize Divorce 4 Years After Split\"\n\"See Vin Diesel's 21st birthday post to Paul Walker's daughter Meadow\"\n\"2 brides lifted a 253-pound barbell together after exchanging vows to celebrate their marriage\"\n\"Student's drone footage shows whale swimming around California surfers\"\n\"Richard Sherman tells NFL players to save their money and prepare for a strike\"\n\"The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news\"\n\n[Candidate News Title]\n\"13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid,\" the user can expect a detailed examination of Christian Navarro's criticism regarding Disney's casting choices for the upcoming film. The piece may explore Navarro's perspective on representation and diversity in Hollywood, particularly in relation to iconic characters. It is likely to include his reasoning for opposing the casting decision and possibly discuss broader implications for the entertainment industry. Additionally, the article may feature reactions from fans and fellow actors regarding the ongoing discourse around casting practices in major productions.",
+  "model": "gpt-4o-mini"
+}

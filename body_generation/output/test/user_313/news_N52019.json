@@ -1,0 +1,21 @@
+{
+  "user_id": 313,
+  "candidate_news_id": "N52019",
+  "candidate_title": "Trump files to dismiss lawsuit from Bolton aide on impeachment testimony",
+  "user_history_count": 10,
+  "user_history": [
+    "How Clippers Lou Williams will help Kawhi Leonard, Paul George form 'Big Three'",
+    "LeBron scores 32, AD adds 21 in Lakers' 95-86 win over Jazz",
+    "Rodgers, Jones star for Packers in 31-24 victory over Chiefs",
+    "Report: Dodgers likely to pursue Francisco Lindor trade",
+    "Anthony Davis is why you always trade for the superstar if you can",
+    "Clippers resting Kawhi Leonard for nationally televised game at Jazz",
+    "Arizona transfer Baker receives waiver, eligible immediately",
+    "Michigan basketball has changed a lot in 2019, but here's what's the same: Zavier Simpson",
+    "LeBron gets triple-double, credits Dwight Howard for 'Superman' performance",
+    "Davis' 26 send Lakers past Heat 95-80 for 7th straight win"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"How Clippers Lou Williams will help Kawhi Leonard, Paul George form 'Big Three'\"\n\"LeBron scores 32, AD adds 21 in Lakers' 95-86 win over Jazz\"\n\"Rodgers, Jones star for Packers in 31-24 victory over Chiefs\"\n\"Report: Dodgers likely to pursue Francisco Lindor trade\"\n\"Anthony Davis is why you always trade for the superstar if you can\"\n\"Clippers resting Kawhi Leonard for nationally televised game at Jazz\"\n\"Arizona transfer Baker receives waiver, eligible immediately\"\n\"Michigan basketball has changed a lot in 2019, but here's what's the same: Zavier Simpson\"\n\"LeBron gets triple-double, credits Dwight Howard for 'Superman' performance\"\n\"Davis' 26 send Lakers past Heat 95-80 for 7th straight win\"\n\n[Candidate News Title]\n\"Trump files to dismiss lawsuit from Bolton aide on impeachment testimony\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses former National Security Advisor John Bolton's aide filing a lawsuit regarding impeachment testimony, with a focus on Trump's legal response. Readers may expect an overview of the lawsuit's implications for the impeachment process, alongside details about the legal arguments made by Trump's team to dismiss the case. Additionally, the piece could explore the broader context of accountability and transparency in political proceedings, as well as potential reactions from both supporters and critics of Trump regarding this legal maneuver.",
+  "model": "gpt-4o-mini"
+}

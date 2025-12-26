@@ -1,0 +1,21 @@
+{
+  "user_id": 184,
+  "candidate_news_id": "N80770",
+  "candidate_title": "Judge agrees Alabama Islamic State recruit is not US citizen",
+  "user_history_count": 10,
+  "user_history": [
+    "This stately home is having the ultimate yard sale",
+    "Far-reaching snowstorm may take shape over US",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe",
+    "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+    "Celebrity plastic surgery transformations",
+    "Deadly Arctic blast breaks records set more than 100 years ago",
+    "Sky Bars are coming back to stores and classic candy fans are freaking out",
+    "Comics - 'Pluggers' by Gary Brookins"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"This stately home is having the ultimate yard sale\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\"Celebrity plastic surgery transformations\"\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\"Sky Bars are coming back to stores and classic candy fans are freaking out\"\n\"Comics - 'Pluggers' by Gary Brookins\"\n\n[Candidate News Title]\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Judge agrees Alabama Islamic State recruit is not US citizen\" is likely to provide an overview of a legal ruling regarding an individual connected to the Islamic State in Alabama. Readers can expect to find details about the implications of the judge's decision, including the legal arguments presented and the potential consequences for the individual involved. The article may also explore the broader context of citizenship laws in relation to terrorism-related cases, highlighting how this ruling fits into ongoing discussions about national security and immigration.",
+  "model": "gpt-4o-mini"
+}

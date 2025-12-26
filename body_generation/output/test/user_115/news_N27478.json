@@ -1,0 +1,21 @@
+{
+  "user_id": 115,
+  "candidate_news_id": "N27478",
+  "candidate_title": "Pittsburgh Steelers quarterback Mason Rudolph on 'TNF' incident: 'I thought it was pretty cowardly'",
+  "user_history_count": 10,
+  "user_history": [
+    "Here's How To Score Buy One Get One Free Whoppers From Burger King",
+    "Arby's tells parents that 'only well behaved children' are allowed",
+    "Small Canadian island irate that Americans keep opening their mail",
+    "Small Canadian island irate that Americans keep opening their mail",
+    "Venice paralyzed by the worst flooding in half a century",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+    "'Worst that can happen is I get killed': Local man loses ability to walk, gains ability to fly",
+    "Stars who've lived with their parents"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's How To Score Buy One Get One Free Whoppers From Burger King\"\n\"Arby's tells parents that 'only well behaved children' are allowed\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"Venice paralyzed by the worst flooding in half a century\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\"'Worst that can happen is I get killed': Local man loses ability to walk, gains ability to fly\"\n\"Stars who've lived with their parents\"\n\n[Candidate News Title]\n\"Pittsburgh Steelers quarterback Mason Rudolph on 'TNF' incident: 'I thought it was pretty cowardly'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Pittsburgh Steelers quarterback Mason Rudolph's comments on a recent incident during Thursday Night Football (TNF), the user is likely to find an overview of Rudolph's perspective on the event, which he described as \"cowardly.\" The piece may delve into the specifics of the incident, providing context about what transpired during the game and how it has been received by fans and analysts. Additionally, it could explore the implications of his remarks on team dynamics and player conduct in the NFL, offering insights into the broader conversation surrounding sportsmanship and player behavior.",
+  "model": "gpt-4o-mini"
+}

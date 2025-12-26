@@ -1,0 +1,21 @@
+{
+  "user_id": 774,
+  "candidate_news_id": "N112125",
+  "candidate_title": "U.S. Vows to Defend South Korea With Full Military Force Following Pyongyang Threats",
+  "user_history_count": 10,
+  "user_history": [
+    "Foie Gras Is Banned by New York City",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Outrage in Spain over verdict in gang sex attack on teen",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "World's biggest trade deal to be delayed to 2020: Draft ASEAN statement",
+    "Monday night's win over the Giants emblematic of bigger issue for Cowboys",
+    "Lawyer: Trump's phone records back details of woman's claim",
+    "Iran Nuclear Crisis Escalates With New Inspections Report",
+    "U.S.'s Pompeo says Iran's latest nuclear steps raise concern"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Foie Gras Is Banned by New York City\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Outrage in Spain over verdict in gang sex attack on teen\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"World's biggest trade deal to be delayed to 2020: Draft ASEAN statement\"\n\"Monday night's win over the Giants emblematic of bigger issue for Cowboys\"\n\"Lawyer: Trump's phone records back details of woman's claim\"\n\"Iran Nuclear Crisis Escalates With New Inspections Report\"\n\"U.S.'s Pompeo says Iran's latest nuclear steps raise concern\"\n\n[Candidate News Title]\n\"U.S. Vows to Defend South Korea With Full Military Force Following Pyongyang Threats\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find an overview of the United States' commitment to defending South Korea in light of recent threats from North Korea. The piece may detail the military strategies and resources that the U.S. plans to deploy as a show of force, along with insights into the geopolitical implications of such actions. Additionally, it could discuss the reactions from both South Korean and North Korean officials, as well as potential consequences for regional stability. Overall, the article is expected to provide a clear analysis of the situation and its broader context, while addressing the ongoing tensions on the Korean Peninsula.",
+  "model": "gpt-4o-mini"
+}

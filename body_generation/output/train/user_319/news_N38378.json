@@ -1,0 +1,21 @@
+{
+  "user_id": 319,
+  "candidate_news_id": "N38378",
+  "candidate_title": "Shakira reflects on her career-threatening injury, depression in 2017",
+  "user_history_count": 10,
+  "user_history": [
+    "Martin worries about amputation after breaking right leg",
+    "Husband, father-in-law of slain St. Cloud mother charged with murder",
+    "Charges: Vikings' Kearse had Glock handgun, dozens of rounds as he drove drunk",
+    "This Pomona College senior is living out of a converted school bus and saving $10,000 a year on student housing",
+    "Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him",
+    "Ex-All-Star slugger Josh Hamilton charged with child injury",
+    "Couple Accused of Injecting Childhood Friend With Meth and Filming Her As She Died",
+    "California man arrested on suspicion of arson as wildfires continue to rage across the state",
+    "Star witness expected in trial of man accused of killing fiancée",
+    "Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Martin worries about amputation after breaking right leg\"\n\"Husband, father-in-law of slain St. Cloud mother charged with murder\"\n\"Charges: Vikings' Kearse had Glock handgun, dozens of rounds as he drove drunk\"\n\"This Pomona College senior is living out of a converted school bus and saving $10,000 a year on student housing\"\n\"Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him\"\n\"Ex-All-Star slugger Josh Hamilton charged with child injury\"\n\"Couple Accused of Injecting Childhood Friend With Meth and Filming Her As She Died\"\n\"California man arrested on suspicion of arson as wildfires continue to rage across the state\"\n\"Star witness expected in trial of man accused of killing fiancée\"\n\"Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer\"\n\n[Candidate News Title]\n\"Shakira reflects on her career-threatening injury, depression in 2017\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Shakira reflecting on her career-threatening injury and depression in 2017, the user may expect to read about the challenges she faced during that period, including details about the injury itself and its impact on her professional life. The article is likely to provide insights into how this experience affected her mental health, possibly discussing her coping mechanisms or support systems. Additionally, Shakira might share her thoughts on the lessons learned from this difficult time and how it shaped her subsequent work and public persona.",
+  "model": "gpt-4o-mini"
+}

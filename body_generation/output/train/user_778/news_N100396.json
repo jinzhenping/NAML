@@ -1,0 +1,21 @@
+{
+  "user_id": 778,
+  "candidate_news_id": "N100396",
+  "candidate_title": "Seahawks knock 49ers from unbeaten ranks with 27-24 OT win",
+  "user_history_count": 10,
+  "user_history": [
+    "Holocaust survivor under guard amid death threats",
+    "Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'",
+    "'Beautiful boys': Victims in Mexico ambush remembered at funerals",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Paramedic finds magic solution to keep kids calm in emergencies",
+    "A Military Camera Said 'Made in U.S.A.' The Screen Was in Chinese.",
+    "Chase Young fiasco highlights absurdity of NCAA's outdated model",
+    "Another Palm Beach County juror may be jailed in new contempt case",
+    "'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint",
+    "Woman accused of sneaking into Bronx Zoo lion exhibit arraigned"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Holocaust survivor under guard amid death threats\"\n\"Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'\"\n\"'Beautiful boys': Victims in Mexico ambush remembered at funerals\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Paramedic finds magic solution to keep kids calm in emergencies\"\n\"A Military Camera Said 'Made in U.S.A.' The Screen Was in Chinese.\"\n\"Chase Young fiasco highlights absurdity of NCAA's outdated model\"\n\"Another Palm Beach County juror may be jailed in new contempt case\"\n\"'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint\"\n\"Woman accused of sneaking into Bronx Zoo lion exhibit arraigned\"\n\n[Candidate News Title]\n\"Seahawks knock 49ers from unbeaten ranks with 27-24 OT win\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Seahawks knock 49ers from unbeaten ranks with 27-24 OT win,\" the user is likely to find a detailed account of the recent NFL game between the Seattle Seahawks and the San Francisco 49ers. The article may discuss the pivotal moments of the match, including key plays, player performances, and tactical decisions made by both teams. Additionally, it could provide insights into the implications of this game for the standings in the league and how it affects the playoff picture. Overall, the article is expected to deliver a comprehensive overview of the game's outcome and its significance in the current season.",
+  "model": "gpt-4o-mini"
+}

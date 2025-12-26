@@ -1,0 +1,21 @@
+{
+  "user_id": 118,
+  "candidate_news_id": "N118883",
+  "candidate_title": "Fox legal analyst Napolitano emerges as Trump critic",
+  "user_history_count": 10,
+  "user_history": [
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "New Delhi's toxic, polluted air chokes city's 20 million people, and the haze can be seen from space",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Rick Perry, top Trump administration aides scheduled to testify in impeachment inquiry",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral",
+    "Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you",
+    "Brain scans don't lie: The minds of girls and boys are equal in math",
+    "Must-See Fashion Police Moments to Swoon Over This Week",
+    "Jon Gruden, Raiders take victory lap as they've left Antonio Brown mistake in dust"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"New Delhi's toxic, polluted air chokes city's 20 million people, and the haze can be seen from space\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Rick Perry, top Trump administration aides scheduled to testify in impeachment inquiry\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral\"\n\"Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you\"\n\"Brain scans don't lie: The minds of girls and boys are equal in math\"\n\"Must-See Fashion Police Moments to Swoon Over This Week\"\n\"Jon Gruden, Raiders take victory lap as they've left Antonio Brown mistake in dust\"\n\n[Candidate News Title]\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Fox legal analyst Napolitano emerges as Trump critic,\" the user may expect a detailed examination of Napolitano's shift in stance regarding former President Trump. The piece is likely to explore the reasons behind his criticism, possibly highlighting key statements or opinions he has shared recently. Furthermore, the article may provide context on Napolitano's background as a legal analyst, including his previous support for Trump and how his views have evolved in light of current political events. This analysis could also touch on the implications of his criticisms within the broader political landscape.",
+  "model": "gpt-4o-mini"
+}

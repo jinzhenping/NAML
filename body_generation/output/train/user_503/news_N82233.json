@@ -1,0 +1,21 @@
+{
+  "user_id": 503,
+  "candidate_news_id": "N82233",
+  "candidate_title": "'Priceless' finds that turned out to be worthless",
+  "user_history_count": 10,
+  "user_history": [
+    "Fact checking the fourth Democratic debate",
+    "Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days",
+    "Gretchen Wilson booted from New Mexico hotel",
+    "Florida woman allegedly flees 2 car crashes, kills driver in 3rd crash",
+    "Jussie Smollett fails to persuade judge to drop Chicago lawsuit seeking $130,000 fine",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "40 conservative groups sign ethics complaint against Pelosi",
+    "Tarek El Moussa: I'm 'Looking Forward' to Knowing Christina Anstead's Son",
+    "Tristan Thompson Drops Flirty Comment on Ex Khloe Kardashian's Instagram",
+    "Teresa Giudice, daughters reunite with Joe in Italy: See the pic!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Fact checking the fourth Democratic debate\"\n\"Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days\"\n\"Gretchen Wilson booted from New Mexico hotel\"\n\"Florida woman allegedly flees 2 car crashes, kills driver in 3rd crash\"\n\"Jussie Smollett fails to persuade judge to drop Chicago lawsuit seeking $130,000 fine\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"40 conservative groups sign ethics complaint against Pelosi\"\n\"Tarek El Moussa: I'm 'Looking Forward' to Knowing Christina Anstead's Son\"\n\"Tristan Thompson Drops Flirty Comment on Ex Khloe Kardashian's Instagram\"\n\"Teresa Giudice, daughters reunite with Joe in Italy: See the pic!\"\n\n[Candidate News Title]\n\"'Priceless' finds that turned out to be worthless\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"'Priceless' finds that turned out to be worthless\" is likely to explore instances where items or artifacts, once deemed invaluable or significant, have been revealed to lack the worth attributed to them. Readers may expect a discussion of specific cases, possibly involving art, collectibles, or historical objects that have been reassessed and found wanting. The article could also delve into the implications of such findings on collectors, investors, or the art market. Additionally, it may highlight the criteria used to determine the worth of these items and the reasons behind their misvaluation.",
+  "model": "gpt-4o-mini"
+}

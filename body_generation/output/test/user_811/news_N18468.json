@@ -1,0 +1,21 @@
+{
+  "user_id": 811,
+  "candidate_news_id": "N18468",
+  "candidate_title": "Belichick mocks social media in comments on Garrett incident",
+  "user_history_count": 10,
+  "user_history": [
+    "Mother of missing Florida girl charged; human remains found",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "Three school workers charged in death of special needs student",
+    "Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+    "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mother of missing Florida girl charged; human remains found\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"Three school workers charged in death of special needs student\"\n\"Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\n[Candidate News Title]\n\"Belichick mocks social media in comments on Garrett incident\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Belichick mocks social media in comments on Garrett incident,\" the user is likely to find an exploration of New England Patriots head coach Bill Belichick's recent remarks regarding social media in relation to an incident involving player Myles Garrett. The piece may detail Belichick's perspective on the impact of social media on the NFL and how it influences public perception and player conduct. Additionally, it could provide context about the Garrett incident itself, including any reactions from fans or analysts, and how Belichick's comments fit into the broader conversation about social media's role in sports.",
+  "model": "gpt-4o-mini"
+}

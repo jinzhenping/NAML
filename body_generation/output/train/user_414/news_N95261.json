@@ -1,0 +1,21 @@
+{
+  "user_id": 414,
+  "candidate_news_id": "N95261",
+  "candidate_title": "Owner shocked after his 60s Porsche roadster gets stolen from classic car show in Pleasanton",
+  "user_history_count": 10,
+  "user_history": [
+    "3 arrested in fatal shooting of Northern California deputy",
+    "17 Arrested In Large Washington Drug Trafficking Bust",
+    "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard",
+    "Nearly 7,000 pounds of marijuana seized on the way to NC",
+    "Guns, axes used to destroy illegal moonshine operation in South Carolina, deputies say",
+    "Where have Cape Town's great whites gone?",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "NASA's Curiosity rover took an eerie photo of the Mars horizon"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"3 arrested in fatal shooting of Northern California deputy\"\n\"17 Arrested In Large Washington Drug Trafficking Bust\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard\"\n\"Nearly 7,000 pounds of marijuana seized on the way to NC\"\n\"Guns, axes used to destroy illegal moonshine operation in South Carolina, deputies say\"\n\"Where have Cape Town's great whites gone?\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"NASA's Curiosity rover took an eerie photo of the Mars horizon\"\n\n[Candidate News Title]\n\"Owner shocked after his 60s Porsche roadster gets stolen from classic car show in Pleasanton\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to detail the theft of a classic 1960s Porsche roadster from a car show in Pleasanton, focusing on the circumstances surrounding the incident. Readers may expect to learn about the event itself, including the location and time of the theft, as well as any security measures in place at the show. The piece could also discuss the value of the stolen vehicle and the owner’s reaction to the loss. Additionally, it may include information about local law enforcement investigations and potential leads in recovering the car.",
+  "model": "gpt-4o-mini"
+}

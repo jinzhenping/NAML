@@ -1,0 +1,21 @@
+{
+  "user_id": 389,
+  "candidate_news_id": "N60823",
+  "candidate_title": "Rising temperatures put U.S. troops at risk during training, report finds",
+  "user_history_count": 10,
+  "user_history": [
+    "Texas' Best-Kept Secret: The Second-Largest Canyon in the U.S.",
+    "2020 Performance Car of the Year",
+    "MLB free-agent predictions: Rankings, rumors for the top players on the market",
+    "50 states, 50 places: The top natural wonder in your state",
+    "Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV",
+    "States that are falling apart",
+    "Allegations against Biden 'not credible,' testified US official now touted by Trump",
+    "9 Vegetables You Shouldn't Eat Raw",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Texas' Best-Kept Secret: The Second-Largest Canyon in the U.S.\"\n\"2020 Performance Car of the Year\"\n\"MLB free-agent predictions: Rankings, rumors for the top players on the market\"\n\"50 states, 50 places: The top natural wonder in your state\"\n\"Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV\"\n\"States that are falling apart\"\n\"Allegations against Biden 'not credible,' testified US official now touted by Trump\"\n\"9 Vegetables You Shouldn't Eat Raw\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV\"\n\n[Candidate News Title]\n\"Rising temperatures put U.S. troops at risk during training, report finds\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Rising temperatures put U.S. troops at risk during training, report finds\" is likely to discuss the impact of climate change on military operations, particularly focusing on how increasing temperatures affect the safety and effectiveness of U.S. troops during training exercises. Readers may expect an analysis of specific risks posed by heat exposure, such as heat-related illnesses or compromised performance. Additionally, the article could explore recommendations for adapting training protocols in response to these challenges, providing insight into how the military is addressing environmental factors in its preparedness strategies.",
+  "model": "gpt-4o-mini"
+}

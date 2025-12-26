@@ -1,0 +1,21 @@
+{
+  "user_id": 760,
+  "candidate_news_id": "N21018",
+  "candidate_title": "3 Indiana judges suspended after a night of drinking turned into a White Castle brawl",
+  "user_history_count": 10,
+  "user_history": [
+    "Trailer - Jungle Cruise",
+    "Illegal drones ground water-dropping helicopters at critical moment in Maria fire battle",
+    "82-year-old priest killed in flash floods after Halloween storm, police say",
+    "Potential Florida State football coaching targets",
+    "See dolphins punt fish out of water to stun and eat them",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+    "Gabbard Lawyers Demand Clinton Retract 'Defamatory' Russian Asset Comments",
+    "SEMA 2019 Photo Highlights From Las Vegas",
+    "'Priceless' finds that turned out to be worthless"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trailer - Jungle Cruise\"\n\"Illegal drones ground water-dropping helicopters at critical moment in Maria fire battle\"\n\"82-year-old priest killed in flash floods after Halloween storm, police say\"\n\"Potential Florida State football coaching targets\"\n\"See dolphins punt fish out of water to stun and eat them\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\"Gabbard Lawyers Demand Clinton Retract 'Defamatory' Russian Asset Comments\"\n\"SEMA 2019 Photo Highlights From Las Vegas\"\n\"'Priceless' finds that turned out to be worthless\"\n\n[Candidate News Title]\n\"3 Indiana judges suspended after a night of drinking turned into a White Castle brawl\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses an incident involving three Indiana judges who were suspended following a night of drinking that escalated into a physical altercation at a White Castle restaurant. Readers may expect details about the circumstances surrounding the brawl, including any specific actions taken by the judges and the potential legal or disciplinary implications of their behavior. The piece may also provide context regarding the judges' backgrounds and the impact of this event on their careers, while exploring how such incidents affect public perception of the judiciary.",
+  "model": "gpt-4o-mini"
+}

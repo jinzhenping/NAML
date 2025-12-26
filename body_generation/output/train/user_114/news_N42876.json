@@ -1,0 +1,21 @@
+{
+  "user_id": 114,
+  "candidate_news_id": "N42876",
+  "candidate_title": "Watch Kelly Clarkson's Kids Interview Their Hero Jason Momoa In The Cutest Video Ever",
+  "user_history_count": 10,
+  "user_history": [
+    "Bob Kingsley, Country Radio Legend, Dead at 80",
+    "Power Rankings: Kyle Busch putting pieces together before favorable Round of 8",
+    "Celebrity hookups and first dates: How your favorite stars met and got together",
+    "How To Open a Can Without a Can Opener",
+    "The One Thing Kourtney Kardashian Drinks Every Morning for Younger-Looking Skin",
+    "The world's largest nuclear power producer is melting down",
+    "1970 Dodge Charger destroyed by man sick of lowballers   he showed them!",
+    "The Day in Sports: Friday, November 1, 2019",
+    "Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned",
+    "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bob Kingsley, Country Radio Legend, Dead at 80\"\n\"Power Rankings: Kyle Busch putting pieces together before favorable Round of 8\"\n\"Celebrity hookups and first dates: How your favorite stars met and got together\"\n\"How To Open a Can Without a Can Opener\"\n\"The One Thing Kourtney Kardashian Drinks Every Morning for Younger-Looking Skin\"\n\"The world's largest nuclear power producer is melting down\"\n\"1970 Dodge Charger destroyed by man sick of lowballers   he showed them!\"\n\"The Day in Sports: Friday, November 1, 2019\"\n\"Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\n[Candidate News Title]\n\"Watch Kelly Clarkson's Kids Interview Their Hero Jason Momoa In The Cutest Video Ever\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a light-hearted and entertaining piece featuring a video of Kelly Clarkson's children interviewing actor Jason Momoa. The content may focus on the candid interactions between the kids and Momoa, highlighting their innocent questions and charming responses. The article could also provide insights into Clarkson's family dynamics and the playful nature of the interview, while possibly discussing the impact of celebrity parenting in a fun context. Overall, readers may anticipate a wholesome glimpse into a unique moment with beloved public figures.",
+  "model": "gpt-4o-mini"
+}

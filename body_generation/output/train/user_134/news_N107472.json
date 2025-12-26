@@ -1,0 +1,21 @@
+{
+  "user_id": 134,
+  "candidate_news_id": "N107472",
+  "candidate_title": "Actresses who've played Queen Elizabeth II",
+  "user_history_count": 10,
+  "user_history": [
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Even 'Project Runway' Couldn't Save Zac Posen",
+    "I tried to eat like Kate Middleton for a week, but I couldn't get through it without cheating",
+    "Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly",
+    "'The Little Mermaid Live!': TV Review",
+    "This stately home is having the ultimate yard sale",
+    "Already 6 Months! Prince Harry, Duchess Meghan's Son Is Trying to Talk",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "Reporter Can't Stop Laughing After Cat Interrupts News Segment",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Even 'Project Runway' Couldn't Save Zac Posen\"\n\"I tried to eat like Kate Middleton for a week, but I couldn't get through it without cheating\"\n\"Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly\"\n\"'The Little Mermaid Live!': TV Review\"\n\"This stately home is having the ultimate yard sale\"\n\"Already 6 Months! Prince Harry, Duchess Meghan's Son Is Trying to Talk\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"Reporter Can't Stop Laughing After Cat Interrupts News Segment\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\n[Candidate News Title]\n\"Actresses who've played Queen Elizabeth II\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Actresses who've played Queen Elizabeth II,\" the user is likely to find a detailed exploration of the various actresses who have taken on the iconic role of Queen Elizabeth II in film and television. This may include notable performances, such as those in popular series like \"The Crown,\" as well as insights into how different portrayals reflect the Queen's evolving public image. Additionally, the article could discuss the impact of these portrayals on both the actresses' careers and audience perceptions of the monarchy.",
+  "model": "gpt-4o-mini"
+}

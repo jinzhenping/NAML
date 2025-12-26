@@ -1,0 +1,21 @@
+{
+  "user_id": 8,
+  "candidate_news_id": "N129510",
+  "candidate_title": "7 Signs & Symptoms of Kidney Stones You Need to Know",
+  "user_history_count": 10,
+  "user_history": [
+    "Why Does The Flu Shot Hurt So Much?",
+    "Miley Cyrus clarifies Instagram remarks about sexuality being a choice, plus more news",
+    "Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves",
+    "Top 10 Cleaning Tips for the Inside of Your Car",
+    "President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'",
+    "Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion",
+    "Customers Are Trolling Papa John's Over Their Jack-O'-Lantern Pizzas",
+    "DOJ sues Walmart for allegedly discriminating against a Navy reserve officer",
+    "Brian Tarantina, 'Marvelous Mrs. Maisel' and 'Gilmore Girls' Actor, Dies at 60",
+    "New details on why Meg Ryan, John Mellencamp split, plus more news"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why Does The Flu Shot Hurt So Much?\"\n\"Miley Cyrus clarifies Instagram remarks about sexuality being a choice, plus more news\"\n\"Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves\"\n\"Top 10 Cleaning Tips for the Inside of Your Car\"\n\"President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'\"\n\"Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion\"\n\"Customers Are Trolling Papa John's Over Their Jack-O'-Lantern Pizzas\"\n\"DOJ sues Walmart for allegedly discriminating against a Navy reserve officer\"\n\"Brian Tarantina, 'Marvelous Mrs. Maisel' and 'Gilmore Girls' Actor, Dies at 60\"\n\"New details on why Meg Ryan, John Mellencamp split, plus more news\"\n\n[Candidate News Title]\n\"7 Signs & Symptoms of Kidney Stones You Need to Know\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"7 Signs & Symptoms of Kidney Stones You Need to Know,\" you may expect to read about the various indicators that suggest the presence of kidney stones, a common urinary tract condition. The article is likely to outline seven key signs, which could include symptoms such as severe pain in the back or side, blood in urine, and frequent urination. Additionally, it may provide insights into how these symptoms vary depending on the size and location of the stones, along with potential recommendations for seeking medical attention.",
+  "model": "gpt-4o-mini"
+}

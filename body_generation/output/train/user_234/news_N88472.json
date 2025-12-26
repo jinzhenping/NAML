@@ -1,0 +1,21 @@
+{
+  "user_id": 234,
+  "candidate_news_id": "N88472",
+  "candidate_title": "Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'",
+  "user_history_count": 10,
+  "user_history": [
+    "Eric Tse, 24, just became a billionaire overnight",
+    "Kylie Jenner and her bestie get surgery together, plus more news",
+    "See all the best photos of Prince William and Duchess Kate's royal tour of Pakistan",
+    "Putin just took a victory lap in the Middle East. Now he's turning to Africa",
+    "Bahareh Zare Bahari: Beauty queen says she will be killed if she is deported to Iran",
+    "Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Solange Knowles splits with husband ahead of anniversary",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Cause determined in Jessi Combs' fatal speed record crash"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Eric Tse, 24, just became a billionaire overnight\"\n\"Kylie Jenner and her bestie get surgery together, plus more news\"\n\"See all the best photos of Prince William and Duchess Kate's royal tour of Pakistan\"\n\"Putin just took a victory lap in the Middle East. Now he's turning to Africa\"\n\"Bahareh Zare Bahari: Beauty queen says she will be killed if she is deported to Iran\"\n\"Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Solange Knowles splits with husband ahead of anniversary\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\n[Candidate News Title]\n\"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to learn about Lisa Vanderpump's decision to leave \"The Real Housewives of Beverly Hills\" (RHOBH) and the reasons behind it. The piece is likely to provide insights into her perspective on the show's dynamics, particularly her views on negativity and conflict within the cast. Additionally, the article may explore the impact of her departure on the show's future and how Vanderpump plans to focus on her personal and professional life moving forward. Overall, the content will likely present a straightforward account of her rationale.",
+  "model": "gpt-4o-mini"
+}

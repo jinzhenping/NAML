@@ -1,0 +1,21 @@
+{
+  "user_id": 150,
+  "candidate_news_id": "N94572",
+  "candidate_title": "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+  "user_history_count": 10,
+  "user_history": [
+    "Amazon is shipping expired baby formula and beef jerky, putting big brands at risk",
+    "Erdogan's Ambitions Go Beyond Syria. He Says He Wants Nuclear Weapons.",
+    "Everything we know about Thailand's eccentric King Rama X, who married his bodyguard, gave his dog a 4-day funeral, and is legally immune from bad press",
+    "4 South Koreans arrested over break-in at US envoy compound",
+    "Trump might expose whistleblower, Schumer tells Intel officials",
+    "Opinions | Watch Senate Republicans. They might reach the point of no return.",
+    "A false ad claiming Republicans back the Green New Deal tests Facebook's policy on lies",
+    "UPDATE 1-Resurgent Boeing 737 MAX could trigger jet surplus, analyst warns",
+    "Chinese pilot suspended after woman poses in cockpit with drinks",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Amazon is shipping expired baby formula and beef jerky, putting big brands at risk\"\n\"Erdogan's Ambitions Go Beyond Syria. He Says He Wants Nuclear Weapons.\"\n\"Everything we know about Thailand's eccentric King Rama X, who married his bodyguard, gave his dog a 4-day funeral, and is legally immune from bad press\"\n\"4 South Koreans arrested over break-in at US envoy compound\"\n\"Trump might expose whistleblower, Schumer tells Intel officials\"\n\"Opinions | Watch Senate Republicans. They might reach the point of no return.\"\n\"A false ad claiming Republicans back the Green New Deal tests Facebook's policy on lies\"\n\"UPDATE 1-Resurgent Boeing 737 MAX could trigger jet surplus, analyst warns\"\n\"Chinese pilot suspended after woman poses in cockpit with drinks\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\n[Candidate News Title]\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to learn about Sarah Palin's recent statements regarding her marriage, including her efforts to address any challenges she may be facing. The piece is likely to explore her perspective on the situation, possibly detailing any public or personal factors influencing her decision to work on her relationship. Additionally, the article might touch on how Palin's public persona and past experiences could shape her approach to marital issues, providing a glimpse into her life beyond the political arena.",
+  "model": "gpt-4o-mini"
+}

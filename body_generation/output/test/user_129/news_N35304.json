@@ -1,0 +1,20 @@
+{
+  "user_id": 129,
+  "candidate_news_id": "N35304",
+  "candidate_title": "Raise Billions From Billionaires? Tax Experts Say It's Not That Simple",
+  "user_history_count": 9,
+  "user_history": [
+    "NFL players who should be traded before the deadline",
+    "Delta offers waivers ahead of bad weather in the Northeast",
+    "Mystery Woman Kissing Singer Usher Identified As Record Exec",
+    "Robert Blake's Daughter Speaks Out for First Time About 'Traumatic Childhood' After Mom's Murder",
+    "Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence",
+    "Matt Lauer reportedly wanted royal's sister to join 'Today'",
+    "Coast Guard searches for man who fell from cruise off Texas",
+    "College gymnast dies following training accident in Connecticut",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL players who should be traded before the deadline\"\n\"Delta offers waivers ahead of bad weather in the Northeast\"\n\"Mystery Woman Kissing Singer Usher Identified As Record Exec\"\n\"Robert Blake's Daughter Speaks Out for First Time About 'Traumatic Childhood' After Mom's Murder\"\n\"Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence\"\n\"Matt Lauer reportedly wanted royal's sister to join 'Today'\"\n\"Coast Guard searches for man who fell from cruise off Texas\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"\"\n\n[Candidate News Title]\n\"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\" is likely to explore the complexities and challenges associated with taxing wealthy individuals. Readers can expect a discussion on various tax strategies and proposals that aim to generate significant revenue from billionaires, along with insights from tax experts on the practicality and potential implications of these measures. It may also delve into the economic and political factors that complicate such initiatives, offering a nuanced perspective on whether these strategies could effectively address wealth inequality.",
+  "model": "gpt-4o-mini"
+}

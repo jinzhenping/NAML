@@ -1,0 +1,21 @@
+{
+  "user_id": 813,
+  "candidate_news_id": "N1928",
+  "candidate_title": "10 unique homes that irritated neighbors for years",
+  "user_history_count": 10,
+  "user_history": [
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "Service Restored On SEPTA Paoli-Thorndale Line After 350 Passengers Stranded On Tracks For Hours",
+    "200 Shocking Home Photos You Have to See",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "2 dead, 14 injured following New Mexico Navajo religious ceremony: report",
+    "Prince Charles Hit by One of the Most Incredible Art Hoaxes in Royal History",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job",
+    "So, how does one of the world's oldest recipes hold up?",
+    "3 students allegedly plotted to attack their middle school: Officials"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"Service Restored On SEPTA Paoli-Thorndale Line After 350 Passengers Stranded On Tracks For Hours\"\n\"200 Shocking Home Photos You Have to See\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"2 dead, 14 injured following New Mexico Navajo religious ceremony: report\"\n\"Prince Charles Hit by One of the Most Incredible Art Hoaxes in Royal History\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job\"\n\"So, how does one of the world's oldest recipes hold up?\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"10 unique homes that irritated neighbors for years\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"10 unique homes that irritated neighbors for years,\" the user may expect to explore a selection of unconventional residences that have sparked complaints or tension within their communities. The piece is likely to detail specific architectural features or design choices that led to disputes, such as unusual aesthetics, loud noises, or disruptive behaviors associated with the properties. Additionally, it could provide insights into the homeowners' perspectives or community reactions, illustrating how these unique homes prompted conversations about neighborhood standards and personal expression.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 220,
+  "candidate_news_id": "N54015",
+  "candidate_title": "97-year-old WWII veteran takes ride in B-17 bomber for Veteran's Day",
+  "user_history_count": 10,
+  "user_history": [
+    "TV reporter fired after climbing on cars live at auto show",
+    "8 Financial Mistakes in Your 20s that Can Haunt You Later",
+    "The Average Retirement Age in Every State",
+    "51 Times Stars Dressed Up as Other Stars for Halloween   and Nailed It",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "Halloween tales from the ER: Doctors share their spooky stories",
+    "Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars",
+    "Pink on Why She Didn't Headline the 2019 Super Bowl Halftime Show After Offer",
+    "Halloween hangover! Here are 5 fun things to do with your kids' leftover candy",
+    "Barneys Is Sold for Scrap, Ending an Era"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"TV reporter fired after climbing on cars live at auto show\"\n\"8 Financial Mistakes in Your 20s that Can Haunt You Later\"\n\"The Average Retirement Age in Every State\"\n\"51 Times Stars Dressed Up as Other Stars for Halloween   and Nailed It\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Halloween tales from the ER: Doctors share their spooky stories\"\n\"Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars\"\n\"Pink on Why She Didn't Headline the 2019 Super Bowl Halftime Show After Offer\"\n\"Halloween hangover! Here are 5 fun things to do with your kids' leftover candy\"\n\"Barneys Is Sold for Scrap, Ending an Era\"\n\n[Candidate News Title]\n\"97-year-old WWII veteran takes ride in B-17 bomber for Veteran's Day\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about a 97-year-old WWII veteran taking a ride in a B-17 bomber for Veteran's Day is likely to focus on the significance of honoring veterans and the experiences of those who served during the war. Readers may expect to learn about the veteran's personal history, including his service and reflections on past military experiences. The piece could also provide insights into the B-17 bomber's historical importance and its role in WWII, as well as details about the event itself, such as where it took place and how it was organized to commemorate Veterans Day.",
+  "model": "gpt-4o-mini"
+}

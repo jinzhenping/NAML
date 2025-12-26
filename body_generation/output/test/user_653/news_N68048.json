@@ -1,0 +1,21 @@
+{
+  "user_id": 653,
+  "candidate_news_id": "N68048",
+  "candidate_title": "An ambassador fired: What to watch on Day 2 of impeachment",
+  "user_history_count": 10,
+  "user_history": [
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!",
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!",
+    "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+    "Biggest celeb weddings of the last decade",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "Mother of missing Florida girl charged; human remains found",
+    "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+    "My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.",
+    "Husband, 106, and wife, 105, are named world's oldest living couple",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\"Biggest celeb weddings of the last decade\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.\"\n\"Husband, 106, and wife, 105, are named world's oldest living couple\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\n[Candidate News Title]\n\"An ambassador fired: What to watch on Day 2 of impeachment\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may find an overview of the ongoing impeachment proceedings, particularly focusing on the implications of the ambassador's dismissal. It is likely to detail the context surrounding the ambassador's removal, including the political ramifications and reactions from various stakeholders. The article could also provide insights into what to expect in the following days of the impeachment process, highlighting key testimonies or developments that are anticipated. Overall, the content is expected to deliver a straightforward analysis of the situation, keeping the user informed about significant updates.",
+  "model": "gpt-4o-mini"
+}

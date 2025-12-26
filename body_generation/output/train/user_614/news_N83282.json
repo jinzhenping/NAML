@@ -1,0 +1,21 @@
+{
+  "user_id": 614,
+  "candidate_news_id": "N83282",
+  "candidate_title": "Opinion: Consensus at the top of the College Football Playoff rankings, but who's No. 4?",
+  "user_history_count": 10,
+  "user_history": [
+    "Michigan Woman In Sacramento For Business Adopts Kincade Fire Dog",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs",
+    "Week in celebrity photos for Nov. 4-8, 2019",
+    "Christina Anstead shares new pic of son Hudson at 2 months old",
+    "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "I Was 24 & Had Just Scored My Dream Job In Fashion. Then An Accident In The Hamptons Changed Everything."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Michigan Woman In Sacramento For Business Adopts Kincade Fire Dog\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs\"\n\"Week in celebrity photos for Nov. 4-8, 2019\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"I Was 24 & Had Just Scored My Dream Job In Fashion. Then An Accident In The Hamptons Changed Everything.\"\n\n[Candidate News Title]\n\"Opinion: Consensus at the top of the College Football Playoff rankings, but who's No. 4?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Opinion: Consensus at the top of the College Football Playoff rankings, but who's No. 4?\" is likely to discuss the current standings in the College Football Playoff rankings, focusing on the consensus surrounding the top teams. It may analyze the performance of various teams, highlighting the factors that contribute to their rankings and the ongoing debate about which team deserves the No. 4 spot. The piece could include expert opinions and comparisons, offering insights into the teams' records, strengths, and weaknesses as the playoff picture becomes clearer.",
+  "model": "gpt-4o-mini"
+}

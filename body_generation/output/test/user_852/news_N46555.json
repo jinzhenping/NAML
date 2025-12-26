@@ -1,0 +1,21 @@
+{
+  "user_id": 852,
+  "candidate_news_id": "N46555",
+  "candidate_title": "Federal Prosecutors Probe Giuliani's Links to Ukrainian Energy Projects",
+  "user_history_count": 10,
+  "user_history": [
+    "Sophie, Countess of Wessex Shares Her Very Personal Nickname for Her Mother-in-Law, the Queen!",
+    "Police rescue abducted teen girl; 34-year-old man taken into custody",
+    "8 Questions to Ask Yourself Before Using CBD",
+    "Here's How Much Caffeine Is in Your Favorite Starbucks Drinks",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "A guide to the 2019 People's Choice Awards nominees' significant others",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Sophie, Countess of Wessex Shares Her Very Personal Nickname for Her Mother-in-Law, the Queen!\"\n\"Police rescue abducted teen girl; 34-year-old man taken into custody\"\n\"8 Questions to Ask Yourself Before Using CBD\"\n\"Here's How Much Caffeine Is in Your Favorite Starbucks Drinks\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n[Candidate News Title]\n\"Federal Prosecutors Probe Giuliani's Links to Ukrainian Energy Projects\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect an overview of the ongoing investigations involving Rudy Giuliani and his alleged connections to energy projects in Ukraine. It is likely to outline the context of these inquiries, including the role of federal prosecutors and any relevant political implications. The piece might also detail the nature of Giuliani's involvement, possibly touching on previous controversies and how they relate to current events. Additionally, the article could provide insights into the broader impact of these probes on Giuliani's reputation and political career.",
+  "model": "gpt-4o-mini"
+}

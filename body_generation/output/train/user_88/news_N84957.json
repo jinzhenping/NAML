@@ -1,0 +1,21 @@
+{
+  "user_id": 88,
+  "candidate_news_id": "N84957",
+  "candidate_title": "How to get the best Costco Black Friday 2019 deals",
+  "user_history_count": 10,
+  "user_history": [
+    "Republicans are throwing Giuliani under the bus. But there's a problem.",
+    "GOP Primary Challenger: Trump views rule of law \"as his enemy\"",
+    "Sessions wins endorsement from key GOP senators",
+    "'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint",
+    "The economic picture is darkening in states critical to Trump's reelection bid",
+    "Why Republicans are targeting Trump whistleblower",
+    "They Are Racist; Some of Them Have Guns. Inside the White Supremacist Group Hiding in Plain Sight.",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis",
+    "Former Los Angeles police chief named interim in Chicago",
+    "Trump lawyers to appeal tax return decision to Supreme Court next week"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Republicans are throwing Giuliani under the bus. But there's a problem.\"\n\"GOP Primary Challenger: Trump views rule of law \"as his enemy\"\"\n\"Sessions wins endorsement from key GOP senators\"\n\"'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint\"\n\"The economic picture is darkening in states critical to Trump's reelection bid\"\n\"Why Republicans are targeting Trump whistleblower\"\n\"They Are Racist; Some of Them Have Guns. Inside the White Supremacist Group Hiding in Plain Sight.\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\"Former Los Angeles police chief named interim in Chicago\"\n\"Trump lawyers to appeal tax return decision to Supreme Court next week\"\n\n[Candidate News Title]\n\"How to get the best Costco Black Friday 2019 deals\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can likely expect a detailed analysis of the current political landscape surrounding the GOP, particularly focusing on the implications of endorsements for key candidates like Sessions and the ongoing challenges faced by Trump. It may explore how these dynamics affect party unity and strategy, especially in light of recent controversies and legal battles involving Trump. Additionally, the piece could highlight the economic factors influencing voter sentiment in critical states, providing context for how these elements may play a role in the upcoming elections.",
+  "model": "gpt-4o-mini"
+}

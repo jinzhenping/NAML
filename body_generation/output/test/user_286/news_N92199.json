@@ -1,0 +1,18 @@
+{
+  "user_id": 286,
+  "candidate_news_id": "N92199",
+  "candidate_title": "The Most Stunning Evening Gowns in Miss America History",
+  "user_history_count": 7,
+  "user_history": [
+    "25 things to sell when you're ready to retire",
+    "The Latest: Famous figures pay tribute to Jessye Norman",
+    "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+    "Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight",
+    "Man's trip to a cheese shop helps unravel missing persons case",
+    "A White Woman Searches for Her Black Family",
+    "How often should I start my car and let it idle in cold weather? Answer: Don't."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"25 things to sell when you're ready to retire\"\n\"The Latest: Famous figures pay tribute to Jessye Norman\"\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight\"\n\"Man's trip to a cheese shop helps unravel missing persons case\"\n\"A White Woman Searches for Her Black Family\"\n\"How often should I start my car and let it idle in cold weather? Answer: Don't.\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"The Most Stunning Evening Gowns in Miss America History\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The Most Stunning Evening Gowns in Miss America History,\" you may expect an informative overview of the evolution and significance of evening gowns featured in the Miss America pageants over the years. The article is likely to highlight key designs that have made an impact, showcasing notable gowns worn by contestants that reflect changing fashion trends and cultural influences. Additionally, it could include insights about the designers behind these gowns and their contributions to the pageant’s visual identity, offering a blend of historical context and aesthetic appreciation.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 673,
+  "candidate_news_id": "N62456",
+  "candidate_title": "Colin Kaepernick heads to Atlanta for workout",
+  "user_history_count": 10,
+  "user_history": [
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "Three school workers charged in death of special needs student",
+    "Jane Seymour, 68, claims many designers won't 'dress someone my age'",
+    "Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom",
+    "These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show",
+    "Dolly Parton Is Rocking a Thigh-High Slit at the CMA Awards and She Looks Incredible"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"Three school workers charged in death of special needs student\"\n\"Jane Seymour, 68, claims many designers won't 'dress someone my age'\"\n\"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom\"\n\"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\"\n\"Dolly Parton Is Rocking a Thigh-High Slit at the CMA Awards and She Looks Incredible\"\n\n[Candidate News Title]\n\"Colin Kaepernick heads to Atlanta for workout\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Colin Kaepernick's workout in Atlanta, the user might expect to read about the details surrounding the event, including the date, location, and purpose of the workout. The piece is likely to provide context on Kaepernick’s career, his ongoing efforts to return to the NFL, and any notable attendees or coaches involved in the session. Additionally, it may discuss the implications of his workout for both Kaepernick and the teams potentially interested in signing him. Overall, the article could offer insights into his current status within the league and public response to his efforts.",
+  "model": "gpt-4o-mini"
+}

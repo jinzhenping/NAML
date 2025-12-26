@@ -1,0 +1,21 @@
+{
+  "user_id": 558,
+  "candidate_news_id": "N7937",
+  "candidate_title": "Dean Foods files for bankruptcy",
+  "user_history_count": 10,
+  "user_history": [
+    "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+    "Tom Brady explains why he's angry at this point in the football season",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Boss pays off his employee's mortgage to allow him to retire early",
+    "Tile's $59 multipacks come with a free Google Nest Mini or Amazon Echo Dot at Best Buy",
+    "Social Security: 5 smart ways to get more benefits",
+    "19 Things You'll Need To Sacrifice Now for a Healthy Retirement",
+    "Ambushed in Mexico, Mormon Children Tried to Save One Another",
+    "Best Buy releases Black Friday ad with Apple doorbusters, TV deals and early savings",
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Tom Brady explains why he's angry at this point in the football season\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Boss pays off his employee's mortgage to allow him to retire early\"\n\"Tile's $59 multipacks come with a free Google Nest Mini or Amazon Echo Dot at Best Buy\"\n\"Social Security: 5 smart ways to get more benefits\"\n\"19 Things You'll Need To Sacrifice Now for a Healthy Retirement\"\n\"Ambushed in Mexico, Mormon Children Tried to Save One Another\"\n\"Best Buy releases Black Friday ad with Apple doorbusters, TV deals and early savings\"\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\n[Candidate News Title]\n\"Dean Foods files for bankruptcy\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Dean Foods filing for bankruptcy is likely to provide an overview of the company's financial struggles leading up to this decision, including potential reasons for its decline in profitability and market challenges. Readers may expect details regarding the impact on employees, suppliers, and consumers, as well as what this means for the dairy industry at large. The article could also discuss any plans the company has for restructuring or selling assets, and may highlight previous attempts to recover from financial difficulties.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,17 @@
+{
+  "user_id": 884,
+  "candidate_news_id": "N92300",
+  "candidate_title": "No, Not Everyone Is Beautiful, And We'd All Be Better Off If We Stopped Saying We Are",
+  "user_history_count": 6,
+  "user_history": [
+    "15 of the best female country music stars of all time",
+    "Patrick Mahomes and Aaron Rodgers? Young QBs looking like greats",
+    "Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight",
+    "Missing Minnesota boy, 6, and his dog, found in cornfield by drone with thermal camera",
+    "Watch Miranda Lambert Invite a Little Girl On Stage Who 'Stole' Her Heart",
+    "Cam Newton's trip to IR forces Panthers to confront three questions sooner than expected"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"15 of the best female country music stars of all time\"\n\"Patrick Mahomes and Aaron Rodgers? Young QBs looking like greats\"\n\"Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight\"\n\"Missing Minnesota boy, 6, and his dog, found in cornfield by drone with thermal camera\"\n\"Watch Miranda Lambert Invite a Little Girl On Stage Who 'Stole' Her Heart\"\n\"Cam Newton's trip to IR forces Panthers to confront three questions sooner than expected\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"No, Not Everyone Is Beautiful, And We'd All Be Better Off If We Stopped Saying We Are\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you decide to click on the article titled \"No, Not Everyone Is Beautiful, And We'd All Be Better Off If We Stopped Saying We Are,\" you may expect a discussion on societal perceptions of beauty and the implications of these beliefs. The article is likely to explore the pressures of conforming to beauty standards and how these can affect self-esteem and mental health. It could also provide insights into the cultural narratives surrounding beauty and suggest that embracing a more realistic view may lead to healthier societal dynamics.",
+  "model": "gpt-4o-mini"
+}

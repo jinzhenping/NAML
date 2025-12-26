@@ -1,0 +1,21 @@
+{
+  "user_id": 439,
+  "candidate_news_id": "N40282",
+  "candidate_title": "Judge includes law student's toddler during sweet swearing-in ceremony",
+  "user_history_count": 10,
+  "user_history": [
+    "Robert Forster, Oscar-Nommed Star of 'Jackie Brown,' Dies at 78",
+    "Here's what we know about the ISIS prisons controlled by the Syrian Kurds",
+    "The Top Deals at Costco Right Now",
+    "'We think it's cute.' Clemson reacts as undefeated Tigers keep falling in Top 25",
+    "Jimmy Carter hospitalized after fall at Georgia home",
+    "Original Delta Airlines Flight Attendant Dies at 103",
+    "Judge: Brad Pitt, others can be sued over New Orleans homes",
+    "Lion Air crash report points to Boeing, pilots, maintenance",
+    "A rare October snowstorm blankets the Texas Panhandle",
+    "Trump records 'strongly corroborate' sex assault claims, accuser says"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Robert Forster, Oscar-Nommed Star of 'Jackie Brown,' Dies at 78\"\n\"Here's what we know about the ISIS prisons controlled by the Syrian Kurds\"\n\"The Top Deals at Costco Right Now\"\n\"'We think it's cute.' Clemson reacts as undefeated Tigers keep falling in Top 25\"\n\"Jimmy Carter hospitalized after fall at Georgia home\"\n\"Original Delta Airlines Flight Attendant Dies at 103\"\n\"Judge: Brad Pitt, others can be sued over New Orleans homes\"\n\"Lion Air crash report points to Boeing, pilots, maintenance\"\n\"A rare October snowstorm blankets the Texas Panhandle\"\n\"Trump records 'strongly corroborate' sex assault claims, accuser says\"\n\n[Candidate News Title]\n\"Judge includes law student's toddler during sweet swearing-in ceremony\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Judge includes law student's toddler during sweet swearing-in ceremony\" is likely to describe a unique and heartwarming event during a judicial swearing-in ceremony where a judge allowed a law student’s toddler to participate. Readers may expect to learn about the context of the ceremony, possibly including details about the law student's journey and the significance of this moment. The article could also highlight the reactions of attendees and the judge’s decision to include the child, emphasizing the balance between personal and professional milestones in the legal community.",
+  "model": "gpt-4o-mini"
+}

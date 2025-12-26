@@ -1,0 +1,21 @@
+{
+  "user_id": 575,
+  "candidate_news_id": "N26703",
+  "candidate_title": "Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame",
+  "user_history_count": 10,
+  "user_history": [
+    "Shia LaBeouf Spoke to His Dad for the First Time in 7 Years After Court-Mandated 'Head Camp'",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations",
+    "The 2019 NFL mid-season All-Pro team",
+    "I went to Peter Luger after it received zero stars from New York Times",
+    "New buzz on possibility of Major League Soccer in Charlotte",
+    "Jon Hamm and Kiernan Shipka's Reunion Will Miss Mad Men Even More",
+    "Man cuffed for eating sandwich on train platform gets an apology",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "Kaia Gerber Attends Pete Davidson's Comedy Show in Brooklyn"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shia LaBeouf Spoke to His Dad for the First Time in 7 Years After Court-Mandated 'Head Camp'\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations\"\n\"The 2019 NFL mid-season All-Pro team\"\n\"I went to Peter Luger after it received zero stars from New York Times\"\n\"New buzz on possibility of Major League Soccer in Charlotte\"\n\"Jon Hamm and Kiernan Shipka's Reunion Will Miss Mad Men Even More\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Kaia Gerber Attends Pete Davidson's Comedy Show in Brooklyn\"\n\n[Candidate News Title]\n\"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame,\" you might expect a discussion surrounding the recent incident involving Mason Rudolph and the implications of the hit he received. The article may delve into opinions about the accountability placed on Rudolph for the situation, possibly including insights from sports analysts or commentators. It could also explore the context of player safety in football, especially regarding head injuries, and the broader conversations in the league about how such incidents are addressed.",
+  "model": "gpt-4o-mini"
+}

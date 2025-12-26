@@ -1,0 +1,21 @@
+{
+  "user_id": 731,
+  "candidate_news_id": "N5807",
+  "candidate_title": "2020 Cadillac CT5 2.0T Review: A Sport Sedan With Big Shoes to Fill",
+  "user_history_count": 10,
+  "user_history": [
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "Older people's most common regrets",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "The first Ford Mustang owner kept the car. It's now worth $350,000",
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia",
+    "Britney Spears' Abs Are on Full Display In Her Newest Workout Video",
+    "The Day in Sports: Wednesday, November 6, 2019",
+    "Young and the Restless Star William Wintersole Dies at 88",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Mary Cain details alleged physical and emotional abuse at the hands of Nike, Alberto Salazar"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"Older people's most common regrets\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"The first Ford Mustang owner kept the car. It's now worth $350,000\"\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\"Britney Spears' Abs Are on Full Display In Her Newest Workout Video\"\n\"The Day in Sports: Wednesday, November 6, 2019\"\n\"Young and the Restless Star William Wintersole Dies at 88\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Mary Cain details alleged physical and emotional abuse at the hands of Nike, Alberto Salazar\"\n\n[Candidate News Title]\n\"2020 Cadillac CT5 2.0T Review: A Sport Sedan With Big Shoes to Fill\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"2020 Cadillac CT5 2.0T Review: A Sport Sedan With Big Shoes to Fill,\" the user can expect a detailed examination of the Cadillac CT5, focusing on its performance, design, and features. The review may cover aspects such as engine specifications, driving dynamics, and interior comfort, while also comparing the CT5 to its competitors in the sport sedan category. Additionally, it is likely to analyze how the vehicle aligns with Cadillac's reputation and legacy, suggesting that it aims to meet the high expectations set by previous models in this segment.",
+  "model": "gpt-4o-mini"
+}

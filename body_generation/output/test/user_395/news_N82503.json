@@ -1,0 +1,21 @@
+{
+  "user_id": 395,
+  "candidate_news_id": "N82503",
+  "candidate_title": "FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'",
+  "user_history_count": 10,
+  "user_history": [
+    "40 conservative groups sign ethics complaint against Pelosi",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "Precious metals get crushed as end-of-the-world trade implodes",
+    "The 50 cheapest places to buy land in America",
+    "Snow crab sells for record price in Japan",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Trump could slap steep tariffs on imported cars next week",
+    "The 25 most iconic film quotes",
+    "The economic picture is darkening in states critical to Trump's reelection bid",
+    "An investor's guide to space, Wall Street's next trillion-dollar industry"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"40 conservative groups sign ethics complaint against Pelosi\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"Precious metals get crushed as end-of-the-world trade implodes\"\n\"The 50 cheapest places to buy land in America\"\n\"Snow crab sells for record price in Japan\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Trump could slap steep tariffs on imported cars next week\"\n\"The 25 most iconic film quotes\"\n\"The economic picture is darkening in states critical to Trump's reelection bid\"\n\"An investor's guide to space, Wall Street's next trillion-dollar industry\"\n\n[Candidate News Title]\n\"FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a recent warning issued by the FDA to Dollar Tree regarding the sale of potentially unsafe drugs, highlighting the agency's concerns about product safety and compliance with health regulations. Readers may expect insights into the specific items involved, the implications for Dollar Tree's business practices, and any potential consequences for consumers. The article could also explore the broader context of retail health standards and the importance of regulatory oversight in ensuring public safety.",
+  "model": "gpt-4o-mini"
+}

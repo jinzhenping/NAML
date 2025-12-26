@@ -1,0 +1,21 @@
+{
+  "user_id": 627,
+  "candidate_news_id": "N122150",
+  "candidate_title": "They bought a 1 euro house in Italy -- here's what happened next",
+  "user_history_count": 10,
+  "user_history": [
+    "East Ferry home comes with history, style, and $379K price tag",
+    "Dean McDermott Thought Tori Spelling Would 'Run for the Hills' After Cheating",
+    "Solange Knowles splits with husband ahead of anniversary",
+    "Nationals fans rejoice in red as hometown heroes are honored",
+    "A Florida mansion designed to look like the former home of the Romanov Tsars just hit the market for $13.5 million. Here's a look inside Fort Lauderdale's 'Golden Palace.'",
+    "Presidents Cup captain's picks: What will Tiger Woods do?",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "Gingerbread houses for sale that are good enough to eat",
+    "Anthony Mackie and wife quietly divorced last year: Report",
+    "AT&T fined $60 million for throttling 'unlimited' data plans"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"East Ferry home comes with history, style, and $379K price tag\"\n\"Dean McDermott Thought Tori Spelling Would 'Run for the Hills' After Cheating\"\n\"Solange Knowles splits with husband ahead of anniversary\"\n\"Nationals fans rejoice in red as hometown heroes are honored\"\n\"A Florida mansion designed to look like the former home of the Romanov Tsars just hit the market for $13.5 million. Here's a look inside Fort Lauderdale's 'Golden Palace.'\"\n\"Presidents Cup captain's picks: What will Tiger Woods do?\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"Gingerbread houses for sale that are good enough to eat\"\n\"Anthony Mackie and wife quietly divorced last year: Report\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\n[Candidate News Title]\n\"They bought a 1 euro house in Italy -- here's what happened next\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"They bought a 1 euro house in Italy -- here's what happened next,\" the user is likely to read about the experiences of individuals who took advantage of Italy's unique housing initiative, which allows buyers to purchase homes for just one euro, often in need of renovation. The article may explore the challenges and successes these buyers faced, including the renovation process, the local community's response, and any unexpected costs or benefits that arose. Additionally, it could provide insights into the practicalities of such a purchase, including the legal requirements and the potential for revitalizing small towns in Italy. Overall, the piece is likely to offer a balanced view of the outcomes of this intriguing real estate opportunity.",
+  "model": "gpt-4o-mini"
+}

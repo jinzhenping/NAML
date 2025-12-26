@@ -1,0 +1,21 @@
+{
+  "user_id": 170,
+  "candidate_news_id": "N54281",
+  "candidate_title": "Watch These Two Love Birds Perform a Heart-Shaped Swan Dance",
+  "user_history_count": 10,
+  "user_history": [
+    "Marijuana Breath Tests Could Be Available by 2020",
+    "The Difference Between Green and Orange Antifreeze",
+    "The mysterious case of NASA's missing $1.1 billion moon lander",
+    "The Reality Of Owning An Old Car",
+    "50 Delicious Dutch Oven Recipes",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Report: Antonio Brown, NFL in 'standoff' over playing status",
+    "How to Make Your Home Fries Extra Crispy",
+    "105 Most Popular Sodas Ranked by How Toxic They Are",
+    "NFL could meet with Brown multiple times to discuss case"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Marijuana Breath Tests Could Be Available by 2020\"\n\"The Difference Between Green and Orange Antifreeze\"\n\"The mysterious case of NASA's missing $1.1 billion moon lander\"\n\"The Reality Of Owning An Old Car\"\n\"50 Delicious Dutch Oven Recipes\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Report: Antonio Brown, NFL in 'standoff' over playing status\"\n\"How to Make Your Home Fries Extra Crispy\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"NFL could meet with Brown multiple times to discuss case\"\n\n[Candidate News Title]\n\"Watch These Two Love Birds Perform a Heart-Shaped Swan Dance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Watch These Two Love Birds Perform a Heart-Shaped Swan Dance,\" you may expect to read about a unique and visually captivating performance featuring swans that have been trained to create a heart shape as they dance together. The article is likely to provide details about the swans' behavior, the significance of such a display in the context of animal behavior or training, and possibly insights into the trainers' techniques. Additionally, there could be a discussion of the broader implications of animal performances in entertainment or conservation efforts.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 674,
+  "candidate_news_id": "N96241",
+  "candidate_title": "Our All-Time Best Christmas Cookie Recipes",
+  "user_history_count": 10,
+  "user_history": [
+    "Jeff Bezos is set to lose his crown as world's richest person",
+    "Real talk: How freaked should I be about the sugar content in alcohol?",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Whitney Way Thore Responds After Trolls Shamed Her for Attempting a Power Snatch",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Shannon Beador Just Shared Multiple Photos Of Her Skin Recovering From A CO2 Laser",
+    "Mother Is Freed After 15 Years in Prison for Father's Abuse",
+    "Whoopi Goldberg Addresses 'The View' Tension: 'If We Were Fighting, You'd Actually Know It'",
+    "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+    "Between 1,000 to 2,000 people get the plague every year -- including about 7 in the US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Real talk: How freaked should I be about the sugar content in alcohol?\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Whitney Way Thore Responds After Trolls Shamed Her for Attempting a Power Snatch\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Shannon Beador Just Shared Multiple Photos Of Her Skin Recovering From A CO2 Laser\"\n\"Mother Is Freed After 15 Years in Prison for Father's Abuse\"\n\"Whoopi Goldberg Addresses 'The View' Tension: 'If We Were Fighting, You'd Actually Know It'\"\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\"Between 1,000 to 2,000 people get the plague every year -- including about 7 in the US\"\n\n[Candidate News Title]\n\"Our All-Time Best Christmas Cookie Recipes\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a collection of Christmas cookie recipes that are celebrated for their taste and ease of preparation. It may include classic favorites alongside more innovative options, appealing to a wide range of baking preferences. The content could provide detailed instructions and tips for achieving the best results, as well as suggestions for variations to accommodate dietary restrictions or flavor preferences. The article is likely to inspire readers to engage in holiday baking, fostering a festive atmosphere in their homes.",
+  "model": "gpt-4o-mini"
+}

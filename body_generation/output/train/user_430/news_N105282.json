@@ -1,0 +1,21 @@
+{
+  "user_id": 430,
+  "candidate_news_id": "N105282",
+  "candidate_title": "23 Worst Things You Can Say to a New Parent",
+  "user_history_count": 10,
+  "user_history": [
+    "Here's How to Correctly Store Potatoes to Keep Them Fresh",
+    "Look of the day: Ashley Graham's latest sizzling maternity look & more celeb style",
+    "Brian Baldinger: Which NFL Team Is In Worst Situation? | Home & Home",
+    "Stars turning 70 in 2019",
+    "Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "'Self-Partnered' Is a Meaningless New Way to Say You're Single",
+    "Stocks close higher on optimism over China trade deal",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "The 25 most iconic film quotes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's How to Correctly Store Potatoes to Keep Them Fresh\"\n\"Look of the day: Ashley Graham's latest sizzling maternity look & more celeb style\"\n\"Brian Baldinger: Which NFL Team Is In Worst Situation? | Home & Home\"\n\"Stars turning 70 in 2019\"\n\"Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"'Self-Partnered' Is a Meaningless New Way to Say You're Single\"\n\"Stocks close higher on optimism over China trade deal\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"The 25 most iconic film quotes\"\n\n[Candidate News Title]\n\"23 Worst Things You Can Say to a New Parent\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"23 Worst Things You Can Say to a New Parent,\" you may expect a thoughtful exploration of common phrases that can be unintentionally hurtful or insensitive to new parents. The article is likely to provide examples of comments that, while perhaps well-intentioned, may not be received positively due to the challenges and emotions involved in parenting. It could also offer insights into why these statements can be problematic, helping readers understand the nuances of social interactions with new parents.",
+  "model": "gpt-4o-mini"
+}

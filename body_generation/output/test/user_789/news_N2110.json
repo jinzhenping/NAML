@@ -1,0 +1,21 @@
+{
+  "user_id": 789,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "Greater Milford Area Historical Society to state: Help us fix museum",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Celebrity mug shots",
+    "Jessica Simpson's latest Birdie Mae post suggests she's done having kids, plus more news",
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia",
+    "Shooting victim's family, friends remember him on 16th birthday",
+    "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now",
+    "'What I said was accurate': Sen. Kennedy defends calling Pelosi 'dumb'",
+    "1-2 inches of snow coming, flurries will start before evening commute",
+    "Most Unsafe Cars on the Road"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Greater Milford Area Historical Society to state: Help us fix museum\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Celebrity mug shots\"\n\"Jessica Simpson's latest Birdie Mae post suggests she's done having kids, plus more news\"\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\"Shooting victim's family, friends remember him on 16th birthday\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\"'What I said was accurate': Sen. Kennedy defends calling Pelosi 'dumb'\"\n\"1-2 inches of snow coming, flurries will start before evening commute\"\n\"Most Unsafe Cars on the Road\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive,\" you may expect a curated list of innovative and popular technology products that are suitable for various occasions, such as holidays or birthdays. The article is likely to highlight gifts that appeal to a wide range of interests and age groups, potentially including gadgets, smart home devices, and accessories that enhance everyday life. Additionally, it may offer insights on the practicality and uniqueness of each gift, helping readers to choose items that stand out in the tech landscape.",
+  "model": "gpt-4o-mini"
+}

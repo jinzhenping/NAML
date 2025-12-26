@@ -1,0 +1,18 @@
+{
+  "user_id": 382,
+  "candidate_news_id": "N25964",
+  "candidate_title": "Elderly woman defends her right to drink",
+  "user_history_count": 7,
+  "user_history": [
+    "Dolphins release player acquired from Texans in Laremy Tunsil, Kenny Stills trade",
+    "MLB bans women who flashed their chests behind home plate during Game 5 of World Series",
+    "A 2,000-pound great white shark is swimming off the coast of Florida",
+    "Yardbarker's Week 9 NFL picks, game previews",
+    "Crash shuts down 3 SB lanes of I-95 in Riviera Beach",
+    "Three Florida families say sunscreen burned their children",
+    "Sneaky reason why Ravens, not Patriots, are AFC's best"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dolphins release player acquired from Texans in Laremy Tunsil, Kenny Stills trade\"\n\"MLB bans women who flashed their chests behind home plate during Game 5 of World Series\"\n\"A 2,000-pound great white shark is swimming off the coast of Florida\"\n\"Yardbarker's Week 9 NFL picks, game previews\"\n\"Crash shuts down 3 SB lanes of I-95 in Riviera Beach\"\n\"Three Florida families say sunscreen burned their children\"\n\"Sneaky reason why Ravens, not Patriots, are AFC's best\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Elderly woman defends her right to drink\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Elderly woman defends her right to drink\" is likely to explore a situation involving an elderly woman's assertion of her personal freedoms, potentially in the context of social or legal challenges related to alcohol consumption. Readers may expect to learn about the circumstances that prompted her defense, such as societal attitudes towards aging and drinking or specific incidents that raised concern. Additionally, the piece might discuss broader implications regarding autonomy for older adults, including how these discussions reflect on cultural perspectives about aging. This article could provide insights into the intersection of personal rights and public opinion.",
+  "model": "gpt-4o-mini"
+}

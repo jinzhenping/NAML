@@ -1,0 +1,21 @@
+{
+  "user_id": 339,
+  "candidate_news_id": "N39877",
+  "candidate_title": "Thieves Steal $40K Worth Of Equipment From Volunteer Fire Station",
+  "user_history_count": 10,
+  "user_history": [
+    "Missing West Point cadet Kade Kurita found dead 4 days after disappearing",
+    "World's largest treehouse burns to the ground",
+    "Report: Adidas working on buyout of $25 million John Wall deal amid injuries",
+    "Bill Macy, Bea Arthur's Husband on 'Maude,' Dies at 97",
+    "The ice used to protect them. Now their island is crumbling into the sea.",
+    "Jeremy Roloff Vows to Pay More 'Attention' to His Health After Undergoing Hernia Surgery",
+    "At stressful time, Boy Scouts top boss goes on medical leave",
+    "Vanna White hosts 'Wheel of Fortune' after Sajak has surgery",
+    "8 Secret Spots You Never Knew Existed in Disney Parks",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Missing West Point cadet Kade Kurita found dead 4 days after disappearing\"\n\"World's largest treehouse burns to the ground\"\n\"Report: Adidas working on buyout of $25 million John Wall deal amid injuries\"\n\"Bill Macy, Bea Arthur's Husband on 'Maude,' Dies at 97\"\n\"The ice used to protect them. Now their island is crumbling into the sea.\"\n\"Jeremy Roloff Vows to Pay More 'Attention' to His Health After Undergoing Hernia Surgery\"\n\"At stressful time, Boy Scouts top boss goes on medical leave\"\n\"Vanna White hosts 'Wheel of Fortune' after Sajak has surgery\"\n\"8 Secret Spots You Never Knew Existed in Disney Parks\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\n[Candidate News Title]\n\"Thieves Steal $40K Worth Of Equipment From Volunteer Fire Station\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to report on a recent incident where thieves stole approximately $40,000 worth of equipment from a volunteer fire station. Readers can expect to find details about the nature of the stolen equipment, its significance to the fire station’s operations, and any potential impact on local emergency response capabilities. The piece may also cover the ongoing investigation by law enforcement and community reactions to the theft. Additionally, it could provide insights into how such incidents affect volunteer organizations and their ability to serve the community effectively.",
+  "model": "gpt-4o-mini"
+}

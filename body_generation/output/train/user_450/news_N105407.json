@@ -1,0 +1,21 @@
+{
+  "user_id": 450,
+  "candidate_news_id": "N105407",
+  "candidate_title": "'One in a million' deer captured on camera in Michigan woods",
+  "user_history_count": 10,
+  "user_history": [
+    "Patrick Mahomes shouldn't try to rush back",
+    "Spectacular photos from space",
+    "20 years after Payne Stewart's tragic death, son Aaron carries his legacy",
+    "Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before",
+    "An architect who built his dream tiny home in Colorado shares photos",
+    "President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'",
+    "Indiana AD remark on Huskers' lack of respect baffles Frost",
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Patrick Mahomes shouldn't try to rush back\"\n\"Spectacular photos from space\"\n\"20 years after Payne Stewart's tragic death, son Aaron carries his legacy\"\n\"Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before\"\n\"An architect who built his dream tiny home in Colorado shares photos\"\n\"President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'\"\n\"Indiana AD remark on Huskers' lack of respect baffles Frost\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'\"\n\n[Candidate News Title]\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about a rare sighting of a unique deer in Michigan, which may be described as having unusual physical characteristics or behaviors that set it apart from typical deer. The content could provide details about the location of the sighting, the circumstances under which it was captured on camera, and possibly insights from wildlife experts about the significance of such occurrences in nature. Additionally, the piece may touch on the broader implications of wildlife observation and conservation efforts in the region.",
+  "model": "gpt-4o-mini"
+}

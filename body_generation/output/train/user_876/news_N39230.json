@@ -1,0 +1,21 @@
+{
+  "user_id": 876,
+  "candidate_news_id": "N39230",
+  "candidate_title": "This Sturdy Cutting Board Will Last for a Lifetime and It's On Super Sale Right Now",
+  "user_history_count": 10,
+  "user_history": [
+    "Kaia Gerber on Looking Just Like Her Mom Cindy Crawford",
+    "19 Mysterious Old Home Features That Aren't Useful Anymore",
+    "Trump's 'bombshell' offer to family of British teen killed in car crash: Diplomat's wife is in next room",
+    "Tour the 17-Room Inn Named \"Most Romantic Hotel in the U.S.\"",
+    "Cuomo signs law aimed at weakening Trump's pardon power, closes 'double jeopardy' loophole",
+    "Francis Ford Coppola's Slam on Marvel Films Fuels Debate Sparked by Martin Scorsese",
+    "Jennifer Lawrence Hired A Food Truck For Her Wedding And The Owner Had No Idea Who She Was",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "52 Easy Thanksgiving Recipes, Because You Deserve to Be Stress-Free",
+    "'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kaia Gerber on Looking Just Like Her Mom Cindy Crawford\"\n\"19 Mysterious Old Home Features That Aren't Useful Anymore\"\n\"Trump's 'bombshell' offer to family of British teen killed in car crash: Diplomat's wife is in next room\"\n\"Tour the 17-Room Inn Named \"Most Romantic Hotel in the U.S.\"\"\n\"Cuomo signs law aimed at weakening Trump's pardon power, closes 'double jeopardy' loophole\"\n\"Francis Ford Coppola's Slam on Marvel Films Fuels Debate Sparked by Martin Scorsese\"\n\"Jennifer Lawrence Hired A Food Truck For Her Wedding And The Owner Had No Idea Who She Was\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"52 Easy Thanksgiving Recipes, Because You Deserve to Be Stress-Free\"\n\"'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes\"\n\n[Candidate News Title]\n\"This Sturdy Cutting Board Will Last for a Lifetime and It's On Super Sale Right Now\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a cutting board that is currently on sale, highlighting its durability and design features that contribute to its long-lasting use. Readers can expect information on the materials used in the cutting board's construction, as well as its practicality in everyday cooking situations. The article may also provide insights into what sets this cutting board apart from others on the market, including comparisons with similar products. Additionally, it could mention customer reviews or testimonials that emphasize its quality and functionality.",
+  "model": "gpt-4o-mini"
+}

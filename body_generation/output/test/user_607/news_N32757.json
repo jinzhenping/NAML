@@ -1,0 +1,21 @@
+{
+  "user_id": 607,
+  "candidate_news_id": "N32757",
+  "candidate_title": "'After I Could Only Fit Into Extended-Size Wedding Gowns, I Started Keto And Lost Over 100 Lbs. In 16 Months'",
+  "user_history_count": 10,
+  "user_history": [
+    "The 30 Most Iconic Celebrity Halloween Costumes of All Time",
+    "Celeb couples with big age gaps",
+    "Man charged in bear-repellent attack on Trump protesters at Santa Monica Pier",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Democrats Move Toward Bringing Impeachment Inquiry Public",
+    "This Wedding Photo of a Canine Best Man Captures Just How Deep a Dog's Love Truly Is",
+    "Man who advocated caning for adultery gets caned for adultery",
+    "Feds release Flynn interview notes",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Neil Young Says U.S. Citizenship Application Delayed By Marijuana Use"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 30 Most Iconic Celebrity Halloween Costumes of All Time\"\n\"Celeb couples with big age gaps\"\n\"Man charged in bear-repellent attack on Trump protesters at Santa Monica Pier\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Democrats Move Toward Bringing Impeachment Inquiry Public\"\n\"This Wedding Photo of a Canine Best Man Captures Just How Deep a Dog's Love Truly Is\"\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"Feds release Flynn interview notes\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Neil Young Says U.S. Citizenship Application Delayed By Marijuana Use\"\n\n[Candidate News Title]\n\"'After I Could Only Fit Into Extended-Size Wedding Gowns, I Started Keto And Lost Over 100 Lbs. In 16 Months'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to read about an individual’s personal journey with weight loss through a ketogenic diet after facing challenges related to finding suitable wedding attire. It is likely to detail the motivations behind the lifestyle change, including the emotional and physical aspects of fitting into extended-size wedding gowns and the subsequent achievement of losing over 100 pounds within 16 months. The article could also explore the broader implications of such a transformation on self-image and health, providing insights into the keto diet's effectiveness and personal anecdotes related to the experience.",
+  "model": "gpt-4o-mini"
+}

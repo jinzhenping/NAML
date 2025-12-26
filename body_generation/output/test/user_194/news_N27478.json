@@ -1,0 +1,21 @@
+{
+  "user_id": 194,
+  "candidate_news_id": "N27478",
+  "candidate_title": "Pittsburgh Steelers quarterback Mason Rudolph on 'TNF' incident: 'I thought it was pretty cowardly'",
+  "user_history_count": 10,
+  "user_history": [
+    "Pence denies Trump did anything wrong in call with Ukrainian president",
+    "Signs of Dementia: 8 Tips For Talking to Your Older Parents",
+    "Venice 'on its knees' after second-worst flood ever recorded",
+    "Yu Darvish sends hilarious tweet about Astros cheating scandal",
+    "The 1 reason you shouldn't hesitate to claim Social Security early",
+    "Disney World Decorates The Parks With More Than 40,000 Items Overnight In Only 7 Hours",
+    "50th anniversary of Apollo 12, the Moon mission that almost ended in disaster",
+    "Report: Red Sox manager Alex Cora, Mets' Carlos Beltrán implicated in Astros sign-stealing scheme",
+    "Tourists needed in Venice after flooding, locals say",
+    "Top Putin aide named by MH17 airliner investigators"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Pence denies Trump did anything wrong in call with Ukrainian president\"\n\"Signs of Dementia: 8 Tips For Talking to Your Older Parents\"\n\"Venice 'on its knees' after second-worst flood ever recorded\"\n\"Yu Darvish sends hilarious tweet about Astros cheating scandal\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\"Disney World Decorates The Parks With More Than 40,000 Items Overnight In Only 7 Hours\"\n\"50th anniversary of Apollo 12, the Moon mission that almost ended in disaster\"\n\"Report: Red Sox manager Alex Cora, Mets' Carlos Beltrán implicated in Astros sign-stealing scheme\"\n\"Tourists needed in Venice after flooding, locals say\"\n\"Top Putin aide named by MH17 airliner investigators\"\n\n[Candidate News Title]\n\"Pittsburgh Steelers quarterback Mason Rudolph on 'TNF' incident: 'I thought it was pretty cowardly'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the user can expect to read about the recent comments made by Pittsburgh Steelers quarterback Mason Rudolph regarding a controversial incident that occurred during Thursday Night Football. The piece is likely to outline Rudolph's perspective on the situation, possibly describing his views on the actions of other players involved and the implications for the game. Additionally, it may explore the broader context of player conduct in the NFL and reactions from fans and analysts. The article could also provide insights into how this incident fits within the ongoing narrative of sportsmanship and competitive ethics in professional football.",
+  "model": "gpt-4o-mini"
+}

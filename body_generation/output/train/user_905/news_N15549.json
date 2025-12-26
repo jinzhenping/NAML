@@ -1,0 +1,21 @@
+{
+  "user_id": 905,
+  "candidate_news_id": "N15549",
+  "candidate_title": "Gospel Singer Tamela Mann Lost 40 Pounds by Overhauling Her Lifestyle",
+  "user_history_count": 10,
+  "user_history": [
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Prince Charles Teared Up When Prince William Talked About Succeeding Him",
+    "California authorities found and destroyed $1 billion worth of marijuana plants",
+    "Celebrity kids then and now: See how they've grown",
+    "Oklahoma officer convicted of 2nd-degree murder",
+    "Keanu Reeves holds hands with Alexandra Grant as the Internet swoons, plus more news",
+    "Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Antonio Brown is exposing Roger Goodell's unchecked power to shut players out of the NFL",
+    "Former Seminoles star Deion Sanders is not candidate for Florida State football coaching job"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Prince Charles Teared Up When Prince William Talked About Succeeding Him\"\n\"California authorities found and destroyed $1 billion worth of marijuana plants\"\n\"Celebrity kids then and now: See how they've grown\"\n\"Oklahoma officer convicted of 2nd-degree murder\"\n\"Keanu Reeves holds hands with Alexandra Grant as the Internet swoons, plus more news\"\n\"Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Antonio Brown is exposing Roger Goodell's unchecked power to shut players out of the NFL\"\n\"Former Seminoles star Deion Sanders is not candidate for Florida State football coaching job\"\n\n[Candidate News Title]\n\"Gospel Singer Tamela Mann Lost 40 Pounds by Overhauling Her Lifestyle\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about gospel singer Tamela Mann losing 40 pounds, the user can expect to read about her journey towards a healthier lifestyle, which may include details about her dietary changes, exercise routines, and overall motivation for this transformation. The piece is likely to highlight how her weight loss has impacted her career and personal life, along with any challenges she faced during the process. Additionally, insights into her approach to maintaining a balanced life while managing her career in the entertainment industry could be included, providing a comprehensive view of her experience.",
+  "model": "gpt-4o-mini"
+}

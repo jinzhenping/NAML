@@ -1,0 +1,20 @@
+{
+  "user_id": 90,
+  "candidate_news_id": "N16716",
+  "candidate_title": "Unwanted tourist types: The kinds of travelers becoming more unwelcome",
+  "user_history_count": 9,
+  "user_history": [
+    "'Ghost kitchens' are taking over fast-food chains from Chick-fil-A to Wendy's",
+    "Coaches poll: LSU jumps Ohio State, Oklahoma to No. 3; Georgia falls",
+    "This Percentage of Americans Have Never Left the State They Were Born",
+    "Early symptoms of dementia: Be aware of subtle signs",
+    "Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves",
+    "High-voltage PG&E power line broke near origin of massive fire in California wine country",
+    "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+    "100 vintage baby names coming back into style",
+    "Porsche launches into second story of New Jersey building, killing 2"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Ghost kitchens' are taking over fast-food chains from Chick-fil-A to Wendy's\"\n\"Coaches poll: LSU jumps Ohio State, Oklahoma to No. 3; Georgia falls\"\n\"This Percentage of Americans Have Never Left the State They Were Born\"\n\"Early symptoms of dementia: Be aware of subtle signs\"\n\"Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves\"\n\"High-voltage PG&E power line broke near origin of massive fire in California wine country\"\n\"1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef\"\n\"100 vintage baby names coming back into style\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"\"\n\n[Candidate News Title]\n\"Unwanted tourist types: The kinds of travelers becoming more unwelcome\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to explore the increasing presence of certain types of tourists who are becoming less welcome in popular travel destinations. Readers may expect an analysis of the characteristics of these unwanted travelers, potentially discussing behaviors that lead to negative perceptions among locals. The piece could also provide insight into how tourism industries are adapting to these changes and the impact on local economies and community sentiments. It may highlight specific examples of destinations facing challenges due to these visitor types.",
+  "model": "gpt-4o-mini"
+}

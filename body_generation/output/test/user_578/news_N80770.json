@@ -1,0 +1,21 @@
+{
+  "user_id": 578,
+  "candidate_news_id": "N80770",
+  "candidate_title": "Judge agrees Alabama Islamic State recruit is not US citizen",
+  "user_history_count": 10,
+  "user_history": [
+    "A Navy weapons station full of WWII-era ammunition bunkers could be transformed into 13,000 new homes in the Bay Area",
+    "Why you're paying realtors too much commission   and what you can do about it",
+    "China's pork crisis is bigger than you think",
+    "Speed Camera Photos Help Man Get His Stolen Bike Back",
+    "New Zealand's euthanasia bill passes, referendum to be held",
+    "Bolivia's Jeanine Anez declares herself acting president as Evo Morales vows to fight from abroad",
+    "See what your favorite stars look like without makeup",
+    "WSU student death: Police investigating fraternity member found not breathing",
+    "No. 1 milk company declares bankruptcy amid drop in demand",
+    "Should Chevy Bring This Three-Row Blazer to the U.S.?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A Navy weapons station full of WWII-era ammunition bunkers could be transformed into 13,000 new homes in the Bay Area\"\n\"Why you're paying realtors too much commission   and what you can do about it\"\n\"China's pork crisis is bigger than you think\"\n\"Speed Camera Photos Help Man Get His Stolen Bike Back\"\n\"New Zealand's euthanasia bill passes, referendum to be held\"\n\"Bolivia's Jeanine Anez declares herself acting president as Evo Morales vows to fight from abroad\"\n\"See what your favorite stars look like without makeup\"\n\"WSU student death: Police investigating fraternity member found not breathing\"\n\"No. 1 milk company declares bankruptcy amid drop in demand\"\n\"Should Chevy Bring This Three-Row Blazer to the U.S.?\"\n\n[Candidate News Title]\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent court ruling in which a judge determined that an individual who sought to join the Islamic State is not recognized as a U.S. citizen. Readers may expect an overview of the legal arguments presented in the case, including any relevant laws regarding citizenship and terrorism. The piece might also explore the implications of this decision on national security and immigration policies. Additionally, it could touch on the broader context of individuals attempting to engage with extremist groups and how the judicial system is addressing such cases.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 47,
+  "candidate_news_id": "N34044",
+  "candidate_title": "This is it, this is the luckiest break in the history of golf",
+  "user_history_count": 10,
+  "user_history": [
+    "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+    "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case",
+    "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+    "9 Amazing Transgender Women Who Changed History",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Here's the Best Small Town in Every State",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "This is Chick-fil-A's most-ordered menu item",
+    "There are 14 cheap days to fly left in 2019: When are they and what deals can you score?",
+    "38 men who were worthy competitors for John Legend's Sexiest Man Alive title"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\"9 Amazing Transgender Women Who Changed History\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Here's the Best Small Town in Every State\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"There are 14 cheap days to fly left in 2019: When are they and what deals can you score?\"\n\"38 men who were worthy competitors for John Legend's Sexiest Man Alive title\"\n\n[Candidate News Title]\n\"This is it, this is the luckiest break in the history of golf\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"This is it, this is the luckiest break in the history of golf\" is likely to explore a significant moment in golf history where an unexpected event or stroke of fortune drastically altered the outcome of a game or tournament. Readers may expect an analysis of the incident, including details about the players involved, the context of the event, and its implications for the sport. Additionally, the article could delve into how such occurrences are viewed within the golfing community and their impact on player reputations.",
+  "model": "gpt-4o-mini"
+}

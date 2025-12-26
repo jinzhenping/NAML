@@ -1,0 +1,21 @@
+{
+  "user_id": 27,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "After throwing a punch, Dabo Swinney made CB Andrew Booth ride the manager bus back to Clemson",
+    "Judge: Brad Pitt, others can be sued over New Orleans homes",
+    "Jeff Bezos is set to lose his crown as world's richest person",
+    "Tent Spent: We Try Luxury Camping in a $100,000 Airstream",
+    "China is willing to buy $20 billion worth of US farm goods",
+    "The richest country music stars",
+    "Wild & wonderful treasures of SEMA 2019   US edition",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump",
+    "Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\""
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"After throwing a punch, Dabo Swinney made CB Andrew Booth ride the manager bus back to Clemson\"\n\"Judge: Brad Pitt, others can be sued over New Orleans homes\"\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Tent Spent: We Try Luxury Camping in a $100,000 Airstream\"\n\"China is willing to buy $20 billion worth of US farm goods\"\n\"The richest country music stars\"\n\"Wild & wonderful treasures of SEMA 2019   US edition\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump\"\n\"Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\"\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive,\" you can expect a curated list of innovative and appealing tech products that would make great gifts. The article is likely to cover a range of gadgets, from the latest smart home devices to unique accessories that enhance everyday life. Additionally, it may provide a brief overview of each product's features and potential use cases, helping you identify suitable gifts for various occasions. Overall, the content will focus on blending practicality with novelty, appealing to tech enthusiasts and casual users alike.",
+  "model": "gpt-4o-mini"
+}

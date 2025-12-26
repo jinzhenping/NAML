@@ -1,0 +1,21 @@
+{
+  "user_id": 831,
+  "candidate_news_id": "N70459",
+  "candidate_title": "New Trump rule to make more health care rates public",
+  "user_history_count": 10,
+  "user_history": [
+    "Column: Canelo Alvarez is the king of boxing's wait class",
+    "Tarek El Moussa Has 'Definitely' Talked About Getting Engaged",
+    "Prince Harry and Meghan Markle are taking a royal respite",
+    "13-year-old survivor in Mexico attack hid siblings in bushes",
+    "Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2",
+    "Fond Farewell For Alex Denis",
+    "Joe Giudice Calls His Family 'Italian Strong' During Reunion with Wife Teresa and Their Daughters",
+    "Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out",
+    "I'm 55 and have no retirement savings: What should I do?",
+    "A former royal bodyguard shared the challenges that come with protecting the royal family"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Column: Canelo Alvarez is the king of boxing's wait class\"\n\"Tarek El Moussa Has 'Definitely' Talked About Getting Engaged\"\n\"Prince Harry and Meghan Markle are taking a royal respite\"\n\"13-year-old survivor in Mexico attack hid siblings in bushes\"\n\"Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2\"\n\"Fond Farewell For Alex Denis\"\n\"Joe Giudice Calls His Family 'Italian Strong' During Reunion with Wife Teresa and Their Daughters\"\n\"Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out\"\n\"I'm 55 and have no retirement savings: What should I do?\"\n\"A former royal bodyguard shared the challenges that come with protecting the royal family\"\n\n[Candidate News Title]\n\"New Trump rule to make more health care rates public\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on the new Trump rule regarding health care rates may provide an overview of the initiatives aimed at increasing transparency in health care pricing. Readers can expect to learn about the implications of this rule for consumers, such as how it could potentially enable patients to make more informed decisions about their health care options. Additionally, the article might discuss the reactions from various stakeholders, including health care providers and insurance companies, regarding how these changes could impact the overall landscape of health care access and affordability.",
+  "model": "gpt-4o-mini"
+}

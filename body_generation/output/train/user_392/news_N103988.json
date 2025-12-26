@@ -1,0 +1,21 @@
+{
+  "user_id": 392,
+  "candidate_news_id": "N103988",
+  "candidate_title": "Astros' Verlander, Mets' deGrom win 2nd Cy Young Awards",
+  "user_history_count": 10,
+  "user_history": [
+    "13-year-old survivor in Mexico attack hid siblings in bushes",
+    "New images capture missing college student on night she vanished",
+    "13-year-old charged with two murders escapes custody in North Carolina",
+    "Star witness expected in trial of man accused of killing fiancée",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "6 Perfect Holiday Party Dress Ideas to Copy Through New Year's",
+    "Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer",
+    "California Woman Contracts Parasitic Worms in Her Eye After Going on a Trail Run",
+    "A 13-year-old murder suspect who escaped in North Carolina is back in custody",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"13-year-old survivor in Mexico attack hid siblings in bushes\"\n\"New images capture missing college student on night she vanished\"\n\"13-year-old charged with two murders escapes custody in North Carolina\"\n\"Star witness expected in trial of man accused of killing fiancée\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"6 Perfect Holiday Party Dress Ideas to Copy Through New Year's\"\n\"Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer\"\n\"California Woman Contracts Parasitic Worms in Her Eye After Going on a Trail Run\"\n\"A 13-year-old murder suspect who escaped in North Carolina is back in custody\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\n[Candidate News Title]\n\"Astros' Verlander, Mets' deGrom win 2nd Cy Young Awards\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Astros' Verlander, Mets' deGrom win 2nd Cy Young Awards,\" they may expect to read about the achievements of two prominent baseball pitchers, Justin Verlander and Jacob deGrom, as they each secure their second Cy Young Award. The article is likely to detail their performance statistics from the past season, highlight key moments that contributed to their awards, and provide context on what this recognition means for their careers. Additionally, it could explore reactions from fans, teammates, and baseball analysts regarding their accomplishments in the league.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 797,
+  "candidate_news_id": "N25656",
+  "candidate_title": "If You're Over 40 And About To Start Weight Lifting For The First Time, Here Are 5 Things You Need To Know",
+  "user_history_count": 10,
+  "user_history": [
+    "Ben Affleck is dating again, using Raya app",
+    "Mountain skeleton may be man from Japanese internment camp",
+    "Mississippi woman found after being missing for days by writing S.O.S. with rocks",
+    "Elderly mother caught in a lie",
+    "DOJ sues Walmart for allegedly discriminating against a Navy reserve officer",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Holocaust survivor under guard amid death threats",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "A man dies in Hawaii after falling into a lava tube in his yard"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Ben Affleck is dating again, using Raya app\"\n\"Mountain skeleton may be man from Japanese internment camp\"\n\"Mississippi woman found after being missing for days by writing S.O.S. with rocks\"\n\"Elderly mother caught in a lie\"\n\"DOJ sues Walmart for allegedly discriminating against a Navy reserve officer\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Holocaust survivor under guard amid death threats\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\n[Candidate News Title]\n\"If You're Over 40 And About To Start Weight Lifting For The First Time, Here Are 5 Things You Need To Know\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide practical advice for individuals over 40 who are considering starting a weightlifting regimen for the first time. Readers can expect to find key tips on safe practices, such as proper techniques and the importance of warm-ups to prevent injuries. The article may also discuss the benefits of strength training at this age, including improved muscle mass and bone density. Additionally, it could address common misconceptions about weightlifting and emphasize the importance of consulting with a healthcare provider before beginning any new fitness program.",
+  "model": "gpt-4o-mini"
+}

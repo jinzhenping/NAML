@@ -1,0 +1,21 @@
+{
+  "user_id": 938,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 10,
+  "user_history": [
+    "Man Goes To Adoption Event And Finds His Long-Lost Dog",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Everything to Know About Visiting the Biltmore Estate This Christmas",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "'It's cool to be cold': Confessions of frigid-weather fanatics",
+    "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Man Goes To Adoption Event And Finds His Long-Lost Dog\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Everything to Know About Visiting the Biltmore Estate This Christmas\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"'It's cool to be cold': Confessions of frigid-weather fanatics\"\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"The most talked about movie moments of the 2010s,\" they are likely expecting a detailed overview of significant and memorable scenes from popular films released during that decade. The article may explore various genres and highlight both critically acclaimed and commercially successful movies, discussing the cultural impact of these moments. Additionally, it could provide insights into how these scenes resonated with audiences and shaped cinematic trends. The user might find that the article includes commentary on specific films, directors, and actors, though it is uncertain whether it will delve into behind-the-scenes stories or audience reactions.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 246,
+  "candidate_news_id": "N122640",
+  "candidate_title": "This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.",
+  "user_history_count": 10,
+  "user_history": [
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "What this week's 5 biggest upsets mean for the NFL playoff picture",
+    "Signs of Dementia: 8 Tips For Talking to Your Older Parents",
+    "'Priceless' finds that turned out to be worthless",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "Don't be fooled: Costco says $75 coupon is a scam",
+    "30 Best Black Friday Deals from Costco",
+    "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+    "Powerful side-by-side portraits show people over 100 years old next to their younger selves"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"What this week's 5 biggest upsets mean for the NFL playoff picture\"\n\"Signs of Dementia: 8 Tips For Talking to Your Older Parents\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Don't be fooled: Costco says $75 coupon is a scam\"\n\"30 Best Black Friday Deals from Costco\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\"Powerful side-by-side portraits show people over 100 years old next to their younger selves\"\n\n[Candidate News Title]\n\"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent incident involving Myles Garrett and the subsequent controversy surrounding his actions during a game, which may include an analysis of the helmet attack and the implications for player safety in the NFL. It could outline the reactions from fans, analysts, and officials, as well as the potential consequences Garrett may face, including a suspension for the remainder of the season. Additionally, the piece might explore broader themes related to disciplinary measures in professional sports and their impact on player behavior.",
+  "model": "gpt-4o-mini"
+}

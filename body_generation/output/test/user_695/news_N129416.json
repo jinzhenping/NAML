@@ -1,0 +1,21 @@
+{
+  "user_id": 695,
+  "candidate_news_id": "N129416",
+  "candidate_title": "Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties",
+  "user_history_count": 10,
+  "user_history": [
+    "Formjacking: The New Scam You Need To Know About Before You Start Your Holiday Shopping",
+    "Why Virginia's Election Results Mean the Equal Rights Amendment Could Finally Pass",
+    "Holocaust survivor under guard amid death threats",
+    "Fire Ants and Spiders Inspire Metal That Can't Sink",
+    "Bogus Warren Quote Ignites Immigration Anger",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "College gymnast dies following training accident in Connecticut",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "Bode Miller delivered his twin boys after midwife didn't make it time for the birth",
+    "3 killed in fiery Guilford County crash identified as mother, 2 young daughters"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Formjacking: The New Scam You Need To Know About Before You Start Your Holiday Shopping\"\n\"Why Virginia's Election Results Mean the Equal Rights Amendment Could Finally Pass\"\n\"Holocaust survivor under guard amid death threats\"\n\"Fire Ants and Spiders Inspire Metal That Can't Sink\"\n\"Bogus Warren Quote Ignites Immigration Anger\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"Bode Miller delivered his twin boys after midwife didn't make it time for the birth\"\n\"3 killed in fiery Guilford County crash identified as mother, 2 young daughters\"\n\n[Candidate News Title]\n\"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties,\" the user can likely expect to read about the ongoing disputes between Taylor Swift and her former record label, Big Machine Records. The piece may detail the specifics of the financial claims being made, including the context surrounding the alleged unpaid royalties. Additionally, it could explore the implications of this situation for Swift's career and her relationship with the music industry, shedding light on the broader issues of artist rights and label contracts.",
+  "model": "gpt-4o-mini"
+}

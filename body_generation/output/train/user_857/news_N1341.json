@@ -1,0 +1,21 @@
+{
+  "user_id": 857,
+  "candidate_news_id": "N1341",
+  "candidate_title": "28 Dumb Ways You Could Lose It All by Trying To Get Rich",
+  "user_history_count": 10,
+  "user_history": [
+    "Flight shaming is gaining traction and could cost airlines billions",
+    "Help! My Sister Called Off Her Wedding and Is Furious I'm Going on Her Honeymoon.",
+    "Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Green Beret awarded Medal of Honor for saving lives",
+    "What I Wish My Dad Told Me More Growing Up, According to 10 Men",
+    "What comes next in the impeachment inquiry? Public hearings on an uncertain timeline",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Free Rodney Reed: 100,000 Sign Petition to Stop Execution of Death Row Inmate in Texas",
+    "'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Flight shaming is gaining traction and could cost airlines billions\"\n\"Help! My Sister Called Off Her Wedding and Is Furious I'm Going on Her Honeymoon.\"\n\"Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Green Beret awarded Medal of Honor for saving lives\"\n\"What I Wish My Dad Told Me More Growing Up, According to 10 Men\"\n\"What comes next in the impeachment inquiry? Public hearings on an uncertain timeline\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Free Rodney Reed: 100,000 Sign Petition to Stop Execution of Death Row Inmate in Texas\"\n\"'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'\"\n\n[Candidate News Title]\n\"28 Dumb Ways You Could Lose It All by Trying To Get Rich\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect a discussion on various unconventional and potentially reckless strategies people might employ in their pursuit of wealth. It may explore a range of risky behaviors or decisions that, while seemingly appealing, could lead to significant financial losses. The piece is likely to highlight specific examples of these \"dumb\" methods, shedding light on the common pitfalls that individuals face when trying to get rich quickly. Additionally, it could offer insights into the underlying reasons why people fall for such schemes, emphasizing the importance of informed financial decision-making.",
+  "model": "gpt-4o-mini"
+}

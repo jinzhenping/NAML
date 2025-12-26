@@ -1,0 +1,21 @@
+{
+  "user_id": 48,
+  "candidate_news_id": "N76902",
+  "candidate_title": "55 Best Outdoor Christmas Decorations to Get Your Yard in the Spirit",
+  "user_history_count": 10,
+  "user_history": [
+    "Kelly Ripa responds to backlash over son in 'extreme poverty' joke",
+    "10 ways the average American home is different today than it was in the '60s",
+    "13 Ways to Make Your New House Look Old",
+    "Construction finished on 21 homes in first phase of North End residential development",
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Kroger is rebranding with a new logo and slogan",
+    "This Mom's Been Sober For 3 Years, and Her Celebratory Photo Shoot With Her Son Is Everything",
+    "Stylish Living Room Ideas, From Floral to Family-Friendly",
+    "The 25 richest families in America",
+    "27 Amazing Home Upgrades for Every Budget"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kelly Ripa responds to backlash over son in 'extreme poverty' joke\"\n\"10 ways the average American home is different today than it was in the '60s\"\n\"13 Ways to Make Your New House Look Old\"\n\"Construction finished on 21 homes in first phase of North End residential development\"\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Kroger is rebranding with a new logo and slogan\"\n\"This Mom's Been Sober For 3 Years, and Her Celebratory Photo Shoot With Her Son Is Everything\"\n\"Stylish Living Room Ideas, From Floral to Family-Friendly\"\n\"The 25 richest families in America\"\n\"27 Amazing Home Upgrades for Every Budget\"\n\n[Candidate News Title]\n\"55 Best Outdoor Christmas Decorations to Get Your Yard in the Spirit\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"55 Best Outdoor Christmas Decorations to Get Your Yard in the Spirit,\" you can expect a curated list of various festive outdoor decorations suitable for the holiday season. The article is likely to include a range of options, from traditional lights and wreaths to innovative and themed decorations that enhance curb appeal. Additionally, it may provide tips on how to effectively arrange these items to create a cohesive look for your yard. Overall, the content should serve as a practical guide for anyone looking to elevate their outdoor holiday decor.",
+  "model": "gpt-4o-mini"
+}

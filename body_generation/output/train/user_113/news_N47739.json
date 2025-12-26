@@ -1,0 +1,19 @@
+{
+  "user_id": 113,
+  "candidate_news_id": "N47739",
+  "candidate_title": "I spent a day in Astoria, Queens, and saw why it's one of the world's coolest neighborhoods",
+  "user_history_count": 8,
+  "user_history": [
+    "The Latest: Powerful typhoon makes landfall in Japan",
+    "The Weirdest Animals You Can Legally Own In The US",
+    "The Most Haunted Place in Every State (Don't Visit These Alone!)",
+    "How Each Zodiac Sign Knows They've Found Their Soulmate",
+    "The most terrifying birds in the world",
+    "One shrinking Japanese town's plan: Give away houses for free",
+    "What Is Each Zodiac Sign Allergic To?",
+    "This Simple Hack Will Keep Spiders Out of Your House"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Latest: Powerful typhoon makes landfall in Japan\"\n\"The Weirdest Animals You Can Legally Own In The US\"\n\"The Most Haunted Place in Every State (Don't Visit These Alone!)\"\n\"How Each Zodiac Sign Knows They've Found Their Soulmate\"\n\"The most terrifying birds in the world\"\n\"One shrinking Japanese town's plan: Give away houses for free\"\n\"What Is Each Zodiac Sign Allergic To?\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"I spent a day in Astoria, Queens, and saw why it's one of the world's coolest neighborhoods\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the reader may expect an exploration of Astoria, Queens, highlighting its unique cultural and historical features. It could detail notable neighborhoods, local eateries, and community events that contribute to Astoria's reputation as a vibrant area. The piece is likely to include insights into the diverse population and artistic scene, offering a glimpse into daily life there. Readers may also find personal anecdotes or observations that illustrate why Astoria is considered appealing and worthwhile to visit.",
+  "model": "gpt-4o-mini"
+}

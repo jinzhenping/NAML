@@ -1,0 +1,21 @@
+{
+  "user_id": 431,
+  "candidate_news_id": "N16716",
+  "candidate_title": "Unwanted tourist types: The kinds of travelers becoming more unwelcome",
+  "user_history_count": 10,
+  "user_history": [
+    "Colin Cowherd says the Chiefs have no chance: \"the AFC is over\"",
+    "Caterpillar just flashed the latest warning sign for the global economy",
+    "Flight shaming is gaining traction and could cost airlines billions",
+    "Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo",
+    "Marine Corps vet who served in Iraq deported to El Salvador",
+    "Michigan sends breakup tweet to Notre Dame as series goes on hold",
+    "Elizabeth Warren's Days Defending Big Corporations",
+    "Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "Hong Kong protesters trash Xinhua agency office in night of violence"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Colin Cowherd says the Chiefs have no chance: \"the AFC is over\"\"\n\"Caterpillar just flashed the latest warning sign for the global economy\"\n\"Flight shaming is gaining traction and could cost airlines billions\"\n\"Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo\"\n\"Marine Corps vet who served in Iraq deported to El Salvador\"\n\"Michigan sends breakup tweet to Notre Dame as series goes on hold\"\n\"Elizabeth Warren's Days Defending Big Corporations\"\n\"Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Hong Kong protesters trash Xinhua agency office in night of violence\"\n\n[Candidate News Title]\n\"Unwanted tourist types: The kinds of travelers becoming more unwelcome\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the evolving dynamics of tourism, focusing on the types of travelers that certain destinations may increasingly find unwelcome. It may explore factors contributing to this trend, such as environmental concerns, cultural sensitivity, or the impact of over-tourism on local communities. The piece could provide examples of specific tourist behaviors that are becoming less acceptable, alongside insights from industry experts or local residents. Overall, it is likely to offer a balanced view of how changing attitudes towards tourism are shaping the travel landscape.",
+  "model": "gpt-4o-mini"
+}

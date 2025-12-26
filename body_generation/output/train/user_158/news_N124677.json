@@ -1,0 +1,21 @@
+{
+  "user_id": 158,
+  "candidate_news_id": "N124677",
+  "candidate_title": "Husband, 106, and wife, 105, are named world's oldest living couple",
+  "user_history_count": 10,
+  "user_history": [
+    "UK lawmakers approve early election on Dec 12",
+    "US said close to finalizing parts of trade deal with China",
+    "US Fed cuts interest rates, signals it is on hold",
+    "The world's largest nuclear power producer is melting down",
+    "U.S. weekly jobless claims rise more than expected",
+    "North Korea launches two projectiles into sea, Japan and South Korea say",
+    "Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody",
+    "North Korea, U.S. could resume talks in mid-November: South Korean MP",
+    "Trump boasts of 'blowout' 303,000 jobs report, leading economists to puzzle over his math",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"UK lawmakers approve early election on Dec 12\"\n\"US said close to finalizing parts of trade deal with China\"\n\"US Fed cuts interest rates, signals it is on hold\"\n\"The world's largest nuclear power producer is melting down\"\n\"U.S. weekly jobless claims rise more than expected\"\n\"North Korea launches two projectiles into sea, Japan and South Korea say\"\n\"Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody\"\n\"North Korea, U.S. could resume talks in mid-November: South Korean MP\"\n\"Trump boasts of 'blowout' 303,000 jobs report, leading economists to puzzle over his math\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\n[Candidate News Title]\n\"Husband, 106, and wife, 105, are named world's oldest living couple\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Husband, 106, and wife, 105, are named world's oldest living couple,\" they may expect to read about the couple's remarkable longevity and the factors contributing to their long lives. The article is likely to provide details about their life together, including their experiences, lifestyle choices, and any notable milestones they have achieved. Additionally, it could explore broader themes related to aging and the growing number of centenarians worldwide, possibly highlighting insights from experts on longevity.",
+  "model": "gpt-4o-mini"
+}

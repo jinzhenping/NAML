@@ -1,0 +1,21 @@
+{
+  "user_id": 326,
+  "candidate_news_id": "N880",
+  "candidate_title": "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+  "user_history_count": 10,
+  "user_history": [
+    "What Is Brown Butter and Should You Be Using It?",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Rare deer spotted in Montana",
+    "Florida zip line: Boy falls more than 20 feet onto concrete floor at entertainment park",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "You Can Take A 'Game Of Thrones' Cooking Class And Learn How To Make Marbled \"Dragon Eggs\"",
+    "100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season",
+    "Comics - 'Pluggers' by Gary Brookins",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"What Is Brown Butter and Should You Be Using It?\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Rare deer spotted in Montana\"\n\"Florida zip line: Boy falls more than 20 feet onto concrete floor at entertainment park\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"You Can Take A 'Game Of Thrones' Cooking Class And Learn How To Make Marbled \"Dragon Eggs\"\"\n\"100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season\"\n\"Comics - 'Pluggers' by Gary Brookins\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\n[Candidate News Title]\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long,\" the user can expect a collection of recipes that highlight seasonal ingredients and comforting flavors typical of autumn. The article may provide a variety of soup options, catering to different dietary preferences and cooking skill levels, along with tips on preparation and presentation. Additionally, it is likely to include suggestions for pairing these soups with sides or garnishes, making it a comprehensive guide for those looking to enhance their fall dining experience.",
+  "model": "gpt-4o-mini"
+}

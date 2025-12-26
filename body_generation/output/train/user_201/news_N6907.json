@@ -1,0 +1,20 @@
+{
+  "user_id": 201,
+  "candidate_news_id": "N6907",
+  "candidate_title": "National Cappuccino Day 2019: Deals from Starbucks, Dunkin' Donuts and More",
+  "user_history_count": 9,
+  "user_history": [
+    "Solomon: Astros are Team October",
+    "If you want baseball like it used to be, this is the World Series for you",
+    "If you want baseball like it used to be, this is the World Series for you",
+    "18 things to avoid at the dollar store",
+    "This fast food chain has the best fries, according to customers",
+    "What we know about the military dog injured in the al-Baghdadi raid",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Inside the creepy, abandoned villages deep in the New Jersey Pine Barrens that were once bustling towns and are now home to something much more mysterious",
+    "10 of the best fast-food taco chains across the US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Solomon: Astros are Team October\"\n\"If you want baseball like it used to be, this is the World Series for you\"\n\"If you want baseball like it used to be, this is the World Series for you\"\n\"18 things to avoid at the dollar store\"\n\"This fast food chain has the best fries, according to customers\"\n\"What we know about the military dog injured in the al-Baghdadi raid\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Inside the creepy, abandoned villages deep in the New Jersey Pine Barrens that were once bustling towns and are now home to something much more mysterious\"\n\"10 of the best fast-food taco chains across the US\"\n\"\"\n\n[Candidate News Title]\n\"National Cappuccino Day 2019: Deals from Starbucks, Dunkin' Donuts and More\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"National Cappuccino Day 2019: Deals from Starbucks, Dunkin' Donuts and More,\" the user can expect to read about various promotions and discounts offered by popular coffee chains in celebration of National Cappuccino Day. The piece is likely to outline specific deals available at Starbucks and Dunkin' Donuts, providing details on how customers can take advantage of these offers. Additionally, it may include information about the history of cappuccinos and their significance in coffee culture, giving a broader context to the event.",
+  "model": "gpt-4o-mini"
+}

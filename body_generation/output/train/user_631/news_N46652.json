@@ -1,0 +1,21 @@
+{
+  "user_id": 631,
+  "candidate_news_id": "N46652",
+  "candidate_title": "New findings parents need to know about screen time and kids",
+  "user_history_count": 10,
+  "user_history": [
+    "Take a tour of Derek Jeter's $14 million castle",
+    "Meghan King Edmonds, Jim Edmonds' Nanny Denies Cheating Allegations",
+    "I visited the new American Dream megamall on its opening day and it was eerily empty",
+    "Curry leads Warriors to first win, 134-123 over Pelicans",
+    "50 secrets it's OK to keep from your partner",
+    "Two Brides Did A Deadlift At Their Wedding As A Symbol Of Unity And Strength",
+    "Hulk Hogan's jet grounded after 'melted' brakes, blown tires",
+    "Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Take a tour of Derek Jeter's $14 million castle\"\n\"Meghan King Edmonds, Jim Edmonds' Nanny Denies Cheating Allegations\"\n\"I visited the new American Dream megamall on its opening day and it was eerily empty\"\n\"Curry leads Warriors to first win, 134-123 over Pelicans\"\n\"50 secrets it's OK to keep from your partner\"\n\"Two Brides Did A Deadlift At Their Wedding As A Symbol Of Unity And Strength\"\n\"Hulk Hogan's jet grounded after 'melted' brakes, blown tires\"\n\"Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations\"\n\n[Candidate News Title]\n\"New findings parents need to know about screen time and kids\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"New findings parents need to know about screen time and kids,\" the user may expect a discussion of recent research surrounding the impact of screen time on children's development and well-being. It is likely to outline both positive and negative effects, such as how screen time can influence social skills or academic performance. The article may also provide practical advice for parents on managing screen time, including recommended limits and alternative activities to encourage. Additionally, it could explore guidelines from health organizations regarding age-appropriate screen usage.",
+  "model": "gpt-4o-mini"
+}

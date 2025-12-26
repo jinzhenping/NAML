@@ -1,0 +1,21 @@
+{
+  "user_id": 283,
+  "candidate_news_id": "N123209",
+  "candidate_title": "Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions",
+  "user_history_count": 10,
+  "user_history": [
+    "James Mattis mocks Trump's bone spurs",
+    "Subtle Signs You May Have Clogged Arteries",
+    "50 Home Décor Horrors You Can't Look Away From",
+    "Lane Kiffin seemed to enjoy getting fined $5K for a blind ref meme, calls out LeBron James",
+    "Mohamed Sanu Can't Contain Excitement Over Trade To Patriots On Twitter",
+    "Amazon's $1.5 million political gambit backfires in Seattle City Council election",
+    "Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage",
+    "'Brutal' Arctic blast is affecting 200 million people from Chicago to Texas, and it isn't over yet",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"James Mattis mocks Trump's bone spurs\"\n\"Subtle Signs You May Have Clogged Arteries\"\n\"50 Home Décor Horrors You Can't Look Away From\"\n\"Lane Kiffin seemed to enjoy getting fined $5K for a blind ref meme, calls out LeBron James\"\n\"Mohamed Sanu Can't Contain Excitement Over Trade To Patriots On Twitter\"\n\"Amazon's $1.5 million political gambit backfires in Seattle City Council election\"\n\"Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage\"\n\"'Brutal' Arctic blast is affecting 200 million people from Chicago to Texas, and it isn't over yet\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\n[Candidate News Title]\n\"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions,\" the user can expect to read about the recent public apology made by the contestants regarding their behavior on the reality show \"Survivor.\" The article is likely to provide context about the specific actions that prompted the apology, along with reactions from fans and fellow contestants. Additionally, it may explore the broader implications of their actions within the reality TV community and how such incidents affect public perception of reality TV participants.",
+  "model": "gpt-4o-mini"
+}

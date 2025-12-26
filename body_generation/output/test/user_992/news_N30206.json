@@ -1,0 +1,21 @@
+{
+  "user_id": 992,
+  "candidate_news_id": "N30206",
+  "candidate_title": "Cows swept away by Hurricane Dorian found alive   but how?",
+  "user_history_count": 10,
+  "user_history": [
+    "Body of missing Alabama girl found; 2 being charged",
+    "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+    "Coast Guard searches for man who fell from cruise off Texas",
+    "Dog The Bounty Hunter Is Cutting Out White Foods After His Recent Health Scare",
+    "Halloween snowstorm wallops the Midwest",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "27 handmade alternatives to buying gifts for the home",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "This is Chick-fil-A's most-ordered menu item"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge\"\n\"Coast Guard searches for man who fell from cruise off Texas\"\n\"Dog The Bounty Hunter Is Cutting Out White Foods After His Recent Health Scare\"\n\"Halloween snowstorm wallops the Midwest\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"27 handmade alternatives to buying gifts for the home\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\n[Candidate News Title]\n\"Cows swept away by Hurricane Dorian found alive   but how?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about cows being swept away by Hurricane Dorian and later found alive, the user is likely to expect a detailed account of the rescue efforts and the circumstances surrounding the cows' survival. Readers may find descriptions of the challenges faced during the hurricane and the subsequent search operations. Additionally, the piece could explore the impact of natural disasters on livestock and the broader implications for farmers. It is likely to provide insights into how these animals were located and the conditions they endured during the storm.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 953,
+  "candidate_news_id": "N118266",
+  "candidate_title": "WATCH: Trump Greeted by Cheers at LSU-Alabama Football Game",
+  "user_history_count": 10,
+  "user_history": [
+    "Anthony Davis on possibly joining hometown Bulls: 'I mean, I am a free agent next year'",
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Colts News: Pat McAfee explains laces issue on missed kick by Adam Vinatieri",
+    "Trump Tax Return Case Confronts Supreme Court With a Momentous Choice",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "Watch: Bulls' Zach LaVine with absurd 360 reverse jam",
+    "Best Buy releases Black Friday ad with Apple doorbusters, TV deals and early savings",
+    "40 Best Belly-Shrinking Foods",
+    "How Red Line riders and motorists can navigate the Monumental Marathon this Saturday",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Anthony Davis on possibly joining hometown Bulls: 'I mean, I am a free agent next year'\"\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Colts News: Pat McAfee explains laces issue on missed kick by Adam Vinatieri\"\n\"Trump Tax Return Case Confronts Supreme Court With a Momentous Choice\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"Watch: Bulls' Zach LaVine with absurd 360 reverse jam\"\n\"Best Buy releases Black Friday ad with Apple doorbusters, TV deals and early savings\"\n\"40 Best Belly-Shrinking Foods\"\n\"How Red Line riders and motorists can navigate the Monumental Marathon this Saturday\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\n[Candidate News Title]\n\"WATCH: Trump Greeted by Cheers at LSU-Alabama Football Game\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"WATCH: Trump Greeted by Cheers at LSU-Alabama Football Game,\" the user can likely expect a detailed account of former President Donald Trump's attendance at the high-profile college football game. The piece may describe the atmosphere at the stadium, including the reactions of the crowd, and provide context regarding Trump's connection to the event. Additionally, it could explore the significance of his presence at such a prominent sporting occasion. The article is likely to highlight key moments during the game that involved Trump, including any interactions with fans or remarks he made.",
+  "model": "gpt-4o-mini"
+}

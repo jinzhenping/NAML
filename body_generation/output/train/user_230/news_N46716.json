@@ -1,0 +1,21 @@
+{
+  "user_id": 230,
+  "candidate_news_id": "N46716",
+  "candidate_title": "Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal",
+  "user_history_count": 10,
+  "user_history": [
+    "Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!",
+    "Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly",
+    "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+    "13-year-old survivor in Mexico attack hid siblings in bushes",
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "Celebrity kids then and now: See how they've grown",
+    "Pro disqualified from Q-School for failing to sign scorecard",
+    "A Look Back at Prince Charles and Camilla's Relationship Through the Years",
+    "Charles Howell III takes family on 'once-in-a-lifetime' trip",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!\"\n\"Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"13-year-old survivor in Mexico attack hid siblings in bushes\"\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"Celebrity kids then and now: See how they've grown\"\n\"Pro disqualified from Q-School for failing to sign scorecard\"\n\"A Look Back at Prince Charles and Camilla's Relationship Through the Years\"\n\"Charles Howell III takes family on 'once-in-a-lifetime' trip\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\n[Candidate News Title]\n\"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\" is likely to provide an overview of the increasing prevalence of cannabis use disorder in states that have legalized marijuana. It may discuss statistical trends, potential contributing factors such as accessibility and changing societal attitudes towards cannabis, and implications for public health. The article is expected to include insights from health professionals or studies that examine the relationship between legalization and rates of addiction. Additionally, it could explore the broader impact on communities and possible regulatory responses, although this is uncertain.",
+  "model": "gpt-4o-mini"
+}

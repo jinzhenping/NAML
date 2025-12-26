@@ -1,0 +1,21 @@
+{
+  "user_id": 254,
+  "candidate_news_id": "N126000",
+  "candidate_title": "Man who inherited 6 figures shares advice he'd give his younger self",
+  "user_history_count": 10,
+  "user_history": [
+    "California firefighters get a little help from Matthew McConaughey",
+    "Kate Middleton Enjoys Secret Ladies Night Out",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+    "'The Crown' changes Queens in the best way",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "This stately home is having the ultimate yard sale"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"California firefighters get a little help from Matthew McConaughey\"\n\"Kate Middleton Enjoys Secret Ladies Night Out\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"'The Crown' changes Queens in the best way\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"This stately home is having the ultimate yard sale\"\n\n[Candidate News Title]\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Man who inherited 6 figures shares advice he'd give his younger self\" is likely to provide insights into the financial and personal lessons learned by an individual who came into a significant inheritance. Readers can expect a discussion of practical advice related to money management, investment strategies, and the emotional implications of sudden wealth. The article may also delve into common pitfalls to avoid and reflections on how one's perspective on finances can change over time. Overall, it aims to offer guidance for younger readers who may face similar situations in the future.",
+  "model": "gpt-4o-mini"
+}

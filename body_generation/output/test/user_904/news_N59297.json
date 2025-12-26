@@ -1,0 +1,21 @@
+{
+  "user_id": 904,
+  "candidate_news_id": "N59297",
+  "candidate_title": "The Coolest Car Lamborghini Never Made Is Up For Sale",
+  "user_history_count": 10,
+  "user_history": [
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season",
+    "Jennifer Lopez Just Got a Teeny Chop to Her Blond Lob, but it Changed the Entire Look",
+    "Is retirement dying? The old work model is disappearing for Boomers, Gen Xers",
+    "Need Money? Check Out These Side-Hustle Apps",
+    "Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal",
+    "Most Americans say they are struggling financially",
+    "'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.",
+    "Small Canadian island irate that Americans keep opening their mail",
+    "No, Not Everyone Is Beautiful, And We'd All Be Better Off If We Stopped Saying We Are"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season\"\n\"Jennifer Lopez Just Got a Teeny Chop to Her Blond Lob, but it Changed the Entire Look\"\n\"Is retirement dying? The old work model is disappearing for Boomers, Gen Xers\"\n\"Need Money? Check Out These Side-Hustle Apps\"\n\"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\"\n\"Most Americans say they are struggling financially\"\n\"'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"No, Not Everyone Is Beautiful, And We'd All Be Better Off If We Stopped Saying We Are\"\n\n[Candidate News Title]\n\"The Coolest Car Lamborghini Never Made Is Up For Sale\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"The Coolest Car Lamborghini Never Made Is Up For Sale,\" you may expect to read about a unique Lamborghini prototype or concept vehicle that was never mass-produced. The article is likely to detail the car's design features, performance specifications, and the reasons it never reached the market. Additionally, it may explore the significance of this vehicle within the context of Lamborghini's history and the automotive industry. There could be insights into its current sale and what collectors might find appealing about acquiring such a rare piece of automotive innovation.",
+  "model": "gpt-4o-mini"
+}

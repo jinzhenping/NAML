@@ -1,0 +1,19 @@
+{
+  "user_id": 343,
+  "candidate_news_id": "N110303",
+  "candidate_title": "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+  "user_history_count": 8,
+  "user_history": [
+    "Halle Berry welcomes Zoe Kravitz to the Catwoman family: 'Keep shining Queen'",
+    "Here's Jennifer Lopez Wearing the Most Extra Bejeweled Wedding Dress",
+    "Here's Jennifer Lopez Wearing the Most Extra Bejeweled Wedding Dress",
+    "Camila Cabello Denies Rumors She and Shawn Mendes Split",
+    "Keanu Reeves picked up a lot of Ali Wong swag",
+    "Demi Lovato Just Proved She's the Queen of Halloween",
+    "50 Facts So Genius You'll Feel Like Einstein",
+    "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Halle Berry welcomes Zoe Kravitz to the Catwoman family: 'Keep shining Queen'\"\n\"Here's Jennifer Lopez Wearing the Most Extra Bejeweled Wedding Dress\"\n\"Here's Jennifer Lopez Wearing the Most Extra Bejeweled Wedding Dress\"\n\"Camila Cabello Denies Rumors She and Shawn Mendes Split\"\n\"Keanu Reeves picked up a lot of Ali Wong swag\"\n\"Demi Lovato Just Proved She's the Queen of Halloween\"\n\"50 Facts So Genius You'll Feel Like Einstein\"\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent decision by the Supreme Court regarding a lawsuit filed against a gun manufacturer by families of the Sandy Hook victims. Readers can expect an overview of the legal arguments presented, the implications of the ruling for gun manufacturers, and how this case fits into the broader context of gun control legislation in the United States. Additionally, the article may provide insights into the reactions of both the plaintiffs and defendants, as well as any potential ramifications for future lawsuits of a similar nature.",
+  "model": "gpt-4o-mini"
+}
