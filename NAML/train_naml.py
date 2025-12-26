@@ -15,7 +15,6 @@ import itertools
 import numpy as np
 import pickle
 from numpy.linalg import cholesky
-from keras.utils.np_utils import *
 import os
 import argparse
 
