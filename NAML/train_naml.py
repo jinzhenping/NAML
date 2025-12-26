@@ -663,7 +663,9 @@ def main():
             gen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
                                           news_words, news_body, news_v, news_sv, all_test_user_pos)
             for x, y in gen:
-                yield x, y
+                # x는 리스트이므로 튜플로 변환
+                # y는 리스트이므로 numpy array로 변환
+                yield tuple(x) if isinstance(x, list) else x, np.array(y, dtype=np.int32) if isinstance(y, list) else y
         
         # output_signature: 204개 입력 (튜플) + 1개 label
         test_input_specs = (
@@ -716,12 +718,12 @@ def main():
         traingen = generate_batch_data_train(all_train_pn, all_label, all_train_id, args.batch_size,
                                              news_words, news_body, news_v, news_sv, all_user_pos)
         
-        # Generator를 래핑하여 numpy array를 Tensor로 변환
+        # Generator를 래핑하여 리스트를 튜플로 변환
         def train_gen_wrapper():
             for inputs, label in traingen:
-                # inputs는 튜플이므로 그대로 사용
+                # inputs는 리스트이므로 튜플로 변환
                 # label은 리스트이므로 numpy array로 변환
-                yield inputs, np.array(label, dtype=np.int32)
+                yield tuple(inputs), np.array(label, dtype=np.int32)
         
         # output_signature: 220개 입력 (튜플) + 1개 label
         input_specs = (
