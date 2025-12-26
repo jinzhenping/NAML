@@ -642,7 +642,7 @@ def main():
     model_test = keras.Model([candidate_one_title] + browsed_news_input + [candidate_one_body] + browsed_body_input
                              + [candidate_one_v] + browsed_v_input + [candidate_one_sv] + browsed_sv_input, score)
     
-    model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
+    model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=0.001), metrics=['acc'])
     
     print("모델 구축 완료!")
     
