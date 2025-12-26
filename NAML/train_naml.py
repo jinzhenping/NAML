@@ -662,8 +662,26 @@ def main():
         testgen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
                                            news_words, news_body, news_v, news_sv, all_test_user_pos)
         # TensorFlow Dataset으로 변환 (output_signature 지정)
-        # 테스트 데이터: 1개 candidate + 50개 browsed (각각 title, body, v, sv) = 204개 입력 + 1개 label
-        test_input_signature = tuple([tf.TensorSpec(shape=(None,), dtype=tf.int32) for _ in range(204)])
+        # 테스트 데이터 구조:
+        # - 1개 candidate title: (batch_size, 30)
+        # - 50개 browsed title: 각각 (batch_size, 30)
+        # - 1개 candidate body: (batch_size, 300)
+        # - 50개 browsed body: 각각 (batch_size, 300)
+        # - 1개 candidate v: (batch_size, 1)
+        # - 50개 browsed v: 각각 (batch_size, 1)
+        # - 1개 candidate sv: (batch_size, 1)
+        # - 50개 browsed sv: 각각 (batch_size, 1)
+        # 총 204개 입력
+        test_input_signature = (
+            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32)]) +  # candidate title
+            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)]) +  # browsed titles
+            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32)]) +  # candidate body
+            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(50)]) +  # browsed bodies
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32)]) +  # candidate v
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)]) +  # browsed v
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32)]) +  # candidate sv
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)])  # browsed sv
+        )
         test_label_signature = tf.TensorSpec(shape=(None, 1), dtype=tf.int32)
         testgen_tf = tf.data.Dataset.from_generator(
             lambda: testgen,
@@ -702,8 +720,26 @@ def main():
         traingen = generate_batch_data_train(all_train_pn, all_label, all_train_id, args.batch_size,
                                              news_words, news_body, news_v, news_sv, all_user_pos)
         # TensorFlow Dataset으로 변환 (output_signature 지정)
-        # 학습 데이터: 5개 candidate + 50개 browsed (각각 title, body, v, sv) = 220개 입력 + 1개 label
-        input_signature = tuple([tf.TensorSpec(shape=(None,), dtype=tf.int32) for _ in range(220)])
+        # 학습 데이터 구조:
+        # - 5개 candidate title: 각각 (batch_size, 30)
+        # - 50개 browsed title: 각각 (batch_size, 30)
+        # - 5개 candidate body: 각각 (batch_size, 300)
+        # - 50개 browsed body: 각각 (batch_size, 300)
+        # - 5개 candidate v: 각각 (batch_size, 1)
+        # - 50개 browsed v: 각각 (batch_size, 1)
+        # - 5개 candidate sv: 각각 (batch_size, 1)
+        # - 50개 browsed sv: 각각 (batch_size, 1)
+        # 총 220개 입력
+        input_signature = (
+            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(5)]) +  # candidate titles
+            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)]) +  # browsed titles
+            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(5)]) +  # candidate bodies
+            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(50)]) +  # browsed bodies
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)]) +  # candidate v
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)]) +  # browsed v
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)]) +  # candidate sv
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)])  # browsed sv
+        )
         label_signature = tf.TensorSpec(shape=(None, 5), dtype=tf.int32)
         traingen_tf = tf.data.Dataset.from_generator(
             lambda: traingen,
