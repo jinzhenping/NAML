@@ -594,11 +594,11 @@ def main():
     
     all_channel = [title_rep, body_rep, v_embedding, sv_embedding]
     
-    views = concatenate([Lambda(lambda x: K.expand_dims(x, axis=1))(channel) for channel in all_channel], axis=1)
+    views = concatenate([Lambda(lambda x: K.expand_dims(x, axis=1), output_shape=lambda s: (s[0], 1, s[1]))(channel) for channel in all_channel], axis=1)
     
     attentionv = Dense(200, activation='tanh')(views)
     
-    attention_weightv = Lambda(lambda x: K.squeeze(x, axis=-1))(Dense(1)(attentionv))
+    attention_weightv = Lambda(lambda x: K.squeeze(x, axis=-1), output_shape=lambda s: (s[0], s[1]))(Dense(1)(attentionv))
     attention_weightv = Activation('softmax')(attention_weightv)
     
     newsrep = keras.layers.Dot((1, 1))([views, attention_weightv])
@@ -612,7 +612,7 @@ def main():
     browsed_sv_input = [keras.Input((1,), dtype='int32') for _ in range(MAX_SENTS)]
     
     browsednews = [newsEncoder([browsed_news_input[_], browsed_body_input[_], browsed_v_input[_], browsed_sv_input[_]]) for _ in range(MAX_SENTS)]
-    browsednewsrep = concatenate([Lambda(lambda x: K.expand_dims(x, axis=1))(news) for news in browsednews], axis=1)
+    browsednewsrep = concatenate([Lambda(lambda x: K.expand_dims(x, axis=1), output_shape=lambda s: (s[0], 1, s[1]))(news) for news in browsednews], axis=1)
     
     attentionn = Dense(200, activation='tanh')(browsednewsrep)
     attentionn = Flatten()(Dense(1)(attentionn))
