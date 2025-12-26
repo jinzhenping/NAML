@@ -724,14 +724,22 @@ def main():
         def train_gen_wrapper():
             for inputs, label in traingen:
                 # inputs는 리스트이므로 튜플로 변환
-                # label은 리스트이므로 numpy array로 변환하고 shape 조정
+                # label은 이미 (1, 5) shape이어야 함
+                # 만약 shape이 다르면 조정
                 label_arr = np.array(label, dtype=np.int32)
-                # label이 (1, 5) 또는 (5,) shape이면 (batch_size, 5)로 변환
-                if label_arr.ndim == 1:
-                    label_arr = label_arr.reshape(1, -1)
-                elif label_arr.ndim > 2:
-                    # (1, 30, 5) 같은 경우 마지막 차원만 사용
-                    label_arr = label_arr.reshape(-1, label_arr.shape[-1])
+                if label_arr.shape != (1, 5):
+                    # (5,) -> (1, 5) 또는 (150,) -> (30, 5) 등
+                    if label_arr.ndim == 1:
+                        if len(label_arr) == 5:
+                            label_arr = label_arr.reshape(1, 5)
+                        elif len(label_arr) == 150:  # 30 * 5
+                            label_arr = label_arr.reshape(30, 5)
+                        else:
+                            # 배치 크기에 맞게 reshape
+                            batch_size = len(inputs[0]) if len(inputs) > 0 else 1
+                            label_arr = label_arr.reshape(batch_size, -1)
+                    else:
+                        label_arr = label_arr.reshape(-1, 5)
                 yield tuple(inputs), label_arr
         
         # output_signature: 220개 입력 (튜플) + 1개 label
