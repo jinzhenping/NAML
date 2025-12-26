@@ -21,6 +21,7 @@ import argparse
 # Keras imports (모듈 레벨에서 import)
 import keras
 from keras.layers import *
+from keras.layers import Conv1D  # 최신 Keras에서는 Conv1D 사용
 from keras.models import Model
 from keras import backend as K
 from keras.optimizers import *
@@ -568,7 +569,7 @@ def main():
     embedded_sequences_body = embedding_layer(body_input)
     embedded_sequences_body = Dropout(0.2)(embedded_sequences_body)
     
-    title_cnn = Convolution1D(nb_filter=400, filter_length=3, padding='same', activation='relu', strides=1)(embedded_sequences_title)
+    title_cnn = Conv1D(filters=400, kernel_size=3, padding='same', activation='relu', strides=1)(embedded_sequences_title)
     title_cnn = Dropout(0.2)(title_cnn)
     
     attention = Dense(200, activation='tanh')(title_cnn)
@@ -576,7 +577,7 @@ def main():
     attention_weight = Activation('softmax')(attention)
     title_rep = keras.layers.Dot((1, 1))([title_cnn, attention_weight])
     
-    body_cnn = Convolution1D(nb_filter=400, filter_length=3, padding='same', activation='relu', strides=1)(embedded_sequences_body)
+    body_cnn = Conv1D(filters=400, kernel_size=3, padding='same', activation='relu', strides=1)(embedded_sequences_body)
     body_cnn = Dropout(0.2)(body_cnn)
     
     attention_body = Dense(200, activation='tanh')(body_cnn)
