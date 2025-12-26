@@ -17,6 +17,7 @@ import pickle
 from numpy.linalg import cholesky
 import os
 import argparse
+import tensorflow as tf
 
 # Keras imports (모듈 레벨에서 import)
 import keras
@@ -660,7 +661,15 @@ def main():
         print("\n테스트 실행 중...")
         testgen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
                                            news_words, news_body, news_v, news_sv, all_test_user_pos)
-        click_score = model_test.predict(testgen, steps=len(all_test_id) // args.batch_size, verbose=1)
+        # TensorFlow Dataset으로 변환 (output_signature 지정)
+        # 테스트 데이터: 1개 candidate + 50개 browsed (각각 title, body, v, sv) = 204개 입력 + 1개 label
+        test_input_signature = tuple([tf.TensorSpec(shape=(None,), dtype=tf.int32) for _ in range(204)])
+        test_label_signature = tf.TensorSpec(shape=(None, 1), dtype=tf.int32)
+        testgen_tf = tf.data.Dataset.from_generator(
+            lambda: testgen,
+            output_signature=(test_input_signature, test_label_signature)
+        )
+        click_score = model_test.predict(testgen_tf, steps=len(all_test_id) // args.batch_size, verbose=1)
         
         all_auc = []
         all_mrr = []
@@ -692,7 +701,15 @@ def main():
         
         traingen = generate_batch_data_train(all_train_pn, all_label, all_train_id, args.batch_size,
                                              news_words, news_body, news_v, news_sv, all_user_pos)
-        model.fit(traingen, epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
+        # TensorFlow Dataset으로 변환 (output_signature 지정)
+        # 학습 데이터: 5개 candidate + 50개 browsed (각각 title, body, v, sv) = 220개 입력 + 1개 label
+        input_signature = tuple([tf.TensorSpec(shape=(None,), dtype=tf.int32) for _ in range(220)])
+        label_signature = tf.TensorSpec(shape=(None, 5), dtype=tf.int32)
+        traingen_tf = tf.data.Dataset.from_generator(
+            lambda: traingen,
+            output_signature=(input_signature, label_signature)
+        )
+        model.fit(traingen_tf, epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
         
         # 모델 저장 (각 에포크마다)
         if args.save_model:
@@ -704,7 +721,15 @@ def main():
         # 테스트 실행
         testgen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
                                            news_words, news_body, news_v, news_sv, all_test_user_pos)
-        click_score = model_test.predict(testgen, steps=len(all_test_id) // args.batch_size, verbose=1)
+        # TensorFlow Dataset으로 변환
+        testgen_tf = tf.data.Dataset.from_generator(
+            lambda: testgen,
+            output_signature=(
+                tuple([tf.TensorSpec(shape=(None,), dtype=tf.int32) for _ in range(1 + 50 + 1 + 50 + 1 + 50 + 1 + 50)]),
+                tf.TensorSpec(shape=(None, 1), dtype=tf.int32)
+            )
+        )
+        click_score = model_test.predict(testgen_tf, steps=len(all_test_id) // args.batch_size, verbose=1)
         
         all_auc = []
         all_mrr = []
