@@ -206,16 +206,19 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
             continue
         
         # 후보 뉴스들을 news_index로 변환
+        # 모든 후보가 news_index에 있어야 함 (정확히 5개)
         candidate_indices = []
         candidate_labels = []
         for i, cand_id in enumerate(candidate_news):
-            if cand_id in news_index:
-                candidate_indices.append(news_index[cand_id])
-                is_clicked = int(clicked[i]) if i < len(clicked) else 0
-                candidate_labels.append(is_clicked)
+            if cand_id not in news_index:
+                # news_index에 없는 후보가 있으면 이 샘플 스킵
+                break
+            candidate_indices.append(news_index[cand_id])
+            is_clicked = int(clicked[i]) if i < len(clicked) else 0
+            candidate_labels.append(is_clicked)
         
-        # 후보가 5개가 아니거나 positive가 없으면 스킵
-        if len(candidate_indices) < 2 or sum(candidate_labels) == 0:
+        # 정확히 5개여야 하고, positive가 있어야 함
+        if len(candidate_indices) != 5 or sum(candidate_labels) == 0:
             continue
         
         # 5개 후보 중 1개 positive, 나머지 negative
