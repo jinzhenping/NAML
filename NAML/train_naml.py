@@ -413,9 +413,11 @@ def generate_batch_data_train(all_train_pn, all_label, all_train_id, batch_size,
             browsed_news_subvertical_split = [browsed_news_subvertical[:, k, :] for k in range(browsed_news_subvertical.shape[1])]
             
             label = all_label[i]
+            # label은 (5,) shape이므로 (1, 5)로 reshape
+            label = np.array(label, dtype=np.int32).reshape(1, -1)
 
             yield (candidate_split + browsed_news_split + candidate_body_split + browsed_news_body_split
-                   + candidate_vertical_split + browsed_news_vertical_split + candidate_subvertical_split + browsed_news_subvertical_split, [label])
+                   + candidate_vertical_split + browsed_news_vertical_split + candidate_subvertical_split + browsed_news_subvertical_split, label)
 
 
 def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size,
@@ -722,8 +724,15 @@ def main():
         def train_gen_wrapper():
             for inputs, label in traingen:
                 # inputs는 리스트이므로 튜플로 변환
-                # label은 리스트이므로 numpy array로 변환
-                yield tuple(inputs), np.array(label, dtype=np.int32)
+                # label은 리스트이므로 numpy array로 변환하고 shape 조정
+                label_arr = np.array(label, dtype=np.int32)
+                # label이 (1, 5) 또는 (5,) shape이면 (batch_size, 5)로 변환
+                if label_arr.ndim == 1:
+                    label_arr = label_arr.reshape(1, -1)
+                elif label_arr.ndim > 2:
+                    # (1, 30, 5) 같은 경우 마지막 차원만 사용
+                    label_arr = label_arr.reshape(-1, label_arr.shape[-1])
+                yield tuple(inputs), label_arr
         
         # output_signature: 220개 입력 (튜플) + 1개 label
         input_specs = (
