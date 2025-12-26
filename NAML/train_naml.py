@@ -660,7 +660,7 @@ def main():
         print("\n테스트 실행 중...")
         testgen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
                                            news_words, news_body, news_v, news_sv, all_test_user_pos)
-        click_score = model_test.predict_generator(testgen, steps=len(all_test_id) // args.batch_size, verbose=1)
+        click_score = model_test.predict(testgen, steps=len(all_test_id) // args.batch_size, verbose=1)
         
         all_auc = []
         all_mrr = []
@@ -692,7 +692,7 @@ def main():
         
         traingen = generate_batch_data_train(all_train_pn, all_label, all_train_id, args.batch_size,
                                              news_words, news_body, news_v, news_sv, all_user_pos)
-        model.fit_generator(traingen, epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
+        model.fit(traingen, epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
         
         # 모델 저장 (각 에포크마다)
         if args.save_model:
@@ -704,7 +704,7 @@ def main():
         # 테스트 실행
         testgen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
                                            news_words, news_body, news_v, news_sv, all_test_user_pos)
-        click_score = model_test.predict_generator(testgen, steps=len(all_test_id) // args.batch_size, verbose=1)
+        click_score = model_test.predict(testgen, steps=len(all_test_id) // args.batch_size, verbose=1)
         
         all_auc = []
         all_mrr = []
