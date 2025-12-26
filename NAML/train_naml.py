@@ -19,6 +19,14 @@ from keras.utils.np_utils import *
 import os
 import argparse
 
+# Keras imports (모듈 레벨에서 import)
+import keras
+from keras.layers import *
+from keras.models import Model
+from keras import backend as K
+from keras.optimizers import *
+from sklearn.metrics import roc_auc_score
+
 # NLTK 데이터 다운로드 (처음 실행 시)
 try:
     nltk.data.find('tokenizers/punkt')
@@ -466,13 +474,6 @@ def main():
     
     # GPU 설정
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
-    
-    import keras
-    from keras.layers import *
-    from keras.models import Model
-    from keras import backend as K
-    from keras.optimizers import *
-    from sklearn.metrics import roc_auc_score
     
     # 데이터 전처리 또는 로드
     if args.load_data:
