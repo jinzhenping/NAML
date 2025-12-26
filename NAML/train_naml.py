@@ -451,6 +451,16 @@ def main():
                         help='배치 크기')
     parser.add_argument('--npratio', type=int, default=4,
                         help='Negative/Positive 비율 (후보 개수 = 1 + npratio)')
+    parser.add_argument('--save_model', type=str, default=None,
+                        help='모델 저장 경로 (예: models/naml_model.h5)')
+    parser.add_argument('--load_model', type=str, default=None,
+                        help='모델 로드 경로 (테스트만 실행 시 사용)')
+    parser.add_argument('--test_only', action='store_true',
+                        help='테스트만 실행 (--load_model 필요)')
+    parser.add_argument('--save_data', type=str, default=None,
+                        help='전처리된 데이터 저장 경로 (pickle 형식)')
+    parser.add_argument('--load_data', type=str, default=None,
+                        help='전처리된 데이터 로드 경로 (pickle 형식)')
     
     args = parser.parse_args()
     
@@ -464,15 +474,67 @@ def main():
     from keras.optimizers import *
     from sklearn.metrics import roc_auc_score
     
-    # 데이터 전처리
-    word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(args.news_file)
-    
-    userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index = preprocess_user_file(
-        train_file=args.train_file,
-        test_file=args.test_file,
-        news_index=news_index,
-        npratio=args.npratio
-    )
+    # 데이터 전처리 또는 로드
+    if args.load_data:
+        print(f"전처리된 데이터 로드 중: {args.load_data}")
+        with open(args.load_data, 'rb') as f:
+            data = pickle.load(f)
+            word_dict = data['word_dict']
+            category = data['category']
+            subcategory = data['subcategory']
+            news_words = data['news_words']
+            news_body = data['news_body']
+            news_v = data['news_v']
+            news_sv = data['news_sv']
+            news_index = data['news_index']
+            userid_dict = data['userid_dict']
+            all_train_pn = data['all_train_pn']
+            all_label = data['all_label']
+            all_train_id = data['all_train_id']
+            all_test_pn = data['all_test_pn']
+            all_test_label = data['all_test_label']
+            all_test_id = data['all_test_id']
+            all_user_pos = data['all_user_pos']
+            all_test_user_pos = data['all_test_user_pos']
+            all_test_index = data['all_test_index']
+        print("데이터 로드 완료!")
+    else:
+        # 데이터 전처리
+        word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(args.news_file)
+        
+        userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index = preprocess_user_file(
+            train_file=args.train_file,
+            test_file=args.test_file,
+            news_index=news_index,
+            npratio=args.npratio
+        )
+        
+        # 전처리된 데이터 저장
+        if args.save_data:
+            print(f"전처리된 데이터 저장 중: {args.save_data}")
+            os.makedirs(os.path.dirname(args.save_data) if os.path.dirname(args.save_data) else '.', exist_ok=True)
+            with open(args.save_data, 'wb') as f:
+                pickle.dump({
+                    'word_dict': word_dict,
+                    'category': category,
+                    'subcategory': subcategory,
+                    'news_words': news_words,
+                    'news_body': news_body,
+                    'news_v': news_v,
+                    'news_sv': news_sv,
+                    'news_index': news_index,
+                    'userid_dict': userid_dict,
+                    'all_train_pn': all_train_pn,
+                    'all_label': all_label,
+                    'all_train_id': all_train_id,
+                    'all_test_pn': all_test_pn,
+                    'all_test_label': all_test_label,
+                    'all_test_id': all_test_id,
+                    'all_user_pos': all_user_pos,
+                    'all_test_user_pos': all_test_user_pos,
+                    'all_test_index': all_test_index
+                }, f)
+            print("데이터 저장 완료!")
     
     print(f"뉴스 개수: {len(news_index)}")
     print(f"카테고리 개수: {len(category)}")
@@ -579,6 +641,43 @@ def main():
     model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
     
     print("모델 구축 완료!")
+    
+    # 모델 로드 (테스트만 실행 시)
+    if args.load_model:
+        print(f"모델 로드 중: {args.load_model}")
+        model.load_weights(args.load_model)
+        print("모델 로드 완료!")
+    
+    # 테스트만 실행
+    if args.test_only:
+        if not args.load_model:
+            raise ValueError("테스트만 실행하려면 --load_model 옵션이 필요합니다.")
+        
+        print("\n테스트 실행 중...")
+        testgen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
+                                           news_words, news_body, news_v, news_sv, all_test_user_pos)
+        click_score = model_test.predict_generator(testgen, steps=len(all_test_id) // args.batch_size, verbose=1)
+        
+        all_auc = []
+        all_mrr = []
+        all_ndcg = []
+        all_ndcg2 = []
+        for m in all_test_index:
+            if np.sum(all_test_label[m[0]:m[1]]) != 0 and m[1] < len(click_score):
+                all_auc.append(roc_auc_score(all_test_label[m[0]:m[1]], click_score[m[0]:m[1], 0]))
+                all_mrr.append(mrr_score(all_test_label[m[0]:m[1]], click_score[m[0]:m[1], 0]))
+                all_ndcg.append(ndcg_score(all_test_label[m[0]:m[1]], click_score[m[0]:m[1], 0], k=5))
+                all_ndcg2.append(ndcg_score(all_test_label[m[0]:m[1]], click_score[m[0]:m[1], 0], k=10))
+        
+        print(f"\n{'='*60}")
+        print("테스트 결과:")
+        print(f"{'='*60}")
+        print(f"  AUC: {np.mean(all_auc):.4f}")
+        print(f"  MRR: {np.mean(all_mrr):.4f}")
+        print(f"  NDCG@5: {np.mean(all_ndcg):.4f}")
+        print(f"  NDCG@10: {np.mean(all_ndcg2):.4f}")
+        return
+    
     print(f"학습 시작: {args.epochs} 에포크, 배치 크기: {args.batch_size}")
     
     results = []
@@ -591,6 +690,14 @@ def main():
                                              news_words, news_body, news_v, news_sv, all_user_pos)
         model.fit_generator(traingen, epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
         
+        # 모델 저장 (각 에포크마다)
+        if args.save_model:
+            save_path = args.save_model.replace('.h5', f'_epoch{ep+1}.h5')
+            os.makedirs(os.path.dirname(save_path) if os.path.dirname(save_path) else '.', exist_ok=True)
+            model.save_weights(save_path)
+            print(f"모델 저장: {save_path}")
+        
+        # 테스트 실행
         testgen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
                                            news_words, news_body, news_v, news_sv, all_test_user_pos)
         click_score = model_test.predict_generator(testgen, steps=len(all_test_id) // args.batch_size, verbose=1)
@@ -613,6 +720,12 @@ def main():
         print(f"  MRR: {result[1]:.4f}")
         print(f"  NDCG@5: {result[2]:.4f}")
         print(f"  NDCG@10: {result[3]:.4f}")
+    
+    # 최종 모델 저장
+    if args.save_model:
+        final_save_path = args.save_model.replace('.h5', '_final.h5')
+        model.save_weights(final_save_path)
+        print(f"\n최종 모델 저장: {final_save_path}")
     
     print(f"\n{'='*60}")
     print("최종 결과:")
