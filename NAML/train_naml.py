@@ -659,10 +659,30 @@ def main():
             raise ValueError("테스트만 실행하려면 --load_model 옵션이 필요합니다.")
         
         print("\n테스트 실행 중...")
-        testgen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
-                                           news_words, news_body, news_v, news_sv, all_test_user_pos)
-        # 최신 Keras는 generator를 직접 사용 가능
-        click_score = model_test.predict(testgen, steps=len(all_test_id) // args.batch_size, verbose=1)
+        def test_gen():
+            gen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
+                                          news_words, news_body, news_v, news_sv, all_test_user_pos)
+            for x, y in gen:
+                yield x, y
+        
+        # output_signature: 204개 입력 (튜플) + 1개 label
+        test_input_specs = (
+            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32)]) +  # 1 candidate title
+            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed titles
+            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32)]) +  # 1 candidate body
+            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed bodies
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32)]) +  # 1 candidate v
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed v
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32)]) +  # 1 candidate sv
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)])  # 50 browsed sv
+        )
+        test_label_spec = tf.TensorSpec(shape=(None, 1), dtype=tf.int32)
+        
+        testgen_ds = tf.data.Dataset.from_generator(
+            test_gen,
+            output_signature=(test_input_specs, test_label_spec)
+        )
+        click_score = model_test.predict(testgen_ds, steps=len(all_test_id) // args.batch_size, verbose=1)
         
         all_auc = []
         all_mrr = []
@@ -692,10 +712,32 @@ def main():
         print(f"에포크 {ep + 1}/{args.epochs}")
         print(f"{'='*60}")
         
-        traingen = generate_batch_data_train(all_train_pn, all_label, all_train_id, args.batch_size,
-                                             news_words, news_body, news_v, news_sv, all_user_pos)
-        # 최신 Keras는 generator를 직접 사용 가능
-        model.fit(traingen, epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
+        # Generator를 tf.data.Dataset으로 변환
+        def train_gen():
+            gen = generate_batch_data_train(all_train_pn, all_label, all_train_id, args.batch_size,
+                                           news_words, news_body, news_v, news_sv, all_user_pos)
+            for x, y in gen:
+                yield x, y
+        
+        # output_signature: 220개 입력 (튜플) + 1개 label
+        # 각 입력은 (batch_size, feature_dim) 형태
+        input_specs = (
+            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(5)]) +  # 5 candidate titles
+            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed titles
+            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(5)]) +  # 5 candidate bodies
+            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed bodies
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)]) +  # 5 candidate v
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed v
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)]) +  # 5 candidate sv
+            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)])  # 50 browsed sv
+        )
+        label_spec = tf.TensorSpec(shape=(None, 5), dtype=tf.int32)
+        
+        traingen_ds = tf.data.Dataset.from_generator(
+            train_gen,
+            output_signature=(input_specs, label_spec)
+        )
+        model.fit(traingen_ds, epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
         
         # 모델 저장 (각 에포크마다)
         if args.save_model:
