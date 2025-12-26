@@ -712,15 +712,18 @@ def main():
         print(f"에포크 {ep + 1}/{args.epochs}")
         print(f"{'='*60}")
         
-        # Generator를 tf.data.Dataset으로 변환
-        def train_gen():
-            gen = generate_batch_data_train(all_train_pn, all_label, all_train_id, args.batch_size,
-                                           news_words, news_body, news_v, news_sv, all_user_pos)
-            for x, y in gen:
-                yield x, y
+        # Generator를 직접 사용
+        traingen = generate_batch_data_train(all_train_pn, all_label, all_train_id, args.batch_size,
+                                             news_words, news_body, news_v, news_sv, all_user_pos)
+        
+        # Generator를 래핑하여 numpy array를 Tensor로 변환
+        def train_gen_wrapper():
+            for inputs, label in traingen:
+                # inputs는 튜플이므로 그대로 사용
+                # label은 리스트이므로 numpy array로 변환
+                yield inputs, np.array(label, dtype=np.int32)
         
         # output_signature: 220개 입력 (튜플) + 1개 label
-        # 각 입력은 (batch_size, feature_dim) 형태
         input_specs = (
             tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(5)]) +  # 5 candidate titles
             tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed titles
@@ -734,9 +737,10 @@ def main():
         label_spec = tf.TensorSpec(shape=(None, 5), dtype=tf.int32)
         
         traingen_ds = tf.data.Dataset.from_generator(
-            train_gen,
+            train_gen_wrapper,
             output_signature=(input_specs, label_spec)
         )
+        
         model.fit(traingen_ds, epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
         
         # 모델 저장 (각 에포크마다)
