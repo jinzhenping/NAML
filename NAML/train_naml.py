@@ -467,8 +467,10 @@ def generate_batch_data_train(all_train_pn, all_label, all_train_id, batch_size,
                     raise ValueError(f"Unexpected label ndim: {label.ndim}, shape: {label.shape}")
 
             # 리스트를 튜플로 변환
-            inputs_tuple = tuple(candidate_split + browsed_news_split + candidate_body_split + browsed_news_body_split
-                                + candidate_vertical_split + browsed_news_vertical_split + candidate_subvertical_split + browsed_news_subvertical_split)
+            # 각 요소가 numpy array인지 확인하고 튜플로 변환
+            all_inputs = candidate_split + browsed_news_split + candidate_body_split + browsed_news_body_split + candidate_vertical_split + browsed_news_vertical_split + candidate_subvertical_split + browsed_news_subvertical_split
+            # 모든 요소가 numpy array인지 확인하고 튜플로 변환
+            inputs_tuple = tuple(all_inputs)
             yield (inputs_tuple, label)
 
 
@@ -855,8 +857,17 @@ def main():
                 
                 # output_signature는 튜플을 기대하므로 튜플로 변환
                 # TensorFlow는 튜플의 튜플 구조를 기대: ((input1, input2, ..., input220), label)
+                # inputs는 이미 튜플이지만, 내부 요소들이 numpy array인지 확인
                 if not isinstance(inputs, tuple):
                     inputs = tuple(inputs) if hasattr(inputs, '__iter__') else (inputs,)
+                
+                # 디버깅: 첫 번째 요소의 타입 확인
+                if not hasattr(train_gen_wrapper, '_final_debugged'):
+                    if len(inputs) > 0:
+                        print(f"DEBUG: 첫 번째 input type: {type(inputs[0])}")
+                        print(f"DEBUG: 첫 번째 input shape: {inputs[0].shape if hasattr(inputs[0], 'shape') else 'N/A'}")
+                    train_gen_wrapper._final_debugged = True
+                
                 yield inputs, label_arr
         
         # output_signature: 220개 입력 (튜플) + 1개 label
