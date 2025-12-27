@@ -488,19 +488,79 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size,
             candidate_body = news_body[all_test_pn[i]]
             candidate_vertical = news_v[all_test_pn[i]]
             candidate_subvertical = news_sv[all_test_pn[i]]
+            
+            # candidate_vertical과 candidate_subvertical의 shape 확인 및 조정
+            # news_v와 news_sv는 shape (num_news, 1)이므로
+            # candidate_vertical = news_v[all_test_pn[i]]는 shape (batch_size, 1)이어야 함
+            # 하지만 모델은 (batch_size, 1) shape을 기대하므로 그대로 사용
+            # 단, ndim이 1이면 reshape 필요
+            if candidate_vertical.ndim == 1:
+                # (batch_size,) -> (batch_size, 1)
+                candidate_vertical = candidate_vertical.reshape(-1, 1)
+            elif candidate_vertical.ndim == 2:
+                # 이미 2D인 경우 shape 확인
+                if candidate_vertical.shape[1] != 1:
+                    # shape이 (batch_size, something)이고 something != 1인 경우
+                    # 이는 잘못된 데이터이므로 에러
+                    raise ValueError(f"candidate_vertical has unexpected shape: {candidate_vertical.shape}, expected (batch_size, 1)")
+            else:
+                raise ValueError(f"candidate_vertical has unexpected ndim: {candidate_vertical.ndim}")
+            
+            if candidate_subvertical.ndim == 1:
+                candidate_subvertical = candidate_subvertical.reshape(-1, 1)
+            elif candidate_subvertical.ndim == 2:
+                if candidate_subvertical.shape[1] != 1:
+                    raise ValueError(f"candidate_subvertical has unexpected shape: {candidate_subvertical.shape}, expected (batch_size, 1)")
+            else:
+                raise ValueError(f"candidate_subvertical has unexpected ndim: {candidate_subvertical.ndim}")
+            
+            # 리스트로 변환 (모델이 리스트 입력을 기대)
+            candidate_vertical_list = [candidate_vertical]
+            candidate_subvertical_list = [candidate_subvertical]
 
             browsed_news = news_words[all_test_user_pos[i]]
             browsed_news_split = [browsed_news[:, k, :] for k in range(browsed_news.shape[1])]
             browsed_news_body = news_body[all_test_user_pos[i]]
             browsed_news_body_split = [browsed_news_body[:, k, :] for k in range(browsed_news_body.shape[1])]
             browsed_news_vertical = news_v[all_test_user_pos[i]]
-            browsed_news_vertical_split = [browsed_news_vertical[:, k, :] for k in range(browsed_news_vertical.shape[1])]
+            # browsed_news_vertical은 shape (batch_size, MAX_SENTS, 1) 또는 (batch_size, 1)일 수 있음
+            if browsed_news_vertical.ndim == 3:
+                browsed_news_vertical_split = [browsed_news_vertical[:, k, :] for k in range(browsed_news_vertical.shape[1])]
+            elif browsed_news_vertical.ndim == 2:
+                # 2D인 경우, 각 행을 개별 입력으로 사용
+                browsed_news_vertical_split = [browsed_news_vertical[:, k:k+1] for k in range(browsed_news_vertical.shape[1])]
+            else:
+                raise ValueError(f"browsed_news_vertical has unexpected ndim: {browsed_news_vertical.ndim}")
+            
             browsed_news_subvertical = news_sv[all_test_user_pos[i]]
-            browsed_news_subvertical_split = [browsed_news_subvertical[:, k, :] for k in range(browsed_news_subvertical.shape[1])]
+            if browsed_news_subvertical.ndim == 3:
+                browsed_news_subvertical_split = [browsed_news_subvertical[:, k, :] for k in range(browsed_news_subvertical.shape[1])]
+            elif browsed_news_subvertical.ndim == 2:
+                browsed_news_subvertical_split = [browsed_news_subvertical[:, k:k+1] for k in range(browsed_news_subvertical.shape[1])]
+            else:
+                raise ValueError(f"browsed_news_subvertical has unexpected ndim: {browsed_news_subvertical.ndim}")
             
             label = all_label[i]
-            yield ([candidate] + browsed_news_split + [candidate_body] + browsed_news_body_split + [candidate_vertical]
-                   + browsed_news_vertical_split + [candidate_subvertical] + browsed_news_subvertical_split, [label])
+            
+            # 모든 입력의 shape 확인 및 검증
+            all_inputs = ([candidate] + browsed_news_split + [candidate_body] + browsed_news_body_split 
+                         + candidate_vertical_list + browsed_news_vertical_split 
+                         + candidate_subvertical_list + browsed_news_subvertical_split)
+            
+            # 디버깅: 첫 번째 배치만 shape 확인
+            if not hasattr(generate_batch_data_test, '_shape_checked'):
+                print(f"DEBUG: Total inputs: {len(all_inputs)}")
+                print(f"DEBUG: Expected: 1 candidate title + 50 browsed titles + 1 candidate body + 50 browsed bodies + 1 candidate v + 50 browsed v + 1 candidate sv + 50 browsed sv = 204")
+                # Vertical/subvertical 입력들의 shape 확인
+                v_start_idx = 1 + 50 + 1 + 50  # candidate title + browsed titles + candidate body + browsed bodies
+                sv_start_idx = v_start_idx + 1 + 50  # + candidate v + browsed v
+                print(f"DEBUG: Candidate v shape: {all_inputs[v_start_idx].shape}")
+                print(f"DEBUG: First browsed v shape: {all_inputs[v_start_idx + 1].shape}")
+                print(f"DEBUG: Candidate sv shape: {all_inputs[sv_start_idx].shape}")
+                print(f"DEBUG: First browsed sv shape: {all_inputs[sv_start_idx + 1].shape}")
+                generate_batch_data_test._shape_checked = True
+            
+            yield (all_inputs, [label])
 
 
 def main():
