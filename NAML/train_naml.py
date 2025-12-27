@@ -775,7 +775,17 @@ def main():
         # Generator를 래핑하여 리스트를 튜플로 변환
         def train_gen_wrapper():
             for inputs, label in traingen:
-                # inputs는 리스트이므로 튜플로 변환
+                # inputs는 튜플이어야 함 (generator에서 이미 튜플로 변환했지만, 안전을 위해 다시 확인)
+                # inputs가 리스트인 경우 튜플로 변환
+                if isinstance(inputs, list):
+                    inputs = tuple(inputs)
+                elif not isinstance(inputs, tuple):
+                    # 튜플이 아닌 경우 변환 시도
+                    try:
+                        inputs = tuple(inputs)
+                    except:
+                        inputs = (inputs,)
+                
                 # label은 (batch_size, 5) shape이어야 함
                 label_arr = np.array(label, dtype=np.int32)
                 
