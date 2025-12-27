@@ -973,14 +973,43 @@ def main():
         def test_gen():
             gen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
                                            news_words, news_body, news_v, news_sv, all_test_user_pos)
+            batch_count = 0
             for x, y in gen:
+                batch_count += 1
                 # x는 리스트, y는 [label] 형태
                 # y를 numpy array로 변환하고 shape 조정
                 label_arr = np.array(y, dtype=np.int32)
                 if label_arr.ndim == 1:
                     label_arr = label_arr.reshape(-1, 1)
+                
+                # x가 리스트인지 확인하고, 각 요소가 numpy array인지 확인
+                if isinstance(x, list):
+                    inputs_list = []
+                    batch_size = None
+                    for idx, inp in enumerate(x):
+                        if not isinstance(inp, np.ndarray):
+                            inp = np.array(inp, dtype=np.int32)
+                        
+                        # 배치 크기 확인
+                        if batch_size is None and inp.ndim > 0:
+                            batch_size = inp.shape[0]
+                        
+                        # 첫 번째 배치와 마지막 배치에서 shape 출력
+                        if batch_count == 1 or (batch_count > 1 and batch_size == 1):
+                            if idx < 5 or (idx >= 51 and idx < 56) or (idx >= 102 and idx < 107) or (idx >= 153 and idx < 158):
+                                print(f"DEBUG test_gen batch {batch_count}: Input {idx} shape: {inp.shape}, batch_size: {batch_size}")
+                            # Vertical/subvertical 위치에서 shape 확인
+                            if idx == 102 or (idx >= 103 and idx <= 152) or idx == 153 or (idx >= 154 and idx <= 203):
+                                if inp.ndim == 2 and inp.shape[1] != 1:
+                                    print(f"ERROR test_gen batch {batch_count}: Input {idx} (v/sv) has shape {inp.shape}, expected (batch_size, 1)")
+                        
+                        inputs_list.append(inp)
+                    x = tuple(inputs_list)
+                elif not isinstance(x, tuple):
+                    x = tuple(x) if hasattr(x, '__iter__') else (x,)
+                
                 # 튜플로 반환 (tf.data.Dataset이 기대하는 형식)
-                yield tuple(x) if isinstance(x, list) else x, label_arr
+                yield x, label_arr
         
         # output_signature 정의: 204개 입력
         test_input_specs = tuple([
