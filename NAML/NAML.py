@@ -425,7 +425,7 @@ import keras
 from keras.layers import *
 from keras.models import Model
 from keras import backend as K
-from keras.optimizers import *
+from keras.optimizers import Adam
 
 
 # In[ ]:
