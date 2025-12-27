@@ -521,7 +521,7 @@ embedded_sequences_title=Dropout(0.2)(embedded_sequences_title)
 embedded_sequences_body = embedding_layer(body_input)
 embedded_sequences_body=Dropout(0.2)(embedded_sequences_body)
 
-title_cnn = Convolution1D(nb_filter=400, filter_length=3,  padding='same', activation='relu', strides=1)(embedded_sequences_title)
+title_cnn = Conv1D(filters=400, kernel_size=3, padding='same', activation='relu', strides=1)(embedded_sequences_title)
 title_cnn=Dropout(0.2)(title_cnn)
 
 attention = Dense(200,activation='tanh')(title_cnn)
@@ -529,7 +529,7 @@ attention = Flatten()(Dense(1)(attention))
 attention_weight = Activation('softmax')(attention)
 title_rep=keras.layers.Dot((1, 1))([title_cnn, attention_weight])
 
-body_cnn = Convolution1D(nb_filter=400, filter_length=3,  padding='same', activation='relu', strides=1)(embedded_sequences_body)
+body_cnn = Conv1D(filters=400, kernel_size=3, padding='same', activation='relu', strides=1)(embedded_sequences_body)
 body_cnn=Dropout(0.2)(body_cnn)
 
 attention_body = Dense(200,activation='tanh')(body_cnn)
@@ -603,13 +603,13 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
                          +[candidate_one_v]+browsed_v_input+[candidate_one_sv]+browsed_sv_input, score)
 
 
-model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
+model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=0.001), metrics=['acc'])
 
 for ep in range(3):
     traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30)
-    model.fit_generator(traingen, epochs=1,steps_per_epoch=len(all_train_id)//30)
+    model.fit(traingen, epochs=1, steps_per_epoch=len(all_train_id)//30)
     testgen=generate_batch_data_test(all_test_pn,all_test_label,all_test_id, 30)
-    click_score = model_test.predict_generator(testgen, steps=len(all_test_id)//30,verbose=1)
+    click_score = model_test.predict(testgen, steps=len(all_test_id)//30, verbose=1)
     from sklearn.metrics import roc_auc_score
     all_auc=[]
     all_mrr=[]
