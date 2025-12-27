@@ -604,7 +604,7 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
                          +[candidate_one_v]+browsed_v_input+[candidate_one_sv]+browsed_sv_input, score)
 
 
-model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=0.001), metrics=['acc'])
+model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
 
 for ep in range(3):
     traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30)
