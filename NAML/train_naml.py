@@ -413,8 +413,20 @@ def generate_batch_data_train(all_train_pn, all_label, all_train_id, batch_size,
             browsed_news_subvertical_split = [browsed_news_subvertical[:, k, :] for k in range(browsed_news_subvertical.shape[1])]
             
             label = all_label[i]
-            # label은 (5,) shape이므로 (1, 5)로 reshape
-            label = np.array(label, dtype=np.int32).reshape(1, -1)
+            # label은 (batch_size, 5) shape이어야 함
+            # all_label[i]는 이미 (batch_size, 5) shape일 수 있음
+            label = np.array(label, dtype=np.int32)
+            if label.ndim == 1:
+                # (batch_size * 5,) -> (batch_size, 5)
+                batch_size = len(i)
+                label = label.reshape(batch_size, 5)
+            elif label.ndim == 2 and label.shape[1] != 5:
+                # shape이 맞지 않으면 조정
+                batch_size = len(i)
+                if label.size == batch_size * 5:
+                    label = label.reshape(batch_size, 5)
+                else:
+                    label = label.reshape(-1, 5)
 
             yield (candidate_split + browsed_news_split + candidate_body_split + browsed_news_body_split
                    + candidate_vertical_split + browsed_news_vertical_split + candidate_subvertical_split + browsed_news_subvertical_split, label)
@@ -724,22 +736,31 @@ def main():
         def train_gen_wrapper():
             for inputs, label in traingen:
                 # inputs는 리스트이므로 튜플로 변환
-                # label은 이미 (1, 5) shape이어야 함
-                # 만약 shape이 다르면 조정
+                # label은 (batch_size, 5) shape이어야 함
                 label_arr = np.array(label, dtype=np.int32)
-                if label_arr.shape != (1, 5):
-                    # (5,) -> (1, 5) 또는 (150,) -> (30, 5) 등
-                    if label_arr.ndim == 1:
-                        if len(label_arr) == 5:
-                            label_arr = label_arr.reshape(1, 5)
-                        elif len(label_arr) == 150:  # 30 * 5
-                            label_arr = label_arr.reshape(30, 5)
-                        else:
-                            # 배치 크기에 맞게 reshape
-                            batch_size = len(inputs[0]) if len(inputs) > 0 else 1
-                            label_arr = label_arr.reshape(batch_size, -1)
+                
+                # 배치 크기 확인 (첫 번째 input의 첫 번째 차원)
+                if len(inputs) > 0 and hasattr(inputs[0], 'shape'):
+                    batch_size = inputs[0].shape[0]
+                else:
+                    batch_size = args.batch_size
+                
+                # label shape 조정
+                if label_arr.ndim == 1:
+                    # (batch_size * 5,) -> (batch_size, 5)
+                    if label_arr.size == batch_size * 5:
+                        label_arr = label_arr.reshape(batch_size, 5)
                     else:
+                        # 배치 크기를 자동으로 추론
                         label_arr = label_arr.reshape(-1, 5)
+                elif label_arr.ndim == 2:
+                    # 이미 2D인 경우
+                    if label_arr.shape[1] != 5:
+                        label_arr = label_arr.reshape(-1, 5)
+                    # batch_size와 맞지 않으면 조정
+                    if label_arr.shape[0] != batch_size:
+                        label_arr = label_arr.reshape(batch_size, -1)
+                
                 yield tuple(inputs), label_arr
         
         # output_signature: 220개 입력 (튜플) + 1개 label
