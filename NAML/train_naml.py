@@ -470,7 +470,9 @@ def generate_batch_data_train(all_train_pn, all_label, all_train_id, batch_size,
             # 각 요소가 numpy array인지 확인하고 튜플로 변환
             all_inputs = candidate_split + browsed_news_split + candidate_body_split + browsed_news_body_split + candidate_vertical_split + browsed_news_vertical_split + candidate_subvertical_split + browsed_news_subvertical_split
             # 모든 요소가 numpy array인지 확인하고 튜플로 변환
+            # 반드시 튜플로 변환하여 yield (generator에서 튜플을 반환해야 함)
             inputs_tuple = tuple(all_inputs)
+            # yield는 튜플을 반환해야 합니다: (inputs_tuple, label)
             yield (inputs_tuple, label)
 
 
@@ -719,28 +721,16 @@ def main():
             gen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
                                           news_words, news_body, news_v, news_sv, all_test_user_pos)
             for x, y in gen:
-                # x는 리스트이므로 튜플로 변환
-                # y는 리스트이므로 numpy array로 변환
-                yield tuple(x) if isinstance(x, list) else x, np.array(y, dtype=np.int32) if isinstance(y, list) else y
+                # x는 리스트, y는 [label] 형태
+                # y를 numpy array로 변환하고 shape 조정
+                label_arr = np.array(y, dtype=np.int32)
+                if label_arr.ndim == 1:
+                    label_arr = label_arr.reshape(-1, 1)
+                # x는 이미 리스트이므로 그대로 사용
+                yield x, label_arr
         
-        # output_signature: 204개 입력 (튜플) + 1개 label
-        test_input_specs = (
-            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32)]) +  # 1 candidate title
-            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed titles
-            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32)]) +  # 1 candidate body
-            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed bodies
-            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32)]) +  # 1 candidate v
-            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed v
-            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32)]) +  # 1 candidate sv
-            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)])  # 50 browsed sv
-        )
-        test_label_spec = tf.TensorSpec(shape=(None, 1), dtype=tf.int32)
-        
-        testgen_ds = tf.data.Dataset.from_generator(
-            test_gen,
-            output_signature=(test_input_specs, test_label_spec)
-        )
-        click_score = model_test.predict(testgen_ds, steps=len(all_test_id) // args.batch_size, verbose=1)
+        # Python generator를 직접 사용
+        click_score = model_test.predict(test_gen(), steps=len(all_test_id) // args.batch_size, verbose=1)
         
         all_auc = []
         all_mrr = []
@@ -770,137 +760,53 @@ def main():
         print(f"에포크 {ep + 1}/{args.epochs}")
         print(f"{'='*60}")
         
-        # Generator를 직접 사용
-        traingen = generate_batch_data_train(all_train_pn, all_label, all_train_id, args.batch_size,
-                                             news_words, news_body, news_v, news_sv, all_user_pos)
-        
-        # Generator를 래핑하여 리스트를 튜플로 변환
-        def train_gen_wrapper():
+        # Generator를 직접 사용 (tf.data.Dataset 없이)
+        # Keras model.fit은 Python generator를 직접 받을 수 있습니다.
+        def train_gen():
+            traingen = generate_batch_data_train(all_train_pn, all_label, all_train_id, args.batch_size,
+                                                 news_words, news_body, news_v, news_sv, all_user_pos)
             for inputs, label in traingen:
-                # inputs는 튜플이어야 함 (generator에서 이미 튜플로 변환했지만, 안전을 위해 다시 확인)
-                # inputs가 리스트인 경우 튜플로 변환
-                if isinstance(inputs, list):
-                    inputs = tuple(inputs)
-                elif not isinstance(inputs, tuple):
-                    # 튜플이 아닌 경우 변환 시도
-                    try:
-                        inputs = tuple(inputs)
-                    except:
-                        inputs = (inputs,)
+                # inputs는 튜플이지만, Keras 모델이 리스트 입력을 기대하므로 리스트로 변환
+                if isinstance(inputs, tuple):
+                    inputs = list(inputs)
+                elif not isinstance(inputs, list):
+                    inputs = list(inputs) if hasattr(inputs, '__iter__') else [inputs]
                 
                 # label은 (batch_size, 5) shape이어야 함
                 label_arr = np.array(label, dtype=np.int32)
                 
-                # 배치 크기 확인 (첫 번째 input의 첫 번째 차원)
+                # 배치 크기 확인
                 if len(inputs) > 0 and hasattr(inputs[0], 'shape'):
                     batch_size = inputs[0].shape[0]
                 else:
                     batch_size = args.batch_size
                 
                 # label shape 조정
-                # label이 (batch_size * 5,) 또는 (batch_size,) shape인 경우
                 if label_arr.ndim == 1:
                     if label_arr.size == batch_size * 5:
-                        # (batch_size * 5,) -> (batch_size, 5)
                         label_arr = label_arr.reshape(batch_size, 5)
                     elif label_arr.size == batch_size:
-                        # (batch_size,) -> 각 샘플이 하나의 label만 가진 경우는 없어야 함
-                        # 하지만 만약 그렇다면 (batch_size, 1)로 변환 후 5로 확장
-                        # 이 경우는 데이터 구조 문제일 수 있음
                         raise ValueError(f"Unexpected label shape: {label_arr.shape}, expected (batch_size, 5)")
                     else:
-                        # 배치 크기를 자동으로 추론
                         label_arr = label_arr.reshape(-1, 5)
                 elif label_arr.ndim == 2:
-                    # 이미 2D인 경우
                     if label_arr.shape[1] != 5:
-                        # 마지막 차원이 5가 아니면 reshape
                         if label_arr.size % 5 == 0:
                             label_arr = label_arr.reshape(-1, 5)
                         else:
                             raise ValueError(f"Label size {label_arr.size} is not divisible by 5")
-                    # batch_size와 맞지 않으면 조정
                     if label_arr.shape[0] != batch_size:
                         if label_arr.size == batch_size * 5:
                             label_arr = label_arr.reshape(batch_size, 5)
                         else:
                             raise ValueError(f"Label shape {label_arr.shape} doesn't match batch_size {batch_size}")
                 
-                # inputs가 확실히 튜플인지 확인하고 변환
-                # 디버깅: 첫 번째 배치만 확인
-                if not hasattr(train_gen_wrapper, '_debugged'):
-                    print(f"DEBUG: inputs type before conversion: {type(inputs)}")
-                    print(f"DEBUG: inputs is list: {isinstance(inputs, list)}")
-                    print(f"DEBUG: inputs is tuple: {isinstance(inputs, tuple)}")
-                    if hasattr(inputs, '__len__'):
-                        print(f"DEBUG: inputs length: {len(inputs)}")
-                    train_gen_wrapper._debugged = True
-                
-                # 반드시 튜플로 변환
-                if isinstance(inputs, list):
-                    inputs = tuple(inputs)
-                elif not isinstance(inputs, tuple):
-                    inputs = tuple(inputs) if hasattr(inputs, '__iter__') else (inputs,)
-                
-                # yield 전에 최종 확인
-                # TensorFlow는 튜플을 기대하지만, 내부적으로 리스트로 처리할 수 있음
-                # 따라서 명시적으로 튜플로 변환
-                if not isinstance(inputs, tuple):
-                    inputs = tuple(inputs) if hasattr(inputs, '__iter__') else (inputs,)
-                
-                # 디버깅: yield 직전 확인
-                if not hasattr(train_gen_wrapper, '_yield_debugged'):
-                    print(f"DEBUG: yield 전 inputs type: {type(inputs)}")
-                    print(f"DEBUG: yield 전 inputs is tuple: {isinstance(inputs, tuple)}")
-                    print(f"DEBUG: yield 전 label_arr type: {type(label_arr)}, shape: {label_arr.shape}")
-                    train_gen_wrapper._yield_debugged = True
-                
-                # output_signature는 튜플을 기대하므로 튜플로 변환
-                # TensorFlow는 튜플의 튜플 구조를 기대: ((input1, input2, ..., input220), label)
-                # inputs는 이미 튜플이지만, 내부 요소들이 numpy array인지 확인
-                if not isinstance(inputs, tuple):
-                    inputs = tuple(inputs) if hasattr(inputs, '__iter__') else (inputs,)
-                
-                # 디버깅: 첫 번째 요소의 타입 확인
-                if not hasattr(train_gen_wrapper, '_final_debugged'):
-                    if len(inputs) > 0:
-                        print(f"DEBUG: 첫 번째 input type: {type(inputs[0])}")
-                        print(f"DEBUG: 첫 번째 input shape: {inputs[0].shape if hasattr(inputs[0], 'shape') else 'N/A'}")
-                    train_gen_wrapper._final_debugged = True
-                
+                # Keras는 리스트나 튜플 모두 받을 수 있지만, 모델이 리스트로 정의되어 있으므로 리스트로 전달
                 yield inputs, label_arr
         
-        # output_signature: 220개 입력 (튜플) + 1개 label
-        # TensorFlow는 튜플의 튜플 구조를 기대: ((input1, input2, ..., input220), label)
-        # 각 input은 tf.TensorSpec이어야 함
-        input_specs = tuple([
-            tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(5)  # 5 candidate titles
-        ] + [
-            tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)  # 50 browsed titles
-        ] + [
-            tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(5)  # 5 candidate bodies
-        ] + [
-            tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(50)  # 50 browsed bodies
-        ] + [
-            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)  # 5 candidate v
-        ] + [
-            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)  # 50 browsed v
-        ] + [
-            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)  # 5 candidate sv
-        ] + [
-            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)  # 50 browsed sv
-        ])
-        label_spec = tf.TensorSpec(shape=(None, 5), dtype=tf.int32)
-        
-        traingen_ds = tf.data.Dataset.from_generator(
-            train_gen_wrapper,
-            output_signature=(input_specs, label_spec)
-        )
-        
-        # Keras 모델은 여러 입력을 받을 때 튜플이나 리스트 모두를 받을 수 있습니다.
-        # tf.data.Dataset에서 튜플로 전달하면 모델이 자동으로 처리합니다.
-        # 모델 입력이 리스트로 정의되어 있지만, 튜플도 자동으로 처리됩니다.
-        model.fit(traingen_ds, epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
+        # Python generator를 직접 사용 (tf.data.Dataset.from_generator 없이)
+        # Keras model.fit은 Python generator를 직접 받을 수 있습니다.
+        model.fit(train_gen(), epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
         
         # 모델 저장 (각 에포크마다)
         if args.save_model:
@@ -910,17 +816,20 @@ def main():
             print(f"모델 저장: {save_path}")
         
         # 테스트 실행
-        testgen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
+        def test_gen():
+            gen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
                                            news_words, news_body, news_v, news_sv, all_test_user_pos)
-        # TensorFlow Dataset으로 변환
-        testgen_tf = tf.data.Dataset.from_generator(
-            lambda: testgen,
-            output_signature=(
-                tuple([tf.TensorSpec(shape=(None,), dtype=tf.int32) for _ in range(1 + 50 + 1 + 50 + 1 + 50 + 1 + 50)]),
-                tf.TensorSpec(shape=(None, 1), dtype=tf.int32)
-            )
-        )
-        click_score = model_test.predict(testgen_tf, steps=len(all_test_id) // args.batch_size, verbose=1)
+            for x, y in gen:
+                # x는 리스트, y는 [label] 형태
+                # y를 numpy array로 변환하고 shape 조정
+                label_arr = np.array(y, dtype=np.int32)
+                if label_arr.ndim == 1:
+                    label_arr = label_arr.reshape(-1, 1)
+                # x는 이미 리스트이므로 그대로 사용
+                yield x, label_arr
+        
+        # Python generator를 직접 사용
+        click_score = model_test.predict(test_gen(), steps=len(all_test_id) // args.batch_size, verbose=1)
         
         all_auc = []
         all_mrr = []
