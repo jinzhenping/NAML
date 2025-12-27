@@ -176,11 +176,15 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
             continue
         
         # 5개 후보 중 첫 번째가 positive, 나머지가 negative
-        # 테스트에서는 순서를 섞지 않고 그대로 사용 (첫 번째가 정답)
-        for i, cand_idx in enumerate(candidate_indices):
+        # 테스트에서도 순서를 섞어야 모델이 순서 패턴을 학습하지 않음
+        candidate_labels = [1 if i == 0 else 0 for i in range(len(candidate_indices))]
+        combined = list(zip(candidate_indices, candidate_labels))
+        random.shuffle(combined)
+        shuffle_indices, shuffle_labels = zip(*combined)
+        
+        for cand_idx, label in zip(shuffle_indices, shuffle_labels):
             all_test_pn.append(int(cand_idx))
-            # 첫 번째 후보가 positive (정답)
-            all_test_label.append(1 if i == 0 else 0)
+            all_test_label.append(label)
             all_test_id.append(userid_dict[userid])
             all_test_user_pos.append(allpos)
         
