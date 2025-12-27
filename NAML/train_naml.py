@@ -840,19 +840,44 @@ def main():
                 elif not isinstance(inputs, tuple):
                     inputs = tuple(inputs) if hasattr(inputs, '__iter__') else (inputs,)
                 
-                yield inputs, label_arr
+                # yield 전에 최종 확인
+                # TensorFlow는 튜플을 기대하지만, 내부적으로 리스트로 처리할 수 있음
+                # 따라서 명시적으로 튜플로 변환
+                if not isinstance(inputs, tuple):
+                    inputs = tuple(inputs) if hasattr(inputs, '__iter__') else (inputs,)
+                
+                # 디버깅: yield 직전 확인
+                if not hasattr(train_gen_wrapper, '_yield_debugged'):
+                    print(f"DEBUG: yield 전 inputs type: {type(inputs)}")
+                    print(f"DEBUG: yield 전 inputs is tuple: {isinstance(inputs, tuple)}")
+                    print(f"DEBUG: yield 전 label_arr type: {type(label_arr)}, shape: {label_arr.shape}")
+                    train_gen_wrapper._yield_debugged = True
+                
+                # TensorFlow가 리스트를 기대하는 경우를 대비해 리스트로 변환
+                # output_signature는 튜플로 정의했지만, 실제로는 리스트를 기대할 수 있음
+                # 에러 메시지를 보면 TensorFlow가 리스트를 기대하는 것 같으므로 리스트로 변환
+                inputs_list = list(inputs) if isinstance(inputs, tuple) else inputs
+                yield inputs_list, label_arr
         
-        # output_signature: 220개 입력 (튜플) + 1개 label
-        input_specs = (
-            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(5)]) +  # 5 candidate titles
-            tuple([tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed titles
-            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(5)]) +  # 5 candidate bodies
-            tuple([tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed bodies
-            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)]) +  # 5 candidate v
-            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)]) +  # 50 browsed v
-            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)]) +  # 5 candidate sv
-            tuple([tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)])  # 50 browsed sv
-        )
+        # output_signature: 220개 입력 (리스트) + 1개 label
+        # TensorFlow가 리스트를 기대하므로 리스트로 지정
+        input_specs = [
+            tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(5)  # 5 candidate titles
+        ] + [
+            tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)  # 50 browsed titles
+        ] + [
+            tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(5)  # 5 candidate bodies
+        ] + [
+            tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(50)  # 50 browsed bodies
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)  # 5 candidate v
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)  # 50 browsed v
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)  # 5 candidate sv
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)  # 50 browsed sv
+        ]
         label_spec = tf.TensorSpec(shape=(None, 5), dtype=tf.int32)
         
         traingen_ds = tf.data.Dataset.from_generator(
