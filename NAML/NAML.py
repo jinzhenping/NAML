@@ -419,6 +419,17 @@ def mrr_score(y_true, y_score):
     return np.sum(rr_score) / np.sum(y_true)
 
 
+def hit_at_k(y_true, y_score, k=1):
+    """
+    Hit@K 계산: 상위 K개 예측 중 정답이 포함되는지 여부 (0 또는 1)
+    """
+    if len(y_true) == 0 or np.sum(y_true) == 0:
+        return 0.0
+    sorted_indices = np.argsort(y_score)[::-1]  # 점수 내림차순 정렬
+    top_k_indices = sorted_indices[:k]
+    return 1.0 if np.any(y_true[top_k_indices] == 1) else 0.0
+
+
 # In[ ]:
 
 
@@ -624,21 +635,24 @@ for ep in range(3):
     all_mrr=[]
     all_ndcg=[]
     all_ndcg2=[]
+    all_hit1=[]
     for m in all_test_index:
         if np.sum(all_test_label[m[0]:m[1]])!=0 and m[1]<len(click_score):
             all_auc.append(roc_auc_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0]))
             all_mrr.append(mrr_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0]))
             all_ndcg.append(ndcg_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0],k=5))
             all_ndcg2.append(ndcg_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0],k=10))
+            all_hit1.append(hit_at_k(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0],k=1))
     
     # 결과 저장
     epoch_results = {
         'AUC': np.mean(all_auc),
         'MRR': np.mean(all_mrr),
         'NDCG@5': np.mean(all_ndcg),
-        'NDCG@10': np.mean(all_ndcg2)
+        'NDCG@10': np.mean(all_ndcg2),
+        'Hit@1': np.mean(all_hit1)
     }
-    results.append([epoch_results['AUC'], epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['NDCG@10']])
+    results.append([epoch_results['AUC'], epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['NDCG@10'], epoch_results['Hit@1']])
     
     # 보기 좋게 출력
     print(f"\n{'='*60}")
@@ -648,23 +662,28 @@ for ep in range(3):
     print(f"MRR      : {epoch_results['MRR']:.6f}")
     print(f"NDCG@5   : {epoch_results['NDCG@5']:.6f}")
     print(f"NDCG@10  : {epoch_results['NDCG@10']:.6f}")
+    print(f"Hit@1    : {epoch_results['Hit@1']:.6f}")
     print(f"{'='*60}\n")
 
 # 전체 결과 요약
 print(f"\n{'='*60}")
 print("Final Results Summary (All Epochs)")
 print(f"{'='*60}")
-print(f"{'Epoch':<10} {'AUC':<12} {'MRR':<12} {'NDCG@5':<12} {'NDCG@10':<12}")
-print(f"{'-'*60}")
-for i, (auc, mrr, ndcg5, ndcg10) in enumerate(results, 1):
-    print(f"{i:<10} {auc:<12.6f} {mrr:<12.6f} {ndcg5:<12.6f} {ndcg10:<12.6f}")
-print(f"{'='*60}")
+print(f"{'Epoch':<10} {'AUC':<12} {'MRR':<12} {'NDCG@5':<12} {'NDCG@10':<12} {'Hit@1':<12}")
+print(f"{'-'*72}")
+for i, result in enumerate(results, 1):
+    auc, mrr, ndcg5, ndcg10, hit1 = result
+    print(f"{i:<10} {auc:<12.6f} {mrr:<12.6f} {ndcg5:<12.6f} {ndcg10:<12.6f} {hit1:<12.6f}")
+print(f"{'='*72}")
 
 # 최고 성능 찾기
 best_auc_idx = np.argmax([r[0] for r in results])
 best_auc_epoch = best_auc_idx + 1
-print(f"\nBest AUC: Epoch {best_auc_epoch} - {results[best_auc_idx][0]:.6f}")
-print(f"{'='*60}\n")
+best_hit1_idx = np.argmax([r[4] for r in results])
+best_hit1_epoch = best_hit1_idx + 1
+print(f"\nBest AUC  : Epoch {best_auc_epoch} - {results[best_auc_idx][0]:.6f}")
+print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][4]:.6f}")
+print(f"{'='*72}\n")
 # In[ ]:
 
 
