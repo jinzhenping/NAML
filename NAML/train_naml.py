@@ -413,10 +413,25 @@ def generate_batch_data_train(all_train_pn, all_label, all_train_id, batch_size,
             browsed_news_subvertical_split = [browsed_news_subvertical[:, k, :] for k in range(browsed_news_subvertical.shape[1])]
             
             label = all_label[i]
-            # all_label[i]는 이미 (batch_size, 5) shape
-            # reshape하지 않고 그대로 사용
+            # all_label[i]는 (batch_size, 5) shape이어야 함
             label = np.array(label, dtype=np.int32)
-            # 이미 (batch_size, 5) shape이므로 그대로 사용
+            batch_size = len(i)
+            
+            # label shape 확인 및 조정
+            if label.ndim == 1:
+                # 1D인 경우 (batch_size * 5,) -> (batch_size, 5)
+                if label.size == batch_size * 5:
+                    label = label.reshape(batch_size, 5)
+                else:
+                    # 배치 크기와 맞지 않으면 에러
+                    raise ValueError(f"Label size {label.size} doesn't match batch_size {batch_size} * 5 = {batch_size * 5}")
+            elif label.ndim == 2:
+                # 2D인 경우 shape 확인
+                if label.shape != (batch_size, 5):
+                    if label.size == batch_size * 5:
+                        label = label.reshape(batch_size, 5)
+                    else:
+                        raise ValueError(f"Label shape {label.shape} doesn't match expected ({batch_size}, 5)")
 
             yield (candidate_split + browsed_news_split + candidate_body_split + browsed_news_body_split
                    + candidate_vertical_split + browsed_news_vertical_split + candidate_subvertical_split + browsed_news_subvertical_split, label)
@@ -736,20 +751,33 @@ def main():
                     batch_size = args.batch_size
                 
                 # label shape 조정
+                # label이 (batch_size * 5,) 또는 (batch_size,) shape인 경우
                 if label_arr.ndim == 1:
-                    # (batch_size * 5,) -> (batch_size, 5)
                     if label_arr.size == batch_size * 5:
+                        # (batch_size * 5,) -> (batch_size, 5)
                         label_arr = label_arr.reshape(batch_size, 5)
+                    elif label_arr.size == batch_size:
+                        # (batch_size,) -> 각 샘플이 하나의 label만 가진 경우는 없어야 함
+                        # 하지만 만약 그렇다면 (batch_size, 1)로 변환 후 5로 확장
+                        # 이 경우는 데이터 구조 문제일 수 있음
+                        raise ValueError(f"Unexpected label shape: {label_arr.shape}, expected (batch_size, 5)")
                     else:
                         # 배치 크기를 자동으로 추론
                         label_arr = label_arr.reshape(-1, 5)
                 elif label_arr.ndim == 2:
                     # 이미 2D인 경우
                     if label_arr.shape[1] != 5:
-                        label_arr = label_arr.reshape(-1, 5)
+                        # 마지막 차원이 5가 아니면 reshape
+                        if label_arr.size % 5 == 0:
+                            label_arr = label_arr.reshape(-1, 5)
+                        else:
+                            raise ValueError(f"Label size {label_arr.size} is not divisible by 5")
                     # batch_size와 맞지 않으면 조정
                     if label_arr.shape[0] != batch_size:
-                        label_arr = label_arr.reshape(batch_size, -1)
+                        if label_arr.size == batch_size * 5:
+                            label_arr = label_arr.reshape(batch_size, 5)
+                        else:
+                            raise ValueError(f"Label shape {label_arr.shape} doesn't match batch_size {batch_size}")
                 
                 yield tuple(inputs), label_arr
         
