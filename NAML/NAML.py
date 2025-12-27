@@ -625,7 +625,7 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
 
 model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
 
-for ep in range(3):
+for ep in range(10):
     traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30)
     model.fit(traingen, epochs=1, steps_per_epoch=len(all_train_id)//30)
     testgen=generate_batch_data_test(all_test_pn,all_test_label,all_test_id, 30)
@@ -656,7 +656,7 @@ for ep in range(3):
     
     # 보기 좋게 출력
     print(f"\n{'='*60}")
-    print(f"Epoch {ep+1}/3 - Test Results")
+    print(f"Epoch {ep+1}/10 - Test Results")
     print(f"{'='*60}")
     print(f"AUC      : {epoch_results['AUC']:.6f}")
     print(f"MRR      : {epoch_results['MRR']:.6f}")
