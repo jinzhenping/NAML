@@ -413,20 +413,10 @@ def generate_batch_data_train(all_train_pn, all_label, all_train_id, batch_size,
             browsed_news_subvertical_split = [browsed_news_subvertical[:, k, :] for k in range(browsed_news_subvertical.shape[1])]
             
             label = all_label[i]
-            # label은 (batch_size, 5) shape이어야 함
-            # all_label[i]는 이미 (batch_size, 5) shape일 수 있음
+            # all_label[i]는 이미 (batch_size, 5) shape
+            # reshape하지 않고 그대로 사용
             label = np.array(label, dtype=np.int32)
-            if label.ndim == 1:
-                # (batch_size * 5,) -> (batch_size, 5)
-                batch_size = len(i)
-                label = label.reshape(batch_size, 5)
-            elif label.ndim == 2 and label.shape[1] != 5:
-                # shape이 맞지 않으면 조정
-                batch_size = len(i)
-                if label.size == batch_size * 5:
-                    label = label.reshape(batch_size, 5)
-                else:
-                    label = label.reshape(-1, 5)
+            # 이미 (batch_size, 5) shape이므로 그대로 사용
 
             yield (candidate_split + browsed_news_split + candidate_body_split + browsed_news_body_split
                    + candidate_vertical_split + browsed_news_vertical_split + candidate_subvertical_split + browsed_news_subvertical_split, label)
