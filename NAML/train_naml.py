@@ -811,7 +811,6 @@ def main():
                     # 각 요소를 numpy array로 변환하고 shape 확인
                     inputs_list = []
                     batch_size = None
-                    error_found = False
                     
                     for idx, inp in enumerate(x):
                         if not isinstance(inp, np.ndarray):
@@ -821,40 +820,12 @@ def main():
                         if batch_size is None and inp.ndim > 0:
                             batch_size = inp.shape[0]
                         
-                        # shape 검증: vertical/subvertical 위치에 title이 들어가지 않았는지 확인
-                        # Expected indices:
-                        # 0: candidate title (None, 30)
-                        # 1-50: browsed titles (None, 30)
-                        # 51: candidate body (None, 300)
-                        # 52-101: browsed bodies (None, 300)
-                        # 102: candidate v (None, 1)
-                        # 103-152: browsed v (None, 1)
-                        # 153: candidate sv (None, 1)
-                        # 154-203: browsed sv (None, 1)
-                        
-                        if idx == 102 or (idx >= 103 and idx <= 152) or idx == 153 or (idx >= 154 and idx <= 203):
-                            # Vertical/subvertical 위치: shape should be (batch_size, 1)
-                            if inp.ndim == 2 and inp.shape[1] != 1:
-                                print(f"ERROR test_gen batch {batch_count}: Input {idx} (expected v/sv) has shape {inp.shape}, expected (batch_size, 1)")
-                                print(f"  batch_size: {batch_size}, inp.ndim: {inp.ndim}, inp.shape: {inp.shape}")
-                                if inp.shape[1] == 30:
-                                    print(f"  WARNING: Title data (shape {inp.shape}) found at vertical/subvertical position!")
-                                    error_found = True
-                        
-                        # shape 검증 (디버깅용 - 첫 번째 배치와 에러 발생 시)
-                        if batch_count == 1 or error_found:
-                            if idx < 5 or (idx >= 51 and idx < 56) or (idx >= 102 and idx < 107) or (idx >= 153 and idx < 158):
+                        # 첫 번째 배치에서 모든 입력의 shape 출력
+                        if batch_count == 1:
+                            if idx < 10 or (idx >= 51 and idx < 56) or (idx >= 102 and idx < 107) or (idx >= 153 and idx < 158) or idx == len(x) - 1:
                                 print(f"DEBUG test_gen batch {batch_count}: Input {idx} shape: {inp.shape}")
                         
                         inputs_list.append(inp)
-                    
-                    if error_found:
-                        print(f"ERROR test_gen batch {batch_count}: Found shape mismatch, stopping to debug")
-                        # 에러 발생 시 모든 입력의 shape 출력
-                        for idx, inp in enumerate(inputs_list):
-                            if inp.ndim == 2 and inp.shape[1] != 30 and inp.shape[1] != 300 and inp.shape[1] != 1:
-                                print(f"  Input {idx}: unexpected shape {inp.shape}")
-                        raise ValueError(f"Shape mismatch in batch {batch_count}")
                     
                     x = tuple(inputs_list)
                 elif not isinstance(x, tuple):
