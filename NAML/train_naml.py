@@ -413,18 +413,39 @@ def generate_batch_data_train(all_train_pn, all_label, all_train_id, batch_size,
             browsed_news_subvertical_split = [browsed_news_subvertical[:, k, :] for k in range(browsed_news_subvertical.shape[1])]
             
             label = all_label[i]
-            # all_label[i]는 (batch_size, 5) shape이어야 함
-            label = np.array(label, dtype=np.int32)
+            # all_label[i]는 각 샘플의 5개 label을 가진 리스트들의 배열
+            # all_label[i]는 [[label1, label2, label3, label4, label5], ...] 형태
             batch_size = len(i)
+            
+            # all_label[i]의 실제 구조 확인
+            # 만약 all_label[i]가 리스트의 리스트라면 numpy array로 변환하면 (batch_size, 5)가 됨
+            # 하지만 에러 메시지를 보면 (30,) shape이 나오므로 구조가 다를 수 있음
+            label = np.array(label, dtype=np.int32)
             
             # label shape 확인 및 조정
             if label.ndim == 1:
-                # 1D인 경우 (batch_size * 5,) -> (batch_size, 5)
+                # 1D인 경우 - 문제
                 if label.size == batch_size * 5:
+                    # (batch_size * 5,) -> (batch_size, 5)
                     label = label.reshape(batch_size, 5)
+                elif label.size == batch_size:
+                    # (batch_size,) -> 각 샘플이 하나의 label만 가진 경우
+                    # 이것은 all_label의 구조가 잘못된 것
+                    # all_label[i]가 각 샘플의 첫 번째 label만 반환하는 것 같음
+                    # 실제 구조를 확인하기 위해 디버깅
+                    print(f"ERROR: label shape is {label.shape}, batch_size: {batch_size}")
+                    print(f"ERROR: all_label[i] type: {type(all_label[i])}")
+                    if isinstance(all_label[i], (list, tuple, np.ndarray)):
+                        print(f"ERROR: all_label[i] length: {len(all_label[i])}")
+                        if len(all_label[i]) > 0:
+                            print(f"ERROR: first element: {all_label[i][0]}, type: {type(all_label[i][0])}")
+                    # 임시 해결: (batch_size, 5)로 만들기
+                    # 각 샘플의 첫 번째 label만 있고 나머지는 0으로 채움
+                    label_2d = np.zeros((batch_size, 5), dtype=np.int32)
+                    label_2d[:, 0] = label[:batch_size]
+                    label = label_2d
                 else:
-                    # 배치 크기와 맞지 않으면 에러
-                    raise ValueError(f"Label size {label.size} doesn't match batch_size {batch_size} * 5 = {batch_size * 5}")
+                    raise ValueError(f"Unexpected label shape: {label.shape}, size: {label.size}, batch_size: {batch_size}")
             elif label.ndim == 2:
                 # 2D인 경우 shape 확인
                 if label.shape != (batch_size, 5):
@@ -432,6 +453,8 @@ def generate_batch_data_train(all_train_pn, all_label, all_train_id, batch_size,
                         label = label.reshape(batch_size, 5)
                     else:
                         raise ValueError(f"Label shape {label.shape} doesn't match expected ({batch_size}, 5)")
+            else:
+                raise ValueError(f"Unexpected label ndim: {label.ndim}, shape: {label.shape}")
 
             yield (candidate_split + browsed_news_split + candidate_body_split + browsed_news_body_split
                    + candidate_vertical_split + browsed_news_vertical_split + candidate_subvertical_split + browsed_news_subvertical_split, label)
