@@ -1003,14 +1003,14 @@ def main():
                                 if inp.shape[1] == 30:
                                     print(f"  WARNING: Title data (shape {inp.shape}) found at vertical/subvertical position!")
                                     # 모든 입력의 shape 출력
-                                    print(f"  All inputs in this batch:")
+                                    print(f"  All inputs in this batch (first 10, around problematic index, last 10):")
                                     for j, inp2 in enumerate(inputs_list):
-                                        if j < 10 or (j >= 51 and j < 56) or (j >= 102 and j < 107) or (j >= 153 and j < 158):
+                                        if j < 10 or (j >= idx - 5 and j <= idx + 5) or j >= len(inputs_list) - 10:
                                             print(f"    Input {j}: shape {inp2.shape}")
                                     raise ValueError(f"Shape mismatch in batch {batch_count}, input {idx}")
                         
-                        # 첫 번째 배치와 배치 크기가 1인 배치에서 shape 출력
-                        if batch_count == 1 or batch_size == 1:
+                        # 첫 번째 배치와 배치 크기가 1인 배치, 그리고 마지막 몇 개 배치에서 shape 출력
+                        if batch_count == 1 or batch_size == 1 or batch_count > 370:  # 마지막 몇 개 배치
                             if idx < 5 or (idx >= 51 and idx < 56) or (idx >= 102 and idx < 107) or (idx >= 153 and idx < 158):
                                 print(f"DEBUG test_gen batch {batch_count}: Input {idx} shape: {inp.shape}, batch_size: {batch_size}")
                         
