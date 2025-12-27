@@ -808,10 +808,35 @@ def main():
                 if isinstance(x, list):
                     # 각 요소를 numpy array로 변환하고 shape 확인
                     inputs_list = []
+                    batch_size = None
                     for idx, inp in enumerate(x):
                         if not isinstance(inp, np.ndarray):
                             inp = np.array(inp, dtype=np.int32)
-                        # shape 검증 (디버깅용)
+                        
+                        # 배치 크기 확인
+                        if batch_size is None and inp.ndim > 0:
+                            batch_size = inp.shape[0]
+                        
+                        # shape 검증: vertical/subvertical 위치에 title이 들어가지 않았는지 확인
+                        # Expected indices:
+                        # 0: candidate title (None, 30)
+                        # 1-50: browsed titles (None, 30)
+                        # 51: candidate body (None, 300)
+                        # 52-101: browsed bodies (None, 300)
+                        # 102: candidate v (None, 1)
+                        # 103-152: browsed v (None, 1)
+                        # 153: candidate sv (None, 1)
+                        # 154-203: browsed sv (None, 1)
+                        
+                        if idx == 102 or (idx >= 103 and idx <= 152) or idx == 153 or (idx >= 154 and idx <= 203):
+                            # Vertical/subvertical 위치: shape should be (batch_size, 1)
+                            if inp.shape != (batch_size, 1) and inp.shape[1] != 1:
+                                print(f"ERROR test_gen: Input {idx} (expected v/sv) has shape {inp.shape}, expected (batch_size, 1)")
+                                print(f"  batch_size: {batch_size}, inp.ndim: {inp.ndim}")
+                                if inp.shape[1] == 30:
+                                    print(f"  WARNING: Title data (shape {inp.shape}) found at vertical/subvertical position!")
+                        
+                        # shape 검증 (디버깅용 - 첫 번째 배치만)
                         if not hasattr(test_gen, '_shape_checked'):
                             if idx < 5 or (idx >= 51 and idx < 56) or (idx >= 102 and idx < 107) or (idx >= 153 and idx < 158):
                                 print(f"DEBUG test_gen: Input {idx} shape: {inp.shape}")
