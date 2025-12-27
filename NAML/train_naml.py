@@ -994,14 +994,25 @@ def main():
                         if batch_size is None and inp.ndim > 0:
                             batch_size = inp.shape[0]
                         
-                        # 첫 번째 배치와 마지막 배치에서 shape 출력
-                        if batch_count == 1 or (batch_count > 1 and batch_size == 1):
+                        # 모든 배치에서 vertical/subvertical 위치의 shape 확인
+                        if idx == 102 or (idx >= 103 and idx <= 152) or idx == 153 or (idx >= 154 and idx <= 203):
+                            # Vertical/subvertical 위치: shape should be (batch_size, 1)
+                            if inp.ndim == 2 and inp.shape[1] != 1:
+                                print(f"ERROR test_gen batch {batch_count}: Input {idx} (v/sv) has shape {inp.shape}, expected (batch_size, 1)")
+                                print(f"  batch_size: {batch_size}, inp.ndim: {inp.ndim}")
+                                if inp.shape[1] == 30:
+                                    print(f"  WARNING: Title data (shape {inp.shape}) found at vertical/subvertical position!")
+                                    # 모든 입력의 shape 출력
+                                    print(f"  All inputs in this batch:")
+                                    for j, inp2 in enumerate(inputs_list):
+                                        if j < 10 or (j >= 51 and j < 56) or (j >= 102 and j < 107) or (j >= 153 and j < 158):
+                                            print(f"    Input {j}: shape {inp2.shape}")
+                                    raise ValueError(f"Shape mismatch in batch {batch_count}, input {idx}")
+                        
+                        # 첫 번째 배치와 배치 크기가 1인 배치에서 shape 출력
+                        if batch_count == 1 or batch_size == 1:
                             if idx < 5 or (idx >= 51 and idx < 56) or (idx >= 102 and idx < 107) or (idx >= 153 and idx < 158):
                                 print(f"DEBUG test_gen batch {batch_count}: Input {idx} shape: {inp.shape}, batch_size: {batch_size}")
-                            # Vertical/subvertical 위치에서 shape 확인
-                            if idx == 102 or (idx >= 103 and idx <= 152) or idx == 153 or (idx >= 154 and idx <= 203):
-                                if inp.ndim == 2 and inp.shape[1] != 1:
-                                    print(f"ERROR test_gen batch {batch_count}: Input {idx} (v/sv) has shape {inp.shape}, expected (batch_size, 1)")
                         
                         inputs_list.append(inp)
                     x = tuple(inputs_list)
