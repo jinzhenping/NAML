@@ -824,7 +824,23 @@ def main():
                         else:
                             raise ValueError(f"Label shape {label_arr.shape} doesn't match batch_size {batch_size}")
                 
-                yield tuple(inputs), label_arr
+                # inputs가 확실히 튜플인지 확인하고 변환
+                # 디버깅: 첫 번째 배치만 확인
+                if not hasattr(train_gen_wrapper, '_debugged'):
+                    print(f"DEBUG: inputs type before conversion: {type(inputs)}")
+                    print(f"DEBUG: inputs is list: {isinstance(inputs, list)}")
+                    print(f"DEBUG: inputs is tuple: {isinstance(inputs, tuple)}")
+                    if hasattr(inputs, '__len__'):
+                        print(f"DEBUG: inputs length: {len(inputs)}")
+                    train_gen_wrapper._debugged = True
+                
+                # 반드시 튜플로 변환
+                if isinstance(inputs, list):
+                    inputs = tuple(inputs)
+                elif not isinstance(inputs, tuple):
+                    inputs = tuple(inputs) if hasattr(inputs, '__iter__') else (inputs,)
+                
+                yield inputs, label_arr
         
         # output_signature: 220개 입력 (튜플) + 1개 label
         input_specs = (
