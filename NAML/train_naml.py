@@ -523,22 +523,11 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size,
             browsed_news_body = news_body[all_test_user_pos[i]]
             browsed_news_body_split = [browsed_news_body[:, k, :] for k in range(browsed_news_body.shape[1])]
             browsed_news_vertical = news_v[all_test_user_pos[i]]
-            # browsed_news_vertical은 shape (batch_size, MAX_SENTS, 1) 또는 (batch_size, 1)일 수 있음
-            if browsed_news_vertical.ndim == 3:
-                browsed_news_vertical_split = [browsed_news_vertical[:, k, :] for k in range(browsed_news_vertical.shape[1])]
-            elif browsed_news_vertical.ndim == 2:
-                # 2D인 경우, 각 행을 개별 입력으로 사용
-                browsed_news_vertical_split = [browsed_news_vertical[:, k:k+1] for k in range(browsed_news_vertical.shape[1])]
-            else:
-                raise ValueError(f"browsed_news_vertical has unexpected ndim: {browsed_news_vertical.ndim}")
+            # 학습 생성기와 동일하게 처리: browsed_news_vertical은 shape (batch_size, MAX_SENTS, 1)이어야 함
+            browsed_news_vertical_split = [browsed_news_vertical[:, k, :] for k in range(browsed_news_vertical.shape[1])]
             
             browsed_news_subvertical = news_sv[all_test_user_pos[i]]
-            if browsed_news_subvertical.ndim == 3:
-                browsed_news_subvertical_split = [browsed_news_subvertical[:, k, :] for k in range(browsed_news_subvertical.shape[1])]
-            elif browsed_news_subvertical.ndim == 2:
-                browsed_news_subvertical_split = [browsed_news_subvertical[:, k:k+1] for k in range(browsed_news_subvertical.shape[1])]
-            else:
-                raise ValueError(f"browsed_news_subvertical has unexpected ndim: {browsed_news_subvertical.ndim}")
+            browsed_news_subvertical_split = [browsed_news_subvertical[:, k, :] for k in range(browsed_news_subvertical.shape[1])]
             
             label = all_label[i]
             
@@ -551,13 +540,41 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size,
             if not hasattr(generate_batch_data_test, '_shape_checked'):
                 print(f"DEBUG: Total inputs: {len(all_inputs)}")
                 print(f"DEBUG: Expected: 1 candidate title + 50 browsed titles + 1 candidate body + 50 browsed bodies + 1 candidate v + 50 browsed v + 1 candidate sv + 50 browsed sv = 204")
-                # Vertical/subvertical 입력들의 shape 확인
-                v_start_idx = 1 + 50 + 1 + 50  # candidate title + browsed titles + candidate body + browsed bodies
-                sv_start_idx = v_start_idx + 1 + 50  # + candidate v + browsed v
-                print(f"DEBUG: Candidate v shape: {all_inputs[v_start_idx].shape}")
-                print(f"DEBUG: First browsed v shape: {all_inputs[v_start_idx + 1].shape}")
-                print(f"DEBUG: Candidate sv shape: {all_inputs[sv_start_idx].shape}")
-                print(f"DEBUG: First browsed sv shape: {all_inputs[sv_start_idx + 1].shape}")
+                
+                # 각 섹션의 개수 확인
+                num_candidate_title = 1
+                num_browsed_titles = len(browsed_news_split)
+                num_candidate_body = 1
+                num_browsed_bodies = len(browsed_news_body_split)
+                num_candidate_v = len(candidate_vertical_list)
+                num_browsed_v = len(browsed_news_vertical_split)
+                num_candidate_sv = len(candidate_subvertical_list)
+                num_browsed_sv = len(browsed_news_subvertical_split)
+                
+                print(f"DEBUG: Candidate title: {num_candidate_title}")
+                print(f"DEBUG: Browsed titles: {num_browsed_titles} (expected 50)")
+                print(f"DEBUG: Candidate body: {num_candidate_body}")
+                print(f"DEBUG: Browsed bodies: {num_browsed_bodies} (expected 50)")
+                print(f"DEBUG: Candidate v: {num_candidate_v} (expected 1)")
+                print(f"DEBUG: Browsed v: {num_browsed_v} (expected 50)")
+                print(f"DEBUG: Candidate sv: {num_candidate_sv} (expected 1)")
+                print(f"DEBUG: Browsed sv: {num_browsed_sv} (expected 50)")
+                
+                # 각 섹션의 shape 확인
+                print(f"DEBUG: Candidate title shape: {all_inputs[0].shape}")
+                v_start_idx = num_candidate_title + num_browsed_titles + num_candidate_body + num_browsed_bodies
+                sv_start_idx = v_start_idx + num_candidate_v + num_browsed_v
+                print(f"DEBUG: Candidate v index: {v_start_idx}, shape: {all_inputs[v_start_idx].shape}")
+                print(f"DEBUG: First browsed v index: {v_start_idx + 1}, shape: {all_inputs[v_start_idx + 1].shape if v_start_idx + 1 < len(all_inputs) else 'N/A'}")
+                print(f"DEBUG: Candidate sv index: {sv_start_idx}, shape: {all_inputs[sv_start_idx].shape if sv_start_idx < len(all_inputs) else 'N/A'}")
+                
+                # 모든 입력의 shape 출력 (문제가 있는 것 찾기)
+                print(f"DEBUG: All input shapes (first 10 and last 10):")
+                for idx in range(min(10, len(all_inputs))):
+                    print(f"  Input {idx}: shape {all_inputs[idx].shape}")
+                print("  ...")
+                for idx in range(max(0, len(all_inputs) - 10), len(all_inputs)):
+                    print(f"  Input {idx}: shape {all_inputs[idx].shape}")
                 generate_batch_data_test._shape_checked = True
             
             yield (all_inputs, [label])
