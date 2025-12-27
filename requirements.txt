@@ -3,9 +3,11 @@ pandas>=1.5.0
 pyyaml>=6.0
 
 # NAML 모델 학습/테스트용
-numpy>=1.19.0
+# 호환성을 위해 특정 버전 지정 (TensorFlow 2.8.0, Keras 2.8.0)
+numpy>=1.19.0,<2.0.0  # NumPy 2.x는 TensorFlow 2.8.0과 호환 안됨
 nltk>=3.6
-keras>=2.3.0
-tensorflow>=2.0.0
+protobuf<4.0.0,>=3.20.0  # TensorFlow 2.8.0 호환
+tensorflow==2.8.0
+keras==2.8.0
 scikit-learn>=0.24.0
 
