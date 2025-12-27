@@ -797,7 +797,9 @@ def main():
         def test_gen():
             gen = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, args.batch_size,
                                           news_words, news_body, news_v, news_sv, all_test_user_pos)
+            batch_count = 0
             for x, y in gen:
+                batch_count += 1
                 # x는 리스트, y는 [label] 형태
                 # y를 numpy array로 변환하고 shape 조정
                 label_arr = np.array(y, dtype=np.int32)
@@ -809,6 +811,8 @@ def main():
                     # 각 요소를 numpy array로 변환하고 shape 확인
                     inputs_list = []
                     batch_size = None
+                    error_found = False
+                    
                     for idx, inp in enumerate(x):
                         if not isinstance(inp, np.ndarray):
                             inp = np.array(inp, dtype=np.int32)
@@ -830,19 +834,28 @@ def main():
                         
                         if idx == 102 or (idx >= 103 and idx <= 152) or idx == 153 or (idx >= 154 and idx <= 203):
                             # Vertical/subvertical 위치: shape should be (batch_size, 1)
-                            if inp.shape != (batch_size, 1) and inp.shape[1] != 1:
-                                print(f"ERROR test_gen: Input {idx} (expected v/sv) has shape {inp.shape}, expected (batch_size, 1)")
-                                print(f"  batch_size: {batch_size}, inp.ndim: {inp.ndim}")
+                            if inp.ndim == 2 and inp.shape[1] != 1:
+                                print(f"ERROR test_gen batch {batch_count}: Input {idx} (expected v/sv) has shape {inp.shape}, expected (batch_size, 1)")
+                                print(f"  batch_size: {batch_size}, inp.ndim: {inp.ndim}, inp.shape: {inp.shape}")
                                 if inp.shape[1] == 30:
                                     print(f"  WARNING: Title data (shape {inp.shape}) found at vertical/subvertical position!")
+                                    error_found = True
                         
-                        # shape 검증 (디버깅용 - 첫 번째 배치만)
-                        if not hasattr(test_gen, '_shape_checked'):
+                        # shape 검증 (디버깅용 - 첫 번째 배치와 에러 발생 시)
+                        if batch_count == 1 or error_found:
                             if idx < 5 or (idx >= 51 and idx < 56) or (idx >= 102 and idx < 107) or (idx >= 153 and idx < 158):
-                                print(f"DEBUG test_gen: Input {idx} shape: {inp.shape}")
+                                print(f"DEBUG test_gen batch {batch_count}: Input {idx} shape: {inp.shape}")
+                        
                         inputs_list.append(inp)
-                    if not hasattr(test_gen, '_shape_checked'):
-                        test_gen._shape_checked = True
+                    
+                    if error_found:
+                        print(f"ERROR test_gen batch {batch_count}: Found shape mismatch, stopping to debug")
+                        # 에러 발생 시 모든 입력의 shape 출력
+                        for idx, inp in enumerate(inputs_list):
+                            if inp.ndim == 2 and inp.shape[1] != 30 and inp.shape[1] != 300 and inp.shape[1] != 1:
+                                print(f"  Input {idx}: unexpected shape {inp.shape}")
+                        raise ValueError(f"Shape mismatch in batch {batch_count}")
+                    
                     x = tuple(inputs_list)
                 elif not isinstance(x, tuple):
                     x = tuple(x) if hasattr(x, '__iter__') else (x,)
