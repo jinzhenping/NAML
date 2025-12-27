@@ -422,10 +422,12 @@ import os
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 import keras
+import tensorflow as tf
 from keras.layers import *
 from keras.models import Model
 from keras import backend as K
-from keras.optimizers import Adam
+# TensorFlow 2.8.0에서는 tensorflow.keras.optimizers 사용
+from tensorflow.keras.optimizers import Adam
 
 
 # In[ ]:
