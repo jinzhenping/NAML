@@ -1022,10 +1022,11 @@ def main():
                                         print(f"  Remaining inputs will be added...")
                                     raise ValueError(f"Shape mismatch in batch {batch_count}, input {idx}")
                         
-                        # 첫 번째 배치와 배치 크기가 1인 배치에서 shape 출력
-                        if batch_count == 1 or batch_size == 1:
+                        # 첫 번째 배치와 배치 크기가 1인 배치, 그리고 마지막 몇 개 배치에서 shape 출력
+                        total_batches = (len(all_test_id) + args.batch_size - 1) // args.batch_size
+                        if batch_count == 1 or batch_size == 1 or batch_count >= total_batches - 2:
                             if idx < 5 or (idx >= 51 and idx < 56) or (idx >= 102 and idx < 107) or (idx >= 153 and idx < 158):
-                                print(f"DEBUG test_gen batch {batch_count}: Input {idx} shape: {inp.shape}, batch_size: {batch_size}")
+                                print(f"DEBUG test_gen batch {batch_count}/{total_batches}: Input {idx} shape: {inp.shape}, batch_size: {batch_size}")
                         
                         inputs_list.append(inp)
                     x = tuple(inputs_list)
