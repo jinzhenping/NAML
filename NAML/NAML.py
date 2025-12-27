@@ -129,10 +129,10 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         random.shuffle(combined)
         shuffle_indices, shuffle_labels = zip(*combined)
         
-        # 유저 히스토리 (최대 50개)
+        # 유저 히스토리 (최대 5개)
         posset = list(set(clicked_news_ids) - set([idx for idx in candidate_indices if idx != 0]))
-        allpos = [int(p) for p in random.sample(posset, min(50, len(posset)))[:50]] if len(posset) > 0 else []
-        allpos += [0] * (50 - len(allpos))
+        allpos = [int(p) for p in random.sample(posset, min(5, len(posset)))[:5]] if len(posset) > 0 else []
+        allpos += [0] * (5 - len(allpos))
         
         all_train_pn.append(list(shuffle_indices))
         all_label.append(list(shuffle_labels))
@@ -161,10 +161,10 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         # 세션 인덱스 시작
         sess_index = [len(all_test_pn)]
         
-        # 유저 히스토리
+        # 유저 히스토리 (최대 5개)
         posset = list(set(clicked_news_ids))
-        allpos = [int(p) for p in random.sample(posset, min(50, len(posset)))[:50]]
-        allpos += [0] * (50 - len(allpos))
+        allpos = [int(p) for p in random.sample(posset, min(5, len(posset)))[:5]]
+        allpos += [0] * (5 - len(allpos))
         
         # 후보 뉴스들을 news_index로 변환
         candidate_indices = []
@@ -508,7 +508,7 @@ results=[]
 keras.backend.clear_session()
 
 MAX_SENT_LENGTH=30
-MAX_SENTS=50
+MAX_SENTS=5  # 히스토리 클릭 개수: 5개
 npratio=4
 
 
@@ -626,10 +626,41 @@ for ep in range(3):
             all_mrr.append(mrr_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0]))
             all_ndcg.append(ndcg_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0],k=5))
             all_ndcg2.append(ndcg_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0],k=10))
-    results.append([np.mean(all_auc),np.mean(all_mrr),np.mean(all_ndcg),np.mean(all_ndcg2)])
-    print(np.mean(all_auc),np.mean(all_mrr),np.mean(all_ndcg),np.mean(all_ndcg2))
+    
+    # 결과 저장
+    epoch_results = {
+        'AUC': np.mean(all_auc),
+        'MRR': np.mean(all_mrr),
+        'NDCG@5': np.mean(all_ndcg),
+        'NDCG@10': np.mean(all_ndcg2)
+    }
+    results.append([epoch_results['AUC'], epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['NDCG@10']])
+    
+    # 보기 좋게 출력
+    print(f"\n{'='*60}")
+    print(f"Epoch {ep+1}/3 - Test Results")
+    print(f"{'='*60}")
+    print(f"AUC      : {epoch_results['AUC']:.6f}")
+    print(f"MRR      : {epoch_results['MRR']:.6f}")
+    print(f"NDCG@5   : {epoch_results['NDCG@5']:.6f}")
+    print(f"NDCG@10  : {epoch_results['NDCG@10']:.6f}")
+    print(f"{'='*60}\n")
 
+# 전체 결과 요약
+print(f"\n{'='*60}")
+print("Final Results Summary (All Epochs)")
+print(f"{'='*60}")
+print(f"{'Epoch':<10} {'AUC':<12} {'MRR':<12} {'NDCG@5':<12} {'NDCG@10':<12}")
+print(f"{'-'*60}")
+for i, (auc, mrr, ndcg5, ndcg10) in enumerate(results, 1):
+    print(f"{i:<10} {auc:<12.6f} {mrr:<12.6f} {ndcg5:<12.6f} {ndcg10:<12.6f}")
+print(f"{'='*60}")
 
+# 최고 성능 찾기
+best_auc_idx = np.argmax([r[0] for r in results])
+best_auc_epoch = best_auc_idx + 1
+print(f"\nBest AUC: Epoch {best_auc_epoch} - {results[best_auc_idx][0]:.6f}")
+print(f"{'='*60}\n")
 # In[ ]:
 
 
