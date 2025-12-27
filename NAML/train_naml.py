@@ -803,8 +803,27 @@ def main():
                 label_arr = np.array(y, dtype=np.int32)
                 if label_arr.ndim == 1:
                     label_arr = label_arr.reshape(-1, 1)
+                
+                # x가 리스트인지 확인하고, 각 요소가 numpy array인지 확인
+                if isinstance(x, list):
+                    # 각 요소를 numpy array로 변환하고 shape 확인
+                    inputs_list = []
+                    for idx, inp in enumerate(x):
+                        if not isinstance(inp, np.ndarray):
+                            inp = np.array(inp, dtype=np.int32)
+                        # shape 검증 (디버깅용)
+                        if not hasattr(test_gen, '_shape_checked'):
+                            if idx < 5 or (idx >= 51 and idx < 56) or (idx >= 102 and idx < 107) or (idx >= 153 and idx < 158):
+                                print(f"DEBUG test_gen: Input {idx} shape: {inp.shape}")
+                        inputs_list.append(inp)
+                    if not hasattr(test_gen, '_shape_checked'):
+                        test_gen._shape_checked = True
+                    x = tuple(inputs_list)
+                elif not isinstance(x, tuple):
+                    x = tuple(x) if hasattr(x, '__iter__') else (x,)
+                
                 # 튜플로 반환 (tf.data.Dataset이 기대하는 형식)
-                yield tuple(x) if isinstance(x, list) else x, label_arr
+                yield x, label_arr
         
         # output_signature 정의: 204개 입력 (1 candidate + 50 browsed) * 4 views = 204
         test_input_specs = tuple([
