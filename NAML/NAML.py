@@ -105,9 +105,23 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
                 is_clicked = int(clicked[i]) if i < len(clicked) else 0
                 candidate_labels.append(is_clicked)
         
-        # 후보가 5개가 아니거나 positive가 없으면 스킵
+        # 후보가 2개 미만이거나 positive가 없으면 스킵
         if len(candidate_indices) < 2 or sum(candidate_labels) == 0:
             continue
+        
+        # 정확히 5개 후보로 맞추기 (npratio=4이므로 1+4=5)
+        # 5개보다 많으면 처음 5개만 사용, 적으면 패딩
+        target_size = 1 + npratio  # 5개
+        
+        if len(candidate_indices) > target_size:
+            # 처음 target_size개만 사용
+            candidate_indices = candidate_indices[:target_size]
+            candidate_labels = candidate_labels[:target_size]
+        elif len(candidate_indices) < target_size:
+            # 부족한 만큼 패딩 (0으로 채움, label도 0)
+            padding_size = target_size - len(candidate_indices)
+            candidate_indices += [0] * padding_size
+            candidate_labels += [0] * padding_size
         
         # 5개 후보 중 1개 positive, 나머지 negative
         # 순서를 섞기
@@ -116,8 +130,8 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         shuffle_indices, shuffle_labels = zip(*combined)
         
         # 유저 히스토리 (최대 50개)
-        posset = list(set(clicked_news_ids) - set(candidate_indices))
-        allpos = [int(p) for p in random.sample(posset, min(50, len(posset)))[:50]]
+        posset = list(set(clicked_news_ids) - set([idx for idx in candidate_indices if idx != 0]))
+        allpos = [int(p) for p in random.sample(posset, min(50, len(posset)))[:50]] if len(posset) > 0 else []
         allpos += [0] * (50 - len(allpos))
         
         all_train_pn.append(list(shuffle_indices))
