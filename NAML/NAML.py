@@ -462,9 +462,11 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size):
             
         
             label=all_label[i]
+            # label을 numpy array로 변환 (categorical_crossentropy는 one-hot 형식 필요)
+            label = np.array(label, dtype='float32')
 
             yield (candidate_split+browsed_news_split+candidate_body_split+browsed_news_body_split
-                   +candidate_vertical_split+browsed_news_vertical_split +candidate_subvertical_split+browsed_news_subvertical_split, [label])
+                   +candidate_vertical_split+browsed_news_vertical_split +candidate_subvertical_split+browsed_news_subvertical_split, label)
 
 
 # In[ ]:
