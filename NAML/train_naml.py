@@ -538,6 +538,13 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size,
             
             # 디버깅: 첫 번째 배치만 shape 확인
             if not hasattr(generate_batch_data_test, '_shape_checked'):
+                print(f"DEBUG: Raw data shapes:")
+                print(f"  candidate shape: {candidate.shape}")
+                print(f"  candidate_body shape: {candidate_body.shape}")
+                print(f"  candidate_vertical shape: {candidate_vertical.shape}")
+                print(f"  browsed_news shape: {browsed_news.shape}")
+                print(f"  browsed_news_vertical shape: {browsed_news_vertical.shape}")
+                
                 print(f"DEBUG: Total inputs: {len(all_inputs)}")
                 print(f"DEBUG: Expected: 1 candidate title + 50 browsed titles + 1 candidate body + 50 browsed bodies + 1 candidate v + 50 browsed v + 1 candidate sv + 50 browsed sv = 204")
                 
@@ -551,30 +558,23 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size,
                 num_candidate_sv = len(candidate_subvertical_list)
                 num_browsed_sv = len(browsed_news_subvertical_split)
                 
-                print(f"DEBUG: Candidate title: {num_candidate_title}")
-                print(f"DEBUG: Browsed titles: {num_browsed_titles} (expected 50)")
-                print(f"DEBUG: Candidate body: {num_candidate_body}")
+                print(f"DEBUG: Candidate title: {num_candidate_title}, shape: {all_inputs[0].shape}")
+                print(f"DEBUG: Browsed titles: {num_browsed_titles} (expected 50), first shape: {all_inputs[1].shape if num_browsed_titles > 0 else 'N/A'}")
+                print(f"DEBUG: Candidate body: {num_candidate_body}, shape: {all_inputs[num_candidate_title + num_browsed_titles].shape}")
                 print(f"DEBUG: Browsed bodies: {num_browsed_bodies} (expected 50)")
                 print(f"DEBUG: Candidate v: {num_candidate_v} (expected 1)")
                 print(f"DEBUG: Browsed v: {num_browsed_v} (expected 50)")
                 print(f"DEBUG: Candidate sv: {num_candidate_sv} (expected 1)")
                 print(f"DEBUG: Browsed sv: {num_browsed_sv} (expected 50)")
                 
-                # 각 섹션의 shape 확인
-                print(f"DEBUG: Candidate title shape: {all_inputs[0].shape}")
+                # Vertical/subvertical 위치의 shape 확인
                 v_start_idx = num_candidate_title + num_browsed_titles + num_candidate_body + num_browsed_bodies
                 sv_start_idx = v_start_idx + num_candidate_v + num_browsed_v
                 print(f"DEBUG: Candidate v index: {v_start_idx}, shape: {all_inputs[v_start_idx].shape}")
-                print(f"DEBUG: First browsed v index: {v_start_idx + 1}, shape: {all_inputs[v_start_idx + 1].shape if v_start_idx + 1 < len(all_inputs) else 'N/A'}")
-                print(f"DEBUG: Candidate sv index: {sv_start_idx}, shape: {all_inputs[sv_start_idx].shape if sv_start_idx < len(all_inputs) else 'N/A'}")
-                
-                # 모든 입력의 shape 출력 (문제가 있는 것 찾기)
-                print(f"DEBUG: All input shapes (first 10 and last 10):")
-                for idx in range(min(10, len(all_inputs))):
-                    print(f"  Input {idx}: shape {all_inputs[idx].shape}")
-                print("  ...")
-                for idx in range(max(0, len(all_inputs) - 10), len(all_inputs)):
-                    print(f"  Input {idx}: shape {all_inputs[idx].shape}")
+                if v_start_idx + 1 < len(all_inputs):
+                    print(f"DEBUG: First browsed v index: {v_start_idx + 1}, shape: {all_inputs[v_start_idx + 1].shape}")
+                if sv_start_idx < len(all_inputs):
+                    print(f"DEBUG: Candidate sv index: {sv_start_idx}, shape: {all_inputs[sv_start_idx].shape}")
                 generate_batch_data_test._shape_checked = True
             
             yield (all_inputs, [label])
