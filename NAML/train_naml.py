@@ -726,11 +726,35 @@ def main():
                 label_arr = np.array(y, dtype=np.int32)
                 if label_arr.ndim == 1:
                     label_arr = label_arr.reshape(-1, 1)
-                # x는 이미 리스트이므로 그대로 사용
-                yield x, label_arr
+                # 튜플로 반환 (tf.data.Dataset이 기대하는 형식)
+                yield tuple(x) if isinstance(x, list) else x, label_arr
         
-        # Python generator를 직접 사용
-        click_score = model_test.predict(test_gen(), steps=len(all_test_id) // args.batch_size, verbose=1)
+        # output_signature 정의: 204개 입력 (1 candidate + 50 browsed) * 4 views = 204
+        test_input_specs = tuple([
+            tf.TensorSpec(shape=(None, 30), dtype=tf.int32)  # 1 candidate title
+        ] + [
+            tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)  # 50 browsed titles
+        ] + [
+            tf.TensorSpec(shape=(None, 300), dtype=tf.int32)  # 1 candidate body
+        ] + [
+            tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(50)  # 50 browsed bodies
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32)  # 1 candidate v
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)  # 50 browsed v
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32)  # 1 candidate sv
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)  # 50 browsed sv
+        ])
+        test_label_spec = tf.TensorSpec(shape=(None, 1), dtype=tf.int32)
+        
+        # tf.data.Dataset을 명시적으로 생성하여 output_signature 제공
+        test_ds = tf.data.Dataset.from_generator(
+            test_gen,
+            output_signature=(test_input_specs, test_label_spec)
+        )
+        click_score = model_test.predict(test_ds, steps=len(all_test_id) // args.batch_size, verbose=1)
         
         all_auc = []
         all_mrr = []
@@ -760,13 +784,12 @@ def main():
         print(f"에포크 {ep + 1}/{args.epochs}")
         print(f"{'='*60}")
         
-        # Generator를 직접 사용 (tf.data.Dataset 없이)
-        # Keras model.fit은 Python generator를 직접 받을 수 있습니다.
+        # Generator를 래핑하여 올바른 형식으로 변환
         def train_gen():
             traingen = generate_batch_data_train(all_train_pn, all_label, all_train_id, args.batch_size,
                                                  news_words, news_body, news_v, news_sv, all_user_pos)
             for inputs, label in traingen:
-                # inputs는 튜플이지만, Keras 모델이 리스트 입력을 기대하므로 리스트로 변환
+                # inputs는 튜플이지만, 리스트로 변환 (모델이 리스트 입력을 기대)
                 if isinstance(inputs, tuple):
                     inputs = list(inputs)
                 elif not isinstance(inputs, list):
@@ -801,12 +824,38 @@ def main():
                         else:
                             raise ValueError(f"Label shape {label_arr.shape} doesn't match batch_size {batch_size}")
                 
-                # Keras는 리스트나 튜플 모두 받을 수 있지만, 모델이 리스트로 정의되어 있으므로 리스트로 전달
-                yield inputs, label_arr
+                # 튜플로 반환 (tf.data.Dataset이 기대하는 형식)
+                yield tuple(inputs), label_arr
         
-        # Python generator를 직접 사용 (tf.data.Dataset.from_generator 없이)
-        # Keras model.fit은 Python generator를 직접 받을 수 있습니다.
-        model.fit(train_gen(), epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
+        # output_signature 정의: 220개 입력 (튜플) + 1개 label
+        # 각 요소는 tf.TensorSpec이어야 함
+        input_specs = tuple([
+            tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(5)  # 5 candidate titles
+        ] + [
+            tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)  # 50 browsed titles
+        ] + [
+            tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(5)  # 5 candidate bodies
+        ] + [
+            tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(50)  # 50 browsed bodies
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)  # 5 candidate v
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)  # 50 browsed v
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(5)  # 5 candidate sv
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)  # 50 browsed sv
+        ])
+        label_spec = tf.TensorSpec(shape=(None, 5), dtype=tf.int32)
+        
+        # tf.data.Dataset을 명시적으로 생성하여 output_signature 제공
+        train_ds = tf.data.Dataset.from_generator(
+            train_gen,
+            output_signature=(input_specs, label_spec)
+        )
+        
+        # Keras 모델은 여러 입력을 받을 때 튜플이나 리스트 모두를 받을 수 있습니다.
+        model.fit(train_ds, epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
         
         # 모델 저장 (각 에포크마다)
         if args.save_model:
@@ -825,11 +874,35 @@ def main():
                 label_arr = np.array(y, dtype=np.int32)
                 if label_arr.ndim == 1:
                     label_arr = label_arr.reshape(-1, 1)
-                # x는 이미 리스트이므로 그대로 사용
-                yield x, label_arr
+                # 튜플로 반환 (tf.data.Dataset이 기대하는 형식)
+                yield tuple(x) if isinstance(x, list) else x, label_arr
         
-        # Python generator를 직접 사용
-        click_score = model_test.predict(test_gen(), steps=len(all_test_id) // args.batch_size, verbose=1)
+        # output_signature 정의: 204개 입력
+        test_input_specs = tuple([
+            tf.TensorSpec(shape=(None, 30), dtype=tf.int32)  # 1 candidate title
+        ] + [
+            tf.TensorSpec(shape=(None, 30), dtype=tf.int32) for _ in range(50)  # 50 browsed titles
+        ] + [
+            tf.TensorSpec(shape=(None, 300), dtype=tf.int32)  # 1 candidate body
+        ] + [
+            tf.TensorSpec(shape=(None, 300), dtype=tf.int32) for _ in range(50)  # 50 browsed bodies
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32)  # 1 candidate v
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)  # 50 browsed v
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32)  # 1 candidate sv
+        ] + [
+            tf.TensorSpec(shape=(None, 1), dtype=tf.int32) for _ in range(50)  # 50 browsed sv
+        ])
+        test_label_spec = tf.TensorSpec(shape=(None, 1), dtype=tf.int32)
+        
+        # tf.data.Dataset을 명시적으로 생성하여 output_signature 제공
+        test_ds = tf.data.Dataset.from_generator(
+            test_gen,
+            output_signature=(test_input_specs, test_label_spec)
+        )
+        click_score = model_test.predict(test_ds, steps=len(all_test_id) // args.batch_size, verbose=1)
         
         all_auc = []
         all_mrr = []
