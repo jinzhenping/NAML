@@ -897,14 +897,9 @@ def main():
             output_signature=(input_specs, label_spec)
         )
         
-        # Dataset을 모델이 기대하는 리스트 형태로 변환
-        def map_to_list(inputs_tuple, label):
-            # inputs_tuple을 리스트로 변환
-            inputs_list = list(inputs_tuple)
-            return inputs_list, label
-        
-        traingen_ds = traingen_ds.map(map_to_list)
-        
+        # Keras 모델은 여러 입력을 받을 때 튜플이나 리스트 모두를 받을 수 있습니다.
+        # tf.data.Dataset에서 튜플로 전달하면 모델이 자동으로 처리합니다.
+        # 모델 입력이 리스트로 정의되어 있지만, 튜플도 자동으로 처리됩니다.
         model.fit(traingen_ds, epochs=1, steps_per_epoch=len(all_train_id) // args.batch_size, verbose=1)
         
         # 모델 저장 (각 에포크마다)
