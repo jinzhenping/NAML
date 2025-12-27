@@ -546,11 +546,12 @@ sv_embedding=Dense(400,activation='relu')(Flatten()(sv_embedding_layer(svinput))
 
 all_channel=[title_rep,body_rep,v_embedding,sv_embedding]
     
-views=concatenate([Lambda(lambda x: K.expand_dims(x,axis=1))(channel) for channel in all_channel],axis=1)
+# Lambda 대신 Reshape 사용 (최신 Keras 호환)
+views=concatenate([Reshape((1, -1))(channel) for channel in all_channel],axis=1)
 
 attentionv = Dense(200,activation='tanh')(views)
 
-attention_weightv =Lambda(lambda x:K.squeeze(x,axis=-1))(Dense(1)(attentionv))
+attention_weightv = Reshape((-1,))(Dense(1)(attentionv))
 attention_weightv =Activation('softmax')(attention_weightv)
 
 newsrep=keras.layers.Dot((1, 1))([views, attention_weightv])
@@ -564,7 +565,7 @@ browsed_v_input = [keras.Input((1,), dtype='int32') for _ in range(MAX_SENTS)]
 browsed_sv_input = [keras.Input((1,), dtype='int32') for _ in range(MAX_SENTS)]
 
 browsednews = [newsEncoder([browsed_news_input[_],browsed_body_input[_],browsed_v_input[_],browsed_sv_input[_] ]) for _ in range(MAX_SENTS)]
-browsednewsrep =concatenate([Lambda(lambda x: K.expand_dims(x,axis=1))(news) for news in browsednews],axis=1)    
+browsednewsrep =concatenate([Reshape((1, -1))(news) for news in browsednews],axis=1)    
 
 attentionn = Dense(200,activation='tanh')(browsednewsrep)
 attentionn =Flatten()(Dense(1)(attentionn))
