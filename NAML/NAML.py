@@ -129,14 +129,14 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         random.shuffle(combined)
         shuffle_indices, shuffle_labels = zip(*combined)
         
-        # 유저 히스토리 (최근 5개 사용)
+        # 유저 히스토리 (최근 50개 사용)
         # 후보 뉴스를 제외한 최근 클릭 기록 사용
         candidate_set = set([idx for idx in candidate_indices if idx != 0])
         filtered_history = [idx for idx in clicked_news_ids if idx not in candidate_set]
-        # 최근 5개 선택 (순서 유지)
-        recent_history = filtered_history[-5:] if len(filtered_history) >= 5 else filtered_history
+        # 최근 50개 선택 (순서 유지)
+        recent_history = filtered_history[-50:] if len(filtered_history) >= 50 else filtered_history
         allpos = [int(p) for p in recent_history]
-        allpos += [0] * (5 - len(allpos))
+        allpos += [0] * (50 - len(allpos))
         
         all_train_pn.append(list(shuffle_indices))
         all_label.append(list(shuffle_labels))
@@ -165,11 +165,11 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         # 세션 인덱스 시작
         sess_index = [len(all_test_pn)]
         
-        # 유저 히스토리 (최근 5개 사용)
-        # 최근 5개 선택 (순서 유지)
-        recent_history = clicked_news_ids[-5:] if len(clicked_news_ids) >= 5 else clicked_news_ids
+        # 유저 히스토리 (최근 50개 사용)
+        # 최근 50개 선택 (순서 유지)
+        recent_history = clicked_news_ids[-50:] if len(clicked_news_ids) >= 50 else clicked_news_ids
         allpos = [int(p) for p in recent_history]
-        allpos += [0] * (5 - len(allpos))
+        allpos += [0] * (50 - len(allpos))
         
         # 후보 뉴스들을 news_index로 변환
         candidate_indices = []
@@ -528,7 +528,7 @@ results=[]
 keras.backend.clear_session()
 
 MAX_SENT_LENGTH=30
-MAX_SENTS=5  # 히스토리 클릭 개수: 5개
+MAX_SENTS=50  # 히스토리 클릭 개수: 최대 50개
 npratio=4
 
 
