@@ -87,7 +87,7 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         candidate_news = parts[2].split()  # 후보 뉴스들
         clicked = parts[3].split()  # 클릭 여부 (1 또는 0)
         
-        # clicked_news를 news_index로 변환
+        # clicked_news를 news_index로 변환 (순서 유지)
         clicked_news_ids = []
         for news_id in clicked_news:
             if news_id in news_index:
@@ -129,9 +129,13 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         random.shuffle(combined)
         shuffle_indices, shuffle_labels = zip(*combined)
         
-        # 유저 히스토리 (최대 5개)
-        posset = list(set(clicked_news_ids) - set([idx for idx in candidate_indices if idx != 0]))
-        allpos = [int(p) for p in random.sample(posset, min(5, len(posset)))[:5]] if len(posset) > 0 else []
+        # 유저 히스토리 (최근 5개 사용)
+        # 후보 뉴스를 제외한 최근 클릭 기록 사용
+        candidate_set = set([idx for idx in candidate_indices if idx != 0])
+        filtered_history = [idx for idx in clicked_news_ids if idx not in candidate_set]
+        # 최근 5개 선택 (순서 유지)
+        recent_history = filtered_history[-5:] if len(filtered_history) >= 5 else filtered_history
+        allpos = [int(p) for p in recent_history]
         allpos += [0] * (5 - len(allpos))
         
         all_train_pn.append(list(shuffle_indices))
@@ -149,7 +153,7 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         clicked_news = parts[1].split()
         candidate_news = parts[2].split()
         
-        # clicked_news를 news_index로 변환
+        # clicked_news를 news_index로 변환 (순서 유지)
         clicked_news_ids = []
         for news_id in clicked_news:
             if news_id in news_index:
@@ -161,9 +165,10 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         # 세션 인덱스 시작
         sess_index = [len(all_test_pn)]
         
-        # 유저 히스토리 (최대 5개)
-        posset = list(set(clicked_news_ids))
-        allpos = [int(p) for p in random.sample(posset, min(5, len(posset)))[:5]]
+        # 유저 히스토리 (최근 5개 사용)
+        # 최근 5개 선택 (순서 유지)
+        recent_history = clicked_news_ids[-5:] if len(clicked_news_ids) >= 5 else clicked_news_ids
+        allpos = [int(p) for p in recent_history]
         allpos += [0] * (5 - len(allpos))
         
         # 후보 뉴스들을 news_index로 변환
