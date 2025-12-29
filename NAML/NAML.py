@@ -31,13 +31,99 @@ def newsample(nnn,ratio):
 # In[ ]:
 
 
+def load_expected_bodies(output_dir='body_generation/output', dataset_type='train'):
+    """
+    기대 본문 로드
+    output_dir/train/user_{user_id}/news_{news_id}.json 또는
+    output_dir/test/user_{user_id}/news_{news_id}.json에서 기대 본문 로드
+    """
+    import json
+    import os
+    
+    expected_bodies = {}  # {news_id: generated_body}
+    base_path = os.path.join(output_dir, dataset_type)
+    
+    if not os.path.exists(base_path):
+        print(f"경고: 기대 본문 폴더를 찾을 수 없습니다: {base_path}")
+        return expected_bodies
+    
+    # 각 유저 폴더 탐색
+    for user_folder in os.listdir(base_path):
+        user_path = os.path.join(base_path, user_folder)
+        if not os.path.isdir(user_path):
+            continue
+        
+        # 각 뉴스 JSON 파일 읽기
+        for filename in os.listdir(user_path):
+            if filename.startswith('news_') and filename.endswith('.json'):
+                news_id = filename.replace('news_', '').replace('.json', '')
+                file_path = os.path.join(user_path, filename)
+                
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                        if 'generated_body' in data:
+                            expected_bodies[news_id] = data['generated_body']
+                except Exception as e:
+                    print(f"경고: {file_path} 읽기 실패: {e}")
+                    continue
+    
+    print(f"기대 본문 로드 완료: {len(expected_bodies)}개 ({dataset_type})")
+    return expected_bodies
+
+
+def load_expected_bodies(output_dir='body_generation/output', dataset_type='train'):
+    """
+    기대 본문 로드
+    output_dir/{dataset_type}/user_{user_id}/news_{news_id}.json에서 기대 본문 로드
+    """
+    import json
+    import os
+    
+    expected_bodies = {}  # {news_id: generated_body}
+    base_path = os.path.join(output_dir, dataset_type)
+    
+    if not os.path.exists(base_path):
+        print(f"경고: 기대 본문 폴더를 찾을 수 없습니다: {base_path}")
+        return expected_bodies
+    
+    # 각 유저 폴더 탐색
+    for user_folder in os.listdir(base_path):
+        user_path = os.path.join(base_path, user_folder)
+        if not os.path.isdir(user_path):
+            continue
+        
+        # 각 뉴스 JSON 파일 읽기
+        for filename in os.listdir(user_path):
+            if filename.startswith('news_') and filename.endswith('.json'):
+                news_id = filename.replace('news_', '').replace('.json', '')
+                file_path = os.path.join(user_path, filename)
+                
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                        if 'generated_body' in data:
+                            expected_bodies[news_id] = data['generated_body']
+                except Exception as e:
+                    # 조용히 넘어감 (파일이 없거나 형식이 다를 수 있음)
+                    continue
+    
+    print(f"기대 본문 로드 완료: {len(expected_bodies)}개 ({dataset_type})")
+    return expected_bodies
+
+
 def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv', 
                          test_file='dataset/MIND/MIND_test_(1000).tsv',
-                         news_index=None, npratio=4):
+                         news_index=None, npratio=4,
+                         expected_bodies_train=None, expected_bodies_test=None,
+                         word_dict=None):
     """
     MIND 데이터셋 형식에 맞게 전처리
     train_file: user, clicked_news, candidate_news, clicked
     test_file: user, clicked_news, candidate_news (clicked 없음)
+    
+    expected_bodies_train/test: 후보 뉴스의 기대 본문 딕셔너리 {news_id: generated_body}
+    word_dict: 단어 사전 (기대 본문 토큰화에 필요)
     """
     userid_dict = {}
     
@@ -76,6 +162,10 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
     all_user_pos = []
     all_test_user_pos = []
     
+    # 후보 뉴스 ID 수집 (기대 본문 로드용)
+    candidate_news_ids_train = set()
+    candidate_news_ids_test = set()
+    
     # 학습 데이터 처리
     for line in train_data:
         parts = line.strip().split('\t')
@@ -102,6 +192,7 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         for i, cand_id in enumerate(candidate_news):
             if cand_id in news_index:
                 candidate_indices.append(news_index[cand_id])
+                candidate_news_ids_train.add(cand_id)  # 후보 뉴스 ID 수집
                 is_clicked = int(clicked[i]) if i < len(clicked) else 0
                 candidate_labels.append(is_clicked)
         
@@ -176,6 +267,7 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         for cand_id in candidate_news:
             if cand_id in news_index:
                 candidate_indices.append(news_index[cand_id])
+                candidate_news_ids_test.add(cand_id)  # 후보 뉴스 ID 수집
         
         if len(candidate_indices) < 2:
             continue
@@ -205,7 +297,8 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
     all_user_pos = np.array(all_user_pos, dtype='int32')
     all_test_user_pos = np.array(all_test_user_pos, dtype='int32')
     
-    return userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index
+    # 후보 뉴스 ID 반환 (기대 본문 처리용)
+    return userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test
 
 
 # In[ ]:
@@ -308,6 +401,43 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv'):
     return word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index
 
 
+def create_candidate_news_body(news_index, news_body, candidate_news_ids, expected_bodies, word_dict):
+    """
+    후보 뉴스의 본문을 기대 본문으로 대체한 배열 생성
+    news_body: 원본 본문 배열
+    candidate_news_ids: 후보 뉴스 ID 집합
+    expected_bodies: 기대 본문 딕셔너리 {news_id: generated_body}
+    word_dict: 단어 사전
+    """
+    # news_body를 복사
+    candidate_news_body = news_body.copy()
+    
+    # 후보 뉴스의 본문을 기대 본문으로 대체
+    replaced_count = 0
+    for news_id in candidate_news_ids:
+        if news_id in news_index and news_id in expected_bodies:
+            news_idx = news_index[news_id]
+            if news_idx < len(candidate_news_body):
+                # 기대 본문 토큰화
+                expected_body = expected_bodies[news_id]
+                body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
+                
+                # 단어 인덱스로 변환
+                word_id = []
+                for word in body_tokens:
+                    if word in word_dict:
+                        word_id.append(word_dict[word][0])
+                word_id = word_id[:300]
+                word_id = word_id + [0] * (300 - len(word_id))
+                
+                # 본문 대체
+                candidate_news_body[news_idx] = word_id
+                replaced_count += 1
+    
+    print(f"후보 뉴스 본문 대체 완료: {replaced_count}/{len(candidate_news_ids)}개")
+    return candidate_news_body
+
+
 # In[ ]:
 
 
@@ -378,8 +508,39 @@ def get_embedding(word_dict, glove_path='glove.840B.300d.txt'):
 # 먼저 뉴스 데이터를 전처리해야 news_index를 얻을 수 있음
 word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file()
 
-# 뉴스 인덱스를 사용하여 유저 데이터 전처리
-userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index = preprocess_user_file(news_index=news_index)
+# 기대 본문 사용 여부 설정 (True: 기대 본문 사용, False: 원본 본문 사용)
+USE_EXPECTED_BODY = True  # 이 값을 False로 변경하면 원본 본문 사용
+
+if USE_EXPECTED_BODY:
+    # 기대 본문 로드
+    print("\n기대 본문 로드 중...")
+    expected_bodies_train = load_expected_bodies(output_dir='body_generation/output', dataset_type='train')
+    expected_bodies_test = load_expected_bodies(output_dir='body_generation/output', dataset_type='test')
+    
+    # 뉴스 인덱스를 사용하여 유저 데이터 전처리
+    userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test = preprocess_user_file(
+        news_index=news_index,
+        expected_bodies_train=expected_bodies_train,
+        expected_bodies_test=expected_bodies_test,
+        word_dict=word_dict
+    )
+    
+    # 후보 뉴스 본문을 기대 본문으로 대체
+    print("\n후보 뉴스 본문을 기대 본문으로 대체 중...")
+    candidate_news_body_train = create_candidate_news_body(news_index, news_body, candidate_news_ids_train, expected_bodies_train, word_dict)
+    candidate_news_body_test = create_candidate_news_body(news_index, news_body, candidate_news_ids_test, expected_bodies_test, word_dict)
+else:
+    # 원본 본문 사용
+    print("\n원본 본문 사용 모드")
+    userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test = preprocess_user_file(
+        news_index=news_index,
+        expected_bodies_train=None,
+        expected_bodies_test=None,
+        word_dict=word_dict
+    )
+    # 원본 본문 사용 (None 전달 시 자동으로 원본 사용)
+    candidate_news_body_train = None
+    candidate_news_body_test = None
 
 
 # In[ ]:
@@ -453,7 +614,13 @@ from tensorflow.keras.optimizers import Adam
 # In[ ]:
 
 
-def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size):
+def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, candidate_news_body=None):
+    """
+    candidate_news_body: 후보 뉴스의 기대 본문 배열 (None이면 원본 news_body 사용)
+    """
+    if candidate_news_body is None:
+        candidate_news_body = news_body
+    
     inputid = np.arange(len(all_label))
     np.random.shuffle(inputid)
     y=all_label
@@ -464,7 +631,8 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size):
 
             candidate = news_words[all_train_pn[i]]
             candidate_split=[candidate[:,k,:] for k in range(candidate.shape[1])]
-            candidate_body = news_body[all_train_pn[i]]
+            # 후보 뉴스는 기대 본문 사용
+            candidate_body = candidate_news_body[all_train_pn[i]]
             candidate_body_split=[candidate_body[:,k,:] for k in range(candidate_body.shape[1])]
             candidate_vertical = news_v[all_train_pn[i]]
             candidate_vertical_split=[candidate_vertical[:,k,:] for k in range(candidate_vertical.shape[1])]
@@ -492,7 +660,13 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size):
 # In[ ]:
 
 
-def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size):
+def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, candidate_news_body=None):
+    """
+    candidate_news_body: 후보 뉴스의 기대 본문 배열 (None이면 원본 news_body 사용)
+    """
+    if candidate_news_body is None:
+        candidate_news_body = news_body
+    
     inputid = np.arange(len(all_label))
     y = all_label
     batches = [inputid[range(batch_size*i, min(len(y), batch_size*(i+1)))] for i in range(len(y)//batch_size+1)]
@@ -500,7 +674,8 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size):
     while (True):
         for i in batches:
             candidate = news_words[all_test_pn[i]]
-            candidate_body = news_body[all_test_pn[i]]
+            # 후보 뉴스는 기대 본문 사용
+            candidate_body = candidate_news_body[all_test_pn[i]]
             candidate_vertical = news_v[all_test_pn[i]]
             candidate_subvertical = news_sv[all_test_pn[i]]
 
@@ -631,9 +806,9 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
 model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
 
 for ep in range(10):
-    traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30)
+    traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30, candidate_news_body=candidate_news_body_train)
     model.fit(traingen, epochs=1, steps_per_epoch=len(all_train_id)//30)
-    testgen=generate_batch_data_test(all_test_pn,all_test_label,all_test_id, 30)
+    testgen=generate_batch_data_test(all_test_pn,all_test_label,all_test_id, 30, candidate_news_body=candidate_news_body_test)
     click_score = model_test.predict(testgen, steps=len(all_test_id)//30, verbose=1)
     from sklearn.metrics import roc_auc_score
     all_auc=[]
