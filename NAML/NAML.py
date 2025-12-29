@@ -509,8 +509,7 @@ def get_embedding(word_dict, glove_path='glove.840B.300d.txt'):
 word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file()
 
 # 기대 본문 사용 여부 설정 (True: 기대 본문 사용, False: 원본 본문 사용)
-USE_EXPECTED_BODY = False
-
+USE_EXPECTED_BODY = True
 if USE_EXPECTED_BODY:
     # 기대 본문 로드
     print("\n기대 본문 로드 중...")
@@ -716,13 +715,13 @@ body_input = Input(shape=(MAX_BODY_LENGTH,), dtype='int32')
 embedding_layer = Embedding(len(word_dict), 300, weights=[embedding_mat],trainable=True)
 
 embedded_sequences_title = embedding_layer(title_input)
-embedded_sequences_title=Dropout(0.2)(embedded_sequences_title)
+embedded_sequences_title=Dropout(0.3)(embedded_sequences_title)  # 0.2 -> 0.3으로 증가
 
 embedded_sequences_body = embedding_layer(body_input)
-embedded_sequences_body=Dropout(0.2)(embedded_sequences_body)
+embedded_sequences_body=Dropout(0.3)(embedded_sequences_body)  # 0.2 -> 0.3으로 증가
 
 title_cnn = Conv1D(filters=400, kernel_size=3, padding='same', activation='relu', strides=1)(embedded_sequences_title)
-title_cnn=Dropout(0.2)(title_cnn)
+title_cnn=Dropout(0.3)(title_cnn)  # 0.2 -> 0.3으로 증가
 
 attention = Dense(200,activation='tanh')(title_cnn)
 attention = Flatten()(Dense(1)(attention))
@@ -730,7 +729,7 @@ attention_weight = Activation('softmax')(attention)
 title_rep=keras.layers.Dot((1, 1))([title_cnn, attention_weight])
 
 body_cnn = Conv1D(filters=400, kernel_size=3, padding='same', activation='relu', strides=1)(embedded_sequences_body)
-body_cnn=Dropout(0.2)(body_cnn)
+body_cnn=Dropout(0.3)(body_cnn)  # 0.2 -> 0.3으로 증가
 
 attention_body = Dense(200,activation='tanh')(body_cnn)
 attention_body = Flatten()(Dense(1)(attention_body))
@@ -804,9 +803,16 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
                          +[candidate_one_v]+browsed_v_input+[candidate_one_sv]+browsed_sv_input, score)
 
 
-model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
+# Learning rate를 약간 낮춰서 더 안정적인 학습
+model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])  # 0.001 -> 0.0005
 
-for ep in range(10):
+# Early stopping 설정
+best_auc = 0.0
+patience = 3  # 3 에포크 동안 개선이 없으면 중단
+patience_counter = 0
+best_epoch = 0
+
+for ep in range(30):  # 최대 에폭을 30으로 증가
     traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30, candidate_news_body=candidate_news_body_train)
     model.fit(traingen, epochs=1, steps_per_epoch=len(all_train_id)//30)
     testgen=generate_batch_data_test(all_test_pn,all_test_label,all_test_id, 30, candidate_news_body=candidate_news_body_test)
@@ -815,14 +821,12 @@ for ep in range(10):
     all_auc=[]
     all_mrr=[]
     all_ndcg=[]
-    all_ndcg2=[]
     all_hit1=[]
     for m in all_test_index:
         if np.sum(all_test_label[m[0]:m[1]])!=0 and m[1]<len(click_score):
             all_auc.append(roc_auc_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0]))
             all_mrr.append(mrr_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0]))
             all_ndcg.append(ndcg_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0],k=5))
-            all_ndcg2.append(ndcg_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0],k=10))
             all_hit1.append(hit_at_k(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0],k=1))
     
     # 결과 저장
@@ -830,41 +834,59 @@ for ep in range(10):
         'AUC': np.mean(all_auc),
         'MRR': np.mean(all_mrr),
         'NDCG@5': np.mean(all_ndcg),
-        'NDCG@10': np.mean(all_ndcg2),
         'Hit@1': np.mean(all_hit1)
     }
-    results.append([epoch_results['AUC'], epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['NDCG@10'], epoch_results['Hit@1']])
+    results.append([epoch_results['AUC'], epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['Hit@1']])
     
     # 보기 좋게 출력
     print(f"\n{'='*60}")
-    print(f"Epoch {ep+1}/10 - Test Results")
+    print(f"Epoch {ep+1}/30 - Test Results")
     print(f"{'='*60}")
     print(f"AUC      : {epoch_results['AUC']:.6f}")
     print(f"MRR      : {epoch_results['MRR']:.6f}")
     print(f"NDCG@5   : {epoch_results['NDCG@5']:.6f}")
-    print(f"NDCG@10  : {epoch_results['NDCG@10']:.6f}")
     print(f"Hit@1    : {epoch_results['Hit@1']:.6f}")
+    
+    # Early stopping 체크
+    current_auc = epoch_results['AUC']
+    if current_auc > best_auc:
+        best_auc = current_auc
+        best_epoch = ep + 1
+        patience_counter = 0
+        print(f"✓ Best AUC 업데이트: {best_auc:.6f} (Epoch {best_epoch})")
+    else:
+        patience_counter += 1
+        print(f"⚠ 개선 없음 ({patience_counter}/{patience})")
+    
     print(f"{'='*60}\n")
+    
+    # Early stopping
+    if patience_counter >= patience:
+        print(f"\n{'='*60}")
+        print(f"Early Stopping: {patience} 에포크 동안 개선이 없어 학습을 중단합니다.")
+        print(f"Best AUC: {best_auc:.6f} (Epoch {best_epoch})")
+        print(f"{'='*60}\n")
+        break
 
 # 전체 결과 요약
 print(f"\n{'='*60}")
 print("Final Results Summary (All Epochs)")
 print(f"{'='*60}")
-print(f"{'Epoch':<10} {'AUC':<12} {'MRR':<12} {'NDCG@5':<12} {'NDCG@10':<12} {'Hit@1':<12}")
-print(f"{'-'*72}")
+print(f"{'Epoch':<10} {'AUC':<12} {'MRR':<12} {'NDCG@5':<12} {'Hit@1':<12}")
+print(f"{'-'*60}")
 for i, result in enumerate(results, 1):
-    auc, mrr, ndcg5, ndcg10, hit1 = result
-    print(f"{i:<10} {auc:<12.6f} {mrr:<12.6f} {ndcg5:<12.6f} {ndcg10:<12.6f} {hit1:<12.6f}")
+    auc, mrr, ndcg5, hit1 = result
+    print(f"{i:<10} {auc:<12.6f} {mrr:<12.6f} {ndcg5:<12.6f} {hit1:<12.6f}")
 print(f"{'='*72}")
 
 # 최고 성능 찾기
 best_auc_idx = np.argmax([r[0] for r in results])
 best_auc_epoch = best_auc_idx + 1
-best_hit1_idx = np.argmax([r[4] for r in results])
+best_hit1_idx = np.argmax([r[3] for r in results])  # 인덱스 변경: 4 -> 3 (NDCG@10 제거)
 best_hit1_epoch = best_hit1_idx + 1
 print(f"\nBest AUC  : Epoch {best_auc_epoch} - {results[best_auc_idx][0]:.6f}")
-print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][4]:.6f}")
-print(f"{'='*72}\n")
+print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][3]:.6f}")  # 인덱스 변경: 4 -> 3
+print(f"{'='*60}\n")
 # In[ ]:
 
 
