@@ -509,7 +509,7 @@ def get_embedding(word_dict, glove_path='glove.840B.300d.txt'):
 word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file()
 
 # 기대 본문 사용 여부 설정 (True: 기대 본문 사용, False: 원본 본문 사용)
-USE_EXPECTED_BODY = True  # 이 값을 False로 변경하면 원본 본문 사용
+USE_EXPECTED_BODY = False
 
 if USE_EXPECTED_BODY:
     # 기대 본문 로드
@@ -557,7 +557,8 @@ print(f"서브카테고리 개수: {len(subcategory)}")
 
 
 # GloVe 파일 경로를 지정하거나 없으면 랜덤 초기화 사용
-# embedding_mat = get_embedding(word_dict, glove_path='glove.840B.300d.txt')
+# NAML 폴더 안에 GloVe 파일이 있으면 아래 주석 해제
+# embedding_mat = get_embedding(word_dict, glove_path='NAML/glove.840B.300d.txt')
 embedding_mat = get_embedding(word_dict)  # 랜덤 초기화 사용
 
 
