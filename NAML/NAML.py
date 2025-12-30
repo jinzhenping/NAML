@@ -17,6 +17,10 @@ import pickle
 from numpy.linalg import cholesky
 # from keras.utils.np_utils import *  # 최신 Keras에서는 제거됨, 사용하지 않으므로 주석 처리
 
+# 재현성을 위한 seed 고정 (전역 설정)
+SEED = 42
+random.seed(SEED)
+np.random.seed(SEED)
 
 # In[ ]:
 
@@ -601,14 +605,32 @@ def hit_at_k(y_true, y_score, k=1):
 
 import os
 
+# 재현성을 위한 seed 고정
+SEED = 42
+
+# Python random seed
+random.seed(SEED)
+
+# NumPy random seed
+np.random.seed(SEED)
+
+# Python hash seed (선택적, 딕셔너리 순서 고정)
+os.environ['PYTHONHASHSEED'] = str(SEED)
+
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 import keras
 import tensorflow as tf
+
+# TensorFlow/Keras random seed
+tf.random.set_seed(SEED)
+
 from keras.layers import *
 from keras.models import Model
 from keras import backend as K
 # TensorFlow 2.8.0에서는 tensorflow.keras.optimizers 사용
 from tensorflow.keras.optimizers import Adam
+
+print(f"Seed 고정 완료: {SEED}")
 
 
 # In[ ]:
@@ -806,12 +828,6 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
 # Learning rate를 약간 낮춰서 더 안정적인 학습
 model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])  # 0.001 -> 0.0005
 
-# Early stopping 설정
-best_auc = 0.0
-patience = 3  # 3 에포크 동안 개선이 없으면 중단
-patience_counter = 0
-best_epoch = 0
-
 for ep in range(30):  # 최대 에폭을 30으로 증가
     traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30, candidate_news_body=candidate_news_body_train)
     model.fit(traingen, epochs=1, steps_per_epoch=len(all_train_id)//30)
@@ -846,27 +862,7 @@ for ep in range(30):  # 최대 에폭을 30으로 증가
     print(f"MRR      : {epoch_results['MRR']:.6f}")
     print(f"NDCG@5   : {epoch_results['NDCG@5']:.6f}")
     print(f"Hit@1    : {epoch_results['Hit@1']:.6f}")
-    
-    # Early stopping 체크
-    current_auc = epoch_results['AUC']
-    if current_auc > best_auc:
-        best_auc = current_auc
-        best_epoch = ep + 1
-        patience_counter = 0
-        print(f"✓ Best AUC 업데이트: {best_auc:.6f} (Epoch {best_epoch})")
-    else:
-        patience_counter += 1
-        print(f"⚠ 개선 없음 ({patience_counter}/{patience})")
-    
     print(f"{'='*60}\n")
-    
-    # Early stopping
-    if patience_counter >= patience:
-        print(f"\n{'='*60}")
-        print(f"Early Stopping: {patience} 에포크 동안 개선이 없어 학습을 중단합니다.")
-        print(f"Best AUC: {best_auc:.6f} (Epoch {best_epoch})")
-        print(f"{'='*60}\n")
-        break
 
 # 전체 결과 요약
 print(f"\n{'='*60}")
