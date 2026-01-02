@@ -22,6 +22,13 @@ SEED = 42
 random.seed(SEED)
 np.random.seed(SEED)
 
+# 모델 하이퍼파라미터 설정
+MAX_HISTORY_CLICKS = 50  # 클릭 히스토리 개수 (한 곳에서 설정)
+MAX_SENT_LENGTH = 30     # 제목 최대 단어 수
+MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
+npratio = 4              # negative sampling 비율
+USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사용
+
 # In[ ]:
 
 
@@ -224,14 +231,14 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         random.shuffle(combined)
         shuffle_indices, shuffle_labels = zip(*combined)
         
-        # 유저 히스토리 (최근 50개 사용)
+        # 유저 히스토리 (최근 MAX_HISTORY_CLICKS개 사용)
         # 후보 뉴스를 제외한 최근 클릭 기록 사용
         candidate_set = set([idx for idx in candidate_indices if idx != 0])
         filtered_history = [idx for idx in clicked_news_ids if idx not in candidate_set]
-        # 최근 50개 선택 (순서 유지)
-        recent_history = filtered_history[-50:] if len(filtered_history) >= 50 else filtered_history
+        # 최근 MAX_HISTORY_CLICKS개 선택 (순서 유지)
+        recent_history = filtered_history[-MAX_HISTORY_CLICKS:] if len(filtered_history) >= MAX_HISTORY_CLICKS else filtered_history
         allpos = [int(p) for p in recent_history]
-        allpos += [0] * (50 - len(allpos))
+        allpos += [0] * (MAX_HISTORY_CLICKS - len(allpos))
         
         all_train_pn.append(list(shuffle_indices))
         all_label.append(list(shuffle_labels))
@@ -260,11 +267,11 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         # 세션 인덱스 시작
         sess_index = [len(all_test_pn)]
         
-        # 유저 히스토리 (최근 50개 사용)
-        # 최근 50개 선택 (순서 유지)
-        recent_history = clicked_news_ids[-50:] if len(clicked_news_ids) >= 50 else clicked_news_ids
+        # 유저 히스토리 (최근 MAX_HISTORY_CLICKS개 사용)
+        # 최근 MAX_HISTORY_CLICKS개 선택 (순서 유지)
+        recent_history = clicked_news_ids[-MAX_HISTORY_CLICKS:] if len(clicked_news_ids) >= MAX_HISTORY_CLICKS else clicked_news_ids
         allpos = [int(p) for p in recent_history]
-        allpos += [0] * (50 - len(allpos))
+        allpos += [0] * (MAX_HISTORY_CLICKS - len(allpos))
         
         # 후보 뉴스들을 news_index로 변환
         candidate_indices = []
@@ -512,15 +519,14 @@ def get_embedding(word_dict, glove_path='glove.840B.300d.txt'):
 # 먼저 뉴스 데이터를 전처리해야 news_index를 얻을 수 있음
 word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file()
 
-# 기대 본문 사용 여부 설정 (True: 기대 본문 사용, False: 원본 본문 사용)
-USE_EXPECTED_BODY = True
+# 기대 본문 사용 여부는 상단에서 설정 (USE_EXPECTED_BODY)
 if USE_EXPECTED_BODY:
     # 기대 본문 로드
     print("\n기대 본문 로드 중...")
     expected_bodies_train = load_expected_bodies(output_dir='body_generation/output', dataset_type='train')
     expected_bodies_test = load_expected_bodies(output_dir='body_generation/output', dataset_type='test')
-    
-    # 뉴스 인덱스를 사용하여 유저 데이터 전처리
+
+# 뉴스 인덱스를 사용하여 유저 데이터 전처리
     userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test = preprocess_user_file(
         news_index=news_index,
         expected_bodies_train=expected_bodies_train,
@@ -724,13 +730,8 @@ import random
 results=[]
 keras.backend.clear_session()
 
-MAX_SENT_LENGTH=30
-MAX_SENTS=50  # 히스토리 클릭 개수: 최대 50개
-npratio=4
-
-
-
-MAX_BODY_LENGTH=300
+# 모델 파라미터 (상단에서 정의한 전역 변수 사용)
+MAX_SENTS = MAX_HISTORY_CLICKS  # 히스토리 클릭 개수
 title_input = Input(shape=(MAX_SENT_LENGTH,), dtype='int32')
 
 body_input = Input(shape=(MAX_BODY_LENGTH,), dtype='int32')
