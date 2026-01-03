@@ -420,32 +420,56 @@ def create_candidate_news_body(news_index, news_body, candidate_news_ids, expect
     expected_bodies: 기대 본문 딕셔너리 {news_id: generated_body}
     word_dict: 단어 사전
     """
-    # news_body를 복사
-    candidate_news_body = news_body.copy()
+    # news_body를 깊은 복사 (NumPy 배열이므로 .copy()로 충분하지만 명시적으로)
+    import numpy as np
+    candidate_news_body = np.array(news_body, copy=True)
     
     # 후보 뉴스의 본문을 기대 본문으로 대체
     replaced_count = 0
+    not_in_index = 0
+    not_in_expected = 0
+    empty_body = 0
+    
     for news_id in candidate_news_ids:
-        if news_id in news_index and news_id in expected_bodies:
-            news_idx = news_index[news_id]
-            if news_idx < len(candidate_news_body):
-                # 기대 본문 토큰화
-                expected_body = expected_bodies[news_id]
-                body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
-                
-                # 단어 인덱스로 변환
-                word_id = []
-                for word in body_tokens:
-                    if word in word_dict:
-                        word_id.append(word_dict[word][0])
-                word_id = word_id[:300]
-                word_id = word_id + [0] * (300 - len(word_id))
-                
-                # 본문 대체
-                candidate_news_body[news_idx] = word_id
-                replaced_count += 1
+        if news_id not in news_index:
+            not_in_index += 1
+            continue
+        if news_id not in expected_bodies:
+            not_in_expected += 1
+            continue
+            
+        news_idx = news_index[news_id]
+        if news_idx >= len(candidate_news_body):
+            continue
+            
+        # 기대 본문 토큰화
+        expected_body = expected_bodies[news_id]
+        if not expected_body or len(expected_body.strip()) == 0:
+            empty_body += 1
+            continue
+            
+        body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
+        
+        # 단어 인덱스로 변환
+        word_id = []
+        for word in body_tokens:
+            if word in word_dict:
+                word_id.append(word_dict[word][0])
+        word_id = word_id[:300]
+        word_id = word_id + [0] * (300 - len(word_id))
+        
+        # 본문 대체 (NumPy 배열이므로 직접 할당)
+        candidate_news_body[news_idx] = np.array(word_id, dtype='int32')
+        replaced_count += 1
     
     print(f"후보 뉴스 본문 대체 완료: {replaced_count}/{len(candidate_news_ids)}개")
+    if not_in_index > 0:
+        print(f"  - news_index에 없음: {not_in_index}개")
+    if not_in_expected > 0:
+        print(f"  - 기대 본문에 없음: {not_in_expected}개")
+    if empty_body > 0:
+        print(f"  - 빈 본문: {empty_body}개")
+    
     return candidate_news_body
 
 
@@ -525,6 +549,8 @@ if USE_EXPECTED_BODY:
     print("\n기대 본문 로드 중...")
     expected_bodies_train = load_expected_bodies(output_dir='body_generation/output', dataset_type='train')
     expected_bodies_test = load_expected_bodies(output_dir='body_generation/output', dataset_type='test')
+    
+    print(f"로드된 기대 본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
 
 # 뉴스 인덱스를 사용하여 유저 데이터 전처리
     userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test = preprocess_user_file(
@@ -534,9 +560,13 @@ if USE_EXPECTED_BODY:
         word_dict=word_dict
     )
     
+    print(f"수집된 후보 뉴스 ID: train={len(candidate_news_ids_train)}개, test={len(candidate_news_ids_test)}개")
+    
     # 후보 뉴스 본문을 기대 본문으로 대체
     print("\n후보 뉴스 본문을 기대 본문으로 대체 중...")
+    print("학습 데이터:")
     candidate_news_body_train = create_candidate_news_body(news_index, news_body, candidate_news_ids_train, expected_bodies_train, word_dict)
+    print("테스트 데이터:")
     candidate_news_body_test = create_candidate_news_body(news_index, news_body, candidate_news_ids_test, expected_bodies_test, word_dict)
 else:
     # 원본 본문 사용
