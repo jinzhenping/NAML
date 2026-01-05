@@ -1065,7 +1065,7 @@ for ep in range(100):  # 최대 에폭을 100으로 설정
     
     # 보기 좋게 출력
     print(f"\n{'='*60}")
-    print(f"Epoch {ep+1}/30 - Test Results")
+    print(f"Epoch {ep+1}/100 - Test Results")
     print(f"{'='*60}")
     print(f"AUC      : {epoch_results['AUC']:.6f}")
     print(f"MRR      : {epoch_results['MRR']:.6f}")
