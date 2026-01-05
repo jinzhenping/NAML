@@ -754,8 +754,9 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                 browsed_news_subvertical_split = [np.expand_dims(browsed_news_subvertical[k], axis=0) for k in range(browsed_news_subvertical.shape[0])]
                 
                 label = all_label[idx]
-                # label을 numpy array로 변환 (categorical_crossentropy는 one-hot 형식 필요)
-                label = np.array(label, dtype='float32')
+                # label을 numpy array로 변환하고 배치 차원 추가 (categorical_crossentropy는 one-hot 형식 필요)
+                label = np.array(label, dtype='float32')  # shape: (5,)
+                label = np.expand_dims(label, axis=0)  # shape: (1, 5)
 
                 yield (candidate_split+browsed_news_split+candidate_body_split+browsed_news_body_split
                        +candidate_vertical_split+browsed_news_vertical_split +candidate_subvertical_split+browsed_news_subvertical_split, label)
