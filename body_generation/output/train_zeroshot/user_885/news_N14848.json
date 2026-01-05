@@ -1,0 +1,21 @@
+{
+  "user_id": 885,
+  "candidate_news_id": "N14848",
+  "candidate_title": "Mural of activist Greta Thunberg going up in San Francisco",
+  "user_history_count": 10,
+  "user_history": [
+    "Surfing executive sentenced to prison in college admissions scam",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Prince Charles Teared Up When Prince William Talked About Succeeding Him",
+    "Man who advocated caning for adultery gets caned for adultery",
+    "President Donald Trump gets mixed reaction at UFC 244 in historic milestone for MMA",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "Debunking the week's tabloid stories: Nov. 1, 2019",
+    "Take action: Join MSN, LinkedIn and Team Rubicon in helping veterans become thriving civilians",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Why McDonald's had no choice but to fire CEO Steve Easterbrook for his relationship with an employee"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Surfing executive sentenced to prison in college admissions scam\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Prince Charles Teared Up When Prince William Talked About Succeeding Him\"\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"President Donald Trump gets mixed reaction at UFC 244 in historic milestone for MMA\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"Debunking the week's tabloid stories: Nov. 1, 2019\"\n\"Take action: Join MSN, LinkedIn and Team Rubicon in helping veterans become thriving civilians\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Why McDonald's had no choice but to fire CEO Steve Easterbrook for his relationship with an employee\"\n\n[Candidate News Title]\n\"Mural of activist Greta Thunberg going up in San Francisco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the mural of activist Greta Thunberg going up in San Francisco is likely to discuss the significance of the mural as a symbol of climate activism and its impact on public awareness. It may provide details about the artist, the location of the mural, and the community's response to its installation. Additionally, the piece could explore the broader context of Thunberg's activism and how visual art contributes to social movements. Overall, readers can expect a factual overview that highlights the intersection of art and activism while considering the mural's potential to inspire dialogue around environmental issues.",
+  "model": "gpt-4o-mini"
+}

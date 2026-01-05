@@ -1,0 +1,21 @@
+{
+  "user_id": 397,
+  "candidate_news_id": "N18258",
+  "candidate_title": "Russia lands forces at former U.S. air base in northern Syria",
+  "user_history_count": 10,
+  "user_history": [
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "The Trendiest Hair Colors for Winter, From Mulled Wine to Greige Blonde",
+    "Visa, Mastercard draw FTC inquiry over debit card transactions",
+    "Emilia Clarke Stunned in a Cut-Out Dress at the 'Last Christmas' Premiere",
+    "Oreo just released a creme-filled egg and it looks incredible",
+    "I ordered clothes from those cheap online stores, and I'm not sold",
+    "Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary",
+    "Four words from dermatologists that'll change your life: Stop showering every day",
+    "Miami symphony oboe player dies after falling down stairs in concert hall minutes before performance",
+    "Hugh Jackman Congratulates John Legend on Sexiest Man Alive While Poking Fun at Ryan Reynolds"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"The Trendiest Hair Colors for Winter, From Mulled Wine to Greige Blonde\"\n\"Visa, Mastercard draw FTC inquiry over debit card transactions\"\n\"Emilia Clarke Stunned in a Cut-Out Dress at the 'Last Christmas' Premiere\"\n\"Oreo just released a creme-filled egg and it looks incredible\"\n\"I ordered clothes from those cheap online stores, and I'm not sold\"\n\"Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary\"\n\"Four words from dermatologists that'll change your life: Stop showering every day\"\n\"Miami symphony oboe player dies after falling down stairs in concert hall minutes before performance\"\n\"Hugh Jackman Congratulates John Legend on Sexiest Man Alive While Poking Fun at Ryan Reynolds\"\n\n[Candidate News Title]\n\"Russia lands forces at former U.S. air base in northern Syria\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses Russia's recent military actions involving the deployment of forces to a former U.S. air base in northern Syria. Readers may expect an overview of the geopolitical implications of this move, including how it affects U.S.-Russia relations and the broader situation in the region. The article could delve into the historical context of the air base and its significance, as well as potential reactions from international stakeholders. Additionally, there may be insights into how this development aligns with Russia's strategic objectives in Syria and the Middle East.",
+  "model": "gpt-4o-mini"
+}

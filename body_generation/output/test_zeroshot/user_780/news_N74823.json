@@ -1,0 +1,21 @@
+{
+  "user_id": 780,
+  "candidate_news_id": "N74823",
+  "candidate_title": "Meet Narwhal the Magical Unicorn Puppy",
+  "user_history_count": 10,
+  "user_history": [
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Judge strikes down new Trump rule on religious objections",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos",
+    "5 Classic Appetizers That Make Holiday Hosting a Breeze",
+    "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out",
+    "My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.",
+    "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+    "Celebrity Engagements of 2019",
+    "Signs of Dementia: 8 Tips For Talking to Your Older Parents",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Judge strikes down new Trump rule on religious objections\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\"5 Classic Appetizers That Make Holiday Hosting a Breeze\"\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\"My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.\"\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\"Celebrity Engagements of 2019\"\n\"Signs of Dementia: 8 Tips For Talking to Your Older Parents\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\n[Candidate News Title]\n\"Meet Narwhal the Magical Unicorn Puppy\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"Meet Narwhal the Magical Unicorn Puppy,\" you can expect to read about a unique and charming dog that has gained attention for its distinctive appearance. The article may provide insights into Narwhal's background, including how he came to be known as a \"unicorn puppy\" due to his unusual physical traits. Additionally, it could explore his personality, adoption story, and the impact he has had on social media platforms. The piece is likely to highlight the growing trend of unusual pets and their appeal to animal lovers.",
+  "model": "gpt-4o-mini"
+}

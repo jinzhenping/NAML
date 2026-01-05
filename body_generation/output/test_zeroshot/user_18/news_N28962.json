@@ -1,0 +1,21 @@
+{
+  "user_id": 18,
+  "candidate_news_id": "N28962",
+  "candidate_title": "Epic 'Jeopardy!' rematch gets off to a hot start",
+  "user_history_count": 10,
+  "user_history": [
+    "Donald Trump Jr walks out of Triggered book launch after heckling   from supporters",
+    "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+    "These Are America's Favorite Liquor Brands",
+    "Why is American internet access so much more expensive than the rest of the world?",
+    "Why the College Football Playoff selection committee can't make a case for Alabama",
+    "23 Worst Things You Can Say to a New Parent",
+    "This is Chick-fil-A's most-ordered menu item",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win",
+    "How To Make Texas Chicken-Fried Steak & Creamed Gravy By Rachael"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Donald Trump Jr walks out of Triggered book launch after heckling   from supporters\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"These Are America's Favorite Liquor Brands\"\n\"Why is American internet access so much more expensive than the rest of the world?\"\n\"Why the College Football Playoff selection committee can't make a case for Alabama\"\n\"23 Worst Things You Can Say to a New Parent\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\"How To Make Texas Chicken-Fried Steak & Creamed Gravy By Rachael\"\n\n[Candidate News Title]\n\"Epic 'Jeopardy!' rematch gets off to a hot start\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about the \"Epic 'Jeopardy!' rematch,\" the user is likely expecting a detailed overview of the recent showdown between notable contestants. It may cover the format of the rematch, any significant strategies employed by the players, and highlights from the competition, including key questions and answers that stood out. The piece could also explore the context behind the rematch, such as previous encounters between the contestants or viewer reactions. This article is likely to appeal to fans of trivia and competitive games, providing insights into the dynamics of the iconic quiz show.",
+  "model": "gpt-4o-mini"
+}

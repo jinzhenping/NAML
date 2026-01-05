@@ -1,0 +1,21 @@
+{
+  "user_id": 732,
+  "candidate_news_id": "N96729",
+  "candidate_title": "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "Cold blast to leave much of US shivering",
+    "Next Ford F-150 Spied By Motor1.com Reader",
+    "Opinion: Mad at Clippers for sitting Kawhi Leonard? Get used to it",
+    "Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.",
+    "Load up on vintage trucks and SUVs crossing the block in Iowa",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "The secret and frustrating life of a Google contract worker",
+    "Miami-Dade Mayor Carlos Gimenez Vetoes Resolution That Would Have Put Brakes On Formula 1",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"Cold blast to leave much of US shivering\"\n\"Next Ford F-150 Spied By Motor1.com Reader\"\n\"Opinion: Mad at Clippers for sitting Kawhi Leonard? Get used to it\"\n\"Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.\"\n\"Load up on vintage trucks and SUVs crossing the block in Iowa\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"The secret and frustrating life of a Google contract worker\"\n\"Miami-Dade Mayor Carlos Gimenez Vetoes Resolution That Would Have Put Brakes On Formula 1\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\n[Candidate News Title]\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Atlanta college student Alexis Crawford is likely to provide a detailed account of the circumstances surrounding her tragic death, including information about the investigation and any relevant police findings. Readers may expect to learn about the events leading up to her death, the individuals involved, and the community's response to this incident. Additionally, the article could discuss broader themes of safety on college campuses and the implications for students and local law enforcement. Overall, it may aim to present a factual overview of the case while highlighting its significance in the context of student safety.",
+  "model": "gpt-4o-mini"
+}

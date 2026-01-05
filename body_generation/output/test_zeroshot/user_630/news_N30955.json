@@ -1,0 +1,21 @@
+{
+  "user_id": 630,
+  "candidate_news_id": "N30955",
+  "candidate_title": "Baker Mayfield quick to condemn teammate Myles Garrett for brawl, attack on Mason Rudolph",
+  "user_history_count": 10,
+  "user_history": [
+    "Every Must-See Photo of Stars Celebrating Halloween 2019",
+    "Celebrity Headshots from Before They Were Famous",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Kristen Stewart Just Made Leather Bras a Thing, and We're All For It",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "A guide to the 2019 People's Choice Awards nominees' significant others",
+    "A guide to the 2019 People's Choice Awards nominees' significant others",
+    "2019 People's Choice Awards: Instagrams & Twitpics",
+    "Look of the Day",
+    "See what your favorite stars look like without makeup"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"Celebrity Headshots from Before They Were Famous\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Kristen Stewart Just Made Leather Bras a Thing, and We're All For It\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\"2019 People's Choice Awards: Instagrams & Twitpics\"\n\"Look of the Day\"\n\"See what your favorite stars look like without makeup\"\n\n[Candidate News Title]\n\"Baker Mayfield quick to condemn teammate Myles Garrett for brawl, attack on Mason Rudolph\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a detailed account of Baker Mayfield's response to the recent altercation involving teammate Myles Garrett and Mason Rudolph. The piece may provide insights into Mayfield's perspective on the incident, emphasizing the importance of team dynamics and accountability in professional sports. Additionally, it could explore the implications of such conflicts on team morale and performance. Readers might expect to see quotes from Mayfield, as well as context surrounding the brawl, which may shed light on the broader impact of this event within the NFL.",
+  "model": "gpt-4o-mini"
+}

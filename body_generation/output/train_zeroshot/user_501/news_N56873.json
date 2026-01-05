@@ -1,0 +1,21 @@
+{
+  "user_id": 501,
+  "candidate_news_id": "N56873",
+  "candidate_title": "Can you answer these real Jeopardy questions about TV shows?",
+  "user_history_count": 10,
+  "user_history": [
+    "15 of Princess Diana's best winter fashion looks",
+    "Already 6 Months! Prince Harry, Duchess Meghan's Son Is Trying to Talk",
+    "Disabled Dog Surrendered to Shelter Takes First Steps to Finding a Home Thanks to Wheelchair",
+    "10-year-old boy shot in back of head, in critical condition in Philadelphia",
+    "Jessica Simpson's latest Birdie Mae post suggests she's done having kids, plus more news",
+    "Two arrested for stabbing death of teen in Woodbridge, Virginia",
+    "Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'",
+    "Accused killer's girlfriend reveals Colorado mom's last words",
+    "Mother Is Freed After 15 Years in Prison for Father's Abuse",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"15 of Princess Diana's best winter fashion looks\"\n\"Already 6 Months! Prince Harry, Duchess Meghan's Son Is Trying to Talk\"\n\"Disabled Dog Surrendered to Shelter Takes First Steps to Finding a Home Thanks to Wheelchair\"\n\"10-year-old boy shot in back of head, in critical condition in Philadelphia\"\n\"Jessica Simpson's latest Birdie Mae post suggests she's done having kids, plus more news\"\n\"Two arrested for stabbing death of teen in Woodbridge, Virginia\"\n\"Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'\"\n\"Accused killer's girlfriend reveals Colorado mom's last words\"\n\"Mother Is Freed After 15 Years in Prison for Father's Abuse\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\n[Candidate News Title]\n\"Can you answer these real Jeopardy questions about TV shows?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Can you answer these real Jeopardy questions about TV shows?\" you are likely expecting a set of trivia questions that are inspired by the popular television game show \"Jeopardy!\" The content may include a variety of questions that test knowledge on different TV shows, ranging from classic series to contemporary favorites. Additionally, the article could provide insights into how these questions are structured or highlight some memorable moments from the show related to television themes. Overall, it may aim to engage readers who enjoy quizzes and challenges related to their favorite TV programs.",
+  "model": "gpt-4o-mini"
+}

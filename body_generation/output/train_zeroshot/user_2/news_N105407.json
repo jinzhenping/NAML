@@ -1,0 +1,21 @@
+{
+  "user_id": 2,
+  "candidate_news_id": "N105407",
+  "candidate_title": "'One in a million' deer captured on camera in Michigan woods",
+  "user_history_count": 10,
+  "user_history": [
+    "30 Foods That Are Never Worth The Calories",
+    "Nashville's top 3 food stands to visit now",
+    "9 Vegetables You Shouldn't Eat Raw",
+    "The #1 Worst Menu Option at 76 Popular Restaurants",
+    "Duluth Trading Co. makes Tennessee debut with Franklin location",
+    "Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say",
+    "Mystery surrounds the last person missing from Camp Fire that left 85 dead in California",
+    "Nike hit with another damning op-ed: 'I was emotionally and physically abused'",
+    "Brazilian journalist assaults Glenn Greenwald on air",
+    "The 2019 NFL mid-season All-Pro team"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"30 Foods That Are Never Worth The Calories\"\n\"Nashville's top 3 food stands to visit now\"\n\"9 Vegetables You Shouldn't Eat Raw\"\n\"The #1 Worst Menu Option at 76 Popular Restaurants\"\n\"Duluth Trading Co. makes Tennessee debut with Franklin location\"\n\"Should You Try the Controversial Cabbage Soup Diet? See What Experts Have to Say\"\n\"Mystery surrounds the last person missing from Camp Fire that left 85 dead in California\"\n\"Nike hit with another damning op-ed: 'I was emotionally and physically abused'\"\n\"Brazilian journalist assaults Glenn Greenwald on air\"\n\"The 2019 NFL mid-season All-Pro team\"\n\n[Candidate News Title]\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to learn about a rare deer sighting in Michigan, highlighting the unique characteristics of the animal captured on camera. The piece may describe the deer’s distinct features and discuss the significance of such rare wildlife encounters in the region. Additionally, it could explore the ecological implications of spotting such an unusual animal, including its potential impact on local wildlife enthusiasts and conservation efforts. Overall, the article is likely to provide a factual and informative overview of this intriguing wildlife observation.",
+  "model": "gpt-4o-mini"
+}

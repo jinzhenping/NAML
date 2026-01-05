@@ -1,0 +1,21 @@
+{
+  "user_id": 488,
+  "candidate_news_id": "N56784",
+  "candidate_title": "Louisiana governor's race is the latest test of Trump's clout",
+  "user_history_count": 10,
+  "user_history": [
+    "14 of the world's most terrifying airport runways",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Airline passengers share photos of their worst in-flight meals",
+    "Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars",
+    "New details on why Meg Ryan, John Mellencamp split, plus more news",
+    "Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"14 of the world's most terrifying airport runways\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Airline passengers share photos of their worst in-flight meals\"\n\"Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars\"\n\"New details on why Meg Ryan, John Mellencamp split, plus more news\"\n\"Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\n[Candidate News Title]\n\"Louisiana governor's race is the latest test of Trump's clout\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on the Louisiana governor's race is likely to provide an overview of the key candidates and their positions, particularly in relation to former President Trump's influence on the election. It may discuss the political landscape in Louisiana, highlighting issues that are significant to voters, such as economic policies or social issues. The piece could also delve into how Trump's endorsement or criticism might sway public opinion and the implications for the Republican party's standing in the state. Overall, readers can expect a balanced analysis of the race's dynamics and potential outcomes.",
+  "model": "gpt-4o-mini"
+}

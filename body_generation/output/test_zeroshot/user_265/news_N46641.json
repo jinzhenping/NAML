@@ -1,0 +1,21 @@
+{
+  "user_id": 265,
+  "candidate_news_id": "N46641",
+  "candidate_title": "Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "The 50 cheapest places to buy land in America",
+    "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+    "'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores",
+    "Tom Brady says he is not expecting Rob Gronkowski to return",
+    "Four words from dermatologists that'll change your life: Stop showering every day",
+    "The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "Southwest's Spring Travel Sale Includes $39 One-way Tickets",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win",
+    "These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 50 cheapest places to buy land in America\"\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\"'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores\"\n\"Tom Brady says he is not expecting Rob Gronkowski to return\"\n\"Four words from dermatologists that'll change your life: Stop showering every day\"\n\"The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"Southwest's Spring Travel Sale Includes $39 One-way Tickets\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\"\n\n[Candidate News Title]\n\"Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the death of former North Carolina State and NBA player Anthony Grundy is likely to provide details surrounding the incident, including the circumstances of the stabbing and any official statements from law enforcement. Readers may expect to learn about Grundy's career highlights and contributions to basketball, as well as reactions from the sports community. Additionally, the article could explore the broader implications of violence in sports or the impact of such tragedies on players and fans alike.",
+  "model": "gpt-4o-mini"
+}

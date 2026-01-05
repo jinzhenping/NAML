@@ -1,0 +1,21 @@
+{
+  "user_id": 187,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 10,
+  "user_history": [
+    "TV reporter fired after climbing on cars live at auto show",
+    "Woman Spots Deadly Animal Hiding In Photo Of Her Kids",
+    "Frustrated Antonio Brown has active morning on Twitter",
+    "Matt Patricia thinks Lions have turned the page after Quandre Diggs trade",
+    "Trump's visit to Chicago creates stir before he even arrives",
+    "'I know where I can get to': Back in the NFL, Steelers QB Paxton Lynch hopes to revive career",
+    "Embattled Ukraine Ambassador Marie Yovanovich Was Advised to Tweet Praise of Donald Trump",
+    "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+    "Cook leads Vikings to 28-24 prime-time road win over Cowboys",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"TV reporter fired after climbing on cars live at auto show\"\n\"Woman Spots Deadly Animal Hiding In Photo Of Her Kids\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Matt Patricia thinks Lions have turned the page after Quandre Diggs trade\"\n\"Trump's visit to Chicago creates stir before he even arrives\"\n\"'I know where I can get to': Back in the NFL, Steelers QB Paxton Lynch hopes to revive career\"\n\"Embattled Ukraine Ambassador Marie Yovanovich Was Advised to Tweet Praise of Donald Trump\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Cook leads Vikings to 28-24 prime-time road win over Cowboys\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Opinion: Colin Kaepernick is about to get what he deserves: a chance,\" they may expect to read an analysis of Kaepernick's career trajectory and the recent developments that could lead to his potential return to the NFL. The piece is likely to explore the implications of his activism and the ongoing discussions around his role in professional football, particularly in light of current events. It may also touch on the sentiments of fans and analysts regarding his skills and readiness to re-enter the league, while speculating on how this opportunity might impact his legacy in sports.",
+  "model": "gpt-4o-mini"
+}

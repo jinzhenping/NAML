@@ -1,0 +1,21 @@
+{
+  "user_id": 738,
+  "candidate_news_id": "N93326",
+  "candidate_title": "Hyundai develops next-generation noise cancellation technology",
+  "user_history_count": 10,
+  "user_history": [
+    "Analysis: California is becoming unlivable",
+    "Opinions | The math for Warren's health-care plan adds up if you accept its ludicrous premise",
+    "Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019",
+    "Daniel Cameron wins Kentucky attorney general race in historic victory",
+    "GOP senator rips into Pelosi at Trump rally: 'It must suck to be that dumb'",
+    "Antonio Brown blasts NFL, seems to announce retirement",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Mystery surrounds the last person missing from Camp Fire that left 85 dead in California",
+    "Free Rodney Reed Petition Surpasses 2 Million Signatures to Stop Execution of Texas Death Row Inmate",
+    "Facebook, YouTube delete posts claiming to name Ukraine whistleblower"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Analysis: California is becoming unlivable\"\n\"Opinions | The math for Warren's health-care plan adds up if you accept its ludicrous premise\"\n\"Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019\"\n\"Daniel Cameron wins Kentucky attorney general race in historic victory\"\n\"GOP senator rips into Pelosi at Trump rally: 'It must suck to be that dumb'\"\n\"Antonio Brown blasts NFL, seems to announce retirement\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Mystery surrounds the last person missing from Camp Fire that left 85 dead in California\"\n\"Free Rodney Reed Petition Surpasses 2 Million Signatures to Stop Execution of Texas Death Row Inmate\"\n\"Facebook, YouTube delete posts claiming to name Ukraine whistleblower\"\n\n[Candidate News Title]\n\"Hyundai develops next-generation noise cancellation technology\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Hyundai's development of next-generation noise cancellation technology is likely to explore advancements in automotive sound management systems. Readers may expect a detailed overview of how this technology aims to enhance the driving experience by reducing external noise. The article could include insights into the engineering challenges faced during development and the potential applications of this technology in future vehicle models. Additionally, it may touch on industry implications and how such innovations align with trends toward increased comfort and luxury in automotive design.",
+  "model": "gpt-4o-mini"
+}

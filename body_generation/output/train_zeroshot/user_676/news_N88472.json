@@ -1,0 +1,18 @@
+{
+  "user_id": 676,
+  "candidate_news_id": "N88472",
+  "candidate_title": "Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'",
+  "user_history_count": 7,
+  "user_history": [
+    "CNN Poll: Biden's lead in Democratic primary hits widest margin since April",
+    "U.S. government's annual budget deficit largest since 2012",
+    "Ford Explorer vs. Hyundai Palisade vs. Kia Telluride: Finding the No-Compromise Crossover",
+    "How much Social Security you could get from a $75,000 salary",
+    "Warren's $52T 'Medicare-for-all' plan revealed: Campaign still claims no middle-class tax hikes needed",
+    "7 reasons not to be embarrassed about your debt",
+    "For 53 million Americans in low-wage jobs, a difficult road out"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"CNN Poll: Biden's lead in Democratic primary hits widest margin since April\"\n\"U.S. government's annual budget deficit largest since 2012\"\n\"Ford Explorer vs. Hyundai Palisade vs. Kia Telluride: Finding the No-Compromise Crossover\"\n\"How much Social Security you could get from a $75,000 salary\"\n\"Warren's $52T 'Medicare-for-all' plan revealed: Campaign still claims no middle-class tax hikes needed\"\n\"7 reasons not to be embarrassed about your debt\"\n\"For 53 million Americans in low-wage jobs, a difficult road out\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness',\" the user can expect to read about Vanderpump's personal motivations for departing from the reality show \"Real Housewives of Beverly Hills.\" It is likely that she will discuss her experiences on the show, particularly the conflicts and negativity she encountered, which contributed to her decision. Additionally, the article may explore how her priorities have shifted towards more positive aspects of her life and career.",
+  "model": "gpt-4o-mini"
+}

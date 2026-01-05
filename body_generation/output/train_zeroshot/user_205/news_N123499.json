@@ -1,0 +1,21 @@
+{
+  "user_id": 205,
+  "candidate_news_id": "N123499",
+  "candidate_title": "Chin Hair: 7 Embarrassing Red Flags No Woman Should Ever Ignore",
+  "user_history_count": 10,
+  "user_history": [
+    "Metabolic Testing Can Help You Lose Weight *If* You Know How To Interpret Your Results",
+    "Trump records 'strongly corroborate' sex assault claims, accuser says",
+    "Coast Guard searching for man who went overboard from Carnival cruise ship off Texas",
+    "How to Make Clipping Your Dog's Nails Pain-free",
+    "What No One Tells You About Weight Loss Surgery",
+    "Trump tweets fake image of him putting medal around dog from al-Baghdadi raid",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Jenelle Evans files for divorce: 'The kids and I have moved away'",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Nuggets coach Mike Malone shreds team's effort in loss at Pelicans: 'We're a great talk team'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Metabolic Testing Can Help You Lose Weight *If* You Know How To Interpret Your Results\"\n\"Trump records 'strongly corroborate' sex assault claims, accuser says\"\n\"Coast Guard searching for man who went overboard from Carnival cruise ship off Texas\"\n\"How to Make Clipping Your Dog's Nails Pain-free\"\n\"What No One Tells You About Weight Loss Surgery\"\n\"Trump tweets fake image of him putting medal around dog from al-Baghdadi raid\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Jenelle Evans files for divorce: 'The kids and I have moved away'\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Nuggets coach Mike Malone shreds team's effort in loss at Pelicans: 'We're a great talk team'\"\n\n[Candidate News Title]\n\"Chin Hair: 7 Embarrassing Red Flags No Woman Should Ever Ignore\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Chin Hair: 7 Embarrassing Red Flags No Woman Should Ever Ignore,\" the user is likely to encounter a discussion focused on common issues related to chin hair, particularly from a female perspective. The content may outline various signs that suggest underlying health concerns or changes in hormonal balance that could lead to increased facial hair growth. Additionally, the article could provide practical advice on how to manage and address these concerns, including grooming tips or when to consult a healthcare professional. It is likely to emphasize awareness and understanding of bodily changes, which may resonate with the user's interest in health and personal care.",
+  "model": "gpt-4o-mini"
+}

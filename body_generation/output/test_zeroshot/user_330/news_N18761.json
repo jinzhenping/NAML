@@ -1,0 +1,21 @@
+{
+  "user_id": 330,
+  "candidate_news_id": "N18761",
+  "candidate_title": "32 Things You Can Make in Your Air Fryer",
+  "user_history_count": 10,
+  "user_history": [
+    "Tensions, tears, trauma: the Democratic voters suffering under Trump",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Teresa Giudice, daughters reunite with Joe in Italy: See the pic!",
+    "This little Montana town is full of Power Wagons and Mustangs",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "WH plans \"aggressive\" strategy for open impeachment hearings",
+    "FCA And GM Unfazed By The Ford Bronco's Return",
+    "Chuck Woolery: Supporting Trump 'pretty much destroyed my career'",
+    "Barn Find: Large Collection Of Pontiac Firebirds Uncovered",
+    "2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Tensions, tears, trauma: the Democratic voters suffering under Trump\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Teresa Giudice, daughters reunite with Joe in Italy: See the pic!\"\n\"This little Montana town is full of Power Wagons and Mustangs\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"WH plans \"aggressive\" strategy for open impeachment hearings\"\n\"FCA And GM Unfazed By The Ford Bronco's Return\"\n\"Chuck Woolery: Supporting Trump 'pretty much destroyed my career'\"\n\"Barn Find: Large Collection Of Pontiac Firebirds Uncovered\"\n\"2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway\"\n\n[Candidate News Title]\n\"32 Things You Can Make in Your Air Fryer\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you decide to click on \"32 Things You Can Make in Your Air Fryer,\" you are likely expecting a detailed list of various recipes or dishes that can be prepared using an air fryer. The article may provide an overview of the versatility of this kitchen appliance, highlighting a range of options from appetizers to main courses and even desserts. You might find specific cooking tips or techniques that enhance the air frying process, as well as insights into health benefits associated with using an air fryer. Additionally, the article could include popular or trending recipes, appealing to those looking to expand their culinary repertoire.",
+  "model": "gpt-4o-mini"
+}

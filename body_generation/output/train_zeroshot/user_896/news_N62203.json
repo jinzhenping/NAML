@@ -1,0 +1,21 @@
+{
+  "user_id": 896,
+  "candidate_news_id": "N62203",
+  "candidate_title": "Stephen Curry calls out Michael Jordan for being a 'hater'",
+  "user_history_count": 10,
+  "user_history": [
+    "Which teams are positioned to succeed vs. Patriots' defense?",
+    "Josh Gordon already pops up on Seahawks' injury report",
+    "Cold front moves into the Northeast with rain and snow",
+    "China Claims Tariffs Will Go, but Others Express Doubts",
+    "Chevrolet Performance Reveals New Small Block Crate Engine",
+    "Bloomberg ready to spend 'whatever it takes' to become president",
+    "Trump could slap steep tariffs on imported cars next week",
+    "Trump says has not agreed to roll back tariffs on Chinese goods",
+    "Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears",
+    "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Which teams are positioned to succeed vs. Patriots' defense?\"\n\"Josh Gordon already pops up on Seahawks' injury report\"\n\"Cold front moves into the Northeast with rain and snow\"\n\"China Claims Tariffs Will Go, but Others Express Doubts\"\n\"Chevrolet Performance Reveals New Small Block Crate Engine\"\n\"Bloomberg ready to spend 'whatever it takes' to become president\"\n\"Trump could slap steep tariffs on imported cars next week\"\n\"Trump says has not agreed to roll back tariffs on Chinese goods\"\n\"Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\n[Candidate News Title]\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Stephen Curry calls out Michael Jordan for being a 'hater',\" they may expect to read about a recent interaction or statement made by Stephen Curry regarding Michael Jordan. The article is likely to provide context around Curry's comments, potentially exploring any underlying tensions between the two basketball stars. It may also include reactions from fans and analysts, shedding light on the implications of such a public remark. The piece could further discuss how this exchange fits into the broader narrative of player rivalries and respect in the NBA.",
+  "model": "gpt-4o-mini"
+}

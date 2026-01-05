@@ -1,0 +1,21 @@
+{
+  "user_id": 132,
+  "candidate_news_id": "N7937",
+  "candidate_title": "Dean Foods files for bankruptcy",
+  "user_history_count": 10,
+  "user_history": [
+    "The Queen just made history by officially ditching the use of real fur for the first time in her 67-year reign",
+    "More than 11,000 scientists from around the world declare a 'climate emergency'",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Christmas tree decorating ideas for every style and budget",
+    "From cat names to fruit, here are 11 bizarre things celebrities have tried to trademark",
+    "A 911 supervisor was streaming Netflix at work when dispatchers mishandled a shooting call",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "What Happens If Your Oxygen Mask Doesn't Inflate on a Flight?",
+    "Woman accused of sneaking into Bronx Zoo lion den due in court",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Queen just made history by officially ditching the use of real fur for the first time in her 67-year reign\"\n\"More than 11,000 scientists from around the world declare a 'climate emergency'\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Christmas tree decorating ideas for every style and budget\"\n\"From cat names to fruit, here are 11 bizarre things celebrities have tried to trademark\"\n\"A 911 supervisor was streaming Netflix at work when dispatchers mishandled a shooting call\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"What Happens If Your Oxygen Mask Doesn't Inflate on a Flight?\"\n\"Woman accused of sneaking into Bronx Zoo lion den due in court\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\n[Candidate News Title]\n\"Dean Foods files for bankruptcy\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent bankruptcy filing by Dean Foods, a significant player in the dairy industry. It may provide an overview of the company's financial struggles leading up to this decision, including factors such as changing consumer preferences and increased competition in the market. Additionally, the article could explore the implications of this bankruptcy for the dairy industry, potential impacts on employees and suppliers, and the broader economic context. Readers may find insights into how this development reflects current trends in food production and consumption.",
+  "model": "gpt-4o-mini"
+}

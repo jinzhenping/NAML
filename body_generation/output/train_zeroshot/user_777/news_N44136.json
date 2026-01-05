@@ -1,0 +1,20 @@
+{
+  "user_id": 777,
+  "candidate_news_id": "N44136",
+  "candidate_title": "Gwen Stefani Sets the Record Straight on That Diamond Ring at 2019 People's Choice Awards",
+  "user_history_count": 9,
+  "user_history": [
+    "The Pioneer Woman makes 5 of her favorite comfort-food recipes",
+    "Red Hot Chili Peppers' Flea Marries Designer Melody Ehsani",
+    "'Go back to work': Outcry over deaths on Amazon's warehouse floor",
+    "Nicki Minaj's wedding ring is 17 carats, worth $1.1M: Pic",
+    "Obama calls out call-out culture: \"That's not activism\"",
+    "Caitlyn Jenner Calls Ex Kris Jenner 'an Amazing Mother and Business Woman' in Birthday Tribute",
+    "Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "Shay Mitchell Reveals Daughter's Name Alongside Precious Photo"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Pioneer Woman makes 5 of her favorite comfort-food recipes\"\n\"Red Hot Chili Peppers' Flea Marries Designer Melody Ehsani\"\n\"'Go back to work': Outcry over deaths on Amazon's warehouse floor\"\n\"Nicki Minaj's wedding ring is 17 carats, worth $1.1M: Pic\"\n\"Obama calls out call-out culture: \"That's not activism\"\"\n\"Caitlyn Jenner Calls Ex Kris Jenner 'an Amazing Mother and Business Woman' in Birthday Tribute\"\n\"Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"Shay Mitchell Reveals Daughter's Name Alongside Precious Photo\"\n\"\"\n\n[Candidate News Title]\n\"Gwen Stefani Sets the Record Straight on That Diamond Ring at 2019 People's Choice Awards\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Gwen Stefani Sets the Record Straight on That Diamond Ring at 2019 People's Choice Awards,\" the user is likely expecting a clarification from Gwen Stefani regarding rumors or misconceptions about her engagement ring. The piece may provide details about the significance of the ring, its design, and any public reactions it garnered during the awards ceremony. Additionally, it could explore Stefani's personal connection to the ring and how it reflects her style or relationship, particularly in light of her high-profile career in the entertainment industry.",
+  "model": "gpt-4o-mini"
+}

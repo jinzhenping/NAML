@@ -1,0 +1,21 @@
+{
+  "user_id": 949,
+  "candidate_news_id": "N128936",
+  "candidate_title": "76ers rookie Matisse Thybulle quickly responds to mom's heartfelt message about son's leukemia diagnosis",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Brady frustrated with Patriots about Brown, Gordon",
+    "NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever",
+    "Greg Cote: Disgraced NBA referee Tim Donaghy opens up about the game-fixing scandal he caused",
+    "2019 NFL Trade Deadline grades: Rams clear up cap space by shipping Aqib Talib to Dolphins",
+    "Kobe Bryant would not even return for a guaranteed title: 'I like my rings the hard way'",
+    "Anthony Davis on possibly joining hometown Bulls: 'I mean, I am a free agent next year'",
+    "Gordon Hayward is finally, truly back",
+    "What Paul George's impending return means for the Clippers",
+    "Injured Cowboys DL Daniel Ross arrested on drug, gun charges",
+    "Did your NFL team mess up by not drafting Lamar Jackson?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Brady frustrated with Patriots about Brown, Gordon\"\n\"NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever\"\n\"Greg Cote: Disgraced NBA referee Tim Donaghy opens up about the game-fixing scandal he caused\"\n\"2019 NFL Trade Deadline grades: Rams clear up cap space by shipping Aqib Talib to Dolphins\"\n\"Kobe Bryant would not even return for a guaranteed title: 'I like my rings the hard way'\"\n\"Anthony Davis on possibly joining hometown Bulls: 'I mean, I am a free agent next year'\"\n\"Gordon Hayward is finally, truly back\"\n\"What Paul George's impending return means for the Clippers\"\n\"Injured Cowboys DL Daniel Ross arrested on drug, gun charges\"\n\"Did your NFL team mess up by not drafting Lamar Jackson?\"\n\n[Candidate News Title]\n\"76ers rookie Matisse Thybulle quickly responds to mom's heartfelt message about son's leukemia diagnosis\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article about 76ers rookie Matisse Thybulle responding to his mom's message regarding his leukemia diagnosis, you may expect to read about Thybulle's personal journey and how he has been handling this challenging situation. The article is likely to provide insights into his family's support, highlighting the bond between him and his mother. Additionally, it may discuss how this health issue could impact his career and performance on the court, as well as reactions from fans and teammates regarding his resilience.",
+  "model": "gpt-4o-mini"
+}

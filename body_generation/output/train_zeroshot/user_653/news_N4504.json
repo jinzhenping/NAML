@@ -1,0 +1,21 @@
+{
+  "user_id": 653,
+  "candidate_news_id": "N4504",
+  "candidate_title": "Divers salvage 100-year-old liquor from WWI shipwreck",
+  "user_history_count": 10,
+  "user_history": [
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "Oklahoma officer convicted of 2nd-degree murder",
+    "Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Prince Harry and Meghan Markle are taking a royal respite",
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!",
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"Oklahoma officer convicted of 2nd-degree murder\"\n\"Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Prince Harry and Meghan Markle are taking a royal respite\"\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\n[Candidate News Title]\n\"Divers salvage 100-year-old liquor from WWI shipwreck\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Divers salvage 100-year-old liquor from WWI shipwreck\" is likely to explore the recent discovery of a shipwreck from World War I, detailing the efforts made by divers to recover vintage liquor that has been preserved underwater for a century. Readers may expect information on the historical significance of the ship and its cargo, as well as insights into the conditions of the liquor, such as its quality and potential market value. Additionally, the article could provide context about the shipwreck's location and the challenges faced by the divers during the salvage operation.",
+  "model": "gpt-4o-mini"
+}

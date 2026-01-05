@@ -1,0 +1,21 @@
+{
+  "user_id": 858,
+  "candidate_news_id": "N125945",
+  "candidate_title": "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+  "user_history_count": 10,
+  "user_history": [
+    "Lay's Newest Flavor Is Grilled Cheese And Tomato Soup, So It's About To Get Real Cozy 'Round Here",
+    "Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence",
+    "The 100 Best Snacks You're Not Making",
+    "Gretchen Wilson booted from New Mexico hotel",
+    "$42 million price cut on tech billionaire's Silicon Valley monster mansion",
+    "This Is What Happens When You Take Ibuprofen Too Often, According to a Doctor",
+    "Highest paid musicians in 2019",
+    "World's largest treehouse burns to the ground",
+    "Snow crab sells for record price in Japan",
+    "America's Largest Home Also Has the Most Amazing Christmas Decorations"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lay's Newest Flavor Is Grilled Cheese And Tomato Soup, So It's About To Get Real Cozy 'Round Here\"\n\"Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence\"\n\"The 100 Best Snacks You're Not Making\"\n\"Gretchen Wilson booted from New Mexico hotel\"\n\"$42 million price cut on tech billionaire's Silicon Valley monster mansion\"\n\"This Is What Happens When You Take Ibuprofen Too Often, According to a Doctor\"\n\"Highest paid musicians in 2019\"\n\"World's largest treehouse burns to the ground\"\n\"Snow crab sells for record price in Japan\"\n\"America's Largest Home Also Has the Most Amazing Christmas Decorations\"\n\n[Candidate News Title]\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers can expect to learn about Tamron Hall's experiences and motivations behind her decision to leave the Today Show, along with her reflections on the media landscape. The discussion may also touch upon her humorous take on Megyn Kelly's reported multimillion-dollar payout, providing insights into Hall's perspective on career transitions within the television industry. Overall, the piece is likely to explore themes of professional change and the dynamics of high-profile media roles, offering a blend of personal anecdotes and industry commentary.",
+  "model": "gpt-4o-mini"
+}

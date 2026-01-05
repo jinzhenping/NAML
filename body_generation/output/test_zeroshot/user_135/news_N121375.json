@@ -1,0 +1,21 @@
+{
+  "user_id": 135,
+  "candidate_news_id": "N121375",
+  "candidate_title": "Besieged on all sides, Gordon Sondland clings to power",
+  "user_history_count": 10,
+  "user_history": [
+    "Flood of Oil Is Coming, Complicating Efforts to Fight Global Warming",
+    "US considers dropping some tariffs on China",
+    "Democrats vow not to delay impeachment probe as witnesses ignore subpoenas",
+    "12 Life-Changing Career Tips From Navy SEALs",
+    "French leader laments NATO's 'brain death' due to US absence",
+    "Supreme Court Justices Brett Kavanaugh and Samuel Alito Urged to Recuse Themselves From LGBT Cases",
+    "Sessions wins endorsement from key GOP senators",
+    "Republicans Know Trump Is Innocent They're Trying to Figure Out Why",
+    "Republican Mark Sanford drops out of presidential race",
+    "The Take Down Trump Project"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Flood of Oil Is Coming, Complicating Efforts to Fight Global Warming\"\n\"US considers dropping some tariffs on China\"\n\"Democrats vow not to delay impeachment probe as witnesses ignore subpoenas\"\n\"12 Life-Changing Career Tips From Navy SEALs\"\n\"French leader laments NATO's 'brain death' due to US absence\"\n\"Supreme Court Justices Brett Kavanaugh and Samuel Alito Urged to Recuse Themselves From LGBT Cases\"\n\"Sessions wins endorsement from key GOP senators\"\n\"Republicans Know Trump Is Innocent They're Trying to Figure Out Why\"\n\"Republican Mark Sanford drops out of presidential race\"\n\"The Take Down Trump Project\"\n\n[Candidate News Title]\n\"Besieged on all sides, Gordon Sondland clings to power\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Besieged on all sides, Gordon Sondland clings to power,\" they can likely expect a detailed examination of Gordon Sondland's current political situation and the challenges he faces. The article may discuss his role in the ongoing impeachment inquiries and the pressures from various political factions. Additionally, it could provide insights into Sondland's strategies for maintaining his position amid growing scrutiny and opposition. The analysis might also touch on the broader implications for U.S. foreign policy and the dynamics within the Trump administration.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 391,
+  "candidate_news_id": "N42187",
+  "candidate_title": "China's pork crisis is bigger than you think",
+  "user_history_count": 10,
+  "user_history": [
+    "1 Family's Adoption Photo Shoot Is on Point, but the Touching Story Behind It Is Everything",
+    "Father of 7-year-old injured in Halloween shooting says she's 'getting better day by day'",
+    "Man stabbed to death outside Popeyes after fight over chicken sandwich, police say",
+    "New Delhi's toxic, polluted air chokes city's 20 million people, and the haze can be seen from space",
+    "Andy Cohen lost 12 pounds by making this one change...",
+    "Nearly 500 Prisoners Freed on a Single Day",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "Philadelphia shooting: 10-year-old boy shot in head while walking home from school",
+    "50 Unique Holiday Gift Ideas for Her Under $50"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"1 Family's Adoption Photo Shoot Is on Point, but the Touching Story Behind It Is Everything\"\n\"Father of 7-year-old injured in Halloween shooting says she's 'getting better day by day'\"\n\"Man stabbed to death outside Popeyes after fight over chicken sandwich, police say\"\n\"New Delhi's toxic, polluted air chokes city's 20 million people, and the haze can be seen from space\"\n\"Andy Cohen lost 12 pounds by making this one change...\"\n\"Nearly 500 Prisoners Freed on a Single Day\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"Philadelphia shooting: 10-year-old boy shot in head while walking home from school\"\n\"50 Unique Holiday Gift Ideas for Her Under $50\"\n\n[Candidate News Title]\n\"China's pork crisis is bigger than you think\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"China's pork crisis is bigger than you think\" is likely to provide an in-depth analysis of the current challenges facing China's pork industry, which may include factors such as disease outbreaks, rising production costs, and impacts on global markets. Readers can expect to learn about the significance of pork in Chinese culture and its role in the national economy, along with potential repercussions for both domestic consumers and international trade. The piece may also explore how government policies and consumer behavior could influence the situation moving forward.",
+  "model": "gpt-4o-mini"
+}

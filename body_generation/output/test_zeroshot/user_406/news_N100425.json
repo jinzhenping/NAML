@@ -1,0 +1,18 @@
+{
+  "user_id": 406,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 7,
+  "user_history": [
+    "Mad About You Star Helen Hunt Taken to Hospital After Car Is T-Boned and Rolls Over in Accident",
+    "'The Masked Singer' Recap: A Grammy Winner Is Revealed As The Skeleton",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Unexpected ingredients that go great with eggs",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "The best independent bakery in every state",
+    "40+ Ridiculously Good Gluten-Free Thanksgiving Recipes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mad About You Star Helen Hunt Taken to Hospital After Car Is T-Boned and Rolls Over in Accident\"\n\"'The Masked Singer' Recap: A Grammy Winner Is Revealed As The Skeleton\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Unexpected ingredients that go great with eggs\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"The best independent bakery in every state\"\n\"40+ Ridiculously Good Gluten-Free Thanksgiving Recipes\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect a comprehensive overview of the most significant movie moments from the 2010s, highlighting key scenes and performances that sparked discussions among audiences and critics alike. The piece may delve into various genres, showcasing iconic films and their cultural impact during the decade. Additionally, it could provide context on why certain moments resonated with viewers, possibly touching on themes such as storytelling, character development, and cinematic techniques. Overall, the article is likely to serve as a reflective piece on the evolution of film during this period.",
+  "model": "gpt-4o-mini"
+}

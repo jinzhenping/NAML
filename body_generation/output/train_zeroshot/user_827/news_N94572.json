@@ -1,0 +1,21 @@
+{
+  "user_id": 827,
+  "candidate_news_id": "N94572",
+  "candidate_title": "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+  "user_history_count": 10,
+  "user_history": [
+    "The 'Whimpering' Terrorist Only Trump Seems to Have Heard",
+    "Missing New Hampshire couple's bodies found buried on a Texas beach",
+    "Tensions, tears, trauma: the Democratic voters suffering under Trump",
+    "President Trump says UFC reception was 'like walking into a Trump Rally'",
+    "Chinese pilot suspended after woman poses in cockpit with drinks",
+    "Trump: US ready to help in 'cleaning out' the 'monsters' who killed Americans",
+    "Woman arrested for 1996 murder of baby girl found dead in reservoir",
+    "Trump Tax Return Case Confronts Supreme Court With a Momentous Choice",
+    "Black man who led neo-Nazi group dies amid bid to destroy it",
+    "Everyday heroes step up to help lone Waffle House employee"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 'Whimpering' Terrorist Only Trump Seems to Have Heard\"\n\"Missing New Hampshire couple's bodies found buried on a Texas beach\"\n\"Tensions, tears, trauma: the Democratic voters suffering under Trump\"\n\"President Trump says UFC reception was 'like walking into a Trump Rally'\"\n\"Chinese pilot suspended after woman poses in cockpit with drinks\"\n\"Trump: US ready to help in 'cleaning out' the 'monsters' who killed Americans\"\n\"Woman arrested for 1996 murder of baby girl found dead in reservoir\"\n\"Trump Tax Return Case Confronts Supreme Court With a Momentous Choice\"\n\"Black man who led neo-Nazi group dies amid bid to destroy it\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\n[Candidate News Title]\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"'It's not over': Sarah Palin says she is fighting to repair her marriage,\" the reader may expect to find an exploration of Sarah Palin's personal life, particularly her efforts to reconcile with her spouse. The piece is likely to discuss the challenges and dynamics of their relationship, possibly referencing public perceptions and media scrutiny. Additionally, it may include insights into Palin's public statements and motivations behind her decision to work on her marriage, providing context to her current circumstances and future intentions.",
+  "model": "gpt-4o-mini"
+}

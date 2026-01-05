@@ -1,0 +1,21 @@
+{
+  "user_id": 207,
+  "candidate_news_id": "N112339",
+  "candidate_title": "Pete Buttigieg clarifies views on the Obama administration after criticism for a viral misquote",
+  "user_history_count": 10,
+  "user_history": [
+    "Donald Trump continues campaign rally tour with Louisiana GOP candidate Eddie Rispone",
+    "For the GOP, the suburbs are the new Florida (Opinion)",
+    "Rand Paul blocks Senate resolution backing protection for whistleblowers",
+    "Donald Trump's White House braces for public impeachment hearings",
+    "Confirmed: Even Base 2020 C8 Corvettes Hit 60 MPH in 3.0 Seconds Flat",
+    "The economic picture is darkening in states critical to Trump's reelection bid",
+    "Bolton Knows About 'Many Relevant Meetings' on Ukraine, Lawyer Says",
+    "'Anonymous' book makes bombshell Trump claims",
+    "AP FACT CHECK: Trump assails a process he swore to uphold",
+    "Ryan: How NASCAR needs to wave the yellow on intentional cautions"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Donald Trump continues campaign rally tour with Louisiana GOP candidate Eddie Rispone\"\n\"For the GOP, the suburbs are the new Florida (Opinion)\"\n\"Rand Paul blocks Senate resolution backing protection for whistleblowers\"\n\"Donald Trump's White House braces for public impeachment hearings\"\n\"Confirmed: Even Base 2020 C8 Corvettes Hit 60 MPH in 3.0 Seconds Flat\"\n\"The economic picture is darkening in states critical to Trump's reelection bid\"\n\"Bolton Knows About 'Many Relevant Meetings' on Ukraine, Lawyer Says\"\n\"'Anonymous' book makes bombshell Trump claims\"\n\"AP FACT CHECK: Trump assails a process he swore to uphold\"\n\"Ryan: How NASCAR needs to wave the yellow on intentional cautions\"\n\n[Candidate News Title]\n\"Pete Buttigieg clarifies views on the Obama administration after criticism for a viral misquote\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Pete Buttigieg clarifies views on the Obama administration after criticism for a viral misquote,\" the user can expect an exploration of Buttigieg's recent comments regarding his stance on the Obama administration, particularly in light of backlash he received from various quarters. The piece is likely to detail the context of the misquote, how it was perceived, and Buttigieg's efforts to clarify his position. It may also touch on the implications of his statements for his campaign and the broader political landscape, especially concerning Democratic voters who may be scrutinizing his alignment with past administrations.",
+  "model": "gpt-4o-mini"
+}

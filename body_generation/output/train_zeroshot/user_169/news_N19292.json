@@ -1,0 +1,21 @@
+{
+  "user_id": 169,
+  "candidate_news_id": "N19292",
+  "candidate_title": "John Legend Is PEOPLE's Sexiest Man Alive 2019: 'I'm Excited but a Little Scared at the Same Time'",
+  "user_history_count": 10,
+  "user_history": [
+    "Couple's haunting wedding photo captures California wildfire raging nearby",
+    "Emilia Clarke Reacts to the 'Game of Thrones' Prequel News (Exclusive)",
+    "10 Unexpected Ways To Bond With A Cat",
+    "Kentucky man dies trying to save sons from Florida rip current during family trip",
+    "Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call",
+    "Every Must-See Photo of Stars Celebrating Halloween 2019",
+    "What Is Brown Butter and Should You Be Using It?",
+    "The Ultimate Guide to Mushrooms",
+    "The seedless lemon revolution has taken root in California",
+    "Lamborghini's long shot mission to take its super fast cars into the electric age"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Couple's haunting wedding photo captures California wildfire raging nearby\"\n\"Emilia Clarke Reacts to the 'Game of Thrones' Prequel News (Exclusive)\"\n\"10 Unexpected Ways To Bond With A Cat\"\n\"Kentucky man dies trying to save sons from Florida rip current during family trip\"\n\"Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"What Is Brown Butter and Should You Be Using It?\"\n\"The Ultimate Guide to Mushrooms\"\n\"The seedless lemon revolution has taken root in California\"\n\"Lamborghini's long shot mission to take its super fast cars into the electric age\"\n\n[Candidate News Title]\n\"John Legend Is PEOPLE's Sexiest Man Alive 2019: 'I'm Excited but a Little Scared at the Same Time'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"John Legend Is PEOPLE's Sexiest Man Alive 2019,\" the user can expect to read about John Legend being awarded this title, including insights into his thoughts and feelings about receiving such recognition. The article may provide context on the selection process and mention past recipients, while also highlighting Legend's career achievements and contributions to music and culture. Additionally, it is likely to include quotes or anecdotes that illustrate his personality and public image, offering a glimpse into why he was chosen for this honor.",
+  "model": "gpt-4o-mini"
+}

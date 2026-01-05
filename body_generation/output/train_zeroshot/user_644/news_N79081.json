@@ -1,0 +1,21 @@
+{
+  "user_id": 644,
+  "candidate_news_id": "N79081",
+  "candidate_title": "What Happens When a Plane Collides with a Flock of Birds?",
+  "user_history_count": 10,
+  "user_history": [
+    "Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "I Took the 30-Day Squat Challenge and Here's What Happened",
+    "Trump wanted Barr to hold news conference saying the president broke no laws in call with Ukrainian leader",
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads",
+    "As public hearings loom, Pence aide meets with U.S. House committees",
+    "Far-reaching snowstorm may take shape over US",
+    "The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "Woods made the right call keeping Reed in the U.S. fold"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"I Took the 30-Day Squat Challenge and Here's What Happened\"\n\"Trump wanted Barr to hold news conference saying the president broke no laws in call with Ukrainian leader\"\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\"As public hearings loom, Pence aide meets with U.S. House committees\"\n\"Far-reaching snowstorm may take shape over US\"\n\"The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"Woods made the right call keeping Reed in the U.S. fold\"\n\n[Candidate News Title]\n\"What Happens When a Plane Collides with a Flock of Birds?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"What Happens When a Plane Collides with a Flock of Birds?\" is likely to explore the phenomena and consequences of bird strikes on aircraft. Readers can expect a detailed overview of the frequency of such incidents, the potential damage to planes, and the safety measures implemented by airlines to mitigate these risks. It may also include case studies or statistics regarding past bird strike events, as well as insights from aviation experts on how these occurrences are handled. Additionally, the article could discuss the ecological factors that lead to bird strikes, providing a broader context for understanding this aviation challenge.",
+  "model": "gpt-4o-mini"
+}

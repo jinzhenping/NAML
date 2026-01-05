@@ -1,0 +1,21 @@
+{
+  "user_id": 755,
+  "candidate_news_id": "N1869",
+  "candidate_title": "Alicia Keys Returns as GRAMMY Awards Host for a Second Time",
+  "user_history_count": 10,
+  "user_history": [
+    "Duchess Meghan Describes 'Really Challenging' Life as New Royal: I'm Not OK",
+    "Subtle Signs You May Have Clogged Arteries",
+    "10 Exercises You Should Never Do Again, According to Trainers",
+    "Travis Scott and Kylie Jenner's daughter adorably dances to dad's song",
+    "New Couple Alert? Drake and Kylie Jenner Appear Into Each Other at Party",
+    "12 Surprising Things You Should Never Clean with Water",
+    "Napoleon Bonaparte's general believed unearthed in Russia",
+    "Chin Hair: 7 Embarrassing Red Flags No Woman Should Ever Ignore",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "13 Ways You're Shortening the Life of Your Car"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Duchess Meghan Describes 'Really Challenging' Life as New Royal: I'm Not OK\"\n\"Subtle Signs You May Have Clogged Arteries\"\n\"10 Exercises You Should Never Do Again, According to Trainers\"\n\"Travis Scott and Kylie Jenner's daughter adorably dances to dad's song\"\n\"New Couple Alert? Drake and Kylie Jenner Appear Into Each Other at Party\"\n\"12 Surprising Things You Should Never Clean with Water\"\n\"Napoleon Bonaparte's general believed unearthed in Russia\"\n\"Chin Hair: 7 Embarrassing Red Flags No Woman Should Ever Ignore\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"13 Ways You're Shortening the Life of Your Car\"\n\n[Candidate News Title]\n\"Alicia Keys Returns as GRAMMY Awards Host for a Second Time\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Alicia Keys Returns as GRAMMY Awards Host for a Second Time,\" the user is likely to find information about Alicia Keys' upcoming role as the host of the GRAMMY Awards. The piece may cover her previous hosting experience, highlighting her contributions to the event and any notable moments from past ceremonies. Additionally, it could discuss the significance of her return and what viewers can expect in terms of performances or themes for this year's awards. Overall, the article is expected to provide a straightforward overview of Keys' involvement with the GRAMMYs, possibly including insights into her preparations or plans for the event.",
+  "model": "gpt-4o-mini"
+}

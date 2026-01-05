@@ -1,0 +1,21 @@
+{
+  "user_id": 168,
+  "candidate_news_id": "N102458",
+  "candidate_title": "50 amazing gifts for every type of person and budget",
+  "user_history_count": 10,
+  "user_history": [
+    "Why I Stayed in An Abusive Relationship",
+    "I was a passport to this man: Child marriage loopholes persist in U.S.",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Older people's most common regrets",
+    "A Rebranded Seafood Spot in Capitol Hill Sells Southeast Asian Dishes from a 'Diplo-brat' Chef",
+    "Ambushed in Mexico, Mormon Children Tried to Save One Another",
+    "New York City man apprehended for punching woman, 53, outside church, police say",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Mother Is Freed After 15 Years in Prison for Father's Abuse",
+    "A guide to the 2019 People's Choice Awards nominees' significant others"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why I Stayed in An Abusive Relationship\"\n\"I was a passport to this man: Child marriage loopholes persist in U.S.\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Older people's most common regrets\"\n\"A Rebranded Seafood Spot in Capitol Hill Sells Southeast Asian Dishes from a 'Diplo-brat' Chef\"\n\"Ambushed in Mexico, Mormon Children Tried to Save One Another\"\n\"New York City man apprehended for punching woman, 53, outside church, police say\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Mother Is Freed After 15 Years in Prison for Father's Abuse\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\n[Candidate News Title]\n\"50 amazing gifts for every type of person and budget\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely expecting to find a curated list of gift ideas tailored to various personalities and budgets, which may appeal to a wide audience. The content could include thoughtful suggestions for different occasions, emphasizing practicality and versatility. Additionally, the article may categorize gifts by recipient type, such as gifts for tech enthusiasts, food lovers, or those who appreciate unique experiences. Overall, the user might anticipate a straightforward guide that simplifies the gift-giving process without overwhelming details.",
+  "model": "gpt-4o-mini"
+}

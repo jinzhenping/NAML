@@ -1,0 +1,21 @@
+{
+  "user_id": 457,
+  "candidate_news_id": "N62577",
+  "candidate_title": "AP source: 2nd US official heard Trump call with Sondland",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border",
+    "Egypt unveils discovery of 30 ancient coffins with mummies inside",
+    "Google completes first drone delivery in the US",
+    "UPS and CVS plan to deliver prescriptions via drone",
+    "21 Things You Never Knew About America's 'Royal' Families",
+    "The SkyCam work on Michigan's opening kick return touchdown was incredible",
+    "Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area",
+    "Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape",
+    "High school football player asks to pray with opponent whose mother has cancer",
+    "A US cargo ship carrying 1,400 tonnes of TNT that sank at the end of the River Thames in 1944 is posing a threat to London from its salty grave"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump says Erdogan wants cease-fire to work after reports of violence on Syria-Turkey border\"\n\"Egypt unveils discovery of 30 ancient coffins with mummies inside\"\n\"Google completes first drone delivery in the US\"\n\"UPS and CVS plan to deliver prescriptions via drone\"\n\"21 Things You Never Knew About America's 'Royal' Families\"\n\"The SkyCam work on Michigan's opening kick return touchdown was incredible\"\n\"Uber breaks ground on new hub, looks to drive 3,000 jobs to Dallas area\"\n\"Far from Vietnam's boomtowns, a rural region looks to Europe's distant shores for escape\"\n\"High school football player asks to pray with opponent whose mother has cancer\"\n\"A US cargo ship carrying 1,400 tonnes of TNT that sank at the end of the River Thames in 1944 is posing a threat to London from its salty grave\"\n\n[Candidate News Title]\n\"AP source: 2nd US official heard Trump call with Sondland\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the implications of a phone call between President Trump and U.S. ambassador to the EU, Gordon Sondland, during which a second U.S. official reportedly heard the conversation. Readers can expect to find details about the context of the call, its relevance to ongoing political investigations, and potential insights into the administration's foreign policy decisions. It may also touch upon how this development could influence public perception and political dynamics surrounding Trump's presidency.",
+  "model": "gpt-4o-mini"
+}

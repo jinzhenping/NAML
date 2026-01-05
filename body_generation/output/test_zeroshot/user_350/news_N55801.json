@@ -1,0 +1,21 @@
+{
+  "user_id": 350,
+  "candidate_news_id": "N55801",
+  "candidate_title": "High tides surge through Venice, locals rush to protect art",
+  "user_history_count": 10,
+  "user_history": [
+    "Why Ukraine and Russia are still at war",
+    "Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019",
+    "Celebrity beach cruising for 2019",
+    "50 must-see stops on the East Coast",
+    "Powerful side-by-side portraits show people over 100 years old next to their younger selves",
+    "Student's drone footage shows whale swimming around California surfers"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why Ukraine and Russia are still at war\"\n\"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019\"\n\"Celebrity beach cruising for 2019\"\n\"50 must-see stops on the East Coast\"\n\"Powerful side-by-side portraits show people over 100 years old next to their younger selves\"\n\"Student's drone footage shows whale swimming around California surfers\"\n\n[Candidate News Title]\n\"High tides surge through Venice, locals rush to protect art\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent high tides affecting Venice, detailing the challenges faced by locals in protecting their historic art and architecture from flooding. It may explain the environmental factors contributing to the surge, such as climate change and seasonal weather patterns, and could provide insights into the measures being taken by residents and authorities to mitigate damage. Additionally, the piece might highlight the broader implications of rising sea levels on coastal cities, particularly in terms of cultural preservation and urban planning.",
+  "model": "gpt-4o-mini"
+}

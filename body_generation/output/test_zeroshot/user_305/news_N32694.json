@@ -1,0 +1,21 @@
+{
+  "user_id": 305,
+  "candidate_news_id": "N32694",
+  "candidate_title": "How to Make Chicken Parm Spaghetti Squash",
+  "user_history_count": 10,
+  "user_history": [
+    "Cam Newton once again remains out, Kyle Allen to start vs. 49ers in Week 8",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "Spanx Founder Sara Blakely Reveals She Bought Olivia Newton-John's Grease Pants for Over $160K",
+    "Dez Bryant plans to reach out to NFL teams in two weeks",
+    "Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Is the Alabama Football Dynasty Ending?",
+    "Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter",
+    "LSU jumps Ohio State for No. 1 spot in College Football Playoff rankings"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cam Newton once again remains out, Kyle Allen to start vs. 49ers in Week 8\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"Spanx Founder Sara Blakely Reveals She Bought Olivia Newton-John's Grease Pants for Over $160K\"\n\"Dez Bryant plans to reach out to NFL teams in two weeks\"\n\"Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Is the Alabama Football Dynasty Ending?\"\n\"Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter\"\n\"LSU jumps Ohio State for No. 1 spot in College Football Playoff rankings\"\n\n[Candidate News Title]\n\"How to Make Chicken Parm Spaghetti Squash\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"How to Make Chicken Parm Spaghetti Squash,\" you can expect a detailed explanation of the recipe, including a list of ingredients and step-by-step instructions for preparing this dish. The article may also highlight the benefits of using spaghetti squash as a healthier alternative to traditional pasta, catering to those interested in nutritious meal options. Additionally, it could include tips on how to achieve the perfect balance of flavors and textures, making the dish appealing both visually and taste-wise.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 722,
+  "candidate_news_id": "N59905",
+  "candidate_title": "Friendly's ice cream parent owner files for bankruptcy",
+  "user_history_count": 10,
+  "user_history": [
+    "Not out of woods yet, but winds driving California fires die",
+    "'No more': Trump says he'll cut off federal funds to fight California wildfires",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "Holocaust survivors meet their saviour 75 years later",
+    "What It's Really Like to Sail on a 100-Day, Around-the-World Cruise",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "New images capture missing college student on night she vanished",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Not out of woods yet, but winds driving California fires die\"\n\"'No more': Trump says he'll cut off federal funds to fight California wildfires\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"Holocaust survivors meet their saviour 75 years later\"\n\"What It's Really Like to Sail on a 100-Day, Around-the-World Cruise\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"New images capture missing college student on night she vanished\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\n[Candidate News Title]\n\"Friendly's ice cream parent owner files for bankruptcy\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Friendly's ice cream parent company filing for bankruptcy is likely to discuss the financial challenges faced by the company, including potential reasons for its decline, such as changing consumer preferences or increased competition in the food industry. It may provide insights into the company's history and its impact on the ice cream market, as well as details about the bankruptcy process itself. Additionally, the article could explore the implications of this filing for employees and franchise owners, highlighting how it may affect their futures.",
+  "model": "gpt-4o-mini"
+}

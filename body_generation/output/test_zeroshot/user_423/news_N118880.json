@@ -1,0 +1,21 @@
+{
+  "user_id": 423,
+  "candidate_news_id": "N118880",
+  "candidate_title": "Impeachment inquiry: White House releases rough transcript of Trump's earlier call with Zelensky",
+  "user_history_count": 10,
+  "user_history": [
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Minnesota School Districts Considering 'Online Snow Days'",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "OMG, IT'S COLD: Frigid day ahead with high of 45, low of 28",
+    "The 21 most iconic CMA Awards performances",
+    "Comics - 'Half Full' by Maria Scrivan",
+    "2019 People's Choice Awards fashion hits and misses",
+    "Wheel of Fortune's Pat Sajak Says the 'Worst Has Passed' Following Emergency Intestine Surgery",
+    "College gymnast dies following training accident in Connecticut"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Minnesota School Districts Considering 'Online Snow Days'\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"OMG, IT'S COLD: Frigid day ahead with high of 45, low of 28\"\n\"The 21 most iconic CMA Awards performances\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"2019 People's Choice Awards fashion hits and misses\"\n\"Wheel of Fortune's Pat Sajak Says the 'Worst Has Passed' Following Emergency Intestine Surgery\"\n\"College gymnast dies following training accident in Connecticut\"\n\n[Candidate News Title]\n\"Impeachment inquiry: White House releases rough transcript of Trump's earlier call with Zelensky\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Impeachment inquiry: White House releases rough transcript of Trump's earlier call with Zelensky\" is likely to provide an overview of the recent developments in the impeachment inquiry involving former President Donald Trump. Readers can expect to find details regarding the content of the released transcript and its implications for the inquiry. The article may discuss how this transcript fits into the broader context of the investigation and potentially highlight responses from key political figures. Additionally, there could be an analysis of public and political reactions to the information disclosed in the transcript.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 717,
+  "candidate_news_id": "N84430",
+  "candidate_title": "The 1 reason you shouldn't hesitate to claim Social Security early",
+  "user_history_count": 10,
+  "user_history": [
+    "7 Women Share What It's Really Like To Work On A Cruise Ship",
+    "'I am scared all the time': Chimps and people are clashing in rural Uganda",
+    "Chase Young fiasco highlights absurdity of NCAA's outdated model",
+    "Ranking the College Football Teams Most Likely to Enter December Unbeaten",
+    "Harden bristles at notion of utilizing load management",
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'",
+    "18 things flight attendants wish you would stop doing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"7 Women Share What It's Really Like To Work On A Cruise Ship\"\n\"'I am scared all the time': Chimps and people are clashing in rural Uganda\"\n\"Chase Young fiasco highlights absurdity of NCAA's outdated model\"\n\"Ranking the College Football Teams Most Likely to Enter December Unbeaten\"\n\"Harden bristles at notion of utilizing load management\"\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'\"\n\"18 things flight attendants wish you would stop doing\"\n\n[Candidate News Title]\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about the potential benefits and drawbacks of claiming Social Security early. It may discuss factors such as the impact on monthly benefits, the implications for long-term financial planning, and various scenarios in which early claiming could be advantageous. The article could also provide insights into how personal circumstances, like health or retirement plans, might influence the decision. Overall, it is expected to offer a balanced view on the considerations one should take into account before making this choice.",
+  "model": "gpt-4o-mini"
+}

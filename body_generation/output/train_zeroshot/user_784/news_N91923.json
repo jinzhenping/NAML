@@ -1,0 +1,21 @@
+{
+  "user_id": 784,
+  "candidate_news_id": "N91923",
+  "candidate_title": "I went to Peter Luger after it received zero stars from New York Times",
+  "user_history_count": 10,
+  "user_history": [
+    "How Much Advil Is Too Much?",
+    "Pelosi says Trump notified Russians of Baghdadi raid before telling congressional leaders",
+    "The Amazing All-You-Can-Eat Restaurant in Every State",
+    "Bigger than bin Laden? 3 striking things about Trump's announcement that Baghdadi is dead.",
+    "A 2,000-pound great white shark is swimming off the coast of Florida",
+    "The best sandwich shop in every US state and DC",
+    "Judge reopens Covington Catholic High student's defamation suit against Washington Post",
+    "25 Foods and Drinks That Are Wrecking Your Teeth and Gums",
+    "You Have to Try These Famous Sandwiches in Every State",
+    "Latest Australia shark attack sparks tourism concerns"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"How Much Advil Is Too Much?\"\n\"Pelosi says Trump notified Russians of Baghdadi raid before telling congressional leaders\"\n\"The Amazing All-You-Can-Eat Restaurant in Every State\"\n\"Bigger than bin Laden? 3 striking things about Trump's announcement that Baghdadi is dead.\"\n\"A 2,000-pound great white shark is swimming off the coast of Florida\"\n\"The best sandwich shop in every US state and DC\"\n\"Judge reopens Covington Catholic High student's defamation suit against Washington Post\"\n\"25 Foods and Drinks That Are Wrecking Your Teeth and Gums\"\n\"You Have to Try These Famous Sandwiches in Every State\"\n\"Latest Australia shark attack sparks tourism concerns\"\n\n[Candidate News Title]\n\"I went to Peter Luger after it received zero stars from New York Times\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"I went to Peter Luger after it received zero stars from New York Times,\" the user may expect a detailed account of the author's experience at the renowned steakhouse following its unexpected zero-star review. The article is likely to explore the reasons behind the review, possibly discussing the restaurant's historical reputation and customer expectations. It may also provide insights into the quality of the food, service, and overall dining atmosphere. Readers could anticipate reflections on how the review impacted the restaurant's image and whether it lived up to its storied legacy.",
+  "model": "gpt-4o-mini"
+}

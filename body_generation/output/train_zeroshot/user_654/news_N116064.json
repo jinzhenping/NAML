@@ -1,0 +1,21 @@
+{
+  "user_id": 654,
+  "candidate_news_id": "N116064",
+  "candidate_title": "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+  "user_history_count": 10,
+  "user_history": [
+    "Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday",
+    "Why do you bruise easily? What it means and when to see a doctor",
+    "The Passive-Aggressive Email Tactic That All Office Workers Abhor",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Nikko & Shikinejima: Two Adventurous Day Trips From Tokyo",
+    "Adorable Rescue 'Puppy' Turns Out To Be Wild Dingo",
+    "This girl nails the wave pool   then fails the exit spectacularly",
+    "28 Simple Ways to Shrink Your Gut",
+    "I Kissed Dieting Goodbye, and Finally Lost 20 Pounds. Here's Why.",
+    "The Studio Ghibli Fans Guide to Tokyo"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday\"\n\"Why do you bruise easily? What it means and when to see a doctor\"\n\"The Passive-Aggressive Email Tactic That All Office Workers Abhor\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Nikko & Shikinejima: Two Adventurous Day Trips From Tokyo\"\n\"Adorable Rescue 'Puppy' Turns Out To Be Wild Dingo\"\n\"This girl nails the wave pool   then fails the exit spectacularly\"\n\"28 Simple Ways to Shrink Your Gut\"\n\"I Kissed Dieting Goodbye, and Finally Lost 20 Pounds. Here's Why.\"\n\"The Studio Ghibli Fans Guide to Tokyo\"\n\n[Candidate News Title]\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the user can expect to read about Ree Drummond's approach to weight loss through a low-carb diet. It is likely to detail her personal experiences and the specific dietary changes she implemented to achieve significant weight loss. The piece may also explore the benefits of a low-carb lifestyle, providing insights into how it can impact energy levels and overall health. Additionally, the article could include practical tips or recipes that align with Drummond's dietary choices, appealing to readers interested in similar health and wellness journeys.",
+  "model": "gpt-4o-mini"
+}

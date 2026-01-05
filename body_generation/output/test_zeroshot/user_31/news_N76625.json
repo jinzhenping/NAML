@@ -1,0 +1,21 @@
+{
+  "user_id": 31,
+  "candidate_news_id": "N76625",
+  "candidate_title": "Our Ultimate Holiday Cleaning Countdown",
+  "user_history_count": 10,
+  "user_history": [
+    "3 students allegedly plotted to attack their middle school: Officials",
+    "The News In Cartoons",
+    "The News In Cartoons",
+    "Waking up in the middle of the night? Your big dinner could be to blame",
+    "JuJu Smith-Schuster: Jalen Ramsey's right, I'm not Antonio Brown",
+    "Navy Submarine, Missing for 75 Years, Is Found Off Okinawa",
+    "Election 2020: Act with foresight or regret with hindsight",
+    "The News In Cartoons",
+    "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+    "If Trump Were Anyone Else …"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\"The News In Cartoons\"\n\"The News In Cartoons\"\n\"Waking up in the middle of the night? Your big dinner could be to blame\"\n\"JuJu Smith-Schuster: Jalen Ramsey's right, I'm not Antonio Brown\"\n\"Navy Submarine, Missing for 75 Years, Is Found Off Okinawa\"\n\"Election 2020: Act with foresight or regret with hindsight\"\n\"The News In Cartoons\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\"If Trump Were Anyone Else …\"\n\n[Candidate News Title]\n\"Our Ultimate Holiday Cleaning Countdown\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Our Ultimate Holiday Cleaning Countdown\" is likely to provide a structured guide for preparing a home for the holiday season. Readers may expect a detailed countdown or checklist that outlines essential cleaning tasks to complete in the weeks leading up to holiday gatherings. It could cover specific areas of the home that require attention, tips for efficient cleaning strategies, and perhaps suggestions for organizing spaces to accommodate guests. Overall, the piece is expected to help readers manage their cleaning efforts effectively as they prepare for the holidays.",
+  "model": "gpt-4o-mini"
+}

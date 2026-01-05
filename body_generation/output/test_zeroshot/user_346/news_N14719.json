@@ -1,0 +1,21 @@
+{
+  "user_id": 346,
+  "candidate_news_id": "N14719",
+  "candidate_title": "Father-daughter first dance medley had every guest on their feet",
+  "user_history_count": 10,
+  "user_history": [
+    "Spectacular photos from space",
+    "Former US Senator Kay Hagan dead at 66",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "Dad Goes Viral By Performing His Daughter's Exact Cheer Routine From the Stands",
+    "Republicans urge Bevin to provide proof of election fraud or concede",
+    "Young homebuyers are vanishing from the US",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US",
+    "Creepy fish with 'human-like face' found swimming in lake",
+    "How This Dog Learned to Talk",
+    "5 things to look for as public hearings begin in the House impeachment inquiry of President Donald Trump"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Spectacular photos from space\"\n\"Former US Senator Kay Hagan dead at 66\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"Dad Goes Viral By Performing His Daughter's Exact Cheer Routine From the Stands\"\n\"Republicans urge Bevin to provide proof of election fraud or concede\"\n\"Young homebuyers are vanishing from the US\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\"Creepy fish with 'human-like face' found swimming in lake\"\n\"How This Dog Learned to Talk\"\n\"5 things to look for as public hearings begin in the House impeachment inquiry of President Donald Trump\"\n\n[Candidate News Title]\n\"Father-daughter first dance medley had every guest on their feet\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Father-daughter first dance medley had every guest on their feet\" is likely to explore a heartwarming and entertaining moment during a wedding reception, focusing on a memorable first dance between a father and his daughter. Readers may expect to learn about the song choices that comprised the medley, the choreography involved, and how it engaged the guests. The piece could also include quotes or anecdotes from attendees, highlighting the atmosphere of joy and celebration. Additionally, it may touch on the significance of such dances in family events, emphasizing their emotional impact.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 613,
+  "candidate_news_id": "N98178",
+  "candidate_title": "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+  "user_history_count": 10,
+  "user_history": [
+    "Jeff Bezos is set to lose his crown as world's richest person",
+    "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+    "Harden-Westbrook argument goes viral",
+    "Stocks close higher despite weak earnings from Caterpillar, Boeing",
+    "Hong Kong crashes into recession as protests hit economy",
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Martin Scorsese Elaborates on Marvel Criticism: Tentpoles Have No 'Revelation, Mystery or Genuine Emotional Danger'",
+    "Jenelle Evans Obtains Temporary Restraining Order Against David Eason",
+    "Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony\"\n\"Harden-Westbrook argument goes viral\"\n\"Stocks close higher despite weak earnings from Caterpillar, Boeing\"\n\"Hong Kong crashes into recession as protests hit economy\"\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Martin Scorsese Elaborates on Marvel Criticism: Tentpoles Have No 'Revelation, Mystery or Genuine Emotional Danger'\"\n\"Jenelle Evans Obtains Temporary Restraining Order Against David Eason\"\n\"Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52\"\n\n[Candidate News Title]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on Charles Rogers, the former Michigan State football and Detroit Lions star, is likely to provide an overview of his life and career, highlighting significant achievements and contributions to the sport. It may discuss his time at Michigan State, where he was a standout player, and his subsequent tenure with the Lions, including any notable statistics or memorable moments. The piece could also touch on the circumstances surrounding his death and its impact on the sports community, though specific details may vary. Overall, readers can expect a respectful tribute that reflects on his legacy in football.",
+  "model": "gpt-4o-mini"
+}

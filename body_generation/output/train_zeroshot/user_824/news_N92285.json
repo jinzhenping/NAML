@@ -1,0 +1,21 @@
+{
+  "user_id": 824,
+  "candidate_news_id": "N92285",
+  "candidate_title": "Baker Mayfield's wife clarified her 'fair weather fans' comment after the Browns' win",
+  "user_history_count": 10,
+  "user_history": [
+    "Eagles' Fletcher Cox chased would-be assailant off with shotgun",
+    "Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car",
+    "Indiana attorney general testifies he didn't grope women",
+    "Trump records 'strongly corroborate' sex assault claims, accuser says",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "R. Kelly Denied Bail on Sex-Trafficking Charges in New York, Pleads Not Guilty",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Tom Draper, Black Music Industry Pioneer, Dies at 79",
+    "Reports: LSU LB Michael Divinity removed from team days before Alabama game"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Eagles' Fletcher Cox chased would-be assailant off with shotgun\"\n\"Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car\"\n\"Indiana attorney general testifies he didn't grope women\"\n\"Trump records 'strongly corroborate' sex assault claims, accuser says\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"R. Kelly Denied Bail on Sex-Trafficking Charges in New York, Pleads Not Guilty\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Tom Draper, Black Music Industry Pioneer, Dies at 79\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\n[Candidate News Title]\n\"Baker Mayfield's wife clarified her 'fair weather fans' comment after the Browns' win\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Baker Mayfield's wife clarifying her \"fair weather fans\" comment after the Browns' win, the user may expect to read an explanation of the context surrounding her remark, particularly in light of the team's recent performance. The piece could provide insights into the reactions from fans and media, shedding light on how her comments have been interpreted. Additionally, it is likely to explore any implications for fan engagement and the dynamics within the team following the victory. Overall, the article may aim to clarify her stance on fan loyalty and team support.",
+  "model": "gpt-4o-mini"
+}

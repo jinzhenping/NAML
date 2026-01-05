@@ -1,0 +1,21 @@
+{
+  "user_id": 776,
+  "candidate_news_id": "N35478",
+  "candidate_title": "Chipotle's new steak might become a permanent addition to the menu.",
+  "user_history_count": 10,
+  "user_history": [
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Supreme Court Justices Brett Kavanaugh and Samuel Alito Urged to Recuse Themselves From LGBT Cases",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Philadelphia shooting: 10-year-old boy shot in head while walking home from school",
+    "'You're not a serial killer, right?' victim text messaged man before she died",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Brain scans don't lie: The minds of girls and boys are equal in math",
+    "Precious metals get crushed as end-of-the-world trade implodes",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "They Are Racist; Some of Them Have Guns. Inside the White Supremacist Group Hiding in Plain Sight."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Supreme Court Justices Brett Kavanaugh and Samuel Alito Urged to Recuse Themselves From LGBT Cases\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Philadelphia shooting: 10-year-old boy shot in head while walking home from school\"\n\"'You're not a serial killer, right?' victim text messaged man before she died\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Brain scans don't lie: The minds of girls and boys are equal in math\"\n\"Precious metals get crushed as end-of-the-world trade implodes\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"They Are Racist; Some of Them Have Guns. Inside the White Supremacist Group Hiding in Plain Sight.\"\n\n[Candidate News Title]\n\"Chipotle's new steak might become a permanent addition to the menu.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article about Chipotle's new steak, they may expect to read an overview of the new menu item, including details on its ingredients, flavor profile, and preparation methods. The article is likely to discuss whether this new steak option could become a permanent feature on the menu, possibly highlighting customer reactions or sales performance. Additionally, the piece may include insights into how this addition aligns with Chipotle's overall menu strategy and customer preferences, offering a glimpse into potential future offerings.",
+  "model": "gpt-4o-mini"
+}

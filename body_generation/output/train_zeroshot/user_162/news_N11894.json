@@ -1,0 +1,21 @@
+{
+  "user_id": 162,
+  "candidate_news_id": "N11894",
+  "candidate_title": "Southwest pilots union says Boeing may be trying to hasten 737 MAX return",
+  "user_history_count": 10,
+  "user_history": [
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Popeyes' chicken sandwich is back on the menu, but it seems smaller and less exciting the second time around",
+    "5 Dallas Restaurant Closures to Know About Right Now",
+    "15 Old-School Dishes Making a Comeback at Restaurants",
+    "Dallas Has One of America's Best All-You-Can-Eat Restaurants",
+    "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup",
+    "Punch Bowl Social Shutters Its $2.5 Million Fort Worth Outpost After Three Months",
+    "Ex-TCU QB Trevone Boykin arrested for violating his bond, records show",
+    "Amazing motorhomes of the rich and famous",
+    "I Was A Psychic Phone Line Operator. Here's What Really Happened Behind The Scenes."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Popeyes' chicken sandwich is back on the menu, but it seems smaller and less exciting the second time around\"\n\"5 Dallas Restaurant Closures to Know About Right Now\"\n\"15 Old-School Dishes Making a Comeback at Restaurants\"\n\"Dallas Has One of America's Best All-You-Can-Eat Restaurants\"\n\"4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup\"\n\"Punch Bowl Social Shutters Its $2.5 Million Fort Worth Outpost After Three Months\"\n\"Ex-TCU QB Trevone Boykin arrested for violating his bond, records show\"\n\"Amazing motorhomes of the rich and famous\"\n\"I Was A Psychic Phone Line Operator. Here's What Really Happened Behind The Scenes.\"\n\n[Candidate News Title]\n\"Southwest pilots union says Boeing may be trying to hasten 737 MAX return\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Southwest pilots union says Boeing may be trying to hasten 737 MAX return,\" the user can expect to read about the ongoing discussions between Southwest Airlines' pilots union and Boeing regarding the timeline for the return of the 737 MAX aircraft. The piece is likely to cover concerns the pilots may have about safety and operational readiness, as well as the potential implications for air travel and the airline industry. Additionally, it could provide insights into the union's stance on the matter and any recent developments or statements from Boeing that may shed light on their intentions.",
+  "model": "gpt-4o-mini"
+}

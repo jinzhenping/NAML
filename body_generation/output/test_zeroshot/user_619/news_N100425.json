@@ -1,0 +1,21 @@
+{
+  "user_id": 619,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 10,
+  "user_history": [
+    "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Have a little piece of extra skin? Everything you need to know about skin tags",
+    "Passenger Booted From Diverted Flight After Threatening Rant",
+    "Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet",
+    "Martha Stewart shares the family favorites she serves during the holidays, including adding cream cheese to her mashed potatoes",
+    "The Most Amazing Photos of a Young Dolly Parton",
+    "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+    "Video shows tourists and locals wading through thigh-deep water in Venice during its worst flooding in more than 50 years"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Have a little piece of extra skin? Everything you need to know about skin tags\"\n\"Passenger Booted From Diverted Flight After Threatening Rant\"\n\"Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet\"\n\"Martha Stewart shares the family favorites she serves during the holidays, including adding cream cheese to her mashed potatoes\"\n\"The Most Amazing Photos of a Young Dolly Parton\"\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\"Video shows tourists and locals wading through thigh-deep water in Venice during its worst flooding in more than 50 years\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The most talked about movie moments of the 2010s,\" you can expect an overview of significant scenes and events from films released during that decade. The article may discuss iconic performances, memorable quotes, and groundbreaking visual effects that captured audience attention and sparked conversations. It is likely to highlight both mainstream blockbusters and critically acclaimed indie films, providing context on why these moments resonated with viewers and their impact on popular culture. Additionally, the piece may include insights into the filmmakers' intentions behind these standout scenes.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 877,
+  "candidate_news_id": "N19635",
+  "candidate_title": "2020 Kia Telluride Pros and Cons Review: The Heartland Kia",
+  "user_history_count": 10,
+  "user_history": [
+    "NFL winners, losers: Cowboys need to rebound, Patriots keep winning",
+    "Disney World's Skyliner system up and running for tests, reports say",
+    "Report: Ezekiel Elliott's dad investigated after police shoot wild cat near his home",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged",
+    "America's best inexpensive steakhouses",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "This Is What the 2020 Toyota Supra Should've Looked Like From the Start",
+    "The Curious Pasta Dish I Found on My Solo Trip to Italy",
+    "Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL winners, losers: Cowboys need to rebound, Patriots keep winning\"\n\"Disney World's Skyliner system up and running for tests, reports say\"\n\"Report: Ezekiel Elliott's dad investigated after police shoot wild cat near his home\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged\"\n\"America's best inexpensive steakhouses\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"This Is What the 2020 Toyota Supra Should've Looked Like From the Start\"\n\"The Curious Pasta Dish I Found on My Solo Trip to Italy\"\n\"Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage\"\n\n[Candidate News Title]\n\"2020 Kia Telluride Pros and Cons Review: The Heartland Kia\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"2020 Kia Telluride Pros and Cons Review: The Heartland Kia,\" the user is likely to find an analytical overview of the Kia Telluride, focusing on its strengths and weaknesses. The review may cover various aspects such as performance, interior design, safety features, and overall value, providing a balanced view to help potential buyers make informed decisions. Additionally, the piece is likely to include comparisons with other vehicles in the same class. There could be insights into consumer feedback and expert opinions, though the specifics of these evaluations are uncertain.",
+  "model": "gpt-4o-mini"
+}

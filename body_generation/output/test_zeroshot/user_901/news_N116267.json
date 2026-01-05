@@ -1,0 +1,21 @@
+{
+  "user_id": 901,
+  "candidate_news_id": "N116267",
+  "candidate_title": "End Of An Era As Chevy Has Built The Last Front-Engined Corvette",
+  "user_history_count": 10,
+  "user_history": [
+    "The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Poll: Buttigieg first in Iowa",
+    "Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\"",
+    "Three school workers charged in death of special needs student",
+    "Kaley Cuoco Says Having 'Separate Lives' Has Helped Her Marriage to Karl Cook",
+    "South Carolina president: 'Muschamp is my coach ... through the end of the season'",
+    "This is Chick-fil-A's most-ordered menu item",
+    "Opinion: Other schools can learn from Oregon's hiring of Mario Cristobal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Poll: Buttigieg first in Iowa\"\n\"Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\"\"\n\"Three school workers charged in death of special needs student\"\n\"Kaley Cuoco Says Having 'Separate Lives' Has Helped Her Marriage to Karl Cook\"\n\"South Carolina president: 'Muschamp is my coach ... through the end of the season'\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"Opinion: Other schools can learn from Oregon's hiring of Mario Cristobal\"\n\n[Candidate News Title]\n\"End Of An Era As Chevy Has Built The Last Front-Engined Corvette\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"End Of An Era As Chevy Has Built The Last Front-Engined Corvette\" is likely to discuss the significance of Chevrolet's decision to cease production of front-engine Corvettes, a model that has been iconic in automotive history. Readers may expect an overview of the Corvette’s evolution, highlighting its engineering advancements and cultural impact over the years. The article could also explore the potential implications for car enthusiasts and collectors, as well as Chevrolet's future direction with the Corvette line. Additionally, it may touch on the reactions from fans and industry experts regarding this transition.",
+  "model": "gpt-4o-mini"
+}

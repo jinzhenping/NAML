@@ -1,0 +1,21 @@
+{
+  "user_id": 594,
+  "candidate_news_id": "N25621",
+  "candidate_title": "Queen Elizabeth Just Rode Horseback at Age 93",
+  "user_history_count": 10,
+  "user_history": [
+    "Jennifer Aniston and Reese Witherspoon say they fast for 16 hours every day and never eat in the morning",
+    "Why Are Dressers Vanishing from Hotel Rooms?",
+    "A baseball miracle or a deal with the devil? Nah, it was just Nationals baseball.",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "11 Expenses to Cut Now If You Want to Retire Early",
+    "Kurt Suzuki didn't stick to sports, and neither should anyone else",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Is It Actually Harder to Lose Weight When You're Short?",
+    "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+    "49 thoughtful gifts to give your wife this holiday season"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jennifer Aniston and Reese Witherspoon say they fast for 16 hours every day and never eat in the morning\"\n\"Why Are Dressers Vanishing from Hotel Rooms?\"\n\"A baseball miracle or a deal with the devil? Nah, it was just Nationals baseball.\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"11 Expenses to Cut Now If You Want to Retire Early\"\n\"Kurt Suzuki didn't stick to sports, and neither should anyone else\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Is It Actually Harder to Lose Weight When You're Short?\"\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\"49 thoughtful gifts to give your wife this holiday season\"\n\n[Candidate News Title]\n\"Queen Elizabeth Just Rode Horseback at Age 93\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses Queen Elizabeth's recent horseback riding activity at the age of 93, highlighting her continued engagement in equestrian pursuits despite her advanced age. Readers may expect insights into her health and fitness regimen, as well as the significance of this activity in relation to her public image and royal duties. Additionally, the article could explore the historical context of her love for horses and riding, potentially reflecting on how this passion has shaped her life as a monarch.",
+  "model": "gpt-4o-mini"
+}

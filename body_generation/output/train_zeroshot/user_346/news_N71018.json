@@ -1,0 +1,18 @@
+{
+  "user_id": 346,
+  "candidate_news_id": "N71018",
+  "candidate_title": "Veterans Day, Record-breaking cold front, Rare Mercury transit: 5 things you need to know Monday",
+  "user_history_count": 7,
+  "user_history": [
+    "Spectacular photos from space",
+    "Former US Senator Kay Hagan dead at 66",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "Dad Goes Viral By Performing His Daughter's Exact Cheer Routine From the Stands",
+    "Republicans urge Bevin to provide proof of election fraud or concede",
+    "Young homebuyers are vanishing from the US",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Spectacular photos from space\"\n\"Former US Senator Kay Hagan dead at 66\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"Dad Goes Viral By Performing His Daughter's Exact Cheer Routine From the Stands\"\n\"Republicans urge Bevin to provide proof of election fraud or concede\"\n\"Young homebuyers are vanishing from the US\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Veterans Day, Record-breaking cold front, Rare Mercury transit: 5 things you need to know Monday\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to learn about significant events and phenomena occurring on Monday, including observations related to Veterans Day, which honors military service members. The mention of a record-breaking cold front suggests that there will be detailed forecasts regarding the severe weather conditions expected across various regions in the U.S. Additionally, the reference to a rare Mercury transit may provide insights into astronomical events, explaining what this phenomenon is and its significance. The article could include practical information for readers, such as how to prepare for the cold weather or view the Mercury transit, although these aspects are not guaranteed.",
+  "model": "gpt-4o-mini"
+}

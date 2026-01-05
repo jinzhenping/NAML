@@ -1,0 +1,21 @@
+{
+  "user_id": 397,
+  "candidate_news_id": "N30955",
+  "candidate_title": "Baker Mayfield quick to condemn teammate Myles Garrett for brawl, attack on Mason Rudolph",
+  "user_history_count": 10,
+  "user_history": [
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "The Trendiest Hair Colors for Winter, From Mulled Wine to Greige Blonde",
+    "Visa, Mastercard draw FTC inquiry over debit card transactions",
+    "Emilia Clarke Stunned in a Cut-Out Dress at the 'Last Christmas' Premiere",
+    "Oreo just released a creme-filled egg and it looks incredible",
+    "I ordered clothes from those cheap online stores, and I'm not sold",
+    "Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary",
+    "Four words from dermatologists that'll change your life: Stop showering every day",
+    "Miami symphony oboe player dies after falling down stairs in concert hall minutes before performance",
+    "Hugh Jackman Congratulates John Legend on Sexiest Man Alive While Poking Fun at Ryan Reynolds"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"The Trendiest Hair Colors for Winter, From Mulled Wine to Greige Blonde\"\n\"Visa, Mastercard draw FTC inquiry over debit card transactions\"\n\"Emilia Clarke Stunned in a Cut-Out Dress at the 'Last Christmas' Premiere\"\n\"Oreo just released a creme-filled egg and it looks incredible\"\n\"I ordered clothes from those cheap online stores, and I'm not sold\"\n\"Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary\"\n\"Four words from dermatologists that'll change your life: Stop showering every day\"\n\"Miami symphony oboe player dies after falling down stairs in concert hall minutes before performance\"\n\"Hugh Jackman Congratulates John Legend on Sexiest Man Alive While Poking Fun at Ryan Reynolds\"\n\n[Candidate News Title]\n\"Baker Mayfield quick to condemn teammate Myles Garrett for brawl, attack on Mason Rudolph\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a discussion surrounding Baker Mayfield's recent comments regarding his teammate Myles Garrett's involvement in a brawl and subsequent attack on Mason Rudolph. The piece may provide details about the incident, including background on the players involved and the context of the altercation. Additionally, it could explore the ramifications of Garrett's actions on the team and the league, as well as Mayfield's perspective on maintaining team cohesion in light of such controversies. Overall, the article is expected to offer insights into player dynamics and team culture within the NFL.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 699,
+  "candidate_news_id": "N27597",
+  "candidate_title": "Health Benefits of Nutritional Yeast and How to Use It",
+  "user_history_count": 10,
+  "user_history": [
+    "Celebrity chef Richard Blais shares cooking tips that helped him lose 60 pounds",
+    "I Didn't Grow Up Eating Chips I Ate Crab Stick Crackers",
+    "Are So Many Americans Fat Because They're Getting Terrible Nutrition Advice From 'The Experts'?",
+    "Our 41 Favorite Fall Cakes",
+    "China approves seaweed-based Alzheimer's drug. It's the first new one in 17 years",
+    "If You're a Fan of French Fries, You'll Love This Healthy Italian Alternative Made From Chickpeas",
+    "50 Thanksgiving Appetizer & Dip Recipes That Won't Spoil Your Appetite",
+    "Thanksgiving map shows each state's most-searched recipe",
+    "81 Bean Recipes You'll Be Making All Year Long",
+    "This Man Is Behind Every Single Antique You See In Cracker Barrel Stores"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebrity chef Richard Blais shares cooking tips that helped him lose 60 pounds\"\n\"I Didn't Grow Up Eating Chips I Ate Crab Stick Crackers\"\n\"Are So Many Americans Fat Because They're Getting Terrible Nutrition Advice From 'The Experts'?\"\n\"Our 41 Favorite Fall Cakes\"\n\"China approves seaweed-based Alzheimer's drug. It's the first new one in 17 years\"\n\"If You're a Fan of French Fries, You'll Love This Healthy Italian Alternative Made From Chickpeas\"\n\"50 Thanksgiving Appetizer & Dip Recipes That Won't Spoil Your Appetite\"\n\"Thanksgiving map shows each state's most-searched recipe\"\n\"81 Bean Recipes You'll Be Making All Year Long\"\n\"This Man Is Behind Every Single Antique You See In Cracker Barrel Stores\"\n\n[Candidate News Title]\n\"Health Benefits of Nutritional Yeast and How to Use It\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Health Benefits of Nutritional Yeast and How to Use It\" is likely to provide an overview of the various health advantages associated with nutritional yeast, such as its potential contributions to a balanced diet through its rich vitamin B content and protein profile. It may also include practical tips on how to incorporate nutritional yeast into everyday meals, perhaps suggesting recipes or serving ideas that align with healthy eating trends. Additionally, the article could explore the growing popularity of nutritional yeast among those seeking plant-based alternatives, although this remains uncertain.",
+  "model": "gpt-4o-mini"
+}

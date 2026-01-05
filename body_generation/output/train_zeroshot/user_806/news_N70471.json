@@ -1,0 +1,21 @@
+{
+  "user_id": 806,
+  "candidate_news_id": "N70471",
+  "candidate_title": "UPDATE 2-Australia battles bushfires, prepares for \"catastrophic\" conditions",
+  "user_history_count": 10,
+  "user_history": [
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "Injured Cowboys DL Daniel Ross arrested on drug, gun charges",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "A Texas man shot and killed his wife. He says he was sleepwalking.",
+    "Supt. Johnson Announces Retirement: 'Time for Someone Else'",
+    "Loved ones arrive for funerals of 9 members of American family slain in Mexico",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Far-reaching snowstorm may take shape over US",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"Injured Cowboys DL Daniel Ross arrested on drug, gun charges\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"A Texas man shot and killed his wife. He says he was sleepwalking.\"\n\"Supt. Johnson Announces Retirement: 'Time for Someone Else'\"\n\"Loved ones arrive for funerals of 9 members of American family slain in Mexico\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\n[Candidate News Title]\n\"UPDATE 2-Australia battles bushfires, prepares for \"catastrophic\" conditions\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the ongoing bushfire situation in Australia, focusing on the severe weather conditions that are expected to exacerbate the fires. It may detail the preparations being made by local authorities and emergency services to combat the fires and protect communities, including evacuation plans and resource allocation. Additionally, the article could provide insights into the environmental impact of the bushfires and the response from the Australian government. Overall, readers can expect an informative overview of the challenges posed by the catastrophic conditions and the measures being implemented to address them.",
+  "model": "gpt-4o-mini"
+}

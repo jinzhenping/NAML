@@ -1,0 +1,21 @@
+{
+  "user_id": 553,
+  "candidate_news_id": "N58760",
+  "candidate_title": "Police find 26 children behind false wall at Colorado day care",
+  "user_history_count": 10,
+  "user_history": [
+    "Odell Beckham's Comments After Browns-Patriots Prove Exactly Why Giants Traded Him",
+    "Today in History: October 29",
+    "Arnold Schwarzenegger's photo flashback",
+    "Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "Girlfriend testifies at trial of man in death of his fiancee",
+    "Helen Mirren Says it Was 'Very Flattering' to Be Mistaken for Keanu Reeves' Girlfriend",
+    "Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Odell Beckham's Comments After Browns-Patriots Prove Exactly Why Giants Traded Him\"\n\"Today in History: October 29\"\n\"Arnold Schwarzenegger's photo flashback\"\n\"Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"Girlfriend testifies at trial of man in death of his fiancee\"\n\"Helen Mirren Says it Was 'Very Flattering' to Be Mistaken for Keanu Reeves' Girlfriend\"\n\"Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage\"\n\n[Candidate News Title]\n\"Police find 26 children behind false wall at Colorado day care\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Police find 26 children behind false wall at Colorado day care\" is likely to detail a shocking discovery made by law enforcement at a daycare facility in Colorado, where a significant number of children were reportedly found hidden behind a false wall. The piece may explore the circumstances surrounding this incident, including the actions of the daycare staff and the ongoing investigation by authorities. Additionally, it could provide insights into the potential implications for child safety regulations and the legal consequences for those involved, highlighting the urgency and seriousness of the situation.",
+  "model": "gpt-4o-mini"
+}

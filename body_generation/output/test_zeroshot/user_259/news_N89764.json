@@ -1,0 +1,21 @@
+{
+  "user_id": 259,
+  "candidate_news_id": "N89764",
+  "candidate_title": "Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Brady frustrated with Patriots about Brown, Gordon",
+    "Redskins' Haskins calls out Peterson on Twitter",
+    "Fox News contributor: 'Most likely' outcome is Trump doesn't run in 2020",
+    "Refs blow whistle early, cost Bucs late go-ahead TD in Titans win",
+    "Prosecutors want black judge who criticized incarceration rates of African Americans removed",
+    "What's behind the 'mystery surcharge' at some California gas stations?",
+    "How to Split an Apple in Half With Your Bare Hands",
+    "Latest Australia shark attack sparks tourism concerns",
+    "Kent, Taylor say they're not 'Never Trumpers' after Trump twitter offensive",
+    "Panthers QB Cam Newton would reportedly welcome trade to Bears"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Brady frustrated with Patriots about Brown, Gordon\"\n\"Redskins' Haskins calls out Peterson on Twitter\"\n\"Fox News contributor: 'Most likely' outcome is Trump doesn't run in 2020\"\n\"Refs blow whistle early, cost Bucs late go-ahead TD in Titans win\"\n\"Prosecutors want black judge who criticized incarceration rates of African Americans removed\"\n\"What's behind the 'mystery surcharge' at some California gas stations?\"\n\"How to Split an Apple in Half With Your Bare Hands\"\n\"Latest Australia shark attack sparks tourism concerns\"\n\"Kent, Taylor say they're not 'Never Trumpers' after Trump twitter offensive\"\n\"Panthers QB Cam Newton would reportedly welcome trade to Bears\"\n\n[Candidate News Title]\n\"Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital,\" you can expect an informative overview of the incident involving the Redskins player. The article will likely detail the circumstances surrounding the woman's death and the police investigation that followed. It may discuss Nicholson's involvement, including any statements he has made, and the potential implications for both him and the team. Additionally, the article could explore broader themes related to athlete conduct and public scrutiny.",
+  "model": "gpt-4o-mini"
+}

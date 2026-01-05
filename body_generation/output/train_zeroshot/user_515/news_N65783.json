@@ -1,0 +1,21 @@
+{
+  "user_id": 515,
+  "candidate_news_id": "N65783",
+  "candidate_title": "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+  "user_history_count": 10,
+  "user_history": [
+    "Walmart Sparks Panic and Confusion in the Dish-Soap Aisle",
+    "Couple's haunting wedding photo captures California wildfire raging nearby",
+    "Ever wake up to a numb, dead arm? Here's what's happening.",
+    "Why the 'extreme red flag' winds hitting L.A. region are dangerous and unpredictable",
+    "Most adults over 50 would rather die than do this",
+    "7 Rules for How to Call in Sick to Work",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+    "Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.",
+    "Icy roads and treacherous morning commute for Midwest"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Walmart Sparks Panic and Confusion in the Dish-Soap Aisle\"\n\"Couple's haunting wedding photo captures California wildfire raging nearby\"\n\"Ever wake up to a numb, dead arm? Here's what's happening.\"\n\"Why the 'extreme red flag' winds hitting L.A. region are dangerous and unpredictable\"\n\"Most adults over 50 would rather die than do this\"\n\"7 Rules for How to Call in Sick to Work\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.\"\n\"Icy roads and treacherous morning commute for Midwest\"\n\n[Candidate News Title]\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about the passing of Marlboro Man Bob Norris at the age of 90, the user may expect to learn about his life and career, particularly his role as a prominent figure in tobacco advertising. The piece is likely to explore his connection to the iconic Marlboro brand, including details about how he became the face of the campaign and the public perception of his image as a rugged outdoorsman. Additionally, it may touch on his personal choices regarding smoking, as reports suggest he never actually smoked, which could lead to discussions about the impact of advertising on public health and perceptions of masculinity.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 351,
+  "candidate_news_id": "N119460",
+  "candidate_title": "Punches, broken bones and more: 1 in 4 nurses are attacked on the job, study says",
+  "user_history_count": 10,
+  "user_history": [
+    "Forde-Yard Dash: This is how bad the playoff picture can get",
+    "Oklahoma announces Schooner wagon will not run rest of season after crash",
+    "The oldest town in every state",
+    "This Is The World Series MLB Deserves",
+    "Nationals on ropes after another home World Series loss in Game 5",
+    "10 things we learned during college football weekend",
+    "Auburn hasn't lost faith in quarterback Bo Nix, who will be happy to be home",
+    "With Carlos Beltran hire it's clear the Mets learned nothing from the Mickey Callaway mess",
+    "Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him",
+    "Monday night's win over the Giants emblematic of bigger issue for Cowboys"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Oklahoma announces Schooner wagon will not run rest of season after crash\"\n\"The oldest town in every state\"\n\"This Is The World Series MLB Deserves\"\n\"Nationals on ropes after another home World Series loss in Game 5\"\n\"10 things we learned during college football weekend\"\n\"Auburn hasn't lost faith in quarterback Bo Nix, who will be happy to be home\"\n\"With Carlos Beltran hire it's clear the Mets learned nothing from the Mickey Callaway mess\"\n\"Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him\"\n\"Monday night's win over the Giants emblematic of bigger issue for Cowboys\"\n\n[Candidate News Title]\n\"Punches, broken bones and more: 1 in 4 nurses are attacked on the job, study says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Punches, broken bones and more: 1 in 4 nurses are attacked on the job, study says\" is likely to provide an overview of a recent study highlighting the alarming rates of workplace violence faced by nurses. It may detail various forms of aggression encountered in healthcare settings, potentially discussing the implications for nurse safety and patient care. The article could also explore factors contributing to this issue, such as understaffing or high-stress environments, and might suggest possible measures to enhance workplace safety for healthcare professionals.",
+  "model": "gpt-4o-mini"
+}

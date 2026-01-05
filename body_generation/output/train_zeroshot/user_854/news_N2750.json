@@ -1,0 +1,21 @@
+{
+  "user_id": 854,
+  "candidate_news_id": "N2750",
+  "candidate_title": "Man cuffed for eating sandwich on train platform gets an apology",
+  "user_history_count": 10,
+  "user_history": [
+    "The most powerful LGBTQ movies",
+    "15 Strangest Things Mechanics Have Found in Cars",
+    "Meghan Markle and Prince Harry are bringing Archie on his first trip to the US over Thanksgiving",
+    "Frustrated Antonio Brown has active morning on Twitter",
+    "Kate Middleton Takes Prince George and Princess Charlotte Halloween Shopping at Local Supermarket",
+    "Country Singer Ned LeDoux's 2-Year-Old Daughter Dies After 'Tragic Choking Accident' at Home",
+    "Meghan Markle and Prince Harry's Newest Nickname for Archie Is Halloween-Appropriate",
+    "Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody",
+    "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+    "Far-reaching snowstorm may take shape over US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The most powerful LGBTQ movies\"\n\"15 Strangest Things Mechanics Have Found in Cars\"\n\"Meghan Markle and Prince Harry are bringing Archie on his first trip to the US over Thanksgiving\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Kate Middleton Takes Prince George and Princess Charlotte Halloween Shopping at Local Supermarket\"\n\"Country Singer Ned LeDoux's 2-Year-Old Daughter Dies After 'Tragic Choking Accident' at Home\"\n\"Meghan Markle and Prince Harry's Newest Nickname for Archie Is Halloween-Appropriate\"\n\"Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"Far-reaching snowstorm may take shape over US\"\n\n[Candidate News Title]\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Man cuffed for eating sandwich on train platform gets an apology,\" they might expect to read about a recent incident involving law enforcement and an individual who was detained for eating a sandwich in a public transit setting. The article is likely to provide details about the circumstances that led to the man's apprehension, the public reaction to the event, and the subsequent apology issued by authorities. It may also explore broader themes related to public behavior regulations and the role of police in minor infractions, highlighting societal responses to such incidents.",
+  "model": "gpt-4o-mini"
+}

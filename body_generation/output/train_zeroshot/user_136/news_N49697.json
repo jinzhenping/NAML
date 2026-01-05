@@ -1,0 +1,21 @@
+{
+  "user_id": 136,
+  "candidate_news_id": "N49697",
+  "candidate_title": "Today in History: November 12",
+  "user_history_count": 10,
+  "user_history": [
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "The healthiest fast food option at every well-known chain",
+    "Chevrolet Performance Reveals New Small Block Crate Engine",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Two dead following explosion involving 18-wheeler in Texas",
+    "Why Has This 1970 Chevrolet Camaro Z/28 Gone Just 8,500 Miles?",
+    "How the Mid-Engine Corvette Helped Chevy Make a Better Small Block"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"The healthiest fast food option at every well-known chain\"\n\"Chevrolet Performance Reveals New Small Block Crate Engine\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Two dead following explosion involving 18-wheeler in Texas\"\n\"Why Has This 1970 Chevrolet Camaro Z/28 Gone Just 8,500 Miles?\"\n\"How the Mid-Engine Corvette Helped Chevy Make a Better Small Block\"\n\n[Candidate News Title]\n\"Today in History: November 12\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"Today in History: November 12,\" you can likely expect a summary of significant events that occurred on this date throughout history. The article may cover a range of topics, including notable political developments, cultural milestones, or key inventions that have shaped history. Specific details could include famous birthdays or anniversaries related to historical figures or pivotal moments. This overview is likely to provide context about how these events have impacted society over time, illustrating their relevance to contemporary issues or celebrations.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 539,
+  "candidate_news_id": "N11057",
+  "candidate_title": "Aviation-Inspired Travel Experiences on the East and West Coast",
+  "user_history_count": 10,
+  "user_history": [
+    "Most adults over 50 would rather die than do this",
+    "Windsor Castle's Inner Hall Opens to the Public for First Time in 150 Years",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "NFL midseason report cards: 32 things we learned while grading the teams",
+    "5 ways to get free access to services like Netflix, HBO, Hulu, Disney Plus, and Apple TV Plus",
+    "6 NFL teams on upset alert in Week 9",
+    "Garth Brooks Got Called Out by Jimmy Carter for Taking Break During Habitat for Humanity Build",
+    "Man's trip to a cheese shop helps unravel missing persons case",
+    "50 Incredible DIY Home Projects",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Most adults over 50 would rather die than do this\"\n\"Windsor Castle's Inner Hall Opens to the Public for First Time in 150 Years\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"NFL midseason report cards: 32 things we learned while grading the teams\"\n\"5 ways to get free access to services like Netflix, HBO, Hulu, Disney Plus, and Apple TV Plus\"\n\"6 NFL teams on upset alert in Week 9\"\n\"Garth Brooks Got Called Out by Jimmy Carter for Taking Break During Habitat for Humanity Build\"\n\"Man's trip to a cheese shop helps unravel missing persons case\"\n\"50 Incredible DIY Home Projects\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\n[Candidate News Title]\n\"Aviation-Inspired Travel Experiences on the East and West Coast\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Aviation-Inspired Travel Experiences on the East and West Coast\" is likely to explore various travel opportunities that are themed around aviation, offering unique experiences tied to flight and aeronautics. It may detail specific destinations or attractions, such as aviation museums, airshows, or flight simulation experiences that can be found on both coasts of the United States. Additionally, the article could provide insights into how these experiences combine education and entertainment for travelers. Overall, readers can expect a blend of practical information and inspiring ideas for aviation enthusiasts or those seeking novel travel adventures.",
+  "model": "gpt-4o-mini"
+}

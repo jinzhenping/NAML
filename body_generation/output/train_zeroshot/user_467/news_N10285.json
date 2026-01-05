@@ -1,0 +1,21 @@
+{
+  "user_id": 467,
+  "candidate_news_id": "N10285",
+  "candidate_title": "4 reasons you shouldn't max out your 401(k)",
+  "user_history_count": 10,
+  "user_history": [
+    "Why plane tires don't explode during landing",
+    "Solomons vetoes Chinese 'lease' on Pacific island",
+    "Defense secretary offers more details on military raid in Syria, al-Baghdadi's death",
+    "Take a tour of Derek Jeter's $14 million castle",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Tent Spent: We Try Luxury Camping in a $100,000 Airstream",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "The world's largest nuclear power producer is melting down",
+    "Previewing the Debut of the 2019 College Football Playoff Rankings",
+    "Seahawks' Wilson is the MVP right now and there's no debate"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why plane tires don't explode during landing\"\n\"Solomons vetoes Chinese 'lease' on Pacific island\"\n\"Defense secretary offers more details on military raid in Syria, al-Baghdadi's death\"\n\"Take a tour of Derek Jeter's $14 million castle\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Tent Spent: We Try Luxury Camping in a $100,000 Airstream\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"The world's largest nuclear power producer is melting down\"\n\"Previewing the Debut of the 2019 College Football Playoff Rankings\"\n\"Seahawks' Wilson is the MVP right now and there's no debate\"\n\n[Candidate News Title]\n\"4 reasons you shouldn't max out your 401(k)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a discussion on the potential drawbacks of maximizing contributions to a 401(k) retirement account. It may outline reasons such as the impact on immediate cash flow, the potential for lower liquidity, and the opportunity costs associated with tying up funds in retirement savings. Additionally, the piece could explore alternative investment strategies or savings options that might be more beneficial for certain financial situations. Overall, the article is likely to provide a balanced view on retirement planning, emphasizing the importance of careful financial decision-making.",
+  "model": "gpt-4o-mini"
+}

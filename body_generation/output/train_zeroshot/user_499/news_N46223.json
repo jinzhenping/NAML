@@ -1,0 +1,21 @@
+{
+  "user_id": 499,
+  "candidate_news_id": "N46223",
+  "candidate_title": "Six pretenders entering the 2019 NFL home stretch",
+  "user_history_count": 10,
+  "user_history": [
+    "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+    "Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory",
+    "Why Trump's tariffs haven't revitalized American steelmakers",
+    "South Dakota executes man in '92 slaying of former co-worker",
+    "IHSA Challenges Ruling That Allowed CPS Cross-Country Runners To Advance Despite Recent Teachers' Strike",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Snow crab sells for record price in Japan"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Severe weather shifts boat stuck on Niagara Falls rocks for 101 years\"\n\"Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory\"\n\"Why Trump's tariffs haven't revitalized American steelmakers\"\n\"South Dakota executes man in '92 slaying of former co-worker\"\n\"IHSA Challenges Ruling That Allowed CPS Cross-Country Runners To Advance Despite Recent Teachers' Strike\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Snow crab sells for record price in Japan\"\n\n[Candidate News Title]\n\"Six pretenders entering the 2019 NFL home stretch\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a discussion on the current state of several NFL teams as they approach the conclusion of the 2019 season. It may analyze the performance and prospects of teams that are considered unlikely to make a playoff impact, potentially focusing on their struggles and challenges. The article could also highlight key players and coaches, and might speculate on what changes these teams may need to consider in the offseason to improve their standings in the future.",
+  "model": "gpt-4o-mini"
+}

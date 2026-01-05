@@ -1,0 +1,21 @@
+{
+  "user_id": 955,
+  "candidate_news_id": "N115491",
+  "candidate_title": "ISIS Leader al-Baghdadi May Have Had U.S. Hostage Executed, Witness Says",
+  "user_history_count": 10,
+  "user_history": [
+    "Video shows water gushing from Philadelphia skyscraper",
+    "The News In Cartoons",
+    "Opinions | Trump's awful new 'transcript' tweets demonstrate how his propaganda works",
+    "Browns cut Jermaine Whitehead after racist Twitter rant that included death threats",
+    "Trump Refuses To Guarantee No Shutdown Over Impeachment: 'We'll See'",
+    "Opinions | Trump's awful new 'transcript' tweets demonstrate how his propaganda works",
+    "Families urge Buffalo Wild Wings to adopt 'zero tolerance' policies after racist incident at Illinois restaurant",
+    "The News In Cartoons",
+    "The 'Stranger Things' BLOOPER REEL Is a Must-Watch!",
+    "The News In Cartoons"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Video shows water gushing from Philadelphia skyscraper\"\n\"The News In Cartoons\"\n\"Opinions | Trump's awful new 'transcript' tweets demonstrate how his propaganda works\"\n\"Browns cut Jermaine Whitehead after racist Twitter rant that included death threats\"\n\"Trump Refuses To Guarantee No Shutdown Over Impeachment: 'We'll See'\"\n\"Opinions | Trump's awful new 'transcript' tweets demonstrate how his propaganda works\"\n\"Families urge Buffalo Wild Wings to adopt 'zero tolerance' policies after racist incident at Illinois restaurant\"\n\"The News In Cartoons\"\n\"The 'Stranger Things' BLOOPER REEL Is a Must-Watch!\"\n\"The News In Cartoons\"\n\n[Candidate News Title]\n\"ISIS Leader al-Baghdadi May Have Had U.S. Hostage Executed, Witness Says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"ISIS Leader al-Baghdadi May Have Had U.S. Hostage Executed, Witness Says\" is likely to discuss allegations surrounding the actions of the ISIS leader, particularly in relation to a U.S. hostage believed to have been executed. Readers can expect an overview of the claims made by witnesses, including details about the circumstances of the hostage's capture and the implications of these allegations for U.S. counterterrorism efforts. The article may also explore the broader impact of such actions on the ongoing conflict with ISIS and the challenges faced by authorities in preventing future incidents.",
+  "model": "gpt-4o-mini"
+}

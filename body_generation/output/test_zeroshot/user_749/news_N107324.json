@@ -1,0 +1,21 @@
+{
+  "user_id": 749,
+  "candidate_news_id": "N107324",
+  "candidate_title": "Nonsmoker's family was haunted by lung cancer   then she got diagnosed herself",
+  "user_history_count": 10,
+  "user_history": [
+    "Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic",
+    "Actress Accuses Roman Polanski of Raping Her in 1975",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Must-See Fashion Police Moments to Swoon Over This Week",
+    "This little Montana town is full of Power Wagons and Mustangs",
+    "RHOP's Monique Samuels Charged With Assault After Incident With Candiace Dillard",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Beat the crowds at these abandoned U.S. national parks",
+    "5 Things to Know About Visiting Lake Powell",
+    "One of America's biggest solar panel makers quits manufacturing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic\"\n\"Actress Accuses Roman Polanski of Raping Her in 1975\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Must-See Fashion Police Moments to Swoon Over This Week\"\n\"This little Montana town is full of Power Wagons and Mustangs\"\n\"RHOP's Monique Samuels Charged With Assault After Incident With Candiace Dillard\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Beat the crowds at these abandoned U.S. national parks\"\n\"5 Things to Know About Visiting Lake Powell\"\n\"One of America's biggest solar panel makers quits manufacturing\"\n\n[Candidate News Title]\n\"Nonsmoker's family was haunted by lung cancer   then she got diagnosed herself\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "This article likely explores the story of a nonsmoker whose family experienced the devastating effects of lung cancer, culminating in her own diagnosis. Readers can expect detailed accounts of the family's history with the disease, including potential genetic factors or environmental influences that may have contributed to their experiences. The article could also discuss the broader implications of lung cancer in nonsmokers, emphasizing the importance of awareness and early detection. Overall, it aims to inform readers about the sobering realities of lung cancer beyond traditional risk factors.",
+  "model": "gpt-4o-mini"
+}

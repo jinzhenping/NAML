@@ -1,0 +1,21 @@
+{
+  "user_id": 489,
+  "candidate_news_id": "N105605",
+  "candidate_title": "Mark Jackson is name to watch in potential Knicks head coach search",
+  "user_history_count": 10,
+  "user_history": [
+    "Barneys Is Sold for Scrap, Ending an Era",
+    "Solange Knowles splits with husband ahead of anniversary",
+    "The 'race whisperer'",
+    "23 Cars With the Coolest Retro Designs",
+    "Lorde Pens Emotional Letter After Her Dog Pearl's Death: 'I Have Lost My Boy'",
+    "Jeremy Roloff Vows to Pay More 'Attention' to His Health After Undergoing Hernia Surgery",
+    "Mongolian Groom trainer 'very sorry' following horse's death at Breeders' Cup",
+    "Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "We Tried Krispy Kreme's New Pie Donuts This Was the Best One"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Barneys Is Sold for Scrap, Ending an Era\"\n\"Solange Knowles splits with husband ahead of anniversary\"\n\"The 'race whisperer'\"\n\"23 Cars With the Coolest Retro Designs\"\n\"Lorde Pens Emotional Letter After Her Dog Pearl's Death: 'I Have Lost My Boy'\"\n\"Jeremy Roloff Vows to Pay More 'Attention' to His Health After Undergoing Hernia Surgery\"\n\"Mongolian Groom trainer 'very sorry' following horse's death at Breeders' Cup\"\n\"Meghan Markle's estranged brother says 'she is only in Buckingham Palace with Harry because of her dad' after he 'paid for her education and fancy clothes'\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"We Tried Krispy Kreme's New Pie Donuts This Was the Best One\"\n\n[Candidate News Title]\n\"Mark Jackson is name to watch in potential Knicks head coach search\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Mark Jackson potentially being a candidate for the Knicks head coach position is likely to explore his coaching credentials and previous experiences in the NBA. Readers may expect information on Jackson's career, including his time as a player and coach, along with insights into his coaching style and philosophy. The piece could also discuss how his appointment might align with the team's current strategy and needs, as well as reactions from fans and analysts. Additionally, the article may highlight any other candidates in the running for the position, providing context for Jackson's potential selection.",
+  "model": "gpt-4o-mini"
+}

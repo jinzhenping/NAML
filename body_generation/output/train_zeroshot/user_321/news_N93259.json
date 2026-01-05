@@ -1,0 +1,21 @@
+{
+  "user_id": 321,
+  "candidate_news_id": "N93259",
+  "candidate_title": "WSU student death: Police investigating fraternity member found not breathing",
+  "user_history_count": 10,
+  "user_history": [
+    "Stormi Webster Channels Mom Kylie Jenner With Epic Halloween Costume",
+    "Jane Fonda spends night in jail after latest climate change protest",
+    "The end of Barneys, the store that made us lust for fashion",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "California authorities found and destroyed $1 billion worth of marijuana plants",
+    "Far-reaching snowstorm may take shape over US",
+    "Lil Pump bit by snake on set of music video",
+    "Kristen Stewart Just Made Leather Bras a Thing, and We're All For It",
+    "One Mom's Unedited Maternity Shots Are Showing The World How Beautiful Real Can Be",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Stormi Webster Channels Mom Kylie Jenner With Epic Halloween Costume\"\n\"Jane Fonda spends night in jail after latest climate change protest\"\n\"The end of Barneys, the store that made us lust for fashion\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"California authorities found and destroyed $1 billion worth of marijuana plants\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Lil Pump bit by snake on set of music video\"\n\"Kristen Stewart Just Made Leather Bras a Thing, and We're All For It\"\n\"One Mom's Unedited Maternity Shots Are Showing The World How Beautiful Real Can Be\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\n[Candidate News Title]\n\"WSU student death: Police investigating fraternity member found not breathing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the WSU student death is likely to provide an overview of the circumstances surrounding the incident, detailing the discovery of a fraternity member who was found unresponsive. Readers can expect information on the police investigation, including any preliminary findings or statements from authorities. The piece may also touch on the broader implications related to fraternity culture and safety on campus, as well as any responses from the university community. However, it is uncertain whether the article will delve into specific details about the individual involved or the events leading up to the incident.",
+  "model": "gpt-4o-mini"
+}

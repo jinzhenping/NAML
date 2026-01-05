@@ -1,0 +1,21 @@
+{
+  "user_id": 441,
+  "candidate_news_id": "N76681",
+  "candidate_title": "Women's rugby teams join forces to move ambulance",
+  "user_history_count": 10,
+  "user_history": [
+    "Prince Harry and Meghan Markle are taking a royal respite",
+    "125 Classic Thanksgiving Menu Ideas",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Holocaust survivor under guard amid death threats",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "Internal NOAA emails detail blowback to Trump hurricane claims: 'This has really gotten out of hand'",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Prince Harry and Meghan Markle are taking a royal respite\"\n\"125 Classic Thanksgiving Menu Ideas\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Holocaust survivor under guard amid death threats\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"Internal NOAA emails detail blowback to Trump hurricane claims: 'This has really gotten out of hand'\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\n[Candidate News Title]\n\"Women's rugby teams join forces to move ambulance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a collaborative initiative among women's rugby teams aimed at enhancing emergency response services, potentially focusing on the integration of sports and community health. It may provide details on how these teams are working together to fundraise or advocate for improved ambulance services or medical support at sporting events. Additionally, the piece could highlight the broader implications of such partnerships in promoting health and safety within the community, though the specifics of these programs are not guaranteed.",
+  "model": "gpt-4o-mini"
+}

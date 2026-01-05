@@ -1,0 +1,19 @@
+{
+  "user_id": 564,
+  "candidate_news_id": "N56282",
+  "candidate_title": "Jets get a much needed win over Giants but is Adam Gases' job safe?",
+  "user_history_count": 8,
+  "user_history": [
+    "Rare 1992 GMC Typhoon Sold at Barrett-Jackson Auction Has Us Drooling",
+    "MLB reportedly looking into umpire's controversial tweet: 'If you impeach MY PRESIDENT this way, YOU WILL HAVE ANOTHER CIVAL WAR'",
+    "California's legal weed profits going up in smoke",
+    "John Cena makes red carpet debut with girlfriend Shay Shariatzadeh",
+    "Donald Trump's 'Lynching'",
+    "Democrats Have the Most Racially Diverse Field Ever. The Top Tier Is All White.",
+    "Orioles' Chris Davis sets record with $3M donation to University of Maryland Children's Hospital",
+    "Actress playing murderer in film charged in real life for killing uncle"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Rare 1992 GMC Typhoon Sold at Barrett-Jackson Auction Has Us Drooling\"\n\"MLB reportedly looking into umpire's controversial tweet: 'If you impeach MY PRESIDENT this way, YOU WILL HAVE ANOTHER CIVAL WAR'\"\n\"California's legal weed profits going up in smoke\"\n\"John Cena makes red carpet debut with girlfriend Shay Shariatzadeh\"\n\"Donald Trump's 'Lynching'\"\n\"Democrats Have the Most Racially Diverse Field Ever. The Top Tier Is All White.\"\n\"Orioles' Chris Davis sets record with $3M donation to University of Maryland Children's Hospital\"\n\"Actress playing murderer in film charged in real life for killing uncle\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Jets get a much needed win over Giants but is Adam Gases' job safe?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Jets get a much needed win over Giants but is Adam Gases' job safe?\" is likely to provide a detailed analysis of the New York Jets' recent victory against the New York Giants, focusing on the implications for head coach Adam Gase’s future with the team. Readers might expect to find insights into key plays from the game, player performances, and overall team dynamics. Additionally, the article may explore the ongoing discussions surrounding Gase's coaching strategies and whether this win could influence management's decisions about his position, although it’s uncertain how definitive those conclusions will be.",
+  "model": "gpt-4o-mini"
+}

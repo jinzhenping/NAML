@@ -1,0 +1,20 @@
+{
+  "user_id": 879,
+  "candidate_news_id": "N118623",
+  "candidate_title": "Nor'easter to grind at US East Coast this weekend",
+  "user_history_count": 9,
+  "user_history": [
+    "A family was kept in a secret farmhouse room for nine years, police say. The oldest son escaped to find help at a bar.",
+    "13 Animal Adoptions That Will Melt Your Heart",
+    "Piranha teeth stun researchers after amazing discovery",
+    "Unprecedented movement detected on California earthquake fault capable of 8.0 temblor",
+    "Meteorologist calls out body-shamer: 'I will not be strapping myself into a girdle'",
+    "Former NFL lineman Justin Bannan arrested for attempted murder",
+    "Scientists freak out over deep sea feast",
+    "Browns cut Jermaine Whitehead after racist Twitter rant that included death threats",
+    "Holocaust survivor under guard amid death threats"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A family was kept in a secret farmhouse room for nine years, police say. The oldest son escaped to find help at a bar.\"\n\"13 Animal Adoptions That Will Melt Your Heart\"\n\"Piranha teeth stun researchers after amazing discovery\"\n\"Unprecedented movement detected on California earthquake fault capable of 8.0 temblor\"\n\"Meteorologist calls out body-shamer: 'I will not be strapping myself into a girdle'\"\n\"Former NFL lineman Justin Bannan arrested for attempted murder\"\n\"Scientists freak out over deep sea feast\"\n\"Browns cut Jermaine Whitehead after racist Twitter rant that included death threats\"\n\"Holocaust survivor under guard amid death threats\"\n\"\"\n\n[Candidate News Title]\n\"Nor'easter to grind at US East Coast this weekend\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Nor'easter to grind at US East Coast this weekend\" is likely to provide an overview of an impending nor'easter that is expected to impact the East Coast of the United States. Readers can anticipate detailed information regarding the storm's forecasted path, potential precipitation amounts, and wind speeds. The article may also discuss how this weather system could affect travel and daily activities in affected regions. Additionally, it could include insights from meteorologists about the storm's development and any precautions that residents should consider in preparation.",
+  "model": "gpt-4o-mini"
+}

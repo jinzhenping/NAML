@@ -1,0 +1,21 @@
+{
+  "user_id": 469,
+  "candidate_news_id": "N55801",
+  "candidate_title": "High tides surge through Venice, locals rush to protect art",
+  "user_history_count": 10,
+  "user_history": [
+    "The Best Backstage Moments From the 2019 E! People's Choice Awards",
+    "Dinosaurs Lived on the Other Side of the Milky Way, NASA Scientist Shows",
+    "Gwen Stefani Reveals New Nickname for Her and Blake Shelton",
+    "My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.",
+    "Look of the Day",
+    "I went to Peter Luger after it received zero stars from New York Times",
+    "Should I tip 20% in a restaurant even if the service is mediocre?",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "Bevin concedes: 'We're going to have a change in the governorship'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Best Backstage Moments From the 2019 E! People's Choice Awards\"\n\"Dinosaurs Lived on the Other Side of the Milky Way, NASA Scientist Shows\"\n\"Gwen Stefani Reveals New Nickname for Her and Blake Shelton\"\n\"My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.\"\n\"Look of the Day\"\n\"I went to Peter Luger after it received zero stars from New York Times\"\n\"Should I tip 20% in a restaurant even if the service is mediocre?\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"Bevin concedes: 'We're going to have a change in the governorship'\"\n\n[Candidate News Title]\n\"High tides surge through Venice, locals rush to protect art\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to read about the recent high tides that have surged through Venice, prompting local residents to take action to protect their cultural heritage and artworks. The piece is likely to detail the specific measures taken by locals, such as the use of barriers or sandbags, as well as the impact of these tides on the city’s iconic landmarks. The article could also provide context about the historical significance of flooding in Venice and its ongoing challenges with rising water levels.",
+  "model": "gpt-4o-mini"
+}

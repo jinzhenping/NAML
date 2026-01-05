@@ -1,0 +1,21 @@
+{
+  "user_id": 287,
+  "candidate_news_id": "N38457",
+  "candidate_title": "Wild turkeys are terrorizing a town; MLB player calls on the New Jersey governor for help",
+  "user_history_count": 10,
+  "user_history": [
+    "Under shroud of secrecy US weapons arrive in Yemen despite Congressional outrage",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Dangerous fugitive in case of slain couple caught, authorities say",
+    "Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer",
+    "'Coup has started,' whistleblower's attorney said in 2017 posts calling for impeachment",
+    "Trump back in Louisiana to rally support for GOP gubernatorial candidate",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "Elk Grove PD: 2 arrested after nearly 1,400 plants found in illegal pot grow",
+    "Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says",
+    "Horrific details emerge in 'barbaric' murder of 1999 Jane Doe"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Under shroud of secrecy US weapons arrive in Yemen despite Congressional outrage\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Dangerous fugitive in case of slain couple caught, authorities say\"\n\"Off-duty Chicago police officer in clown makeup arrested on suspicion of slapping on-duty officer\"\n\"'Coup has started,' whistleblower's attorney said in 2017 posts calling for impeachment\"\n\"Trump back in Louisiana to rally support for GOP gubernatorial candidate\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"Elk Grove PD: 2 arrested after nearly 1,400 plants found in illegal pot grow\"\n\"Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says\"\n\"Horrific details emerge in 'barbaric' murder of 1999 Jane Doe\"\n\n[Candidate News Title]\n\"Wild turkeys are terrorizing a town; MLB player calls on the New Jersey governor for help\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Wild turkeys are terrorizing a town; MLB player calls on the New Jersey governor for help,\" you may expect to read about an unusual situation in which wild turkeys are causing disturbances in a community. The article is likely to provide details on the impact these birds are having on residents, including any specific incidents or complaints reported. Additionally, it may discuss the involvement of a Major League Baseball player who has publicly urged state officials, specifically the governor of New Jersey, to address the issue, highlighting the intersection of wildlife management and community safety.",
+  "model": "gpt-4o-mini"
+}

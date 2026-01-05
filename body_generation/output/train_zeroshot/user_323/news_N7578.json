@@ -1,0 +1,21 @@
+{
+  "user_id": 323,
+  "candidate_news_id": "N7578",
+  "candidate_title": "This little Montana town is full of Power Wagons and Mustangs",
+  "user_history_count": 10,
+  "user_history": [
+    "In A Reversal, Joe Biden Wants A Super PAC",
+    "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Jenelle Evans Obtains Temporary Restraining Order Against David Eason",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Senate Republicans consider including Bidens in Trump impeachment trial",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"In A Reversal, Joe Biden Wants A Super PAC\"\n\"Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Jenelle Evans Obtains Temporary Restraining Order Against David Eason\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Senate Republicans consider including Bidens in Trump impeachment trial\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\n[Candidate News Title]\n\"This little Montana town is full of Power Wagons and Mustangs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to learn about a small town in Montana known for its distinctive vehicles, particularly Power Wagons and Mustangs. The piece is likely to explore the community's unique automotive culture, possibly highlighting local events, dealerships, or collectors that showcase these vehicles. Additionally, it may provide insights into how this town's car enthusiast scene contributes to its identity and economy. The article could also touch on the history of these vehicles within the town, though these details remain uncertain.",
+  "model": "gpt-4o-mini"
+}

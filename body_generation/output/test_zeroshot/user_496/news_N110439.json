@@ -1,0 +1,21 @@
+{
+  "user_id": 496,
+  "candidate_news_id": "N110439",
+  "candidate_title": "Southwest's Spring Travel Sale Includes $39 One-way Tickets",
+  "user_history_count": 10,
+  "user_history": [
+    "Forde-Yard Dash: This is how bad the playoff picture can get",
+    "Northern Michigan father of 7 wins $80M Powerball jackpot",
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "Scientists discover new strain of HIV",
+    "Never spend more than this amount of your income on a car, says finance expert and millionaire",
+    "Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'",
+    "Stubborn Husky has mixed thoughts after trying out new bed",
+    "5 signs you're ready to retire",
+    "China's pork crisis is bigger than you think",
+    "The most exclusive hotel in every state"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Northern Michigan father of 7 wins $80M Powerball jackpot\"\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"Scientists discover new strain of HIV\"\n\"Never spend more than this amount of your income on a car, says finance expert and millionaire\"\n\"Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'\"\n\"Stubborn Husky has mixed thoughts after trying out new bed\"\n\"5 signs you're ready to retire\"\n\"China's pork crisis is bigger than you think\"\n\"The most exclusive hotel in every state\"\n\n[Candidate News Title]\n\"Southwest's Spring Travel Sale Includes $39 One-way Tickets\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Southwest's Spring Travel Sale Includes $39 One-way Tickets,\" you are likely to find information about Southwest Airlines' latest promotional fare sale for the upcoming spring travel season. The article may detail the specific routes available at this discounted price, the duration of the sale, and any terms and conditions that apply, such as booking deadlines or travel restrictions. Additionally, it could provide insights into how these fares compare to typical pricing and tips for maximizing savings during the sale. Overall, the piece is expected to serve as a useful guide for travelers looking to plan affordable spring getaways.",
+  "model": "gpt-4o-mini"
+}

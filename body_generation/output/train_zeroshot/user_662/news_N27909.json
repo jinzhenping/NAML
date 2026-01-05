@@ -1,0 +1,21 @@
+{
+  "user_id": 662,
+  "candidate_news_id": "N27909",
+  "candidate_title": "Could this court case be the key to finding Dubai's missing princesses?",
+  "user_history_count": 10,
+  "user_history": [
+    "Newly released Trump tax documents show major inconsistencies",
+    "Obamacare premiums are dropping for 2020 plans",
+    "Boris Loses Control as Parliament Rejects Brexit Exit Plan",
+    "CTU Says Mayor 'Dashed Hopes' for Quick Settlement",
+    "MLB's ruling on Astros investigation to come after World Series",
+    "There were never more women in UK Parliament. Now there's an exodus",
+    "An Alaskan moose hunter beat the odds at the Supreme Court. It cost $1.5 million.",
+    "911 supervisor playing Netflix movie didn't send cops to attempted murder",
+    "Celebrities join call to halt execution of Texas inmate",
+    "Trump allies defend Trump by pointing to his incompetence"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Newly released Trump tax documents show major inconsistencies\"\n\"Obamacare premiums are dropping for 2020 plans\"\n\"Boris Loses Control as Parliament Rejects Brexit Exit Plan\"\n\"CTU Says Mayor 'Dashed Hopes' for Quick Settlement\"\n\"MLB's ruling on Astros investigation to come after World Series\"\n\"There were never more women in UK Parliament. Now there's an exodus\"\n\"An Alaskan moose hunter beat the odds at the Supreme Court. It cost $1.5 million.\"\n\"911 supervisor playing Netflix movie didn't send cops to attempted murder\"\n\"Celebrities join call to halt execution of Texas inmate\"\n\"Trump allies defend Trump by pointing to his incompetence\"\n\n[Candidate News Title]\n\"Could this court case be the key to finding Dubai's missing princesses?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Could this court case be the key to finding Dubai's missing princesses?\", you may expect an exploration of the ongoing legal proceedings surrounding the mysterious disappearances of Dubai's royal figures. The article could provide insights into the background of the case, including the events leading up to the court hearings and the implications for the royal family. Additionally, it may discuss the various theories and evidence presented in court, as well as the broader social and political context related to the situation. Overall, the piece is likely to give a detailed overview while raising questions about the potential outcomes of the legal process.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 621,
+  "candidate_news_id": "N19487",
+  "candidate_title": "Hong Kong: Student protesters fortify campus occupations as city braces for more violence",
+  "user_history_count": 10,
+  "user_history": [
+    "Northeastern US braces for storm that may seem like a hurricane for a time",
+    "DOJ sues Walmart for allegedly discriminating against a Navy reserve officer",
+    "Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody",
+    "Man's trip to a cheese shop helps unravel missing persons case",
+    "2 murder suspects escape from jail, still on the run",
+    "BART worker rescues man from oncoming train",
+    "Man stabbed to death outside Popeyes after fight over chicken sandwich, police say",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Tourists stabbed in Jordanian city near Roman ruins: police",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Northeastern US braces for storm that may seem like a hurricane for a time\"\n\"DOJ sues Walmart for allegedly discriminating against a Navy reserve officer\"\n\"Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody\"\n\"Man's trip to a cheese shop helps unravel missing persons case\"\n\"2 murder suspects escape from jail, still on the run\"\n\"BART worker rescues man from oncoming train\"\n\"Man stabbed to death outside Popeyes after fight over chicken sandwich, police say\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Tourists stabbed in Jordanian city near Roman ruins: police\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\n[Candidate News Title]\n\"Hong Kong: Student protesters fortify campus occupations as city braces for more violence\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the ongoing situation in Hong Kong, where student protesters are reportedly intensifying their campus occupations amid rising tensions and potential violence in the city. Readers may expect to learn about the reasons behind the student actions, the demands they are making, and the broader context of the protests. It could also touch on the government’s response and any implications for public safety in the area. Additionally, the article may provide insights into how these developments might affect the overall political climate in Hong Kong, though specifics may vary.",
+  "model": "gpt-4o-mini"
+}

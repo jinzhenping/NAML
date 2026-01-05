@@ -1,0 +1,21 @@
+{
+  "user_id": 943,
+  "candidate_news_id": "N66366",
+  "candidate_title": "Rutabaga vs. Turnip: How to Tell the Difference Between These Yummy Vegetables",
+  "user_history_count": 10,
+  "user_history": [
+    "2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway",
+    "Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019",
+    "Just like NFL's deal with Jay-Z, the Colin Kaepernick workout looks like a PR trap",
+    "NFL Playoff Projection: Raiders have a clear path to the playoffs",
+    "Should I tip 20% in a restaurant even if the service is mediocre?",
+    "Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded",
+    "Justice Dept. rolls out new program to combat gun violence",
+    "Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this",
+    "Bands' final albums before they broke up",
+    "Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway\"\n\"Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019\"\n\"Just like NFL's deal with Jay-Z, the Colin Kaepernick workout looks like a PR trap\"\n\"NFL Playoff Projection: Raiders have a clear path to the playoffs\"\n\"Should I tip 20% in a restaurant even if the service is mediocre?\"\n\"Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded\"\n\"Justice Dept. rolls out new program to combat gun violence\"\n\"Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this\"\n\"Bands' final albums before they broke up\"\n\"Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy\"\n\n[Candidate News Title]\n\"Rutabaga vs. Turnip: How to Tell the Difference Between These Yummy Vegetables\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Rutabaga vs. Turnip: How to Tell the Difference Between These Yummy Vegetables,\" you are likely to find a straightforward comparison of rutabagas and turnips, focusing on their distinct characteristics. The article may detail their appearances, flavors, and culinary uses, enabling you to better understand how to differentiate between the two vegetables. Additionally, it could include tips on selecting and preparing each type, catering to readers interested in cooking or nutrition. Overall, the content is expected to provide clear information suited for those looking to enhance their knowledge of these root vegetables.",
+  "model": "gpt-4o-mini"
+}

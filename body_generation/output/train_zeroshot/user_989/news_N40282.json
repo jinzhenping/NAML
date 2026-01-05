@@ -1,0 +1,19 @@
+{
+  "user_id": 989,
+  "candidate_news_id": "N40282",
+  "candidate_title": "Judge includes law student's toddler during sweet swearing-in ceremony",
+  "user_history_count": 8,
+  "user_history": [
+    "Phillies to interview Girardi, Showalter, Baker",
+    "Former NFL lineman Justin Bannan arrested for attempted murder",
+    "Amy Schumer's Adorable 5-Month-Old Son Gene Gets 'a Million Kisses' During Set Visit",
+    "Zooey Deschanel Doesn't Think Lauren Conrad Knew About Shared Baby Name",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Breast cancer survivors fight another deadly risk",
+    "Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Phillies to interview Girardi, Showalter, Baker\"\n\"Former NFL lineman Justin Bannan arrested for attempted murder\"\n\"Amy Schumer's Adorable 5-Month-Old Son Gene Gets 'a Million Kisses' During Set Visit\"\n\"Zooey Deschanel Doesn't Think Lauren Conrad Knew About Shared Baby Name\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Breast cancer survivors fight another deadly risk\"\n\"Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Judge includes law student's toddler during sweet swearing-in ceremony\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Judge includes law student's toddler during sweet swearing-in ceremony\" is likely to detail a unique event where a judge incorporates a law student's child into the official swearing-in process. Readers may expect to learn about the context of the ceremony, perhaps highlighting the significance of family involvement in such professional milestones. The piece could also provide insights into the law student's background, their journey to this moment, and how the presence of the toddler symbolizes the balance between personal and professional life. Additionally, it may touch on reactions from attendees, though this remains uncertain.",
+  "model": "gpt-4o-mini"
+}

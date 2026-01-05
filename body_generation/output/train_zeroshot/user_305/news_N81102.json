@@ -1,0 +1,20 @@
+{
+  "user_id": 305,
+  "candidate_news_id": "N81102",
+  "candidate_title": "College Basketball Notebook: 11.13.19",
+  "user_history_count": 9,
+  "user_history": [
+    "Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care",
+    "Week 7 winners, losers: Aaron Rodgers now in MVP race; Mitchell Trubisky looks lost",
+    "Cam Newton once again remains out, Kyle Allen to start vs. 49ers in Week 8",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "Spanx Founder Sara Blakely Reveals She Bought Olivia Newton-John's Grease Pants for Over $160K",
+    "Dez Bryant plans to reach out to NFL teams in two weeks",
+    "Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care\"\n\"Week 7 winners, losers: Aaron Rodgers now in MVP race; Mitchell Trubisky looks lost\"\n\"Cam Newton once again remains out, Kyle Allen to start vs. 49ers in Week 8\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"Spanx Founder Sara Blakely Reveals She Bought Olivia Newton-John's Grease Pants for Over $160K\"\n\"Dez Bryant plans to reach out to NFL teams in two weeks\"\n\"Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"\"\n\n[Candidate News Title]\n\"College Basketball Notebook: 11.13.19\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"College Basketball Notebook: 11.13.19,\" the user can expect a roundup of the latest developments, key performances, and notable events in college basketball around that date. It is likely to include updates on team rankings, standout players, and significant game outcomes, providing a comprehensive overview of the season's progress. The article may also discuss emerging storylines, injuries, or upcoming matchups that could influence the trajectory of various teams as they head into the heart of the season.",
+  "model": "gpt-4o-mini"
+}

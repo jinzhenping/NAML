@@ -1,0 +1,21 @@
+{
+  "user_id": 79,
+  "candidate_news_id": "N122819",
+  "candidate_title": "See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet",
+  "user_history_count": 10,
+  "user_history": [
+    "Korda's caddie helps player to victory over his fiancée",
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Trump pushes back on report that he wanted Barr to clear him on Ukraine in news conference: 'Totally untrue'",
+    "White House: Regulating tobacco is a 'huge waste of time' for FDA",
+    "Tiger Woods says his Zozo Championship win was the validation he needed to becoming a playing captain",
+    "'I am scared all the time': Chimps and people are clashing in rural Uganda",
+    "Lil Pump bit by snake on set of music video",
+    "Pro disqualified from Q-School for failing to sign scorecard"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Korda's caddie helps player to victory over his fiancée\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Trump pushes back on report that he wanted Barr to clear him on Ukraine in news conference: 'Totally untrue'\"\n\"White House: Regulating tobacco is a 'huge waste of time' for FDA\"\n\"Tiger Woods says his Zozo Championship win was the validation he needed to becoming a playing captain\"\n\"'I am scared all the time': Chimps and people are clashing in rural Uganda\"\n\"Lil Pump bit by snake on set of music video\"\n\"Pro disqualified from Q-School for failing to sign scorecard\"\n\n[Candidate News Title]\n\"See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about a woman's 270-square-foot tiny home, the user may expect to learn about the innovative design and efficient use of space that allows for two bedrooms and a walk-in closet within such a compact area. The piece is likely to explore how modern tiny homes balance functionality and comfort, possibly highlighting features like multi-purpose furniture or clever storage solutions. Additionally, it may touch on the growing trend of tiny living and the motivations behind choosing a smaller home, such as sustainability or financial considerations.",
+  "model": "gpt-4o-mini"
+}

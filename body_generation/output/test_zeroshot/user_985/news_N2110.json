@@ -1,0 +1,21 @@
+{
+  "user_id": 985,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "Broadway Actress Laurel Griggs Dies at Age 13",
+    "Fast food cashier and manager fired for refusing to serve police officer",
+    "56 Hottest Holiday Gifts from Amazon",
+    "Three school workers charged in death of special needs student",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "Small Canadian island irate that Americans keep opening their mail",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+    "How Amazon's quest for more, cheaper products has resulted in a flea market of fakes",
+    "Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"56 Hottest Holiday Gifts from Amazon\"\n\"Three school workers charged in death of special needs student\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"How Amazon's quest for more, cheaper products has resulted in a flea market of fakes\"\n\"Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\" is likely to present a curated selection of innovative and appealing technology-related gift ideas that cater to a wide range of interests and age groups. Readers can expect to find descriptions of items such as gadgets, smart home devices, and accessories that are currently popular in the market. The article may also provide insights into the features and functionalities of these tech gifts, helping readers make informed choices for their holiday shopping or special occasions. Overall, it aims to serve as a practical guide for those looking to purchase gifts that incorporate the latest technology trends.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 685,
+  "candidate_news_id": "N48307",
+  "candidate_title": "2021 Kia Optima Raises the Style Bar for Mid-Size Sedans",
+  "user_history_count": 10,
+  "user_history": [
+    "Trade deadline: Which Seahawks could be dealt?",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "F1/NASCAR Texas clash 'asinine,' says Tony Stewart",
+    "Kyle Larson demands penalties for intentional spins after 'B.S.' caution",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Three Monster Energy Series teams penalized for lug-nut infractions at Texas",
+    "Sportsbook offering refunds on bets made on Mitch Trubisky winning MVP",
+    "25 celebrities who emerged as superstars in the 2010s",
+    "Trump to spend $300 million on border wall \"quality assurance\""
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trade deadline: Which Seahawks could be dealt?\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"F1/NASCAR Texas clash 'asinine,' says Tony Stewart\"\n\"Kyle Larson demands penalties for intentional spins after 'B.S.' caution\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Three Monster Energy Series teams penalized for lug-nut infractions at Texas\"\n\"Sportsbook offering refunds on bets made on Mitch Trubisky winning MVP\"\n\"25 celebrities who emerged as superstars in the 2010s\"\n\"Trump to spend $300 million on border wall \"quality assurance\"\"\n\n[Candidate News Title]\n\"2021 Kia Optima Raises the Style Bar for Mid-Size Sedans\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"2021 Kia Optima Raises the Style Bar for Mid-Size Sedans,\" you can expect a detailed overview of the design and aesthetic improvements made to the 2021 Kia Optima, highlighting its competitive edge in the mid-size sedan market. The article is likely to discuss the vehicle's exterior features, such as body lines and color options, as well as interior enhancements that contribute to a more modern and appealing driving experience. Additionally, it may touch on how these changes position the Optima against its rivals in terms of both style and functionality, offering insights into consumer reception and expert reviews.",
+  "model": "gpt-4o-mini"
+}

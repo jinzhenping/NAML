@@ -1,0 +1,21 @@
+{
+  "user_id": 166,
+  "candidate_news_id": "N56602",
+  "candidate_title": "The Kardashians Face Backlash Over 'Insensitive' Family Food Fight in KUWTK Clip",
+  "user_history_count": 10,
+  "user_history": [
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+    "College gymnast dies following training accident in Connecticut",
+    "Hyatt is eliminating travel-sized plastic toiletries",
+    "Three school workers charged in death of special needs student",
+    "Beat the crowds at these abandoned U.S. national parks",
+    "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+    "4 reasons you shouldn't max out your 401(k)",
+    "West Hollywood school administrator embroiled in college admissions scandal pleads guilty"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Hyatt is eliminating travel-sized plastic toiletries\"\n\"Three school workers charged in death of special needs student\"\n\"Beat the crowds at these abandoned U.S. national parks\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"West Hollywood school administrator embroiled in college admissions scandal pleads guilty\"\n\n[Candidate News Title]\n\"The Kardashians Face Backlash Over 'Insensitive' Family Food Fight in KUWTK Clip\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article about the Kardashians facing backlash over an \"insensitive\" family food fight, they are likely expecting to read about the recent controversy surrounding the show's portrayal of family dynamics and conflicts. The article may provide details on the specific incident that sparked criticism, including reactions from viewers and social media commentary. It could also explore the broader implications of such portrayals on public perception of the Kardashian family, as well as insights into how reality television often blurs the lines between scripted and unscripted moments.",
+  "model": "gpt-4o-mini"
+}

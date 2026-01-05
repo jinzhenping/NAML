@@ -1,0 +1,21 @@
+{
+  "user_id": 335,
+  "candidate_news_id": "N38555",
+  "candidate_title": "Starbucks opens its biggest store ever",
+  "user_history_count": 10,
+  "user_history": [
+    "Martin worries about amputation after breaking right leg",
+    "How To Open a Can Without a Can Opener",
+    "Jason Garrett indicates Cowboys want Michael Bennett on sideline for national anthem",
+    "How Howie Kendrick became a Nationals legend during their World Series run",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "The Latest: Kansas City to remove King's name from street",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "Arizona activist accused of guiding migrants 'further north' after border crossing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Martin worries about amputation after breaking right leg\"\n\"How To Open a Can Without a Can Opener\"\n\"Jason Garrett indicates Cowboys want Michael Bennett on sideline for national anthem\"\n\"How Howie Kendrick became a Nationals legend during their World Series run\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"Arizona activist accused of guiding migrants 'further north' after border crossing\"\n\n[Candidate News Title]\n\"Starbucks opens its biggest store ever\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Starbucks opens its biggest store ever,\" they are likely expecting to read about the newly opened flagship location, including details about its size, design, and unique features that set it apart from other Starbucks outlets. The article may discuss the significance of this store in the context of Starbucks' growth strategy and possibly highlight its offerings, such as exclusive beverages or community-focused spaces. Additionally, it could provide insights into the store's location and any potential impact on local business or tourism, though this aspect is uncertain.",
+  "model": "gpt-4o-mini"
+}

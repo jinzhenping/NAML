@@ -1,0 +1,21 @@
+{
+  "user_id": 412,
+  "candidate_news_id": "N128147",
+  "candidate_title": "Why Has This 1970 Chevrolet Camaro Z/28 Gone Just 8,500 Miles?",
+  "user_history_count": 10,
+  "user_history": [
+    "Eric Trump Complains That 'Every Family in Politics Enriches Themselves,' Saying 'It Is Sickening'",
+    "Graham and Fox News expert showed Trump a Syria map to change his mind",
+    "Even the pros don't know how to say 'quid pro quo'",
+    "Celebs celebrate Halloween 2019",
+    "2020 Ford Mustang Shelby GT500 Is a 760-HP Thrill Ride",
+    "The toxic bubble of technical debt threatening America",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "The Case for a Honda Accord Type R Sport Sedan? How Does 350-HP-Plus Sound?",
+    "President Trump says UFC reception was 'like walking into a Trump Rally'",
+    "Segment of Keystone pipeline ordered to remain shut after leak"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Eric Trump Complains That 'Every Family in Politics Enriches Themselves,' Saying 'It Is Sickening'\"\n\"Graham and Fox News expert showed Trump a Syria map to change his mind\"\n\"Even the pros don't know how to say 'quid pro quo'\"\n\"Celebs celebrate Halloween 2019\"\n\"2020 Ford Mustang Shelby GT500 Is a 760-HP Thrill Ride\"\n\"The toxic bubble of technical debt threatening America\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"The Case for a Honda Accord Type R Sport Sedan? How Does 350-HP-Plus Sound?\"\n\"President Trump says UFC reception was 'like walking into a Trump Rally'\"\n\"Segment of Keystone pipeline ordered to remain shut after leak\"\n\n[Candidate News Title]\n\"Why Has This 1970 Chevrolet Camaro Z/28 Gone Just 8,500 Miles?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Why Has This 1970 Chevrolet Camaro Z/28 Gone Just 8,500 Miles?\", you may expect an exploration of the car's history and its remarkably low mileage. The article is likely to discuss factors that contribute to such limited use, possibly highlighting the car's condition, ownership history, and any unique features that make it stand out among classic cars. Additionally, it might address the significance of the Z/28 model within the Camaro lineup and its appeal to collectors, providing insights into the automotive market for vintage vehicles.",
+  "model": "gpt-4o-mini"
+}

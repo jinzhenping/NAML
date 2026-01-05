@@ -1,0 +1,21 @@
+{
+  "user_id": 873,
+  "candidate_news_id": "N91737",
+  "candidate_title": "13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid",
+  "user_history_count": 10,
+  "user_history": [
+    "Stars Who Served in the Military",
+    "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+    "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "2 Cook Out employees fired after NC officer refused service",
+    "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case",
+    "This is Chick-fil-A's most-ordered menu item",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Family told to take down Christmas display because it's too soon to decorate"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Stars Who Served in the Military\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"2 Cook Out employees fired after NC officer refused service\"\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\n[Candidate News Title]\n\"13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid,\" the user may expect to read about Navarro's criticisms regarding the casting choices made by Disney in the live-action adaptation of \"The Little Mermaid.\" The piece is likely to explore his views on representation in media, particularly in relation to race and diversity. It may include specific reasons he provided for his stance, as well as reactions from fans and industry professionals. Additionally, the article could delve into the broader implications of casting decisions in Hollywood and how they affect audience perceptions.",
+  "model": "gpt-4o-mini"
+}

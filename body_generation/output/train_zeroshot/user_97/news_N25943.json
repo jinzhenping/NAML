@@ -1,0 +1,21 @@
+{
+  "user_id": 97,
+  "candidate_news_id": "N25943",
+  "candidate_title": "Disney World Attendance Up, Disneyland Visitor Numbers Down",
+  "user_history_count": 10,
+  "user_history": [
+    "Meghan Markle and Kate Middleton keep wearing cheap earrings with designer dresses, and a fashion expert says there's a strategic reason",
+    "Kate Middleton Takes Prince George and Princess Charlotte Halloween Shopping at Local Supermarket",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Smugglers are sawing through new sections of Trump's border wall",
+    "Felicity Huffman Smiles as She Begins Community Service Following Prison Release",
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "12 secrets behind Walt Disney World's magical holiday decorations",
+    "Prince Harry just hinted that he and Meghan Markle may want another baby"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan Markle and Kate Middleton keep wearing cheap earrings with designer dresses, and a fashion expert says there's a strategic reason\"\n\"Kate Middleton Takes Prince George and Princess Charlotte Halloween Shopping at Local Supermarket\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Smugglers are sawing through new sections of Trump's border wall\"\n\"Felicity Huffman Smiles as She Begins Community Service Following Prison Release\"\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"12 secrets behind Walt Disney World's magical holiday decorations\"\n\"Prince Harry just hinted that he and Meghan Markle may want another baby\"\n\n[Candidate News Title]\n\"Disney World Attendance Up, Disneyland Visitor Numbers Down\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent trends in attendance at Disney parks, highlighting an increase in visitors to Disney World while noting a decline in numbers at Disneyland. Readers may expect to find insights into factors contributing to this shift, such as seasonal events, marketing strategies, or changes in consumer behavior. Additionally, the piece could explore how the experiences and attractions at each park differ, which might influence visitor preferences. It is possible that the article may also touch on future projections for both parks based on current attendance patterns.",
+  "model": "gpt-4o-mini"
+}

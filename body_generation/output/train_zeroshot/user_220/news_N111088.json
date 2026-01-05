@@ -1,0 +1,21 @@
+{
+  "user_id": 220,
+  "candidate_news_id": "N111088",
+  "candidate_title": "How Russia Meddles Abroad for Profit: Cash, Trolls and a Cult Leader",
+  "user_history_count": 10,
+  "user_history": [
+    "TV reporter fired after climbing on cars live at auto show",
+    "8 Financial Mistakes in Your 20s that Can Haunt You Later",
+    "The Average Retirement Age in Every State",
+    "51 Times Stars Dressed Up as Other Stars for Halloween   and Nailed It",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "Halloween tales from the ER: Doctors share their spooky stories",
+    "Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars",
+    "Pink on Why She Didn't Headline the 2019 Super Bowl Halftime Show After Offer",
+    "Halloween hangover! Here are 5 fun things to do with your kids' leftover candy",
+    "Barneys Is Sold for Scrap, Ending an Era"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"TV reporter fired after climbing on cars live at auto show\"\n\"8 Financial Mistakes in Your 20s that Can Haunt You Later\"\n\"The Average Retirement Age in Every State\"\n\"51 Times Stars Dressed Up as Other Stars for Halloween   and Nailed It\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Halloween tales from the ER: Doctors share their spooky stories\"\n\"Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars\"\n\"Pink on Why She Didn't Headline the 2019 Super Bowl Halftime Show After Offer\"\n\"Halloween hangover! Here are 5 fun things to do with your kids' leftover candy\"\n\"Barneys Is Sold for Scrap, Ending an Era\"\n\n[Candidate News Title]\n\"How Russia Meddles Abroad for Profit: Cash, Trolls and a Cult Leader\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to click on the article titled \"How Russia Meddles Abroad for Profit: Cash, Trolls and a Cult Leader,\" you may expect an in-depth exploration of Russia's strategies for exerting influence in foreign countries, particularly through financial means and information warfare. The article could detail specific methods employed, such as the use of social media trolls to sway public opinion or financial incentives provided to political figures. Additionally, it might discuss the role of key individuals or organizations that facilitate these efforts, providing examples that illustrate the broader implications of these actions on international relations and domestic politics in targeted nations.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 226,
+  "candidate_news_id": "N64109",
+  "candidate_title": "7 possible landing spots for Anthony Rendon",
+  "user_history_count": 10,
+  "user_history": [
+    "FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says",
+    "Meghan Markle Chose a Black Brocade Dress For the Royal Family's Important Outing",
+    "Russell Wilson, Richard Sherman swap jerseys despite supposed rift",
+    "The 2019-20 NBA Season",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "Former U.S. President Carter recovering in hospital after successful brain procedure",
+    "The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers",
+    "We tried McDonald's new Snickerdoodle McFlurry, and here's our honest review",
+    "Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says\"\n\"Meghan Markle Chose a Black Brocade Dress For the Royal Family's Important Outing\"\n\"Russell Wilson, Richard Sherman swap jerseys despite supposed rift\"\n\"The 2019-20 NBA Season\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"Former U.S. President Carter recovering in hospital after successful brain procedure\"\n\"The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers\"\n\"We tried McDonald's new Snickerdoodle McFlurry, and here's our honest review\"\n\"Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this\"\n\n[Candidate News Title]\n\"7 possible landing spots for Anthony Rendon\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"7 possible landing spots for Anthony Rendon,\" readers can likely expect an analysis of potential teams that may be interested in acquiring the MLB player Anthony Rendon. The piece may outline specific franchises that could benefit from his skills, taking into account factors such as team needs, salary cap considerations, and recent performance trends. Additionally, the article is likely to speculate on the implications of such moves for both Rendon's career and the teams involved, providing insights into the dynamics of player trades in Major League Baseball.",
+  "model": "gpt-4o-mini"
+}

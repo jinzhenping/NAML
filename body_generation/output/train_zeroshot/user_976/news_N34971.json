@@ -1,0 +1,21 @@
+{
+  "user_id": 976,
+  "candidate_news_id": "N34971",
+  "candidate_title": "How to Winterize a House",
+  "user_history_count": 10,
+  "user_history": [
+    "Not out of woods yet, but winds driving California fires die",
+    "For the first time ever, a US cheese is named best in the world",
+    "691,145 Californians left last year: What state did they go to?",
+    "Drones Used in Crime Fly Under the Law's Radar",
+    "Every touchdown from every game in Week 9",
+    "Returning home to nothing: Destruction after the California wildfires",
+    "California fire update: Kincade Fire nears containment, Ranch Fire grows overnight",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Long-term celebrity couples who won't get married"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Not out of woods yet, but winds driving California fires die\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"691,145 Californians left last year: What state did they go to?\"\n\"Drones Used in Crime Fly Under the Law's Radar\"\n\"Every touchdown from every game in Week 9\"\n\"Returning home to nothing: Destruction after the California wildfires\"\n\"California fire update: Kincade Fire nears containment, Ranch Fire grows overnight\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Long-term celebrity couples who won't get married\"\n\n[Candidate News Title]\n\"How to Winterize a House\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"How to Winterize a House,\" you are likely to find practical advice focused on preparing your home for the colder months. The article may cover essential tasks such as insulating pipes, sealing windows and doors, and checking heating systems to ensure they function efficiently. Additionally, it could provide tips on maintaining your home's exterior to prevent winter-related damage. Overall, the content is expected to emphasize the importance of proactive measures to enhance energy efficiency and protect your property during winter, especially in regions prone to severe weather.",
+  "model": "gpt-4o-mini"
+}

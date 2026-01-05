@@ -1,0 +1,21 @@
+{
+  "user_id": 350,
+  "candidate_news_id": "N18070",
+  "candidate_title": "Why aren't wages rising faster even with low unemployment? Trade war, weaker economy are among reasons",
+  "user_history_count": 10,
+  "user_history": [
+    "This is What Will Happen When Queen Elizabeth Dies",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Holocaust survivor under guard amid death threats",
+    "This girl nails the wave pool   then fails the exit spectacularly",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Kristen Stewart Just Made Leather Bras a Thing, and We're All For It",
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"This is What Will Happen When Queen Elizabeth Dies\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Holocaust survivor under guard amid death threats\"\n\"This girl nails the wave pool   then fails the exit spectacularly\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Kristen Stewart Just Made Leather Bras a Thing, and We're All For It\"\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\n[Candidate News Title]\n\"Why aren't wages rising faster even with low unemployment? Trade war, weaker economy are among reasons\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article discussing why wages aren't rising faster despite low unemployment, you can expect an analysis of the economic factors influencing wage growth. The article is likely to explore the implications of the trade war and its impact on job markets, as well as the potential effects of a weakening economy. It may also delve into various contributing elements, such as inflation rates and employer practices, that could explain the stagnation in wage increases. Overall, the piece aims to provide a comprehensive overview of the complexities surrounding wage dynamics in the current economic climate.",
+  "model": "gpt-4o-mini"
+}

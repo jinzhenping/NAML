@@ -1,0 +1,21 @@
+{
+  "user_id": 19,
+  "candidate_news_id": "N122971",
+  "candidate_title": "US held record number of migrant children in custody in 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Cubans were once privileged migrants to the United States. Now they're stuck at the border, like everyone else.",
+    "Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "Look of the day: Ashley Graham's latest sizzling maternity look & more celeb style",
+    "Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet",
+    "A controversial comedian and a former child star are eliminated on 'Masked Singer'",
+    "The first Ford Mustang owner kept the car. It's now worth $350,000",
+    "Trailer - The Photograph"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Cubans were once privileged migrants to the United States. Now they're stuck at the border, like everyone else.\"\n\"Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"Look of the day: Ashley Graham's latest sizzling maternity look & more celeb style\"\n\"Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet\"\n\"A controversial comedian and a former child star are eliminated on 'Masked Singer'\"\n\"The first Ford Mustang owner kept the car. It's now worth $350,000\"\n\"Trailer - The Photograph\"\n\n[Candidate News Title]\n\"US held record number of migrant children in custody in 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the significant number of migrant children who were held in U.S. custody during 2019, examining the implications of this situation on immigration policy and child welfare. It may provide statistics on the total number of children detained, as well as insights into the conditions they faced while in custody. Additionally, the article could explore the broader context of U.S. immigration practices and how these policies have evolved over time. There may also be mention of the legal and humanitarian concerns raised by advocates and organizations regarding the treatment of these minors.",
+  "model": "gpt-4o-mini"
+}

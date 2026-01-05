@@ -1,0 +1,21 @@
+{
+  "user_id": 300,
+  "candidate_news_id": "N116647",
+  "candidate_title": "100 Best-Ever Thanksgiving Pies",
+  "user_history_count": 10,
+  "user_history": [
+    "How Much Do You Know About Our Constitution?",
+    "Targeting of Rep. Katie Hill is a warning shot to women",
+    "Trump Was Right To Keep The Baghdadi Raid Secret From Schiff",
+    "Celebs celebrate Halloween 2019",
+    "Two House Democrats break ranks with Pelosi on impeachment rules vote",
+    "The News In Cartoons",
+    "12 Things Sex Therapists Wish You Knew",
+    "Oklahoma officer convicted of 2nd-degree murder",
+    "Pompeo slams Iran 'intimidation' of IAEA inspector as 'outrageous'",
+    "The News In Cartoons"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"How Much Do You Know About Our Constitution?\"\n\"Targeting of Rep. Katie Hill is a warning shot to women\"\n\"Trump Was Right To Keep The Baghdadi Raid Secret From Schiff\"\n\"Celebs celebrate Halloween 2019\"\n\"Two House Democrats break ranks with Pelosi on impeachment rules vote\"\n\"The News In Cartoons\"\n\"12 Things Sex Therapists Wish You Knew\"\n\"Oklahoma officer convicted of 2nd-degree murder\"\n\"Pompeo slams Iran 'intimidation' of IAEA inspector as 'outrageous'\"\n\"The News In Cartoons\"\n\n[Candidate News Title]\n\"100 Best-Ever Thanksgiving Pies\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"100 Best-Ever Thanksgiving Pies,\" you may expect a curated list showcasing a variety of pie recipes suitable for the Thanksgiving holiday. The article is likely to include both classic and innovative options, highlighting key ingredients and preparation techniques for each pie. Additionally, it could provide tips on pairing pies with traditional Thanksgiving dishes or suggest serving ideas to enhance the festive meal. Overall, you might find a blend of practical cooking guidance and inspiration for your holiday dessert table.",
+  "model": "gpt-4o-mini"
+}

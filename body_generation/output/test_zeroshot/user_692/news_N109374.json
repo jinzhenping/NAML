@@ -1,0 +1,21 @@
+{
+  "user_id": 692,
+  "candidate_news_id": "N109374",
+  "candidate_title": "McDaniel student arrested on assault, gun charges",
+  "user_history_count": 10,
+  "user_history": [
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "50 Unique Holiday Gift Ideas for Him Under $50",
+    "Oprah Just Revealed Her 2019 Favorite Things Here Are the Best Food Picks",
+    "The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You",
+    "Behind-the-scenes facts about 'Sesame Street'",
+    "Teenage girl charged with murder after police say she tied down and killed an animal rescue advocate",
+    "New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November",
+    "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Celebrity plastic surgery transformations"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"50 Unique Holiday Gift Ideas for Him Under $50\"\n\"Oprah Just Revealed Her 2019 Favorite Things Here Are the Best Food Picks\"\n\"The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You\"\n\"Behind-the-scenes facts about 'Sesame Street'\"\n\"Teenage girl charged with murder after police say she tied down and killed an animal rescue advocate\"\n\"New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November\"\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Celebrity plastic surgery transformations\"\n\n[Candidate News Title]\n\"McDaniel student arrested on assault, gun charges\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the \"McDaniel student arrested on assault, gun charges\" is likely to provide details surrounding the circumstances of the arrest, including the specific charges filed against the student. Readers may expect information on the incident that led to the arrest, such as any reported altercations or threats involving firearms. Additionally, the article could discuss the implications of the incident on the McDaniel College community and any official responses from college administration or law enforcement. It may also touch on broader themes related to campus safety and legal repercussions in such cases.",
+  "model": "gpt-4o-mini"
+}

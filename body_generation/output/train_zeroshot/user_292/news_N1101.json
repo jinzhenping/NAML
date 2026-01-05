@@ -1,0 +1,21 @@
+{
+  "user_id": 292,
+  "candidate_news_id": "N1101",
+  "candidate_title": "How to watch Mercury travel across the face of the Sun on Monday",
+  "user_history_count": 10,
+  "user_history": [
+    "Injured Cowboys DL Daniel Ross arrested on drug, gun charges",
+    "Pentagon leader appeals to Trump to allow military justice cases to proceed unfettered",
+    "Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.",
+    "How to Avoid Airbnb Scams and Find Legit Vacation Rentals Online",
+    "Girlfriend testifies at trial of man in death of his fiancee",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "Brooklyn Homeowners Take Issue With City, Say Subway Line Retaining Wall Fixes Are MTA's Responsibility",
+    "Nolan Ryan leaves advisory role, won't return as Astros shuffle front office",
+    "Federal indictments filed against 4 arrested after deadly deputy shooting",
+    "Snow crab sells for record price in Japan"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Injured Cowboys DL Daniel Ross arrested on drug, gun charges\"\n\"Pentagon leader appeals to Trump to allow military justice cases to proceed unfettered\"\n\"Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.\"\n\"How to Avoid Airbnb Scams and Find Legit Vacation Rentals Online\"\n\"Girlfriend testifies at trial of man in death of his fiancee\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"Brooklyn Homeowners Take Issue With City, Say Subway Line Retaining Wall Fixes Are MTA's Responsibility\"\n\"Nolan Ryan leaves advisory role, won't return as Astros shuffle front office\"\n\"Federal indictments filed against 4 arrested after deadly deputy shooting\"\n\"Snow crab sells for record price in Japan\"\n\n[Candidate News Title]\n\"How to watch Mercury travel across the face of the Sun on Monday\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about watching Mercury travel across the face of the Sun, the user may expect a detailed explanation of the astronomical event, including the optimal viewing times and locations. The piece is likely to outline how to safely observe this transit, possibly discussing the necessary equipment, such as telescopes or solar filters, and any relevant safety precautions. Additionally, it could provide context about the significance of such events in astronomy, which may enhance the reader's understanding of their rarity and importance in observing planetary movements.",
+  "model": "gpt-4o-mini"
+}

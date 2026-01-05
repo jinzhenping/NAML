@@ -1,0 +1,21 @@
+{
+  "user_id": 347,
+  "candidate_news_id": "N113117",
+  "candidate_title": "You Need To Prioritize Sleep, According To Science",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Timberwolves 'fuming' over NBA's ruling in Karl-Anthony Towns-Joel Embiid fight",
+    "Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday",
+    "Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call",
+    "U.S. Troop Withdrawal Creates Opening for Revitalized Syrian Regime",
+    "With Carlos Beltran hire it's clear the Mets learned nothing from the Mickey Callaway mess",
+    "Patriots wanted a test. Now, they need some answers",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "Do not try this at home: How to turn $3,000 into $1.7 million",
+    "Dez Bryant plans to reach out to NFL teams in two weeks",
+    "Snow crab sells for record price in Japan"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Timberwolves 'fuming' over NBA's ruling in Karl-Anthony Towns-Joel Embiid fight\"\n\"Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday\"\n\"Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call\"\n\"U.S. Troop Withdrawal Creates Opening for Revitalized Syrian Regime\"\n\"With Carlos Beltran hire it's clear the Mets learned nothing from the Mickey Callaway mess\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"Do not try this at home: How to turn $3,000 into $1.7 million\"\n\"Dez Bryant plans to reach out to NFL teams in two weeks\"\n\"Snow crab sells for record price in Japan\"\n\n[Candidate News Title]\n\"You Need To Prioritize Sleep, According To Science\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"You Need To Prioritize Sleep, According To Science\" is likely to discuss the importance of sleep for overall health and well-being, backed by scientific research. It may outline the various benefits of adequate sleep, such as improved cognitive function, emotional regulation, and physical health. Additionally, the piece could explore common sleep disorders and their impact on daily life, while offering practical tips for better sleep hygiene. The article might also highlight recent studies that emphasize the correlation between sleep quality and long-term health outcomes, although the specific details of these studies remain uncertain.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 751,
+  "candidate_news_id": "N126696",
+  "candidate_title": "Maze of tunnels reveals remains of ancient Jerusalem",
+  "user_history_count": 10,
+  "user_history": [
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "AT&T fined $60 million for throttling 'unlimited' data plans",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Chevy Says This Isn't a Mid-Engine C8 Corvette Hybrid Prototype",
+    "Jenelle Evans Obtains Temporary Restraining Order Against David Eason",
+    "Vintage Photos of Disneyland Back in the Day",
+    "Donald Trump Jr walks out of Triggered book launch after heckling   from supporters",
+    "I went to Peter Luger after it received zero stars from New York Times",
+    "WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Chevy Says This Isn't a Mid-Engine C8 Corvette Hybrid Prototype\"\n\"Jenelle Evans Obtains Temporary Restraining Order Against David Eason\"\n\"Vintage Photos of Disneyland Back in the Day\"\n\"Donald Trump Jr walks out of Triggered book launch after heckling   from supporters\"\n\"I went to Peter Luger after it received zero stars from New York Times\"\n\"WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist\"\n\n[Candidate News Title]\n\"Maze of tunnels reveals remains of ancient Jerusalem\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Maze of tunnels reveals remains of ancient Jerusalem\" is likely to explore the recent archaeological findings related to a network of tunnels in Jerusalem. Readers may expect detailed descriptions of the tunnels' historical significance, potential connections to significant events or figures from ancient Jerusalem, and insights into what these discoveries reveal about past cultures and societies. The article could also provide context regarding how these findings contribute to our understanding of the region's history. Additionally, it may discuss the implications of these discoveries for current archaeological practices and future research.",
+  "model": "gpt-4o-mini"
+}

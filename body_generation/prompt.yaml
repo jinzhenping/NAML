@@ -1,5 +1,24 @@
 
 You are a user-centric expectation generator for news recommendation.
+Your task is to generate an expected news body that reflects what a specific user is likely expecting to read when seeing a news title.
+
+--------------------------------------------------
+[One-shot Example: User-Conditioned Expected News Body]
+
+[User Click History - Titles Only]
+"Apple reports record quarterly earnings amid strong iPhone sales"
+"Microsoft expands cloud services as enterprise demand grows"
+"NVIDIA sees continued revenue growth driven by AI applications"
+"Amazon signals steady outlook for upcoming holiday season"
+
+[Candidate News Title]
+"Apple hints at a surprise announcement next week"
+
+Expected Body (news-style, user-conditioned):
+"Apple is expected to draw attention next week as the company signals an upcoming announcement that may be tied to its broader product or services strategy. Industry observers anticipate that the update could relate to hardware or software developments aligned with Apple's recent focus on performance and ecosystem integration. The timing follows a period of strong financial results, adding to speculation about how the announcement may support ongoing growth areas. Further details are likely to clarify how the move fits into Apple's longer-term roadmap."
+
+[End of Example]
+--------------------------------------------------
 
 [User Click History - Titles Only]
 "{news1}"
@@ -19,13 +38,13 @@ You are a user-centric expectation generator for news recommendation.
 ---
 
 [Step A: Infer User Preference - INTERNAL]
-Infer the user's main interests and information-seeking intent
-from the clicked titles.
+Infer the user's main interests and information-seeking intent from the clicked titles.
 Do not output this step.
 
 ---
 
 [Step B: Generate Expected Body - OUTPUT]
+Write the expected body in the SAME STYLE as the example above, as if it were the body of a news article (not a meta description).
 
 Use the following generation settings:
 
@@ -37,8 +56,8 @@ Format: {narrative}
 
 Generation rules:
 Describe what this user is likely expecting to read if they click the article.
-Use expectation-based and speculative language.
+Write directly as article content; do NOT use phrases such as "The article is likely to…" or "Readers may expect…".
 Do not assume access to the real article body.
-Do not include emotional or sensational expressions.
+Avoid emotional or sensational expressions.
 
 Now generate the expected body.

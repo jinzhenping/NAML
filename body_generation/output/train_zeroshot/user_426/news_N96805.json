@@ -1,0 +1,21 @@
+{
+  "user_id": 426,
+  "candidate_news_id": "N96805",
+  "candidate_title": "Hernandez: Anthony Davis' impact on LeBron James apparent even when he doesn't play",
+  "user_history_count": 10,
+  "user_history": [
+    "Jeff Bezos lost about $7 billion on Thursday",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Trump's steel tariffs were supposed to save the industry. They made things worse",
+    "Family of missing teen desperate for answers: 'She would never not contact somebody'",
+    "Foul play suspected in case of UFC fighter's missing stepdaughter",
+    "Man's trip to a cheese shop helps unravel missing persons case",
+    "McDonald's Fires CEO Steve Easterbrook After Relationship With Employee",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "11 Expenses to Cut Now If You Want to Retire Early",
+    "Missing college student's parents meet with mother of Natalee Holloway"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jeff Bezos lost about $7 billion on Thursday\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Trump's steel tariffs were supposed to save the industry. They made things worse\"\n\"Family of missing teen desperate for answers: 'She would never not contact somebody'\"\n\"Foul play suspected in case of UFC fighter's missing stepdaughter\"\n\"Man's trip to a cheese shop helps unravel missing persons case\"\n\"McDonald's Fires CEO Steve Easterbrook After Relationship With Employee\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"11 Expenses to Cut Now If You Want to Retire Early\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\n[Candidate News Title]\n\"Hernandez: Anthony Davis' impact on LeBron James apparent even when he doesn't play\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the impact of Anthony Davis on LeBron James' performance and overall contributions to the Los Angeles Lakers, even when Davis is not actively playing. It may analyze how Davis' presence influences team dynamics, strategies, and game outcomes, providing insights into their on-court relationship. Additionally, the piece could explore statistics or expert opinions that highlight Davis' role in supporting LeBron's performance and the team's success. There may also be a discussion on how injuries or absences might affect both players and the team's prospects for the season.",
+  "model": "gpt-4o-mini"
+}

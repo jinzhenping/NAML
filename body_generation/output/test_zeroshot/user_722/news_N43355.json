@@ -1,0 +1,21 @@
+{
+  "user_id": 722,
+  "candidate_news_id": "N43355",
+  "candidate_title": "Prince Charles just turned 71   here are the best photos from every year of his royal career so far",
+  "user_history_count": 10,
+  "user_history": [
+    "'No body, no crime,' Patrick Frazee said before fiancée vanished, friend testifies",
+    "Gwen Stefani Sets the Record Straight on That Diamond Ring at 2019 People's Choice Awards",
+    "Rebirth, angst and the 'new normal' of California wildfires",
+    "San Diego State University freshman hurt in fraternity incident dies",
+    "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+    "Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter",
+    "'It's the biggest gift I've ever gotten:' Iraq War veteran who lost leg and suffered significant trauma will come home to a hero's house in Glastonbury",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "Friendly's ice cream parent owner files for bankruptcy",
+    "American woman apparently strangled in the Dominican Republic"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'No body, no crime,' Patrick Frazee said before fiancée vanished, friend testifies\"\n\"Gwen Stefani Sets the Record Straight on That Diamond Ring at 2019 People's Choice Awards\"\n\"Rebirth, angst and the 'new normal' of California wildfires\"\n\"San Diego State University freshman hurt in fraternity incident dies\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter\"\n\"'It's the biggest gift I've ever gotten:' Iraq War veteran who lost leg and suffered significant trauma will come home to a hero's house in Glastonbury\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"Friendly's ice cream parent owner files for bankruptcy\"\n\"American woman apparently strangled in the Dominican Republic\"\n\n[Candidate News Title]\n\"Prince Charles just turned 71   here are the best photos from every year of his royal career so far\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely provides a retrospective look at Prince Charles's life and career as he celebrates his 71st birthday, featuring a selection of photographs that highlight significant moments over the years. Readers can expect to see images that capture key events, milestones, and personal achievements, showcasing his roles within the royal family and public life. The article may also explore themes such as his evolving public image and contributions to various causes, offering insights into how he has navigated his responsibilities as a member of the monarchy.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 441,
+  "candidate_news_id": "N26483",
+  "candidate_title": "20 Tourist Attractions Travel Editors Actually Love Visiting",
+  "user_history_count": 10,
+  "user_history": [
+    "The Queen Invited These Celebrities to a Sleepover at Windsor Castle",
+    "A former royal bodyguard shared the challenges that come with protecting the royal family",
+    "Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance",
+    "Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year",
+    "Widow claims Carnival Cruise Line hired unlicensed doctor, and now her husband is dead",
+    "The biggest royal news of the last decade",
+    "Senate GOP waves Trump off early motion to dismiss impeachment charges",
+    "This Arctic blast is in its final day. But the cold isn't over quite yet",
+    "Best royal photos of 2019",
+    "Prince Harry and Prince William's Rift Is \"One of the Main Reasons\" the Sussexes Are Skipping Royal Christmas"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Queen Invited These Celebrities to a Sleepover at Windsor Castle\"\n\"A former royal bodyguard shared the challenges that come with protecting the royal family\"\n\"Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance\"\n\"Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year\"\n\"Widow claims Carnival Cruise Line hired unlicensed doctor, and now her husband is dead\"\n\"The biggest royal news of the last decade\"\n\"Senate GOP waves Trump off early motion to dismiss impeachment charges\"\n\"This Arctic blast is in its final day. But the cold isn't over quite yet\"\n\"Best royal photos of 2019\"\n\"Prince Harry and Prince William's Rift Is \"One of the Main Reasons\" the Sussexes Are Skipping Royal Christmas\"\n\n[Candidate News Title]\n\"20 Tourist Attractions Travel Editors Actually Love Visiting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"20 Tourist Attractions Travel Editors Actually Love Visiting,\" you might expect a curated list of popular destinations that are highly recommended by travel experts. The article is likely to provide insights into various attractions, highlighting notable features and experiences that make each location appealing to visitors. Additionally, it could include a mix of well-known landmarks and hidden gems, accompanied by practical tips for travelers. You may also find that certain attractions are favored for their historical significance, cultural relevance, or unique offerings, although the specific details will depend on the editors' personal preferences and experiences.",
+  "model": "gpt-4o-mini"
+}

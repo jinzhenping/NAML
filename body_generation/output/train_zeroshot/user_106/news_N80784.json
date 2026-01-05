@@ -1,0 +1,19 @@
+{
+  "user_id": 106,
+  "candidate_news_id": "N80784",
+  "candidate_title": "Miranda Lambert Is Pretty in Pink at 2019 CMA Awards With Husband Brendan McLoughlin",
+  "user_history_count": 8,
+  "user_history": [
+    "Plans pushed back to explode 2 cranes in New Orleans",
+    "Here are the lawmakers who are not seeking reelection to Congress in 2020",
+    "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+    "Kellogg's agrees to stop calling its sugary cereals 'healthy'",
+    "Democrats vow not to delay impeachment probe as witnesses ignore subpoenas",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Lil Pump bit by snake on set of music video"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Plans pushed back to explode 2 cranes in New Orleans\"\n\"Here are the lawmakers who are not seeking reelection to Congress in 2020\"\n\"Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony\"\n\"Kellogg's agrees to stop calling its sugary cereals 'healthy'\"\n\"Democrats vow not to delay impeachment probe as witnesses ignore subpoenas\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Lil Pump bit by snake on set of music video\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Miranda Lambert Is Pretty in Pink at 2019 CMA Awards With Husband Brendan McLoughlin\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Miranda Lambert at the 2019 CMA Awards is likely to provide an overview of her appearance, including details about her outfit and any notable moments during the event. Readers may expect to learn about her interactions with her husband, Brendan McLoughlin, as well as any comments she made during the ceremony. Additionally, the piece may explore Lambert's performance or involvement in the awards, and could highlight her status within the country music industry. Overall, it is likely to focus on her presentation and the significance of her attendance at this prominent event.",
+  "model": "gpt-4o-mini"
+}

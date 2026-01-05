@@ -1,0 +1,21 @@
+{
+  "user_id": 870,
+  "candidate_news_id": "N122078",
+  "candidate_title": "Here's the Thanksgiving dinner $50 buys you at Aldi, Costco, Walmart and more",
+  "user_history_count": 10,
+  "user_history": [
+    "Target kicks off its Black Friday deals this week",
+    "A woman's stalker used an app that allowed him to stop, start and track her car",
+    "It's a Boy! Pregnant Ashley Graham Reveals the Sex of Her Baby on the Way During Ellen Game",
+    "Antonio Brown blasts NFL, seems to announce retirement",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "'You're not a serial killer, right?' victim text messaged man before she died",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "NYPD Officers Recovering From Possible Fentanyl Exposure During Bronx Drug Bust",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Target kicks off its Black Friday deals this week\"\n\"A woman's stalker used an app that allowed him to stop, start and track her car\"\n\"It's a Boy! Pregnant Ashley Graham Reveals the Sex of Her Baby on the Way During Ellen Game\"\n\"Antonio Brown blasts NFL, seems to announce retirement\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"'You're not a serial killer, right?' victim text messaged man before she died\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"NYPD Officers Recovering From Possible Fentanyl Exposure During Bronx Drug Bust\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\n[Candidate News Title]\n\"Here's the Thanksgiving dinner $50 buys you at Aldi, Costco, Walmart and more\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to find a comparative analysis of Thanksgiving dinner options available at major retailers such as Aldi, Costco, and Walmart, with a focus on what a budget of $50 can buy. The piece likely details various meal components, including traditional dishes and sides, while highlighting any unique offerings from each store. It may also provide insights into how to maximize value for money during the holiday season, helping readers make informed choices for their Thanksgiving celebrations.",
+  "model": "gpt-4o-mini"
+}

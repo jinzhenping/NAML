@@ -1,0 +1,19 @@
+{
+  "user_id": 45,
+  "candidate_news_id": "N52080",
+  "candidate_title": "Inside Walmart's Corporate Culture Clash Over E-Commerce",
+  "user_history_count": 8,
+  "user_history": [
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "This Mom's Been Sober For 3 Years, and Her Celebratory Photo Shoot With Her Son Is Everything",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "4 Things to Know About Keanu Reeves' New Girlfriend",
+    "A controversial comedian and a former child star are eliminated on 'Masked Singer'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"This Mom's Been Sober For 3 Years, and Her Celebratory Photo Shoot With Her Son Is Everything\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"4 Things to Know About Keanu Reeves' New Girlfriend\"\n\"A controversial comedian and a former child star are eliminated on 'Masked Singer'\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Inside Walmart's Corporate Culture Clash Over E-Commerce\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article \"Inside Walmart's Corporate Culture Clash Over E-Commerce,\" the user can expect an exploration of the internal dynamics at Walmart as the company navigates the challenges of integrating e-commerce with its traditional retail operations. It may detail the differing perspectives among employees and management regarding the shift towards online sales, highlighting potential conflicts that arise from differing priorities and strategies. The article is likely to provide insights into how these cultural clashes impact decision-making and the overall direction of the company in a rapidly evolving retail landscape.",
+  "model": "gpt-4o-mini"
+}

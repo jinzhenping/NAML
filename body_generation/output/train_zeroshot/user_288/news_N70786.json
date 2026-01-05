@@ -1,0 +1,16 @@
+{
+  "user_id": 288,
+  "candidate_news_id": "N70786",
+  "candidate_title": "Subtle Signs You're Eating Too Much Sugar",
+  "user_history_count": 5,
+  "user_history": [
+    "Can you spot the cat hiding among the bats in this spooky Halloween brainteaser?",
+    "Fearsome Sight: Bees Move Into Lion Statue in Perth",
+    "'The Terminator' cast: Where are they now?",
+    "The world's largest nuclear power producer is melting down",
+    "Tornado watch: More than 12 million Americans under a tornado watch on Halloween"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Can you spot the cat hiding among the bats in this spooky Halloween brainteaser?\"\n\"Fearsome Sight: Bees Move Into Lion Statue in Perth\"\n\"'The Terminator' cast: Where are they now?\"\n\"The world's largest nuclear power producer is melting down\"\n\"Tornado watch: More than 12 million Americans under a tornado watch on Halloween\"\n\"\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Subtle Signs You're Eating Too Much Sugar\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Subtle Signs You're Eating Too Much Sugar,\" the user can expect to read about various indicators that suggest excessive sugar consumption in their diet. It may cover topics such as common symptoms, behavioral patterns, and health implications associated with high sugar intake. The article could also provide practical tips for recognizing hidden sugars in everyday foods, along with suggestions for healthier alternatives. Overall, it aims to inform readers about the importance of moderation in sugar consumption and its potential effects on well-being.",
+  "model": "gpt-4o-mini"
+}

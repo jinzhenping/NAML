@@ -1,0 +1,20 @@
+{
+  "user_id": 856,
+  "candidate_news_id": "N73137",
+  "candidate_title": "Here Are the Biggest Deals We're Anticipating for Black Friday",
+  "user_history_count": 9,
+  "user_history": [
+    "Mad About You Star Helen Hunt Taken to Hospital After Car Is T-Boned and Rolls Over in Accident",
+    "Why it's so hard for planes to land on water",
+    "Why it's so hard for planes to land on water",
+    "11-month-old clinging to life after being shot four times in back seat of car",
+    "This restored 1968 Winnebago is beyond adorable",
+    "Iowa grandmother killed at gender reveal was 45 feet away from 'pipe bomb'; she died instantly, authorities say",
+    "Trailer - After the Wedding",
+    "Every Must-See Photo of Stars Celebrating Halloween 2019",
+    "Future Jeep Grand Cherokee, Wagoneer, Ram Plans On Track"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mad About You Star Helen Hunt Taken to Hospital After Car Is T-Boned and Rolls Over in Accident\"\n\"Why it's so hard for planes to land on water\"\n\"Why it's so hard for planes to land on water\"\n\"11-month-old clinging to life after being shot four times in back seat of car\"\n\"This restored 1968 Winnebago is beyond adorable\"\n\"Iowa grandmother killed at gender reveal was 45 feet away from 'pipe bomb'; she died instantly, authorities say\"\n\"Trailer - After the Wedding\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"Future Jeep Grand Cherokee, Wagoneer, Ram Plans On Track\"\n\"\"\n\n[Candidate News Title]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Here Are the Biggest Deals We're Anticipating for Black Friday,\" the user can expect a detailed overview of the major sales and discounts expected from various retailers during the upcoming Black Friday shopping event. It may highlight specific categories such as electronics, home goods, and fashion, along with anticipated price drops for popular products. Additionally, the article could provide insights into consumer trends and shopping strategies, helping readers prepare for the event efficiently. Overall, it aims to inform shoppers about what to look out for as the holiday season approaches.",
+  "model": "gpt-4o-mini"
+}

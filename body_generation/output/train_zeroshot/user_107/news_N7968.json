@@ -1,0 +1,21 @@
+{
+  "user_id": 107,
+  "candidate_news_id": "N7968",
+  "candidate_title": "Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance",
+  "user_history_count": 10,
+  "user_history": [
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Clippers set bad precedent resting Kawhi Leonard against Bucks",
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "Ask Mr. Dad: 'Bad dad' can't connect with kids through play",
+    "EU ambassador's miraculous 'now I remember' moment",
+    "Holocaust survivor under guard amid death threats",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Republicans urge Bevin to provide proof of election fraud or concede"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Clippers set bad precedent resting Kawhi Leonard against Bucks\"\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"Ask Mr. Dad: 'Bad dad' can't connect with kids through play\"\n\"EU ambassador's miraculous 'now I remember' moment\"\n\"Holocaust survivor under guard amid death threats\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Republicans urge Bevin to provide proof of election fraud or concede\"\n\n[Candidate News Title]\n\"Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Marie Osmond possibly discusses her recent fall on stage, which reportedly resulted in a chipped kneecap. Readers may expect to learn about the circumstances surrounding the incident, including details of her performance and any immediate effects on her health or career. Additionally, the piece might cover her recovery process and any statements she has made regarding the accident. It is likely that the article will also touch on her history in the entertainment industry, providing context for her work and public appearances.",
+  "model": "gpt-4o-mini"
+}

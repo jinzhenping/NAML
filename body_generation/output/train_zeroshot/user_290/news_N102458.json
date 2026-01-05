@@ -1,0 +1,21 @@
+{
+  "user_id": 290,
+  "candidate_news_id": "N102458",
+  "candidate_title": "50 amazing gifts for every type of person and budget",
+  "user_history_count": 10,
+  "user_history": [
+    "Trio wins economics Nobel for fighting poverty",
+    "Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care",
+    "Freshman Georgia Southern offensive lineman Jordan Wiggins dies at 18",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "Your weekly horoscope: October 28th - November 3rd",
+    "Watch Miranda Lambert Invite a Little Girl On Stage Who 'Stole' Her Heart",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "A man dies in Hawaii after falling into a lava tube in his yard"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trio wins economics Nobel for fighting poverty\"\n\"Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care\"\n\"Freshman Georgia Southern offensive lineman Jordan Wiggins dies at 18\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"Your weekly horoscope: October 28th - November 3rd\"\n\"Watch Miranda Lambert Invite a Little Girl On Stage Who 'Stole' Her Heart\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\n[Candidate News Title]\n\"50 amazing gifts for every type of person and budget\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a curated list of 50 gift ideas tailored for various personalities and budget ranges. The selection may encompass a wide array of items, from practical gadgets to unique experiences, catering to different interests and occasions. Readers might expect detailed descriptions of each gift option, including price points and potential recipients, which could assist them in making informed purchasing decisions. Additionally, the article may highlight trends in gift-giving, providing insights into popular choices this season.",
+  "model": "gpt-4o-mini"
+}

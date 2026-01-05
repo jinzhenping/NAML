@@ -1,0 +1,21 @@
+{
+  "user_id": 306,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "Navy Reduces Punishment for SEAL in War Crimes Case",
+    "Six photographers share their favorite Audrey Hepburn images in a new book celebrating the Hollywood actress 26 years after her death",
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "Two Disputed Judicial Nominees Could Help Trump Reach Milestone",
+    "Judge in Purdue Pharma bankruptcy case extends lawsuit protection to Sacklers",
+    "Opinions | It's too late to save yourself now, Bill Barr",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+    "Ilhan Omar blasts Pete King as an 'Islamophobe' after he announces retirement: 'Good riddance'",
+    "100 best Westerns of all time"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Navy Reduces Punishment for SEAL in War Crimes Case\"\n\"Six photographers share their favorite Audrey Hepburn images in a new book celebrating the Hollywood actress 26 years after her death\"\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"Two Disputed Judicial Nominees Could Help Trump Reach Milestone\"\n\"Judge in Purdue Pharma bankruptcy case extends lawsuit protection to Sacklers\"\n\"Opinions | It's too late to save yourself now, Bill Barr\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\"Ilhan Omar blasts Pete King as an 'Islamophobe' after he announces retirement: 'Good riddance'\"\n\"100 best Westerns of all time\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive,\" you can expect a curated list of innovative and appealing technology-related gift ideas suitable for various occasions. The article is likely to highlight a range of gadgets and devices, from practical tools to fun novelties, appealing to different age groups and interests. Additionally, it may provide insights into the latest trends in tech gifts and possibly include suggestions for budget-friendly options. Overall, it aims to assist readers in finding the perfect tech gifts for their friends and family.",
+  "model": "gpt-4o-mini"
+}

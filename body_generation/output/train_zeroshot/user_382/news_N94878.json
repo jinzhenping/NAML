@@ -1,0 +1,18 @@
+{
+  "user_id": 382,
+  "candidate_news_id": "N94878",
+  "candidate_title": "A new Astros sign-stealing clip may explain this 2017 George Springer home run",
+  "user_history_count": 7,
+  "user_history": [
+    "Dolphins release player acquired from Texans in Laremy Tunsil, Kenny Stills trade",
+    "MLB bans women who flashed their chests behind home plate during Game 5 of World Series",
+    "A 2,000-pound great white shark is swimming off the coast of Florida",
+    "Yardbarker's Week 9 NFL picks, game previews",
+    "Crash shuts down 3 SB lanes of I-95 in Riviera Beach",
+    "Three Florida families say sunscreen burned their children",
+    "Sneaky reason why Ravens, not Patriots, are AFC's best"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dolphins release player acquired from Texans in Laremy Tunsil, Kenny Stills trade\"\n\"MLB bans women who flashed their chests behind home plate during Game 5 of World Series\"\n\"A 2,000-pound great white shark is swimming off the coast of Florida\"\n\"Yardbarker's Week 9 NFL picks, game previews\"\n\"Crash shuts down 3 SB lanes of I-95 in Riviera Beach\"\n\"Three Florida families say sunscreen burned their children\"\n\"Sneaky reason why Ravens, not Patriots, are AFC's best\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"A new Astros sign-stealing clip may explain this 2017 George Springer home run\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a newly surfaced clip related to the Houston Astros' sign-stealing scandal, focusing on a specific home run hit by George Springer during the 2017 season. Readers may expect to learn about the context of the play, how the sign-stealing system operated, and its potential impact on the game’s outcome. The piece could also delve into insights from analysts or players regarding the implications of this clip for the ongoing narrative surrounding the Astros and their championship season, although the exact details remain uncertain.",
+  "model": "gpt-4o-mini"
+}

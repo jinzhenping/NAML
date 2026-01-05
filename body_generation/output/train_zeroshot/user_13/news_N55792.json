@@ -1,0 +1,21 @@
+{
+  "user_id": 13,
+  "candidate_news_id": "N55792",
+  "candidate_title": "Stars Who Served in the Military",
+  "user_history_count": 10,
+  "user_history": [
+    "Frustrated Antonio Brown has active morning on Twitter",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Biden on being denied communion: 'I'm a practicing Catholic, I practice my faith'",
+    "Here's how the Fed rate cut affects you",
+    "Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "Even 'Project Runway' Couldn't Save Zac Posen",
+    "Bears' Khalil Mack calls out Eagles C Jason Kelce's controversial tactics in offsides penalties",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Biden on being denied communion: 'I'm a practicing Catholic, I practice my faith'\"\n\"Here's how the Fed rate cut affects you\"\n\"Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Even 'Project Runway' Couldn't Save Zac Posen\"\n\"Bears' Khalil Mack calls out Eagles C Jason Kelce's controversial tactics in offsides penalties\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\n[Candidate News Title]\n\"Stars Who Served in the Military\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Stars Who Served in the Military\" is likely to explore the experiences of various celebrities who have had military service. Readers may expect to learn about well-known figures from different fields, such as film, music, and sports, who have served in armed forces, detailing their roles and the impact of their service on their lives and careers. The piece could also highlight the significance of their military backgrounds in shaping public perceptions and how these stars have used their platforms to advocate for veterans' issues or military-related causes.",
+  "model": "gpt-4o-mini"
+}

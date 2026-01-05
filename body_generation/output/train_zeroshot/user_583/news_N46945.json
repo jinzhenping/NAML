@@ -1,0 +1,21 @@
+{
+  "user_id": 583,
+  "candidate_news_id": "N46945",
+  "candidate_title": "Stars who've had more than one wedding with the same spouse",
+  "user_history_count": 10,
+  "user_history": [
+    "Kylie Jenner Files a Restraining Order Against a Fan Who Trespassed Onto Her Home",
+    "Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease",
+    "Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal",
+    "Stars   They're Just Like Us!",
+    "GM sells its Lordstown Assembly plant to electric truck start-up",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Mary Cain details alleged physical and emotional abuse at the hands of Nike, Alberto Salazar",
+    "Sears says it has secured a $250 million lifeline, will close 96 stores",
+    "Best Buy releases Black Friday ad with Apple doorbusters, TV deals and early savings",
+    "Report: Stephen A. Smith strikes massive new deal with ESPN"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kylie Jenner Files a Restraining Order Against a Fan Who Trespassed Onto Her Home\"\n\"Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease\"\n\"Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal\"\n\"Stars   They're Just Like Us!\"\n\"GM sells its Lordstown Assembly plant to electric truck start-up\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Mary Cain details alleged physical and emotional abuse at the hands of Nike, Alberto Salazar\"\n\"Sears says it has secured a $250 million lifeline, will close 96 stores\"\n\"Best Buy releases Black Friday ad with Apple doorbusters, TV deals and early savings\"\n\"Report: Stephen A. Smith strikes massive new deal with ESPN\"\n\n[Candidate News Title]\n\"Stars who've had more than one wedding with the same spouse\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Stars who've had more than one wedding with the same spouse,\" the user is likely to find a discussion on various celebrities who have remarried their former partners. The content may explore the reasons behind these reconciliations, offering insights into the personal lives of the stars involved. Additionally, it could highlight notable examples and provide context on how these relationships have evolved over time. The article may also include speculation about the factors that contribute to such decisions among high-profile individuals, shedding light on the complexities of love and commitment in the public eye.",
+  "model": "gpt-4o-mini"
+}

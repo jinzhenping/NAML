@@ -1,0 +1,21 @@
+{
+  "user_id": 640,
+  "candidate_news_id": "N91865",
+  "candidate_title": "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+  "user_history_count": 10,
+  "user_history": [
+    "Pilots' Insane Emergency Landings Caught on Camera",
+    "Why the 'His Dark Materials' Books Were Once Considered 'Dangerous'",
+    "Homicide suspects 'exploited' blind spot to escape jail, authorities say",
+    "Captives or Defectors? Taliban Fighters Tell Conflicting Tales",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "Captured al-Baghdadi wife revealed plenty about ISIS, source says",
+    "Oklahoma woman in failure-to-protect case to be released",
+    "Why Spy on Twitter? For Saudi Arabia, It's the Town Square",
+    "They Are Racist; Some of Them Have Guns. Inside the White Supremacist Group Hiding in Plain Sight.",
+    "Hundreds arrested ahead of verdict on Indian holy site"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Pilots' Insane Emergency Landings Caught on Camera\"\n\"Why the 'His Dark Materials' Books Were Once Considered 'Dangerous'\"\n\"Homicide suspects 'exploited' blind spot to escape jail, authorities say\"\n\"Captives or Defectors? Taliban Fighters Tell Conflicting Tales\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"Captured al-Baghdadi wife revealed plenty about ISIS, source says\"\n\"Oklahoma woman in failure-to-protect case to be released\"\n\"Why Spy on Twitter? For Saudi Arabia, It's the Town Square\"\n\"They Are Racist; Some of Them Have Guns. Inside the White Supremacist Group Hiding in Plain Sight.\"\n\"Hundreds arrested ahead of verdict on Indian holy site\"\n\n[Candidate News Title]\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"LASIK eye surgery should be taken off market, ex-FDA adviser says\" is likely to explore concerns surrounding the safety and efficacy of LASIK procedures, particularly in light of statements from a former FDA adviser. Readers can expect an examination of potential risks associated with LASIK, including complications and long-term effects that may not have been fully addressed in previous evaluations. The discussion may also include insights into regulatory practices and calls for reevaluation of the procedure's market status, raising questions about patient safety and informed consent.",
+  "model": "gpt-4o-mini"
+}

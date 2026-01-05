@@ -1,0 +1,21 @@
+{
+  "user_id": 178,
+  "candidate_news_id": "N55792",
+  "candidate_title": "Stars Who Served in the Military",
+  "user_history_count": 10,
+  "user_history": [
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Takeaways From Champions Classic: Tyrese Maxey's Breakout, Kansas' Turnovers and More",
+    "Brazil oil auction a 'total disaster' as bidders stay away",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Eric Bledsoe forgot the rules of basketball on this inbound play",
+    "4 Things to Know About Keanu Reeves' New Girlfriend",
+    "3 students allegedly plotted to attack their middle school: Officials",
+    "Chase Young fiasco highlights absurdity of NCAA's outdated model",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Takeaways From Champions Classic: Tyrese Maxey's Breakout, Kansas' Turnovers and More\"\n\"Brazil oil auction a 'total disaster' as bidders stay away\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Eric Bledsoe forgot the rules of basketball on this inbound play\"\n\"4 Things to Know About Keanu Reeves' New Girlfriend\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\"Chase Young fiasco highlights absurdity of NCAA's outdated model\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"Stars Who Served in the Military\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Stars Who Served in the Military,\" they are likely expecting to read about various celebrities who have had military service. The article may provide a mix of well-known actors, musicians, and other public figures, detailing their roles and experiences in the military. It could include anecdotes or insights into how their service has influenced their careers and public personas. Additionally, the piece may touch on the significance of their service in the context of their fame, although this is uncertain. Overall, the user may find a blend of biographical information and reflections on the intersection of military service and celebrity culture.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,17 @@
+{
+  "user_id": 611,
+  "candidate_news_id": "N100380",
+  "candidate_title": "The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers",
+  "user_history_count": 6,
+  "user_history": [
+    "Hard Rock Hotel New Orleans collapse: Former site engineer weighs in",
+    "Eagles' losses getting uglier as offense, defense self-destruct against Cowboys",
+    "Dez Bryant plans to reach out to NFL teams in two weeks",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "Antonio Brown meeting with NFL next week",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Hard Rock Hotel New Orleans collapse: Former site engineer weighs in\"\n\"Eagles' losses getting uglier as offense, defense self-destruct against Cowboys\"\n\"Dez Bryant plans to reach out to NFL teams in two weeks\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"Antonio Brown meeting with NFL next week\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers,\" the user may expect to read an analysis of the recent game between the Seattle Seahawks and the San Francisco 49ers, focusing on an unusual incident related to a coin toss. The piece is likely to explore various opinions surrounding this supposed conspiracy, including reactions from fans and analysts. It could also provide context about the implications of such incidents in the broader scope of the game and the NFL, while questioning the validity of the claims made by some regarding the coin toss's impact on the outcome.",
+  "model": "gpt-4o-mini"
+}

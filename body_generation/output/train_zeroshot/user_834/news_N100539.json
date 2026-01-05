@@ -1,0 +1,21 @@
+{
+  "user_id": 834,
+  "candidate_news_id": "N100539",
+  "candidate_title": "The Latest Weight Loss Pills That Work And the Ones That Don't",
+  "user_history_count": 10,
+  "user_history": [
+    "What Kids Did a Decade Ago That They Don't Do Anymore",
+    "Fort Worth shooting: Officers weren't asked to do welfare check. Here's how it changed things",
+    "I Was Misdiagnosed With an Allergy and Panic Attacks Until An X-Ray Revealed The Real Problem",
+    "Former NFL lineman Justin Bannan arrested for attempted murder",
+    "TobyMac says late son 'had an untamable grand personality,' shares last text exchange",
+    "Cornell student, 18, found dead in gorge after frat party, reports say",
+    "25 Foods and Drinks That Are Wrecking Your Teeth and Gums",
+    "The 20 best gifts of 2019",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"What Kids Did a Decade Ago That They Don't Do Anymore\"\n\"Fort Worth shooting: Officers weren't asked to do welfare check. Here's how it changed things\"\n\"I Was Misdiagnosed With an Allergy and Panic Attacks Until An X-Ray Revealed The Real Problem\"\n\"Former NFL lineman Justin Bannan arrested for attempted murder\"\n\"TobyMac says late son 'had an untamable grand personality,' shares last text exchange\"\n\"Cornell student, 18, found dead in gorge after frat party, reports say\"\n\"25 Foods and Drinks That Are Wrecking Your Teeth and Gums\"\n\"The 20 best gifts of 2019\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\n[Candidate News Title]\n\"The Latest Weight Loss Pills That Work And the Ones That Don't\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide an overview of various weight loss pills currently available on the market, detailing their effectiveness and potential side effects. It may categorize these pills based on their ingredients and mechanisms of action, highlighting which ones have scientific backing and which may not deliver promised results. Additionally, the article could include insights from health experts or studies that evaluate the safety of these products. Readers may find comparisons that help them discern between popular options and emerging trends in weight loss supplements. Overall, the content is expected to inform the user about safe choices in weight management aids.",
+  "model": "gpt-4o-mini"
+}

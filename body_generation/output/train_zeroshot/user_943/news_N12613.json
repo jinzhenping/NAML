@@ -1,0 +1,21 @@
+{
+  "user_id": 943,
+  "candidate_news_id": "N12613",
+  "candidate_title": "Andrew Yang's Campaign Has a Lot of Money. Now What?",
+  "user_history_count": 10,
+  "user_history": [
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Jon Gruden, Raiders take victory lap as they've left Antonio Brown mistake in dust",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+    "Man's Body Discovered In Simi Valley Home Where Dead Woman, Bomb Threat Found",
+    "With loss to Raiders, is Chargers QB Philip Rivers' Super Bowl window officially closed?",
+    "Winners, losers from Raiders' comeback win over Chargers",
+    "Raiders rally to beat Chargers 26-24",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Jon Gruden, Raiders take victory lap as they've left Antonio Brown mistake in dust\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Man's Body Discovered In Simi Valley Home Where Dead Woman, Bomb Threat Found\"\n\"With loss to Raiders, is Chargers QB Philip Rivers' Super Bowl window officially closed?\"\n\"Winners, losers from Raiders' comeback win over Chargers\"\n\"Raiders rally to beat Chargers 26-24\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\n[Candidate News Title]\n\"Andrew Yang's Campaign Has a Lot of Money. Now What?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read \"Andrew Yang's Campaign Has a Lot of Money. Now What?\", you may expect an analysis of the financial status of Andrew Yang's political campaign and how it positions him for future electoral strategies. The article is likely to discuss the implications of having substantial funds, including potential outreach efforts, advertising strategies, and the impact on his competitiveness against other candidates. Additionally, it may explore questions around how Yang plans to effectively utilize this financial advantage to garner voter support and navigate the complexities of his campaign moving forward.",
+  "model": "gpt-4o-mini"
+}

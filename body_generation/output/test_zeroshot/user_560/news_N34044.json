@@ -1,0 +1,21 @@
+{
+  "user_id": 560,
+  "candidate_news_id": "N34044",
+  "candidate_title": "This is it, this is the luckiest break in the history of golf",
+  "user_history_count": 10,
+  "user_history": [
+    "Anna Faris and Michael Barrett may have just confirmed their engagement, plus more news",
+    "Stars Who Served in the Military",
+    "The 10 Most Popular Wines in America, Ranked",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "Dean Foods files for bankruptcy",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "The most exclusive hotel in every state",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show",
+    "Highways on Fire. Semesters Cut Short. A Recession. Can Hong Kong Heal?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Anna Faris and Michael Barrett may have just confirmed their engagement, plus more news\"\n\"Stars Who Served in the Military\"\n\"The 10 Most Popular Wines in America, Ranked\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Dean Foods files for bankruptcy\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"The most exclusive hotel in every state\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\"\n\"Highways on Fire. Semesters Cut Short. A Recession. Can Hong Kong Heal?\"\n\n[Candidate News Title]\n\"This is it, this is the luckiest break in the history of golf\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"This is it, this is the luckiest break in the history of golf\" is likely to explore a significant moment in golf history that highlights an extraordinary turn of events on the course. Readers may expect a detailed account of a specific incident where a player experienced an unexpected stroke of luck, possibly altering the outcome of a tournament or match. The piece could include commentary from golf analysts and insights into how such moments can influence a player's career. Additionally, it may discuss the broader implications of luck in sports, particularly in golf.",
+  "model": "gpt-4o-mini"
+}

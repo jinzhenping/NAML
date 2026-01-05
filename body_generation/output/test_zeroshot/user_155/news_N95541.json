@@ -1,0 +1,21 @@
+{
+  "user_id": 155,
+  "candidate_news_id": "N95541",
+  "candidate_title": "Opinion: NFL should suspend Browns' Myles Garrett for rest of season   at minimum   for helmet swing",
+  "user_history_count": 10,
+  "user_history": [
+    "Eerie photos of an abandoned airport that hasn't been touched in 25 years",
+    "Trump's Deal Allowing 3D-Printed Guns Online Deemed Illegal",
+    "Travel etiquette: The final word on the right to recline",
+    "Why US miners are still digging new mines as coal prices plunge",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "Three school workers charged in death of special needs student",
+    "House Republicans Lash Out Because They Can't Defend Trump's Conduct",
+    "If Trump Were Anyone Else …",
+    "A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent",
+    "Trump admin preparing to take over private land for border wall"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Eerie photos of an abandoned airport that hasn't been touched in 25 years\"\n\"Trump's Deal Allowing 3D-Printed Guns Online Deemed Illegal\"\n\"Travel etiquette: The final word on the right to recline\"\n\"Why US miners are still digging new mines as coal prices plunge\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"Three school workers charged in death of special needs student\"\n\"House Republicans Lash Out Because They Can't Defend Trump's Conduct\"\n\"If Trump Were Anyone Else …\"\n\"A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent\"\n\"Trump admin preparing to take over private land for border wall\"\n\n[Candidate News Title]\n\"Opinion: NFL should suspend Browns' Myles Garrett for rest of season   at minimum   for helmet swing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect a discussion surrounding the NFL's disciplinary actions regarding player Myles Garrett, particularly in light of his recent controversial incident involving a helmet swing. The piece is likely to explore the implications of such behavior on player safety and league standards, as well as the potential consequences Garrett could face, including a suspension for the remainder of the season. Additionally, it might analyze opinions from fans, analysts, and sports commentators on whether this response is appropriate given the circumstances.",
+  "model": "gpt-4o-mini"
+}

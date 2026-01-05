@@ -1,0 +1,21 @@
+{
+  "user_id": 5,
+  "candidate_news_id": "N17106",
+  "candidate_title": "Selena Gomez Stands Up for Taylor Swift Amid Her Music Battle: 'It's Greed, Manipulation and Power'",
+  "user_history_count": 10,
+  "user_history": [
+    "The best Disney villains",
+    "Georgia sheriff's 'No Trick-or-Treat' signs trigger lawsuit from sex offenders",
+    "Workers in pain: Employers take a new twist to prevent costly injuries",
+    "CNN Poll: Biden's lead in Democratic primary hits widest margin since April",
+    "Most Popular Album the Year You Were Born",
+    "Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves",
+    "Foie Gras Is Banned by New York City",
+    "Stars we lost in 2019",
+    "The Best Value Meal Deals at 50 Chains Across the Country",
+    "45 Abandoned Places Around the World That Are Eerily Beautiful"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The best Disney villains\"\n\"Georgia sheriff's 'No Trick-or-Treat' signs trigger lawsuit from sex offenders\"\n\"Workers in pain: Employers take a new twist to prevent costly injuries\"\n\"CNN Poll: Biden's lead in Democratic primary hits widest margin since April\"\n\"Most Popular Album the Year You Were Born\"\n\"Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves\"\n\"Foie Gras Is Banned by New York City\"\n\"Stars we lost in 2019\"\n\"The Best Value Meal Deals at 50 Chains Across the Country\"\n\"45 Abandoned Places Around the World That Are Eerily Beautiful\"\n\n[Candidate News Title]\n\"Selena Gomez Stands Up for Taylor Swift Amid Her Music Battle: 'It's Greed, Manipulation and Power'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses Selena Gomez's support for Taylor Swift during a contentious period in Swift's music career, potentially highlighting issues of industry practices such as greed, manipulation, and power dynamics. Readers may expect to see insights into their friendship and the broader implications for artists navigating the music industry. The piece could also explore reactions from fans and industry insiders, as well as the context surrounding Swift's current challenges, offering a nuanced view of the situation without delving into overly emotional commentary.",
+  "model": "gpt-4o-mini"
+}

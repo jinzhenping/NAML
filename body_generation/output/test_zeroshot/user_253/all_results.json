@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 253,
+    "candidate_news_id": "N127357",
+    "candidate_title": "Please Don't Yell at Your Dog!",
+    "user_history_count": 10,
+    "user_history": [
+      "Science Says Only a Third of People Experience This Health Downside of Breakups",
+      "17 photos that show the ugly truth of living in a tiny house",
+      "What 72 celebrities look like without a lick of makeup",
+      "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+      "50 Facts So Genius You'll Feel Like Einstein",
+      "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+      "Before his execution, a death row inmate told his victim's family he forgives them",
+      "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+      "Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you",
+      "'It's not over': Sarah Palin says she is fighting to repair her marriage"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Science Says Only a Third of People Experience This Health Downside of Breakups\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"What 72 celebrities look like without a lick of makeup\"\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"50 Facts So Genius You'll Feel Like Einstein\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n[Candidate News Title]\n\"Please Don't Yell at Your Dog!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Please Don't Yell at Your Dog!\", the user is likely expecting to read about the impact of yelling at dogs and the importance of positive reinforcement in pet training. The content may explore how yelling can affect a dog's behavior and emotional well-being, potentially leading to anxiety or fear. Additionally, it could provide insights into effective communication methods with pets, emphasizing patience and understanding. The article is likely to include expert opinions or research findings to support these points, though specific details and examples may vary.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 253,
+    "candidate_news_id": "N62800",
+    "candidate_title": "9 renovation tips to boost resale value",
+    "user_history_count": 10,
+    "user_history": [
+      "Science Says Only a Third of People Experience This Health Downside of Breakups",
+      "17 photos that show the ugly truth of living in a tiny house",
+      "What 72 celebrities look like without a lick of makeup",
+      "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+      "50 Facts So Genius You'll Feel Like Einstein",
+      "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+      "Before his execution, a death row inmate told his victim's family he forgives them",
+      "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+      "Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you",
+      "'It's not over': Sarah Palin says she is fighting to repair her marriage"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Science Says Only a Third of People Experience This Health Downside of Breakups\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"What 72 celebrities look like without a lick of makeup\"\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"50 Facts So Genius You'll Feel Like Einstein\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n[Candidate News Title]\n\"9 renovation tips to boost resale value\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"9 renovation tips to boost resale value,\" the user is likely to find practical advice aimed at homeowners looking to enhance their property's market appeal. The content may cover various renovation strategies, such as cost-effective upgrades, design trends that attract buyers, and essential maintenance tasks that can significantly increase home value. Additionally, the article could provide insights into which renovations yield the highest return on investment, helping readers make informed decisions about their home improvement projects.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 253,
+    "candidate_news_id": "N122640",
+    "candidate_title": "This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.",
+    "user_history_count": 10,
+    "user_history": [
+      "Science Says Only a Third of People Experience This Health Downside of Breakups",
+      "17 photos that show the ugly truth of living in a tiny house",
+      "What 72 celebrities look like without a lick of makeup",
+      "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+      "50 Facts So Genius You'll Feel Like Einstein",
+      "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+      "Before his execution, a death row inmate told his victim's family he forgives them",
+      "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+      "Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you",
+      "'It's not over': Sarah Palin says she is fighting to repair her marriage"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Science Says Only a Third of People Experience This Health Downside of Breakups\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"What 72 celebrities look like without a lick of makeup\"\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"50 Facts So Genius You'll Feel Like Einstein\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n[Candidate News Title]\n\"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If the user clicks on the article titled \"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack,\" they may expect a detailed analysis of the incident involving Myles Garrett, including an account of the events that led to the altercation and a discussion on the implications of his actions within the context of sports conduct. The article is likely to explore the reactions from fans, commentators, and sports analysts, as well as potential disciplinary actions by the league. Additionally, it could provide insights into how such incidents impact player reputations and team dynamics, although the specifics of the suspension and its duration might remain speculative.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 253,
+    "candidate_news_id": "N4378",
+    "candidate_title": "Report: Carmelo Anthony returning to NBA with Trail Blazers",
+    "user_history_count": 10,
+    "user_history": [
+      "Science Says Only a Third of People Experience This Health Downside of Breakups",
+      "17 photos that show the ugly truth of living in a tiny house",
+      "What 72 celebrities look like without a lick of makeup",
+      "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+      "50 Facts So Genius You'll Feel Like Einstein",
+      "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+      "Before his execution, a death row inmate told his victim's family he forgives them",
+      "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+      "Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you",
+      "'It's not over': Sarah Palin says she is fighting to repair her marriage"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Science Says Only a Third of People Experience This Health Downside of Breakups\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"What 72 celebrities look like without a lick of makeup\"\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"50 Facts So Genius You'll Feel Like Einstein\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n[Candidate News Title]\n\"Report: Carmelo Anthony returning to NBA with Trail Blazers\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses Carmelo Anthony's anticipated return to the NBA, specifically with the Trail Blazers. Readers can expect insights into the reasons behind his decision to return, potential implications for the team, and how this move fits into the larger context of the current NBA season. The piece may also explore Anthony's recent performance, his role within the team, and how his experience could influence the Trail Blazers' prospects. Additionally, it might include quotes from Anthony or team officials to provide further context.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 253,
+    "candidate_news_id": "N100425",
+    "candidate_title": "The most talked about movie moments of the 2010s",
+    "user_history_count": 10,
+    "user_history": [
+      "Science Says Only a Third of People Experience This Health Downside of Breakups",
+      "17 photos that show the ugly truth of living in a tiny house",
+      "What 72 celebrities look like without a lick of makeup",
+      "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+      "50 Facts So Genius You'll Feel Like Einstein",
+      "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+      "Before his execution, a death row inmate told his victim's family he forgives them",
+      "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+      "Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you",
+      "'It's not over': Sarah Palin says she is fighting to repair her marriage"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Science Says Only a Third of People Experience This Health Downside of Breakups\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"What 72 celebrities look like without a lick of makeup\"\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"50 Facts So Genius You'll Feel Like Einstein\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In reading about \"The most talked about movie moments of the 2010s,\" the user is likely expecting a retrospective overview of significant scenes and plot twists that captured public attention during the decade. The article may highlight a selection of films that sparked discussions, cultural references, or even controversies, providing context for why these moments resonated with audiences. It could also include insights into the impact of social media on the popularity of these scenes, reflecting how they influenced moviegoers' perceptions and conversations.",
+    "model": "gpt-4o-mini"
+  }
+]

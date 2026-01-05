@@ -1,0 +1,21 @@
+{
+  "user_id": 587,
+  "candidate_news_id": "N120312",
+  "candidate_title": "Celebrity chef 'Salt Bae' will pay $230,000 to four ex-servers",
+  "user_history_count": 10,
+  "user_history": [
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Stars   They're Just Like Us!",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal",
+    "Celebrity kids then and now: See how they've grown",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Park Hyatt's Manhattan Sky Suite: City's newest suite runs $350,000 a week",
+    "Michael Bloomberg Actively Prepares to Enter 2020 Presidential Race",
+    "The 25 richest families in America"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Stars   They're Just Like Us!\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal\"\n\"Celebrity kids then and now: See how they've grown\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Park Hyatt's Manhattan Sky Suite: City's newest suite runs $350,000 a week\"\n\"Michael Bloomberg Actively Prepares to Enter 2020 Presidential Race\"\n\"The 25 richest families in America\"\n\n[Candidate News Title]\n\"Celebrity chef 'Salt Bae' will pay $230,000 to four ex-servers\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about celebrity chef 'Salt Bae' is likely to detail the recent legal settlement in which he agreed to pay $230,000 to four former servers. Readers may expect to learn about the circumstances surrounding the lawsuit, including allegations made by the servers and Salt Bae's response to these claims. Additionally, the article could provide insight into the implications of this case for the chef's restaurant business and public image, as well as broader discussions about labor practices in the restaurant industry. Overall, it may offer a look at how celebrity chefs navigate legal challenges while maintaining their brand.",
+  "model": "gpt-4o-mini"
+}

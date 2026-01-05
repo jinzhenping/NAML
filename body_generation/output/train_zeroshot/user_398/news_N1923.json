@@ -1,0 +1,21 @@
+{
+  "user_id": 398,
+  "candidate_news_id": "N1923",
+  "candidate_title": "The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable",
+  "user_history_count": 10,
+  "user_history": [
+    "Week in celebrity photos for Nov. 4-8, 2019",
+    "Lamborghini's long shot mission to take its super fast cars into the electric age",
+    "Lady Gaga Cancels Her Las Vegas Show After Getting Sick with a Sinus Infection and Bronchitis",
+    "Holocaust survivor under guard amid death threats",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Meghan Markle earns Duchess Camilla's support, royal expert says",
+    "Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "Kristen Stewart Just Made Leather Bras a Thing, and We're All For It"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Week in celebrity photos for Nov. 4-8, 2019\"\n\"Lamborghini's long shot mission to take its super fast cars into the electric age\"\n\"Lady Gaga Cancels Her Las Vegas Show After Getting Sick with a Sinus Infection and Bronchitis\"\n\"Holocaust survivor under guard amid death threats\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Meghan Markle earns Duchess Camilla's support, royal expert says\"\n\"Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"Kristen Stewart Just Made Leather Bras a Thing, and We're All For It\"\n\n[Candidate News Title]\n\"The Volkspod VW Beetle Minibikes Are Part Creepy, Part Adorable\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the Volkspod VW Beetle minibikes is likely to explore the unique design and appeal of these small vehicles, which blend a quirky aesthetic with functionality. Readers can expect to learn about the inspiration behind the minibikes, including how they draw from the classic VW Beetle's iconic style. Additionally, the piece may touch on the target audience for these minibikes, discussing their charm and potential use for leisurely rides. The article could also provide insights into any features that set them apart from other minibikes on the market.",
+  "model": "gpt-4o-mini"
+}

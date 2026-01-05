@@ -1,0 +1,18 @@
+{
+  "user_id": 367,
+  "candidate_news_id": "N63391",
+  "candidate_title": "A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000",
+  "user_history_count": 7,
+  "user_history": [
+    "19 Mysterious Old Home Features That Aren't Useful Anymore",
+    "The one restaurant you need to visit in every state",
+    "Missing West Point cadet found dead, officials say",
+    "2 helicopters collide in midair as pilots herd deer: FAA",
+    "The 1000-Horsepower Club",
+    "The Eeriest Small Towns in America",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"19 Mysterious Old Home Features That Aren't Useful Anymore\"\n\"The one restaurant you need to visit in every state\"\n\"Missing West Point cadet found dead, officials say\"\n\"2 helicopters collide in midair as pilots herd deer: FAA\"\n\"The 1000-Horsepower Club\"\n\"The Eeriest Small Towns in America\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about a decommissioned nuclear missile complex in Arizona is likely to provide an overview of the site's history, including its operational past and the reasons behind its abandonment. Readers may expect details about the property's current condition, the unique features that make it stand out in the real estate market, and potential implications of purchasing such a site. Additionally, the article could explore the legal and safety considerations involved in owning a former military installation, as well as what the sale price of $400,000 suggests about the real estate market for unusual properties.",
+  "model": "gpt-4o-mini"
+}

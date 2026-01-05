@@ -1,0 +1,21 @@
+{
+  "user_id": 421,
+  "candidate_news_id": "N129416",
+  "candidate_title": "Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties",
+  "user_history_count": 10,
+  "user_history": [
+    "Senior Trump official embellished résumé, had face on fake Time cover",
+    "Golden Gums! 200-Year-Old Gold Teeth Made of Ivory & Gold Set to Go for Thousands at Auction!",
+    "Leaping Lizards! Reptile Jumps From Man's Pocket During Police Search",
+    "MTSU football player Zeke Cobb arrested on two rape charges",
+    "Democrats face make-or-break moment on impeachment",
+    "One of America's biggest solar panel makers quits manufacturing",
+    "Aaron Carter admitted to Florida hospital",
+    "Trump admin preparing to take over private land for border wall",
+    "Student's drone footage shows whale swimming around California surfers",
+    "Man sets Guinness World Record for highest standing jump"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"Golden Gums! 200-Year-Old Gold Teeth Made of Ivory & Gold Set to Go for Thousands at Auction!\"\n\"Leaping Lizards! Reptile Jumps From Man's Pocket During Police Search\"\n\"MTSU football player Zeke Cobb arrested on two rape charges\"\n\"Democrats face make-or-break moment on impeachment\"\n\"One of America's biggest solar panel makers quits manufacturing\"\n\"Aaron Carter admitted to Florida hospital\"\n\"Trump admin preparing to take over private land for border wall\"\n\"Student's drone footage shows whale swimming around California surfers\"\n\"Man sets Guinness World Record for highest standing jump\"\n\n[Candidate News Title]\n\"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about the ongoing financial dispute between Taylor Swift and her former label, Big Machine Records. The piece may detail the claims made by Swift's representatives regarding unpaid royalties amounting to $7.9 million, providing insight into the complexities of her contract and the broader implications for artists' rights in the music industry. Additionally, it could discuss the context of this dispute, potentially touching on previous conflicts between Swift and Big Machine, as well as how this situation reflects current trends in music ownership and artist compensation.",
+  "model": "gpt-4o-mini"
+}

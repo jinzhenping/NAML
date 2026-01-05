@@ -1,0 +1,21 @@
+{
+  "user_id": 35,
+  "candidate_news_id": "N46641",
+  "candidate_title": "Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "5 bold predictions for MLB's offseason",
+    "JuJu Smith-Schuster: Jalen Ramsey's right, I'm not Antonio Brown",
+    "Monday Morning Minnesota: Sign Every Pitcher Edition",
+    "Five bold predictions for the 2020 Yankees",
+    "Steph Curry will need a second surgery, expects to return this season",
+    "Gwen Stefani Reveals New Nickname for Her and Blake Shelton",
+    "Wheel of Fortune's Pat Sajak Says the 'Worst Has Passed' Following Emergency Intestine Surgery",
+    "Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media",
+    "Could Red Sox and Yankees make blockbuster trade?",
+    "Astros' Justin Verlander wins second AL Cy Young Award, but this one is even sweeter"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"5 bold predictions for MLB's offseason\"\n\"JuJu Smith-Schuster: Jalen Ramsey's right, I'm not Antonio Brown\"\n\"Monday Morning Minnesota: Sign Every Pitcher Edition\"\n\"Five bold predictions for the 2020 Yankees\"\n\"Steph Curry will need a second surgery, expects to return this season\"\n\"Gwen Stefani Reveals New Nickname for Her and Blake Shelton\"\n\"Wheel of Fortune's Pat Sajak Says the 'Worst Has Passed' Following Emergency Intestine Surgery\"\n\"Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media\"\n\"Could Red Sox and Yankees make blockbuster trade?\"\n\"Astros' Justin Verlander wins second AL Cy Young Award, but this one is even sweeter\"\n\n[Candidate News Title]\n\"Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent death of former North Carolina State and NBA player Anthony Grundy, who was reportedly killed in a stabbing incident. Readers may expect an overview of Grundy's basketball career, including notable achievements during his time at North Carolina State and in the NBA. The piece could also provide details about the circumstances surrounding the incident, including any available information from law enforcement. Additionally, there may be reactions from the basketball community regarding his untimely passing, although specifics on this aspect are uncertain.",
+  "model": "gpt-4o-mini"
+}

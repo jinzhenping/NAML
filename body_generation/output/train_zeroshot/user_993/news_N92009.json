@@ -1,0 +1,21 @@
+{
+  "user_id": 993,
+  "candidate_news_id": "N92009",
+  "candidate_title": "Jane Seymour, 68, claims many designers won't 'dress someone my age'",
+  "user_history_count": 10,
+  "user_history": [
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "US Fed cuts interest rates, signals it is on hold",
+    "Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news",
+    "Texas attorney convicted of scamming drug traffickers",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "11 Expenses to Cut Now If You Want to Retire Early",
+    "Accused killer's girlfriend reveals Colorado mom's last words",
+    "45 Amazing Facts About Airplanes That Will Make Your Mind Soar"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"US Fed cuts interest rates, signals it is on hold\"\n\"Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news\"\n\"Texas attorney convicted of scamming drug traffickers\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"11 Expenses to Cut Now If You Want to Retire Early\"\n\"Accused killer's girlfriend reveals Colorado mom's last words\"\n\"45 Amazing Facts About Airplanes That Will Make Your Mind Soar\"\n\n[Candidate News Title]\n\"Jane Seymour, 68, claims many designers won't 'dress someone my age'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Jane Seymour, 68, claims many designers won't 'dress someone my age',\" the user may expect to read about the actress's personal experiences and challenges related to fashion and ageism in the industry. It is likely that Seymour will discuss her views on how age affects the availability of stylish clothing options for older women, potentially highlighting specific incidents where she faced discrimination from designers. The article could also explore broader themes of societal perceptions of aging and the impact on self-image and confidence among older individuals, particularly women in the public eye.",
+  "model": "gpt-4o-mini"
+}

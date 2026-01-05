@@ -1,0 +1,21 @@
+{
+  "user_id": 997,
+  "candidate_news_id": "N129969",
+  "candidate_title": "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+  "user_history_count": 10,
+  "user_history": [
+    "A Texas mom is going to prison after putting her son through unnecessary medical procedures",
+    "Alec and Hilaria Baldwin Share the Sex of Baby No. 5 -- Watch the Gender Reveal!",
+    "95% of tested baby foods in the US contain toxic metals, report says",
+    "Former NFL lineman Justin Bannan arrested for attempted murder",
+    "Steelers linebacker Anthony Chickillo arrested, facing assault charges",
+    "Reduce Stomach Bloating: 9 Daily Habits That Flatten Your Belly",
+    "Kate Middleton Wore a Chic Print Dress for a Private Appearance at Kensington Palace",
+    "'Go back to work': Outcry over deaths on Amazon's warehouse floor",
+    "Kevin Hart Shares Emotional Video About Appreciating Life Following Near-Fatal Car Accident",
+    "Meghan Markle Smudged Makeup on a Fan's Coat & He Reacted Perfectly"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A Texas mom is going to prison after putting her son through unnecessary medical procedures\"\n\"Alec and Hilaria Baldwin Share the Sex of Baby No. 5 -- Watch the Gender Reveal!\"\n\"95% of tested baby foods in the US contain toxic metals, report says\"\n\"Former NFL lineman Justin Bannan arrested for attempted murder\"\n\"Steelers linebacker Anthony Chickillo arrested, facing assault charges\"\n\"Reduce Stomach Bloating: 9 Daily Habits That Flatten Your Belly\"\n\"Kate Middleton Wore a Chic Print Dress for a Private Appearance at Kensington Palace\"\n\"'Go back to work': Outcry over deaths on Amazon's warehouse floor\"\n\"Kevin Hart Shares Emotional Video About Appreciating Life Following Near-Fatal Car Accident\"\n\"Meghan Markle Smudged Makeup on a Fan's Coat & He Reacted Perfectly\"\n\n[Candidate News Title]\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In reading about Chrissy Teigen's recent activities, the user can expect a detailed account of her weekend events, likely highlighting her responses to public commentary or criticism, given the reference to a \"clapback.\" The article may cover specific instances where Teigen engaged with fans or media, showcasing her personality and approach to addressing controversies. Additionally, it could provide context about her recent projects or personal life updates, reflecting her influence in both the entertainment industry and social media.",
+  "model": "gpt-4o-mini"
+}

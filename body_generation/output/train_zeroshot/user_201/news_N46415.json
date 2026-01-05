@@ -1,0 +1,20 @@
+{
+  "user_id": 201,
+  "candidate_news_id": "N46415",
+  "candidate_title": "Trump, Erdogan to meet as thorny issues stress relations",
+  "user_history_count": 9,
+  "user_history": [
+    "Solomon: Astros are Team October",
+    "If you want baseball like it used to be, this is the World Series for you",
+    "If you want baseball like it used to be, this is the World Series for you",
+    "18 things to avoid at the dollar store",
+    "This fast food chain has the best fries, according to customers",
+    "What we know about the military dog injured in the al-Baghdadi raid",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Inside the creepy, abandoned villages deep in the New Jersey Pine Barrens that were once bustling towns and are now home to something much more mysterious",
+    "10 of the best fast-food taco chains across the US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Solomon: Astros are Team October\"\n\"If you want baseball like it used to be, this is the World Series for you\"\n\"If you want baseball like it used to be, this is the World Series for you\"\n\"18 things to avoid at the dollar store\"\n\"This fast food chain has the best fries, according to customers\"\n\"What we know about the military dog injured in the al-Baghdadi raid\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Inside the creepy, abandoned villages deep in the New Jersey Pine Barrens that were once bustling towns and are now home to something much more mysterious\"\n\"10 of the best fast-food taco chains across the US\"\n\"\"\n\n[Candidate News Title]\n\"Trump, Erdogan to meet as thorny issues stress relations\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the upcoming meeting between Trump and Erdogan, focusing on the complex relationship between the United States and Turkey. Readers may expect an analysis of the key issues at stake, including trade, military cooperation, and regional security concerns. The piece might also explore historical tensions and current geopolitical challenges that could impact the discussions. Additionally, it may speculate on the potential outcomes of the meeting, suggesting what agreements or disagreements could arise from their talks.",
+  "model": "gpt-4o-mini"
+}

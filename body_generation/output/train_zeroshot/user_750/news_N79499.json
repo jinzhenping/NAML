@@ -1,0 +1,21 @@
+{
+  "user_id": 750,
+  "candidate_news_id": "N79499",
+  "candidate_title": "Ilhan Omar tweet called anti-Semitic 'dog whistle'; tennis great Martina Navratilova among critics",
+  "user_history_count": 10,
+  "user_history": [
+    "Megyn Kelly and Rose McGowan selfie sparks speculation: 'Brainstorming'",
+    "20 Celebs Who Have Had Actual Ghost Encounters",
+    "The News In Cartoons",
+    "Week in celebrity photos for Oct. 28-Nov. 1, 2019",
+    "Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion",
+    "The News In Cartoons",
+    "The News In Cartoons",
+    "Rare deer spotted in Montana",
+    "The News In Cartoons",
+    "Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Megyn Kelly and Rose McGowan selfie sparks speculation: 'Brainstorming'\"\n\"20 Celebs Who Have Had Actual Ghost Encounters\"\n\"The News In Cartoons\"\n\"Week in celebrity photos for Oct. 28-Nov. 1, 2019\"\n\"Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion\"\n\"The News In Cartoons\"\n\"The News In Cartoons\"\n\"Rare deer spotted in Montana\"\n\"The News In Cartoons\"\n\"Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'\"\n\n[Candidate News Title]\n\"Ilhan Omar tweet called anti-Semitic 'dog whistle'; tennis great Martina Navratilova among critics\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent controversy surrounding Ilhan Omar's tweet, which has been labeled by some as an anti-Semitic 'dog whistle.' The piece may provide details about the context of the tweet, including Omar's intentions and the reactions it has sparked, particularly from public figures like tennis champion Martina Navratilova. It is probable that the article will explore the broader implications of this incident on public discourse about anti-Semitism and political communication, as well as the responses from both supporters and critics of Omar.",
+  "model": "gpt-4o-mini"
+}

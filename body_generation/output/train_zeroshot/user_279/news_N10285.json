@@ -1,0 +1,21 @@
+{
+  "user_id": 279,
+  "candidate_news_id": "N10285",
+  "candidate_title": "4 reasons you shouldn't max out your 401(k)",
+  "user_history_count": 10,
+  "user_history": [
+    "Celebrities dressed as other stars for Halloween",
+    "Woman Texts Dead Father's Phone for 4 Years & Finally Receives an Emotional Reply",
+    "How To Open a Can Without a Can Opener",
+    "The Latest: Kansas City to remove King's name from street",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "4 Things to Know About Keanu Reeves' New Girlfriend",
+    "A controversial comedian and a former child star are eliminated on 'Masked Singer'",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Snow crab sells for record price in Japan"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebrities dressed as other stars for Halloween\"\n\"Woman Texts Dead Father's Phone for 4 Years & Finally Receives an Emotional Reply\"\n\"How To Open a Can Without a Can Opener\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"4 Things to Know About Keanu Reeves' New Girlfriend\"\n\"A controversial comedian and a former child star are eliminated on 'Masked Singer'\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Snow crab sells for record price in Japan\"\n\n[Candidate News Title]\n\"4 reasons you shouldn't max out your 401(k)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"4 reasons you shouldn't max out your 401(k),\" the user is likely to find a discussion on the potential downsides of fully contributing to a 401(k) retirement plan. The piece may outline key considerations such as the impact on immediate cash flow, the importance of maintaining an emergency fund, and the potential for better investment alternatives outside of a 401(k). Additionally, it could explore how one’s overall financial situation and goals might affect the decision to max out contributions. Overall, the article is expected to provide a balanced examination of retirement planning strategies.",
+  "model": "gpt-4o-mini"
+}

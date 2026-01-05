@@ -1,0 +1,20 @@
+{
+  "user_id": 982,
+  "candidate_news_id": "N46818",
+  "candidate_title": "10 Landscaping Must-Dos to Help Your Plants Survive the Winter",
+  "user_history_count": 9,
+  "user_history": [
+    "Syrian teen allegedly attacked on train in possible hate crime",
+    "Ariana Grande Trolls Kylie Jenner's 'Rise and Shine'",
+    "Suspect nicknamed 'Woo Woo' charged in three murders, claims to have committed five more: 'I want to be a serial killer'",
+    "Heart-stopping Dashcam Video Shows Highway Patrolman Saving an Unconscious Driver From an Oncoming Train",
+    "As the lab-grown meat industry grows, scientists debate if it could exacerbate climate change",
+    "Meghan Markle Loves This Skirt So Much, She Bought 2, and She's Not the Only Royal Fan",
+    "Jorge Masvidal earns BMF title amid epic 2019, calls out Canelo Alvarez",
+    "A woman's stalker used an app that allowed him to stop, start and track her car",
+    "Missing Link To Human Evolution Discovered: An Ape and Human All-In-One!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Syrian teen allegedly attacked on train in possible hate crime\"\n\"Ariana Grande Trolls Kylie Jenner's 'Rise and Shine'\"\n\"Suspect nicknamed 'Woo Woo' charged in three murders, claims to have committed five more: 'I want to be a serial killer'\"\n\"Heart-stopping Dashcam Video Shows Highway Patrolman Saving an Unconscious Driver From an Oncoming Train\"\n\"As the lab-grown meat industry grows, scientists debate if it could exacerbate climate change\"\n\"Meghan Markle Loves This Skirt So Much, She Bought 2, and She's Not the Only Royal Fan\"\n\"Jorge Masvidal earns BMF title amid epic 2019, calls out Canelo Alvarez\"\n\"A woman's stalker used an app that allowed him to stop, start and track her car\"\n\"Missing Link To Human Evolution Discovered: An Ape and Human All-In-One!\"\n\"\"\n\n[Candidate News Title]\n\"10 Landscaping Must-Dos to Help Your Plants Survive the Winter\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"10 Landscaping Must-Dos to Help Your Plants Survive the Winter,\" the user can expect practical tips and strategies for winterizing their garden. It is likely to cover essential tasks such as the proper preparation of soil, the selection of resilient plants, and effective mulching techniques to protect roots from freezing temperatures. The article may also emphasize the importance of pruning certain plants to enhance their growth in the spring. Overall, the content aims to provide actionable advice for maintaining plant health during colder months.",
+  "model": "gpt-4o-mini"
+}

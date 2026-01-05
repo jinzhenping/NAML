@@ -1,0 +1,21 @@
+{
+  "user_id": 430,
+  "candidate_news_id": "N11405",
+  "candidate_title": "Will you get dementia? Many may not understand their risk",
+  "user_history_count": 10,
+  "user_history": [
+    "Ford v Ferrari: the real story",
+    "Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'",
+    "Astros ace Justin Verlander wins 2nd AL Cy Young award",
+    "After Today, the Vise Tightens on Trump's Ukraine Point Man",
+    "American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says",
+    "9 Amazing Transgender Women Who Changed History",
+    "Stocks close little changed amid lingering trade worries",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+    "Senate confirms White House lawyer as appeals court judge",
+    "Jury in trial of Trump adviser Stone ends first day of deliberations without verdict"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Ford v Ferrari: the real story\"\n\"Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'\"\n\"Astros ace Justin Verlander wins 2nd AL Cy Young award\"\n\"After Today, the Vise Tightens on Trump's Ukraine Point Man\"\n\"American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says\"\n\"9 Amazing Transgender Women Who Changed History\"\n\"Stocks close little changed amid lingering trade worries\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\"Senate confirms White House lawyer as appeals court judge\"\n\"Jury in trial of Trump adviser Stone ends first day of deliberations without verdict\"\n\n[Candidate News Title]\n\"Will you get dementia? Many may not understand their risk\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Will you get dementia? Many may not understand their risk,\" you are likely to read about the various factors that influence an individual's risk of developing dementia. The article may provide insights into genetic, lifestyle, and environmental elements that contribute to this complex condition, along with statistics on prevalence and potential preventative measures. Additionally, it could discuss common misconceptions surrounding dementia risk, aiming to clarify why some people may underestimate their vulnerability. Overall, the content is expected to be informative and educational, shedding light on an important health issue.",
+  "model": "gpt-4o-mini"
+}

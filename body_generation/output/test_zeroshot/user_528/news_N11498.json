@@ -1,0 +1,21 @@
+{
+  "user_id": 528,
+  "candidate_news_id": "N11498",
+  "candidate_title": "25 Investments That Make You Feel Good While You Make Money",
+  "user_history_count": 10,
+  "user_history": [
+    "Trader Joe's has been hiding stuffed animals in store aisles for years   here's why",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "6 Ways to Find Extra Money to Pay Off Credit Card Debt",
+    "32 Crucial Tips for Traveling to Foreign Countries",
+    "University suspends 14 frats after college freshman ends up in hospital",
+    "17 moves that will make   or save   you money",
+    "The Dow may need a new stock to replace Walgreens",
+    "23 Worst Things You Can Say to a New Parent",
+    "There are 3 main types of early retirement, and the only difference is how much you spend"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trader Joe's has been hiding stuffed animals in store aisles for years   here's why\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"6 Ways to Find Extra Money to Pay Off Credit Card Debt\"\n\"32 Crucial Tips for Traveling to Foreign Countries\"\n\"University suspends 14 frats after college freshman ends up in hospital\"\n\"17 moves that will make   or save   you money\"\n\"The Dow may need a new stock to replace Walgreens\"\n\"23 Worst Things You Can Say to a New Parent\"\n\"There are 3 main types of early retirement, and the only difference is how much you spend\"\n\n[Candidate News Title]\n\"25 Investments That Make You Feel Good While You Make Money\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"25 Investments That Make You Feel Good While You Make Money,\" you can expect a discussion on various investment options that not only yield financial returns but also align with personal values or social causes. The article may explore investments such as socially responsible funds, green energy projects, or community development initiatives, emphasizing how these choices can contribute to both profit and positive impact. Additionally, it could provide insights into the potential benefits of investing in companies that prioritize ethical practices, though the specific returns and risks associated with each investment option are likely to be explored in detail.",
+  "model": "gpt-4o-mini"
+}

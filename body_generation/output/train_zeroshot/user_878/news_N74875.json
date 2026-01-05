@@ -1,0 +1,21 @@
+{
+  "user_id": 878,
+  "candidate_news_id": "N74875",
+  "candidate_title": "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal",
+  "user_history_count": 10,
+  "user_history": [
+    "'Verging on panic and dread': Tenants scramble for affordable housing as single-room occupancy building closes on Chicago's North Side",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Older people's most common regrets",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "100 Incredible Christmas Tree Decorating Ideas",
+    "Mother Is Freed After 15 Years in Prison for Father's Abuse",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Verging on panic and dread': Tenants scramble for affordable housing as single-room occupancy building closes on Chicago's North Side\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Older people's most common regrets\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"100 Incredible Christmas Tree Decorating Ideas\"\n\"Mother Is Freed After 15 Years in Prison for Father's Abuse\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\n[Candidate News Title]\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal,\" you can expect to read about the recent developments in the high-profile college admissions scandal that has captured public attention. The article is likely to detail the circumstances surrounding the sentencing of a father involved in the scheme, including the judge's remarks and the implications of the case for others involved. It may also explore broader themes related to ethics in college admissions and the impact of legal consequences on families.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 701,
+  "candidate_news_id": "N113126",
+  "candidate_title": "Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage",
+  "user_history_count": 10,
+  "user_history": [
+    "3 Months of Full Body Workouts Helped This Guy Get Shredded at 40",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "White House to add two aides to lead impeachment messaging",
+    "This Man Ate Only Potatoes For One Year and Lost 117 Pounds",
+    "US wants UN to take up Dalai Lama succession: envoy",
+    "56 Hottest Holiday Gifts from Amazon",
+    "Prince Harry and Meghan Markle Will Reportedly Visit Oprah While in California",
+    "DIY Thanksgiving decorating ideas you can do at home",
+    "Jillian Michaels Says Intermittent Fasting 'Isn't Actually Good For Weight Loss'",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"3 Months of Full Body Workouts Helped This Guy Get Shredded at 40\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"White House to add two aides to lead impeachment messaging\"\n\"This Man Ate Only Potatoes For One Year and Lost 117 Pounds\"\n\"US wants UN to take up Dalai Lama succession: envoy\"\n\"56 Hottest Holiday Gifts from Amazon\"\n\"Prince Harry and Meghan Markle Will Reportedly Visit Oprah While in California\"\n\"DIY Thanksgiving decorating ideas you can do at home\"\n\"Jillian Michaels Says Intermittent Fasting 'Isn't Actually Good For Weight Loss'\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\n[Candidate News Title]\n\"Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article about Drake addressing the audience that booed him off stage, you may expect to read about his response to the incident and the context surrounding it. The article is likely to detail the circumstances of the performance, including the audience's reaction and any statements Drake made following the event. Additionally, it might explore themes of artist-audience dynamics and the pressures musicians face during live performances. Overall, the piece could provide insights into Drake's perspective and the implications of such public reactions on an artist's career.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 138,
+  "candidate_news_id": "N4858",
+  "candidate_title": "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+  "user_history_count": 10,
+  "user_history": [
+    "NFL world reacts to officials handing Packers win over Lions",
+    "Funeral services set for US Rep. Elijah Cummings",
+    "Deer fatally attacks hunter who shot him",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+    "Wild fall freeze: Utah falls close to minus-35 as West shivers, while bitter cold oozes east",
+    "Applebee's Is Selling Boneless Wings For 25 Cents Each Because There Are So Many Sports On Right Now",
+    "8 Things on the McDonald's Secret Menu You Need to Know About",
+    "Abandoned farms for sale with plenty of promise",
+    "PHOTOS: America's Best High School Football Stadiums",
+    "Fisherman faces prison, fine for cruel act on rare fish"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL world reacts to officials handing Packers win over Lions\"\n\"Funeral services set for US Rep. Elijah Cummings\"\n\"Deer fatally attacks hunter who shot him\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"Wild fall freeze: Utah falls close to minus-35 as West shivers, while bitter cold oozes east\"\n\"Applebee's Is Selling Boneless Wings For 25 Cents Each Because There Are So Many Sports On Right Now\"\n\"8 Things on the McDonald's Secret Menu You Need to Know About\"\n\"Abandoned farms for sale with plenty of promise\"\n\"PHOTOS: America's Best High School Football Stadiums\"\n\"Fisherman faces prison, fine for cruel act on rare fish\"\n\n[Candidate News Title]\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping,\" they may expect to read about the latest fashion choice of the well-known celebrity. The article is likely to describe the outfit's design and how it fits into current fashion trends, possibly noting its suitability for high-profile events or casual outings. Additionally, it could touch on the context of her jewelry shopping, including any specific pieces she may have selected or comments from onlookers. Overall, the user might anticipate insights into both the style and the social implications of Jenner's appearance.",
+  "model": "gpt-4o-mini"
+}

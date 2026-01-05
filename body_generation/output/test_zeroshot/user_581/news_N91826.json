@@ -1,0 +1,21 @@
+{
+  "user_id": 581,
+  "candidate_news_id": "N91826",
+  "candidate_title": "Garrett will lose at least $1.139 million",
+  "user_history_count": 10,
+  "user_history": [
+    "Maybe not the best time to take a dip at the beach",
+    "Red tide, the toxic algae bloom that kills wildlife, returns to southwest Florida",
+    "An Air India flight was delayed nearly 12 hours after a stowaway rat was spotted in the cabin",
+    "Video shows a Boeing 737 plane carrying 196 people burst into flames just after landing at an Egyptian airport",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win",
+    "17 Movie Soundtracks Every Kid from the '80s Loved",
+    "15 of the Best Towing Vehicles That Aren't Trucks",
+    "A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina",
+    "Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Maybe not the best time to take a dip at the beach\"\n\"Red tide, the toxic algae bloom that kills wildlife, returns to southwest Florida\"\n\"An Air India flight was delayed nearly 12 hours after a stowaway rat was spotted in the cabin\"\n\"Video shows a Boeing 737 plane carrying 196 people burst into flames just after landing at an Egyptian airport\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\"17 Movie Soundtracks Every Kid from the '80s Loved\"\n\"15 of the Best Towing Vehicles That Aren't Trucks\"\n\"A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina\"\n\"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\"\n\n[Candidate News Title]\n\"Garrett will lose at least $1.139 million\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Garrett will lose at least $1.139 million\" likely discusses a financial setback faced by an individual named Garrett, possibly in relation to a business venture or investment. Readers may expect to find details about the circumstances leading to this loss, including relevant financial data or market conditions. The piece could also explore the implications of this loss for Garrett’s future endeavors or investments. Additionally, it may highlight any reactions from financial analysts or experts regarding the situation, though this remains uncertain.",
+  "model": "gpt-4o-mini"
+}

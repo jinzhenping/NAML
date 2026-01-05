@@ -1,0 +1,21 @@
+{
+  "user_id": 913,
+  "candidate_news_id": "N114135",
+  "candidate_title": "Unexpected Signs of an Unhealthy Heart",
+  "user_history_count": 10,
+  "user_history": [
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'",
+    "WATCH: Video captures bull attacking, lifting car into air",
+    "Week in celebrity photos for Nov. 4-8, 2019",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "Prince Harry and Meghan Markle are taking a royal respite",
+    "Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits",
+    "This girl nails the wave pool   then fails the exit spectacularly"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'\"\n\"WATCH: Video captures bull attacking, lifting car into air\"\n\"Week in celebrity photos for Nov. 4-8, 2019\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"Prince Harry and Meghan Markle are taking a royal respite\"\n\"Kate & Meghan Head to Separate Events in Gorgeous Blue Outfits\"\n\"This girl nails the wave pool   then fails the exit spectacularly\"\n\n[Candidate News Title]\n\"Unexpected Signs of an Unhealthy Heart\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Unexpected Signs of an Unhealthy Heart\" is likely to explore various indicators that may suggest heart health issues, which are not commonly recognized by the general public. Readers might expect to learn about subtle symptoms or lifestyle factors that could signal underlying cardiovascular problems, such as fatigue, sleep disturbances, or unusual physical responses to stress. The piece may also provide insights into how these signs can be easily overlooked, emphasizing the importance of awareness and proactive health monitoring. Overall, it could serve as a practical guide for maintaining heart health and recognizing potential warning signs.",
+  "model": "gpt-4o-mini"
+}

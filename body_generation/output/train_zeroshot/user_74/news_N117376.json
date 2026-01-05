@@ -1,0 +1,21 @@
+{
+  "user_id": 74,
+  "candidate_news_id": "N117376",
+  "candidate_title": "'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.",
+  "user_history_count": 10,
+  "user_history": [
+    "New York Senator Chuck Schumer Mocks Trump Making Florida His New Home, Donald Jr. Fires Back",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Grassley: Up to whistleblower to reveal identity",
+    "Who's paying for President Donald Trump's rally for Matt Bevin in Kentucky?",
+    "More Bevin bombast: Governor says Kentucky must 'scrub the stench' of Beshear family",
+    "What Tuesday's elections could tell us a year before Trump faces voters",
+    "Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says",
+    "Bevin campaign formally requests recanvass of vote totals after tight race",
+    "White House to add two aides to lead impeachment messaging",
+    "Trump's allies turned to online campaign in quest to unmask Ukraine whistleblower"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"New York Senator Chuck Schumer Mocks Trump Making Florida His New Home, Donald Jr. Fires Back\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Grassley: Up to whistleblower to reveal identity\"\n\"Who's paying for President Donald Trump's rally for Matt Bevin in Kentucky?\"\n\"More Bevin bombast: Governor says Kentucky must 'scrub the stench' of Beshear family\"\n\"What Tuesday's elections could tell us a year before Trump faces voters\"\n\"Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says\"\n\"Bevin campaign formally requests recanvass of vote totals after tight race\"\n\"White House to add two aides to lead impeachment messaging\"\n\"Trump's allies turned to online campaign in quest to unmask Ukraine whistleblower\"\n\n[Candidate News Title]\n\"'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow\" is likely to explore the cultural phenomenon of the song \"Baby Shark\" and its impact on children's entertainment and consumer behavior. The piece may discuss how the song's popularity has led to widespread marketing strategies, merchandise sales, and the financial implications for both parents and the entertainment industry. Additionally, the article could examine the psychological effects of catchy children's songs on young audiences and their influence on spending habits, though this aspect remains uncertain.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 103,
+  "candidate_news_id": "N119999",
+  "candidate_title": "I've been writing about tiny homes for a year and finally spent 2 nights in a 300-foot home to see what it's all about   here's how it went",
+  "user_history_count": 10,
+  "user_history": [
+    "China Wants U.S. to Drop Tariffs on $360 Billion of Imports for Trade Deal",
+    "Rare deer spotted in Montana",
+    "WATCH LIVE: Matt Bevin holds press conference while election results still up in the air",
+    "Trump lawyer Giuliani says a trio of defense lawyers will represent him",
+    "Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52",
+    "Man charged with hate crime in racist acid attack",
+    "Longtime pastor of Baptist church in Chicago resigns after confessing he sexually abused a relative decades ago: 'I own my sin'",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Fox legal analyst Napolitano emerges as Trump critic",
+    "Tom Brady says he is not expecting Rob Gronkowski to return"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"China Wants U.S. to Drop Tariffs on $360 Billion of Imports for Trade Deal\"\n\"Rare deer spotted in Montana\"\n\"WATCH LIVE: Matt Bevin holds press conference while election results still up in the air\"\n\"Trump lawyer Giuliani says a trio of defense lawyers will represent him\"\n\"Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52\"\n\"Man charged with hate crime in racist acid attack\"\n\"Longtime pastor of Baptist church in Chicago resigns after confessing he sexually abused a relative decades ago: 'I own my sin'\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"Tom Brady says he is not expecting Rob Gronkowski to return\"\n\n[Candidate News Title]\n\"I've been writing about tiny homes for a year and finally spent 2 nights in a 300-foot home to see what it's all about   here's how it went\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article about tiny homes, the user may expect a firsthand account of the author's experience living in a compact 300-foot dwelling. It is likely to detail the practical aspects of tiny home living, such as space management, design features, and the lifestyle adjustments required. The author might also share insights on the benefits and challenges of downsizing and how it compares to traditional housing. Overall, the article could provide a balanced exploration of tiny home living based on the author's personal observations and reflections.",
+  "model": "gpt-4o-mini"
+}

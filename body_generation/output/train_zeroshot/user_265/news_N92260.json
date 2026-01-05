@@ -1,0 +1,21 @@
+{
+  "user_id": 265,
+  "candidate_news_id": "N92260",
+  "candidate_title": "RHOP's Monique Samuels Charged With Assault After Incident With Candiace Dillard",
+  "user_history_count": 10,
+  "user_history": [
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "Celebrities dressed as other stars for Halloween",
+    "Celebrities dressed as other stars for Halloween",
+    "Halloween snowstorm wallops the Midwest",
+    "Mayfield's postgame outfit gets all the memes",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Even 'Project Runway' Couldn't Save Zac Posen",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "How the Panthers will approach their breakup with Cam Newton before 2020 season",
+    "The 50 cheapest places to buy land in America"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Celebrities dressed as other stars for Halloween\"\n\"Celebrities dressed as other stars for Halloween\"\n\"Halloween snowstorm wallops the Midwest\"\n\"Mayfield's postgame outfit gets all the memes\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Even 'Project Runway' Couldn't Save Zac Posen\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"How the Panthers will approach their breakup with Cam Newton before 2020 season\"\n\"The 50 cheapest places to buy land in America\"\n\n[Candidate News Title]\n\"RHOP's Monique Samuels Charged With Assault After Incident With Candiace Dillard\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to report on the legal charges brought against Monique Samuels from \"The Real Housewives of Potomac\" following an incident involving her co-star Candiace Dillard. It may provide details about the context of the altercation, any statements made by those involved, and the implications of the charges for Samuels' public image and participation in the reality show. Additionally, it could explore reactions from fans and fellow cast members, as well as historical context regarding altercations within reality television. Overall, the piece is expected to offer a comprehensive overview of the situation while considering its potential impact on the show's dynamics.",
+  "model": "gpt-4o-mini"
+}

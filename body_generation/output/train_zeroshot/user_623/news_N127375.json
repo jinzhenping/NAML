@@ -1,0 +1,21 @@
+{
+  "user_id": 623,
+  "candidate_news_id": "N127375",
+  "candidate_title": "Debunking the week's tabloid stories: Nov. 8, 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Kanye West Gets Ridiculed for Serving Sad, Soggy Pancakes at Expensive \"Brunchella\"",
+    "Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations",
+    "A 13-year-old murder suspect who escaped in North Carolina is back in custody",
+    "Horrific details emerge in 'barbaric' murder of 1999 Jane Doe",
+    "Paramedic finds magic solution to keep kids calm in emergencies",
+    "How to Make Pumpkin Butter at Home",
+    "These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED",
+    "Two dead following explosion involving 18-wheeler in Texas",
+    "This Sturdy Cutting Board Will Last for a Lifetime and It's On Super Sale Right Now",
+    "Costco Shoppers Are Loving This $9 Eggnog Wine Cocktail"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kanye West Gets Ridiculed for Serving Sad, Soggy Pancakes at Expensive \"Brunchella\"\"\n\"Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations\"\n\"A 13-year-old murder suspect who escaped in North Carolina is back in custody\"\n\"Horrific details emerge in 'barbaric' murder of 1999 Jane Doe\"\n\"Paramedic finds magic solution to keep kids calm in emergencies\"\n\"How to Make Pumpkin Butter at Home\"\n\"These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED\"\n\"Two dead following explosion involving 18-wheeler in Texas\"\n\"This Sturdy Cutting Board Will Last for a Lifetime and It's On Super Sale Right Now\"\n\"Costco Shoppers Are Loving This $9 Eggnog Wine Cocktail\"\n\n[Candidate News Title]\n\"Debunking the week's tabloid stories: Nov. 8, 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In reading the article titled \"Debunking the week's tabloid stories: Nov. 8, 2019,\" the user is likely to expect a critical examination of sensationalized news narratives that have emerged in popular tabloids during the specified week. The content may provide a breakdown of various tabloid claims, highlighting inaccuracies or exaggerations concerning celebrity events, scandals, or unusual happenings. Additionally, the article could clarify the origins of these stories and offer factual corrections, helping to distinguish between reality and sensationalism in media reporting.",
+  "model": "gpt-4o-mini"
+}

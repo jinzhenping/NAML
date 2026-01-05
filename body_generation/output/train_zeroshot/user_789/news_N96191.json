@@ -1,0 +1,21 @@
+{
+  "user_id": 789,
+  "candidate_news_id": "N96191",
+  "candidate_title": "1-2 inches of snow coming, flurries will start before evening commute",
+  "user_history_count": 10,
+  "user_history": [
+    "South Dakota set to execute man who stabbed former co-worker",
+    "South Dakota set to execute man who stabbed former co-worker",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "Greater Milford Area Historical Society to state: Help us fix museum",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Celebrity mug shots",
+    "Jessica Simpson's latest Birdie Mae post suggests she's done having kids, plus more news",
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia",
+    "Shooting victim's family, friends remember him on 16th birthday",
+    "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"South Dakota set to execute man who stabbed former co-worker\"\n\"South Dakota set to execute man who stabbed former co-worker\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"Greater Milford Area Historical Society to state: Help us fix museum\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Celebrity mug shots\"\n\"Jessica Simpson's latest Birdie Mae post suggests she's done having kids, plus more news\"\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\"Shooting victim's family, friends remember him on 16th birthday\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\n[Candidate News Title]\n\"1-2 inches of snow coming, flurries will start before evening commute\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide a weather forecast indicating that 1-2 inches of snow are expected, with flurries beginning before the evening commute. It may detail the timing of the snowfall and any potential impacts on travel and local activities. The report could also include information about how this weather event compares to recent conditions, such as temperature changes or historical snowfall averages for this time of year. Additionally, there may be guidance for residents on how to prepare for the snowy conditions ahead.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 24,
+  "candidate_news_id": "N81852",
+  "candidate_title": "NFL draft winners and losers: Joe Burrow not the only standout in LSU-Bama thriller",
+  "user_history_count": 10,
+  "user_history": [
+    "NFL winners, losers: Cowboys need to rebound, Patriots keep winning",
+    "High school soccer: Chloe DeLyser sets record for most goals scored",
+    "NFL players who should be traded before the deadline",
+    "Eagles, Ravens and Saints had interest in Jalen Ramsey, but Jags waited for desperation",
+    "Nestle to Return $20 Billion to Investors",
+    "Winners and losers from Week 8 in college football led by Wisconsin, Oregon",
+    "Where do the Yankees go from here? Big decisions that New York must address this offseason",
+    "If You Don't Eat a Banana Every Day, This Might Convince You to Start",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL winners, losers: Cowboys need to rebound, Patriots keep winning\"\n\"High school soccer: Chloe DeLyser sets record for most goals scored\"\n\"NFL players who should be traded before the deadline\"\n\"Eagles, Ravens and Saints had interest in Jalen Ramsey, but Jags waited for desperation\"\n\"Nestle to Return $20 Billion to Investors\"\n\"Winners and losers from Week 8 in college football led by Wisconsin, Oregon\"\n\"Where do the Yankees go from here? Big decisions that New York must address this offseason\"\n\"If You Don't Eat a Banana Every Day, This Might Convince You to Start\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\n[Candidate News Title]\n\"NFL draft winners and losers: Joe Burrow not the only standout in LSU-Bama thriller\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"NFL draft winners and losers: Joe Burrow not the only standout in LSU-Bama thriller,\" the user can expect a detailed analysis of the NFL draft outcomes related to standout performances from key college football games, particularly highlighting the LSU versus Alabama matchup. The piece may discuss how Joe Burrow's performance influenced his draft stock, while also identifying other players who made significant impacts and could be considered winners or losers in the draft context. Additionally, it is likely to provide insights into team strategies and decisions influenced by these performances.",
+  "model": "gpt-4o-mini"
+}

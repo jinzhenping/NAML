@@ -1,0 +1,21 @@
+{
+  "user_id": 779,
+  "candidate_news_id": "N81297",
+  "candidate_title": "December Democratic debate venue switched to Loyola Marymount University",
+  "user_history_count": 10,
+  "user_history": [
+    "Rep. Katie Hill's lawyers send cease-and-desist letter to DailyMail.com over nude photos",
+    "Lady Vols happy heralded freshman Horston still at Tennessee",
+    "Rob Lowe reflects on the infamous scandal that changed his life: 'It got me sober'",
+    "Maggie Rogers Condemns Sexual Harassment After Catcalling Incident During Her Concert",
+    "Report: Zobrist considering playing again after personal issues in 2019",
+    "Man who advocated caning for adultery gets caned for adultery",
+    "Jane Fonda, Rosanna Arquette, Catherine Keener arrested at climate change protest: 'Women bear the brunt'",
+    "New Angels manager Joe Maddon bringing over his third-base coach from Cubs",
+    "Jimmy Garoppolo tells Erin Andrews being 8-0 'feels great, baby'",
+    "Naomi Wolf's New Book Has Been Canceled, Presumably Over Major Errors"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Rep. Katie Hill's lawyers send cease-and-desist letter to DailyMail.com over nude photos\"\n\"Lady Vols happy heralded freshman Horston still at Tennessee\"\n\"Rob Lowe reflects on the infamous scandal that changed his life: 'It got me sober'\"\n\"Maggie Rogers Condemns Sexual Harassment After Catcalling Incident During Her Concert\"\n\"Report: Zobrist considering playing again after personal issues in 2019\"\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"Jane Fonda, Rosanna Arquette, Catherine Keener arrested at climate change protest: 'Women bear the brunt'\"\n\"New Angels manager Joe Maddon bringing over his third-base coach from Cubs\"\n\"Jimmy Garoppolo tells Erin Andrews being 8-0 'feels great, baby'\"\n\"Naomi Wolf's New Book Has Been Canceled, Presumably Over Major Errors\"\n\n[Candidate News Title]\n\"December Democratic debate venue switched to Loyola Marymount University\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"December Democratic debate venue switched to Loyola Marymount University\" is likely to provide details about the recent decision to change the location of the upcoming Democratic debate. Readers can expect an overview of the reasons behind the venue change, which may include logistical considerations or political implications. Additionally, the article could discuss the significance of this venue in relation to previous debates and the potential impact on candidates' performances. It is also likely to mention the reactions from key stakeholders involved in the debate process.",
+  "model": "gpt-4o-mini"
+}

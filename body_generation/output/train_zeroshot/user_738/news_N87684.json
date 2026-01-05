@@ -1,0 +1,21 @@
+{
+  "user_id": 738,
+  "candidate_news_id": "N87684",
+  "candidate_title": "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+  "user_history_count": 10,
+  "user_history": [
+    "Analysis: California is becoming unlivable",
+    "Opinions | The math for Warren's health-care plan adds up if you accept its ludicrous premise",
+    "Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019",
+    "Daniel Cameron wins Kentucky attorney general race in historic victory",
+    "GOP senator rips into Pelosi at Trump rally: 'It must suck to be that dumb'",
+    "Antonio Brown blasts NFL, seems to announce retirement",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Mystery surrounds the last person missing from Camp Fire that left 85 dead in California",
+    "Free Rodney Reed Petition Surpasses 2 Million Signatures to Stop Execution of Texas Death Row Inmate",
+    "Facebook, YouTube delete posts claiming to name Ukraine whistleblower"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Analysis: California is becoming unlivable\"\n\"Opinions | The math for Warren's health-care plan adds up if you accept its ludicrous premise\"\n\"Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019\"\n\"Daniel Cameron wins Kentucky attorney general race in historic victory\"\n\"GOP senator rips into Pelosi at Trump rally: 'It must suck to be that dumb'\"\n\"Antonio Brown blasts NFL, seems to announce retirement\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Mystery surrounds the last person missing from Camp Fire that left 85 dead in California\"\n\"Free Rodney Reed Petition Surpasses 2 Million Signatures to Stop Execution of Texas Death Row Inmate\"\n\"Facebook, YouTube delete posts claiming to name Ukraine whistleblower\"\n\n[Candidate News Title]\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent arrest of a husband in connection with the long-unsolved murder of his wife, who was found dead decades ago with an ax in her skull. Readers can expect a detailed account of the historical context surrounding the case, including the investigation's progression over the years and any new evidence that led to the arrest. The article may also explore the impact of this development on the victim's family and the community, highlighting the lingering questions and unresolved feelings that have persisted since the tragedy.",
+  "model": "gpt-4o-mini"
+}

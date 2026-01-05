@@ -1,0 +1,21 @@
+{
+  "user_id": 576,
+  "candidate_news_id": "N100073",
+  "candidate_title": "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+  "user_history_count": 10,
+  "user_history": [
+    "J.J. Watt has sobering quote after season-ending injury",
+    "'Diablo' winds are fanning the northern California wildfires",
+    "California wildfires, Trump makes first presidential visit to Chicago: 5 things you need to know Monday",
+    "The Rise of Sober Curiosity: Is Life Better Without Alcohol?",
+    "Kincade Fire explodes to 75,000 acres, biggest winds in years threaten LA",
+    "Explosive new wildfire drives thousands from homes near Los Angeles",
+    "Sriracha meth bust: Police find $200M of drugs in hot sauce bottles",
+    "More than 11,000 scientists from around the world declare a 'climate emergency'",
+    "Atlanta Hawks John Collins Suspended 25 Games",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"J.J. Watt has sobering quote after season-ending injury\"\n\"'Diablo' winds are fanning the northern California wildfires\"\n\"California wildfires, Trump makes first presidential visit to Chicago: 5 things you need to know Monday\"\n\"The Rise of Sober Curiosity: Is Life Better Without Alcohol?\"\n\"Kincade Fire explodes to 75,000 acres, biggest winds in years threaten LA\"\n\"Explosive new wildfire drives thousands from homes near Los Angeles\"\n\"Sriracha meth bust: Police find $200M of drugs in hot sauce bottles\"\n\"More than 11,000 scientists from around the world declare a 'climate emergency'\"\n\"Atlanta Hawks John Collins Suspended 25 Games\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\n[Candidate News Title]\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family,\" the user may expect an exploration of the significance behind Prince Harry's choice of poppy wear during a commemorative event. The piece is likely to discuss the traditional meanings associated with the poppy in the context of remembrance, as well as how Harry's approach differs from that of other family members. Additionally, it could delve into the potential implications of his choice, possibly touching on themes of individuality, personal beliefs, or his relationship with the royal family.",
+  "model": "gpt-4o-mini"
+}

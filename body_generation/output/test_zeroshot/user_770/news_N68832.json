@@ -1,0 +1,20 @@
+{
+  "user_id": 770,
+  "candidate_news_id": "N68832",
+  "candidate_title": "Opinions | Zelensky was planning to announce Trump's 'quid pro quo' on my show. Here's what happened.",
+  "user_history_count": 9,
+  "user_history": [
+    "William Taylor Delivers the Smoking Gun",
+    "Putin and Erdogan Announce Plan for Northeast Syria, Bolstering Russian Influence",
+    "Does Tire Rotation Include Tightening Lug Nuts? Michigan Court Thinks About It For Awhile, Concludes 'No'",
+    "Trump Was Right To Keep The Baghdadi Raid Secret From Schiff",
+    "The world's largest nuclear power producer is melting down",
+    "California illegal pot seizures top $1.5 billion in value",
+    "Exclusive: Ukraine to fire prosecutor who discussed Bidens with Giuliani - source",
+    "An energy breakthrough could store solar power for decades",
+    "YouTube says it has 'no obligation' to host anyone's video"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"William Taylor Delivers the Smoking Gun\"\n\"Putin and Erdogan Announce Plan for Northeast Syria, Bolstering Russian Influence\"\n\"Does Tire Rotation Include Tightening Lug Nuts? Michigan Court Thinks About It For Awhile, Concludes 'No'\"\n\"Trump Was Right To Keep The Baghdadi Raid Secret From Schiff\"\n\"The world's largest nuclear power producer is melting down\"\n\"California illegal pot seizures top $1.5 billion in value\"\n\"Exclusive: Ukraine to fire prosecutor who discussed Bidens with Giuliani - source\"\n\"An energy breakthrough could store solar power for decades\"\n\"YouTube says it has 'no obligation' to host anyone's video\"\n\"\"\n\n[Candidate News Title]\n\"Opinions | Zelensky was planning to announce Trump's 'quid pro quo' on my show. Here's what happened.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect a detailed discussion regarding Zelensky's intentions to reveal information about a potential \"quid pro quo\" involving Trump. It is likely to outline the context of the planned announcement, including the political implications and reactions from both Ukrainian and American officials. The article could also explore the reasons behind Zelensky's decision to either proceed with or reconsider this announcement and the broader ramifications for U.S.-Ukraine relations. Overall, the reader can anticipate an informative analysis of the events surrounding this situation.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 591,
+  "candidate_news_id": "N93643",
+  "candidate_title": "FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says",
+  "user_history_count": 10,
+  "user_history": [
+    "Quiet Riot Drummer Reveals Stage-Four Cancer Diagnosis",
+    "Renovations To Make   and Skip   Before Selling Your Home",
+    "The Best Seafood Restaurant in All 50 States",
+    "A Chef Shares the Secret Ingredient Your Mac and Cheese Is Missing",
+    "Airline passengers share photos of their worst in-flight meals",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "The Hospital on a Mission to Bring Home-Cooked Meals to Its Patients",
+    "Why is this Bronze Age town so popular today?",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "10 of the best fast-food taco chains across the US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Quiet Riot Drummer Reveals Stage-Four Cancer Diagnosis\"\n\"Renovations To Make   and Skip   Before Selling Your Home\"\n\"The Best Seafood Restaurant in All 50 States\"\n\"A Chef Shares the Secret Ingredient Your Mac and Cheese Is Missing\"\n\"Airline passengers share photos of their worst in-flight meals\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"The Hospital on a Mission to Bring Home-Cooked Meals to Its Patients\"\n\"Why is this Bronze Age town so popular today?\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"10 of the best fast-food taco chains across the US\"\n\n[Candidate News Title]\n\"FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss recent developments regarding Southwest Airlines, particularly focusing on the FAA's concerns about the maintenance of 38 of its jets. Readers can expect an overview of the specific maintenance issues that led to this threat, as well as insights into the potential implications for the airline's operations and safety protocols. The article may also explore how this situation could affect passengers and flight schedules in the near future, providing context on the airline industry's regulatory environment.",
+  "model": "gpt-4o-mini"
+}

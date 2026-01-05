@@ -1,0 +1,21 @@
+{
+  "user_id": 461,
+  "candidate_news_id": "N83707",
+  "candidate_title": "Mo'Nique Files Race and Sex Discrimination Suit Against Netflix",
+  "user_history_count": 10,
+  "user_history": [
+    "Caterpillar lays off 120 workers as trade war hits sales",
+    "States With the Most Farm Bankruptcies",
+    "Wildfires, power outages, now flooding? California has a dam problem   and desert communities might be in danger",
+    "Under shroud of secrecy US weapons arrive in Yemen despite Congressional outrage",
+    "Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito",
+    "NASA Scientists Find Human Activity is Drying out the Amazon",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "Trump to spend $300 million on border wall \"quality assurance\"",
+    "Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Caterpillar lays off 120 workers as trade war hits sales\"\n\"States With the Most Farm Bankruptcies\"\n\"Wildfires, power outages, now flooding? California has a dam problem   and desert communities might be in danger\"\n\"Under shroud of secrecy US weapons arrive in Yemen despite Congressional outrage\"\n\"Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito\"\n\"NASA Scientists Find Human Activity is Drying out the Amazon\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"Trump to spend $300 million on border wall \"quality assurance\"\"\n\"Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"Mo'Nique Files Race and Sex Discrimination Suit Against Netflix\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Mo'Nique filing a race and sex discrimination suit against Netflix is likely to provide an overview of the allegations made by the actress and comedian, detailing her claims regarding unequal treatment within the entertainment industry. It may explore the broader implications of her suit in relation to industry standards for equity and representation, particularly for Black women in Hollywood. Additionally, the article could include reactions from Netflix and insights into potential outcomes of the legal proceedings, such as how this case might influence future contracts and diversity initiatives in streaming services.",
+  "model": "gpt-4o-mini"
+}

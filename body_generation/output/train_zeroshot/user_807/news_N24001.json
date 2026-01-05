@@ -1,0 +1,21 @@
+{
+  "user_id": 807,
+  "candidate_news_id": "N24001",
+  "candidate_title": "17 Outdated Office Etiquette Rules That Are So Laughable Today",
+  "user_history_count": 10,
+  "user_history": [
+    "Supt. Johnson Announces Retirement: 'Time for Someone Else'",
+    "A streak worth celebrating … but just don't talk about it",
+    "Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "I went to Peter Luger after it received zero stars from New York Times",
+    "Three killed, 20 injured in Iran earthquake: state television",
+    "Insiders predict: NFL week 10 winners",
+    "Snow crab sells for record price in Japan",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Supt. Johnson Announces Retirement: 'Time for Someone Else'\"\n\"A streak worth celebrating … but just don't talk about it\"\n\"Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"I went to Peter Luger after it received zero stars from New York Times\"\n\"Three killed, 20 injured in Iran earthquake: state television\"\n\"Insiders predict: NFL week 10 winners\"\n\"Snow crab sells for record price in Japan\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\n[Candidate News Title]\n\"17 Outdated Office Etiquette Rules That Are So Laughable Today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"17 Outdated Office Etiquette Rules That Are So Laughable Today,\" the user can expect a discussion on traditional workplace norms that may no longer hold relevance in modern professional environments. It is likely to cover common practices that once dictated office behavior but are now seen as antiquated, providing examples of these rules and contrasting them with contemporary standards. The article may also explore how generational shifts in the workforce, particularly involving Millennials and Gen Z, have influenced evolving perceptions of professionalism and etiquette in the workplace.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 546,
+  "candidate_news_id": "N112124",
+  "candidate_title": "The problem with diamonds is they keep getting cheaper",
+  "user_history_count": 10,
+  "user_history": [
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "A baker creates incredible optical illusion cakes, from a White Claw can to a Doritos bag",
+    "This Bride's BFFs Surprised Her With A Gigantic Chicken Nugget Bouquet In The Middle Of Her Wedding",
+    "The Search for a Gender Neutral Drive Thru Toy",
+    "Chefs Reveal the 14 Unexpected Items That Taste Better Refrigerated",
+    "Dollar Tree fined after rat infestation in Oregon",
+    "'Rich Dad, Poor Dad' Robert Kiyosaki says this is 'the only rule' for getting and staying rich",
+    "Woman Comes Up With The Best Costume For Her 7 Dogs",
+    "Why President Trump's kids are probably celebrating his move to Florida"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"A baker creates incredible optical illusion cakes, from a White Claw can to a Doritos bag\"\n\"This Bride's BFFs Surprised Her With A Gigantic Chicken Nugget Bouquet In The Middle Of Her Wedding\"\n\"The Search for a Gender Neutral Drive Thru Toy\"\n\"Chefs Reveal the 14 Unexpected Items That Taste Better Refrigerated\"\n\"Dollar Tree fined after rat infestation in Oregon\"\n\"'Rich Dad, Poor Dad' Robert Kiyosaki says this is 'the only rule' for getting and staying rich\"\n\"Woman Comes Up With The Best Costume For Her 7 Dogs\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\n[Candidate News Title]\n\"The problem with diamonds is they keep getting cheaper\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The problem with diamonds is they keep getting cheaper\" is likely to discuss the recent trends in the diamond market, particularly focusing on the declining prices of diamonds over time. It may explore factors contributing to this trend, such as changes in supply and demand, the impact of synthetic diamonds, or shifting consumer preferences. Additionally, the piece could provide insights into how these changes might affect the jewelry industry and consumer behavior regarding diamond purchases. Overall, readers may gain a better understanding of the economic dynamics at play in the diamond market.",
+  "model": "gpt-4o-mini"
+}

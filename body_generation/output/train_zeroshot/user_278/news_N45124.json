@@ -1,0 +1,21 @@
+{
+  "user_id": 278,
+  "candidate_news_id": "N45124",
+  "candidate_title": "The News In Cartoons",
+  "user_history_count": 10,
+  "user_history": [
+    "The News In Cartoons",
+    "Election Day 2019: Most Important Races and What to Watch For",
+    "The News In Cartoons",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "The News In Cartoons",
+    "Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'",
+    "The 50 Best Shows on TV, From Star Trek: Discovery to Schitt's Creek",
+    "Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'",
+    "Two versions of Texas collide over gun measures and mass shootings",
+    "What It's Like to Have 'Bad Skin' and Work on TV"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The News In Cartoons\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"The News In Cartoons\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"The News In Cartoons\"\n\"Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'\"\n\"The 50 Best Shows on TV, From Star Trek: Discovery to Schitt's Creek\"\n\"Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'\"\n\"Two versions of Texas collide over gun measures and mass shootings\"\n\"What It's Like to Have 'Bad Skin' and Work on TV\"\n\n[Candidate News Title]\n\"The News In Cartoons\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The News In Cartoons,\" you may expect a lighthearted yet informative take on current events, presented through the medium of cartoons. The article is likely to showcase various political and social issues in a satirical format, helping to summarize complex topics in an accessible way. You might find illustrations that reflect significant news stories, perhaps including commentary on recent events, such as the ongoing discussions around gun measures and societal responses to tragedies. The piece could also highlight the role of cartoons in shaping public perception and sparking dialogue.",
+  "model": "gpt-4o-mini"
+}

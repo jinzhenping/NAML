@@ -1,0 +1,21 @@
+{
+  "user_id": 394,
+  "candidate_news_id": "N102030",
+  "candidate_title": "50 Christmas Bible Verses to Celebrate the Reason for the Season",
+  "user_history_count": 10,
+  "user_history": [
+    "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt",
+    "Jada and Will Smith Share Touching Tributes for Daughter Willow's 19th Birthday",
+    "Kelly Clarkson Announces Las Vegas Residency With Message to Her Fans: 'I Got You'",
+    "Miley Cyrus and Cody Simpson Pack on the PDA as She Helps Him Get Ready for Halloween",
+    "What 25 dogs were bred for",
+    "7 chefs revealed their favorite jarred pasta sauces",
+    "Anna Faris Sparks Engagement Rumors With Boyfriend Michael Barrett",
+    "20 of Our Best Bisque Recipes",
+    "Already 6 Months! Prince Harry, Duchess Meghan's Son Is Trying to Talk",
+    "Celebrities who changed their names"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"Jada and Will Smith Share Touching Tributes for Daughter Willow's 19th Birthday\"\n\"Kelly Clarkson Announces Las Vegas Residency With Message to Her Fans: 'I Got You'\"\n\"Miley Cyrus and Cody Simpson Pack on the PDA as She Helps Him Get Ready for Halloween\"\n\"What 25 dogs were bred for\"\n\"7 chefs revealed their favorite jarred pasta sauces\"\n\"Anna Faris Sparks Engagement Rumors With Boyfriend Michael Barrett\"\n\"20 of Our Best Bisque Recipes\"\n\"Already 6 Months! Prince Harry, Duchess Meghan's Son Is Trying to Talk\"\n\"Celebrities who changed their names\"\n\n[Candidate News Title]\n\"50 Christmas Bible Verses to Celebrate the Reason for the Season\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"50 Christmas Bible Verses to Celebrate the Reason for the Season,\" the user might expect a curated selection of scripture passages that highlight the themes of Christmas, such as hope, joy, and faith. The content is likely to include both well-known verses and perhaps some lesser-known ones, providing context for their significance during the holiday season. The article may also offer insights on how these verses can be used in personal reflection, holiday gatherings, or religious services. Overall, the user could find this resource useful for enhancing their understanding and appreciation of the biblical foundations of Christmas.",
+  "model": "gpt-4o-mini"
+}

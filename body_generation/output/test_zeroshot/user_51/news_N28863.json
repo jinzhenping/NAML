@@ -1,0 +1,20 @@
+{
+  "user_id": 51,
+  "candidate_news_id": "N28863",
+  "candidate_title": "Last survivor of the Hindenburg disaster dies at age 90",
+  "user_history_count": 9,
+  "user_history": [
+    "Milania Giudice Says She'll See Dad Joe 'Soon' After He Leaves ICE Custody",
+    "Bananas For Constipation: Do They Work?",
+    "Jeff Bezos: This is the 'smartest thing we ever did' at Amazon",
+    "Ways to Lose Weight: 36 Fast, Easy Tips",
+    "Photo of emotional nurse after 'particularly hard day' goes viral",
+    "Here's Exactly How to Eat a Vegetarian Keto Diet",
+    "Dad thought he dressed toddler daughter in a hat, but he was hilariously wrong",
+    "The Latest Weight Loss Pills That Work And the Ones That Don't",
+    "Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Milania Giudice Says She'll See Dad Joe 'Soon' After He Leaves ICE Custody\"\n\"Bananas For Constipation: Do They Work?\"\n\"Jeff Bezos: This is the 'smartest thing we ever did' at Amazon\"\n\"Ways to Lose Weight: 36 Fast, Easy Tips\"\n\"Photo of emotional nurse after 'particularly hard day' goes viral\"\n\"Here's Exactly How to Eat a Vegetarian Keto Diet\"\n\"Dad thought he dressed toddler daughter in a hat, but he was hilariously wrong\"\n\"The Latest Weight Loss Pills That Work And the Ones That Don't\"\n\"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'\"\n\"\"\n\n[Candidate News Title]\n\"Last survivor of the Hindenburg disaster dies at age 90\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the last survivor of the Hindenburg disaster could provide a historical overview of the infamous airship and its tragic fate, detailing the circumstances of the disaster and the impact it had on aviation safety. Readers may expect to learn about the life of the survivor, including personal anecdotes and reflections on their experiences during that time. Additionally, the article may explore the broader significance of the Hindenburg disaster in aviation history and how it shaped public perception of air travel.",
+  "model": "gpt-4o-mini"
+}

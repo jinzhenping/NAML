@@ -1,0 +1,21 @@
+{
+  "user_id": 334,
+  "candidate_news_id": "N110967",
+  "candidate_title": "Amari gets heroic birthday surprise",
+  "user_history_count": 10,
+  "user_history": [
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "Lance Altimeter Is A Delicious Drop-In Truck Camper Debuting At SEMA",
+    "I'm 55 and have no retirement savings: What should I do?",
+    "Dean Foods files for bankruptcy",
+    "Democrats' wins could help bring down Confederate statues",
+    "Senior Trump official embellished résumé, had face on fake Time cover",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "'Absolutely Terrifying': 3 Students Describe Moments After Shots Rang Out At Saugus High School",
+    "Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal",
+    "Dwayne Johnson Announces 'Black Adam' 2021 Release Date"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Lance Altimeter Is A Delicious Drop-In Truck Camper Debuting At SEMA\"\n\"I'm 55 and have no retirement savings: What should I do?\"\n\"Dean Foods files for bankruptcy\"\n\"Democrats' wins could help bring down Confederate statues\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"'Absolutely Terrifying': 3 Students Describe Moments After Shots Rang Out At Saugus High School\"\n\"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\"\n\"Dwayne Johnson Announces 'Black Adam' 2021 Release Date\"\n\n[Candidate News Title]\n\"Amari gets heroic birthday surprise\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Amari gets heroic birthday surprise,\" the user can expect to read about a significant and uplifting event where an individual named Amari receives a remarkable surprise on their birthday. The article is likely to detail the circumstances surrounding the surprise, including who organized it and how it reflects a sense of community or personal connection. There may also be anecdotes or reactions from those involved, illustrating the importance of the occasion. Overall, the piece could highlight themes of kindness and celebration within a personal context.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 261,
+  "candidate_news_id": "N11793",
+  "candidate_title": "The world's only $100 billion utility owes its rise to wind power",
+  "user_history_count": 10,
+  "user_history": [
+    "Off to the World Series, these Nationals have proved everyone wrong",
+    "What Art Briles Brought To The Town That Never Asked For Him",
+    "Best, worst QB performances from NFL Week 7",
+    "Why would the Fed cut rates again with stocks near records?",
+    "MLB bans women who flashed their chests behind home plate during Game 5 of World Series",
+    "Michigan State will retire Draymond Green's No. 23 in 'fitting honor'",
+    "Brace yourselves: First snow flakes of the season may hit NYC Thursday",
+    "Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says",
+    "NFL draft winners and losers: Joe Burrow not the only standout in LSU-Bama thriller",
+    "Winners and losers in second College Football Playoff rankings include LSU and Alabama"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Off to the World Series, these Nationals have proved everyone wrong\"\n\"What Art Briles Brought To The Town That Never Asked For Him\"\n\"Best, worst QB performances from NFL Week 7\"\n\"Why would the Fed cut rates again with stocks near records?\"\n\"MLB bans women who flashed their chests behind home plate during Game 5 of World Series\"\n\"Michigan State will retire Draymond Green's No. 23 in 'fitting honor'\"\n\"Brace yourselves: First snow flakes of the season may hit NYC Thursday\"\n\"Wrestling referee warned Rep. Jim Jordan about Ohio State doctor's sex misconduct, new lawsuit says\"\n\"NFL draft winners and losers: Joe Burrow not the only standout in LSU-Bama thriller\"\n\"Winners and losers in second College Football Playoff rankings include LSU and Alabama\"\n\n[Candidate News Title]\n\"The world's only $100 billion utility owes its rise to wind power\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The world's only $100 billion utility owes its rise to wind power\" is likely to provide an overview of how this utility company achieved significant financial success largely through its investment in wind energy. The piece may explore the company’s strategies in renewable energy development, the scale of its operations, and the impact of wind power on its overall growth. Additionally, it could touch on broader trends in the energy sector, such as the shift towards sustainable practices and the economic implications of renewable energy investments.",
+  "model": "gpt-4o-mini"
+}

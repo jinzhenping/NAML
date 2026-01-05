@@ -1,0 +1,21 @@
+{
+  "user_id": 663,
+  "candidate_news_id": "N15289",
+  "candidate_title": "Last known Pearl Harbor survivor in Mass. dies at 98",
+  "user_history_count": 10,
+  "user_history": [
+    "Today in History: October 28",
+    "Gary McCord speaks out loudly about being dropped from CBS golf team: 'Bottom line, they fired me'",
+    "Browns QB Baker Mayfield ends news conference after contentious exchange with reporter: 'Dumbest question you could ask'",
+    "Today in History: October 31",
+    "Michigan Family Finds Black Widow Spider In Grapes",
+    "Rare Vixen Motorhome For Sale Is One Of Nicest We've Seen",
+    "Today in History: November 3",
+    "Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post",
+    "Today in History: November 4",
+    "Before his execution, a death row inmate told his victim's family he forgives them"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Today in History: October 28\"\n\"Gary McCord speaks out loudly about being dropped from CBS golf team: 'Bottom line, they fired me'\"\n\"Browns QB Baker Mayfield ends news conference after contentious exchange with reporter: 'Dumbest question you could ask'\"\n\"Today in History: October 31\"\n\"Michigan Family Finds Black Widow Spider In Grapes\"\n\"Rare Vixen Motorhome For Sale Is One Of Nicest We've Seen\"\n\"Today in History: November 3\"\n\"Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post\"\n\"Today in History: November 4\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\n[Candidate News Title]\n\"Last known Pearl Harbor survivor in Mass. dies at 98\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Last known Pearl Harbor survivor in Mass. dies at 98,\" the user can expect an informative account of the life and legacy of the last known survivor of the Pearl Harbor attack. It is likely to cover key aspects of the individual's experiences during World War II, including their personal history and contributions to the war effort. The article may also reflect on the significance of their passing in the context of preserving the memories of that pivotal event in American history, highlighting their role in sharing firsthand accounts of the attack and its impact.",
+  "model": "gpt-4o-mini"
+}

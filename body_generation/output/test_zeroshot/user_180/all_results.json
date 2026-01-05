@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 180,
+    "candidate_news_id": "N46641",
+    "candidate_title": "Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say",
+    "user_history_count": 10,
+    "user_history": [
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now",
+      "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+      "USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9",
+      "Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood",
+      "China's pork crisis is bigger than you think"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9\"\n\"Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood\"\n\"China's pork crisis is bigger than you think\"\n\n[Candidate News Title]\n\"Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article about former North Carolina State and NBA player Anthony Grundy discusses the circumstances surrounding his death, reportedly due to a stabbing incident. Readers can expect details about the events leading up to the incident, as well as information on the investigation by police. The article may also provide context regarding Grundy's career in basketball and any reactions from the sports community or his family. Additionally, there could be insights into the implications of violence in sports-related contexts.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N111050",
+    "candidate_title": "U.S. 'flexible' on military exercises with South Korea as North demands cancellation",
+    "user_history_count": 10,
+    "user_history": [
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now",
+      "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+      "USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9",
+      "Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood",
+      "China's pork crisis is bigger than you think"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9\"\n\"Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood\"\n\"China's pork crisis is bigger than you think\"\n\n[Candidate News Title]\n\"U.S. 'flexible' on military exercises with South Korea as North demands cancellation\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss the current stance of the U.S. regarding military exercises with South Korea in the context of North Korea's demands for their cancellation. Readers can expect an overview of the geopolitical implications of this situation, including the potential impact on U.S.-South Korea relations and regional security dynamics. It may also touch on how these military exercises are perceived by both North Korea and the international community. Additionally, the article could provide insights into the U.S. administration's strategy for engaging with North Korea amid ongoing tensions.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N52464",
+    "candidate_title": "4 takeaways from Marie Yovanovitch's testimony",
+    "user_history_count": 10,
+    "user_history": [
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now",
+      "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+      "USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9",
+      "Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood",
+      "China's pork crisis is bigger than you think"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9\"\n\"Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood\"\n\"China's pork crisis is bigger than you think\"\n\n[Candidate News Title]\n\"4 takeaways from Marie Yovanovitch's testimony\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"4 takeaways from Marie Yovanovitch's testimony,\" the user can expect a summary of key points from Yovanovitch's recent testimony, likely focusing on her experiences and insights related to foreign policy and her tenure as the U.S. ambassador to Ukraine. The text may highlight significant moments from her testimony that reveal her perspectives on political pressures and the implications of her dismissal. Additionally, it could provide context about the broader investigation and reactions from various political figures. Overall, the article is likely to offer a concise overview of the main themes and implications of her statements.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N39770",
+    "candidate_title": "Dow tops 28,000 for first time, capping 4-week win streak",
+    "user_history_count": 10,
+    "user_history": [
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now",
+      "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+      "USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9",
+      "Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood",
+      "China's pork crisis is bigger than you think"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9\"\n\"Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood\"\n\"China's pork crisis is bigger than you think\"\n\n[Candidate News Title]\n\"Dow tops 28,000 for first time, capping 4-week win streak\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article about the Dow topping 28,000 for the first time is likely to provide an overview of the stock market's performance and the factors contributing to this milestone. It may discuss recent economic trends, investor sentiment, and key market indicators that have led to this rise. Additionally, the article could include insights from financial analysts on the implications of this achievement for future market movements. Readers might expect to understand how this milestone fits into the broader economic context and what it could mean for individual investors and the economy as a whole.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 180,
+    "candidate_news_id": "N100425",
+    "candidate_title": "The most talked about movie moments of the 2010s",
+    "user_history_count": 10,
+    "user_history": [
+      "Orange County gang task force makes several arrests in Santa Ana",
+      "Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions",
+      "Yang on possible Bloomberg run: 'There are limits to what money can do'",
+      "Famed Hollywood Boulevard Superman Christopher Dennis Found Dead",
+      "Snow crab sells for record price in Japan",
+      "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now",
+      "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+      "USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9",
+      "Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood",
+      "China's pork crisis is bigger than you think"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Orange County gang task force makes several arrests in Santa Ana\"\n\"Violent, Fatal Crash Shuts Down Pacific Coast Highway In Both Directions\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\"Famed Hollywood Boulevard Superman Christopher Dennis Found Dead\"\n\"Snow crab sells for record price in Japan\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9\"\n\"Driver Hospitalized After Suspected Road-Rage Shooting on 405 Fwy in Inglewood\"\n\"China's pork crisis is bigger than you think\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"The most talked about movie moments of the 2010s,\" you may expect a detailed exploration of significant scenes that captured public attention and sparked discussions during that decade. The article is likely to highlight key films and their impactful moments, potentially including a mix of blockbuster hits and critically acclaimed works. Additionally, it could provide insights into why these moments resonated with audiences, perhaps touching on themes like cultural relevance or storytelling techniques. Overall, it should offer a reflective look at cinema's influence on popular culture during the 2010s.",
+    "model": "gpt-4o-mini"
+  }
+]

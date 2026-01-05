@@ -1,0 +1,21 @@
+{
+  "user_id": 339,
+  "candidate_news_id": "N59654",
+  "candidate_title": "Duke reports minor violation after Coach K mentions name of unsigned recruit",
+  "user_history_count": 10,
+  "user_history": [
+    "125 Cast Iron Recipes for Fall",
+    "'Ghost kitchens' are taking over fast-food chains from Chick-fil-A to Wendy's",
+    "Here's What Malls Looked Like Back in the '50s",
+    "Missing West Point cadet Kade Kurita found dead 4 days after disappearing",
+    "World's largest treehouse burns to the ground",
+    "Report: Adidas working on buyout of $25 million John Wall deal amid injuries",
+    "Bill Macy, Bea Arthur's Husband on 'Maude,' Dies at 97",
+    "The ice used to protect them. Now their island is crumbling into the sea.",
+    "Jeremy Roloff Vows to Pay More 'Attention' to His Health After Undergoing Hernia Surgery",
+    "At stressful time, Boy Scouts top boss goes on medical leave"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"125 Cast Iron Recipes for Fall\"\n\"'Ghost kitchens' are taking over fast-food chains from Chick-fil-A to Wendy's\"\n\"Here's What Malls Looked Like Back in the '50s\"\n\"Missing West Point cadet Kade Kurita found dead 4 days after disappearing\"\n\"World's largest treehouse burns to the ground\"\n\"Report: Adidas working on buyout of $25 million John Wall deal amid injuries\"\n\"Bill Macy, Bea Arthur's Husband on 'Maude,' Dies at 97\"\n\"The ice used to protect them. Now their island is crumbling into the sea.\"\n\"Jeremy Roloff Vows to Pay More 'Attention' to His Health After Undergoing Hernia Surgery\"\n\"At stressful time, Boy Scouts top boss goes on medical leave\"\n\n[Candidate News Title]\n\"Duke reports minor violation after Coach K mentions name of unsigned recruit\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to read about a minor violation reported by Duke University concerning Coach K's comments about an unsigned recruit. The piece is likely to outline the specifics of the violation, including any potential repercussions for the basketball program and how this incident fits within the broader context of NCAA regulations. Additionally, the article may explore the implications for recruiting practices and Coach K's role in maintaining compliance with NCAA guidelines, providing insight into the challenges faced by college athletics.",
+  "model": "gpt-4o-mini"
+}

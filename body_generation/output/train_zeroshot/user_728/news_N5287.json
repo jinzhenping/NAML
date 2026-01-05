@@ -1,0 +1,21 @@
+{
+  "user_id": 728,
+  "candidate_news_id": "N5287",
+  "candidate_title": "Deadly Arctic blast breaks records set more than 100 years ago",
+  "user_history_count": 10,
+  "user_history": [
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia",
+    "This Mom's Been Sober For 3 Years, and Her Celebratory Photo Shoot With Her Son Is Everything",
+    "9 renovation tips to boost resale value",
+    "Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet",
+    "Airline Apologizes After False Hijack Alarm Causes Dozens of Flight Delays",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "This Is The Moment A Senior Shelter Dog Knew He Was Safe",
+    "A guide to the 2019 People's Choice Awards nominees' significant others"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\"This Mom's Been Sober For 3 Years, and Her Celebratory Photo Shoot With Her Son Is Everything\"\n\"9 renovation tips to boost resale value\"\n\"Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet\"\n\"Airline Apologizes After False Hijack Alarm Causes Dozens of Flight Delays\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"This Is The Moment A Senior Shelter Dog Knew He Was Safe\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\n[Candidate News Title]\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Deadly Arctic blast breaks records set more than 100 years ago\" is likely to provide an overview of a severe weather event characterized by unusually low temperatures and harsh conditions impacting various regions. Readers can expect to learn about the specific areas affected by this Arctic blast, as well as any historical comparisons illustrating the severity of the current situation. The piece may also explore the implications for local communities, including potential disruptions to daily life and infrastructure. Additionally, it could discuss weather patterns and scientific insights into why this event is occurring now, highlighting its unprecedented nature.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 189,
+  "candidate_news_id": "N97018",
+  "candidate_title": "AP Interview: Huawei founder says US woes not hardest crisis",
+  "user_history_count": 10,
+  "user_history": [
+    "Two teenage girls missing from Kansas City, Missouri",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2",
+    "New images capture missing college student on night she vanished",
+    "Justin Theroux Reaches Out to Ex Jennifer Aniston on Instagram for a Good Cause",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Two teenage girls missing from Kansas City, Missouri\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2\"\n\"New images capture missing college student on night she vanished\"\n\"Justin Theroux Reaches Out to Ex Jennifer Aniston on Instagram for a Good Cause\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\n[Candidate News Title]\n\"AP Interview: Huawei founder says US woes not hardest crisis\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the Huawei founder is likely to discuss the challenges faced by the company in the context of US trade relations and restrictions. Readers may expect insights into how these issues have impacted Huawei's operations and strategies, as well as the broader implications for the tech industry. The founder may also reflect on the resilience of the company during this period, suggesting that while these difficulties are significant, they are not the most formidable challenges the company has encountered. Overall, the piece could provide a nuanced perspective on corporate navigation in a complex geopolitical landscape.",
+  "model": "gpt-4o-mini"
+}

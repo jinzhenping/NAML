@@ -1,0 +1,21 @@
+{
+  "user_id": 972,
+  "candidate_news_id": "N45124",
+  "candidate_title": "The News In Cartoons",
+  "user_history_count": 10,
+  "user_history": [
+    "The News In Cartoons",
+    "TSA: Man Tried To Bring Loaded Gun On Plane At Newark Liberty International Airport",
+    "This Asteroid May Actually Be the Smallest Dwarf Planet in Solar System",
+    "Mississippi woman found after being missing for days by writing S.O.S. with rocks",
+    "An energy breakthrough could store solar power for decades",
+    "We Are Running Out of Air",
+    "The News In Cartoons",
+    "Holocaust survivor under guard amid death threats",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "Here's what you need to know about your 2020 taxes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The News In Cartoons\"\n\"TSA: Man Tried To Bring Loaded Gun On Plane At Newark Liberty International Airport\"\n\"This Asteroid May Actually Be the Smallest Dwarf Planet in Solar System\"\n\"Mississippi woman found after being missing for days by writing S.O.S. with rocks\"\n\"An energy breakthrough could store solar power for decades\"\n\"We Are Running Out of Air\"\n\"The News In Cartoons\"\n\"Holocaust survivor under guard amid death threats\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"Here's what you need to know about your 2020 taxes\"\n\n[Candidate News Title]\n\"The News In Cartoons\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The user is likely expecting to read a light-hearted yet informative piece that presents current events and news stories through a cartoon format. This article may highlight various significant events or themes from recent news, using illustrations and satire to provide commentary or humor. The content could include a mix of serious topics, such as social issues or political events, alongside more whimsical or entertaining stories, appealing to the user’s interest in both informative and engaging news presentation.",
+  "model": "gpt-4o-mini"
+}

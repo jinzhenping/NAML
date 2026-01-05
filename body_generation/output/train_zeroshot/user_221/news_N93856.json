@@ -1,0 +1,21 @@
+{
+  "user_id": 221,
+  "candidate_news_id": "N93856",
+  "candidate_title": "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+  "user_history_count": 10,
+  "user_history": [
+    "Celebrity beach cruising for 2019",
+    "This time, Southern California was prepared for wildfires. Here's how countless homes were saved",
+    "Mayfield's postgame outfit gets all the memes",
+    "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+    "12 Things U.S. Presidents Have to Pay for on Their Own",
+    "Iran announces sharp rise in enriched uranium production",
+    "I was a passport to this man: Child marriage loopholes persist in U.S.",
+    "Pirates kidnap nine crew members from cargo ship off coast of Benin",
+    "Buffett has $128 billion in cash, and analysts can't figure out why he isn't spending it",
+    "Kim Kardashian, Kanye West are adding a farm to their estate: Report"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebrity beach cruising for 2019\"\n\"This time, Southern California was prepared for wildfires. Here's how countless homes were saved\"\n\"Mayfield's postgame outfit gets all the memes\"\n\"Severe weather shifts boat stuck on Niagara Falls rocks for 101 years\"\n\"12 Things U.S. Presidents Have to Pay for on Their Own\"\n\"Iran announces sharp rise in enriched uranium production\"\n\"I was a passport to this man: Child marriage loopholes persist in U.S.\"\n\"Pirates kidnap nine crew members from cargo ship off coast of Benin\"\n\"Buffett has $128 billion in cash, and analysts can't figure out why he isn't spending it\"\n\"Kim Kardashian, Kanye West are adding a farm to their estate: Report\"\n\n[Candidate News Title]\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent interaction between Selena Gomez and Julia Michaels, highlighting their close friendship and the significance of their matching arrow tattoos. Readers can expect details about the design of the tattoos, the context in which they were shared, and any accompanying social media posts that illustrate their bond. Additionally, the piece may explore the background of their relationship, including past collaborations and personal support for each other in the public eye, which could provide insights into the nature of their friendship.",
+  "model": "gpt-4o-mini"
+}

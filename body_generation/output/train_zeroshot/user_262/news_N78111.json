@@ -1,0 +1,19 @@
+{
+  "user_id": 262,
+  "candidate_news_id": "N78111",
+  "candidate_title": "The Giudice family reunites and more ICYMI celeb news",
+  "user_history_count": 8,
+  "user_history": [
+    "Gabbard hits back at 'queen of warmongers' Clinton",
+    "Hillary Clinton backs out of DC event also set to include Tulsi Gabbard, Kirstjen Nielsen: report",
+    "California governor pardons 3 convicted immigrants to help block deportations",
+    "Ford botches Explorer launch, putting CEO back on hot seat",
+    "Astros fire assistant GM for 'inappropriate comments'",
+    "Elizabeth Warren's Days Defending Big Corporations",
+    "ISIS names successor to slain leader al-Baghdadi",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Gabbard hits back at 'queen of warmongers' Clinton\"\n\"Hillary Clinton backs out of DC event also set to include Tulsi Gabbard, Kirstjen Nielsen: report\"\n\"California governor pardons 3 convicted immigrants to help block deportations\"\n\"Ford botches Explorer launch, putting CEO back on hot seat\"\n\"Astros fire assistant GM for 'inappropriate comments'\"\n\"Elizabeth Warren's Days Defending Big Corporations\"\n\"ISIS names successor to slain leader al-Baghdadi\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"The Giudice family reunites and more ICYMI celeb news\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"The Giudice family reunites and more ICYMI celeb news,\" you can expect a summary of recent celebrity news, with a focus on the Giudice family, who are known from reality television. The piece may provide insights into their latest activities, public appearances, or any noteworthy events involving them. Additionally, it is likely to cover other trending celebrity stories, offering a broader perspective on the entertainment landscape. Overall, the article appears to aim at keeping readers updated on notable happenings in the celebrity world.",
+  "model": "gpt-4o-mini"
+}

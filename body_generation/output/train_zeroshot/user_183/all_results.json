@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 183,
+    "candidate_news_id": "N119838",
+    "candidate_title": "Bucs release former first-round pick Vernon Hargreaves",
+    "user_history_count": 10,
+    "user_history": [
+      "Marine combat veteran who served in Iraq deported to El Salvador",
+      "The 50 most expensive top boarding schools in America",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+      "Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+      "Philadelphia shooting: 10-year-old boy shot in head while walking home from school",
+      "Unexpected ingredients that go great with eggs"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Marine combat veteran who served in Iraq deported to El Salvador\"\n\"The 50 most expensive top boarding schools in America\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Philadelphia shooting: 10-year-old boy shot in head while walking home from school\"\n\"Unexpected ingredients that go great with eggs\"\n\n[Candidate News Title]\n\"Bucs release former first-round pick Vernon Hargreaves\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Bucs release former first-round pick Vernon Hargreaves\" is likely to provide an overview of the decision made by the Tampa Bay Buccaneers to part ways with Hargreaves, outlining the reasons for his release and its implications for the team's roster. Readers may expect to find details about Hargreaves' performance during his tenure with the team, any previous injuries or challenges he faced, and how this move fits into the Buccaneers' overall strategy moving forward. Additionally, the article could include reactions from fans and analysts regarding the impact of this decision on the team's defensive lineup.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 183,
+    "candidate_news_id": "N76434",
+    "candidate_title": "Report: Election vendors are 'prime targets,' need oversight",
+    "user_history_count": 10,
+    "user_history": [
+      "Marine combat veteran who served in Iraq deported to El Salvador",
+      "The 50 most expensive top boarding schools in America",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+      "Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+      "Philadelphia shooting: 10-year-old boy shot in head while walking home from school",
+      "Unexpected ingredients that go great with eggs"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Marine combat veteran who served in Iraq deported to El Salvador\"\n\"The 50 most expensive top boarding schools in America\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Philadelphia shooting: 10-year-old boy shot in head while walking home from school\"\n\"Unexpected ingredients that go great with eggs\"\n\n[Candidate News Title]\n\"Report: Election vendors are 'prime targets,' need oversight\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Report: Election vendors are 'prime targets,' need oversight\" is likely to explore the vulnerabilities of election vendors in the context of cybersecurity and election integrity. Readers can expect an analysis of the potential risks these vendors face, particularly in light of recent election-related controversies. The piece may detail specific examples of incidents or breaches that have raised concerns about the security of electoral processes. Additionally, it could examine proposed measures for oversight and regulation to protect against these threats, though the effectiveness of such measures may remain uncertain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 183,
+    "candidate_news_id": "N100073",
+    "candidate_title": "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "user_history_count": 10,
+    "user_history": [
+      "Marine combat veteran who served in Iraq deported to El Salvador",
+      "The 50 most expensive top boarding schools in America",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+      "Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+      "Philadelphia shooting: 10-year-old boy shot in head while walking home from school",
+      "Unexpected ingredients that go great with eggs"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Marine combat veteran who served in Iraq deported to El Salvador\"\n\"The 50 most expensive top boarding schools in America\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Philadelphia shooting: 10-year-old boy shot in head while walking home from school\"\n\"Unexpected ingredients that go great with eggs\"\n\n[Candidate News Title]\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If the user clicks on the article about why Prince Harry wore his remembrance poppy differently from the rest of the royal family, they may expect to read an analysis of the significance behind this choice and how it reflects his personal views or the evolving traditions within the royal family. The article could explore the historical context of remembrance poppy usage, the potential implications of Harry's unique choice, and any reactions it elicited from observers or commentators. Additionally, it is likely to touch on how this decision aligns with his broader approach to royal duties and public engagements.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 183,
+    "candidate_news_id": "N109642",
+    "candidate_title": "Eerie photos of an abandoned airport that hasn't been touched in 25 years",
+    "user_history_count": 10,
+    "user_history": [
+      "Marine combat veteran who served in Iraq deported to El Salvador",
+      "The 50 most expensive top boarding schools in America",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+      "Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+      "Philadelphia shooting: 10-year-old boy shot in head while walking home from school",
+      "Unexpected ingredients that go great with eggs"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Marine combat veteran who served in Iraq deported to El Salvador\"\n\"The 50 most expensive top boarding schools in America\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Philadelphia shooting: 10-year-old boy shot in head while walking home from school\"\n\"Unexpected ingredients that go great with eggs\"\n\n[Candidate News Title]\n\"Eerie photos of an abandoned airport that hasn't been touched in 25 years\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to find a detailed exploration of an abandoned airport that has remained untouched for 25 years. It may provide insights into the history of the airport, including its operational years and reasons for its closure. The article could also include a series of eerie photographs showcasing the dilapidated structures and overgrown surroundings, illustrating the passage of time and nature's reclamation of the space. Additionally, there may be commentary on the implications of such abandoned sites in urban environments, highlighting themes of decay and nostalgia.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 183,
+    "candidate_news_id": "N20990",
+    "candidate_title": "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "user_history_count": 10,
+    "user_history": [
+      "Marine combat veteran who served in Iraq deported to El Salvador",
+      "The 50 most expensive top boarding schools in America",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+      "Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death",
+      "Philadelphia shooting: 10-year-old boy shot in head while walking home from school",
+      "Unexpected ingredients that go great with eggs"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Marine combat veteran who served in Iraq deported to El Salvador\"\n\"The 50 most expensive top boarding schools in America\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"New Mexico game vs. Air Force rescheduled after lineman Nahje Flowers' death\"\n\"Philadelphia shooting: 10-year-old boy shot in head while walking home from school\"\n\"Unexpected ingredients that go great with eggs\"\n\n[Candidate News Title]\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing,\" you may expect a detailed account of the reasons behind these restrictions imposed on the billionaire's son. The article is likely to explore the context of these bans, potentially touching on legal issues, social implications, or public reactions. It may also provide insights into the lifestyle of wealthy individuals in China and how such regulations reflect broader societal norms or governmental controls.",
+    "model": "gpt-4o-mini"
+  }
+]

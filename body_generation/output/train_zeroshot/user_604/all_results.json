@@ -1,0 +1,317 @@
+[
+  {
+    "user_id": 604,
+    "candidate_news_id": "N1328",
+    "candidate_title": "Navy Submarine, Missing for 75 Years, Is Found Off Okinawa",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"Navy Submarine, Missing for 75 Years, Is Found Off Okinawa\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss the recent discovery of a Navy submarine that has been missing for 75 years off the coast of Okinawa. Readers can expect to learn about the circumstances surrounding the submarine's disappearance during World War II, as well as the details of its recovery, including the technology or methods used to locate it. The article may also provide insights into the historical significance of the submarine and its crew, potentially offering context about the broader impact of such discoveries on naval history and underwater exploration.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N112472",
+    "candidate_title": "How Scientists Got Climate Change So Wrong",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"How Scientists Got Climate Change So Wrong\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"How Scientists Got Climate Change So Wrong\" is likely to explore the complexities and challenges faced by scientists in accurately predicting climate change impacts. Readers can expect a discussion on various scientific models and methodologies that may have led to misconceptions or oversights in climate forecasting. The article could analyze specific case studies or instances where predictions diverged from actual outcomes, shedding light on the evolving understanding of climate science. Additionally, it may consider the implications of these inaccuracies for policy-making and public perception of climate change.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N35948",
+    "candidate_title": "Turkey starts repatriation of captured Islamic State militants: media",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"Turkey starts repatriation of captured Islamic State militants: media\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss Turkey's recent actions regarding the repatriation of captured Islamic State militants, potentially outlining the reasons behind this decision and its implications for both Turkey and international security. It may provide details about the number of militants being repatriated, their nationalities, and the legal and political frameworks guiding this process. Additionally, the article could explore the reactions from various stakeholders, including governments and humanitarian organizations, and may suggest how this move could impact Turkey's relations with other countries involved in the fight against terrorism.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N120919",
+    "candidate_title": "Robert Freeman, Beatles Album Cover Photographer, Dies at 82",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"Robert Freeman, Beatles Album Cover Photographer, Dies at 82\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely provides an obituary for Robert Freeman, a notable photographer known for his iconic album cover work with The Beatles. Readers can expect to learn about his significant contributions to music and photography, including details about specific album covers he created and the impact of his work on popular culture. The piece may also explore Freeman's career highlights and personal anecdotes that illustrate his artistic vision. Additionally, it could touch upon his influence in the music industry and how his photographs have left a lasting legacy.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N60823",
+    "candidate_title": "Rising temperatures put U.S. troops at risk during training, report finds",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"Rising temperatures put U.S. troops at risk during training, report finds\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss the impact of rising temperatures on U.S. military training activities, highlighting concerns about how extreme heat may affect troop performance and safety. It may outline specific findings from a recent report, including data on temperature trends and potential adaptations the military might need to consider in their training protocols. Additionally, the article could explore broader implications for military readiness and operational capabilities in changing climate conditions, suggesting that adjustments may be necessary to ensure the effectiveness of U.S. forces.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N2750",
+    "candidate_title": "Man cuffed for eating sandwich on train platform gets an apology",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Man cuffed for eating sandwich on train platform gets an apology,\" the user can expect to read about an incident involving a man who was detained for consuming food in a train station setting, which may highlight local regulations or policies regarding eating in public transport areas. The piece is likely to discuss the circumstances surrounding the incident, including any public reactions or legal implications, and may also address the subsequent apology issued by authorities, shedding light on how such situations are handled in urban environments.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N52079",
+    "candidate_title": "San Diego State University freshman hurt in fraternity incident dies",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"San Diego State University freshman hurt in fraternity incident dies\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to report on the recent death of a freshman at San Diego State University following an incident related to a fraternity. It may provide details about the circumstances surrounding the event, including any investigations or responses from university officials and the fraternity involved. There could also be insights into the broader implications of fraternity culture on college campuses and possibly reactions from students and parents. Additionally, the article is likely to discuss any safety measures or policies that the university may consider in light of this tragedy.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N92498",
+    "candidate_title": "Country music's biggest scandals",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"Country music's biggest scandals\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Country music's biggest scandals,\" you may find an exploration of notable controversies and incidents that have shaped the country music genre. The article is likely to cover high-profile scandals involving popular artists, including legal issues, personal disputes, and public controversies that have garnered media attention. Additionally, it could provide context on how these events impacted the artists’ careers and the broader country music community. Overall, the piece may aim to offer a balanced overview of both the incidents and their implications.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N8491",
+    "candidate_title": "'It's the biggest gift I've ever gotten:' Iraq War veteran who lost leg and suffered significant trauma will come home to a hero's house in Glastonbury",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"'It's the biggest gift I've ever gotten:' Iraq War veteran who lost leg and suffered significant trauma will come home to a hero's house in Glastonbury\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss the story of an Iraq War veteran who, after suffering significant trauma and losing a leg, is set to return to a newly constructed home designed to accommodate his needs. Readers may expect details about the construction of this \"hero's house\" in Glastonbury, including insights into the support received from the community and organizations involved in helping veterans. The piece may also touch upon the veteran's experiences during the war and the journey toward recovery, highlighting the challenges faced and the significance of this new home as a symbol of hope and support.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N113126",
+    "candidate_title": "Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Drake Has Something to Say to the 'Kids' Who Booed Him Off Stage,\" the user is likely to expect a discussion surrounding Drake's recent performance where he faced negative reactions from the audience. The piece may cover his response to the incident, possibly including his reflections on audience expectations and artist performance dynamics. Furthermore, it could provide context about the event, such as the venue and reactions from fans and critics alike. Overall, the article is likely to explore themes of celebrity culture and public perception in the music industry.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N17148",
+    "candidate_title": "A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"A general was the leading suspect in the biggest anti-corruption case in Mexico. Then he disappeared.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely delves into the disappearance of a high-ranking general linked to a significant anti-corruption investigation in Mexico. Readers can expect an overview of the circumstances surrounding the case, including details about the allegations of corruption that led to his prominence as a suspect. The piece may explore the implications of his disappearance on the investigation and the broader context of corruption within the Mexican military. Additionally, it could provide insights into the political ramifications and reactions from various stakeholders involved in the case.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N38811",
+    "candidate_title": "Team of 'white hat' hackers found bugs in Amazon Echo and Galaxy S10",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"Team of 'white hat' hackers found bugs in Amazon Echo and Galaxy S10\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss the recent findings of a team of 'white hat' hackers who identified vulnerabilities in popular consumer electronics, specifically the Amazon Echo and Galaxy S10. Readers can expect a detailed account of the types of bugs discovered, the potential implications for user security, and how these vulnerabilities could be exploited if left unaddressed. Additionally, the piece may cover the responses from Amazon and Samsung regarding the findings and any measures they are implementing to mitigate these risks.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N69772",
+    "candidate_title": "Mulvaney's move to join impeachment testimony lawsuit rankles Bolton allies",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"Mulvaney's move to join impeachment testimony lawsuit rankles Bolton allies\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses Mick Mulvaney's recent decision to join a lawsuit concerning impeachment testimony, which may have implications for his relationship with key figures like John Bolton. Readers can expect an analysis of the motivations behind Mulvaney's actions and how they might affect the broader political landscape, particularly regarding the ongoing impeachment proceedings. The piece could also explore the reactions of Bolton's allies and the potential impact on their strategies moving forward. Overall, it aims to provide insight into the unfolding dynamics within the political arena.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N100547",
+    "candidate_title": "Madonna sued because of late start to concert",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"Madonna sued because of late start to concert\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article about Madonna being sued due to a late start to her concert is likely to detail the specifics of the lawsuit, including the reasons behind the claim and the potential implications for the artist. Readers may expect to learn about the circumstances surrounding the concert delay, including any statements made by the concert organizers or Madonna's representatives. Additionally, the piece could explore how this situation might affect her future performances and public perception. Overall, it may provide insights into the legal aspects of concert obligations and artist responsibilities.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 604,
+    "candidate_news_id": "N56603",
+    "candidate_title": "California teen killed in gang-related shooting, 2 people charged with murder, police say",
+    "user_history_count": 10,
+    "user_history": [
+      "'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill",
+      "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+      "Gunmen kill 15 in southern Thailand's worst attack in years",
+      "Suspect arrested in disappearance of college student",
+      "Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.",
+      "iOS 13.2.2 is here and it'll fix that annoying bug the last update caused",
+      "3 charged with smuggling gun parts from US to Saudi Arabia",
+      "Nvidia Geforce users need to patch their systems now",
+      "200 Shocking Home Photos You Have to See",
+      "3 students allegedly plotted to attack their middle school: Officials"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'It's bonkers': California hits Philly-area Amazon seller with $1.6 million sales-tax bill\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Gunmen kill 15 in southern Thailand's worst attack in years\"\n\"Suspect arrested in disappearance of college student\"\n\"Russia Raided a Physics Institute. Kremlin Watchers Are Mystified.\"\n\"iOS 13.2.2 is here and it'll fix that annoying bug the last update caused\"\n\"3 charged with smuggling gun parts from US to Saudi Arabia\"\n\"Nvidia Geforce users need to patch their systems now\"\n\"200 Shocking Home Photos You Have to See\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\n[Candidate News Title]\n\"California teen killed in gang-related shooting, 2 people charged with murder, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to report on a recent gang-related shooting in California that resulted in the death of a teenager, with authorities announcing that two individuals have been charged with murder. It may provide details about the circumstances surrounding the shooting, including the location and any background information about the suspects and the victim. Additionally, the piece could explore the broader context of gang violence in the area and its implications for community safety. Overall, the article may aim to inform readers about the incident and its potential impact on local residents.",
+    "model": "gpt-4o-mini"
+  }
+]

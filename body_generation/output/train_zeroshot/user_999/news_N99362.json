@@ -1,0 +1,21 @@
+{
+  "user_id": 999,
+  "candidate_news_id": "N99362",
+  "candidate_title": "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+  "user_history_count": 10,
+  "user_history": [
+    "Eagles waive safety Andrew Sendejo, add to their compensatory draft picks",
+    "White House dismisses impeachment transcripts: Trump 'has done nothing wrong'",
+    "Florida county board rejects library's New York Times subscription as 'fake news'",
+    "What Tuesday's elections could tell us a year before Trump faces voters",
+    "5 Races to Watch on Election Day in the Philadelphia Region",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "'It's okay to be white' signs on a university campus prompt probe",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "McConnell Dismisses Impeachment Updates: 'It Would Not Lead to a Removal'",
+    "Sean Kratz, accused of killing 3 on cousin's Solebury farm, is expected to testify at trial"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Eagles waive safety Andrew Sendejo, add to their compensatory draft picks\"\n\"White House dismisses impeachment transcripts: Trump 'has done nothing wrong'\"\n\"Florida county board rejects library's New York Times subscription as 'fake news'\"\n\"What Tuesday's elections could tell us a year before Trump faces voters\"\n\"5 Races to Watch on Election Day in the Philadelphia Region\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"'It's okay to be white' signs on a university campus prompt probe\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"McConnell Dismisses Impeachment Updates: 'It Would Not Lead to a Removal'\"\n\"Sean Kratz, accused of killing 3 on cousin's Solebury farm, is expected to testify at trial\"\n\n[Candidate News Title]\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the reopening of Buffalo Wild Wings following a tragic incident involving the death of a manager due to a chemical accident is likely to provide details on the circumstances surrounding the event and the measures taken by the restaurant chain in response. It may discuss safety protocols being implemented to prevent future incidents and any community reactions to both the accident and the reopening. Additionally, the article could highlight the restaurant's importance to the local economy and what this reopening means for employees and patrons alike.",
+  "model": "gpt-4o-mini"
+}

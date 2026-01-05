@@ -1,0 +1,21 @@
+{
+  "user_id": 810,
+  "candidate_news_id": "N12483",
+  "candidate_title": "The 5 college majors American students most regret picking",
+  "user_history_count": 10,
+  "user_history": [
+    "The Wild West castle for sale with its own gold mine",
+    "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+    "Uh-Oh! Carrie Ann Inaba Falls on 'Dancing With the Stars'",
+    "Trump Posts Photos on Twitter of Heated Meeting With Dems, Says Pelosi is the One Who Had a 'Meltdown'",
+    "20 home renovations that kill your home's value",
+    "Goats help save Reagan library from destruction as California wildfire threatens",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "The penthouse of NYC's Woolworth Building just got a $31 million price cut. Check out 'The Pinnacle,' which occupies the top 5 floors of the iconic, green-roofed skyscraper.",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Wild West castle for sale with its own gold mine\"\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"Uh-Oh! Carrie Ann Inaba Falls on 'Dancing With the Stars'\"\n\"Trump Posts Photos on Twitter of Heated Meeting With Dems, Says Pelosi is the One Who Had a 'Meltdown'\"\n\"20 home renovations that kill your home's value\"\n\"Goats help save Reagan library from destruction as California wildfire threatens\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"The penthouse of NYC's Woolworth Building just got a $31 million price cut. Check out 'The Pinnacle,' which occupies the top 5 floors of the iconic, green-roofed skyscraper.\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly\"\n\n[Candidate News Title]\n\"The 5 college majors American students most regret picking\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the reader can expect to explore the college majors that many American students later regret choosing. It is likely to discuss the reasons behind these regrets, including factors such as job market trends, personal interests, and the financial implications of pursuing certain fields. The piece may also provide insights from students or graduates who reflect on their educational choices and how those decisions have impacted their career paths. Overall, the article aims to inform readers about the complexities of selecting a college major and the possible long-term consequences of their decisions.",
+  "model": "gpt-4o-mini"
+}

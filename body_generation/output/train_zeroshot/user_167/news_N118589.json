@@ -1,0 +1,21 @@
+{
+  "user_id": 167,
+  "candidate_news_id": "N118589",
+  "candidate_title": "Popular Selena tribute singer from San Fernando Valley detained by ICE in Texas",
+  "user_history_count": 10,
+  "user_history": [
+    "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+    "Trump, Newsom wildfire clash came days after Newsom lauded president as 'partner'",
+    "Watch: Kevin Harlan's call of streaking cat on 'MNF' is epic",
+    "The News In Cartoons",
+    "40 Fun Facts About Jennifer Aniston",
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+    "Kaia Gerber wears 'P' necklace after outings with Pete Davidson",
+    "Dad Goes Viral By Performing His Daughter's Exact Cheer Routine From the Stands",
+    "Terrifying moment wild elephant CRUSHES passing car on mountain road in Thailand",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Trump, Newsom wildfire clash came days after Newsom lauded president as 'partner'\"\n\"Watch: Kevin Harlan's call of streaking cat on 'MNF' is epic\"\n\"The News In Cartoons\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Kaia Gerber wears 'P' necklace after outings with Pete Davidson\"\n\"Dad Goes Viral By Performing His Daughter's Exact Cheer Routine From the Stands\"\n\"Terrifying moment wild elephant CRUSHES passing car on mountain road in Thailand\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\n[Candidate News Title]\n\"Popular Selena tribute singer from San Fernando Valley detained by ICE in Texas\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely reports on the recent detention of a popular Selena tribute singer from the San Fernando Valley by ICE in Texas. Readers may expect to learn about the circumstances surrounding the singer's arrest, including details about the singer's background and career. The article might also explore potential implications of this event, such as reactions from fans, the local community, and discussions surrounding immigration enforcement. Additionally, it could provide insight into how this incident fits within broader trends in immigration policy and its impact on artists.",
+  "model": "gpt-4o-mini"
+}

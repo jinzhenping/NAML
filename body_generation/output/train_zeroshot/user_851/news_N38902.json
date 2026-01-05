@@ -1,0 +1,21 @@
+{
+  "user_id": 851,
+  "candidate_news_id": "N38902",
+  "candidate_title": "Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'",
+  "user_history_count": 10,
+  "user_history": [
+    "'I Lost 125 Pounds And Now I'm A Bodybuilder'",
+    "MLB bans women who flashed their chests behind home plate during Game 5 of World Series",
+    "8 should-be buyers at the NFL trade deadline",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Surprising signs you're eating too much salt",
+    "Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Sneaky reason why Ravens, not Patriots, are AFC's best"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'I Lost 125 Pounds And Now I'm A Bodybuilder'\"\n\"MLB bans women who flashed their chests behind home plate during Game 5 of World Series\"\n\"8 should-be buyers at the NFL trade deadline\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Surprising signs you're eating too much salt\"\n\"Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Sneaky reason why Ravens, not Patriots, are AFC's best\"\n\n[Candidate News Title]\n\"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up',\" you can expect to read about the supportive relationship between the two country music stars. The piece is likely to highlight Underwood's comments on Lambert's role in the music community and how they encourage one another in their careers. Additionally, it may provide insights into their friendship, mutual respect, and collaboration within the industry, reflecting broader themes of female camaraderie in country music.",
+  "model": "gpt-4o-mini"
+}

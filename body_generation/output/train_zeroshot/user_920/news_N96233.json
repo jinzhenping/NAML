@@ -1,0 +1,21 @@
+{
+  "user_id": 920,
+  "candidate_news_id": "N96233",
+  "candidate_title": "Week 10 winners, losers: Saints implode in stunning loss; Eagles win without playing",
+  "user_history_count": 10,
+  "user_history": [
+    "Former DHS Secretary Kirstjen Nielsen says she left post because 'saying no' wasn't enough",
+    "Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo",
+    "Navy Reduces Punishment for SEAL in War Crimes Case",
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "The world's largest nuclear power producer is melting down",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Grading all 32 NFL teams heading into the last eight weeks of the 2019 season"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former DHS Secretary Kirstjen Nielsen says she left post because 'saying no' wasn't enough\"\n\"Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo\"\n\"Navy Reduces Punishment for SEAL in War Crimes Case\"\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"The world's largest nuclear power producer is melting down\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Grading all 32 NFL teams heading into the last eight weeks of the 2019 season\"\n\n[Candidate News Title]\n\"Week 10 winners, losers: Saints implode in stunning loss; Eagles win without playing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Week 10 winners, losers: Saints implode in stunning loss; Eagles win without playing,\" the user may expect a detailed analysis of the key outcomes from Week 10 of the NFL season. It is likely to cover the performance of various teams, particularly highlighting the surprising defeat of the New Orleans Saints and the unique situation where the Philadelphia Eagles benefited from a week off. The article could also explore implications for playoff standings and team morale, providing insights into how these results impact the league as a whole.",
+  "model": "gpt-4o-mini"
+}

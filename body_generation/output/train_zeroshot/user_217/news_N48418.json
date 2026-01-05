@@ -1,0 +1,21 @@
+{
+  "user_id": 217,
+  "candidate_news_id": "N48418",
+  "candidate_title": "2019 People's Choice Awards fashion hits and misses",
+  "user_history_count": 10,
+  "user_history": [
+    "Freshman Georgia Southern offensive lineman Jordan Wiggins dies at 18",
+    "Officer in viral-video shoplifting incident to be fired: Police chief",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Eric Tse, 24, just became a billionaire overnight",
+    "World's largest treehouse burns to the ground",
+    "These are the Most Luxurious SUVs You Can Buy",
+    "Northern Michigan father of 7 wins $80M Powerball jackpot",
+    "Trump records 'strongly corroborate' sex assault claims, accuser says",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "Kanye West, with debt piling up, thanks God for $68 million tax refund"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Freshman Georgia Southern offensive lineman Jordan Wiggins dies at 18\"\n\"Officer in viral-video shoplifting incident to be fired: Police chief\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Eric Tse, 24, just became a billionaire overnight\"\n\"World's largest treehouse burns to the ground\"\n\"These are the Most Luxurious SUVs You Can Buy\"\n\"Northern Michigan father of 7 wins $80M Powerball jackpot\"\n\"Trump records 'strongly corroborate' sex assault claims, accuser says\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"Kanye West, with debt piling up, thanks God for $68 million tax refund\"\n\n[Candidate News Title]\n\"2019 People's Choice Awards fashion hits and misses\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"2019 People's Choice Awards fashion hits and misses,\" the user is likely to find an analysis of the fashion choices made by celebrities during the event. This may include a breakdown of standout outfits, both praised and criticized, highlighting trends and styles that emerged on the red carpet. The piece could also discuss the overall fashion atmosphere of the awards, possibly featuring commentary from fashion experts or social media reactions. Readers might expect to learn about who wore what, along with insights into why certain looks resonated with audiences.",
+  "model": "gpt-4o-mini"
+}

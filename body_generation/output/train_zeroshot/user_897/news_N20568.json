@@ -1,0 +1,21 @@
+{
+  "user_id": 897,
+  "candidate_news_id": "N20568",
+  "candidate_title": "AP: Thousands face life-threatening floods from aging dams",
+  "user_history_count": 10,
+  "user_history": [
+    "Finally, some relief: Santa Ana winds weaken as fire weather warnings for L.A. area expire",
+    "National Sandwich Day: Where to score free subs and meal deals Sunday",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "Arizona 'Wizard Rock,' missing 1-ton boulder, mysteriously returns",
+    "2 Murder suspects escape from Monterey County, California, Jail",
+    "Iraq Protests Ramp Up, Shutting Roads, Offices And Schools",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Tom Brady explains why he's angry at this point in the football season",
+    "Bears' Khalil Mack calls out Eagles C Jason Kelce's controversial tactics in offsides penalties",
+    "Ex-NFL player Winslow Jr takes plea deal before rape retrial"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Finally, some relief: Santa Ana winds weaken as fire weather warnings for L.A. area expire\"\n\"National Sandwich Day: Where to score free subs and meal deals Sunday\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"Arizona 'Wizard Rock,' missing 1-ton boulder, mysteriously returns\"\n\"2 Murder suspects escape from Monterey County, California, Jail\"\n\"Iraq Protests Ramp Up, Shutting Roads, Offices And Schools\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Tom Brady explains why he's angry at this point in the football season\"\n\"Bears' Khalil Mack calls out Eagles C Jason Kelce's controversial tactics in offsides penalties\"\n\"Ex-NFL player Winslow Jr takes plea deal before rape retrial\"\n\n[Candidate News Title]\n\"AP: Thousands face life-threatening floods from aging dams\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the critical situation surrounding aging dams that pose a risk of life-threatening floods to thousands of residents. It may provide an overview of specific locations affected by this issue, as well as details on the current condition of the dams, and any warnings or emergency measures being implemented by local authorities. Additionally, the piece could explore the implications of these structural weaknesses on communities and infrastructure, highlighting the importance of proactive maintenance and disaster preparedness in mitigating potential flooding risks.",
+  "model": "gpt-4o-mini"
+}

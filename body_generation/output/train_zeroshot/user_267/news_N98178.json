@@ -1,0 +1,21 @@
+{
+  "user_id": 267,
+  "candidate_news_id": "N98178",
+  "candidate_title": "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+  "user_history_count": 10,
+  "user_history": [
+    "Singer Lauren Alaina Has Lost 25 Lbs. on Dancing with the Stars: 'None of My Clothes Fit'",
+    "Snow In Forecast For Early Next Week: Minnesota Weather",
+    "Missing West Point cadet found dead, officials say",
+    "Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn",
+    "Celebs celebrate Halloween 2019",
+    "Celeb kids' cutest Halloween costumes",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "U.S. baseball team faces must-win Premier12 game after loss to Mexico",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Singer Lauren Alaina Has Lost 25 Lbs. on Dancing with the Stars: 'None of My Clothes Fit'\"\n\"Snow In Forecast For Early Next Week: Minnesota Weather\"\n\"Missing West Point cadet found dead, officials say\"\n\"Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn\"\n\"Celebs celebrate Halloween 2019\"\n\"Celeb kids' cutest Halloween costumes\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"U.S. baseball team faces must-win Premier12 game after loss to Mexico\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears\"\n\n[Candidate News Title]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Charles Rogers, a former Michigan State football player and Detroit Lions star, is likely to provide an overview of his career achievements in football, highlighting his time at Michigan State and his tenure in the NFL. It may also discuss the circumstances surrounding his untimely death at the age of 38, potentially touching on any known health issues or challenges he faced in his life after football. Additionally, the piece could include reactions from fans, former teammates, and the sports community, reflecting on his impact in the world of sports.",
+  "model": "gpt-4o-mini"
+}

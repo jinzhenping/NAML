@@ -1,0 +1,21 @@
+{
+  "user_id": 165,
+  "candidate_news_id": "N72609",
+  "candidate_title": "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+  "user_history_count": 10,
+  "user_history": [
+    "Cracker Barrel Has Two Thanksgiving Options This Year, and They Both Sound Delicious",
+    "Far-reaching snowstorm may take shape over US",
+    "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+    "Target, Kohl's, BJ's Wholesale Club, Old Navy among first to announce Black Friday plans",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Long-term celebrity couples who won't get married",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "50 Unique Holiday Gift Ideas for Her Under $50",
+    "Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cracker Barrel Has Two Thanksgiving Options This Year, and They Both Sound Delicious\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\"Target, Kohl's, BJ's Wholesale Club, Old Navy among first to announce Black Friday plans\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Long-term celebrity couples who won't get married\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"50 Unique Holiday Gift Ideas for Her Under $50\"\n\"Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\n[Candidate News Title]\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy,\" the user is likely expecting to read about Jennifer Lopez's latest hairstyle, which features a sleek bob that aligns with current seasonal trends. The piece may provide insights into the styling choices, including how this haircut complements her overall look and possibly tips for achieving a similar style at home. Additionally, it could explore the broader trend of bob hairstyles gaining popularity as we approach the holiday season, though this aspect remains uncertain.",
+  "model": "gpt-4o-mini"
+}

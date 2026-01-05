@@ -1,0 +1,21 @@
+{
+  "user_id": 144,
+  "candidate_news_id": "N92346",
+  "candidate_title": "Shops At Penn Station Prepare To Close Ahead Of Renovations",
+  "user_history_count": 10,
+  "user_history": [
+    "Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Bette Midler and Kathy Najimy Dish on Upcoming 'Hocus Pocus' Sequel and If They'd Be Involved",
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win",
+    "17 restaurants that will be open on Thanksgiving"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Bette Midler and Kathy Najimy Dish on Upcoming 'Hocus Pocus' Sequel and If They'd Be Involved\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\"17 restaurants that will be open on Thanksgiving\"\n\n[Candidate News Title]\n\"Shops At Penn Station Prepare To Close Ahead Of Renovations\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the upcoming renovations at Penn Station, detailing the planned closures of various shops in anticipation of the construction work. Readers can expect information about the timeline for these renovations, which shops will be affected, and any changes to services during this period. There may be insights into the reasons behind the renovations, such as improving passenger experience or modernizing the facilities. Additionally, the piece could highlight how these changes might impact commuters and travelers in the area.",
+  "model": "gpt-4o-mini"
+}

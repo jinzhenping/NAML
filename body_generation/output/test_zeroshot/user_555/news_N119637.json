@@ -1,0 +1,17 @@
+{
+  "user_id": 555,
+  "candidate_news_id": "N119637",
+  "candidate_title": "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out",
+  "user_history_count": 6,
+  "user_history": [
+    "Ranking the 25 best films with surprise endings",
+    "Lori Loughlin Is Facing New Charges in the College Admissions Scandal",
+    "'DWTS' Recap: A Fan Favorite Goes Home In Yet Another Crazy Elimination",
+    "Unexpected ingredients that go great with eggs",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Pete Davidson, Kaia Gerber seen on yet another date: Fresh details on their new romance"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Ranking the 25 best films with surprise endings\"\n\"Lori Loughlin Is Facing New Charges in the College Admissions Scandal\"\n\"'DWTS' Recap: A Fan Favorite Goes Home In Yet Another Crazy Elimination\"\n\"Unexpected ingredients that go great with eggs\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Pete Davidson, Kaia Gerber seen on yet another date: Fresh details on their new romance\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out,\" the user may expect to read about Halle Berry's recent social media post showcasing her fitness achievements, specifically her well-defined abs. The piece is likely to discuss the context of the photo, including any accompanying captions or comments that highlight her dedication to fitness and healthy living. Additionally, it could explore fan reactions and how this post contributes to discussions around body image and celebrity fitness standards.",
+  "model": "gpt-4o-mini"
+}

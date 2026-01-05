@@ -1,0 +1,21 @@
+{
+  "user_id": 724,
+  "candidate_news_id": "N129416",
+  "candidate_title": "Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties",
+  "user_history_count": 10,
+  "user_history": [
+    "President Trump says UFC reception was 'like walking into a Trump Rally'",
+    "Mid-Engine C8 Corvette Production Postponed Until February 2020",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Man killed while trying to protect niece who was being sexually assaulted in Burnside",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "18 Quiet Dogs That Don't Bark (Too Much)",
+    "This marriage advice from high school sweethearts will warm your heart",
+    "Why This Couple Is Getting a 'Sleep Divorce'",
+    "Student's drone footage shows whale swimming around California surfers",
+    "Aaron Carter admitted to Florida hospital"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"President Trump says UFC reception was 'like walking into a Trump Rally'\"\n\"Mid-Engine C8 Corvette Production Postponed Until February 2020\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Man killed while trying to protect niece who was being sexually assaulted in Burnside\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\"This marriage advice from high school sweethearts will warm your heart\"\n\"Why This Couple Is Getting a 'Sleep Divorce'\"\n\"Student's drone footage shows whale swimming around California surfers\"\n\"Aaron Carter admitted to Florida hospital\"\n\n[Candidate News Title]\n\"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the ongoing legal and financial disputes between Taylor Swift and her former record label, Big Machine Records. Readers may expect details regarding Swift's claim that she is owed $7.9 million in unpaid royalties, along with insights into the broader implications of this dispute for artists and their relationships with record labels. The piece may also explore the background of the conflict, including previous statements from both parties. Additionally, it could provide commentary on how such issues resonate within the music industry, particularly regarding artist rights and revenue sharing.",
+  "model": "gpt-4o-mini"
+}

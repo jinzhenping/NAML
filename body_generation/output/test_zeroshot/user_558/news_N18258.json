@@ -1,0 +1,21 @@
+{
+  "user_id": 558,
+  "candidate_news_id": "N18258",
+  "candidate_title": "Russia lands forces at former U.S. air base in northern Syria",
+  "user_history_count": 10,
+  "user_history": [
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "College gymnast dies following training accident in Connecticut",
+    "Utah death-row inmate featured in best-selling book dies",
+    "Bad news, seniors: Your Medicare costs are going up",
+    "Wealthy investors are bracing for a sharp stock sell-off in 2020",
+    "Ex-Astros say team electronically stole signs during 2017 season",
+    "Home Values in These Cities Have Grown the Most Since the Last Recession",
+    "Hillary Clinton, get real",
+    "Home Values in These Cities Have Grown the Most Since the Last Recession"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Bad news, seniors: Your Medicare costs are going up\"\n\"Wealthy investors are bracing for a sharp stock sell-off in 2020\"\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\"Hillary Clinton, get real\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Russia lands forces at former U.S. air base in northern Syria\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Russia lands forces at former U.S. air base in northern Syria\" is likely to provide an overview of the recent deployment of Russian military personnel to a former U.S. air base, detailing the strategic implications of this action in the region. Readers may expect to find information about the geopolitical context, including the response from the U.S. and other nations, as well as potential impacts on ongoing conflicts in Syria. The article could also explore how this development fits into broader narratives of military presence and influence in the area.",
+  "model": "gpt-4o-mini"
+}

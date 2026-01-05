@@ -1,0 +1,19 @@
+{
+  "user_id": 239,
+  "candidate_news_id": "N110709",
+  "candidate_title": "2020 Ford Mustang Shelby GT350 vs. GT500: Which Is the Better Sports Car?",
+  "user_history_count": 8,
+  "user_history": [
+    "Chrisleys sue Georgia tax official with link to estranged daughter",
+    "40 TV Theme Songs Every 40-Something Knows By Heart",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Lindsay Lohan's dad weighs in on her relationship with the Saudi crown prince",
+    "Fall TV Scheduling Hits & Misses (2019)",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "When Costars Clash: 13 Onscreen Pairs Who Were Allegedly Feuding Offscreen",
+    "'The Little Mermaid Live!': TV Review"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chrisleys sue Georgia tax official with link to estranged daughter\"\n\"40 TV Theme Songs Every 40-Something Knows By Heart\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Lindsay Lohan's dad weighs in on her relationship with the Saudi crown prince\"\n\"Fall TV Scheduling Hits & Misses (2019)\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"When Costars Clash: 13 Onscreen Pairs Who Were Allegedly Feuding Offscreen\"\n\"'The Little Mermaid Live!': TV Review\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"2020 Ford Mustang Shelby GT350 vs. GT500: Which Is the Better Sports Car?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a detailed comparison between the 2020 Ford Mustang Shelby GT350 and GT500, focusing on their performance specifications, design features, and overall driving experience. The piece may explore the differences in engine power, handling, and technology between the two models, providing insights into which car might better suit various driving preferences. Additionally, it could analyze the historical context of these vehicles within the Mustang lineage. Overall, readers can expect a thorough assessment that may help them understand the strengths and weaknesses of each sports car.",
+  "model": "gpt-4o-mini"
+}

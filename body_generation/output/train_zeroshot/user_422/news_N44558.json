@@ -1,0 +1,21 @@
+{
+  "user_id": 422,
+  "candidate_news_id": "N44558",
+  "candidate_title": "Watch the Lamborghini Huracán Evo's Crazy Acceleration to 180 MPH",
+  "user_history_count": 10,
+  "user_history": [
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "2 Rescued After Car Lands In Long Island Swimming Pool",
+    "Do not try this at home: How to turn $3,000 into $1.7 million",
+    "NYPD seize 'marijuana' only to discover it was legal hemp",
+    "Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track",
+    "Here's what you need to know about your 2020 taxes",
+    "The 50 best films of the 2010s",
+    "The 50 cheapest places to buy land in America",
+    "NYPD Officers Recovering From Possible Fentanyl Exposure During Bronx Drug Bust",
+    "Inflammation Might Be the Reason You're Not Losing Weight Here Are 5 Things You Can Do About It"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"2 Rescued After Car Lands In Long Island Swimming Pool\"\n\"Do not try this at home: How to turn $3,000 into $1.7 million\"\n\"NYPD seize 'marijuana' only to discover it was legal hemp\"\n\"Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track\"\n\"Here's what you need to know about your 2020 taxes\"\n\"The 50 best films of the 2010s\"\n\"The 50 cheapest places to buy land in America\"\n\"NYPD Officers Recovering From Possible Fentanyl Exposure During Bronx Drug Bust\"\n\"Inflammation Might Be the Reason You're Not Losing Weight Here Are 5 Things You Can Do About It\"\n\n[Candidate News Title]\n\"Watch the Lamborghini Huracán Evo's Crazy Acceleration to 180 MPH\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Watch the Lamborghini Huracán Evo's Crazy Acceleration to 180 MPH,\" you may expect to learn about the impressive performance capabilities of the Lamborghini Huracán Evo, particularly its ability to rapidly accelerate to high speeds. The article is likely to include technical specifications related to its engine power and design features that contribute to its performance. Additionally, there may be a discussion of the driving experience, possibly including insights from automotive experts or enthusiasts. Overall, the content will likely focus on the car's engineering and speed, appealing to your interest in vehicles and their unique characteristics.",
+  "model": "gpt-4o-mini"
+}

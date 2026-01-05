@@ -1,0 +1,21 @@
+{
+  "user_id": 955,
+  "candidate_news_id": "N22393",
+  "candidate_title": "He was one of the first prisoners released under Trump's criminal justice reform law. Now he's accused of murder.",
+  "user_history_count": 10,
+  "user_history": [
+    "Video shows water gushing from Philadelphia skyscraper",
+    "The News In Cartoons",
+    "Opinions | Trump's awful new 'transcript' tweets demonstrate how his propaganda works",
+    "Browns cut Jermaine Whitehead after racist Twitter rant that included death threats",
+    "Trump Refuses To Guarantee No Shutdown Over Impeachment: 'We'll See'",
+    "Opinions | Trump's awful new 'transcript' tweets demonstrate how his propaganda works",
+    "Families urge Buffalo Wild Wings to adopt 'zero tolerance' policies after racist incident at Illinois restaurant",
+    "The News In Cartoons",
+    "The 'Stranger Things' BLOOPER REEL Is a Must-Watch!",
+    "The News In Cartoons"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Video shows water gushing from Philadelphia skyscraper\"\n\"The News In Cartoons\"\n\"Opinions | Trump's awful new 'transcript' tweets demonstrate how his propaganda works\"\n\"Browns cut Jermaine Whitehead after racist Twitter rant that included death threats\"\n\"Trump Refuses To Guarantee No Shutdown Over Impeachment: 'We'll See'\"\n\"Opinions | Trump's awful new 'transcript' tweets demonstrate how his propaganda works\"\n\"Families urge Buffalo Wild Wings to adopt 'zero tolerance' policies after racist incident at Illinois restaurant\"\n\"The News In Cartoons\"\n\"The 'Stranger Things' BLOOPER REEL Is a Must-Watch!\"\n\"The News In Cartoons\"\n\n[Candidate News Title]\n\"He was one of the first prisoners released under Trump's criminal justice reform law. Now he's accused of murder.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "This article is likely to delve into the case of an individual who was among the early beneficiaries of President Trump's criminal justice reform law, exploring the implications of his recent arrest for murder. Readers may expect a discussion on the contrasts between criminal justice reform efforts and the reality of recidivism, as well as insights into the circumstances surrounding the alleged crime. The piece could also provide context on the broader impact of such reforms and raise questions about accountability and the effectiveness of the justice system in rehabilitating offenders.",
+  "model": "gpt-4o-mini"
+}

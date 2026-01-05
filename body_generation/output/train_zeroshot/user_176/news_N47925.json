@@ -1,0 +1,21 @@
+{
+  "user_id": 176,
+  "candidate_news_id": "N47925",
+  "candidate_title": "Three school workers charged in death of special needs student",
+  "user_history_count": 10,
+  "user_history": [
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "Catherine Deneuve Hospitalized After Mild Stroke",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.",
+    "Sneaky reason why Ravens, not Patriots, are AFC's best",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "Mary Cain details alleged physical and emotional abuse at the hands of Nike, Alberto Salazar",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Where will Cam Newton play in 2020? Ranking the 7 best fits, from Panthers to Dolphins"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"Catherine Deneuve Hospitalized After Mild Stroke\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.\"\n\"Sneaky reason why Ravens, not Patriots, are AFC's best\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Mary Cain details alleged physical and emotional abuse at the hands of Nike, Alberto Salazar\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Where will Cam Newton play in 2020? Ranking the 7 best fits, from Panthers to Dolphins\"\n\n[Candidate News Title]\n\"Three school workers charged in death of special needs student\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent charges brought against three school workers in connection with the death of a special needs student. Readers can expect details about the circumstances surrounding the incident, including any relevant background information on the individuals involved and the legal implications of the charges. The piece may also explore the responses from the school district, parents, and the community, shedding light on the broader issues of student safety and accountability in educational settings. Overall, it could provide a comprehensive overview of the case and its potential impact on policies regarding special needs education.",
+  "model": "gpt-4o-mini"
+}

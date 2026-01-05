@@ -1,0 +1,21 @@
+{
+  "user_id": 572,
+  "candidate_news_id": "N115731",
+  "candidate_title": "Sean Spicer Admits He's Somewhat 'Relieved' to Be Eliminated from Dancing with the Stars",
+  "user_history_count": 10,
+  "user_history": [
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say",
+    "Mississippi woman found after being missing for days by writing S.O.S. with rocks",
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "James Van Der Beek and Wife Kimberly on Expecting Baby No. 6: It Often Requires an 'Explanation'",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Science Says: How daylight saving time affects health",
+    "Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Cause determined in Jessi Combs' fatal speed record crash"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say\"\n\"Mississippi woman found after being missing for days by writing S.O.S. with rocks\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"James Van Der Beek and Wife Kimberly on Expecting Baby No. 6: It Often Requires an 'Explanation'\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Science Says: How daylight saving time affects health\"\n\"Survivor Contestant Rudy Boesch Dies at 91 After Long Battle with Alzheimer's Disease\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\n[Candidate News Title]\n\"Sean Spicer Admits He's Somewhat 'Relieved' to Be Eliminated from Dancing with the Stars\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Sean Spicer Admits He's Somewhat 'Relieved' to Be Eliminated from Dancing with the Stars,\" the user can expect to read about Spicer's reflections on his recent exit from the competition. The piece is likely to cover his feelings regarding the experience of participating in the show, possibly discussing the challenges he faced and how it affected him personally. Additionally, the article may explore his views on the public's reaction to his performance and any insights he gained during his time on the show.",
+  "model": "gpt-4o-mini"
+}

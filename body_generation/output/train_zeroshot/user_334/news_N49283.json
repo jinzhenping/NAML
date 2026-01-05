@@ -1,0 +1,21 @@
+{
+  "user_id": 334,
+  "candidate_news_id": "N49283",
+  "candidate_title": "Senior Trump official embellished résumé, had face on fake Time cover",
+  "user_history_count": 10,
+  "user_history": [
+    "'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says",
+    "Subtle Signs You May Have Clogged Arteries",
+    "Newly Signed Raven Makes Comeback After Losing Job, Ring",
+    "The Grateful Dead's Bob Weir Is Unbelievably Shredded at 72",
+    "The 50 Best One-Hit Wonders of All Time",
+    "Joel Embiid, Karl-Anthony Towns likely facing multi-game bans for roles in brawl",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "I Live in a Town With No Traffic Lights. This Is What It's Like.",
+    "'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes",
+    "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says\"\n\"Subtle Signs You May Have Clogged Arteries\"\n\"Newly Signed Raven Makes Comeback After Losing Job, Ring\"\n\"The Grateful Dead's Bob Weir Is Unbelievably Shredded at 72\"\n\"The 50 Best One-Hit Wonders of All Time\"\n\"Joel Embiid, Karl-Anthony Towns likely facing multi-game bans for roles in brawl\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"I Live in a Town With No Traffic Lights. This Is What It's Like.\"\n\"'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\n[Candidate News Title]\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent revelation that a senior official from the Trump administration allegedly exaggerated their résumé and featured a fabricated cover of Time magazine. Readers may expect an exploration of the implications of these embellishments, including potential consequences for the individual involved and how this incident reflects broader issues of accountability in political appointments. Additionally, the piece could provide context about the official's role in the administration and any reactions from political analysts or the public regarding the significance of such misrepresentations.",
+  "model": "gpt-4o-mini"
+}

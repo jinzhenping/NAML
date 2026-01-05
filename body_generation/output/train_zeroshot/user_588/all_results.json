@@ -1,0 +1,422 @@
+[
+  {
+    "user_id": 588,
+    "candidate_news_id": "N116135",
+    "candidate_title": "An Air India flight was delayed nearly 12 hours after a stowaway rat was spotted in the cabin",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"An Air India flight was delayed nearly 12 hours after a stowaway rat was spotted in the cabin\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss an incident involving an Air India flight that experienced a significant delay due to the presence of a stowaway rat in the cabin. Readers can expect details about the duration of the delay, the airline's response, and any safety protocols that were implemented as a result. The article may also touch on passenger reactions and the potential implications for airline operations and animal control measures in aviation. Additionally, it could explore similar past incidents involving animals on flights, providing context for this unusual occurrence.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N5287",
+    "candidate_title": "Deadly Arctic blast breaks records set more than 100 years ago",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If the user clicks on the article titled \"Deadly Arctic blast breaks records set more than 100 years ago,\" they can expect to read about an extreme weather event that has recently impacted parts of the Arctic and possibly other regions. The article is likely to detail the record-breaking temperatures and conditions associated with this blast, along with any significant effects on local communities, infrastructure, or ecosystems. Additionally, it may provide context on historical weather patterns for comparison and discuss potential implications for climate trends. The article could also include expert opinions on how such events may affect future weather phenomena.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N4504",
+    "candidate_title": "Divers salvage 100-year-old liquor from WWI shipwreck",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"Divers salvage 100-year-old liquor from WWI shipwreck\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, readers may expect to learn about the recent recovery of liquor from a World War I shipwreck by divers. The piece is likely to detail the historical significance of the ship, as well as the types of liquor salvaged and their condition after a century underwater. Additionally, it may explore the efforts involved in the salvage operation and the implications for both historical preservation and the study of wartime consumption practices. Overall, the article could provide insights into how these artifacts contribute to our understanding of the past.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N37178",
+    "candidate_title": "19 hysterical winners from this year's Comedy Wildlife Photography Awards",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"19 hysterical winners from this year's Comedy Wildlife Photography Awards\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"19 hysterical winners from this year's Comedy Wildlife Photography Awards,\" the user is likely to expect a lighthearted showcase of amusing wildlife photographs that have been recognized in this annual competition. The piece may feature a selection of images capturing humorous moments involving animals, accompanied by brief descriptions or commentary on each photograph. Readers might also find insights into the judging process or background on the awards, as well as the significance of wildlife photography in raising awareness about conservation issues.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N76677",
+    "candidate_title": "A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses a unique rental property featuring a master suite designed with an unconventional open-concept bathroom that lacks doors or privacy. It may explore the implications of such a layout on the living experience, particularly in terms of comfort and personal space. Additionally, the piece could address the rental price of $1,200 per month, possibly comparing it to similar properties in the area or discussing the market demand for distinctive accommodations. Overall, it seems to provide insight into modern housing trends and the appeal of unusual designs.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N31879",
+    "candidate_title": "Donald Trump Jr walks out of Triggered book launch after heckling   from supporters",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"Donald Trump Jr walks out of Triggered book launch after heckling   from supporters\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article about Donald Trump Jr. walking out of a book launch event is likely to provide details on the circumstances surrounding his departure, including the nature of the heckling from supporters. Readers can expect insights into the reactions from the audience, as well as commentary on the implications of this incident for Trump Jr.'s public image and his ongoing political engagement. Additionally, the article may explore the broader context of political events and book launches, particularly how public figures navigate interactions with their supporters and detractors.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N98178",
+    "candidate_title": "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article about Charles Rogers, the former Michigan State football and Detroit Lions star who has passed away at the age of 38, the user can expect to read a detailed account of his life and career. The piece is likely to cover his achievements on the football field, including notable highlights from his time in college and the NFL. Additionally, it may discuss the circumstances surrounding his death and any impact he had on his community or the sports world. The article could also include reactions from teammates, fans, and sports analysts reflecting on his legacy.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N125945",
+    "candidate_title": "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article featuring Tamron Hall, the user may expect to learn about her recent departure from the Today Show, including insights into her reasons for leaving and any future plans she might have. The piece could provide context regarding her career trajectory and public persona, potentially highlighting her previous experiences in broadcasting. Additionally, there may be references to industry reactions, including comments on Megyn Kelly's reported payout, illustrating the competitive nature of television news. Overall, the article is likely to offer a balanced overview of Hall's professional changes and the implications for her career moving forward.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N55792",
+    "candidate_title": "Stars Who Served in the Military",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"Stars Who Served in the Military\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you choose to click on \"Stars Who Served in the Military,\" you can expect a detailed overview of various celebrities who have had military experience. The article is likely to highlight notable figures from different entertainment sectors, discussing their service backgrounds and how their military experiences may have influenced their careers. Additionally, it could provide insights into the reasons these individuals chose to serve and how their time in the military shaped their public personas. The article may also touch on broader themes of patriotism and the cultural significance of military service in the lives of prominent individuals.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N93643",
+    "candidate_title": "FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss recent developments regarding the FAA's concerns about the maintenance of 38 Southwest Airlines jets, which could lead to grounding if issues are not resolved. It may provide details on the specific maintenance violations cited and the potential implications for flight schedules and passenger safety. Additionally, the piece might explore the airline's response to the FAA's threats and any measures being taken to address the concerns. This information is pertinent given ongoing discussions about airline safety and regulatory compliance.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N67706",
+    "candidate_title": "Jeffrey Epstein wasn't trafficking women   and he didn't kill himself, brother says",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"Jeffrey Epstein wasn't trafficking women   and he didn't kill himself, brother says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses claims made by Jeffrey Epstein's brother regarding the circumstances of his death and allegations of trafficking. Readers may expect an exploration of Epstein's life, his controversial legal battles, and his connections to high-profile individuals. The piece could also delve into the implications of these statements for ongoing discussions about Epstein’s legacy and the broader issues of sexual trafficking. Additionally, it may present varying perspectives on the veracity of these claims and their impact on public perception, although the specifics remain uncertain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N55761",
+    "candidate_title": "Choosing the right winter tires for snow and ice: A quick guide",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"Choosing the right winter tires for snow and ice: A quick guide\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you choose to read \"Choosing the right winter tires for snow and ice: A quick guide,\" you can expect a comprehensive overview of the factors to consider when selecting winter tires suitable for snowy and icy conditions. The article is likely to cover important aspects such as tire types, tread patterns, and the significance of rubber compounds in maintaining traction in cold weather. Additionally, it may provide practical tips on how to assess your driving needs and choose the best options based on regional climate variations. Overall, the guide aims to equip you with the knowledge needed to make an informed decision for safe winter driving.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N51163",
+    "candidate_title": "Family told to take down Christmas display because it's too soon to decorate",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses a family's recent experience regarding their Christmas display, which authorities have reportedly deemed inappropriate to keep up at this time of year. Readers can expect to find details about the specific decorations in question, the reasons provided by local officials for their request, and the family's response to the situation. Additionally, the article may explore broader themes related to community standards and the timing of holiday decorations, potentially highlighting differing opinions on when it is acceptable to begin celebrating the holiday season.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N14675",
+    "candidate_title": "Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom,\" you may find a detailed account of an unusual and surprising birth experience. The article is likely to explore the circumstances surrounding the model's pregnancy, including her lack of awareness and the immediate reactions during the birth. It may also provide insights into her personal background, the medical aspects of such situations, and the broader implications of unexpected pregnancies. Overall, the article could highlight both the shock of the event and the social context regarding pregnancy awareness.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N3623",
+    "candidate_title": "The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article about Brad Pitt and Angelina Jolie's post-split relationship, you can expect an overview of the current dynamics between the former couple, including any recent developments or public statements. The article may discuss how their relationship has evolved since their separation, potentially touching on co-parenting issues, legal matters, or any public appearances they've made. Additionally, it could provide insights into how their individual careers are progressing in light of their personal circumstances, though specific details may vary.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N22393",
+    "candidate_title": "He was one of the first prisoners released under Trump's criminal justice reform law. Now he's accused of murder.",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"He was one of the first prisoners released under Trump's criminal justice reform law. Now he's accused of murder.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely explores the case of a former prisoner, one of the early beneficiaries of criminal justice reform under the Trump administration, who is now facing serious charges, including murder. Readers may expect to learn about the circumstances surrounding his release, the nature of the allegations against him, and any potential implications for discussions on criminal justice reform. The piece could also provide context on how his case reflects broader trends in the criminal justice system and public perceptions of reform efforts.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N45124",
+    "candidate_title": "The News In Cartoons",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"The News In Cartoons\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"The News In Cartoons\" is likely to provide a collection of editorial cartoons that illustrate recent news events and societal issues, offering a humorous or satirical perspective on current affairs. Readers may expect to see commentary on topics such as politics, social issues, and significant events, reflecting public sentiments through visual art. The article could also explore how these cartoons serve as a medium for critique and discussion, highlighting their role in shaping public opinion and engaging audiences in a lighthearted manner.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N97946",
+    "candidate_title": "'Baby Trump' balloon slashed at Alabama appearance",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"'Baby Trump' balloon slashed at Alabama appearance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"'Baby Trump' balloon slashed at Alabama appearance\" is likely to discuss an incident involving a large balloon depicting former President Donald Trump in a controversial manner. Readers may expect to find details about the circumstances surrounding the event, including the location and context of the appearance, as well as information about the individual responsible for slashing the balloon. The article could also explore reactions from attendees and organizers, and may touch on the broader implications of political satire in public demonstrations.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N14848",
+    "candidate_title": "Mural of activist Greta Thunberg going up in San Francisco",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"Mural of activist Greta Thunberg going up in San Francisco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article about the mural of activist Greta Thunberg in San Francisco is likely to discuss the significance of the artwork in relation to environmental activism and climate change awareness. It may provide details about the artist, the location of the mural, and the inspiration behind the piece. Additionally, the article could explore the public's reaction to the mural and its role in promoting discussions about sustainability. Overall, readers may find insights into how such public art contributes to broader societal conversations, although the specifics of community engagement surrounding the mural are uncertain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 588,
+    "candidate_news_id": "N31385",
+    "candidate_title": "A$AP Rocky Will Return to Sweden to Perform",
+    "user_history_count": 10,
+    "user_history": [
+      "Serial stowaway arrested at Chicago airport for 2nd time",
+      "1 person injured after false panic over shooting at mall, police say",
+      "Wisconsin jury awards $450,000 in Sandy Hook defamation case",
+      "Ex-Maverick to pay for funeral of woman fatally shot in home by police",
+      "Road built by biblical villain uncovered in Jerusalem",
+      "Can a Restored Pompeii Be Saved From 'Clambering' Tourists?",
+      "Senate rejects Democratic effort to undo Obamacare changes",
+      "For the first time ever, a US cheese is named best in the world",
+      "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+      "US Rep. Ilhan Omar divorces husband in Minnesota"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Serial stowaway arrested at Chicago airport for 2nd time\"\n\"1 person injured after false panic over shooting at mall, police say\"\n\"Wisconsin jury awards $450,000 in Sandy Hook defamation case\"\n\"Ex-Maverick to pay for funeral of woman fatally shot in home by police\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Can a Restored Pompeii Be Saved From 'Clambering' Tourists?\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"For the first time ever, a US cheese is named best in the world\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\n[Candidate News Title]\n\"A$AP Rocky Will Return to Sweden to Perform\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article about A$AP Rocky's return to Sweden for a performance is likely to discuss the context surrounding his visit, including any implications of his previous legal issues in the country. Readers may expect details about the venue, date, and significance of the concert, as well as insights into how his relationship with Sweden has evolved since his earlier experiences there. The article may also explore audience reactions and the cultural impact of his performance, although it is unclear whether it will address any potential controversies or public sentiment surrounding his return.",
+    "model": "gpt-4o-mini"
+  }
+]

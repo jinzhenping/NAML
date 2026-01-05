@@ -1,0 +1,21 @@
+{
+  "user_id": 38,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 10,
+  "user_history": [
+    "Southwest's Spring Travel Sale Includes $39 One-way Tickets",
+    "Highways on Fire. Semesters Cut Short. A Recession. Can Hong Kong Heal?",
+    "School bus driver charged with DUI after crashing with 10 students on board",
+    "Most Americans say they are struggling financially",
+    "The 1 reason you shouldn't hesitate to claim Social Security early",
+    "'Absolutely Terrifying': 3 Students Describe Moments After Shots Rang Out At Saugus High School",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+    "15 Abandoned Places That You Can See Only in Pictures",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+    "Family told to take down Christmas display because it's too soon to decorate"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Southwest's Spring Travel Sale Includes $39 One-way Tickets\"\n\"Highways on Fire. Semesters Cut Short. A Recession. Can Hong Kong Heal?\"\n\"School bus driver charged with DUI after crashing with 10 students on board\"\n\"Most Americans say they are struggling financially\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\"'Absolutely Terrifying': 3 Students Describe Moments After Shots Rang Out At Saugus High School\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\"15 Abandoned Places That You Can See Only in Pictures\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The most talked about movie moments of the 2010s,\" you may expect a retrospective analysis of significant scenes and events from popular films released during that decade. The article is likely to highlight key moments that sparked conversation, including iconic lines, surprising plot twists, or memorable performances. You might find discussions on how these moments impacted popular culture or influenced audience perceptions, as well as insights into the films that resonated most with viewers during this period. Overall, the piece could serve as a nostalgic look back at cinematic highlights.",
+  "model": "gpt-4o-mini"
+}

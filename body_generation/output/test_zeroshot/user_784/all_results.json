@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 784,
+    "candidate_news_id": "N82548",
+    "candidate_title": "'Ghost ship' found in Lake Michigan",
+    "user_history_count": 10,
+    "user_history": [
+      "17 restaurants that will be open on Thanksgiving",
+      "This High Cholesterol Diet Plan Will Lower Your Cholesterol Numbers",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast",
+      "Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance",
+      "Trump warns Wall Street his defeat would endanger market gains",
+      "Senior Trump official embellished résumé, had face on fake Time cover",
+      "100 best Westerns of all time",
+      "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+      "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"17 restaurants that will be open on Thanksgiving\"\n\"This High Cholesterol Diet Plan Will Lower Your Cholesterol Numbers\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast\"\n\"Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance\"\n\"Trump warns Wall Street his defeat would endanger market gains\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"100 best Westerns of all time\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n[Candidate News Title]\n\"'Ghost ship' found in Lake Michigan\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"'Ghost ship' found in Lake Michigan\" is likely to explore the discovery of an abandoned or derelict vessel in the waters of Lake Michigan. Readers might expect to learn about the ship's history, including any notable features or events associated with it, as well as the circumstances of its discovery. The article may also discuss the implications of finding such a ship, including potential historical significance or maritime mysteries. Additionally, it could provide insights into the ship's condition and the response from local authorities or historians regarding this intriguing find.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 784,
+    "candidate_news_id": "N18190",
+    "candidate_title": "30 Best Black Friday Deals from Costco",
+    "user_history_count": 10,
+    "user_history": [
+      "17 restaurants that will be open on Thanksgiving",
+      "This High Cholesterol Diet Plan Will Lower Your Cholesterol Numbers",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast",
+      "Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance",
+      "Trump warns Wall Street his defeat would endanger market gains",
+      "Senior Trump official embellished résumé, had face on fake Time cover",
+      "100 best Westerns of all time",
+      "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+      "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"17 restaurants that will be open on Thanksgiving\"\n\"This High Cholesterol Diet Plan Will Lower Your Cholesterol Numbers\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast\"\n\"Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance\"\n\"Trump warns Wall Street his defeat would endanger market gains\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"100 best Westerns of all time\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n[Candidate News Title]\n\"30 Best Black Friday Deals from Costco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to find a curated list of the best Black Friday deals available at Costco, focusing on a variety of products that may include electronics, home goods, and seasonal items. The content could provide details on specific discounts, product highlights, and time-sensitive offers that shoppers should be aware of. Additionally, it may outline strategies for maximizing savings during the shopping event. This information could help users plan their purchases effectively, ensuring they take full advantage of the sales opportunities available at Costco.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 784,
+    "candidate_news_id": "N122944",
+    "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+    "user_history_count": 10,
+    "user_history": [
+      "17 restaurants that will be open on Thanksgiving",
+      "This High Cholesterol Diet Plan Will Lower Your Cholesterol Numbers",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast",
+      "Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance",
+      "Trump warns Wall Street his defeat would endanger market gains",
+      "Senior Trump official embellished résumé, had face on fake Time cover",
+      "100 best Westerns of all time",
+      "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+      "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"17 restaurants that will be open on Thanksgiving\"\n\"This High Cholesterol Diet Plan Will Lower Your Cholesterol Numbers\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast\"\n\"Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance\"\n\"Trump warns Wall Street his defeat would endanger market gains\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"100 best Westerns of all time\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu,\" the user can expect a detailed exploration of the factors that contribute to the enduring presence of this menu item. It may discuss the historical context of the Filet-O-Fish, including its introduction and how it has evolved over time. There could also be insights into consumer preferences, seasonal sales trends, and marketing strategies that support its continued success. Additionally, the article is likely to highlight any unique aspects of the Filet-O-Fish that differentiate it from other offerings, providing a well-rounded view of its significance within McDonald's menu.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 784,
+    "candidate_news_id": "N62800",
+    "candidate_title": "9 renovation tips to boost resale value",
+    "user_history_count": 10,
+    "user_history": [
+      "17 restaurants that will be open on Thanksgiving",
+      "This High Cholesterol Diet Plan Will Lower Your Cholesterol Numbers",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast",
+      "Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance",
+      "Trump warns Wall Street his defeat would endanger market gains",
+      "Senior Trump official embellished résumé, had face on fake Time cover",
+      "100 best Westerns of all time",
+      "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+      "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"17 restaurants that will be open on Thanksgiving\"\n\"This High Cholesterol Diet Plan Will Lower Your Cholesterol Numbers\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast\"\n\"Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance\"\n\"Trump warns Wall Street his defeat would endanger market gains\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"100 best Westerns of all time\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n[Candidate News Title]\n\"9 renovation tips to boost resale value\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you choose to read \"9 renovation tips to boost resale value,\" you can expect practical advice aimed at homeowners looking to enhance the marketability of their property. The article may cover essential renovations that not only improve aesthetics but also increase the overall value of a home. Specific suggestions could include updates to kitchens and bathrooms, as these areas are often highlighted in real estate listings. Additionally, it is likely to discuss cost-effective changes that yield significant returns, helping readers make informed decisions about their renovation projects.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 784,
+    "candidate_news_id": "N80770",
+    "candidate_title": "Judge agrees Alabama Islamic State recruit is not US citizen",
+    "user_history_count": 10,
+    "user_history": [
+      "17 restaurants that will be open on Thanksgiving",
+      "This High Cholesterol Diet Plan Will Lower Your Cholesterol Numbers",
+      "Utah death-row inmate featured in best-selling book dies",
+      "Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast",
+      "Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance",
+      "Trump warns Wall Street his defeat would endanger market gains",
+      "Senior Trump official embellished résumé, had face on fake Time cover",
+      "100 best Westerns of all time",
+      "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+      "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"17 restaurants that will be open on Thanksgiving\"\n\"This High Cholesterol Diet Plan Will Lower Your Cholesterol Numbers\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast\"\n\"Marie Osmond 'chipped off a piece' of her kneecap when she fell on stage during performance\"\n\"Trump warns Wall Street his defeat would endanger market gains\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"100 best Westerns of all time\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n[Candidate News Title]\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses a recent ruling regarding an individual who attempted to join the Islamic State from Alabama, centering on their legal status as a non-U.S. citizen. Readers may expect an examination of the implications of this decision, including its impact on national security and immigration policy. The piece may also provide background on the case, detailing the circumstances that led to the recruit's actions and the legal arguments presented in court. Additionally, there could be insights into how this ruling fits within broader trends related to terrorism and citizenship in the United States.",
+    "model": "gpt-4o-mini"
+  }
+]

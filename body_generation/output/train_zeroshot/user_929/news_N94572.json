@@ -1,0 +1,21 @@
+{
+  "user_id": 929,
+  "candidate_news_id": "N94572",
+  "candidate_title": "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+  "user_history_count": 10,
+  "user_history": [
+    "If You Don't Eat a Banana Every Day, This Might Convince You to Start",
+    "Classic candy bars we wish they'd bring back",
+    "A YouTuber showed off her stretch marks in a video because she's tired of people constantly commenting on her weight",
+    "Former President Jimmy Carter suffers pelvic fracture after falling in Georgia home",
+    "Road built by biblical villain uncovered in Jerusalem",
+    "Katie Holmes Looked Incredible in a Black Dress and Sheer Tights in New York City",
+    "Road built by biblical villain uncovered in Jerusalem",
+    "Today in History: October 29",
+    "Inside the creepy, abandoned villages deep in the New Jersey Pine Barrens that were once bustling towns and are now home to something much more mysterious",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"If You Don't Eat a Banana Every Day, This Might Convince You to Start\"\n\"Classic candy bars we wish they'd bring back\"\n\"A YouTuber showed off her stretch marks in a video because she's tired of people constantly commenting on her weight\"\n\"Former President Jimmy Carter suffers pelvic fracture after falling in Georgia home\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Katie Holmes Looked Incredible in a Black Dress and Sheer Tights in New York City\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"Today in History: October 29\"\n\"Inside the creepy, abandoned villages deep in the New Jersey Pine Barrens that were once bustling towns and are now home to something much more mysterious\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\n[Candidate News Title]\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"'It's not over': Sarah Palin says she is fighting to repair her marriage,\" the user can expect an exploration of Sarah Palin's personal life, particularly her efforts to address challenges within her marriage. The piece may delve into her public statements regarding reconciliation, provide context about her relationship, and discuss any recent developments or events that have influenced her perspective. Additionally, the article could include insights from interviews or expert commentary on the dynamics of marriage under public scrutiny, although this is not certain.",
+  "model": "gpt-4o-mini"
+}

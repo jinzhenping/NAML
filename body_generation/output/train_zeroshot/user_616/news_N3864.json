@@ -1,0 +1,21 @@
+{
+  "user_id": 616,
+  "candidate_news_id": "N3864",
+  "candidate_title": "Winners and losers from college basketball's signing day deadline",
+  "user_history_count": 10,
+  "user_history": [
+    "The College Hoops Contender Series: Who are the teams that can actually win a title?",
+    "The 25 greatest English rock bands",
+    "Homes in these 25 waterfront cities are a total steal",
+    "This Wedding Photo of a Canine Best Man Captures Just How Deep a Dog's Love Truly Is",
+    "18 of the most iconic record-breaking songs in pop music history",
+    "Rams trade Aqib Talib and fifth-round pick to Dolphins",
+    "Five things we learned from the start of the college basketball season",
+    "Wild & wonderful treasures of SEMA 2019   US edition",
+    "45 Amazing Facts About Airplanes That Will Make Your Mind Soar",
+    "15 Times Country Songs Took Over The Radio"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The College Hoops Contender Series: Who are the teams that can actually win a title?\"\n\"The 25 greatest English rock bands\"\n\"Homes in these 25 waterfront cities are a total steal\"\n\"This Wedding Photo of a Canine Best Man Captures Just How Deep a Dog's Love Truly Is\"\n\"18 of the most iconic record-breaking songs in pop music history\"\n\"Rams trade Aqib Talib and fifth-round pick to Dolphins\"\n\"Five things we learned from the start of the college basketball season\"\n\"Wild & wonderful treasures of SEMA 2019   US edition\"\n\"45 Amazing Facts About Airplanes That Will Make Your Mind Soar\"\n\"15 Times Country Songs Took Over The Radio\"\n\n[Candidate News Title]\n\"Winners and losers from college basketball's signing day deadline\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Winners and losers from college basketball's signing day deadline,\" the user is likely expecting a detailed analysis of the implications of recent signings in college basketball. They may find insights into which programs benefited the most from new recruits and which teams may struggle due to lost prospects. The article could also explore trends in recruitment strategies and how this signing day compares to previous years. Overall, the focus will probably be on the immediate impact these decisions have on team dynamics and future season forecasts.",
+  "model": "gpt-4o-mini"
+}

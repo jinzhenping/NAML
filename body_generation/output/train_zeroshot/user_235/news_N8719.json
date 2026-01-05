@@ -1,0 +1,21 @@
+{
+  "user_id": 235,
+  "candidate_news_id": "N8719",
+  "candidate_title": "Instagram-famous pilot reveals secrets people don't know about the job",
+  "user_history_count": 10,
+  "user_history": [
+    "Grading each NFL team at the halfway mark of the season",
+    "Opinion: Separating NFL's pretenders from contenders at midseason",
+    "Patriots wanted a test. Now, they need some answers",
+    "4 mistakes that'll stunt your 401(k)'s growth",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Yardbarker's NFL Week 9 game-by-game analysis, grades",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "The Sudafed Solution to the Vaping Problem",
+    "This girl nails the wave pool   then fails the exit spectacularly",
+    "Sneaky reason why Ravens, not Patriots, are AFC's best"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Grading each NFL team at the halfway mark of the season\"\n\"Opinion: Separating NFL's pretenders from contenders at midseason\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"4 mistakes that'll stunt your 401(k)'s growth\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Yardbarker's NFL Week 9 game-by-game analysis, grades\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"The Sudafed Solution to the Vaping Problem\"\n\"This girl nails the wave pool   then fails the exit spectacularly\"\n\"Sneaky reason why Ravens, not Patriots, are AFC's best\"\n\n[Candidate News Title]\n\"Instagram-famous pilot reveals secrets people don't know about the job\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Instagram-famous pilot reveals secrets people don't know about the job,\" you may expect to read insights into the aviation industry from the perspective of a pilot who has gained fame on social media. The piece is likely to explore lesser-known aspects of being a pilot, such as the challenges they face, the unique experiences that come with the job, and how their online presence has impacted their career. Additionally, the article may touch on the intersection of aviation and digital media, offering a glimpse into how pilots can share their experiences with a broader audience.",
+  "model": "gpt-4o-mini"
+}

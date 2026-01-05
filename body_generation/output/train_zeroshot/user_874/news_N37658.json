@@ -1,0 +1,21 @@
+{
+  "user_id": 874,
+  "candidate_news_id": "N37658",
+  "candidate_title": "Amazon's $1.5 million political gambit backfires in Seattle City Council election",
+  "user_history_count": 10,
+  "user_history": [
+    "Man who advocated caning for adultery gets caned for adultery",
+    "Lane Kiffin interested in Florida State head coach job",
+    "Best Places to Retire If You Can't Save Up $1,000,000",
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "25 awesome gifts men actually want this year",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis",
+    "More than 130,000 pounds of ground beef recalled for possible plastic contamination"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"Lane Kiffin interested in Florida State head coach job\"\n\"Best Places to Retire If You Can't Save Up $1,000,000\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"25 awesome gifts men actually want this year\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\"More than 130,000 pounds of ground beef recalled for possible plastic contamination\"\n\n[Candidate News Title]\n\"Amazon's $1.5 million political gambit backfires in Seattle City Council election\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses Amazon's recent political involvement in a Seattle City Council election, detailing the strategies employed and the outcomes of their efforts. Readers may expect insights into how the company's financial contributions and lobbying efforts influenced the election dynamics, as well as reactions from local political figures and the community. The piece could also explore the implications of this political gambit for Amazon's public image and future engagement in local politics, particularly in light of any backlash or support received.",
+  "model": "gpt-4o-mini"
+}

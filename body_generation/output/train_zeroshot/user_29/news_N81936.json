@@ -1,0 +1,21 @@
+{
+  "user_id": 29,
+  "candidate_news_id": "N81936",
+  "candidate_title": "Ionescu and No. 1 Oregon stun US women's national team",
+  "user_history_count": 10,
+  "user_history": [
+    "Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion",
+    "Collector's items that are actually worthless today",
+    "Walmart's Pre-Holiday Deals Are Live Right Now",
+    "The Best Way to Reheat Steak So It's as Savory as Night One",
+    "SCOTUS copyright case has pirate Blackbeard laughing from grave",
+    "An energy breakthrough could store solar power for decades",
+    "The Amazing All-You-Can-Eat Restaurant in Every State",
+    "Week 10 NFL mismatches: Why Jets, Bengals, Packers must be wary",
+    "Chevrolet Performance Reveals New Small Block Crate Engine",
+    "5 struggling teams that can still make NFL playoffs"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion\"\n\"Collector's items that are actually worthless today\"\n\"Walmart's Pre-Holiday Deals Are Live Right Now\"\n\"The Best Way to Reheat Steak So It's as Savory as Night One\"\n\"SCOTUS copyright case has pirate Blackbeard laughing from grave\"\n\"An energy breakthrough could store solar power for decades\"\n\"The Amazing All-You-Can-Eat Restaurant in Every State\"\n\"Week 10 NFL mismatches: Why Jets, Bengals, Packers must be wary\"\n\"Chevrolet Performance Reveals New Small Block Crate Engine\"\n\"5 struggling teams that can still make NFL playoffs\"\n\n[Candidate News Title]\n\"Ionescu and No. 1 Oregon stun US women's national team\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Ionescu and No. 1 Oregon stun US women's national team,\" the user can expect an analysis of a significant upset in women's basketball, highlighting how the Oregon team, led by standout player Sabrina Ionescu, managed to defeat the highly regarded US national team. The piece may delve into key moments of the game, player performances, and the implications of this victory for both Oregon’s season and the broader landscape of women's basketball. Additionally, it could explore the tactical strategies employed by Oregon that contributed to their success against a formidable opponent.",
+  "model": "gpt-4o-mini"
+}

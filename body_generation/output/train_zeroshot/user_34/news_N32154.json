@@ -1,0 +1,18 @@
+{
+  "user_id": 34,
+  "candidate_news_id": "N32154",
+  "candidate_title": "Porsche launches into second story of New Jersey building, killing 2",
+  "user_history_count": 7,
+  "user_history": [
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Jamie Lee Curtis Opens Up About Being 20 Years Sober, Going Public With Her Addiction",
+    "Aubrey O'Day Responded to Critics Who Say Plastic Surgery Has Dramatically Changed Her Appearance",
+    "Charles Darwin 'may have been wrong about where life came from'",
+    "Jenelle Evans Obtains Temporary Restraining Order Against David Eason",
+    "'The Little Mermaid Live!': TV Review",
+    "EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Jamie Lee Curtis Opens Up About Being 20 Years Sober, Going Public With Her Addiction\"\n\"Aubrey O'Day Responded to Critics Who Say Plastic Surgery Has Dramatically Changed Her Appearance\"\n\"Charles Darwin 'may have been wrong about where life came from'\"\n\"Jenelle Evans Obtains Temporary Restraining Order Against David Eason\"\n\"'The Little Mermaid Live!': TV Review\"\n\"EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely details a tragic incident involving a Porsche that crashed into a building in New Jersey, resulting in two fatalities. Readers can expect an overview of the circumstances surrounding the accident, including the time and location of the event, along with any relevant eyewitness accounts or emergency response actions. Additionally, the piece may explore the implications of such accidents on public safety and vehicle design, as well as any ongoing investigations. The report is likely to include statements from local authorities to provide context about the incident.",
+  "model": "gpt-4o-mini"
+}

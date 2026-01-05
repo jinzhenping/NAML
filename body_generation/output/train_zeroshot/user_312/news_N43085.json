@@ -1,0 +1,21 @@
+{
+  "user_id": 312,
+  "candidate_news_id": "N43085",
+  "candidate_title": "Cold weather: 70% of the country will experience freezing temperatures this week",
+  "user_history_count": 10,
+  "user_history": [
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes",
+    "50 Unique Holiday Gift Ideas for Him Under $50",
+    "She Fought for Muslim Women. Then She Was Found Dead.",
+    "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+    "Fisherman faces prison, fine for cruel act on rare fish",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "The Last McDonald's Burger in Iceland Just Turned 10. It's Still in Perfect Condition."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes\"\n\"50 Unique Holiday Gift Ideas for Him Under $50\"\n\"She Fought for Muslim Women. Then She Was Found Dead.\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Fisherman faces prison, fine for cruel act on rare fish\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"The Last McDonald's Burger in Iceland Just Turned 10. It's Still in Perfect Condition.\"\n\n[Candidate News Title]\n\"Cold weather: 70% of the country will experience freezing temperatures this week\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide an overview of the cold weather conditions affecting a significant portion of the country, noting that around 70% will experience freezing temperatures this week. It may detail the expected impact on daily activities, such as travel and outdoor events, and could include specific regions that will be most affected. Additionally, the article might offer tips for staying warm and safe during this cold spell, along with any relevant weather warnings or advisories from meteorological services.",
+  "model": "gpt-4o-mini"
+}

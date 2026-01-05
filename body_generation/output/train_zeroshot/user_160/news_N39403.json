@@ -1,0 +1,21 @@
+{
+  "user_id": 160,
+  "candidate_news_id": "N39403",
+  "candidate_title": "From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers",
+  "user_history_count": 10,
+  "user_history": [
+    "I Had Anxiety for 30 Years Till This One Eureka Moment Helped Me Recover",
+    "Kylie Jenner and her bestie get surgery together, plus more news",
+    "Everything You've Always Wanted to Know About Botox (But Were Afraid to Ask)",
+    "Eric Tse, 24, just became a billionaire overnight",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "Who Is on the Masked Singer Season 2? The Ultimate Guide to the Stars Under Those Masks",
+    "ISIS names successor to slain leader al-Baghdadi",
+    "Miranda Lambert Says She's 'Terrified' Of The Gym, And Tbh, I Can Relate",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I Had Anxiety for 30 Years Till This One Eureka Moment Helped Me Recover\"\n\"Kylie Jenner and her bestie get surgery together, plus more news\"\n\"Everything You've Always Wanted to Know About Botox (But Were Afraid to Ask)\"\n\"Eric Tse, 24, just became a billionaire overnight\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"Who Is on the Masked Singer Season 2? The Ultimate Guide to the Stars Under Those Masks\"\n\"ISIS names successor to slain leader al-Baghdadi\"\n\"Miranda Lambert Says She's 'Terrified' Of The Gym, And Tbh, I Can Relate\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019\"\n\n[Candidate News Title]\n\"From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers\" is likely to provide an overview of the annual \"Sexiest Man Alive\" title awarded by People magazine, featuring prominent actors like Idris Elba and Richard Gere. Readers can expect a discussion of the cultural significance of this title, as well as insights into how it has evolved over the years. The piece may also explore the public's reception of various honorees and the impact on their careers, offering a glimpse into the glamour and appeal associated with the title.",
+  "model": "gpt-4o-mini"
+}

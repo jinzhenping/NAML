@@ -1,0 +1,21 @@
+{
+  "user_id": 308,
+  "candidate_news_id": "N104644",
+  "candidate_title": "Brett Kavanaugh calls Ruth Bader Ginsburg 'inspiration,' heaps gratitude on allies",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: NFL considers allowing a Chargers move to London",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Holocaust survivor under guard amid death threats",
+    "Reporter Can't Stop Laughing After Cat Interrupts News Segment",
+    "Nurse took in disabled teen, then tortured and killed her, police say.",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "College gymnast dies following training accident in Connecticut",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+    "12 Photos Show What It's Really Like To Grow Up Trans"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Holocaust survivor under guard amid death threats\"\n\"Reporter Can't Stop Laughing After Cat Interrupts News Segment\"\n\"Nurse took in disabled teen, then tortured and killed her, police say.\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"12 Photos Show What It's Really Like To Grow Up Trans\"\n\n[Candidate News Title]\n\"Brett Kavanaugh calls Ruth Bader Ginsburg 'inspiration,' heaps gratitude on allies\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses Brett Kavanaugh's recent remarks regarding Ruth Bader Ginsburg, highlighting how he considers her an inspiration in his judicial career. Readers may expect insights into Kavanaugh's perspective on Ginsburg's contributions to the Supreme Court and her legacy, as well as the context of his gratitude towards allies who supported him during his confirmation process. The article could also touch on the broader implications of their differing judicial philosophies and how this reflects ongoing discussions within the Supreme Court.",
+  "model": "gpt-4o-mini"
+}

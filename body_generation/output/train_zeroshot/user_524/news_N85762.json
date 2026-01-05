@@ -1,0 +1,21 @@
+{
+  "user_id": 524,
+  "candidate_news_id": "N85762",
+  "candidate_title": "Cobb Co. sixth grader could face arrest for online threats, district says",
+  "user_history_count": 10,
+  "user_history": [
+    "Janelle Monae's Sparkly See-Through Dress Has Me Feeling Some Type of Way",
+    "Airline passengers share photos of their worst in-flight meals",
+    "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+    "The 3 Things Ina Garten Always Has in Her Freezer",
+    "50 Thanksgiving Appetizer & Dip Recipes That Won't Spoil Your Appetite",
+    "Hugh Hefner's son Cooper weds 'Harry Potter' actress",
+    "21 Thanksgiving Green Bean Recipes That Are Actually Exciting",
+    "Caitlyn Jenner Calls Ex Kris Jenner 'an Amazing Mother and Business Woman' in Birthday Tribute",
+    "20 Southern Thanksgiving Dishes Your Holiday Spread Needs",
+    "Must-See Fashion Police Moments to Swoon Over This Week"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Janelle Monae's Sparkly See-Through Dress Has Me Feeling Some Type of Way\"\n\"Airline passengers share photos of their worst in-flight meals\"\n\"1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef\"\n\"The 3 Things Ina Garten Always Has in Her Freezer\"\n\"50 Thanksgiving Appetizer & Dip Recipes That Won't Spoil Your Appetite\"\n\"Hugh Hefner's son Cooper weds 'Harry Potter' actress\"\n\"21 Thanksgiving Green Bean Recipes That Are Actually Exciting\"\n\"Caitlyn Jenner Calls Ex Kris Jenner 'an Amazing Mother and Business Woman' in Birthday Tribute\"\n\"20 Southern Thanksgiving Dishes Your Holiday Spread Needs\"\n\"Must-See Fashion Police Moments to Swoon Over This Week\"\n\n[Candidate News Title]\n\"Cobb Co. sixth grader could face arrest for online threats, district says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a situation involving a sixth grader in Cobb County who may face arrest due to online threats made within the school district. Readers can expect an overview of the incident, including details about the nature of the threats, the response from school officials, and any implications for student safety and discipline. The article may also explore broader issues related to online behavior among students and the potential consequences of such actions.",
+  "model": "gpt-4o-mini"
+}

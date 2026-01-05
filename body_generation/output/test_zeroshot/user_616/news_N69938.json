@@ -1,0 +1,21 @@
+{
+  "user_id": 616,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "Top recruiting battles headed into basketball's Early Signing Period",
+    "Celebrity Christmas albums: From beloved classics to big surprises",
+    "Jordyn Woods debuts shocking new look: Pic",
+    "Bands' final albums before they broke up",
+    "2021 Ford Mustang Mach-E: This Electric SUV is a Mustang Family Member",
+    "WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "College basketball signing day: In-depth look at nation's top recruiting classes",
+    "Winners and losers from college basketball's signing day deadline",
+    "Plouffe becomes latest ex-MLBer to implicate Astros in sign-stealing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Top recruiting battles headed into basketball's Early Signing Period\"\n\"Celebrity Christmas albums: From beloved classics to big surprises\"\n\"Jordyn Woods debuts shocking new look: Pic\"\n\"Bands' final albums before they broke up\"\n\"2021 Ford Mustang Mach-E: This Electric SUV is a Mustang Family Member\"\n\"WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"College basketball signing day: In-depth look at nation's top recruiting classes\"\n\"Winners and losers from college basketball's signing day deadline\"\n\"Plouffe becomes latest ex-MLBer to implicate Astros in sign-stealing\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely explores a recent, discreet meeting between Meghan Markle and Hillary Clinton at Frogmore Cottage, shedding light on the nature of their conversation and potential topics of mutual interest. Readers may expect insights into the dynamics of their relationship, especially given their public personas and advocacy work. Additionally, the piece could touch on the broader implications of such a meeting, including possible discussions on social issues or political engagement. While the specifics of their dialogue are uncertain, the article is expected to provide context about why this encounter is noteworthy.",
+  "model": "gpt-4o-mini"
+}

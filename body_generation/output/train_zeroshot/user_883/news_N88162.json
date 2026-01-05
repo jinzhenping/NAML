@@ -1,0 +1,21 @@
+{
+  "user_id": 883,
+  "candidate_news_id": "N88162",
+  "candidate_title": "A $5 billion bill and Japan tensions in focus as U.S. defense heads visit South Korea",
+  "user_history_count": 10,
+  "user_history": [
+    "Michelle Pfeiffer initially blamed herself after #MeToo moment: 'I should've known'",
+    "Debunking the week's tabloid stories: Nov. 1, 2019",
+    "People Are Floored By The Unsettling Photoshop On This Kardashian-West Family Pic",
+    "Carrie Underwood's Best CMA Awards Dresses of All Time",
+    "Celebs celebrate Halloween 2019",
+    "Silent Signs of Colon Cancer",
+    "People Are Floored By The Unsettling Photoshop On This Kardashian-West Family Pic",
+    "Bette Midler mocks Lori Loughlin's college admission scandal",
+    "Stars we lost in 2019",
+    "Lady Gaga Cancels Her Las Vegas Show After Getting Sick with a Sinus Infection and Bronchitis"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Michelle Pfeiffer initially blamed herself after #MeToo moment: 'I should've known'\"\n\"Debunking the week's tabloid stories: Nov. 1, 2019\"\n\"People Are Floored By The Unsettling Photoshop On This Kardashian-West Family Pic\"\n\"Carrie Underwood's Best CMA Awards Dresses of All Time\"\n\"Celebs celebrate Halloween 2019\"\n\"Silent Signs of Colon Cancer\"\n\"People Are Floored By The Unsettling Photoshop On This Kardashian-West Family Pic\"\n\"Bette Midler mocks Lori Loughlin's college admission scandal\"\n\"Stars we lost in 2019\"\n\"Lady Gaga Cancels Her Las Vegas Show After Getting Sick with a Sinus Infection and Bronchitis\"\n\n[Candidate News Title]\n\"A $5 billion bill and Japan tensions in focus as U.S. defense heads visit South Korea\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss recent developments regarding U.S. defense strategies in the context of rising tensions with Japan, particularly focusing on a substantial $5 billion funding bill. It may outline the implications of these defense discussions for regional security and how U.S. defense officials plan to address concerns in South Korea. Additionally, the piece could provide insights into the broader geopolitical landscape, including potential reactions from Japan and South Korea. Overall, the article may offer a detailed analysis of the strategic priorities shaping U.S. military presence in the region.",
+  "model": "gpt-4o-mini"
+}

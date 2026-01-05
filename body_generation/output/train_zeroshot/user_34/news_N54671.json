@@ -1,0 +1,18 @@
+{
+  "user_id": 34,
+  "candidate_news_id": "N54671",
+  "candidate_title": "Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'",
+  "user_history_count": 7,
+  "user_history": [
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Jamie Lee Curtis Opens Up About Being 20 Years Sober, Going Public With Her Addiction",
+    "Aubrey O'Day Responded to Critics Who Say Plastic Surgery Has Dramatically Changed Her Appearance",
+    "Charles Darwin 'may have been wrong about where life came from'",
+    "Jenelle Evans Obtains Temporary Restraining Order Against David Eason",
+    "'The Little Mermaid Live!': TV Review",
+    "EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Jamie Lee Curtis Opens Up About Being 20 Years Sober, Going Public With Her Addiction\"\n\"Aubrey O'Day Responded to Critics Who Say Plastic Surgery Has Dramatically Changed Her Appearance\"\n\"Charles Darwin 'may have been wrong about where life came from'\"\n\"Jenelle Evans Obtains Temporary Restraining Order Against David Eason\"\n\"'The Little Mermaid Live!': TV Review\"\n\"EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the reader is likely to encounter insights from Katie Couric regarding her experiences with Matt Lauer, particularly focusing on the contrasting personas he exhibited in public and private settings. The piece may delve into Couric's reflections on her professional relationship with Lauer, potentially highlighting moments that illustrate the complexities of his character. Readers could expect to gain a clearer understanding of how Couric perceives the changes in Lauer over time and what these revelations might mean for her career and the broader media landscape.",
+  "model": "gpt-4o-mini"
+}

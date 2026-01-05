@@ -1,0 +1,21 @@
+{
+  "user_id": 643,
+  "candidate_news_id": "N47257",
+  "candidate_title": "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+  "user_history_count": 10,
+  "user_history": [
+    "Mayfield's postgame outfit gets all the memes",
+    "What's going on in the flight deck before departure?",
+    "16 of the Most Historically Inaccurate Movies Ever",
+    "Trump Tax Return Case Confronts Supreme Court With a Momentous Choice",
+    "Chinese pilot suspended after woman poses in cockpit with drinks",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "The 2019 NFL mid-season All-Pro team",
+    "45 Amazing Facts About Airplanes That Will Make Your Mind Soar",
+    "Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears",
+    "Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mayfield's postgame outfit gets all the memes\"\n\"What's going on in the flight deck before departure?\"\n\"16 of the Most Historically Inaccurate Movies Ever\"\n\"Trump Tax Return Case Confronts Supreme Court With a Momentous Choice\"\n\"Chinese pilot suspended after woman poses in cockpit with drinks\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"The 2019 NFL mid-season All-Pro team\"\n\"45 Amazing Facts About Airplanes That Will Make Your Mind Soar\"\n\"Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears\"\n\"Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned\"\n\n[Candidate News Title]\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide details about Rip Taylor's recent passing, including the specific cause of death and the circumstances surrounding it. Readers may expect information about the memorial service, such as its date, location, and any notable attendees expected to pay their respects. Additionally, the piece might delve into Taylor's career highlights and contributions to entertainment, offering a brief overview of his legacy. It could also touch on his comedic style and influence in the industry, though these aspects may vary in depth.",
+  "model": "gpt-4o-mini"
+}

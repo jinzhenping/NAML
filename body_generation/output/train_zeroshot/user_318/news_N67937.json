@@ -1,0 +1,21 @@
+{
+  "user_id": 318,
+  "candidate_news_id": "N67937",
+  "candidate_title": "Powerful side-by-side portraits show people over 100 years old next to their younger selves",
+  "user_history_count": 10,
+  "user_history": [
+    "1-year-old girl's death marks 5th hot car death in Florida this year, 50th in U.S.",
+    "Exploded device discovered at Montana school, no injuries",
+    "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+    "Cyntoia Brown-Long to Lester Holt on her release from prison: 'There's nothing special about me'",
+    "An airline pilot reveals the meanings of 23 code words passengers don't understand",
+    "The King of Thailand abruptly stripped all royal titles from his 34-year-old consort, who is accused of plotting against the queen to take her place",
+    "Caterpillar just flashed the latest warning sign for the global economy",
+    "Rainbow Baby! Shawn Johnson, Andrew East Welcome 1st Child After Miscarriage",
+    "Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal",
+    "Cause determined in Jessi Combs' fatal speed record crash"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"1-year-old girl's death marks 5th hot car death in Florida this year, 50th in U.S.\"\n\"Exploded device discovered at Montana school, no injuries\"\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"Cyntoia Brown-Long to Lester Holt on her release from prison: 'There's nothing special about me'\"\n\"An airline pilot reveals the meanings of 23 code words passengers don't understand\"\n\"The King of Thailand abruptly stripped all royal titles from his 34-year-old consort, who is accused of plotting against the queen to take her place\"\n\"Caterpillar just flashed the latest warning sign for the global economy\"\n\"Rainbow Baby! Shawn Johnson, Andrew East Welcome 1st Child After Miscarriage\"\n\"Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\n[Candidate News Title]\n\"Powerful side-by-side portraits show people over 100 years old next to their younger selves\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely presents a compelling visual comparison of individuals over 100 years old alongside their younger selves, showcasing the passage of time through powerful side-by-side portraits. Readers can expect to see how age has shaped their appearances, potentially highlighting personal stories or significant life events that accompany these images. The piece may also explore themes of longevity, the experiences of centenarians, and insights into their lives, offering a glimpse into both their past and the wisdom they carry into old age.",
+  "model": "gpt-4o-mini"
+}

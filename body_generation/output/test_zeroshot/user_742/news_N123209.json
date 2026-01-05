@@ -1,0 +1,21 @@
+{
+  "user_id": 742,
+  "candidate_news_id": "N123209",
+  "candidate_title": "Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions",
+  "user_history_count": 10,
+  "user_history": [
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Couch: Getting 'exposed' at the Champions Classic is part of MSU's Final Four process",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet",
+    "See Mercury glide across the sun in rare sky show",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "A Navy weapons station full of WWII-era ammunition bunkers could be transformed into 13,000 new homes in the Bay Area",
+    "College gymnast dies following training accident in Connecticut",
+    "Three school workers charged in death of special needs student",
+    "Rep. Tim Ryan endorses Biden in Democratic primary"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Couch: Getting 'exposed' at the Champions Classic is part of MSU's Final Four process\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet\"\n\"See Mercury glide across the sun in rare sky show\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"A Navy weapons station full of WWII-era ammunition bunkers could be transformed into 13,000 new homes in the Bay Area\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Three school workers charged in death of special needs student\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\n[Candidate News Title]\n\"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions,\" you might expect to read about the recent controversies surrounding these contestants from the reality show \"Survivor.\" The article is likely to detail the specific actions that prompted their apologies, potentially including social media interactions or behavior during the show that drew criticism. Additionally, it may explore the context of their apologies and any responses from fans or fellow contestants, as well as how this incident may impact their public image moving forward.",
+  "model": "gpt-4o-mini"
+}

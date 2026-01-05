@@ -1,0 +1,21 @@
+{
+  "user_id": 984,
+  "candidate_news_id": "N59216",
+  "candidate_title": "Every Team's Best Play | Week 10",
+  "user_history_count": 10,
+  "user_history": [
+    "Miller Lite offers free beer for unfollowing them, Natural Light joins in",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Hugh Hefner's son Cooper weds 'Harry Potter' actress",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Lamborghini's long shot mission to take its super fast cars into the electric age",
+    "Matt Damon talks about Tom Cruise's 'Mission: Impossible' stunt",
+    "The 50 Best One-Hit Wonders of All Time",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Miller Lite offers free beer for unfollowing them, Natural Light joins in\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Hugh Hefner's son Cooper weds 'Harry Potter' actress\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Lamborghini's long shot mission to take its super fast cars into the electric age\"\n\"Matt Damon talks about Tom Cruise's 'Mission: Impossible' stunt\"\n\"The 50 Best One-Hit Wonders of All Time\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\n[Candidate News Title]\n\"Every Team's Best Play | Week 10\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In \"Every Team's Best Play | Week 10,\" the user can likely expect a detailed analysis of standout plays from various NFL teams during the tenth week of the season. The article may provide insights into key moments that defined games, highlighting exceptional performances by players and strategic decisions by coaches. It could also include statistics and visual breakdowns of these plays, offering a clear understanding of what made them significant in the context of the season. Overall, the focus will be on showcasing the most impactful plays across the league.",
+  "model": "gpt-4o-mini"
+}

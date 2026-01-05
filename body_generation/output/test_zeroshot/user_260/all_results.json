@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 260,
+    "candidate_news_id": "N44493",
+    "candidate_title": "How Google Interferes With Its Search Algorithms and Changes Your Results",
+    "user_history_count": 10,
+    "user_history": [
+      "Here's how rising car prices can hurt average Americans",
+      "Notorious Low Bridge Known For Decapitating Box Trucks Getting Raised",
+      "China's new morality guidelines describe how to eat right, lower carbon footprints   and think just like President Xi",
+      "Ex-VA Secretary Shulkin discovered ouster plans in memo left on copier",
+      "The House voted for an impeachment inquiry, and Republicans failed a test of character",
+      "Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness",
+      "Stars   They're Just Like Us!",
+      "AP FACT CHECK: Trump's wildfire tweets not grounded in facts",
+      "The Take Down Trump Project",
+      "Motorola's Razr flip phone is back as a folding-screen smartphone, for $1,500"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's how rising car prices can hurt average Americans\"\n\"Notorious Low Bridge Known For Decapitating Box Trucks Getting Raised\"\n\"China's new morality guidelines describe how to eat right, lower carbon footprints   and think just like President Xi\"\n\"Ex-VA Secretary Shulkin discovered ouster plans in memo left on copier\"\n\"The House voted for an impeachment inquiry, and Republicans failed a test of character\"\n\"Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness\"\n\"Stars   They're Just Like Us!\"\n\"AP FACT CHECK: Trump's wildfire tweets not grounded in facts\"\n\"The Take Down Trump Project\"\n\"Motorola's Razr flip phone is back as a folding-screen smartphone, for $1,500\"\n\n[Candidate News Title]\n\"How Google Interferes With Its Search Algorithms and Changes Your Results\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"How Google Interferes With Its Search Algorithms and Changes Your Results,\" you may expect a detailed examination of the ways in which Google modifies its search algorithms and the potential implications of these changes for users. The article is likely to discuss the factors that influence search result rankings, including content relevance, user behavior, and algorithm updates. Additionally, it may explore how these alterations can affect the diversity and quality of information available to users, raising questions about transparency and the impact on public discourse.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 260,
+    "candidate_news_id": "N14612",
+    "candidate_title": "DHS Sued for Answers About Its Use of DNA Testing at the Border",
+    "user_history_count": 10,
+    "user_history": [
+      "Here's how rising car prices can hurt average Americans",
+      "Notorious Low Bridge Known For Decapitating Box Trucks Getting Raised",
+      "China's new morality guidelines describe how to eat right, lower carbon footprints   and think just like President Xi",
+      "Ex-VA Secretary Shulkin discovered ouster plans in memo left on copier",
+      "The House voted for an impeachment inquiry, and Republicans failed a test of character",
+      "Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness",
+      "Stars   They're Just Like Us!",
+      "AP FACT CHECK: Trump's wildfire tweets not grounded in facts",
+      "The Take Down Trump Project",
+      "Motorola's Razr flip phone is back as a folding-screen smartphone, for $1,500"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's how rising car prices can hurt average Americans\"\n\"Notorious Low Bridge Known For Decapitating Box Trucks Getting Raised\"\n\"China's new morality guidelines describe how to eat right, lower carbon footprints   and think just like President Xi\"\n\"Ex-VA Secretary Shulkin discovered ouster plans in memo left on copier\"\n\"The House voted for an impeachment inquiry, and Republicans failed a test of character\"\n\"Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness\"\n\"Stars   They're Just Like Us!\"\n\"AP FACT CHECK: Trump's wildfire tweets not grounded in facts\"\n\"The Take Down Trump Project\"\n\"Motorola's Razr flip phone is back as a folding-screen smartphone, for $1,500\"\n\n[Candidate News Title]\n\"DHS Sued for Answers About Its Use of DNA Testing at the Border\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"DHS Sued for Answers About Its Use of DNA Testing at the Border\" is likely to explore the recent legal challenges faced by the Department of Homeland Security regarding its implementation of DNA testing for migrants at the U.S. border. Readers may expect a detailed overview of the lawsuit, including the parties involved and the specific concerns raised about privacy and ethical implications. The article could also discuss the broader context of immigration policies and the technology used in border enforcement, providing insights into the potential impacts on both migrants and government practices.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 260,
+    "candidate_news_id": "N85420",
+    "candidate_title": "Surviving Santa Clarita school shooting victims on road to recovery: Latest",
+    "user_history_count": 10,
+    "user_history": [
+      "Here's how rising car prices can hurt average Americans",
+      "Notorious Low Bridge Known For Decapitating Box Trucks Getting Raised",
+      "China's new morality guidelines describe how to eat right, lower carbon footprints   and think just like President Xi",
+      "Ex-VA Secretary Shulkin discovered ouster plans in memo left on copier",
+      "The House voted for an impeachment inquiry, and Republicans failed a test of character",
+      "Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness",
+      "Stars   They're Just Like Us!",
+      "AP FACT CHECK: Trump's wildfire tweets not grounded in facts",
+      "The Take Down Trump Project",
+      "Motorola's Razr flip phone is back as a folding-screen smartphone, for $1,500"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's how rising car prices can hurt average Americans\"\n\"Notorious Low Bridge Known For Decapitating Box Trucks Getting Raised\"\n\"China's new morality guidelines describe how to eat right, lower carbon footprints   and think just like President Xi\"\n\"Ex-VA Secretary Shulkin discovered ouster plans in memo left on copier\"\n\"The House voted for an impeachment inquiry, and Republicans failed a test of character\"\n\"Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness\"\n\"Stars   They're Just Like Us!\"\n\"AP FACT CHECK: Trump's wildfire tweets not grounded in facts\"\n\"The Take Down Trump Project\"\n\"Motorola's Razr flip phone is back as a folding-screen smartphone, for $1,500\"\n\n[Candidate News Title]\n\"Surviving Santa Clarita school shooting victims on road to recovery: Latest\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Surviving Santa Clarita school shooting victims on road to recovery: Latest\" is likely to provide an update on the recovery progress of students affected by the Santa Clarita school shooting. Readers may expect to learn about the physical and emotional challenges faced by the victims, as well as any ongoing support or resources available to them. The article could also explore the community's response and initiatives aimed at healing after the tragic event, while detailing the broader implications for school safety and mental health support.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 260,
+    "candidate_news_id": "N18356",
+    "candidate_title": "The world's most profitable company is about to go public",
+    "user_history_count": 10,
+    "user_history": [
+      "Here's how rising car prices can hurt average Americans",
+      "Notorious Low Bridge Known For Decapitating Box Trucks Getting Raised",
+      "China's new morality guidelines describe how to eat right, lower carbon footprints   and think just like President Xi",
+      "Ex-VA Secretary Shulkin discovered ouster plans in memo left on copier",
+      "The House voted for an impeachment inquiry, and Republicans failed a test of character",
+      "Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness",
+      "Stars   They're Just Like Us!",
+      "AP FACT CHECK: Trump's wildfire tweets not grounded in facts",
+      "The Take Down Trump Project",
+      "Motorola's Razr flip phone is back as a folding-screen smartphone, for $1,500"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's how rising car prices can hurt average Americans\"\n\"Notorious Low Bridge Known For Decapitating Box Trucks Getting Raised\"\n\"China's new morality guidelines describe how to eat right, lower carbon footprints   and think just like President Xi\"\n\"Ex-VA Secretary Shulkin discovered ouster plans in memo left on copier\"\n\"The House voted for an impeachment inquiry, and Republicans failed a test of character\"\n\"Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness\"\n\"Stars   They're Just Like Us!\"\n\"AP FACT CHECK: Trump's wildfire tweets not grounded in facts\"\n\"The Take Down Trump Project\"\n\"Motorola's Razr flip phone is back as a folding-screen smartphone, for $1,500\"\n\n[Candidate News Title]\n\"The world's most profitable company is about to go public\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If the user clicks on the article titled \"The world's most profitable company is about to go public,\" they may expect to read about the financial and market implications of this significant event. The article is likely to discuss the identity of the company, detailing its profitability and the reasons behind its decision to go public. Additionally, it could explore potential impacts on investors and the broader stock market, as well as any anticipated challenges the company may face during the initial public offering process. The article may also include insights into how this move aligns with current economic trends or investor sentiments.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 260,
+    "candidate_news_id": "N27108",
+    "candidate_title": "Yovanovitch: 'I don't understand Giuliani's motives for attacking me'",
+    "user_history_count": 10,
+    "user_history": [
+      "Here's how rising car prices can hurt average Americans",
+      "Notorious Low Bridge Known For Decapitating Box Trucks Getting Raised",
+      "China's new morality guidelines describe how to eat right, lower carbon footprints   and think just like President Xi",
+      "Ex-VA Secretary Shulkin discovered ouster plans in memo left on copier",
+      "The House voted for an impeachment inquiry, and Republicans failed a test of character",
+      "Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness",
+      "Stars   They're Just Like Us!",
+      "AP FACT CHECK: Trump's wildfire tweets not grounded in facts",
+      "The Take Down Trump Project",
+      "Motorola's Razr flip phone is back as a folding-screen smartphone, for $1,500"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's how rising car prices can hurt average Americans\"\n\"Notorious Low Bridge Known For Decapitating Box Trucks Getting Raised\"\n\"China's new morality guidelines describe how to eat right, lower carbon footprints   and think just like President Xi\"\n\"Ex-VA Secretary Shulkin discovered ouster plans in memo left on copier\"\n\"The House voted for an impeachment inquiry, and Republicans failed a test of character\"\n\"Mormon Family Massacre Stuns Mexico, Laying Bare Government's Helplessness\"\n\"Stars   They're Just Like Us!\"\n\"AP FACT CHECK: Trump's wildfire tweets not grounded in facts\"\n\"The Take Down Trump Project\"\n\"Motorola's Razr flip phone is back as a folding-screen smartphone, for $1,500\"\n\n[Candidate News Title]\n\"Yovanovitch: 'I don't understand Giuliani's motives for attacking me'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Yovanovitch: 'I don't understand Giuliani's motives for attacking me',\" you may expect to read about the former U.S. ambassador to Ukraine, Marie Yovanovitch, and her perspective on the public attacks made against her by Rudy Giuliani. The article is likely to explore her thoughts on the motivations behind Giuliani's actions, particularly in the context of the political controversies surrounding the Trump administration. Additionally, it may provide insights into the implications of her statements for ongoing discussions about foreign policy and political integrity.",
+    "model": "gpt-4o-mini"
+  }
+]

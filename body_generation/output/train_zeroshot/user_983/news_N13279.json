@@ -1,0 +1,21 @@
+{
+  "user_id": 983,
+  "candidate_news_id": "N13279",
+  "candidate_title": "My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.",
+  "user_history_count": 10,
+  "user_history": [
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Body Found on Angeles Crest Highway in Pasadena Area; Homicide Investigation Underway",
+    "Man Goes To Adoption Event And Finds His Long-Lost Dog",
+    "Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Mother Is Freed After 15 Years in Prison for Father's Abuse",
+    "This Is The Moment A Senior Shelter Dog Knew He Was Safe",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Body Found on Angeles Crest Highway in Pasadena Area; Homicide Investigation Underway\"\n\"Man Goes To Adoption Event And Finds His Long-Lost Dog\"\n\"Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Mother Is Freed After 15 Years in Prison for Father's Abuse\"\n\"This Is The Moment A Senior Shelter Dog Knew He Was Safe\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You\"\n\n[Candidate News Title]\n\"My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to learn about the unique dynamics of a marriage between an individual and their significantly older partner, specifically one who is 102 years old. It is likely to explore the challenges and rewards of such a relationship, including insights into their daily life, communication styles, and the perspectives on aging. The piece could provide anecdotes or reflections from the couple that highlight their experiences together, as well as how their relationship defies typical societal norms.",
+  "model": "gpt-4o-mini"
+}

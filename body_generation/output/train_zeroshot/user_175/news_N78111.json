@@ -1,0 +1,21 @@
+{
+  "user_id": 175,
+  "candidate_news_id": "N78111",
+  "candidate_title": "The Giudice family reunites and more ICYMI celeb news",
+  "user_history_count": 10,
+  "user_history": [
+    "Is Ben Affleck Dating Musician Katie Cherry?",
+    "Kate Middleton Takes Prince George and Princess Charlotte Halloween Shopping at Local Supermarket",
+    "John Witherspoon Dies: Comedian & 'Friday' Star Was 77",
+    "Woman wanted for robbery found murdered; suspected male accomplice sought",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Michael Jackson's son Prince recalls Halloweens spent with his dad",
+    "Jane Fonda, Rosanna Arquette, Catherine Keener arrested at climate change protest: 'Women bear the brunt'",
+    "Celebrity kids then and now: See how they've grown",
+    "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+    "Dramatic video shows California transit worker saving man from oncoming train"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Is Ben Affleck Dating Musician Katie Cherry?\"\n\"Kate Middleton Takes Prince George and Princess Charlotte Halloween Shopping at Local Supermarket\"\n\"John Witherspoon Dies: Comedian & 'Friday' Star Was 77\"\n\"Woman wanted for robbery found murdered; suspected male accomplice sought\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Michael Jackson's son Prince recalls Halloweens spent with his dad\"\n\"Jane Fonda, Rosanna Arquette, Catherine Keener arrested at climate change protest: 'Women bear the brunt'\"\n\"Celebrity kids then and now: See how they've grown\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"Dramatic video shows California transit worker saving man from oncoming train\"\n\n[Candidate News Title]\n\"The Giudice family reunites and more ICYMI celeb news\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The Giudice family reunites and more ICYMI celeb news,\" the user can expect to find updates on the Giudice family, likely highlighting recent events or gatherings among its members. The piece may cover notable moments or developments involving the family, potentially including insights into their personal lives or public appearances. Additionally, the article is likely to provide brief summaries of other celebrity news stories that may have occurred recently, offering a snapshot of current happenings in the entertainment world.",
+  "model": "gpt-4o-mini"
+}

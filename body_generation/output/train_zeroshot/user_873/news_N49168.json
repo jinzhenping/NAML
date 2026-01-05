@@ -1,0 +1,21 @@
+{
+  "user_id": 873,
+  "candidate_news_id": "N49168",
+  "candidate_title": "Flamingo Ends Up In One Of The Coldest Parts Of Russia!",
+  "user_history_count": 10,
+  "user_history": [
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "John Witherspoon Dies: Comedian & 'Friday' Star Was 77",
+    "Foie Gras Is Banned by New York City",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"John Witherspoon Dies: Comedian & 'Friday' Star Was 77\"\n\"Foie Gras Is Banned by New York City\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\n[Candidate News Title]\n\"Flamingo Ends Up In One Of The Coldest Parts Of Russia!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Flamingo Ends Up In One Of The Coldest Parts Of Russia!\" is likely to explore the unusual sighting of a flamingo in an environment that starkly contrasts its typical habitat. Readers may expect to learn about the circumstances that led to this bird's presence in such a cold region, including potential explanations related to migration patterns or environmental changes. The piece could also discuss the implications of this sighting for wildlife and local ecosystems, as well as reactions from ornithologists or local residents who encountered the bird.",
+  "model": "gpt-4o-mini"
+}

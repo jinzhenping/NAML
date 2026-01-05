@@ -1,0 +1,21 @@
+{
+  "user_id": 987,
+  "candidate_news_id": "N1328",
+  "candidate_title": "Navy Submarine, Missing for 75 Years, Is Found Off Okinawa",
+  "user_history_count": 10,
+  "user_history": [
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Allegations against Biden 'not credible,' testified US official now touted by Trump",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "The 50 most expensive cars ever sold at auction",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Jaguar Will Sell You An Authentic $1,000 Toolkit No One Will Ever Use",
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!",
+    "This Is The Moment A Senior Shelter Dog Knew He Was Safe",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Allegations against Biden 'not credible,' testified US official now touted by Trump\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"The 50 most expensive cars ever sold at auction\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Jaguar Will Sell You An Authentic $1,000 Toolkit No One Will Ever Use\"\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\"This Is The Moment A Senior Shelter Dog Knew He Was Safe\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\n[Candidate News Title]\n\"Navy Submarine, Missing for 75 Years, Is Found Off Okinawa\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely details the recent discovery of a Navy submarine that went missing for 75 years off the coast of Okinawa. Readers can expect a historical overview of the submarine, including its significance during its operational period and the circumstances surrounding its disappearance. The article may also explore the technological advancements that led to its recovery and the implications of finding such a vessel for naval history and exploration. Additionally, it could discuss the reactions from historians and military experts regarding this remarkable find.",
+  "model": "gpt-4o-mini"
+}

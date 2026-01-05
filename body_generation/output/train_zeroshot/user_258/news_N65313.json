@@ -1,0 +1,19 @@
+{
+  "user_id": 258,
+  "candidate_news_id": "N65313",
+  "candidate_title": "40 Restaurant Meals You Should Never Eat After 40",
+  "user_history_count": 8,
+  "user_history": [
+    "Wall Street's sky-high expectations are about to collide with reality",
+    "Missouri man missing for a week found alive in car that crashed into ravine",
+    "Justin Bieber Shares New Photo of Wife Hailey Baldwin from Wedding Weekend: 'Sexy Wifey Alert'",
+    "Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Wall Street's sky-high expectations are about to collide with reality\"\n\"Missouri man missing for a week found alive in car that crashed into ravine\"\n\"Justin Bieber Shares New Photo of Wife Hailey Baldwin from Wedding Weekend: 'Sexy Wifey Alert'\"\n\"Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"40 Restaurant Meals You Should Never Eat After 40\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a detailed exploration of various restaurant meals that may not be suitable for individuals over 40, focusing on health-related concerns that arise with age. The piece may discuss specific ingredients or cooking methods that could pose risks, such as high sodium content or unhealthy fats, while also highlighting how dietary needs evolve over time. Additionally, it is likely to include recommendations for healthier alternatives or modifications to popular dishes. Overall, the article could serve as a guide for making more informed dining choices later in life.",
+  "model": "gpt-4o-mini"
+}

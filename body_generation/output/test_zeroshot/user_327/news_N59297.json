@@ -1,0 +1,21 @@
+{
+  "user_id": 327,
+  "candidate_news_id": "N59297",
+  "candidate_title": "The Coolest Car Lamborghini Never Made Is Up For Sale",
+  "user_history_count": 10,
+  "user_history": [
+    "Evander Holyfield's son wins pro boxing debut in 16 seconds",
+    "Chevy Says This Isn't a Mid-Engine C8 Corvette Hybrid Prototype",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Young and the Restless Star William Wintersole Dies at 88",
+    "Popeyes' chicken sandwich is back on the menu, but it seems smaller and less exciting the second time around",
+    "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+    "All the Shows Hoping to Be the Next Game of Thrones",
+    "The Sexiest Photos Ever of Our 29 Sexiest Men Alive",
+    "'Families are living in squalor' | High cost of rent in DC forces families to live in dangerous conditions",
+    "Abandoned 'unicorn' puppy has a tail on its head"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Evander Holyfield's son wins pro boxing debut in 16 seconds\"\n\"Chevy Says This Isn't a Mid-Engine C8 Corvette Hybrid Prototype\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Young and the Restless Star William Wintersole Dies at 88\"\n\"Popeyes' chicken sandwich is back on the menu, but it seems smaller and less exciting the second time around\"\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\"All the Shows Hoping to Be the Next Game of Thrones\"\n\"The Sexiest Photos Ever of Our 29 Sexiest Men Alive\"\n\"'Families are living in squalor' | High cost of rent in DC forces families to live in dangerous conditions\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\n[Candidate News Title]\n\"The Coolest Car Lamborghini Never Made Is Up For Sale\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to learn about a unique Lamborghini model that was never produced for the market but is now available for sale. The piece will likely detail the car's design features, performance specifications, and the reasons behind its limited production status. Additionally, it may discuss the significance of this model within Lamborghini's history and its appeal to collectors. There could also be speculation regarding the potential value of the car and the interest it might generate among automotive enthusiasts and investors.",
+  "model": "gpt-4o-mini"
+}

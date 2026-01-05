@@ -1,0 +1,21 @@
+{
+  "user_id": 561,
+  "candidate_news_id": "N99223",
+  "candidate_title": "How to Sell a House in Southern California: Make a Movie",
+  "user_history_count": 10,
+  "user_history": [
+    "'Rich Dad, Poor Dad' Robert Kiyosaki says this is 'the only rule' for getting and staying rich",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Zimbabwean girl, 11, says she wrestled crocodile, gouged out eyes to save 9-year-old friend: report",
+    "Tom Brady explains why he's angry at this point in the football season",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "'The Little Mermaid Live!': TV Review",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Rich Dad, Poor Dad' Robert Kiyosaki says this is 'the only rule' for getting and staying rich\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Zimbabwean girl, 11, says she wrestled crocodile, gouged out eyes to save 9-year-old friend: report\"\n\"Tom Brady explains why he's angry at this point in the football season\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"'The Little Mermaid Live!': TV Review\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\n[Candidate News Title]\n\"How to Sell a House in Southern California: Make a Movie\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "This article is likely to provide practical advice on selling a house in Southern California, with a focus on innovative marketing strategies, such as creating a video to showcase the property. It may discuss the benefits of using cinematic techniques to attract potential buyers and highlight key features of the home. Additionally, the article could offer insights into the local real estate market, including tips on pricing and staging, as well as emphasizing the importance of standing out in a competitive environment. Overall, readers can expect a blend of creative ideas and practical steps to enhance their selling strategy.",
+  "model": "gpt-4o-mini"
+}

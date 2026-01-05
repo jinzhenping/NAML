@@ -1,0 +1,21 @@
+{
+  "user_id": 439,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "The Top Deals at Costco Right Now",
+    "'We think it's cute.' Clemson reacts as undefeated Tigers keep falling in Top 25",
+    "Jimmy Carter hospitalized after fall at Georgia home",
+    "Original Delta Airlines Flight Attendant Dies at 103",
+    "Judge: Brad Pitt, others can be sued over New Orleans homes",
+    "Lion Air crash report points to Boeing, pilots, maintenance",
+    "A rare October snowstorm blankets the Texas Panhandle",
+    "Trump records 'strongly corroborate' sex assault claims, accuser says",
+    "LSU, Ohio State, and Clemson control path to College Football Playoff, but who else does too?",
+    "'Midway' Surprises 'Doctor Sleep' to Win Box Office Battle With $17 Million Debut"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Top Deals at Costco Right Now\"\n\"'We think it's cute.' Clemson reacts as undefeated Tigers keep falling in Top 25\"\n\"Jimmy Carter hospitalized after fall at Georgia home\"\n\"Original Delta Airlines Flight Attendant Dies at 103\"\n\"Judge: Brad Pitt, others can be sued over New Orleans homes\"\n\"Lion Air crash report points to Boeing, pilots, maintenance\"\n\"A rare October snowstorm blankets the Texas Panhandle\"\n\"Trump records 'strongly corroborate' sex assault claims, accuser says\"\n\"LSU, Ohio State, and Clemson control path to College Football Playoff, but who else does too?\"\n\"'Midway' Surprises 'Doctor Sleep' to Win Box Office Battle With $17 Million Debut\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Meghan Markle and Hillary Clinton spending time together at Frogmore Cottage is likely to provide insights into their discussions and the context of their meeting. Readers may expect details about the nature of their relationship, potential collaboration on social issues, or shared interests that brought them together. The article could also explore the significance of this meeting in the context of their public personas and recent events involving both figures. Additionally, it may speculate on how this interaction might influence public perception or future initiatives they might pursue together.",
+  "model": "gpt-4o-mini"
+}

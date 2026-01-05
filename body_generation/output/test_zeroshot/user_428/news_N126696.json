@@ -1,0 +1,21 @@
+{
+  "user_id": 428,
+  "candidate_news_id": "N126696",
+  "candidate_title": "Maze of tunnels reveals remains of ancient Jerusalem",
+  "user_history_count": 10,
+  "user_history": [
+    "Bears vs. Eagles Injury Report: Chicago lists 4 questionable and 1 out",
+    "Judge dismisses Joe Arpaio's lawsuit against CNN, HuffPost, Rolling Stone",
+    "Lawyer: Trump's phone records back details of woman's claim",
+    "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+    "Bears Sunday storylines: Defending Mitch Trubisky's TV comments, Kenny Golladay's Pro Bowl hopes and an eviction notice at Club Dub",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Netflix is ending support for old devices from Samsung, Roku, and Vizio in December",
+    "Sears says it has secured a $250 million lifeline, will close 96 stores",
+    "Democrat Joe Biden proposes $1.3 trillion U.S. infrastructure plan",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bears vs. Eagles Injury Report: Chicago lists 4 questionable and 1 out\"\n\"Judge dismisses Joe Arpaio's lawsuit against CNN, HuffPost, Rolling Stone\"\n\"Lawyer: Trump's phone records back details of woman's claim\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Bears Sunday storylines: Defending Mitch Trubisky's TV comments, Kenny Golladay's Pro Bowl hopes and an eviction notice at Club Dub\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Netflix is ending support for old devices from Samsung, Roku, and Vizio in December\"\n\"Sears says it has secured a $250 million lifeline, will close 96 stores\"\n\"Democrat Joe Biden proposes $1.3 trillion U.S. infrastructure plan\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\n[Candidate News Title]\n\"Maze of tunnels reveals remains of ancient Jerusalem\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Maze of tunnels reveals remains of ancient Jerusalem\" is likely to discuss recent archaeological findings in Jerusalem, focusing on a network of tunnels that has been uncovered. Readers may expect detailed descriptions of the tunnels' construction, historical significance, and what artifacts or remains have been discovered within them. The piece could explore how these findings contribute to our understanding of ancient Jerusalem's culture and history, as well as the implications for current archaeological practices in the region. Overall, the article may provide insights into both the historical context and the methodologies used in this excavation.",
+  "model": "gpt-4o-mini"
+}

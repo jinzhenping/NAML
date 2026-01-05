@@ -1,0 +1,18 @@
+{
+  "user_id": 144,
+  "candidate_news_id": "N105407",
+  "candidate_title": "'One in a million' deer captured on camera in Michigan woods",
+  "user_history_count": 7,
+  "user_history": [
+    "Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care",
+    "Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Bette Midler and Kathy Najimy Dish on Upcoming 'Hocus Pocus' Sequel and If They'd Be Involved",
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care\"\n\"Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Bette Midler and Kathy Najimy Dish on Upcoming 'Hocus Pocus' Sequel and If They'd Be Involved\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"'One in a million' deer captured on camera in Michigan woods,\" the user can likely expect to read about a rare sighting of a uniquely colored or patterned deer, which has garnered attention from both wildlife enthusiasts and the general public. The piece may detail the circumstances of the sighting, including the location and the individual who captured the footage, as well as any reactions from experts regarding the rarity of such occurrences in nature. Additionally, the article could provide insights into the ecological significance of this event and what it might indicate about local wildlife populations.",
+  "model": "gpt-4o-mini"
+}

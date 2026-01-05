@@ -1,0 +1,21 @@
+{
+  "user_id": 736,
+  "candidate_news_id": "N33539",
+  "candidate_title": "What 40 Celebrities Look Like Without Their Signature Looks",
+  "user_history_count": 10,
+  "user_history": [
+    "Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights",
+    "Your Student Debt Doesn't Always Die With You",
+    "How to pay off your mortgage early: 4 methods that work",
+    "South Florida principal who made controversial comments about the Holocaust is fired",
+    "Elderly mother caught in a lie",
+    "J.C. Penney Plots a Comeback: Less Clutter, More Yoga Classes",
+    "19 Things You'll Need To Sacrifice Now for a Healthy Retirement",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "15 Work Conversations That Could Cost You Your Job",
+    "Why Do Cats Meow?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights\"\n\"Your Student Debt Doesn't Always Die With You\"\n\"How to pay off your mortgage early: 4 methods that work\"\n\"South Florida principal who made controversial comments about the Holocaust is fired\"\n\"Elderly mother caught in a lie\"\n\"J.C. Penney Plots a Comeback: Less Clutter, More Yoga Classes\"\n\"19 Things You'll Need To Sacrifice Now for a Healthy Retirement\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"15 Work Conversations That Could Cost You Your Job\"\n\"Why Do Cats Meow?\"\n\n[Candidate News Title]\n\"What 40 Celebrities Look Like Without Their Signature Looks\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect a visual exploration of how 40 well-known celebrities might appear without their signature hairstyles, makeup, or fashion choices. It is likely to include before-and-after comparisons, showcasing their natural looks and possibly discussing how these changes affect their public personas. The piece may also touch on the cultural significance of celebrity appearances and how personal image plays a role in their careers. Overall, readers are likely to gain insight into the contrast between the polished images and the more authentic representations of these famous figures.",
+  "model": "gpt-4o-mini"
+}

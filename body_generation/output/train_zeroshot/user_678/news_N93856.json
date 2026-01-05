@@ -1,0 +1,17 @@
+{
+  "user_id": 678,
+  "candidate_news_id": "N93856",
+  "candidate_title": "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+  "user_history_count": 6,
+  "user_history": [
+    "Outer Banks storms unearth old shipwreck from 'Graveyard of the Atlantic'",
+    "Full practice for Saquon Barkley on Wednesday",
+    "Man arrested in 1993 cold case rape after he's identified by DNA: Police",
+    "MGM Resorts sells Circus Circus, Bellagio on Las Vegas Strip",
+    "Trent Williams fails physical, experiencing discomfort with helmet",
+    "Kate Upton Slams 'Misogynist Comments' After She Weighs in on World Series Game 6 Controversy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Outer Banks storms unearth old shipwreck from 'Graveyard of the Atlantic'\"\n\"Full practice for Saquon Barkley on Wednesday\"\n\"Man arrested in 1993 cold case rape after he's identified by DNA: Police\"\n\"MGM Resorts sells Circus Circus, Bellagio on Las Vegas Strip\"\n\"Trent Williams fails physical, experiencing discomfort with helmet\"\n\"Kate Upton Slams 'Misogynist Comments' After She Weighs in on World Series Game 6 Controversy\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent moment between Selena Gomez and Julia Michaels, highlighting their friendship and shared experiences. Readers can expect details about their matching arrow tattoos, which may symbolize a significant bond or a shared sentiment. The piece could also explore the context of their relationship, including past collaborations or public appearances, and may touch on how this gesture resonates with their fans. Overall, the article is likely to provide insights into their personal lives while reflecting on their influence in the entertainment industry.",
+  "model": "gpt-4o-mini"
+}

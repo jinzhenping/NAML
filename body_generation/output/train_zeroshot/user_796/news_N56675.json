@@ -1,0 +1,21 @@
+{
+  "user_id": 796,
+  "candidate_news_id": "N56675",
+  "candidate_title": "3-year-old's priceless response after mom \"ate all his candy\"",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump to Suspend Thailand's $1.3 Billion Trade Preferences",
+    "Senate rejects Democratic effort to undo Obamacare changes",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Here's What Was Left After A Massive Star Exploded",
+    "'A bunch of B.S.': Lindsey Graham refuses to read Ukraine transcripts",
+    "Clippers set bad precedent resting Kawhi Leonard against Bucks",
+    "Another Palm Beach County juror may be jailed in new contempt case",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Bannon says Stone was Trump campaign link to WikiLeaks",
+    "Creepy fish with 'human-like face' found swimming in lake"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump to Suspend Thailand's $1.3 Billion Trade Preferences\"\n\"Senate rejects Democratic effort to undo Obamacare changes\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Here's What Was Left After A Massive Star Exploded\"\n\"'A bunch of B.S.': Lindsey Graham refuses to read Ukraine transcripts\"\n\"Clippers set bad precedent resting Kawhi Leonard against Bucks\"\n\"Another Palm Beach County juror may be jailed in new contempt case\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Bannon says Stone was Trump campaign link to WikiLeaks\"\n\"Creepy fish with 'human-like face' found swimming in lake\"\n\n[Candidate News Title]\n\"3-year-old's priceless response after mom \"ate all his candy\"\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a lighthearted account of a young child's amusing reaction after discovering that their mother has consumed all of their candy. The piece may explore the child's innocent perspective, highlighting the humor and surprise in their response. Additionally, it could provide context about the situation, such as the occasion for the candy or the child's previous excitement over it. Overall, the article is expected to deliver a charming glimpse into family dynamics and childhood experiences, though the exact details of the child's reaction are uncertain.",
+  "model": "gpt-4o-mini"
+}

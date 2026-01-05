@@ -1,0 +1,21 @@
+{
+  "user_id": 420,
+  "candidate_news_id": "N116359",
+  "candidate_title": "Clemson routs NC State, claims ACC Atlantic title",
+  "user_history_count": 10,
+  "user_history": [
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Hawaiian Reef Case at Supreme Court Could Limit Clean Water Act",
+    "Future Jeep Grand Cherokee, Wagoneer, Ram Plans On Track",
+    "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "Her cancer surgery was a success. Then a genetic condition let a chemo drug ravage her body",
+    "Two teenage girls missing from Kansas City, Missouri",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Trump: US ready to help in 'cleaning out' the 'monsters' who killed Americans",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Hawaiian Reef Case at Supreme Court Could Limit Clean Water Act\"\n\"Future Jeep Grand Cherokee, Wagoneer, Ram Plans On Track\"\n\"1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"Her cancer surgery was a success. Then a genetic condition let a chemo drug ravage her body\"\n\"Two teenage girls missing from Kansas City, Missouri\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Trump: US ready to help in 'cleaning out' the 'monsters' who killed Americans\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\n[Candidate News Title]\n\"Clemson routs NC State, claims ACC Atlantic title\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Clemson's recent victory over NC State, the user may expect to find a detailed account of the game, including key moments that led to Clemson claiming the ACC Atlantic title. The piece is likely to cover player performances, strategic decisions made by the coaching staff, and implications of this win for the team's future in the conference. Additionally, the article may provide statistics and highlights that illustrate the game's significance, as well as insights into how this victory positions Clemson for upcoming challenges in the postseason.",
+  "model": "gpt-4o-mini"
+}

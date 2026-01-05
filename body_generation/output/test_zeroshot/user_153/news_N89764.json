@@ -1,0 +1,21 @@
+{
+  "user_id": 153,
+  "candidate_news_id": "N89764",
+  "candidate_title": "Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital",
+  "user_history_count": 10,
+  "user_history": [
+    "Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Jamie Lee Curtis Opens Up About Being 20 Years Sober, Going Public With Her Addiction",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "'Priceless' finds that turned out to be worthless",
+    "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+    "Family told to take down Christmas display because it's too soon to decorate"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Jamie Lee Curtis Opens Up About Being 20 Years Sober, Going Public With Her Addiction\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"'Priceless' finds that turned out to be worthless\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\n[Candidate News Title]\n\"Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to report on the circumstances surrounding the death of a woman who was taken to the hospital by NFL player Montae Nicholson. Readers may expect details regarding the police investigation, including any findings or statements from law enforcement. The article could also touch on the context of the incident, such as the relationship between Nicholson and the woman, and may provide insight into how this event is being perceived in the media and by the public. Overall, it aims to present a factual account of the situation while addressing the implications of a high-profile athlete's involvement.",
+  "model": "gpt-4o-mini"
+}

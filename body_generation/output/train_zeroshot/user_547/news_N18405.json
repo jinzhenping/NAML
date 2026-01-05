@@ -1,0 +1,21 @@
+{
+  "user_id": 547,
+  "candidate_news_id": "N18405",
+  "candidate_title": "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+  "user_history_count": 10,
+  "user_history": [
+    "2 murder suspects escape from jail, still on the run",
+    "Felicity Huffman Smiles as She Begins Community Service Following Prison Release",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Third time's (not always) the charm: From silver screen icons to a world heavyweight boxer - celebs who've been married more than three times",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Injured Cowboys DL Daniel Ross arrested on drug, gun charges",
+    "Guy Who 'Doesn't Want Pets' Finally Gives In On His Wedding Day",
+    "Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.",
+    "Holocaust survivor under guard amid death threats",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"2 murder suspects escape from jail, still on the run\"\n\"Felicity Huffman Smiles as She Begins Community Service Following Prison Release\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Third time's (not always) the charm: From silver screen icons to a world heavyweight boxer - celebs who've been married more than three times\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Injured Cowboys DL Daniel Ross arrested on drug, gun charges\"\n\"Guy Who 'Doesn't Want Pets' Finally Gives In On His Wedding Day\"\n\"Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.\"\n\"Holocaust survivor under guard amid death threats\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\n[Candidate News Title]\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to detail a recent incident in Wisconsin where a bus driver took swift action to rescue children who were found wandering in the snow during a severe cold snap affecting the region. Readers can expect to learn about the circumstances leading to the children's wandering, the bus driver's quick response, and any relevant context regarding the extreme weather conditions. Additionally, the article may provide insights into community reactions and safety measures being discussed in light of the incident, emphasizing the importance of vigilance during such harsh weather.",
+  "model": "gpt-4o-mini"
+}

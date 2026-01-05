@@ -1,0 +1,21 @@
+{
+  "user_id": 665,
+  "candidate_news_id": "N7382",
+  "candidate_title": "What to Cook This Weekend: November 15 17, 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days",
+    "Deer fatally attacks hunter who shot him",
+    "Yardbarker's Week 8 NFL picks, game previews",
+    "Origins of the 50 most popular dog breeds",
+    "A typhoon traveling from the North Pacific may bring near-record warmth to Alaska",
+    "Ford Baby Bronco Bare Body Allegedly Leaked In Exclusive Photo",
+    "Hurricane force wind gusts to impact parts of California",
+    "'Craziest game I've ever been a part of'': Analysis from Seahawks' thrilling OT win over 49ers",
+    "Cold weather: 70% of the country will experience freezing temperatures this week",
+    "Simple and surprisingly unexpected Thanksgiving side dishes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days\"\n\"Deer fatally attacks hunter who shot him\"\n\"Yardbarker's Week 8 NFL picks, game previews\"\n\"Origins of the 50 most popular dog breeds\"\n\"A typhoon traveling from the North Pacific may bring near-record warmth to Alaska\"\n\"Ford Baby Bronco Bare Body Allegedly Leaked In Exclusive Photo\"\n\"Hurricane force wind gusts to impact parts of California\"\n\"'Craziest game I've ever been a part of'': Analysis from Seahawks' thrilling OT win over 49ers\"\n\"Cold weather: 70% of the country will experience freezing temperatures this week\"\n\"Simple and surprisingly unexpected Thanksgiving side dishes\"\n\n[Candidate News Title]\n\"What to Cook This Weekend: November 15 17, 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"What to Cook This Weekend: November 15-17, 2019,\" the user may expect to find a selection of recipes and cooking ideas tailored for the upcoming weekend. It is likely to include a variety of dishes that are seasonally appropriate, possibly featuring ingredients that reflect the fall season. Recipes could range from hearty meals to lighter options, catering to diverse tastes and dietary preferences. Additionally, the article might offer tips for meal preparation and suggestions for entertaining, aiming to inspire users in their weekend cooking endeavors.",
+  "model": "gpt-4o-mini"
+}

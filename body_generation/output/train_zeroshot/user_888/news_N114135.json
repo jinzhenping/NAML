@@ -1,0 +1,19 @@
+{
+  "user_id": 888,
+  "candidate_news_id": "N114135",
+  "candidate_title": "Unexpected Signs of an Unhealthy Heart",
+  "user_history_count": 8,
+  "user_history": [
+    "Mexico convulsed by second mass shooting in two days",
+    "Report: UFC legend Randy Couture hospitalized after heart attack",
+    "Scandal brings election risk for rising Democratic star",
+    "Early to Bed, Early to Rise, Makes Me Diabetic, Depressed and Sick",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Have a little piece of extra skin? Everything you need to know about skin tags",
+    "Award in Drew Brees jewelry decision swells to nearly $9 million",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mexico convulsed by second mass shooting in two days\"\n\"Report: UFC legend Randy Couture hospitalized after heart attack\"\n\"Scandal brings election risk for rising Democratic star\"\n\"Early to Bed, Early to Rise, Makes Me Diabetic, Depressed and Sick\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Have a little piece of extra skin? Everything you need to know about skin tags\"\n\"Award in Drew Brees jewelry decision swells to nearly $9 million\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Unexpected Signs of an Unhealthy Heart\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Unexpected Signs of an Unhealthy Heart\" is likely to provide an overview of lesser-known symptoms that may indicate heart health issues. Readers can expect to learn about various physical signs that are often overlooked, such as fatigue, shortness of breath, or unusual pain in the body. The article may also discuss the importance of recognizing these signs early to prevent more serious health complications. Additionally, it could offer insights into lifestyle factors that contribute to heart health and suggest when to seek medical advice.",
+  "model": "gpt-4o-mini"
+}

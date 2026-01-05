@@ -1,0 +1,21 @@
+{
+  "user_id": 333,
+  "candidate_news_id": "N47925",
+  "candidate_title": "Three school workers charged in death of special needs student",
+  "user_history_count": 10,
+  "user_history": [
+    "Steve Phillips Previews Game 6 of the World Series",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Golden Retriever adorably guilty of playing in the mud",
+    "Woman's Halloween 'devil teeth' turn into dental emergency",
+    "Halloween snowstorm wallops the Midwest",
+    "Insiders predict: NFL Week 9 winners",
+    "Five-year-old boy calls 911 for McDonald's Happy Meal",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Steve Phillips Previews Game 6 of the World Series\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Golden Retriever adorably guilty of playing in the mud\"\n\"Woman's Halloween 'devil teeth' turn into dental emergency\"\n\"Halloween snowstorm wallops the Midwest\"\n\"Insiders predict: NFL Week 9 winners\"\n\"Five-year-old boy calls 911 for McDonald's Happy Meal\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\n[Candidate News Title]\n\"Three school workers charged in death of special needs student\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Three school workers charged in death of special needs student,\" the user is likely to encounter details regarding the legal charges filed against school employees in connection with the tragic death of a special needs student. The piece may outline the circumstances surrounding the incident, including any relevant background information on the individuals involved and the implications of the charges. Furthermore, it could explore the broader context of accountability within educational settings and the measures taken to protect vulnerable students.",
+  "model": "gpt-4o-mini"
+}

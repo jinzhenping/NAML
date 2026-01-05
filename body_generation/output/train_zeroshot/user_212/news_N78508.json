@@ -1,0 +1,21 @@
+{
+  "user_id": 212,
+  "candidate_news_id": "N78508",
+  "candidate_title": "Aaron Carter admitted to Florida hospital",
+  "user_history_count": 10,
+  "user_history": [
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Bills waive Tyrel Dodson after completing six-game suspension",
+    "Clippers set bad precedent resting Kawhi Leonard against Bucks",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "Florida zip line: Boy falls more than 20 feet onto concrete floor at entertainment park",
+    "Man who inherited 6 figures shares advice he'd give his younger self",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Bills waive Tyrel Dodson after completing six-game suspension\"\n\"Clippers set bad precedent resting Kawhi Leonard against Bucks\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"Florida zip line: Boy falls more than 20 feet onto concrete floor at entertainment park\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\n[Candidate News Title]\n\"Aaron Carter admitted to Florida hospital\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article regarding Aaron Carter's admission to a Florida hospital is likely to provide information about the circumstances surrounding his hospitalization, including any relevant health issues or incidents that led to this situation. Readers may expect details about his current condition, potential treatment, and any statements from family or representatives. The article may also touch on Carter's recent public appearances or activities that could have influenced his health. Overall, the content is likely to focus on factual updates rather than personal insights or opinions.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 952,
+  "candidate_news_id": "N7578",
+  "candidate_title": "This little Montana town is full of Power Wagons and Mustangs",
+  "user_history_count": 10,
+  "user_history": [
+    "Election Day 2019: Most Important Races and What to Watch For",
+    "Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2",
+    "Teresa Giudice and Kids Travel to Italy to See Joe Giudice Amid Marriage Drama",
+    "Man charged with hate crime in racist acid attack",
+    "Look of the day: Ashley Graham's latest sizzling maternity look & more celeb style",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Meghan McCain GOES IN on Donald Trump Jr. on 'The View'",
+    "Is Miss USA Ready for Its First Woman In a Wheelchair?",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2\"\n\"Teresa Giudice and Kids Travel to Italy to See Joe Giudice Amid Marriage Drama\"\n\"Man charged with hate crime in racist acid attack\"\n\"Look of the day: Ashley Graham's latest sizzling maternity look & more celeb style\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Meghan McCain GOES IN on Donald Trump Jr. on 'The View'\"\n\"Is Miss USA Ready for Its First Woman In a Wheelchair?\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\n[Candidate News Title]\n\"This little Montana town is full of Power Wagons and Mustangs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"This little Montana town is full of Power Wagons and Mustangs\" is likely to explore the automotive culture and community within a specific town in Montana known for its classic vehicles. Readers may expect to find information about local events or gatherings that celebrate these iconic cars, as well as descriptions of the unique features and history of Power Wagons and Mustangs. Additionally, the article could provide insights into how this automotive passion shapes the town's identity and attracts enthusiasts. Overall, it may present a blend of cultural significance and community engagement surrounding these vehicles.",
+  "model": "gpt-4o-mini"
+}

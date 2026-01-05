@@ -1,0 +1,21 @@
+{
+  "user_id": 94,
+  "candidate_news_id": "N37658",
+  "candidate_title": "Amazon's $1.5 million political gambit backfires in Seattle City Council election",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "The Ukrainian orphan at the center of an adoption scandal says she's a teenager, and none of her adoptive parents' claims are true",
+    "Sen. Dianne Feinstein renews call for racing to be suspended at Santa Anita Park after latest horse death",
+    "How Toys 'R' Us Went Bankrupt",
+    "Predicting the College Football Playoff Rankings for Week 11",
+    "Russian smuggling linked to 39 bodies found in truck in Britain",
+    "17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job",
+    "I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following",
+    "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+    "'The Little Mermaid Live!': TV Review"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"The Ukrainian orphan at the center of an adoption scandal says she's a teenager, and none of her adoptive parents' claims are true\"\n\"Sen. Dianne Feinstein renews call for racing to be suspended at Santa Anita Park after latest horse death\"\n\"How Toys 'R' Us Went Bankrupt\"\n\"Predicting the College Football Playoff Rankings for Week 11\"\n\"Russian smuggling linked to 39 bodies found in truck in Britain\"\n\"17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job\"\n\"I just went to Wegmans for the first time, and now I see why the grocery chain has such a massive cult following\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"'The Little Mermaid Live!': TV Review\"\n\n[Candidate News Title]\n\"Amazon's $1.5 million political gambit backfires in Seattle City Council election\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent political strategies employed by Amazon in the Seattle City Council election, particularly focusing on a significant financial investment that may have backfired. Readers can expect insights into the implications of this political gamble, including reactions from local officials and voters. Additionally, the piece could explore how this incident reflects broader trends in corporate involvement in local politics and the potential consequences for Amazon's reputation and future business endeavors in the region.",
+  "model": "gpt-4o-mini"
+}

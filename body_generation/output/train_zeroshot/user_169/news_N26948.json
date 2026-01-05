@@ -1,0 +1,21 @@
+{
+  "user_id": 169,
+  "candidate_news_id": "N26948",
+  "candidate_title": "81 Bean Recipes You'll Be Making All Year Long",
+  "user_history_count": 10,
+  "user_history": [
+    "Couple's haunting wedding photo captures California wildfire raging nearby",
+    "Emilia Clarke Reacts to the 'Game of Thrones' Prequel News (Exclusive)",
+    "10 Unexpected Ways To Bond With A Cat",
+    "Kentucky man dies trying to save sons from Florida rip current during family trip",
+    "Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call",
+    "Every Must-See Photo of Stars Celebrating Halloween 2019",
+    "What Is Brown Butter and Should You Be Using It?",
+    "The Ultimate Guide to Mushrooms",
+    "The seedless lemon revolution has taken root in California",
+    "Lamborghini's long shot mission to take its super fast cars into the electric age"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Couple's haunting wedding photo captures California wildfire raging nearby\"\n\"Emilia Clarke Reacts to the 'Game of Thrones' Prequel News (Exclusive)\"\n\"10 Unexpected Ways To Bond With A Cat\"\n\"Kentucky man dies trying to save sons from Florida rip current during family trip\"\n\"Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"What Is Brown Butter and Should You Be Using It?\"\n\"The Ultimate Guide to Mushrooms\"\n\"The seedless lemon revolution has taken root in California\"\n\"Lamborghini's long shot mission to take its super fast cars into the electric age\"\n\n[Candidate News Title]\n\"81 Bean Recipes You'll Be Making All Year Long\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In reading \"81 Bean Recipes You'll Be Making All Year Long,\" the user may expect a comprehensive collection of diverse and practical recipes that highlight the versatility of beans in various culinary contexts. The article is likely to include a range of options catering to different tastes and dietary preferences, featuring dishes such as soups, salads, and main courses. Additionally, it could provide tips on cooking techniques and the nutritional benefits of beans, enhancing the user’s understanding and appreciation of these ingredients in everyday meals.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 581,
+  "candidate_news_id": "N25751",
+  "candidate_title": "This Arctic blast is in its final day. But the cold isn't over quite yet",
+  "user_history_count": 10,
+  "user_history": [
+    "Plow Clears Snow-Covered Sidewalk in Green Bay",
+    "2020 Jeep Wrangler Plug-In Hybrid Spied Hiding Its Charging Port",
+    "Inside the world's largest plane, which has a wingspan longer than a football field and a mysterious new owner",
+    "8 Signs You Could Have High-Functioning Depression",
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "This girl nails the wave pool   then fails the exit spectacularly",
+    "Christina Anstead shares new pic of son Hudson at 2 months old",
+    "Wild & wonderful treasures of SEMA 2019   US edition",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Plow Clears Snow-Covered Sidewalk in Green Bay\"\n\"2020 Jeep Wrangler Plug-In Hybrid Spied Hiding Its Charging Port\"\n\"Inside the world's largest plane, which has a wingspan longer than a football field and a mysterious new owner\"\n\"8 Signs You Could Have High-Functioning Depression\"\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"This girl nails the wave pool   then fails the exit spectacularly\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"Wild & wonderful treasures of SEMA 2019   US edition\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\n[Candidate News Title]\n\"This Arctic blast is in its final day. But the cold isn't over quite yet\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to read about the current Arctic blast affecting various regions, detailing its final day and the lingering effects of the cold weather. The piece may discuss the specific areas impacted by the cold, including any potential warnings or advisories in place. Additionally, it could provide insights into the reasons behind the unusual cold snap and what residents can anticipate in the coming days as temperatures stabilize. Overall, the article is likely to present a clear overview of the weather situation without delving into sensational details.",
+  "model": "gpt-4o-mini"
+}

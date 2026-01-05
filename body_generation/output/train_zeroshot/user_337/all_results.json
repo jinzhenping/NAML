@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 337,
+    "candidate_news_id": "N20990",
+    "candidate_title": "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "user_history_count": 10,
+    "user_history": [
+      "Here's how rising car prices can hurt average Americans",
+      "Venezuelans buy gas with cigarettes to battle inflation",
+      "Navy lieutenant and wife charged with defrauding the United States",
+      "Coast Guard searching for man who went overboard from Carnival cruise ship off Texas",
+      "3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian",
+      "Jeff Bezos is set to lose his crown as world's richest person",
+      "Frustrated Antonio Brown has active morning on Twitter",
+      "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+      "This Is How Much It Really Takes to Lose One Pound",
+      "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's how rising car prices can hurt average Americans\"\n\"Venezuelans buy gas with cigarettes to battle inflation\"\n\"Navy lieutenant and wife charged with defrauding the United States\"\n\"Coast Guard searching for man who went overboard from Carnival cruise ship off Texas\"\n\"3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian\"\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"This Is How Much It Really Takes to Lose One Pound\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss the recent restrictions imposed on the son of a Chinese billionaire, detailing the specific limitations placed on his lifestyle, such as bans on flying first class, playing golf, purchasing property, and attending nightlife venues. It may explore the reasons behind these restrictions, possibly linking them to government regulations aimed at addressing wealth inequality or promoting social responsibility among affluent individuals. Additionally, the article could provide context about the implications of such measures on the broader conversation regarding wealth and privilege in China.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 337,
+    "candidate_news_id": "N119838",
+    "candidate_title": "Bucs release former first-round pick Vernon Hargreaves",
+    "user_history_count": 10,
+    "user_history": [
+      "Here's how rising car prices can hurt average Americans",
+      "Venezuelans buy gas with cigarettes to battle inflation",
+      "Navy lieutenant and wife charged with defrauding the United States",
+      "Coast Guard searching for man who went overboard from Carnival cruise ship off Texas",
+      "3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian",
+      "Jeff Bezos is set to lose his crown as world's richest person",
+      "Frustrated Antonio Brown has active morning on Twitter",
+      "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+      "This Is How Much It Really Takes to Lose One Pound",
+      "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's how rising car prices can hurt average Americans\"\n\"Venezuelans buy gas with cigarettes to battle inflation\"\n\"Navy lieutenant and wife charged with defrauding the United States\"\n\"Coast Guard searching for man who went overboard from Carnival cruise ship off Texas\"\n\"3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian\"\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"This Is How Much It Really Takes to Lose One Pound\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"Bucs release former first-round pick Vernon Hargreaves\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to find information regarding the Tampa Bay Buccaneers' decision to release former first-round pick Vernon Hargreaves. The piece may explore the reasons behind this move, including Hargreaves' performance metrics, injury history, and the impact on the team's roster strategy moving forward. Additionally, it could provide context on Hargreaves' career trajectory and how his release fits into broader trends in team management and player evaluations within the NFL.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 337,
+    "candidate_news_id": "N7937",
+    "candidate_title": "Dean Foods files for bankruptcy",
+    "user_history_count": 10,
+    "user_history": [
+      "Here's how rising car prices can hurt average Americans",
+      "Venezuelans buy gas with cigarettes to battle inflation",
+      "Navy lieutenant and wife charged with defrauding the United States",
+      "Coast Guard searching for man who went overboard from Carnival cruise ship off Texas",
+      "3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian",
+      "Jeff Bezos is set to lose his crown as world's richest person",
+      "Frustrated Antonio Brown has active morning on Twitter",
+      "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+      "This Is How Much It Really Takes to Lose One Pound",
+      "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's how rising car prices can hurt average Americans\"\n\"Venezuelans buy gas with cigarettes to battle inflation\"\n\"Navy lieutenant and wife charged with defrauding the United States\"\n\"Coast Guard searching for man who went overboard from Carnival cruise ship off Texas\"\n\"3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian\"\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"This Is How Much It Really Takes to Lose One Pound\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"Dean Foods files for bankruptcy\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article on Dean Foods filing for bankruptcy is likely to provide an overview of the company's financial struggles leading up to this decision, including the impact of changing consumer preferences and market competition in the dairy industry. Readers may expect to learn about the implications for employees, suppliers, and consumers, as well as any plans for restructuring or selling assets. It is possible that the article will also discuss the broader trends in the food industry that contributed to this situation, highlighting how economic factors are influencing traditional businesses.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 337,
+    "candidate_news_id": "N30417",
+    "candidate_title": "Heisman Watch: Joe Burrow is the frontrunner, and there's not a close second",
+    "user_history_count": 10,
+    "user_history": [
+      "Here's how rising car prices can hurt average Americans",
+      "Venezuelans buy gas with cigarettes to battle inflation",
+      "Navy lieutenant and wife charged with defrauding the United States",
+      "Coast Guard searching for man who went overboard from Carnival cruise ship off Texas",
+      "3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian",
+      "Jeff Bezos is set to lose his crown as world's richest person",
+      "Frustrated Antonio Brown has active morning on Twitter",
+      "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+      "This Is How Much It Really Takes to Lose One Pound",
+      "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's how rising car prices can hurt average Americans\"\n\"Venezuelans buy gas with cigarettes to battle inflation\"\n\"Navy lieutenant and wife charged with defrauding the United States\"\n\"Coast Guard searching for man who went overboard from Carnival cruise ship off Texas\"\n\"3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian\"\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"This Is How Much It Really Takes to Lose One Pound\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"Heisman Watch: Joe Burrow is the frontrunner, and there's not a close second\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Heisman Watch: Joe Burrow is the frontrunner, and there's not a close second,\" you may expect a detailed analysis of Joe Burrow's current performance in the college football season and why he is considered the leading candidate for the Heisman Trophy. The article is likely to discuss his statistics, key games, and comparisons with other contenders, providing insight into his skills and the impact of his gameplay on the team's success. Additionally, it could explore the historical context of Heisman winners and what sets Burrow apart in this competitive landscape.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 337,
+    "candidate_news_id": "N76434",
+    "candidate_title": "Report: Election vendors are 'prime targets,' need oversight",
+    "user_history_count": 10,
+    "user_history": [
+      "Here's how rising car prices can hurt average Americans",
+      "Venezuelans buy gas with cigarettes to battle inflation",
+      "Navy lieutenant and wife charged with defrauding the United States",
+      "Coast Guard searching for man who went overboard from Carnival cruise ship off Texas",
+      "3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian",
+      "Jeff Bezos is set to lose his crown as world's richest person",
+      "Frustrated Antonio Brown has active morning on Twitter",
+      "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+      "This Is How Much It Really Takes to Lose One Pound",
+      "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's how rising car prices can hurt average Americans\"\n\"Venezuelans buy gas with cigarettes to battle inflation\"\n\"Navy lieutenant and wife charged with defrauding the United States\"\n\"Coast Guard searching for man who went overboard from Carnival cruise ship off Texas\"\n\"3 Foods You Should Eat at Breakfast If You Want to Lose Belly Fat, According to a Dietitian\"\n\"Jeff Bezos is set to lose his crown as world's richest person\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"This Is How Much It Really Takes to Lose One Pound\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"Report: Election vendors are 'prime targets,' need oversight\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Report: Election vendors are 'prime targets,' need oversight\" is likely to discuss the vulnerabilities associated with election vendors and the potential risks they pose to the electoral process. Readers may expect an overview of the challenges these vendors face, including security concerns and instances where they have been targeted for fraud or manipulation. The article could also highlight the need for increased oversight and regulation to ensure the integrity of elections, providing examples or case studies that illustrate these points.",
+    "model": "gpt-4o-mini"
+  }
+]

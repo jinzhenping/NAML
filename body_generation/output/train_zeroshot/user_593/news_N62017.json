@@ -1,0 +1,21 @@
+{
+  "user_id": 593,
+  "candidate_news_id": "N62017",
+  "candidate_title": "The Joy of Cooking and its recipe for success",
+  "user_history_count": 10,
+  "user_history": [
+    "One Man Has Owned This 1964 Shelby Cobra for 50 Years",
+    "Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard",
+    "Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!",
+    "Hong Kong crashes into recession as protests hit economy",
+    "Redskins QB Dwayne Haskins 'excited to put first start on film'",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Jaylen Brown addresses 'toxic masculinity' in sports",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "HIDDEN GEM: One of the best chicken sandwiches can be found at a new local spot",
+    "Layoffs at Butler County facility follow recent Warren County reductions"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"One Man Has Owned This 1964 Shelby Cobra for 50 Years\"\n\"Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard\"\n\"Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!\"\n\"Hong Kong crashes into recession as protests hit economy\"\n\"Redskins QB Dwayne Haskins 'excited to put first start on film'\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Jaylen Brown addresses 'toxic masculinity' in sports\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"HIDDEN GEM: One of the best chicken sandwiches can be found at a new local spot\"\n\"Layoffs at Butler County facility follow recent Warren County reductions\"\n\n[Candidate News Title]\n\"The Joy of Cooking and its recipe for success\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The Joy of Cooking and its recipe for success\" is likely to explore the enduring popularity and influence of the iconic cookbook, \"The Joy of Cooking.\" Readers may expect an examination of its historical significance in American culinary culture, including insights into its evolution over the decades. The piece could also highlight key recipes or techniques that have contributed to its legacy, while potentially discussing how it has adapted to modern cooking trends. Additionally, it may reflect on the authors' intentions and the impact the book has had on home cooking across generations.",
+  "model": "gpt-4o-mini"
+}

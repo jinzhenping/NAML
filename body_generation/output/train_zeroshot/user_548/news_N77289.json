@@ -1,0 +1,21 @@
+{
+  "user_id": 548,
+  "candidate_news_id": "N77289",
+  "candidate_title": "Opinion: Other schools can learn from Oregon's hiring of Mario Cristobal",
+  "user_history_count": 10,
+  "user_history": [
+    "McDonald's Fires CEO Steve Easterbrook After Relationship With Employee",
+    "Celebrity kids then and now: See how they've grown",
+    "How Do Bi Parents Come Out to Their Kids?",
+    "Debunking the week's tabloid stories: Nov. 1, 2019",
+    "Look of the Day",
+    "Celebrity kids then and now: See how they've grown",
+    "Celebrity mug shots",
+    "17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job",
+    "A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral",
+    "Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's Fires CEO Steve Easterbrook After Relationship With Employee\"\n\"Celebrity kids then and now: See how they've grown\"\n\"How Do Bi Parents Come Out to Their Kids?\"\n\"Debunking the week's tabloid stories: Nov. 1, 2019\"\n\"Look of the Day\"\n\"Celebrity kids then and now: See how they've grown\"\n\"Celebrity mug shots\"\n\"17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job\"\n\"A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral\"\n\"Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52\"\n\n[Candidate News Title]\n\"Opinion: Other schools can learn from Oregon's hiring of Mario Cristobal\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Opinion: Other schools can learn from Oregon's hiring of Mario Cristobal,\" they may expect to read an analysis of the hiring process and its implications for college athletics. The article is likely to discuss the strategies and criteria that led to Oregon's decision, highlighting Cristobal's coaching background and achievements. Additionally, it may explore how other schools can apply similar approaches in their own hiring practices to enhance their football programs. This could include considerations of leadership qualities and recruitment tactics that contribute to building a successful team.",
+  "model": "gpt-4o-mini"
+}

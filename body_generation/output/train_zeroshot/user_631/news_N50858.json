@@ -1,0 +1,21 @@
+{
+  "user_id": 631,
+  "candidate_news_id": "N50858",
+  "candidate_title": "Long-term celebrity couples who won't get married",
+  "user_history_count": 10,
+  "user_history": [
+    "Take a tour of Derek Jeter's $14 million castle",
+    "Meghan King Edmonds, Jim Edmonds' Nanny Denies Cheating Allegations",
+    "I visited the new American Dream megamall on its opening day and it was eerily empty",
+    "Curry leads Warriors to first win, 134-123 over Pelicans",
+    "50 secrets it's OK to keep from your partner",
+    "Two Brides Did A Deadlift At Their Wedding As A Symbol Of Unity And Strength",
+    "Hulk Hogan's jet grounded after 'melted' brakes, blown tires",
+    "Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Take a tour of Derek Jeter's $14 million castle\"\n\"Meghan King Edmonds, Jim Edmonds' Nanny Denies Cheating Allegations\"\n\"I visited the new American Dream megamall on its opening day and it was eerily empty\"\n\"Curry leads Warriors to first win, 134-123 over Pelicans\"\n\"50 secrets it's OK to keep from your partner\"\n\"Two Brides Did A Deadlift At Their Wedding As A Symbol Of Unity And Strength\"\n\"Hulk Hogan's jet grounded after 'melted' brakes, blown tires\"\n\"Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations\"\n\n[Candidate News Title]\n\"Long-term celebrity couples who won't get married\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Long-term celebrity couples who won't get married,\" the user can expect an exploration of notable celebrity relationships that have endured over time without leading to marriage. It may discuss the reasons behind these couples' choices, such as personal beliefs, career priorities, or a preference for commitment without formal ties. The piece could also highlight specific couples, providing insights into their dynamics and public perception. Additionally, it is likely to speculate on how societal views on marriage are evolving, especially among high-profile figures.",
+  "model": "gpt-4o-mini"
+}

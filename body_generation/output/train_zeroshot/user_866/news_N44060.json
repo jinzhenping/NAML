@@ -1,0 +1,21 @@
+{
+  "user_id": 866,
+  "candidate_news_id": "N44060",
+  "candidate_title": "How Long Does Alcohol Stay in Your System? We Asked an Expert",
+  "user_history_count": 10,
+  "user_history": [
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "I'm extremely introverted, but I challenged myself to be more outgoing for a week, and it made me feel more confident",
+    "Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "The NBA's rise in PED suspensions, explained",
+    "Jets' Adams clears air with Douglas, Gase about trade talk",
+    "Be more mindful and skip the oversharing: 5 things introverts can teach people",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "Trent Williams: \"The bridge has definitely been burned\""
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"I'm extremely introverted, but I challenged myself to be more outgoing for a week, and it made me feel more confident\"\n\"Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"The NBA's rise in PED suspensions, explained\"\n\"Jets' Adams clears air with Douglas, Gase about trade talk\"\n\"Be more mindful and skip the oversharing: 5 things introverts can teach people\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"Trent Williams: \"The bridge has definitely been burned\"\"\n\n[Candidate News Title]\n\"How Long Does Alcohol Stay in Your System? We Asked an Expert\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"How Long Does Alcohol Stay in Your System? We Asked an Expert,\" the user is likely to find a detailed examination of the factors influencing alcohol metabolism, including body weight, age, and overall health. The article may provide insights from medical professionals, explaining the average time it takes for alcohol to be eliminated from the body and offering practical tips for individuals who may need to know this information for various reasons, such as health awareness or preparing for a drug test. Additionally, it could include a discussion on the effects of different types of alcoholic beverages on the duration they remain detectable in the system.",
+  "model": "gpt-4o-mini"
+}

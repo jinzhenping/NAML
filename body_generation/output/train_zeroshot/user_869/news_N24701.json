@@ -1,0 +1,21 @@
+{
+  "user_id": 869,
+  "candidate_news_id": "N24701",
+  "candidate_title": "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case",
+  "user_history_count": 10,
+  "user_history": [
+    "Space satellite crashes in front yard of Michigan home",
+    "Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before",
+    "A Chef Shares the Secret Ingredient Your Mac and Cheese Is Missing",
+    "Woman Visits Stray Dog Every Day Until He Finally Lets Her Pet Him",
+    "Celeb couples with big age gaps",
+    "This Dreaded $8,000 Home Renovation Offers the Highest Return on Investment, According to Realtors",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "See adorable rescued sea otters get released back into the wild",
+    "Fishermen rescue deer that was swept out to sea",
+    "Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Space satellite crashes in front yard of Michigan home\"\n\"Photographer Crosses Paths With A Black Cat Unlike Any He's Seen Before\"\n\"A Chef Shares the Secret Ingredient Your Mac and Cheese Is Missing\"\n\"Woman Visits Stray Dog Every Day Until He Finally Lets Her Pet Him\"\n\"Celeb couples with big age gaps\"\n\"This Dreaded $8,000 Home Renovation Offers the Highest Return on Investment, According to Realtors\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"See adorable rescued sea otters get released back into the wild\"\n\"Fishermen rescue deer that was swept out to sea\"\n\"Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'\"\n\n[Candidate News Title]\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about Kodak Black's recent sentencing related to a weapons case, which has drawn attention due to the artist's previous legal issues and public persona. The piece is expected to provide details on the circumstances surrounding the case, including any relevant background information about the charges and the legal proceedings that led to the sentencing. It could also explore the implications of this decision for Kodak Black's career and public image, while discussing reactions from fans and critics alike.",
+  "model": "gpt-4o-mini"
+}

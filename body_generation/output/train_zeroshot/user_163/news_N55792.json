@@ -1,0 +1,21 @@
+{
+  "user_id": 163,
+  "candidate_news_id": "N55792",
+  "candidate_title": "Stars Who Served in the Military",
+  "user_history_count": 10,
+  "user_history": [
+    "Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "Inside the world's largest plane, which has a wingspan longer than a football field and a mysterious new owner",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Snow crab sells for record price in Japan",
+    "Most compelling matchups in college football Week 11",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "Endless Summer: Drag Racing in England With Master Tuner Roland Leong"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Keanu Reeves Holds Hands with Artist Alexandra Grant on the Red Carpet\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"Inside the world's largest plane, which has a wingspan longer than a football field and a mysterious new owner\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Snow crab sells for record price in Japan\"\n\"Most compelling matchups in college football Week 11\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Endless Summer: Drag Racing in England With Master Tuner Roland Leong\"\n\n[Candidate News Title]\n\"Stars Who Served in the Military\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Stars Who Served in the Military,\" you are likely to read about various celebrities who have had military experience, exploring their backgrounds and the branches of the armed forces they were involved with. The article may provide insights into how their time in the military impacted their careers and personal lives, highlighting notable stories or achievements during their service. Additionally, it could touch upon the contrast between their public personas and military identities, offering a deeper understanding of these figures beyond their fame.",
+  "model": "gpt-4o-mini"
+}

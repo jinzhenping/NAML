@@ -1,0 +1,21 @@
+{
+  "user_id": 974,
+  "candidate_news_id": "N100396",
+  "candidate_title": "Seahawks knock 49ers from unbeaten ranks with 27-24 OT win",
+  "user_history_count": 10,
+  "user_history": [
+    "13-year-old charged with two murders escapes custody in North Carolina",
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads",
+    "Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track",
+    "Woman accused of sneaking into Bronx Zoo lion exhibit arraigned",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "This Record-Breaking 1800-HP Land Speed Car Is Coming up for Sale",
+    "Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"13-year-old charged with two murders escapes custody in North Carolina\"\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\"Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track\"\n\"Woman accused of sneaking into Bronx Zoo lion exhibit arraigned\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"This Record-Breaking 1800-HP Land Speed Car Is Coming up for Sale\"\n\"Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'\"\n\n[Candidate News Title]\n\"Seahawks knock 49ers from unbeaten ranks with 27-24 OT win\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a detailed account of the recent NFL matchup between the Seattle Seahawks and the San Francisco 49ers, highlighting the key moments that led to the Seahawks' victory in overtime. The piece may explore the performance of standout players, the strategies employed by both teams, and how this game impacts the standings in the league. Additionally, it could provide insights into the reactions from coaches and players, along with fan responses. Overall, the article is likely to offer a comprehensive overview of the game’s significance in the context of the season.",
+  "model": "gpt-4o-mini"
+}

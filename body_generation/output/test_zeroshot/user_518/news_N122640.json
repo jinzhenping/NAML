@@ -1,0 +1,21 @@
+{
+  "user_id": 518,
+  "candidate_news_id": "N122640",
+  "candidate_title": "This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.",
+  "user_history_count": 10,
+  "user_history": [
+    "Thousands of people have problems accessing Disney+, and they're not happy",
+    "Instagram-famous pilot reveals secrets people don't know about the job",
+    "Broadway Actress Laurel Griggs Dies at Age 13",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Celebrity plastic surgery transformations",
+    "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+    "A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent",
+    "The 'Blue Zones' diet: Foods that help people live to 100",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "Powerful side-by-side portraits show people over 100 years old next to their younger selves"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Thousands of people have problems accessing Disney+, and they're not happy\"\n\"Instagram-famous pilot reveals secrets people don't know about the job\"\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Celebrity plastic surgery transformations\"\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\"A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent\"\n\"The 'Blue Zones' diet: Foods that help people live to 100\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"Powerful side-by-side portraits show people over 100 years old next to their younger selves\"\n\n[Candidate News Title]\n\"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the reader may find a detailed analysis of Myles Garrett's recent actions during an NFL game, which involved a controversial incident where he struck an opposing player with his helmet. The piece is likely to cover the implications of this event, including potential disciplinary actions from the league, such as a suspension for the remainder of the season. Additionally, it may explore the broader context of player safety, the rules surrounding on-field conduct, and reactions from fans and analysts regarding the seriousness of Garrett's actions.",
+  "model": "gpt-4o-mini"
+}

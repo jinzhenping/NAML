@@ -1,0 +1,21 @@
+{
+  "user_id": 362,
+  "candidate_news_id": "N109642",
+  "candidate_title": "Eerie photos of an abandoned airport that hasn't been touched in 25 years",
+  "user_history_count": 10,
+  "user_history": [
+    "SoftBank's Son Defiant as WeWork Triggers $6.5 Billion Loss",
+    "NFL Week 10 Power Rankings: Even historically great defenses can have bad weeks",
+    "Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says",
+    "Sound Transit Looks Ahead As Initiative 976 Leads In The Polls",
+    "Here are the new income tax brackets for 2020",
+    "Jordan: Republicans Will Subpoena Whistleblower for Public Hearing",
+    "Bolton willing to defy White House and testify if court clears the way, according to people familiar with his views",
+    "Microsoft can nearly eliminate background noise in video chats now",
+    "Seattle City Council 2019 Election: Kshama Sawant Gains Ground",
+    "Microsoft Submits Plans For Leesburg Data Centers: Report"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"SoftBank's Son Defiant as WeWork Triggers $6.5 Billion Loss\"\n\"NFL Week 10 Power Rankings: Even historically great defenses can have bad weeks\"\n\"Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says\"\n\"Sound Transit Looks Ahead As Initiative 976 Leads In The Polls\"\n\"Here are the new income tax brackets for 2020\"\n\"Jordan: Republicans Will Subpoena Whistleblower for Public Hearing\"\n\"Bolton willing to defy White House and testify if court clears the way, according to people familiar with his views\"\n\"Microsoft can nearly eliminate background noise in video chats now\"\n\"Seattle City Council 2019 Election: Kshama Sawant Gains Ground\"\n\"Microsoft Submits Plans For Leesburg Data Centers: Report\"\n\n[Candidate News Title]\n\"Eerie photos of an abandoned airport that hasn't been touched in 25 years\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to focus on the intriguing visual documentation of an abandoned airport that has remained untouched for 25 years. Readers can expect to find a description of the airport's current state, including details about its architecture, surroundings, and any remnants of past operations. The piece may also explore the historical context of the airport, discussing why it was abandoned and what it signifies in terms of urban development or decay. Additionally, it could provide insights into the implications of such abandoned sites in the broader conversation about infrastructure and community memory.",
+  "model": "gpt-4o-mini"
+}

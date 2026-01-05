@@ -1,0 +1,21 @@
+{
+  "user_id": 217,
+  "candidate_news_id": "N105407",
+  "candidate_title": "'One in a million' deer captured on camera in Michigan woods",
+  "user_history_count": 10,
+  "user_history": [
+    "Freshman Georgia Southern offensive lineman Jordan Wiggins dies at 18",
+    "Officer in viral-video shoplifting incident to be fired: Police chief",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Eric Tse, 24, just became a billionaire overnight",
+    "World's largest treehouse burns to the ground",
+    "These are the Most Luxurious SUVs You Can Buy",
+    "Northern Michigan father of 7 wins $80M Powerball jackpot",
+    "Trump records 'strongly corroborate' sex assault claims, accuser says",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "Kanye West, with debt piling up, thanks God for $68 million tax refund"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Freshman Georgia Southern offensive lineman Jordan Wiggins dies at 18\"\n\"Officer in viral-video shoplifting incident to be fired: Police chief\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Eric Tse, 24, just became a billionaire overnight\"\n\"World's largest treehouse burns to the ground\"\n\"These are the Most Luxurious SUVs You Can Buy\"\n\"Northern Michigan father of 7 wins $80M Powerball jackpot\"\n\"Trump records 'strongly corroborate' sex assault claims, accuser says\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"Kanye West, with debt piling up, thanks God for $68 million tax refund\"\n\n[Candidate News Title]\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about a \"one in a million\" deer captured on camera in Michigan woods is likely to detail the unusual characteristics that make this deer stand out, such as its unique coloration or antler formation. Readers can expect information on the circumstances under which the deer was filmed, possibly including the location and the observer's experience. Additionally, the article may explore the significance of such rare wildlife sightings and how they contribute to local biodiversity discussions. It could also include insights from wildlife experts on the implications of this sighting for deer populations in the area.",
+  "model": "gpt-4o-mini"
+}

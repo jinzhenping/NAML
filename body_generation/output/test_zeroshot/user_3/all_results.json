@@ -1,0 +1,380 @@
+[
+  {
+    "user_id": 3,
+    "candidate_news_id": "N87470",
+    "candidate_title": "Australia's Qantas operates 19 ½ hour London-Sydney flight",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"Australia's Qantas operates 19 ½ hour London-Sydney flight\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article about Qantas operating a 19½ hour flight from London to Sydney, you can expect an informative overview of this long-haul flight service. The article is likely to detail the logistical aspects of operating such an extended journey, including the aircraft used, in-flight services, and potential benefits for travelers. It may also discuss the implications of this flight for international travel, as well as the airline's strategy in a competitive market. Additionally, there could be insights into passenger experiences or feedback regarding this lengthy travel option.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N100425",
+    "candidate_title": "The most talked about movie moments of the 2010s",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In exploring \"The most talked about movie moments of the 2010s,\" the user may expect a detailed analysis of significant cinematic scenes that sparked conversations and left a lasting impact on audiences. The article is likely to highlight key films, discussing specific moments that resonated culturally or socially, and may include insights into why these scenes became iconic. Additionally, the user might find commentary on the influence of these moments on filmmaking and viewer engagement during the decade, providing a broader context for the trends in popular cinema.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N55801",
+    "candidate_title": "High tides surge through Venice, locals rush to protect art",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"High tides surge through Venice, locals rush to protect art\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the recent high tides in Venice and the local response to protect valuable art and historical sites from potential flooding. It may detail the specific measures taken by residents and officials, such as sandbagging or securing artworks in museums. Additionally, the piece could explore the broader implications of climate change on Venice, considering its vulnerability to rising sea levels. Readers might expect insights into the challenges faced by the city during such events and any historical context related to flood management in Venice.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N54368",
+    "candidate_title": "South Carolina teen gets life in prison for deadly elementary school shooting",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the sentencing of a South Carolina teenager who received a life sentence for a shooting incident at an elementary school. It may provide details about the circumstances surrounding the shooting, including the motivations and events leading up to the tragic incident. Additionally, the piece is likely to explore the implications of this case on community safety and the broader conversation about gun violence in schools. There might also be a discussion on the legal proceedings and the perspectives of families affected by the incident, although these aspects remain uncertain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N80770",
+    "candidate_title": "Judge agrees Alabama Islamic State recruit is not US citizen",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses a recent legal decision regarding an individual accused of joining the Islamic State from Alabama, focusing on the judge's ruling that the defendant is not a U.S. citizen. Readers can expect an overview of the implications of this ruling, including potential legal challenges and its relevance to national security issues. Additionally, the article may provide context about the defendant's background and the broader implications for cases involving foreign nationals and terrorism-related charges. This analysis could highlight ongoing debates about citizenship and accountability in such cases.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N29160",
+    "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Opinion: Colin Kaepernick is about to get what he deserves: a chance,\" you may find an analysis of Kaepernick's ongoing journey in professional football and the current landscape of the NFL regarding player opportunities. The piece is likely to explore the implications of his activism and how it has shaped public perception, potentially highlighting recent developments that suggest a possible return to the league. Additionally, it could provide context about the broader societal and sports industry reactions to his previous exclusion, reflecting on the evolving attitudes toward athletes who engage in social justice issues.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N129416",
+    "candidate_title": "Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties,\" you may expect to read about the ongoing disputes between Taylor Swift and her former record label, Big Machine Records. The piece is likely to detail the specific claims made by Swift's representative regarding unpaid royalties and the implications of this financial disagreement. Additionally, it could explore the broader context of artist-label relationships in the music industry, illustrating how such conflicts can affect artists' careers and finances.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N26703",
+    "candidate_title": "Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect a discussion surrounding Mason Rudolph's recent performance, particularly focusing on a controversial incident where he was struck in the head with his own helmet. The piece may analyze the implications of this event on his reputation and performance, as well as how public perception might be influenced by the situation. Additionally, it could explore various opinions on whether he is receiving appropriate scrutiny or blame for the circumstances, potentially including insights from sports analysts or commentators. Overall, the article is likely to provide a nuanced examination of the incident and its aftermath.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N122944",
+    "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the reader may expect to explore the rationale behind McDonald's decision to keep the Filet-O-Fish on its menu, which has been a topic of interest for many fast-food enthusiasts. The piece is likely to discuss factors such as consumer preferences, seasonal sales fluctuations, and the sandwich's historical significance in the company's offerings. Additionally, it may delve into marketing strategies that highlight the Filet-O-Fish’s appeal, particularly during Lent, thereby providing insights into how menu items are selected and retained based on both tradition and customer demand.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N69938",
+    "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you choose to click on the article about Meghan Markle and Hillary Clinton spending time together at Frogmore Cottage, you might expect to read about the nature of their meeting and the context surrounding it. The article could provide insights into their discussions, highlighting any shared interests or initiatives they may have explored during their time together. Additionally, it may touch upon the significance of their relationship, considering their respective roles in public life. Overall, you might anticipate a mix of personal anecdotes and broader implications regarding their influence and collaboration, although specific details about their conversation may not be disclosed.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N72977",
+    "candidate_title": "Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article, the user can expect to find an overview of the ongoing conflict between Taylor Swift and music industry figures Scooter Braun and Scott Borchetta regarding her ability to perform older hits at the American Music Awards (AMAs). The content is likely to detail Swift's concerns about the control these individuals have over her music catalog and the implications this has for her career. Additionally, the article may explore the broader context of artist rights and ownership in the music industry, highlighting how such disputes can impact both the artists and their fans.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N123209",
+    "candidate_title": "Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions,\" the user can expect to find an overview of the recent controversy involving these contestants on the reality show \"Survivor.\" The piece is likely to detail the specific actions that prompted the apologies, providing context about their behavior on the show and the reactions from the audience and producers. Additionally, the article may explore the implications of their actions on their public image and future opportunities within or outside of reality television, shedding light on how such incidents are handled in the competitive entertainment landscape.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N70459",
+    "candidate_title": "New Trump rule to make more health care rates public",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"New Trump rule to make more health care rates public\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"New Trump rule to make more health care rates public\" is likely to discuss recent regulatory changes aimed at increasing transparency in healthcare pricing. Readers may expect to learn about the specifics of the new rule, including how it could affect consumers' access to information about healthcare costs and potential implications for insurance companies and healthcare providers. Additionally, the article might explore the motivations behind this rule and the anticipated impact on the healthcare market. It is possible that the article could include reactions from various stakeholders within the healthcare industry regarding the effectiveness and necessity of such transparency measures.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N18190",
+    "candidate_title": "30 Best Black Friday Deals from Costco",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"30 Best Black Friday Deals from Costco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"30 Best Black Friday Deals from Costco,\" the user is likely expecting a comprehensive overview of the most appealing discounts and promotions available at Costco during the Black Friday shopping event. This may include detailed descriptions of specific products, such as electronics, home goods, or grocery items, alongside their discounted prices. The article could also highlight any exclusive deals for members and offer tips on how to maximize savings during the event. Additionally, it is likely to discuss the overall trend of Black Friday shopping and how Costco's offers compare to those of other retailers.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N18356",
+    "candidate_title": "The world's most profitable company is about to go public",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"The world's most profitable company is about to go public\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"The world's most profitable company is about to go public\" is likely to provide insights into the upcoming initial public offering (IPO) of a highly successful corporation, detailing its financial performance and market position. Readers can expect an overview of the company's profitability metrics and how its potential public offering may impact investors and market dynamics. Additionally, the article may discuss the reasons behind the decision to go public, including growth strategies or capital needs, although specific details about the company and its operations could be less certain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N122640",
+    "candidate_title": "This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the recent incident involving NFL player Myles Garrett, who faced severe backlash for a helmet attack during a game. Readers can expect an analysis of the incident, including details about the altercation, the reactions from the league and fans, and the implications for Garrett's career, particularly regarding the possibility of a season-long suspension. Additionally, the piece might explore the broader context of player conduct in the NFL and how this incident might influence future disciplinary actions. Overall, the article may provide insights into the evolving standards of player behavior and the consequences of on-field actions.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N12384",
+    "candidate_title": "Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses a heartwarming initiative where a hospital dresses newborn babies in outfits inspired by the beloved children's television character, Mister Rogers, in celebration of World Kindness Day. Readers can expect to learn about the hospital's motivations for this event, including its focus on promoting kindness and community spirit. The piece may also provide insights into how such gestures can affect the experiences of families and staff during what can be a challenging time, highlighting the significance of kindness in healthcare settings.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 3,
+    "candidate_news_id": "N35304",
+    "candidate_title": "Raise Billions From Billionaires? Tax Experts Say It's Not That Simple",
+    "user_history_count": 10,
+    "user_history": [
+      "No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside",
+      "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+      "Potential Florida State football coaching targets",
+      "Report: NFL considers allowing a Chargers move to London",
+      "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+      "105 Most Popular Sodas Ranked by How Toxic They Are",
+      "Election Day 2019: Most Important Races and What to Watch For",
+      "College gymnast dies following training accident in Connecticut",
+      "Dean Foods files for bankruptcy",
+      "The 12 Texas cities everyone in the country is moving to"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No one wants to buy this $6.5 million century-old church-turned luxe townhome once owned by a tech CEO in San Francisco   take a look inside\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Potential Florida State football coaching targets\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The 12 Texas cities everyone in the country is moving to\"\n\n[Candidate News Title]\n\"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\" is likely to explore the complexities surrounding the taxation of wealthy individuals and the potential for generating significant revenue through such measures. Readers may expect a discussion on various tax proposals aimed at billionaires, the challenges in implementing these ideas, and differing opinions among tax experts. Additionally, the article may examine the broader implications for economic policy and public perception, providing insight into how these taxation strategies could impact funding for public services or initiatives.",
+    "model": "gpt-4o-mini"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "user_id": 452,
+  "candidate_news_id": "N83311",
+  "candidate_title": "Maurkice Pouncey suspended three games",
+  "user_history_count": 10,
+  "user_history": [
+    "Luke Falk files injury grievance against Jets",
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "Report: Stephen A. Smith strikes massive new deal with ESPN",
+    "45 Amazing Facts About Airplanes That Will Make Your Mind Soar",
+    "Andrew Yang's Campaign Has a Lot of Money. Now What?",
+    "Eerie photos of an abandoned airport that hasn't been touched in 25 years",
+    "'This win was for you': Josh Gordon shares emotional post about death of his brother",
+    "Deval Patrick Will Enter 2020 Presidential Race on Thursday",
+    "Additional details emerge surrounding Colin Kaepernick's NFL workout"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Luke Falk files injury grievance against Jets\"\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"Report: Stephen A. Smith strikes massive new deal with ESPN\"\n\"45 Amazing Facts About Airplanes That Will Make Your Mind Soar\"\n\"Andrew Yang's Campaign Has a Lot of Money. Now What?\"\n\"Eerie photos of an abandoned airport that hasn't been touched in 25 years\"\n\"'This win was for you': Josh Gordon shares emotional post about death of his brother\"\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\"Additional details emerge surrounding Colin Kaepernick's NFL workout\"\n\n[Candidate News Title]\n\"Maurkice Pouncey suspended three games\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Maurkice Pouncey being suspended for three games is likely to provide details on the reasons behind the suspension, including any violations of league policies or conduct that led to this decision. It may also outline the implications of his absence for his team, the Pittsburgh Steelers, and how this could affect their performance in upcoming games. Additionally, the piece might include reactions from Pouncey, coaches, or analysts regarding the suspension and its impact on the team's dynamics.",
+  "model": "gpt-4o-mini"
+}

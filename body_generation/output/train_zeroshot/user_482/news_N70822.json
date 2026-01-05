@@ -1,0 +1,21 @@
+{
+  "user_id": 482,
+  "candidate_news_id": "N70822",
+  "candidate_title": "Take action: Join MSN, LinkedIn and Team Rubicon in helping veterans become thriving civilians",
+  "user_history_count": 10,
+  "user_history": [
+    "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+    "Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight",
+    "Duchess Meghan Describes 'Really Challenging' Life as New Royal: I'm Not OK",
+    "Hailey Baldwin Claps Back at 'Fake Christian' Halloween Comments",
+    "Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family",
+    "16 sentenced to death for burning alive Bangladesh teen",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "Meghan Markle Says She Doesn't Want People to Love Her, She Wants Them to Hear Her",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight\"\n\"Duchess Meghan Describes 'Really Challenging' Life as New Royal: I'm Not OK\"\n\"Hailey Baldwin Claps Back at 'Fake Christian' Halloween Comments\"\n\"Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family\"\n\"16 sentenced to death for burning alive Bangladesh teen\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"Meghan Markle Says She Doesn't Want People to Love Her, She Wants Them to Hear Her\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\n[Candidate News Title]\n\"Take action: Join MSN, LinkedIn and Team Rubicon in helping veterans become thriving civilians\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Take action: Join MSN, LinkedIn and Team Rubicon in helping veterans become thriving civilians,\" you can expect to read about initiatives aimed at supporting veterans as they transition back to civilian life. The article is likely to discuss collaboration between organizations like MSN, LinkedIn, and Team Rubicon to provide resources, networking opportunities, and community involvement for veterans. It may also outline specific programs or actions that individuals can take to contribute to these efforts, highlighting the importance of community support in this process.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 723,
+  "candidate_news_id": "N63043",
+  "candidate_title": "Feud Between Trump Advisers Underscores a White House Torn by Rivalries",
+  "user_history_count": 10,
+  "user_history": [
+    "The Best Way to Reheat Fried Chicken So It's as Crispy as Night One",
+    "Queensland, Australia's Whitsunday Islands: A Respite From Responsibility and an Otherwise Jaded Reality",
+    "When Maria Lacatus' son opened the barn door, it was already too late. \"The bear had one of the pigs in its claws,\" the sobbing 86-year-old says.",
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads",
+    "Hundreds of farmers descended on the Italian capital on Thursday to protest against a surge of marauding wild boars they say are ruining their crops and land.",
+    "Best Buy releases Black Friday ad with Apple doorbusters, TV deals and early savings",
+    "Pentagon: Revenue from Syria oil fields going to Kurdish-led forces",
+    "Deadly virus spreads among marine mammals as Arctic ice melts",
+    "9 Vegetables You Shouldn't Eat Raw",
+    "Woman who jumped into Bronx Zoo lion exhibit arrested for trespassing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Best Way to Reheat Fried Chicken So It's as Crispy as Night One\"\n\"Queensland, Australia's Whitsunday Islands: A Respite From Responsibility and an Otherwise Jaded Reality\"\n\"When Maria Lacatus' son opened the barn door, it was already too late. \"The bear had one of the pigs in its claws,\" the sobbing 86-year-old says.\"\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\"Hundreds of farmers descended on the Italian capital on Thursday to protest against a surge of marauding wild boars they say are ruining their crops and land.\"\n\"Best Buy releases Black Friday ad with Apple doorbusters, TV deals and early savings\"\n\"Pentagon: Revenue from Syria oil fields going to Kurdish-led forces\"\n\"Deadly virus spreads among marine mammals as Arctic ice melts\"\n\"9 Vegetables You Shouldn't Eat Raw\"\n\"Woman who jumped into Bronx Zoo lion exhibit arrested for trespassing\"\n\n[Candidate News Title]\n\"Feud Between Trump Advisers Underscores a White House Torn by Rivalries\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Feud Between Trump Advisers Underscores a White House Torn by Rivalries\" is likely to explore the ongoing tensions among key figures within the Trump administration. Readers can expect an analysis of how these internal conflicts may affect decision-making processes and policy directions. It could provide insight into the backgrounds of the advisers involved and the implications of their disagreements on broader political dynamics. Additionally, the piece may discuss how these rivalries reflect on the overall stability of the White House and its impact on governance.",
+  "model": "gpt-4o-mini"
+}

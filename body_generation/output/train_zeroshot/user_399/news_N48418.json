@@ -1,0 +1,21 @@
+{
+  "user_id": 399,
+  "candidate_news_id": "N48418",
+  "candidate_title": "2019 People's Choice Awards fashion hits and misses",
+  "user_history_count": 10,
+  "user_history": [
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "Lewisville Mother Of 2 Found Stabbed To Death Near Denton Creek",
+    "Mystery surrounds the last person missing from Camp Fire that left 85 dead in California",
+    "Alec, Hilaria Baldwin Aren't Having More Kids After Baby No. 5: 'This Is It'",
+    "UNT Employee Resigns After Using Racial Slur During Panel Discussion On Hate Speech",
+    "Fresh Off the Boat Canceled After Six Seasons",
+    "'I am scared all the time': Chimps and people are clashing in rural Uganda",
+    "Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Lewisville Mother Of 2 Found Stabbed To Death Near Denton Creek\"\n\"Mystery surrounds the last person missing from Camp Fire that left 85 dead in California\"\n\"Alec, Hilaria Baldwin Aren't Having More Kids After Baby No. 5: 'This Is It'\"\n\"UNT Employee Resigns After Using Racial Slur During Panel Discussion On Hate Speech\"\n\"Fresh Off the Boat Canceled After Six Seasons\"\n\"'I am scared all the time': Chimps and people are clashing in rural Uganda\"\n\"Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic\"\n\n[Candidate News Title]\n\"2019 People's Choice Awards fashion hits and misses\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"2019 People's Choice Awards fashion hits and misses,\" you may find a detailed analysis of the various outfits worn by celebrities at the event. The article is likely to highlight standout fashion choices that garnered praise, as well as those that received criticism. It could also provide insights into current trends observed on the red carpet and discuss how these choices reflect broader fashion themes. Additionally, there may be commentary on the significance of celebrity fashion in popular culture, although the specific details of each outfit are uncertain.",
+  "model": "gpt-4o-mini"
+}

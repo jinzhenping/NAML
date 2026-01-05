@@ -1,0 +1,21 @@
+{
+  "user_id": 127,
+  "candidate_news_id": "N91737",
+  "candidate_title": "13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid",
+  "user_history_count": 10,
+  "user_history": [
+    "25 celebrities who emerged as superstars in the 2010s",
+    "Why Emma Watson Is Calling Herself 'Self-Partnered' Ahead of Turning 30",
+    "The Latest: Kansas City to remove King's name from street",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "'Knit Wits' Club for Seniors Warming Hearts Through Knitting",
+    "Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math",
+    "Why Your Older Tattoo Can Cause a New Infection or Allergy",
+    "A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too",
+    "Disney+: All the Original TV Shows and Movies Set for Streaming Platform (Photos)",
+    "Powerful side-by-side portraits show people over 100 years old next to their younger selves"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"25 celebrities who emerged as superstars in the 2010s\"\n\"Why Emma Watson Is Calling Herself 'Self-Partnered' Ahead of Turning 30\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"'Knit Wits' Club for Seniors Warming Hearts Through Knitting\"\n\"Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math\"\n\"Why Your Older Tattoo Can Cause a New Infection or Allergy\"\n\"A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too\"\n\"Disney+: All the Original TV Shows and Movies Set for Streaming Platform (Photos)\"\n\"Powerful side-by-side portraits show people over 100 years old next to their younger selves\"\n\n[Candidate News Title]\n\"13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid,\" the user is likely to find a critical examination of Disney's casting choices, particularly regarding representation and diversity in film. The piece may present Navarro's perspective on the implications of casting decisions in relation to race and authenticity in storytelling. Additionally, it could include a discussion of broader industry trends related to inclusivity and the reactions from fans and critics alike. Overall, the article is likely to provide insights into the ongoing conversation about representation in the entertainment industry, although the specifics of Navarro's arguments may vary.",
+  "model": "gpt-4o-mini"
+}

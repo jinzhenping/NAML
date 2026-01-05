@@ -1,0 +1,21 @@
+{
+  "user_id": 269,
+  "candidate_news_id": "N56999",
+  "candidate_title": "Why 17-Year-Old Can't Get Out of Her Seatbelt",
+  "user_history_count": 10,
+  "user_history": [
+    "America's best inexpensive steakhouses",
+    "LSU, Ohio State, and Clemson control path to College Football Playoff, but who else does too?",
+    "No. 7 Minnesota seeks new era for long-languishing program",
+    "How to watch Mercury travel across the face of the Sun on Monday",
+    "Fast food cashier and manager fired for refusing to serve police officer",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "Wake Forest loses star WR Sage Surratt for the season ahead of showdown with Clemson",
+    "Trump crows after hearing, says diplomats stumped by 'impeachable' offense question",
+    "Earth was on the other side of the galaxy when dinosaurs reigned",
+    "Qantas test flight from London to Sydney breaks record"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"America's best inexpensive steakhouses\"\n\"LSU, Ohio State, and Clemson control path to College Football Playoff, but who else does too?\"\n\"No. 7 Minnesota seeks new era for long-languishing program\"\n\"How to watch Mercury travel across the face of the Sun on Monday\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"Wake Forest loses star WR Sage Surratt for the season ahead of showdown with Clemson\"\n\"Trump crows after hearing, says diplomats stumped by 'impeachable' offense question\"\n\"Earth was on the other side of the galaxy when dinosaurs reigned\"\n\"Qantas test flight from London to Sydney breaks record\"\n\n[Candidate News Title]\n\"Why 17-Year-Old Can't Get Out of Her Seatbelt\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Why 17-Year-Old Can't Get Out of Her Seatbelt\" is likely to explore a specific incident involving a young person who faced challenges or restrictions related to seatbelt usage. Readers may expect a detailed examination of the circumstances surrounding this situation, including potential safety regulations, legal implications, or personal stories that shed light on the broader issue of seatbelt compliance among teenagers. The article may also discuss how societal attitudes towards safety equipment influence behaviors, and it could provide insights into measures that could prevent similar situations in the future.",
+  "model": "gpt-4o-mini"
+}

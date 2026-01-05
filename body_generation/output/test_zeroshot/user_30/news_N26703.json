@@ -1,0 +1,21 @@
+{
+  "user_id": 30,
+  "candidate_news_id": "N26703",
+  "candidate_title": "Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame",
+  "user_history_count": 10,
+  "user_history": [
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "President Trump says UFC reception was 'like walking into a Trump Rally'",
+    "Stephen Strasburg opts out of contract with Nationals. What now?",
+    "This is Why Your Dog Follows You to the Bathroom",
+    "Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!",
+    "Best Ski Resorts in the US",
+    "Far-reaching snowstorm may take shape over US",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "Dotson had 22 points, No. 3 Kansas edges UNC Greensboro",
+    "Kentucky new No. 1 in AP Top 25 after beating Michigan State"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"President Trump says UFC reception was 'like walking into a Trump Rally'\"\n\"Stephen Strasburg opts out of contract with Nationals. What now?\"\n\"This is Why Your Dog Follows You to the Bathroom\"\n\"Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!\"\n\"Best Ski Resorts in the US\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"Dotson had 22 points, No. 3 Kansas edges UNC Greensboro\"\n\"Kentucky new No. 1 in AP Top 25 after beating Michigan State\"\n\n[Candidate News Title]\n\"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\" is likely to explore the circumstances surrounding Mason Rudolph's recent incident during a football game. Readers can expect an analysis of the hit he received, possibly including opinions from sports analysts and commentators about the accountability for the incident. The piece may also discuss the implications for Rudolph's performance and the broader conversation about player safety in football. Additionally, it could touch on fan reactions and how this incident may affect the team's dynamics moving forward.",
+  "model": "gpt-4o-mini"
+}

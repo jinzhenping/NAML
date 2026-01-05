@@ -1,0 +1,21 @@
+{
+  "user_id": 243,
+  "candidate_news_id": "N69426",
+  "candidate_title": "Republicans Know Trump Is Innocent They're Trying to Figure Out Why",
+  "user_history_count": 10,
+  "user_history": [
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "The News In Cartoons",
+    "Dez Bryant plans to reach out to NFL teams in two weeks",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Duluth Trading Co. makes Tennessee debut with Franklin location",
+    "Greg Schiano reportedly making 'significant demands' in Rutgers talks",
+    "The News In Cartoons",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"The News In Cartoons\"\n\"Dez Bryant plans to reach out to NFL teams in two weeks\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Duluth Trading Co. makes Tennessee debut with Franklin location\"\n\"Greg Schiano reportedly making 'significant demands' in Rutgers talks\"\n\"The News In Cartoons\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\n[Candidate News Title]\n\"Republicans Know Trump Is Innocent They're Trying to Figure Out Why\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Republicans Know Trump Is Innocent They're Trying to Figure Out Why,\" the user may expect to read an exploration of the current Republican Party's stance on Donald Trump's legal issues. The piece could discuss how party members perceive Trump's innocence in various allegations while grappling with the political implications of these views. It is likely to include insights into internal party debates, strategies for maintaining support, and potential motivations behind their defense of Trump. Overall, the article is expected to provide a nuanced examination of the intersection between legal matters and political strategy within the Republican Party.",
+  "model": "gpt-4o-mini"
+}

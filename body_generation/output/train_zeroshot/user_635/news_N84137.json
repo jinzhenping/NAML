@@ -1,0 +1,21 @@
+{
+  "user_id": 635,
+  "candidate_news_id": "N84137",
+  "candidate_title": "Why Do Cats Meow?",
+  "user_history_count": 10,
+  "user_history": [
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says",
+    "CEO of Cedar Point's parent company says changes will be made to parking as Gold Pass sales spike",
+    "Pentagon leader appeals to Trump to allow military justice cases to proceed unfettered",
+    "Pro disqualified from Q-School for failing to sign scorecard",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Australian tourist killed by elephant in Namibia",
+    "Woods made the right call keeping Reed in the U.S. fold",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "Sessions wins endorsement from key GOP senators"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says\"\n\"CEO of Cedar Point's parent company says changes will be made to parking as Gold Pass sales spike\"\n\"Pentagon leader appeals to Trump to allow military justice cases to proceed unfettered\"\n\"Pro disqualified from Q-School for failing to sign scorecard\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Woods made the right call keeping Reed in the U.S. fold\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"Sessions wins endorsement from key GOP senators\"\n\n[Candidate News Title]\n\"Why Do Cats Meow?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Why Do Cats Meow?\", the user can expect to read about the various reasons behind the vocalizations of domestic cats. The content is likely to explore how meowing serves as a form of communication between cats and humans, as well as the different contexts in which cats may meow, such as seeking attention, expressing discomfort, or indicating hunger. Additionally, the article may include insights into the evolution of this behavior and how it differs from the vocalizations of wild felines. Overall, it aims to provide a deeper understanding of feline communication.",
+  "model": "gpt-4o-mini"
+}

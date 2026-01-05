@@ -1,0 +1,21 @@
+{
+  "user_id": 948,
+  "candidate_news_id": "N26703",
+  "candidate_title": "Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame",
+  "user_history_count": 10,
+  "user_history": [
+    "200 Shocking Home Photos You Have to See",
+    "Japan Wants You To Stop Buying All Its Skyline GT-Rs",
+    "A Trump administration strategy led to the child migrant backup crisis at the border",
+    "Stolen treasures still waiting to be recovered",
+    "Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded",
+    "Senior Trump official embellished résumé, had face on fake Time cover",
+    "'Priceless' finds that turned out to be worthless",
+    "Carroll Shelby's Grandson Talks Ford v Ferrari, Cars, and the Family Business",
+    "Is retirement dying? The old work model is disappearing for Boomers, Gen Xers",
+    "Divers salvage 100-year-old liquor from WWI shipwreck"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"200 Shocking Home Photos You Have to See\"\n\"Japan Wants You To Stop Buying All Its Skyline GT-Rs\"\n\"A Trump administration strategy led to the child migrant backup crisis at the border\"\n\"Stolen treasures still waiting to be recovered\"\n\"Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded\"\n\"Senior Trump official embellished résumé, had face on fake Time cover\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Carroll Shelby's Grandson Talks Ford v Ferrari, Cars, and the Family Business\"\n\"Is retirement dying? The old work model is disappearing for Boomers, Gen Xers\"\n\"Divers salvage 100-year-old liquor from WWI shipwreck\"\n\n[Candidate News Title]\n\"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame,\" you might expect a discussion around the incident involving Mason Rudolph and the subsequent reactions from fans, analysts, and sports commentators. The article may explore the circumstances of the incident, including the implications of player safety in football, and how such events influence public perception of accountability in sports. Additionally, it could present varying opinions on whether Rudolph deserves criticism or if the focus should shift to broader issues within the game.",
+  "model": "gpt-4o-mini"
+}

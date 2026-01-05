@@ -1,0 +1,21 @@
+{
+  "user_id": 478,
+  "candidate_news_id": "N55944",
+  "candidate_title": "4 injured in shooting at adult club in Kansas City, Missouri",
+  "user_history_count": 10,
+  "user_history": [
+    "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+    "Thousands lose power as severe thunderstorms sweep north",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Bette Midler mocks Lori Loughlin's college admission scandal",
+    "The 50 Best One-Hit Wonders of All Time",
+    "High Lake Michigan Water Level and Strong Winds Lead to Flooding in New Buffalo",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "Rare deer spotted in Montana",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "A man dies in Hawaii after falling into a lava tube in his yard"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"Thousands lose power as severe thunderstorms sweep north\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Bette Midler mocks Lori Loughlin's college admission scandal\"\n\"The 50 Best One-Hit Wonders of All Time\"\n\"High Lake Michigan Water Level and Strong Winds Lead to Flooding in New Buffalo\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"Rare deer spotted in Montana\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\n[Candidate News Title]\n\"4 injured in shooting at adult club in Kansas City, Missouri\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the shooting at an adult club in Kansas City, Missouri, is likely to detail the circumstances surrounding the incident, including the number of individuals injured and any ongoing investigations. It may provide information on the location and time of the shooting, as well as any responses from local law enforcement. Additionally, the article could explore the community's reaction to the event and any previous incidents at the venue. Overall, readers can expect a straightforward report focused on the facts of the situation and its implications for public safety.",
+  "model": "gpt-4o-mini"
+}

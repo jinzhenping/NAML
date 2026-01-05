@@ -1,0 +1,21 @@
+{
+  "user_id": 583,
+  "candidate_news_id": "N107199",
+  "candidate_title": "Wilson deletes tweet of him standing over concussed Smith-Schuster",
+  "user_history_count": 10,
+  "user_history": [
+    "Best Buy releases Black Friday ad with Apple doorbusters, TV deals and early savings",
+    "Report: Stephen A. Smith strikes massive new deal with ESPN",
+    "Oprah Winfrey bought her next-door neighbor's California ranch for $6.85 million   take a look inside",
+    "Report: Ohio State asks NCAA to reinstate star DL Chase Young immediately",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "A Navy weapons station full of WWII-era ammunition bunkers could be transformed into 13,000 new homes in the Bay Area",
+    "College gymnast dies following training accident in Connecticut",
+    "What $1,000 invested in Snap, Lyft and other unicorn IPOs is worth today",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Best Buy releases Black Friday ad with Apple doorbusters, TV deals and early savings\"\n\"Report: Stephen A. Smith strikes massive new deal with ESPN\"\n\"Oprah Winfrey bought her next-door neighbor's California ranch for $6.85 million   take a look inside\"\n\"Report: Ohio State asks NCAA to reinstate star DL Chase Young immediately\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"A Navy weapons station full of WWII-era ammunition bunkers could be transformed into 13,000 new homes in the Bay Area\"\n\"College gymnast dies following training accident in Connecticut\"\n\"What $1,000 invested in Snap, Lyft and other unicorn IPOs is worth today\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000\"\n\n[Candidate News Title]\n\"Wilson deletes tweet of him standing over concussed Smith-Schuster\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent removal of a tweet by a prominent figure, Wilson, who was pictured standing over a concussed player, Smith-Schuster. Readers can expect to find analysis on the implications of this action, including potential backlash or public perception regarding player safety and sportsmanship. The article may also explore Wilson's motivations for deleting the tweet and the broader context surrounding player injuries in the NFL, as well as reactions from fans and analysts.",
+  "model": "gpt-4o-mini"
+}

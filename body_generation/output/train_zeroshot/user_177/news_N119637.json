@@ -1,0 +1,21 @@
+{
+  "user_id": 177,
+  "candidate_news_id": "N119637",
+  "candidate_title": "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out",
+  "user_history_count": 10,
+  "user_history": [
+    "Dwayne Johnson Jokingly Warns His Mom About Her 'Magic Mike' Birthday Celebration in Vegas",
+    "The best places to raise a family in the Southwest",
+    "The best places to raise a family in the West",
+    "A heartbreaking photo of a dog riding a bus alone went viral, and now people want to adopt her",
+    "The most affordable places with the best schools",
+    "The best places to raise a family in the West",
+    "50 states, 50 places: The top natural wonder in your state",
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "One of FBI's Most Wanted fugitives offers surrender"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dwayne Johnson Jokingly Warns His Mom About Her 'Magic Mike' Birthday Celebration in Vegas\"\n\"The best places to raise a family in the Southwest\"\n\"The best places to raise a family in the West\"\n\"A heartbreaking photo of a dog riding a bus alone went viral, and now people want to adopt her\"\n\"The most affordable places with the best schools\"\n\"The best places to raise a family in the West\"\n\"50 states, 50 places: The top natural wonder in your state\"\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\n[Candidate News Title]\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out,\" they may expect to read about Halle Berry's recent fitness journey, focusing on her dedication to maintaining a healthy lifestyle. The article is likely to discuss her workout routines and dietary choices that have contributed to her impressive physique, alongside insights into her engagement with fans on social media. Additionally, it may examine the reactions from her followers, possibly highlighting comments or discussions about body image and fitness inspiration.",
+  "model": "gpt-4o-mini"
+}

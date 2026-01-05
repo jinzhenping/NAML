@@ -1,0 +1,21 @@
+{
+  "user_id": 259,
+  "candidate_news_id": "N60014",
+  "candidate_title": "Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this",
+  "user_history_count": 10,
+  "user_history": [
+    "Liz Cheney leads GOP field by 20 points in potential Wyoming Senate race: poll",
+    "Matt Ryan will miss his first start in a decade due to ankle injury",
+    "Report: Brady frustrated with Patriots about Brown, Gordon",
+    "Redskins' Haskins calls out Peterson on Twitter",
+    "Fox News contributor: 'Most likely' outcome is Trump doesn't run in 2020",
+    "Refs blow whistle early, cost Bucs late go-ahead TD in Titans win",
+    "Prosecutors want black judge who criticized incarceration rates of African Americans removed",
+    "What's behind the 'mystery surcharge' at some California gas stations?",
+    "How to Split an Apple in Half With Your Bare Hands",
+    "Latest Australia shark attack sparks tourism concerns"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Liz Cheney leads GOP field by 20 points in potential Wyoming Senate race: poll\"\n\"Matt Ryan will miss his first start in a decade due to ankle injury\"\n\"Report: Brady frustrated with Patriots about Brown, Gordon\"\n\"Redskins' Haskins calls out Peterson on Twitter\"\n\"Fox News contributor: 'Most likely' outcome is Trump doesn't run in 2020\"\n\"Refs blow whistle early, cost Bucs late go-ahead TD in Titans win\"\n\"Prosecutors want black judge who criticized incarceration rates of African Americans removed\"\n\"What's behind the 'mystery surcharge' at some California gas stations?\"\n\"How to Split an Apple in Half With Your Bare Hands\"\n\"Latest Australia shark attack sparks tourism concerns\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this,\" the user may expect a discussion on the implications of Kaepernick's NFL workout, including its significance in the context of his career and the broader issues of racial justice and activism in sports. The piece is likely to explore various perspectives on whether this opportunity is a meaningful step forward or simply a reflection of the challenges he has faced. Additionally, it may provide insights into the reactions from fans, players, and the league itself, highlighting the ongoing dialogue surrounding Kaepernick's legacy.",
+  "model": "gpt-4o-mini"
+}

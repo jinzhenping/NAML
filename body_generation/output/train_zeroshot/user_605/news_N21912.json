@@ -1,0 +1,21 @@
+{
+  "user_id": 605,
+  "candidate_news_id": "N21912",
+  "candidate_title": "Prince Charles Looks in Awe of Master Archie at Christening",
+  "user_history_count": 10,
+  "user_history": [
+    "Starbucks unveils black Phantom Frappuccino for Halloween",
+    "14 Weird Rules Fast-Food Employees Have to Follow",
+    "This Is 1 Symptom You Should Never Ignore After Sex, According to an Ob-Gyn",
+    "Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged",
+    "Woman's awake brain surgery livestreamed on Facebook",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Halloween hangover! Here are 5 fun things to do with your kids' leftover candy",
+    "Bette Midler and Kathy Najimy Dish on Upcoming 'Hocus Pocus' Sequel and If They'd Be Involved",
+    "Anonymous Trump official writing 'unprecedented' inside take",
+    "Mixed martial arts star McGregor convicted of assault, fined 1,000 euro"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Starbucks unveils black Phantom Frappuccino for Halloween\"\n\"14 Weird Rules Fast-Food Employees Have to Follow\"\n\"This Is 1 Symptom You Should Never Ignore After Sex, According to an Ob-Gyn\"\n\"Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged\"\n\"Woman's awake brain surgery livestreamed on Facebook\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Halloween hangover! Here are 5 fun things to do with your kids' leftover candy\"\n\"Bette Midler and Kathy Najimy Dish on Upcoming 'Hocus Pocus' Sequel and If They'd Be Involved\"\n\"Anonymous Trump official writing 'unprecedented' inside take\"\n\"Mixed martial arts star McGregor convicted of assault, fined 1,000 euro\"\n\n[Candidate News Title]\n\"Prince Charles Looks in Awe of Master Archie at Christening\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may anticipate a detailed account of Prince Charles's reactions during the christening of Master Archie, the son of Prince Harry and Meghan Markle. It is likely to explore the significance of the event within the context of the royal family, highlighting any traditions observed and the public's interest in the young prince. Additionally, the piece might discuss the atmosphere of the ceremony and any notable attendees, thereby providing insights into the royal family's dynamics at this important occasion.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 399,
+  "candidate_news_id": "N58641",
+  "candidate_title": "Car of Marine linked to Virginia slaying is found in South Carolina, authorities say",
+  "user_history_count": 10,
+  "user_history": [
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "Lewisville Mother Of 2 Found Stabbed To Death Near Denton Creek",
+    "Mystery surrounds the last person missing from Camp Fire that left 85 dead in California",
+    "Alec, Hilaria Baldwin Aren't Having More Kids After Baby No. 5: 'This Is It'",
+    "UNT Employee Resigns After Using Racial Slur During Panel Discussion On Hate Speech",
+    "Fresh Off the Boat Canceled After Six Seasons",
+    "'I am scared all the time': Chimps and people are clashing in rural Uganda",
+    "Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Lewisville Mother Of 2 Found Stabbed To Death Near Denton Creek\"\n\"Mystery surrounds the last person missing from Camp Fire that left 85 dead in California\"\n\"Alec, Hilaria Baldwin Aren't Having More Kids After Baby No. 5: 'This Is It'\"\n\"UNT Employee Resigns After Using Racial Slur During Panel Discussion On Hate Speech\"\n\"Fresh Off the Boat Canceled After Six Seasons\"\n\"'I am scared all the time': Chimps and people are clashing in rural Uganda\"\n\"Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic\"\n\n[Candidate News Title]\n\"Car of Marine linked to Virginia slaying is found in South Carolina, authorities say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent discovery of a car belonging to a Marine that is connected to a slaying in Virginia, with authorities in South Carolina confirming the find. Readers can expect details regarding the circumstances surrounding the investigation, including any potential leads or evidence found in the vehicle. The article may also provide context about the Marine's background and any connections to the case, as well as insights into how this development affects the ongoing investigation. Overall, the focus will be on the implications of this discovery in relation to the slaying.",
+  "model": "gpt-4o-mini"
+}

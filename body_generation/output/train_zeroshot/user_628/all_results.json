@@ -1,0 +1,97 @@
+[
+  {
+    "user_id": 628,
+    "candidate_news_id": "N22796",
+    "candidate_title": "Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump",
+    "user_history_count": 8,
+    "user_history": [
+      "Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween",
+      "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt",
+      "Bad news for Boeing: Company says more 737 NGs found to have wing cracks",
+      "Lane Kiffin interested in Florida State head coach job"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween\"\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"Bad news for Boeing: Company says more 737 NGs found to have wing cracks\"\n\"Lane Kiffin interested in Florida State head coach job\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to encounter a discussion of Nikki Haley's claims regarding her top aides' attempts to persuade her to intervene in the political landscape by undermining former President Donald Trump. The piece may explore the context of these claims, including the motivations behind her aides' suggestions and the implications for Haley's political ambitions. Additionally, it could touch on the broader impact of such actions within the Republican Party and potential reactions from Trump supporters, although the specifics remain uncertain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 628,
+    "candidate_news_id": "N125945",
+    "candidate_title": "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+    "user_history_count": 8,
+    "user_history": [
+      "Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween",
+      "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt",
+      "Bad news for Boeing: Company says more 737 NGs found to have wing cracks",
+      "Lane Kiffin interested in Florida State head coach job"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween\"\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"Bad news for Boeing: Company says more 737 NGs found to have wing cracks\"\n\"Lane Kiffin interested in Florida State head coach job\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect to read about Tamron Hall's departure from the Today Show, including her reflections on the decision and the circumstances surrounding it. The piece is likely to provide insights into Hall's career trajectory and her thoughts on the media landscape, possibly touching on her relationship with former colleague Megyn Kelly, particularly in light of Kelly's reported financial settlement. This context may help illustrate Hall's perspective on the evolving dynamics within television news and daytime programming.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 628,
+    "candidate_news_id": "N99177",
+    "candidate_title": "Why Kate & Meghan Were on Different Balconies for Remembrance Sunday",
+    "user_history_count": 8,
+    "user_history": [
+      "Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween",
+      "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt",
+      "Bad news for Boeing: Company says more 737 NGs found to have wing cracks",
+      "Lane Kiffin interested in Florida State head coach job"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween\"\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"Bad news for Boeing: Company says more 737 NGs found to have wing cracks\"\n\"Lane Kiffin interested in Florida State head coach job\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Why Kate & Meghan Were on Different Balconies for Remembrance Sunday\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Why Kate & Meghan Were on Different Balconies for Remembrance Sunday,\" the user is likely to find an analysis of the recent public appearance of Kate Middleton and Meghan Markle during the Remembrance Sunday events. The piece may explore the reasons behind their separate locations, potentially touching on underlying themes of royal family dynamics and public perceptions. It could also discuss the significance of the event and how the positioning of both figures reflects their current relationship with the royal family and the media.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 628,
+    "candidate_news_id": "N32154",
+    "candidate_title": "Porsche launches into second story of New Jersey building, killing 2",
+    "user_history_count": 8,
+    "user_history": [
+      "Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween",
+      "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt",
+      "Bad news for Boeing: Company says more 737 NGs found to have wing cracks",
+      "Lane Kiffin interested in Florida State head coach job"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween\"\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"Bad news for Boeing: Company says more 737 NGs found to have wing cracks\"\n\"Lane Kiffin interested in Florida State head coach job\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely reports on a tragic incident involving a Porsche that crashed into the second story of a building in New Jersey, resulting in the deaths of two individuals. Readers may expect details about the circumstances surrounding the crash, including potential causes, the location of the incident, and any information regarding the victims. Additionally, there could be insights into emergency response efforts and the implications of such incidents on local safety regulations or automotive practices. The article may also explore community reactions to this event, though this remains uncertain.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 628,
+    "candidate_news_id": "N12613",
+    "candidate_title": "Andrew Yang's Campaign Has a Lot of Money. Now What?",
+    "user_history_count": 8,
+    "user_history": [
+      "Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage",
+      "Multiple Houses on Fire After Plane Crashes in NJ",
+      "Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween",
+      "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt",
+      "Bad news for Boeing: Company says more 737 NGs found to have wing cracks",
+      "Lane Kiffin interested in Florida State head coach job"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween\"\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"Bad news for Boeing: Company says more 737 NGs found to have wing cracks\"\n\"Lane Kiffin interested in Florida State head coach job\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Andrew Yang's Campaign Has a Lot of Money. Now What?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Andrew Yang's Campaign Has a Lot of Money. Now What?\", the user may expect an analysis of Andrew Yang's current financial standing in his campaign, including details about his fundraising efforts and financial strategy moving forward. The piece is likely to explore how the influx of funds could impact his campaign activities, such as advertising and outreach, while also addressing any challenges he may face despite having substantial financial resources. Additionally, the article might speculate on potential strategies Yang could employ to leverage his funding for greater political influence.",
+    "model": "gpt-4o-mini"
+  }
+]

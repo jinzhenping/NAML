@@ -1,0 +1,21 @@
+{
+  "user_id": 945,
+  "candidate_news_id": "N112536",
+  "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+  "user_history_count": 10,
+  "user_history": [
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "If You're a Fan of French Fries, You'll Love This Healthy Italian Alternative Made From Chickpeas",
+    "'The Little Mermaid Live!': TV Review",
+    "Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9",
+    "We tried McDonald's new Snickerdoodle McFlurry, and here's our honest review",
+    "'We are in a war': In Hong Kong, an accountant by day is a street fighter by night",
+    "Thousands of people have problems accessing Disney+, and they're not happy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"If You're a Fan of French Fries, You'll Love This Healthy Italian Alternative Made From Chickpeas\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"USC Student Found Dead In Off-Campus Housing Brings Semester Death Toll To 9\"\n\"We tried McDonald's new Snickerdoodle McFlurry, and here's our honest review\"\n\"'We are in a war': In Hong Kong, an accountant by day is a street fighter by night\"\n\"Thousands of people have problems accessing Disney+, and they're not happy\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a specific location in the United States that has experienced consistently warm temperatures exceeding 80 degrees since March. Readers can expect information on the geographical context, including the climate characteristics of this area, potential impacts on local lifestyle, and how residents are adapting to such prolonged warmth. Additionally, the piece may explore any related phenomena, such as tourism trends or environmental considerations. There could be insights into how this climate pattern is unusual or significant, though the specific reasons for the sustained heat are uncertain.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 778,
+  "candidate_news_id": "N18190",
+  "candidate_title": "30 Best Black Friday Deals from Costco",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Ohio State asks NCAA to reinstate star DL Chase Young immediately",
+    "Why Auburn is the center of the college football universe in November",
+    "Comics - 'Half Full' by Maria Scrivan",
+    "Police: Man shot friend in head with shotgun during argument over LSU-Alabama game",
+    "40 Restaurant Meals You Should Never Eat After 40",
+    "Ohio State star Chase Young to miss one more game, return vs. Penn State",
+    "Evansville's upset at No. 1 Kentucky illustrates college basketball's uncertain landscape",
+    "We Tried 9 Packaged Stuffings and There Was a Clear Winner",
+    "Hong Kong: Student protesters fortify campus occupations as city braces for more violence",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Ohio State asks NCAA to reinstate star DL Chase Young immediately\"\n\"Why Auburn is the center of the college football universe in November\"\n\"Comics - 'Half Full' by Maria Scrivan\"\n\"Police: Man shot friend in head with shotgun during argument over LSU-Alabama game\"\n\"40 Restaurant Meals You Should Never Eat After 40\"\n\"Ohio State star Chase Young to miss one more game, return vs. Penn State\"\n\"Evansville's upset at No. 1 Kentucky illustrates college basketball's uncertain landscape\"\n\"We Tried 9 Packaged Stuffings and There Was a Clear Winner\"\n\"Hong Kong: Student protesters fortify campus occupations as city braces for more violence\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\n[Candidate News Title]\n\"30 Best Black Friday Deals from Costco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"30 Best Black Friday Deals from Costco,\" the user is likely to find a detailed breakdown of the most appealing discounts and promotions available at Costco during the Black Friday sales event. The content may include specific product categories, such as electronics, home goods, and groceries, highlighting items that offer significant savings compared to regular prices. Additionally, the article could provide tips on how to navigate the store efficiently or take advantage of online deals. Overall, readers can expect a comprehensive overview that guides them in maximizing their shopping experience during this busy retail period.",
+  "model": "gpt-4o-mini"
+}

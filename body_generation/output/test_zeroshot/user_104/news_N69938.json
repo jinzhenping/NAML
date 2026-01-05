@@ -1,0 +1,19 @@
+{
+  "user_id": 104,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 8,
+  "user_history": [
+    "U.S. Marshals Auctioning Off 149 Vehicles From DC Solar Scam",
+    "Painting that Nazis stole from Jewish family recovered from N.Y. museum",
+    "Singer Lauren Alaina Has Lost 25 Lbs. on Dancing with the Stars: 'None of My Clothes Fit'",
+    "Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo",
+    "1-ton boulder known as 'Wizard Rock' that disappeared from forest 'magically' returns",
+    "Lawyer: Trump's phone records back details of woman's claim",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Small Canadian island irate that Americans keep opening their mail"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"U.S. Marshals Auctioning Off 149 Vehicles From DC Solar Scam\"\n\"Painting that Nazis stole from Jewish family recovered from N.Y. museum\"\n\"Singer Lauren Alaina Has Lost 25 Lbs. on Dancing with the Stars: 'None of My Clothes Fit'\"\n\"Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo\"\n\"1-ton boulder known as 'Wizard Rock' that disappeared from forest 'magically' returns\"\n\"Lawyer: Trump's phone records back details of woman's claim\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent, discreet meeting between Meghan Markle and Hillary Clinton at Frogmore Cottage, potentially exploring the topics they may have addressed during their time together. Readers might expect insights into the nature of their conversation, which could range from shared interests in social issues to personal anecdotes. The piece may also touch on the significance of their meeting in the context of contemporary political and cultural discussions, highlighting both figures' influence and public perceptions.",
+  "model": "gpt-4o-mini"
+}

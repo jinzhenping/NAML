@@ -1,0 +1,21 @@
+{
+  "user_id": 470,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet",
+    "Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out",
+    "Trump says he's not watching impeachment hearing   then critiques it",
+    "105 Black Friday Deals You Can Start Shopping Today",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "Week in celebrity photos for Nov. 11-15, 2019",
+    "How To Make Texas Chicken-Fried Steak & Creamed Gravy By Rachael",
+    "Between 1,000 to 2,000 people get the plague every year -- including about 7 in the US",
+    "Mo'Nique Files Race and Sex Discrimination Suit Against Netflix",
+    "Aaron Carter admitted to Florida hospital"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet\"\n\"Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out\"\n\"Trump says he's not watching impeachment hearing   then critiques it\"\n\"105 Black Friday Deals You Can Start Shopping Today\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Week in celebrity photos for Nov. 11-15, 2019\"\n\"How To Make Texas Chicken-Fried Steak & Creamed Gravy By Rachael\"\n\"Between 1,000 to 2,000 people get the plague every year -- including about 7 in the US\"\n\"Mo'Nique Files Race and Sex Discrimination Suit Against Netflix\"\n\"Aaron Carter admitted to Florida hospital\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\" is likely to present a curated list of innovative and appealing technology gifts suitable for various occasions, such as holidays or special events. Readers may anticipate detailed descriptions of each gift, including features, functionalities, and potential uses, appealing to a broad audience. The article might cover a range of price points, making it accessible to different budgets. It could also include insights into the latest trends in tech, offering readers a glimpse into popular items that are currently well-received.",
+  "model": "gpt-4o-mini"
+}

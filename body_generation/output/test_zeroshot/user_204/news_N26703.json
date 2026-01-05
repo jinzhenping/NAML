@@ -1,0 +1,21 @@
+{
+  "user_id": 204,
+  "candidate_news_id": "N26703",
+  "candidate_title": "Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame",
+  "user_history_count": 10,
+  "user_history": [
+    "NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "Far-reaching snowstorm may take shape over US",
+    "The healthiest fast food option at every well-known chain",
+    "9 Best Beaches in Charleston",
+    "These are the best times to visit New York City",
+    "Best and Worst Run States in America: A Survey of All 50"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"Far-reaching snowstorm may take shape over US\"\n\"The healthiest fast food option at every well-known chain\"\n\"9 Best Beaches in Charleston\"\n\"These are the best times to visit New York City\"\n\"Best and Worst Run States in America: A Survey of All 50\"\n\n[Candidate News Title]\n\"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent incident involving Mason Rudolph, who was struck in the head with his own helmet during a game. It may analyze the reactions surrounding the event, particularly the perception that Rudolph is not receiving adequate blame for the circumstances that led to the incident. Additionally, the article could delve into the implications of player safety in the NFL, examining how such incidents are viewed in the context of player conduct and accountability. Overall, readers might expect a balanced exploration of the incident and its broader significance within the sport.",
+  "model": "gpt-4o-mini"
+}

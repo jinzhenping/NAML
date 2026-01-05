@@ -1,0 +1,21 @@
+{
+  "user_id": 896,
+  "candidate_news_id": "N34548",
+  "candidate_title": "Kate Middleton Shows Off Motherly Side as She Bonds with Families at Opening of Children's Hospice",
+  "user_history_count": 10,
+  "user_history": [
+    "Rex Tillerson denies he tried to undermine Trump, says Nikki Haley was 'rarely present' at meetings",
+    "Ahead of this week's rematch, Tom Brady says he's still not quite over Super Bowl loss to Eagles",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Cincinnati Bengals cut veteran linebacker Preston Brown",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "The world's largest trade deal could be signed in 2020",
+    "Congressman cryptically spells out 'EPSTEIN DIDN'T KILL HIMSELF' using first letter of 23 tweets",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+    "The Latest: Israel resumes strikes on Gaza after rocket fire",
+    "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Rex Tillerson denies he tried to undermine Trump, says Nikki Haley was 'rarely present' at meetings\"\n\"Ahead of this week's rematch, Tom Brady says he's still not quite over Super Bowl loss to Eagles\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Cincinnati Bengals cut veteran linebacker Preston Brown\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"The world's largest trade deal could be signed in 2020\"\n\"Congressman cryptically spells out 'EPSTEIN DIDN'T KILL HIMSELF' using first letter of 23 tweets\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"The Latest: Israel resumes strikes on Gaza after rocket fire\"\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n[Candidate News Title]\n\"Kate Middleton Shows Off Motherly Side as She Bonds with Families at Opening of Children's Hospice\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about Kate Middleton engaging with families at the opening of a children's hospice, highlighting her supportive role as a mother and public figure. The piece may delve into her interactions with the families, possibly sharing anecdotes or quotes that reflect her commitment to children's health and well-being. Additionally, it is likely to cover the significance of the hospice's opening and how it aims to support families in need. Overall, the article may provide insights into Middleton's philanthropic efforts and her approach to motherhood in a public setting.",
+  "model": "gpt-4o-mini"
+}

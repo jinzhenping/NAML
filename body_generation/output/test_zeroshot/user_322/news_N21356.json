@@ -1,0 +1,21 @@
+{
+  "user_id": 322,
+  "candidate_news_id": "N21356",
+  "candidate_title": "5 arrested in connection with deadly shooting at Airbnb Halloween party",
+  "user_history_count": 10,
+  "user_history": [
+    "Best Dive Bar in Every State",
+    "This little Montana town is full of Power Wagons and Mustangs",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "SEMA 2019 Photo Highlights From Las Vegas",
+    "This 1973 Ford Capri Race Car Makes the Ultimate V-6 Sound",
+    "Charlize Theron Just Ditched Her Bowl Cut for a Bright Blonde Pixie",
+    "These Are America's Favorite Liquor Brands",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers",
+    "I'd Choose This Rad Ford Edsel Camper Over a Motel Any Day"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Best Dive Bar in Every State\"\n\"This little Montana town is full of Power Wagons and Mustangs\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"SEMA 2019 Photo Highlights From Las Vegas\"\n\"This 1973 Ford Capri Race Car Makes the Ultimate V-6 Sound\"\n\"Charlize Theron Just Ditched Her Bowl Cut for a Bright Blonde Pixie\"\n\"These Are America's Favorite Liquor Brands\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers\"\n\"I'd Choose This Rad Ford Edsel Camper Over a Motel Any Day\"\n\n[Candidate News Title]\n\"5 arrested in connection with deadly shooting at Airbnb Halloween party\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"5 arrested in connection with deadly shooting at Airbnb Halloween party\" is likely to provide an overview of a recent incident involving a shooting that occurred at an Airbnb rental during a Halloween event. Readers may expect details on the circumstances surrounding the event, including the timeline of the shooting and any information about the party itself. The article could also discuss the identities of those arrested, potential motives, and the broader implications for safety at rental properties. Additionally, there may be commentary on local law enforcement's response and community reactions to the incident.",
+  "model": "gpt-4o-mini"
+}

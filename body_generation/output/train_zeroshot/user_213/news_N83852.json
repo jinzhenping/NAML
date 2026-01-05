@@ -1,0 +1,21 @@
+{
+  "user_id": 213,
+  "candidate_news_id": "N83852",
+  "candidate_title": "Democrats face make-or-break moment on impeachment",
+  "user_history_count": 10,
+  "user_history": [
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "The world's most profitable company pays surprisingly little",
+    "Warren Leads Tight Iowa Race as Biden Fades, Poll Finds",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Presidents Cup captain's picks: What will Tiger Woods do?",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "Aaron Rodgers hints that lack of rest was the issue in L.A.",
+    "5 struggling teams that can still make NFL playoffs",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"The world's most profitable company pays surprisingly little\"\n\"Warren Leads Tight Iowa Race as Biden Fades, Poll Finds\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Presidents Cup captain's picks: What will Tiger Woods do?\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Aaron Rodgers hints that lack of rest was the issue in L.A.\"\n\"5 struggling teams that can still make NFL playoffs\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\n[Candidate News Title]\n\"Democrats face make-or-break moment on impeachment\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Democrats face make-or-break moment on impeachment\" is likely to discuss the current political climate surrounding impeachment proceedings involving key Democratic figures. Readers may expect an overview of the challenges and pressures the Democratic Party faces as they navigate this critical issue, including potential implications for party unity and electoral outcomes. The article could also provide insights into public opinion, recent polling data, and the strategic decisions that Democratic leaders may consider in the coming weeks to address or advance the impeachment process.",
+  "model": "gpt-4o-mini"
+}

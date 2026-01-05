@@ -1,0 +1,17 @@
+{
+  "user_id": 821,
+  "candidate_news_id": "N23077",
+  "candidate_title": "The most famous celebrity kids born this decade",
+  "user_history_count": 6,
+  "user_history": [
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "Alex Anthopoulos investigation proves the MLBPA is watching and will be heard",
+    "100 Most Popular Country Music Stars",
+    "Two versions of Texas collide over gun measures and mass shootings",
+    "Woods made the right call keeping Reed in the U.S. fold",
+    "Antonio Brown is exposing Roger Goodell's unchecked power to shut players out of the NFL"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"Alex Anthopoulos investigation proves the MLBPA is watching and will be heard\"\n\"100 Most Popular Country Music Stars\"\n\"Two versions of Texas collide over gun measures and mass shootings\"\n\"Woods made the right call keeping Reed in the U.S. fold\"\n\"Antonio Brown is exposing Roger Goodell's unchecked power to shut players out of the NFL\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"The most famous celebrity kids born this decade\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"The most famous celebrity kids born this decade,\" you can expect a detailed overview of notable children of celebrities who have gained public attention since 2010. The article is likely to highlight a selection of these kids, discussing their backgrounds, any public appearances, and how their parents' fame has influenced their own visibility. Additionally, it may explore trends related to celebrity culture and the phenomenon of \"nepo babies,\" where the children of famous individuals navigate their own paths in the spotlight.",
+  "model": "gpt-4o-mini"
+}

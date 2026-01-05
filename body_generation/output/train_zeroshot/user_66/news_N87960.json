@@ -1,0 +1,21 @@
+{
+  "user_id": 66,
+  "candidate_news_id": "N87960",
+  "candidate_title": "How to make your own mozzarella cheese",
+  "user_history_count": 10,
+  "user_history": [
+    "'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says",
+    "Kate Middleton Wore a Chic Print Dress for a Private Appearance at Kensington Palace",
+    "What it's like to cook for Kate Middleton and Prince William, according to Giada De Laurentiis",
+    "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+    "Meghan Markle's Leather Pencil Skirt is a Powerful Statement Piece",
+    "100 books to read in a lifetime   according to Amazon Books editors",
+    "Megyn Kelly and Rose McGowan selfie sparks speculation: 'Brainstorming'",
+    "'DWTS' Recap: A Fan Favorite Goes Home In Yet Another Crazy Elimination",
+    "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+    "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says\"\n\"Kate Middleton Wore a Chic Print Dress for a Private Appearance at Kensington Palace\"\n\"What it's like to cook for Kate Middleton and Prince William, according to Giada De Laurentiis\"\n\"Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge\"\n\"Meghan Markle's Leather Pencil Skirt is a Powerful Statement Piece\"\n\"100 books to read in a lifetime   according to Amazon Books editors\"\n\"Megyn Kelly and Rose McGowan selfie sparks speculation: 'Brainstorming'\"\n\"'DWTS' Recap: A Fan Favorite Goes Home In Yet Another Crazy Elimination\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup\"\n\n[Candidate News Title]\n\"How to make your own mozzarella cheese\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a detailed guide on the process of making mozzarella cheese at home. It may cover essential ingredients, such as milk and rennet, and outline the step-by-step procedures involved in curdling the milk, shaping the cheese, and achieving the desired texture. The piece could also provide tips on variations or flavoring techniques to enhance the cheese. Overall, the user can expect practical advice and insights into both the art and science of cheese-making, which may appeal to their culinary interests.",
+  "model": "gpt-4o-mini"
+}

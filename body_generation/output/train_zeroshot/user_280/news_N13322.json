@@ -1,0 +1,21 @@
+{
+  "user_id": 280,
+  "candidate_news_id": "N13322",
+  "candidate_title": "Rape victim rejects judge's offer: $150,000 for her, reduced sentence for attacker",
+  "user_history_count": 10,
+  "user_history": [
+    "12 ways your skin can react to stress, according to a dermatologist",
+    "Billie Is Normalizing Female Facial Hair By Asking Women to Take Part In Movember",
+    "No deal in Chicago teachers strike; classes out for 9th day",
+    "Father makes Halloween costumes for his son with cerebral palsy",
+    "Man wearing 'Jesus Saves' race bib collapses, saved by man named Jesus",
+    "Arizona 'Wizard Rock,' missing 1-ton boulder, mysteriously returns",
+    "New Delhi's toxic, polluted air chokes city's 20 million people, and the haze can be seen from space",
+    "This Man Is Behind Every Single Antique You See In Cracker Barrel Stores",
+    "Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations",
+    "John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"12 ways your skin can react to stress, according to a dermatologist\"\n\"Billie Is Normalizing Female Facial Hair By Asking Women to Take Part In Movember\"\n\"No deal in Chicago teachers strike; classes out for 9th day\"\n\"Father makes Halloween costumes for his son with cerebral palsy\"\n\"Man wearing 'Jesus Saves' race bib collapses, saved by man named Jesus\"\n\"Arizona 'Wizard Rock,' missing 1-ton boulder, mysteriously returns\"\n\"New Delhi's toxic, polluted air chokes city's 20 million people, and the haze can be seen from space\"\n\"This Man Is Behind Every Single Antique You See In Cracker Barrel Stores\"\n\"Mike 'The Situation' Sorrentino Fires Back After Steroid Accusations\"\n\"John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet\"\n\n[Candidate News Title]\n\"Rape victim rejects judge's offer: $150,000 for her, reduced sentence for attacker\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to encounter a detailed examination of a recent case involving a rape victim who has rejected a judge's offer of $150,000 in compensation in exchange for a reduced sentence for her attacker. The piece may explore the implications of her decision, including the challenges faced by victims in the legal system and the broader societal attitudes toward justice and accountability. Additionally, it could provide context on similar cases, highlighting the complexities of victim rights and the legal process surrounding sexual assault.",
+  "model": "gpt-4o-mini"
+}

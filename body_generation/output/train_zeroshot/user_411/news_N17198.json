@@ -1,0 +1,21 @@
+{
+  "user_id": 411,
+  "candidate_news_id": "N17198",
+  "candidate_title": "The Faroe Islands Will \"Close\" Again to All but 100 Volunteers and You Could Be 1 of Them",
+  "user_history_count": 10,
+  "user_history": [
+    "U.S. Navy Admiral Hails China's Professionalism in Disputed Seas",
+    "Cartel gunmen terrorize Mexican city, free El Chapo's son",
+    "Supreme Court tosses challenge to Republican-drawn Michigan electoral maps",
+    "Florida's long fight with Georgia over water to Apalachicola Bay and its oysters heads back to court in New Mexico",
+    "25 awesome gifts men actually want this year",
+    "FCC formally approves the T-Mobile-Sprint merger",
+    "7 biggest takeaways from the opening College Football Playoff rankings",
+    "Kroger is rebranding with a new logo and slogan",
+    "'I am scared all the time': Chimps and people are clashing in rural Uganda",
+    "The economic picture is darkening in states critical to Trump's reelection bid"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"U.S. Navy Admiral Hails China's Professionalism in Disputed Seas\"\n\"Cartel gunmen terrorize Mexican city, free El Chapo's son\"\n\"Supreme Court tosses challenge to Republican-drawn Michigan electoral maps\"\n\"Florida's long fight with Georgia over water to Apalachicola Bay and its oysters heads back to court in New Mexico\"\n\"25 awesome gifts men actually want this year\"\n\"FCC formally approves the T-Mobile-Sprint merger\"\n\"7 biggest takeaways from the opening College Football Playoff rankings\"\n\"Kroger is rebranding with a new logo and slogan\"\n\"'I am scared all the time': Chimps and people are clashing in rural Uganda\"\n\"The economic picture is darkening in states critical to Trump's reelection bid\"\n\n[Candidate News Title]\n\"The Faroe Islands Will \"Close\" Again to All but 100 Volunteers and You Could Be 1 of Them\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The Faroe Islands Will 'Close' Again to All but 100 Volunteers and You Could Be 1 of Them\" is likely to discuss a unique initiative by the Faroe Islands to limit access to the region, allowing only a select number of volunteers. Readers may expect to learn about the reasons behind this decision, which could involve efforts to protect local culture or the environment, as well as details on how to apply for the opportunity to visit. Additionally, the article may provide insights into the impact of such closures on tourism and local communities.",
+  "model": "gpt-4o-mini"
+}

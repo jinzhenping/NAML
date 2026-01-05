@@ -1,0 +1,21 @@
+{
+  "user_id": 937,
+  "candidate_news_id": "N127155",
+  "candidate_title": "Gwen Stefani Reveals New Nickname for Her and Blake Shelton",
+  "user_history_count": 10,
+  "user_history": [
+    "Michelle Obama Shows Off Her Abs in New Workout Photo: 'I'm Always Glad I Hit the Gym'",
+    "Tamron Hall says she 'never dealt' cocaine after reports say she confessed to doing so",
+    "Dennis Quaid Is Engaged to His Girlfriend Laura Savoie",
+    "The size of a bus, rare and endangered whale shark spotted off Florida coast",
+    "Road built by biblical villain uncovered in Jerusalem",
+    "'Go back to work': Outcry over deaths on Amazon's warehouse floor",
+    "North Texas Couple Moving Into New Home Sees It Destroyed By Tornado",
+    "Singer stands up to heckler who told her to take shirt off",
+    "Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family",
+    "Duchess Meghan Hopes Public Will 'Give Her a Break' After Speaking Out"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Michelle Obama Shows Off Her Abs in New Workout Photo: 'I'm Always Glad I Hit the Gym'\"\n\"Tamron Hall says she 'never dealt' cocaine after reports say she confessed to doing so\"\n\"Dennis Quaid Is Engaged to His Girlfriend Laura Savoie\"\n\"The size of a bus, rare and endangered whale shark spotted off Florida coast\"\n\"Road built by biblical villain uncovered in Jerusalem\"\n\"'Go back to work': Outcry over deaths on Amazon's warehouse floor\"\n\"North Texas Couple Moving Into New Home Sees It Destroyed By Tornado\"\n\"Singer stands up to heckler who told her to take shirt off\"\n\"Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family\"\n\"Duchess Meghan Hopes Public Will 'Give Her a Break' After Speaking Out\"\n\n[Candidate News Title]\n\"Gwen Stefani Reveals New Nickname for Her and Blake Shelton\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to learn about Gwen Stefani’s new nickname for herself and Blake Shelton, which may reflect their personal relationship dynamics or shared experiences. The piece is likely to provide context on how the couple has cultivated their public persona and how this nickname fits into their overall image. Additionally, it could explore the significance of such nicknames in celebrity culture, particularly among high-profile couples, and may include reactions from fans or other celebrities.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 18,
+  "candidate_news_id": "N8719",
+  "candidate_title": "Instagram-famous pilot reveals secrets people don't know about the job",
+  "user_history_count": 10,
+  "user_history": [
+    "Don't Save Too Little, or Too Much",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "The first thing 14 lottery winners have bought after finding out they were rich",
+    "Insiders predict: NFL week 10 winners",
+    "Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'",
+    "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup",
+    "The Infertility Secret I Kept From My Mother",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Former Seminoles star Deion Sanders is not candidate for Florida State football coaching job",
+    "5 struggling teams that can still make NFL playoffs"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Don't Save Too Little, or Too Much\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"The first thing 14 lottery winners have bought after finding out they were rich\"\n\"Insiders predict: NFL week 10 winners\"\n\"Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'\"\n\"4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup\"\n\"The Infertility Secret I Kept From My Mother\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Former Seminoles star Deion Sanders is not candidate for Florida State football coaching job\"\n\"5 struggling teams that can still make NFL playoffs\"\n\n[Candidate News Title]\n\"Instagram-famous pilot reveals secrets people don't know about the job\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Instagram-famous pilot reveals secrets people don't know about the job,\" the user can expect to read about the unique experiences and insights of a pilot who has gained popularity on social media. The piece may delve into lesser-known aspects of the aviation profession, such as the challenges pilots face, the lifestyle associated with frequent flying, and how social media influences their career. Additionally, it could explore the pilot's journey to fame and the impact of this platform on their professional life, providing a blend of personal anecdotes and industry insights.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 907,
+  "candidate_news_id": "N70063",
+  "candidate_title": "Palestinian death toll from Israeli strikes rises to 22: Gaza ministry",
+  "user_history_count": 10,
+  "user_history": [
+    "Simone Biles Shares Sweet Birthday Tribute for \"Man of My Dreams\" Stacey Ervin Jr.",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Nurses reveal 10 things they wish they could tell patients, but can't",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "The states where taxpayers should worry most about pensions",
+    "Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say",
+    "Solange Knowles splits with husband ahead of anniversary",
+    "Tarek El Moussa: I'm 'Looking Forward' to Knowing Christina Anstead's Son",
+    "Salmonella linked to ground beef",
+    "30 Thanksgiving Casserole Recipes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Simone Biles Shares Sweet Birthday Tribute for \"Man of My Dreams\" Stacey Ervin Jr.\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Nurses reveal 10 things they wish they could tell patients, but can't\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"The states where taxpayers should worry most about pensions\"\n\"Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say\"\n\"Solange Knowles splits with husband ahead of anniversary\"\n\"Tarek El Moussa: I'm 'Looking Forward' to Knowing Christina Anstead's Son\"\n\"Salmonella linked to ground beef\"\n\"30 Thanksgiving Casserole Recipes\"\n\n[Candidate News Title]\n\"Palestinian death toll from Israeli strikes rises to 22: Gaza ministry\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely provides an update on the ongoing conflict in Gaza, specifically focusing on the recent increase in the Palestinian death toll due to Israeli airstrikes, which has reportedly risen to 22, according to the Gaza ministry. Readers can expect a detailed overview of the situation, including possible explanations for the strikes, the humanitarian impact on the local population, and any international reactions or responses to the escalating violence. The article may also discuss the broader context of the conflict, including previous incidents and current geopolitical implications.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 440,
+  "candidate_news_id": "N44493",
+  "candidate_title": "How Google Interferes With Its Search Algorithms and Changes Your Results",
+  "user_history_count": 10,
+  "user_history": [
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Far-reaching snowstorm may take shape over US",
+    "Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Yankees name Cleveland exec Matt Blake as their new pitching coach",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "'Absent yourself': Transcripts reveal what Schiff told Gaetz when he crashed secure hearing",
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "What's wrong with the 76ers?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Yankees name Cleveland exec Matt Blake as their new pitching coach\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"'Absent yourself': Transcripts reveal what Schiff told Gaetz when he crashed secure hearing\"\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"What's wrong with the 76ers?\"\n\n[Candidate News Title]\n\"How Google Interferes With Its Search Algorithms and Changes Your Results\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to click on the article titled \"How Google Interferes With Its Search Algorithms and Changes Your Results,\" you can expect an exploration of the complexities surrounding Google's search algorithms and their potential influence on search outcomes. The article is likely to discuss how algorithmic adjustments may prioritize certain content over others, possibly impacting user access to information. It may also examine the implications of these changes for users seeking unbiased information, while raising questions about transparency and accountability in tech giants' operations.",
+  "model": "gpt-4o-mini"
+}

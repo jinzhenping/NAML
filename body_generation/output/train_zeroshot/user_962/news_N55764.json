@@ -1,0 +1,21 @@
+{
+  "user_id": 962,
+  "candidate_news_id": "N55764",
+  "candidate_title": "55 Restaurants That Serve an Amazing Thanksgiving Dinner",
+  "user_history_count": 10,
+  "user_history": [
+    "The best places to raise a family in the Midwest",
+    "The Best Rides at the New Nickelodeon Universe Theme Park, According to a Toddler",
+    "Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars",
+    "The Best Taco Spot To Try In Every State, So You Never Have to Be Without Your Fave Food",
+    "691,145 Californians left last year: What state did they go to?",
+    "The best and worst states to live in",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint",
+    "55 Restaurants That Serve an Amazing Thanksgiving Dinner"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The best places to raise a family in the Midwest\"\n\"The Best Rides at the New Nickelodeon Universe Theme Park, According to a Toddler\"\n\"Popeyes mocks Chick-fil-A for National Sandwich Day blunder, reignites sandwich wars\"\n\"The Best Taco Spot To Try In Every State, So You Never Have to Be Without Your Fave Food\"\n\"691,145 Californians left last year: What state did they go to?\"\n\"The best and worst states to live in\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint\"\n\"55 Restaurants That Serve an Amazing Thanksgiving Dinner\"\n\n[Candidate News Title]\n\"55 Restaurants That Serve an Amazing Thanksgiving Dinner\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers can expect a comprehensive overview of 55 restaurants that are well-regarded for serving Thanksgiving dinners across various locations. It is likely to highlight a mix of traditional and unique dining options, catering to different tastes and preferences. The content may include details about each restaurant's signature dishes, ambiance, and any special offerings for the holiday, allowing readers to make informed choices for their Thanksgiving celebrations. Overall, the piece aims to assist those seeking a memorable dining experience during this festive occasion.",
+  "model": "gpt-4o-mini"
+}

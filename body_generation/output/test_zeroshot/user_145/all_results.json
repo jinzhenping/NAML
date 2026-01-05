@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 145,
+    "candidate_news_id": "N21356",
+    "candidate_title": "5 arrested in connection with deadly shooting at Airbnb Halloween party",
+    "user_history_count": 10,
+    "user_history": [
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+      "US Forest Service shuts down vandalized Georgia park feature",
+      "Man charged with murder of man found dead in backyard of Charlotte home",
+      "Ex-St. Louis cop pleads guilty in beating of fellow officer after allegedly saying, 'Going rogue feels good'",
+      "Fast food cashier and manager fired for refusing to serve police officer",
+      "Dean Foods files for bankruptcy",
+      "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+      "Rep. Tim Ryan endorses Biden in Democratic primary",
+      "Experts crack mystery of ancient Egypt's sacred bird mummies",
+      "U.S. grand jury drops case against Colorado police for killing suspect"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"US Forest Service shuts down vandalized Georgia park feature\"\n\"Man charged with murder of man found dead in backyard of Charlotte home\"\n\"Ex-St. Louis cop pleads guilty in beating of fellow officer after allegedly saying, 'Going rogue feels good'\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"Dean Foods files for bankruptcy\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Experts crack mystery of ancient Egypt's sacred bird mummies\"\n\"U.S. grand jury drops case against Colorado police for killing suspect\"\n\n[Candidate News Title]\n\"5 arrested in connection with deadly shooting at Airbnb Halloween party\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"5 arrested in connection with deadly shooting at Airbnb Halloween party\" is likely to discuss the recent incident involving a shooting at an Airbnb property during a Halloween gathering. Readers can expect details about the circumstances surrounding the shooting, including the number of individuals involved and the nature of the event. The piece may also provide insights into the arrests made, including the identities and potential motivations of those arrested, as well as any statements from law enforcement regarding the ongoing investigation into the matter.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 145,
+    "candidate_news_id": "N91731",
+    "candidate_title": "Will James Wiseman play for Memphis again? Explaining next steps in NCAA eligibility process",
+    "user_history_count": 10,
+    "user_history": [
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+      "US Forest Service shuts down vandalized Georgia park feature",
+      "Man charged with murder of man found dead in backyard of Charlotte home",
+      "Ex-St. Louis cop pleads guilty in beating of fellow officer after allegedly saying, 'Going rogue feels good'",
+      "Fast food cashier and manager fired for refusing to serve police officer",
+      "Dean Foods files for bankruptcy",
+      "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+      "Rep. Tim Ryan endorses Biden in Democratic primary",
+      "Experts crack mystery of ancient Egypt's sacred bird mummies",
+      "U.S. grand jury drops case against Colorado police for killing suspect"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"US Forest Service shuts down vandalized Georgia park feature\"\n\"Man charged with murder of man found dead in backyard of Charlotte home\"\n\"Ex-St. Louis cop pleads guilty in beating of fellow officer after allegedly saying, 'Going rogue feels good'\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"Dean Foods files for bankruptcy\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Experts crack mystery of ancient Egypt's sacred bird mummies\"\n\"U.S. grand jury drops case against Colorado police for killing suspect\"\n\n[Candidate News Title]\n\"Will James Wiseman play for Memphis again? Explaining next steps in NCAA eligibility process\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Will James Wiseman play for Memphis again? Explaining next steps in NCAA eligibility process,\" the user can expect a detailed examination of James Wiseman's current situation regarding his eligibility to play for the University of Memphis. The piece may outline the NCAA's regulations and the specific steps Wiseman needs to take to regain his eligibility, including any pending appeals or compliance measures. Additionally, it is likely to provide context about his past challenges with eligibility and how these could impact his future in college basketball.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 145,
+    "candidate_news_id": "N123209",
+    "candidate_title": "Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions",
+    "user_history_count": 10,
+    "user_history": [
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+      "US Forest Service shuts down vandalized Georgia park feature",
+      "Man charged with murder of man found dead in backyard of Charlotte home",
+      "Ex-St. Louis cop pleads guilty in beating of fellow officer after allegedly saying, 'Going rogue feels good'",
+      "Fast food cashier and manager fired for refusing to serve police officer",
+      "Dean Foods files for bankruptcy",
+      "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+      "Rep. Tim Ryan endorses Biden in Democratic primary",
+      "Experts crack mystery of ancient Egypt's sacred bird mummies",
+      "U.S. grand jury drops case against Colorado police for killing suspect"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"US Forest Service shuts down vandalized Georgia park feature\"\n\"Man charged with murder of man found dead in backyard of Charlotte home\"\n\"Ex-St. Louis cop pleads guilty in beating of fellow officer after allegedly saying, 'Going rogue feels good'\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"Dean Foods files for bankruptcy\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Experts crack mystery of ancient Egypt's sacred bird mummies\"\n\"U.S. grand jury drops case against Colorado police for killing suspect\"\n\n[Candidate News Title]\n\"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions,\" the user is likely to find a discussion about the recent controversy surrounding the actions of the contestants during a season of Survivor. The piece may detail the specific incidents that prompted the apologies, providing context about their behavior on the show and any public backlash that followed. Additionally, it could explore the implications of their actions on their reputations and the show's community. The article is likely to include quotes from the contestants as they express remorse, though the exact nature of their apologies could vary.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 145,
+    "candidate_news_id": "N18258",
+    "candidate_title": "Russia lands forces at former U.S. air base in northern Syria",
+    "user_history_count": 10,
+    "user_history": [
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+      "US Forest Service shuts down vandalized Georgia park feature",
+      "Man charged with murder of man found dead in backyard of Charlotte home",
+      "Ex-St. Louis cop pleads guilty in beating of fellow officer after allegedly saying, 'Going rogue feels good'",
+      "Fast food cashier and manager fired for refusing to serve police officer",
+      "Dean Foods files for bankruptcy",
+      "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+      "Rep. Tim Ryan endorses Biden in Democratic primary",
+      "Experts crack mystery of ancient Egypt's sacred bird mummies",
+      "U.S. grand jury drops case against Colorado police for killing suspect"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"US Forest Service shuts down vandalized Georgia park feature\"\n\"Man charged with murder of man found dead in backyard of Charlotte home\"\n\"Ex-St. Louis cop pleads guilty in beating of fellow officer after allegedly saying, 'Going rogue feels good'\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"Dean Foods files for bankruptcy\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Experts crack mystery of ancient Egypt's sacred bird mummies\"\n\"U.S. grand jury drops case against Colorado police for killing suspect\"\n\n[Candidate News Title]\n\"Russia lands forces at former U.S. air base in northern Syria\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses the recent deployment of Russian forces to a former U.S. air base in northern Syria, examining the strategic implications of this move. Readers may expect an overview of the geopolitical context, including Russia's military objectives in the region and the potential reactions from the United States and its allies. The piece could also touch on how this development affects the ongoing conflict in Syria and the balance of power in the Middle East, providing insights into international relations and military strategy.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 145,
+    "candidate_news_id": "N72977",
+    "candidate_title": "Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs",
+    "user_history_count": 10,
+    "user_history": [
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+      "US Forest Service shuts down vandalized Georgia park feature",
+      "Man charged with murder of man found dead in backyard of Charlotte home",
+      "Ex-St. Louis cop pleads guilty in beating of fellow officer after allegedly saying, 'Going rogue feels good'",
+      "Fast food cashier and manager fired for refusing to serve police officer",
+      "Dean Foods files for bankruptcy",
+      "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+      "Rep. Tim Ryan endorses Biden in Democratic primary",
+      "Experts crack mystery of ancient Egypt's sacred bird mummies",
+      "U.S. grand jury drops case against Colorado police for killing suspect"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"US Forest Service shuts down vandalized Georgia park feature\"\n\"Man charged with murder of man found dead in backyard of Charlotte home\"\n\"Ex-St. Louis cop pleads guilty in beating of fellow officer after allegedly saying, 'Going rogue feels good'\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"Dean Foods files for bankruptcy\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Experts crack mystery of ancient Egypt's sacred bird mummies\"\n\"U.S. grand jury drops case against Colorado police for killing suspect\"\n\n[Candidate News Title]\n\"Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article regarding Taylor Swift and her dispute with Scooter Braun and Scott Borchetta, the user may expect to read about the ongoing tensions surrounding Swift's ability to perform her older hits at the American Music Awards. The piece is likely to detail the context of her grievances, explaining the contractual issues with Braun and Borchetta that reportedly restrict her artistic expression. Additionally, it could provide insights into the broader implications for her career and fan reactions. The article may also touch on the impact of these conflicts on the music industry as a whole.",
+    "model": "gpt-4o-mini"
+  }
+]

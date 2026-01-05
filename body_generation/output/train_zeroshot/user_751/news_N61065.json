@@ -1,0 +1,21 @@
+{
+  "user_id": 751,
+  "candidate_news_id": "N61065",
+  "candidate_title": "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+  "user_history_count": 10,
+  "user_history": [
+    "Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019",
+    "Barneys Is Sold for Scrap, Ending an Era",
+    "Everything We Think We Know About the 2020 Ford Bronco",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "AT&T fined $60 million for throttling 'unlimited' data plans",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Chevy Says This Isn't a Mid-Engine C8 Corvette Hybrid Prototype",
+    "Jenelle Evans Obtains Temporary Restraining Order Against David Eason",
+    "Vintage Photos of Disneyland Back in the Day"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019\"\n\"Barneys Is Sold for Scrap, Ending an Era\"\n\"Everything We Think We Know About the 2020 Ford Bronco\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"AT&T fined $60 million for throttling 'unlimited' data plans\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Chevy Says This Isn't a Mid-Engine C8 Corvette Hybrid Prototype\"\n\"Jenelle Evans Obtains Temporary Restraining Order Against David Eason\"\n\"Vintage Photos of Disneyland Back in the Day\"\n\n[Candidate News Title]\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Lamar Odom's engagement to Sabrina Parr, the user can expect to find details regarding the couple's relationship timeline, including how they met and their journey leading up to the engagement. The piece may also describe the engagement ring and its significance, along with any public statements made by Odom or Parr about their future together. Additionally, the article could touch on Odom's personal life and career, providing context for this new chapter in his life.",
+  "model": "gpt-4o-mini"
+}

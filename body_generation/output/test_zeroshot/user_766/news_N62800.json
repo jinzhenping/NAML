@@ -1,0 +1,21 @@
+{
+  "user_id": 766,
+  "candidate_news_id": "N62800",
+  "candidate_title": "9 renovation tips to boost resale value",
+  "user_history_count": 10,
+  "user_history": [
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "Scared Rabbit Abandoned In Box Clings To His Favorite Teddy Bear",
+    "Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary",
+    "​'My Annoying Cough Turned Out To Be Lung Cancer'",
+    "Mother charged with murder: Family asks for help after boy killed, brother injured in suspected DWI crash",
+    "Photos of the Day",
+    "2019 Astros review: Michael Brantley",
+    "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case",
+    "Chrissy Teigen's EPIC Reaction to Husband John Legend Being Named 2019 Sexiest Man Alive",
+    "Nonsmoking mom of 4 thought she had asthma, but it was late-stage lung cancer"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Scared Rabbit Abandoned In Box Clings To His Favorite Teddy Bear\"\n\"Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary\"\n\"​'My Annoying Cough Turned Out To Be Lung Cancer'\"\n\"Mother charged with murder: Family asks for help after boy killed, brother injured in suspected DWI crash\"\n\"Photos of the Day\"\n\"2019 Astros review: Michael Brantley\"\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\"Chrissy Teigen's EPIC Reaction to Husband John Legend Being Named 2019 Sexiest Man Alive\"\n\"Nonsmoking mom of 4 thought she had asthma, but it was late-stage lung cancer\"\n\n[Candidate News Title]\n\"9 renovation tips to boost resale value\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"9 renovation tips to boost resale value,\" the user can expect to find practical advice aimed at homeowners looking to enhance the value of their property through renovations. The content is likely to cover a range of renovation strategies, such as kitchen and bathroom upgrades, curb appeal improvements, and cost-effective fixes that yield significant returns. Additionally, the article may provide insights into current market trends that influence buyer preferences, helping readers make informed decisions about where to invest their renovation efforts.",
+  "model": "gpt-4o-mini"
+}

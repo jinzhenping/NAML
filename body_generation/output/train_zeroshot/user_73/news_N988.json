@@ -1,0 +1,21 @@
+{
+  "user_id": 73,
+  "candidate_news_id": "N988",
+  "candidate_title": "'Absolutely Terrifying': 3 Students Describe Moments After Shots Rang Out At Saugus High School",
+  "user_history_count": 10,
+  "user_history": [
+    "Kevin Hart Spotted for the First Time Since Serious Car Accident: Pics",
+    "Simone Biles Shares Sweet Birthday Tribute for \"Man of My Dreams\" Stacey Ervin Jr.",
+    "Tiger Woods takes outright lead at rain-delayed Zozo Championship",
+    "Dominance: Tiger Woods ties Sam Snead's record with win No. 82 at Zozo Championship",
+    "Why Smoked Bologna Is the Secret Star of Oklahoma Barbecue",
+    "Solange Knowles splits with husband ahead of anniversary",
+    "Kanye West, with debt piling up, thanks God for $68 million tax refund",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "Browns fans' confidence continues sinking to 17% after fourth straight loss"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kevin Hart Spotted for the First Time Since Serious Car Accident: Pics\"\n\"Simone Biles Shares Sweet Birthday Tribute for \"Man of My Dreams\" Stacey Ervin Jr.\"\n\"Tiger Woods takes outright lead at rain-delayed Zozo Championship\"\n\"Dominance: Tiger Woods ties Sam Snead's record with win No. 82 at Zozo Championship\"\n\"Why Smoked Bologna Is the Secret Star of Oklahoma Barbecue\"\n\"Solange Knowles splits with husband ahead of anniversary\"\n\"Kanye West, with debt piling up, thanks God for $68 million tax refund\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"Browns fans' confidence continues sinking to 17% after fourth straight loss\"\n\n[Candidate News Title]\n\"'Absolutely Terrifying': 3 Students Describe Moments After Shots Rang Out At Saugus High School\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely provides a detailed account of a recent shooting incident at Saugus High School, featuring firsthand accounts from three students present during the event. Readers may expect to learn about the moments leading up to the gunfire, the immediate reactions of those involved, and any ongoing responses from law enforcement or school officials. Additionally, the piece could explore the broader implications of such incidents on school safety and community awareness, while highlighting the impact on the students' lives.",
+  "model": "gpt-4o-mini"
+}

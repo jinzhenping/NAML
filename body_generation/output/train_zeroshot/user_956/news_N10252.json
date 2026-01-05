@@ -1,0 +1,21 @@
+{
+  "user_id": 956,
+  "candidate_news_id": "N10252",
+  "candidate_title": "Hate crimes remain at heightened levels, FBI report finds",
+  "user_history_count": 10,
+  "user_history": [
+    "8 of the best and 8 of the worst TV shows that got canceled this year, so far",
+    "Will Smith, Helen Mirren Urge Fans To Sleep Outdoors For One Night To Help Fight Homelessness",
+    "Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn",
+    "The Secret to Sticking with Keto",
+    "The 25 best \"Weird Al\" Yankovic parody songs",
+    "25 candid photos of icons who shaped pop culture",
+    "The 26 best Halloween-themed TV episodes",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"8 of the best and 8 of the worst TV shows that got canceled this year, so far\"\n\"Will Smith, Helen Mirren Urge Fans To Sleep Outdoors For One Night To Help Fight Homelessness\"\n\"Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn\"\n\"The Secret to Sticking with Keto\"\n\"The 25 best \"Weird Al\" Yankovic parody songs\"\n\"25 candid photos of icons who shaped pop culture\"\n\"The 26 best Halloween-themed TV episodes\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\n[Candidate News Title]\n\"Hate crimes remain at heightened levels, FBI report finds\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Hate crimes remain at heightened levels, FBI report finds\" is likely to provide an overview of recent trends in hate crimes in the United States, drawing on data from the latest FBI report. The user may expect to read about the various types of hate crimes that have seen increases, the demographics affected, and potential reasons behind these trends. Additionally, the article could discuss the implications of these findings on society and law enforcement responses. It may also touch upon comparisons with previous years to highlight changes in the landscape of hate crimes.",
+  "model": "gpt-4o-mini"
+}

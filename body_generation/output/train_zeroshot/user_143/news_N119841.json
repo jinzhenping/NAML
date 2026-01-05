@@ -1,0 +1,21 @@
+{
+  "user_id": 143,
+  "candidate_news_id": "N119841",
+  "candidate_title": "Trailer - Autonomy",
+  "user_history_count": 10,
+  "user_history": [
+    "Lawyer: Trump's phone records back details of woman's claim",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Celebrity Headshots from Before They Were Famous",
+    "Dad Goes Viral By Performing His Daughter's Exact Cheer Routine From the Stands",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Gwyneth Paltrow says her feelings about Harvey Weinstein are complicated",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'",
+    "Why Has This 1970 Chevrolet Camaro Z/28 Gone Just 8,500 Miles?",
+    "Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lawyer: Trump's phone records back details of woman's claim\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Celebrity Headshots from Before They Were Famous\"\n\"Dad Goes Viral By Performing His Daughter's Exact Cheer Routine From the Stands\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Gwyneth Paltrow says her feelings about Harvey Weinstein are complicated\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"'At 237 Lbs., I Was Embarrassed To Go To The Gym. So I Did An At-Home BeachBody Program And Lost 117 Lbs.'\"\n\"Why Has This 1970 Chevrolet Camaro Z/28 Gone Just 8,500 Miles?\"\n\"Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned\"\n\n[Candidate News Title]\n\"Trailer - Autonomy\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Trailer - Autonomy\" is likely to provide insights into the concept of autonomy, particularly in the context of emerging technologies or vehicles. Readers may expect a discussion on how autonomy is being integrated into various sectors, including transportation and robotics. The piece could also explore potential implications for society, such as the impact on jobs and ethical considerations. Additionally, it may include examples of autonomous systems currently in development or use. Overall, the article is expected to inform readers about the advancements and challenges associated with autonomous technologies.",
+  "model": "gpt-4o-mini"
+}

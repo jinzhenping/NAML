@@ -1,0 +1,21 @@
+{
+  "user_id": 47,
+  "candidate_news_id": "N43982",
+  "candidate_title": "'This win was for you': Josh Gordon shares emotional post about death of his brother",
+  "user_history_count": 10,
+  "user_history": [
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "24 Ways to Shrink Your Belly in 24 Hours",
+    "18 Ingredients Nutritionists Say Should Be Banned From Your Kitchen",
+    "Andy Cohen lost 12 pounds by making this one change...",
+    "This is how much water you need to drink for weight loss",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Lil Pump bit by snake on set of music video",
+    "Must-See Fashion Police Moments to Swoon Over This Week"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"24 Ways to Shrink Your Belly in 24 Hours\"\n\"18 Ingredients Nutritionists Say Should Be Banned From Your Kitchen\"\n\"Andy Cohen lost 12 pounds by making this one change...\"\n\"This is how much water you need to drink for weight loss\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Lil Pump bit by snake on set of music video\"\n\"Must-See Fashion Police Moments to Swoon Over This Week\"\n\n[Candidate News Title]\n\"'This win was for you': Josh Gordon shares emotional post about death of his brother\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"'This win was for you': Josh Gordon shares emotional post about death of his brother,\" the user can expect to read about Josh Gordon's tribute to his late brother, likely reflecting on their relationship and the impact of this loss on his life and career. The piece may detail the circumstances surrounding his brother's death and how it has inspired Gordon's recent achievements in football. Additionally, it could explore Gordon's thoughts on overcoming personal challenges and the role of family in his journey.",
+  "model": "gpt-4o-mini"
+}

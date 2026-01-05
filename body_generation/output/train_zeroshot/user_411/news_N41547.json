@@ -1,0 +1,21 @@
+{
+  "user_id": 411,
+  "candidate_news_id": "N41547",
+  "candidate_title": "This is Chick-fil-A's most-ordered menu item",
+  "user_history_count": 10,
+  "user_history": [
+    "U.S. Navy Admiral Hails China's Professionalism in Disputed Seas",
+    "Cartel gunmen terrorize Mexican city, free El Chapo's son",
+    "Supreme Court tosses challenge to Republican-drawn Michigan electoral maps",
+    "Florida's long fight with Georgia over water to Apalachicola Bay and its oysters heads back to court in New Mexico",
+    "25 awesome gifts men actually want this year",
+    "FCC formally approves the T-Mobile-Sprint merger",
+    "7 biggest takeaways from the opening College Football Playoff rankings",
+    "Kroger is rebranding with a new logo and slogan",
+    "'I am scared all the time': Chimps and people are clashing in rural Uganda",
+    "The economic picture is darkening in states critical to Trump's reelection bid"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"U.S. Navy Admiral Hails China's Professionalism in Disputed Seas\"\n\"Cartel gunmen terrorize Mexican city, free El Chapo's son\"\n\"Supreme Court tosses challenge to Republican-drawn Michigan electoral maps\"\n\"Florida's long fight with Georgia over water to Apalachicola Bay and its oysters heads back to court in New Mexico\"\n\"25 awesome gifts men actually want this year\"\n\"FCC formally approves the T-Mobile-Sprint merger\"\n\"7 biggest takeaways from the opening College Football Playoff rankings\"\n\"Kroger is rebranding with a new logo and slogan\"\n\"'I am scared all the time': Chimps and people are clashing in rural Uganda\"\n\"The economic picture is darkening in states critical to Trump's reelection bid\"\n\n[Candidate News Title]\n\"This is Chick-fil-A's most-ordered menu item\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"This is Chick-fil-A's most-ordered menu item,\" you can expect a detailed overview of the fast-food chain's most popular menu selection, likely including information about its ingredients, preparation, and why it resonates with customers. The article may also provide insights into customer preferences and trends influencing menu choices, as well as comparisons with other offerings within the restaurant. Additionally, it could touch on how Chick-fil-A's branding and marketing strategies contribute to the popularity of this item.",
+  "model": "gpt-4o-mini"
+}

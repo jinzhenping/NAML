@@ -1,0 +1,21 @@
+{
+  "user_id": 494,
+  "candidate_news_id": "N110572",
+  "candidate_title": "As Warren Gains in Race, Wall Street Sounds the Alarm",
+  "user_history_count": 10,
+  "user_history": [
+    "Celeb couples with big age gaps",
+    "The 'race whisperer'",
+    "SCOTUS copyright case has pirate Blackbeard laughing from grave",
+    "New York Senator Chuck Schumer Mocks Trump Making Florida His New Home, Donald Jr. Fires Back",
+    "Tensions, tears, trauma: the Democratic voters suffering under Trump",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "SNL's Michael Che Sparks Backlash for 'Sexist and Ageist' Comments During Weekend Update",
+    "Trump back in Louisiana to rally support for GOP gubernatorial candidate",
+    "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celeb couples with big age gaps\"\n\"The 'race whisperer'\"\n\"SCOTUS copyright case has pirate Blackbeard laughing from grave\"\n\"New York Senator Chuck Schumer Mocks Trump Making Florida His New Home, Donald Jr. Fires Back\"\n\"Tensions, tears, trauma: the Democratic voters suffering under Trump\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"SNL's Michael Che Sparks Backlash for 'Sexist and Ageist' Comments During Weekend Update\"\n\"Trump back in Louisiana to rally support for GOP gubernatorial candidate\"\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\n[Candidate News Title]\n\"As Warren Gains in Race, Wall Street Sounds the Alarm\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"As Warren Gains in Race, Wall Street Sounds the Alarm\" is likely to explore the implications of Elizabeth Warren's increasing popularity in the political landscape, particularly in relation to her impact on the financial sector. Readers may expect discussions around Wall Street's concerns about her progressive policies and potential regulatory changes that could affect the economy. The piece may also provide insights into how her rise could influence the Democratic primaries and the broader electoral environment, highlighting specific reactions from financial analysts or industry leaders.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 443,
+  "candidate_news_id": "N82233",
+  "candidate_title": "'Priceless' finds that turned out to be worthless",
+  "user_history_count": 10,
+  "user_history": [
+    "Jeff Bezos: This is the 'smartest thing we ever did' at Amazon",
+    "'Big Brother' star Cassandra Waldon dead at 56",
+    "Donald Trump Tweets 'Impeach the Pres,' Twitter Responds Accordingly: 'I Bet Melania Typed That'",
+    "Drawn by the Salary, Women Flock to Trucking",
+    "15 reasons we should get rid of daylight saving time",
+    "How much Social Security you could get from a $75,000 salary",
+    "A white restaurant owner admitted to enslaving a black man. He got 10 years in prison.",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "This Is The Moment A Senior Shelter Dog Knew He Was Safe",
+    "Texas small plane crash was gender reveal gone wrong, NTSB finds"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jeff Bezos: This is the 'smartest thing we ever did' at Amazon\"\n\"'Big Brother' star Cassandra Waldon dead at 56\"\n\"Donald Trump Tweets 'Impeach the Pres,' Twitter Responds Accordingly: 'I Bet Melania Typed That'\"\n\"Drawn by the Salary, Women Flock to Trucking\"\n\"15 reasons we should get rid of daylight saving time\"\n\"How much Social Security you could get from a $75,000 salary\"\n\"A white restaurant owner admitted to enslaving a black man. He got 10 years in prison.\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"This Is The Moment A Senior Shelter Dog Knew He Was Safe\"\n\"Texas small plane crash was gender reveal gone wrong, NTSB finds\"\n\n[Candidate News Title]\n\"'Priceless' finds that turned out to be worthless\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect an exploration of valuable items or investments that have ultimately proven to be worthless, potentially examining cases where collectors or investors were misled. The content could include examples of art, antiques, or collectibles that were initially deemed priceless but later lost value due to market fluctuations, authenticity issues, or changes in public interest. Additionally, the article is likely to discuss the implications for buyers and sellers in such scenarios, highlighting the importance of due diligence in assessing value.",
+  "model": "gpt-4o-mini"
+}

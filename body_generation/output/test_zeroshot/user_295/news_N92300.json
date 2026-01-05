@@ -1,0 +1,21 @@
+{
+  "user_id": 295,
+  "candidate_news_id": "N92300",
+  "candidate_title": "No, Not Everyone Is Beautiful, And We'd All Be Better Off If We Stopped Saying We Are",
+  "user_history_count": 10,
+  "user_history": [
+    "A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "Top 100 country songs of all time",
+    "We tried McDonald's new Snickerdoodle McFlurry, and here's our honest review",
+    "JetBlue Just Launched Its Version of Basic Economy and It's Not the Worst",
+    "Don't be fooled: Costco says $75 coupon is a scam",
+    "A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Answers remain elusive in Virginia Beach shooting rampage",
+    "Tourists needed in Venice after flooding, locals say"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"Top 100 country songs of all time\"\n\"We tried McDonald's new Snickerdoodle McFlurry, and here's our honest review\"\n\"JetBlue Just Launched Its Version of Basic Economy and It's Not the Worst\"\n\"Don't be fooled: Costco says $75 coupon is a scam\"\n\"A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Answers remain elusive in Virginia Beach shooting rampage\"\n\"Tourists needed in Venice after flooding, locals say\"\n\n[Candidate News Title]\n\"No, Not Everyone Is Beautiful, And We'd All Be Better Off If We Stopped Saying We Are\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"No, Not Everyone Is Beautiful, And We'd All Be Better Off If We Stopped Saying We Are\" is likely to explore societal standards of beauty and the implications of promoting unrealistic ideals. Readers may expect an analysis of how these perceptions affect self-esteem and mental health, alongside discussions about inclusivity and acceptance of diverse appearances. The piece could also delve into the cultural pressures that contribute to the notion of beauty. Overall, it may challenge readers to reconsider their views on beauty and self-worth in a more realistic context.",
+  "model": "gpt-4o-mini"
+}

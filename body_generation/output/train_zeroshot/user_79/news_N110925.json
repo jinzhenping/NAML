@@ -1,0 +1,21 @@
+{
+  "user_id": 79,
+  "candidate_news_id": "N110925",
+  "candidate_title": "3 castaway cows swam to North Carolina's Outer Banks to escape Hurricane Dorian",
+  "user_history_count": 10,
+  "user_history": [
+    "Korda's caddie helps player to victory over his fiancée",
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Trump pushes back on report that he wanted Barr to clear him on Ukraine in news conference: 'Totally untrue'",
+    "White House: Regulating tobacco is a 'huge waste of time' for FDA",
+    "Tiger Woods says his Zozo Championship win was the validation he needed to becoming a playing captain",
+    "'I am scared all the time': Chimps and people are clashing in rural Uganda",
+    "Lil Pump bit by snake on set of music video",
+    "Pro disqualified from Q-School for failing to sign scorecard"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Korda's caddie helps player to victory over his fiancée\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Trump pushes back on report that he wanted Barr to clear him on Ukraine in news conference: 'Totally untrue'\"\n\"White House: Regulating tobacco is a 'huge waste of time' for FDA\"\n\"Tiger Woods says his Zozo Championship win was the validation he needed to becoming a playing captain\"\n\"'I am scared all the time': Chimps and people are clashing in rural Uganda\"\n\"Lil Pump bit by snake on set of music video\"\n\"Pro disqualified from Q-School for failing to sign scorecard\"\n\n[Candidate News Title]\n\"3 castaway cows swam to North Carolina's Outer Banks to escape Hurricane Dorian\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about the three castaway cows that swam to North Carolina's Outer Banks to escape Hurricane Dorian, the user is likely to expect a detailed account of how these animals managed to navigate the rough waters during a natural disaster. The piece may explore the circumstances surrounding their escape, including the impact of the hurricane on the local environment and the response from wildlife officials or local residents. Additionally, the article could provide insights into the broader implications of such events on animal behavior during extreme weather, as well as any efforts to rescue or care for the cows after their unusual journey.",
+  "model": "gpt-4o-mini"
+}

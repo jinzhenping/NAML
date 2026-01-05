@@ -1,0 +1,21 @@
+{
+  "user_id": 182,
+  "candidate_news_id": "N105407",
+  "candidate_title": "'One in a million' deer captured on camera in Michigan woods",
+  "user_history_count": 10,
+  "user_history": [
+    "Rising California gasoline prices highlight growing divide in US",
+    "Man charged in bear-repellent attack on Trump protesters at Santa Monica Pier",
+    "California residents face another blackout (and then another after that)",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "Lori Loughlin Faces New Charges in College Scandal",
+    "A man in Brazil accidentally blew up his yard while trying to kill some cockroaches",
+    "California's legal weed profits going up in smoke",
+    "Ford Baby Bronco Bare Body Allegedly Leaked In Exclusive Photo",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Rising California gasoline prices highlight growing divide in US\"\n\"Man charged in bear-repellent attack on Trump protesters at Santa Monica Pier\"\n\"California residents face another blackout (and then another after that)\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"Lori Loughlin Faces New Charges in College Scandal\"\n\"A man in Brazil accidentally blew up his yard while trying to kill some cockroaches\"\n\"California's legal weed profits going up in smoke\"\n\"Ford Baby Bronco Bare Body Allegedly Leaked In Exclusive Photo\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\n[Candidate News Title]\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"'One in a million' deer captured on camera in Michigan woods\" is likely to discuss a rare sighting of a unique deer, possibly featuring unusual physical characteristics or behavior that set it apart from typical deer. Readers may expect details about the circumstances of the sighting, including the location and the individuals involved in capturing the footage. Additionally, the article could explore the ecological significance of such rare occurrences and what they might indicate about wildlife in the area. This piece may also include expert commentary on the implications of this sighting for local biodiversity.",
+  "model": "gpt-4o-mini"
+}

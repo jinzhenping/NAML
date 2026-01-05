@@ -1,0 +1,20 @@
+{
+  "user_id": 917,
+  "candidate_news_id": "N100261",
+  "candidate_title": "Les Miles Has Some Thoughts on the Shape of the Earth",
+  "user_history_count": 9,
+  "user_history": [
+    "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+    "Hugh Hefner's son Cooper weds 'Harry Potter' actress",
+    "Fisherman faces prison, fine for cruel act on rare fish",
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Hugh Hefner's son Cooper weds 'Harry Potter' actress\"\n\"Fisherman faces prison, fine for cruel act on rare fish\"\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\"\"\n\n[Candidate News Title]\n\"Les Miles Has Some Thoughts on the Shape of the Earth\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to read about Les Miles, a notable figure in college football, sharing his perspectives on the shape of the Earth, which could potentially touch on various topics such as scientific beliefs, popular misconceptions, or even the intersection of sports and science. The discussion might include Miles' personal views or anecdotes related to this topic, possibly sparking curiosity about how such a subject relates to his experiences in coaching and leadership. Overall, the article could provide an intriguing blend of sports commentary and unconventional discourse.",
+  "model": "gpt-4o-mini"
+}

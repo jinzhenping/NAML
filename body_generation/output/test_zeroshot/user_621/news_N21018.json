@@ -1,0 +1,21 @@
+{
+  "user_id": 621,
+  "candidate_news_id": "N21018",
+  "candidate_title": "3 Indiana judges suspended after a night of drinking turned into a White Castle brawl",
+  "user_history_count": 10,
+  "user_history": [
+    "2 murder suspects escape from jail, still on the run",
+    "BART worker rescues man from oncoming train",
+    "Man stabbed to death outside Popeyes after fight over chicken sandwich, police say",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Tourists stabbed in Jordanian city near Roman ruins: police",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "Three school workers charged in death of special needs student",
+    "4 frat deaths this month. 2 this week alone. What's going on with fraternity hazing?",
+    "Answers remain elusive in Virginia Beach shooting rampage",
+    "Oregon school bus driver accused of DUI after crashing bus with 10 students"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"2 murder suspects escape from jail, still on the run\"\n\"BART worker rescues man from oncoming train\"\n\"Man stabbed to death outside Popeyes after fight over chicken sandwich, police say\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Tourists stabbed in Jordanian city near Roman ruins: police\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"Three school workers charged in death of special needs student\"\n\"4 frat deaths this month. 2 this week alone. What's going on with fraternity hazing?\"\n\"Answers remain elusive in Virginia Beach shooting rampage\"\n\"Oregon school bus driver accused of DUI after crashing bus with 10 students\"\n\n[Candidate News Title]\n\"3 Indiana judges suspended after a night of drinking turned into a White Castle brawl\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to learn about a troubling incident involving three judges from Indiana who were suspended following a night of drinking that escalated into a brawl at a White Castle restaurant. The piece is likely to provide details on the circumstances leading to the suspension, including any relevant context regarding the judges' behavior and the implications of their actions for the judicial system. It may also touch on public reactions and discussions about accountability among public officials in light of such incidents.",
+  "model": "gpt-4o-mini"
+}

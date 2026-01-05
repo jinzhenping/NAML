@@ -1,0 +1,21 @@
+{
+  "user_id": 226,
+  "candidate_news_id": "N120122",
+  "candidate_title": "Jackson, Grizzlies spoil Parker's night, beat Spurs 113-109",
+  "user_history_count": 10,
+  "user_history": [
+    "Napoleon Bonaparte's general believed unearthed in Russia",
+    "'Prepare to die' Trump adviser Stone texted witness, trial jury hears",
+    "Dad Goes Viral By Performing His Daughter's Exact Cheer Routine From the Stands",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "Vaping Illnesses Are Linked to Vitamin E Acetate, C.D.C. Says",
+    "Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Everyday heroes step up to help lone Waffle House employee"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Napoleon Bonaparte's general believed unearthed in Russia\"\n\"'Prepare to die' Trump adviser Stone texted witness, trial jury hears\"\n\"Dad Goes Viral By Performing His Daughter's Exact Cheer Routine From the Stands\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"Vaping Illnesses Are Linked to Vitamin E Acetate, C.D.C. Says\"\n\"Former Trump adviser who testified to Ukraine pressure campaign said she was victim of harassment\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\n[Candidate News Title]\n\"Jackson, Grizzlies spoil Parker's night, beat Spurs 113-109\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Jackson, Grizzlies spoil Parker's night, beat Spurs 113-109,\" the user is likely to find a detailed recap of the recent NBA game between the Memphis Grizzlies and the San Antonio Spurs. It may cover key moments from the match, including standout performances from players like Jackson and Parker, as well as critical plays that influenced the outcome. The piece could also provide statistical highlights and context surrounding the teams' current standings in the league. Overall, the article is expected to offer a succinct analysis of the game with insights into the implications for both teams moving forward.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 354,
+  "candidate_news_id": "N96373",
+  "candidate_title": "56 Hottest Holiday Gifts from Amazon",
+  "user_history_count": 10,
+  "user_history": [
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "40 Best Belly-Shrinking Foods",
+    "Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you",
+    "Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV",
+    "The #1 Worst Menu Option at 76 Popular Restaurants",
+    "For the first time, a man has been sentenced for sexual slavery by the International Criminal Court. He got 30 years.",
+    "One of FBI's Most Wanted fugitives offers surrender"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"40 Best Belly-Shrinking Foods\"\n\"Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you\"\n\"Should You Get the 2020 Ford Explorer? Pros and Cons on This Family SUV\"\n\"The #1 Worst Menu Option at 76 Popular Restaurants\"\n\"For the first time, a man has been sentenced for sexual slavery by the International Criminal Court. He got 30 years.\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\n[Candidate News Title]\n\"56 Hottest Holiday Gifts from Amazon\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"56 Hottest Holiday Gifts from Amazon,\" you may expect a curated list of popular and trending gift ideas available on Amazon for the upcoming holiday season. The article is likely to include a variety of products catering to different interests and age groups, ranging from tech gadgets to home accessories and toys. Each item may come with a brief description highlighting its features and why it has gained popularity among consumers, helping you make informed shopping decisions.",
+  "model": "gpt-4o-mini"
+}

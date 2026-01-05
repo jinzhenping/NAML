@@ -1,0 +1,18 @@
+{
+  "user_id": 745,
+  "candidate_news_id": "N18405",
+  "candidate_title": "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+  "user_history_count": 7,
+  "user_history": [
+    "Before You Book! Cruise Scams Every Traveler Should Know!",
+    "You Won't Believe Where These Celebs Worked Before They Were Famous",
+    "It took me 96 hours to ride an Amtrak train from coast to coast. I'd do it again in a heartbeat.",
+    "WhatsApp Protests Erupt in Lebanon as Economic Crisis Deepens",
+    "Would You Like Fries With That? McDonald's Already Knows the Answer",
+    "The Best Throwback Soups from the 1950s",
+    "Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Before You Book! Cruise Scams Every Traveler Should Know!\"\n\"You Won't Believe Where These Celebs Worked Before They Were Famous\"\n\"It took me 96 hours to ride an Amtrak train from coast to coast. I'd do it again in a heartbeat.\"\n\"WhatsApp Protests Erupt in Lebanon as Economic Crisis Deepens\"\n\"Would You Like Fries With That? McDonald's Already Knows the Answer\"\n\"The Best Throwback Soups from the 1950s\"\n\"Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US,\" the user may expect to read about a recent incident involving a bus driver who assisted children lost in snowy conditions amid severe weather. The piece is likely to detail the circumstances surrounding the event, including the challenges posed by the harsh Arctic air mass affecting the region. Additionally, the article could provide context on the local response to the weather crisis and highlight the importance of community vigilance during extreme conditions, emphasizing the bus driver's actions as a noteworthy example of public service.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 317,
+  "candidate_news_id": "N9250",
+  "candidate_title": "Metal detectorists discover haul of gold coins worth at least 100k",
+  "user_history_count": 10,
+  "user_history": [
+    "Former US Senator Kay Hagan dead at 66",
+    "Will the Dolphins go 0-16? Ranking Miami's six best chances to avoid a winless 2019 season",
+    "Selena Gomez Deletes Photo Praising Kim Kardashian's SKIMS, Shares a Taylor Swift Post Instead",
+    "Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights",
+    "Trump hints that dog injured in al-Baghdadi raid will visit White House",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Jimmy Garoppolo tells Erin Andrews being 8-0 'feels great, baby'",
+    "The most notable celebrity deaths of the decade",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former US Senator Kay Hagan dead at 66\"\n\"Will the Dolphins go 0-16? Ranking Miami's six best chances to avoid a winless 2019 season\"\n\"Selena Gomez Deletes Photo Praising Kim Kardashian's SKIMS, Shares a Taylor Swift Post Instead\"\n\"Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights\"\n\"Trump hints that dog injured in al-Baghdadi raid will visit White House\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Jimmy Garoppolo tells Erin Andrews being 8-0 'feels great, baby'\"\n\"The most notable celebrity deaths of the decade\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\n[Candidate News Title]\n\"Metal detectorists discover haul of gold coins worth at least 100k\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a recent discovery made by metal detectorists who found a significant haul of gold coins valued at over $100,000. Readers can expect details about the location of the find, the historical context of the coins, and insights into the techniques used by the detectorists. The piece may also explore the implications of such discoveries for collectors and historians alike, as well as any notable stories related to the coins' origins or their potential impact on the local community.",
+  "model": "gpt-4o-mini"
+}

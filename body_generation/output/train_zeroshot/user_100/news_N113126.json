@@ -1,0 +1,21 @@
+{
+  "user_id": 100,
+  "candidate_news_id": "N113126",
+  "candidate_title": "Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage",
+  "user_history_count": 10,
+  "user_history": [
+    "Over 70 Female British Politicians Sign Letter Supporting Meghan Markle",
+    "Apple is laying the groundwork for an iPhone subscription",
+    "This Is What Queen Elizabeth Is Doing About the Prince William-Prince Harry Feud",
+    "Goats Munching on Vegetation Helped Save the Reagan Presidential Library in California Wildfire",
+    "My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder",
+    "Cole issues classy statement thanking fans, Astros' organization",
+    "John Legend clarifies his recent Kanye West comments, plus more news",
+    "Opinion: One thing we know at midpoint of NFL season is that it's time for Baker Mayfield to grow up",
+    "Will Freddie Kitchens be one and done in Cleveland?",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Over 70 Female British Politicians Sign Letter Supporting Meghan Markle\"\n\"Apple is laying the groundwork for an iPhone subscription\"\n\"This Is What Queen Elizabeth Is Doing About the Prince William-Prince Harry Feud\"\n\"Goats Munching on Vegetation Helped Save the Reagan Presidential Library in California Wildfire\"\n\"My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder\"\n\"Cole issues classy statement thanking fans, Astros' organization\"\n\"John Legend clarifies his recent Kanye West comments, plus more news\"\n\"Opinion: One thing we know at midpoint of NFL season is that it's time for Baker Mayfield to grow up\"\n\"Will Freddie Kitchens be one and done in Cleveland?\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\n[Candidate News Title]\n\"Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Drake Has Something to Say to the 'Kids' Who Booed Him Off Stage,\" they can expect a discussion of Drake's response to a recent incident where he was booed during a performance. The article may explore his comments directed at the audience, providing context about the event and the reactions that followed. Additionally, it could delve into the broader implications of audience behavior at live shows and how artists like Drake navigate such situations. Overall, the piece is likely to include insights into both the incident and Drake's perspective on connecting with fans.",
+  "model": "gpt-4o-mini"
+}

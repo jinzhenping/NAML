@@ -1,0 +1,21 @@
+{
+  "user_id": 816,
+  "candidate_news_id": "N14804",
+  "candidate_title": "Santa Clarita students made an active shooter video. Two months later, they took shelter in fear",
+  "user_history_count": 10,
+  "user_history": [
+    "Antarctic marine park: conservationists frustrated after protection bid fails for eighth time",
+    "Patriots wanted a test. Now, they need some answers",
+    "Patriots wanted a test. Now, they need some answers",
+    "Patriots wanted a test. Now, they need some answers",
+    "Cowboys vs. Giants highlights | Week 9",
+    "Ex-NFL player Winslow Jr takes plea deal before rape retrial",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "High school football player asks to pray with opponent whose mother has cancer",
+    "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup",
+    "Celebrity Christmas albums: From beloved classics to big surprises"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Antarctic marine park: conservationists frustrated after protection bid fails for eighth time\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Cowboys vs. Giants highlights | Week 9\"\n\"Ex-NFL player Winslow Jr takes plea deal before rape retrial\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"High school football player asks to pray with opponent whose mother has cancer\"\n\"4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup\"\n\"Celebrity Christmas albums: From beloved classics to big surprises\"\n\n[Candidate News Title]\n\"Santa Clarita students made an active shooter video. Two months later, they took shelter in fear\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent incident involving students from Santa Clarita who created an active shooter video, raising concerns about school safety and student behavior. The piece may provide details on the context of the video, the reactions from the school community, and any subsequent measures taken by authorities to address the situation. Additionally, it could explore the implications of such actions on the students and the broader discussion around mental health and safety in schools. Overall, the article is expected to inform readers about the incident and its repercussions without delving into sensationalism.",
+  "model": "gpt-4o-mini"
+}

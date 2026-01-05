@@ -1,0 +1,21 @@
+{
+  "user_id": 161,
+  "candidate_news_id": "N80994",
+  "candidate_title": "Thanksgiving side dishes: 11 unique recipes to try this season",
+  "user_history_count": 10,
+  "user_history": [
+    "A wellness influencer told her Instagram followers that shampoo causes weight gain, but nutrition experts are calling her comments 'madness'",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "The 3 Things Ina Garten Always Has in Her Freezer",
+    "'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes",
+    "Cindy Crawford and Kaia Gerber Twin in Matching Supermodel Off-Duty Looks",
+    "Boat inches closer to Niagara Falls edge after being grounded for century",
+    "Kristen Stewart on 'SNL': 3 Sketches You Have to See",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A wellness influencer told her Instagram followers that shampoo causes weight gain, but nutrition experts are calling her comments 'madness'\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"The 3 Things Ina Garten Always Has in Her Freezer\"\n\"'Yabba Dabba Doo!' Kimye and Kids Rock Flintstone Halloween Costumes\"\n\"Cindy Crawford and Kaia Gerber Twin in Matching Supermodel Off-Duty Looks\"\n\"Boat inches closer to Niagara Falls edge after being grounded for century\"\n\"Kristen Stewart on 'SNL': 3 Sketches You Have to See\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\n[Candidate News Title]\n\"Thanksgiving side dishes: 11 unique recipes to try this season\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to find a selection of unique Thanksgiving side dish recipes that aim to elevate the traditional holiday meal. The piece may highlight various creative options that go beyond standard fare, possibly including both vegetarian and non-vegetarian dishes to cater to diverse dietary preferences. Additionally, it is likely to provide tips on preparation and presentation, making it easier for readers to incorporate these dishes into their own Thanksgiving celebrations. Overall, it seeks to inspire culinary creativity during the holiday season.",
+  "model": "gpt-4o-mini"
+}

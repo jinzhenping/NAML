@@ -1,0 +1,18 @@
+{
+  "user_id": 341,
+  "candidate_news_id": "N122944",
+  "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+  "user_history_count": 7,
+  "user_history": [
+    "The Jose Cuervo Express Is Hosting A Special Day Of The Dead Train Ride With Tequila Tastings And Live Music",
+    "Eva Mendes Gushes Over Photo of Longtime Love Ryan Gosling: 'Look at Him!'",
+    "Keanu Reeves picked up a lot of Ali Wong swag",
+    "Demi Lovato Just Proved She's the Queen of Halloween",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Already 6 Months! Prince Harry, Duchess Meghan's Son Is Trying to Talk",
+    "60+ Restaurants Where Veterans Eat for Free on Veterans Day This Year"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Jose Cuervo Express Is Hosting A Special Day Of The Dead Train Ride With Tequila Tastings And Live Music\"\n\"Eva Mendes Gushes Over Photo of Longtime Love Ryan Gosling: 'Look at Him!'\"\n\"Keanu Reeves picked up a lot of Ali Wong swag\"\n\"Demi Lovato Just Proved She's the Queen of Halloween\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Already 6 Months! Prince Harry, Duchess Meghan's Son Is Trying to Talk\"\n\"60+ Restaurants Where Veterans Eat for Free on Veterans Day This Year\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\" is likely to explore the various factors that contribute to the enduring presence of the Filet-O-Fish sandwich in McDonald's offerings. Readers may expect an analysis of market trends, customer preferences, and perhaps historical context surrounding its introduction. Additionally, the piece could delve into how the sandwich appeals to specific demographics, such as those seeking meatless options during Lent. Overall, the article may aim to provide insights into the strategic decisions behind menu selections at fast-food chains.",
+  "model": "gpt-4o-mini"
+}

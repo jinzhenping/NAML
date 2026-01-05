@@ -1,0 +1,21 @@
+{
+  "user_id": 41,
+  "candidate_news_id": "N10285",
+  "candidate_title": "4 reasons you shouldn't max out your 401(k)",
+  "user_history_count": 10,
+  "user_history": [
+    "Jenelle Evans files for divorce: 'The kids and I have moved away'",
+    "Week 9 winners, losers: Russell Wilson taking lead in MVP race; Adam Gase in trouble",
+    "16 of the Most Historically Inaccurate Movies Ever",
+    "EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "U.S. baseball team faces must-win Premier12 game after loss to Mexico",
+    "California fire update: Kincade Fire nears containment, Ranch Fire grows overnight",
+    "Trump: US ready to help in 'cleaning out' the 'monsters' who killed Americans",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jenelle Evans files for divorce: 'The kids and I have moved away'\"\n\"Week 9 winners, losers: Russell Wilson taking lead in MVP race; Adam Gase in trouble\"\n\"16 of the Most Historically Inaccurate Movies Ever\"\n\"EarthRoamer XV-HD Super Camper Can Be Yours for $1.7 Million\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"U.S. baseball team faces must-win Premier12 game after loss to Mexico\"\n\"California fire update: Kincade Fire nears containment, Ranch Fire grows overnight\"\n\"Trump: US ready to help in 'cleaning out' the 'monsters' who killed Americans\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\n[Candidate News Title]\n\"4 reasons you shouldn't max out your 401(k)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"4 reasons you shouldn't max out your 401(k),\" the user may expect to find a balanced examination of the potential downsides of fully funding a 401(k) retirement account. It is likely to outline key considerations, such as the impact on liquidity and flexibility, tax implications, and the opportunity cost of not investing in other financial avenues. The article could also discuss the importance of maintaining a diversified investment strategy to optimize long-term financial health, while providing practical advice for managing retirement savings effectively.",
+  "model": "gpt-4o-mini"
+}

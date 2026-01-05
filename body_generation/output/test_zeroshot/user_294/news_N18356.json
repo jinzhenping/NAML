@@ -1,0 +1,21 @@
+{
+  "user_id": 294,
+  "candidate_news_id": "N18356",
+  "candidate_title": "The world's most profitable company is about to go public",
+  "user_history_count": 10,
+  "user_history": [
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "Celebrity plastic surgery transformations",
+    "John Travolta Shares Rare Photo with Daughter Ella and Son Benjamin",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "He was a member of a boy band in the 90s. Now he's an ER doctor in Dallas",
+    "Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year",
+    "John Legend Leads a Pack of Gorgeous Men in the Sexiest Man Alive Issue: From Sterling to Jason, Peek at 10 More Hot Guys",
+    "Best royal photos of 2019",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+    "Celebrity beach cruising for 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Celebrity plastic surgery transformations\"\n\"John Travolta Shares Rare Photo with Daughter Ella and Son Benjamin\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"He was a member of a boy band in the 90s. Now he's an ER doctor in Dallas\"\n\"Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year\"\n\"John Legend Leads a Pack of Gorgeous Men in the Sexiest Man Alive Issue: From Sterling to Jason, Peek at 10 More Hot Guys\"\n\"Best royal photos of 2019\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"Celebrity beach cruising for 2019\"\n\n[Candidate News Title]\n\"The world's most profitable company is about to go public\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The world's most profitable company is about to go public\" is likely to provide an overview of a major corporation that has achieved significant financial success and is preparing to launch an initial public offering (IPO). Readers can expect insights into the company's market performance, potential valuation, and what its IPO could mean for investors and the broader market. Additionally, the article may include commentary on the implications of this move for the company's leadership and future growth prospects, though specific details remain uncertain.",
+  "model": "gpt-4o-mini"
+}

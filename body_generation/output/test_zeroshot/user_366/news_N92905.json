@@ -1,0 +1,21 @@
+{
+  "user_id": 366,
+  "candidate_news_id": "N92905",
+  "candidate_title": "The Unlikely Star of My Family's Thanksgiving Table",
+  "user_history_count": 10,
+  "user_history": [
+    "Lawmakers, social media users praise photo of Pelosi confronting Trump",
+    "'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "Michelle Pfeiffer initially blamed herself after #MeToo moment: 'I should've known'",
+    "Orlando Scandrick rips Eagles: They have 'accountability issues'",
+    "Frustrated Antonio Brown has active morning on Twitter",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Cincinnati Bengals WR A.J. Green: 'I can't go out there when I'm not 100 percent'",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lawmakers, social media users praise photo of Pelosi confronting Trump\"\n\"'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"Michelle Pfeiffer initially blamed herself after #MeToo moment: 'I should've known'\"\n\"Orlando Scandrick rips Eagles: They have 'accountability issues'\"\n\"Frustrated Antonio Brown has active morning on Twitter\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Cincinnati Bengals WR A.J. Green: 'I can't go out there when I'm not 100 percent'\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this\"\n\n[Candidate News Title]\n\"The Unlikely Star of My Family's Thanksgiving Table\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In \"The Unlikely Star of My Family's Thanksgiving Table,\" the user may expect to explore a unique or unexpected element that has become central to Thanksgiving celebrations within a family setting. The article is likely to discuss how this particular item or individual has gained prominence, potentially highlighting personal anecdotes or stories from family gatherings. Readers may also encounter insights into traditions and the evolving nature of holiday meals, emphasizing the significance of connection and shared experiences during Thanksgiving.",
+  "model": "gpt-4o-mini"
+}

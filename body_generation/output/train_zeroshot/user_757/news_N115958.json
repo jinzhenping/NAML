@@ -1,0 +1,21 @@
+{
+  "user_id": 757,
+  "candidate_news_id": "N115958",
+  "candidate_title": "The Infertility Secret I Kept From My Mother",
+  "user_history_count": 10,
+  "user_history": [
+    "200 Shocking Home Photos You Have to See",
+    "'Ebola Is Now a Disease We Can Treat.' How a Cure Emerged From a War Zone.",
+    "10 Lessons I Learned When My Thyroid Stopped Working",
+    "How one student loan strategy drives you deeper into debt",
+    "Horse Surprises and Delights Passengers on San Francisco-Bound Train",
+    "I Was 24 & Had Just Scored My Dream Job In Fashion. Then An Accident In The Hamptons Changed Everything.",
+    "A Military Camera Said 'Made in U.S.A.' The Screen Was in Chinese.",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Hong Kong student dies after fall in a parking garage during weekend protests",
+    "Stylish Living Room Ideas, From Floral to Family-Friendly"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"200 Shocking Home Photos You Have to See\"\n\"'Ebola Is Now a Disease We Can Treat.' How a Cure Emerged From a War Zone.\"\n\"10 Lessons I Learned When My Thyroid Stopped Working\"\n\"How one student loan strategy drives you deeper into debt\"\n\"Horse Surprises and Delights Passengers on San Francisco-Bound Train\"\n\"I Was 24 & Had Just Scored My Dream Job In Fashion. Then An Accident In The Hamptons Changed Everything.\"\n\"A Military Camera Said 'Made in U.S.A.' The Screen Was in Chinese.\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Hong Kong student dies after fall in a parking garage during weekend protests\"\n\"Stylish Living Room Ideas, From Floral to Family-Friendly\"\n\n[Candidate News Title]\n\"The Infertility Secret I Kept From My Mother\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The Infertility Secret I Kept From My Mother\" is likely to discuss personal experiences related to infertility, possibly exploring the author's struggles and the reasons for keeping these experiences private. Readers may expect insights into the emotional and social implications of infertility, as well as reflections on family dynamics, particularly how such secrets can affect relationships. The article could also provide information on coping mechanisms or resources for those facing similar challenges, though the specifics of these elements are uncertain. Overall, it seems to aim at fostering understanding and awareness around a sensitive topic.",
+  "model": "gpt-4o-mini"
+}

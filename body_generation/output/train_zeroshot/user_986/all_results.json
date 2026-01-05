@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 986,
+    "candidate_news_id": "N108736",
+    "candidate_title": "In speech, Bolton suggested Trump's policy decisions guided by personal interest",
+    "user_history_count": 10,
+    "user_history": [
+      "Caterpillar just flashed the latest warning sign for the global economy",
+      "Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car",
+      "Mountain skeleton may be man from Japanese internment camp",
+      "My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder",
+      "Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update",
+      "Georgia governor unveils Medicaid plan with work requirement",
+      "Tom Brady explains why he's angry at this point in the football season",
+      "2020 Performance Car of the Year",
+      "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+      "Cause determined in Jessi Combs' fatal speed record crash"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Caterpillar just flashed the latest warning sign for the global economy\"\n\"Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car\"\n\"Mountain skeleton may be man from Japanese internment camp\"\n\"My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder\"\n\"Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update\"\n\"Georgia governor unveils Medicaid plan with work requirement\"\n\"Tom Brady explains why he's angry at this point in the football season\"\n\"2020 Performance Car of the Year\"\n\"Severe weather shifts boat stuck on Niagara Falls rocks for 101 years\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\n[Candidate News Title]\n\"In speech, Bolton suggested Trump's policy decisions guided by personal interest\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses John Bolton's recent speech in which he suggests that former President Trump's policy decisions may have been influenced by personal interests rather than purely national considerations. Readers can expect an analysis of Bolton's remarks, potentially exploring the implications for U.S. foreign policy and governance. The piece may also provide context on Bolton's relationship with Trump and how his views align or conflict with the current administration's strategies. Additionally, it could delve into reactions from political analysts or other officials regarding Bolton's claims and their relevance in ongoing political discourse.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 986,
+    "candidate_news_id": "N100206",
+    "candidate_title": "Top 100 country songs of all time",
+    "user_history_count": 10,
+    "user_history": [
+      "Caterpillar just flashed the latest warning sign for the global economy",
+      "Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car",
+      "Mountain skeleton may be man from Japanese internment camp",
+      "My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder",
+      "Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update",
+      "Georgia governor unveils Medicaid plan with work requirement",
+      "Tom Brady explains why he's angry at this point in the football season",
+      "2020 Performance Car of the Year",
+      "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+      "Cause determined in Jessi Combs' fatal speed record crash"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Caterpillar just flashed the latest warning sign for the global economy\"\n\"Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car\"\n\"Mountain skeleton may be man from Japanese internment camp\"\n\"My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder\"\n\"Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update\"\n\"Georgia governor unveils Medicaid plan with work requirement\"\n\"Tom Brady explains why he's angry at this point in the football season\"\n\"2020 Performance Car of the Year\"\n\"Severe weather shifts boat stuck on Niagara Falls rocks for 101 years\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\n[Candidate News Title]\n\"Top 100 country songs of all time\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Top 100 country songs of all time,\" you can expect a comprehensive list that ranks the most influential and popular country songs throughout history. The article is likely to provide insights into the cultural significance of each song, along with brief descriptions of the artists and the impact these songs had on the genre. Additionally, it may highlight various eras within country music, showcasing how the genre has evolved over time. There could also be a discussion on the criteria used for ranking, which may include chart performance, critical acclaim, and fan popularity.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 986,
+    "candidate_news_id": "N109642",
+    "candidate_title": "Eerie photos of an abandoned airport that hasn't been touched in 25 years",
+    "user_history_count": 10,
+    "user_history": [
+      "Caterpillar just flashed the latest warning sign for the global economy",
+      "Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car",
+      "Mountain skeleton may be man from Japanese internment camp",
+      "My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder",
+      "Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update",
+      "Georgia governor unveils Medicaid plan with work requirement",
+      "Tom Brady explains why he's angry at this point in the football season",
+      "2020 Performance Car of the Year",
+      "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+      "Cause determined in Jessi Combs' fatal speed record crash"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Caterpillar just flashed the latest warning sign for the global economy\"\n\"Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car\"\n\"Mountain skeleton may be man from Japanese internment camp\"\n\"My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder\"\n\"Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update\"\n\"Georgia governor unveils Medicaid plan with work requirement\"\n\"Tom Brady explains why he's angry at this point in the football season\"\n\"2020 Performance Car of the Year\"\n\"Severe weather shifts boat stuck on Niagara Falls rocks for 101 years\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\n[Candidate News Title]\n\"Eerie photos of an abandoned airport that hasn't been touched in 25 years\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"Eerie photos of an abandoned airport that hasn't been touched in 25 years,\" the user may expect to explore a visual and historical account of the airport's decay and neglect over the years. The piece is likely to include photographs showcasing the airport's deteriorating structures and surroundings, accompanied by information about its history and reasons for abandonment. Additionally, the article might delve into broader themes of urban exploration and the impact of time on man-made environments, providing insights into what makes such locations intriguing to viewers.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 986,
+    "candidate_news_id": "N110473",
+    "candidate_title": "Five questions the second College Football Playoff rankings will answer",
+    "user_history_count": 10,
+    "user_history": [
+      "Caterpillar just flashed the latest warning sign for the global economy",
+      "Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car",
+      "Mountain skeleton may be man from Japanese internment camp",
+      "My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder",
+      "Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update",
+      "Georgia governor unveils Medicaid plan with work requirement",
+      "Tom Brady explains why he's angry at this point in the football season",
+      "2020 Performance Car of the Year",
+      "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+      "Cause determined in Jessi Combs' fatal speed record crash"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Caterpillar just flashed the latest warning sign for the global economy\"\n\"Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car\"\n\"Mountain skeleton may be man from Japanese internment camp\"\n\"My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder\"\n\"Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update\"\n\"Georgia governor unveils Medicaid plan with work requirement\"\n\"Tom Brady explains why he's angry at this point in the football season\"\n\"2020 Performance Car of the Year\"\n\"Severe weather shifts boat stuck on Niagara Falls rocks for 101 years\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\n[Candidate News Title]\n\"Five questions the second College Football Playoff rankings will answer\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect an analysis of the upcoming College Football Playoff rankings, focusing on five critical questions that could shape the landscape of the playoffs. The piece may explore factors such as team performance, potential upsets, and the impact of recent games on the rankings. Additionally, it is likely to discuss the implications of these rankings for teams vying for a playoff spot, providing insights into strategies and matchups that could influence outcomes. Overall, the article aims to inform readers about the significance of the rankings and the factors at play in this competitive environment.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 986,
+    "candidate_news_id": "N54239",
+    "candidate_title": "America's Most and Least Popular Senators",
+    "user_history_count": 10,
+    "user_history": [
+      "Caterpillar just flashed the latest warning sign for the global economy",
+      "Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car",
+      "Mountain skeleton may be man from Japanese internment camp",
+      "My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder",
+      "Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update",
+      "Georgia governor unveils Medicaid plan with work requirement",
+      "Tom Brady explains why he's angry at this point in the football season",
+      "2020 Performance Car of the Year",
+      "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+      "Cause determined in Jessi Combs' fatal speed record crash"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Caterpillar just flashed the latest warning sign for the global economy\"\n\"Lawsuit blames Tesla motorized door handles for death of driver stuck in burning car\"\n\"Mountain skeleton may be man from Japanese internment camp\"\n\"My Doctors Told Me I Had IBS. 4 Years Later, I Found out It Was a Completely Different Disorder\"\n\"Pompeo Aide Quit Over Envoy's Treatment: Impeachment Update\"\n\"Georgia governor unveils Medicaid plan with work requirement\"\n\"Tom Brady explains why he's angry at this point in the football season\"\n\"2020 Performance Car of the Year\"\n\"Severe weather shifts boat stuck on Niagara Falls rocks for 101 years\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\n[Candidate News Title]\n\"America's Most and Least Popular Senators\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"America's Most and Least Popular Senators,\" the reader may expect an analysis of the current approval ratings of U.S. senators, highlighting which senators are viewed favorably and which are not. The piece is likely to delve into factors influencing these ratings, such as recent legislative actions, public statements, or political controversies. Additionally, it may provide insights into regional variations in popularity and discuss the implications for upcoming elections. Overall, the article could serve as a gauge of public sentiment toward key political figures in the current climate.",
+    "model": "gpt-4o-mini"
+  }
+]

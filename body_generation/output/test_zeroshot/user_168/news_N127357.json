@@ -1,0 +1,21 @@
+{
+  "user_id": 168,
+  "candidate_news_id": "N127357",
+  "candidate_title": "Please Don't Yell at Your Dog!",
+  "user_history_count": 10,
+  "user_history": [
+    "A guide to the 2019 People's Choice Awards nominees' significant others",
+    "College gymnast dies following training accident in Connecticut",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "Cold weather: 70% of the country will experience freezing temperatures this week",
+    "Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter",
+    "The Most Popular Family Dinners from Every Decade",
+    "Mother-in-law poses as teenage boy to catch man in child porn case",
+    "Kristina Went From 'Drastic Diets' to Losing 105 Pounds With WW - Here's How She Did It",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk",
+    "Home Values in These Cities Have Grown the Most Since the Last Recession"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\"College gymnast dies following training accident in Connecticut\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Cold weather: 70% of the country will experience freezing temperatures this week\"\n\"Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter\"\n\"The Most Popular Family Dinners from Every Decade\"\n\"Mother-in-law poses as teenage boy to catch man in child porn case\"\n\"Kristina Went From 'Drastic Diets' to Losing 105 Pounds With WW - Here's How She Did It\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\"Home Values in These Cities Have Grown the Most Since the Last Recession\"\n\n[Candidate News Title]\n\"Please Don't Yell at Your Dog!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read \"Please Don't Yell at Your Dog!\", you might expect an informative discussion about the impact of yelling at pets, particularly dogs, and the potential negative consequences it can have on their behavior and mental health. The article could provide insights into alternative training methods that promote positive reinforcement and effective communication with dogs. It may also include expert opinions or research findings that emphasize the importance of a calm approach in building a trusting relationship with pets.",
+  "model": "gpt-4o-mini"
+}

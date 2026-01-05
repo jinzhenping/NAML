@@ -1,0 +1,21 @@
+{
+  "user_id": 434,
+  "candidate_news_id": "N72475",
+  "candidate_title": "Nearly all toddlers, and the majority of babies, eat too much added sugar in the US, study says",
+  "user_history_count": 10,
+  "user_history": [
+    "Patriots wanted a test. Now, they need some answers",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Patriots wanted a test. Now, they need some answers",
+    "CBP Arrests 30 People in 3 Smuggling Attempts Within 24 Hrs",
+    "MetLife Stadium black cat still on the loose after 'MNF' star turn",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Canadian man told his curb, damaged 26 years ago, to be repaired in 2037",
+    "Woman who was fired for flipping off Trump wins election",
+    "'Sons Of Anarchy' Star Ron Perlman Files for Divorce After 38 Years of Marriage"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Patriots wanted a test. Now, they need some answers\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"CBP Arrests 30 People in 3 Smuggling Attempts Within 24 Hrs\"\n\"MetLife Stadium black cat still on the loose after 'MNF' star turn\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Canadian man told his curb, damaged 26 years ago, to be repaired in 2037\"\n\"Woman who was fired for flipping off Trump wins election\"\n\"'Sons Of Anarchy' Star Ron Perlman Files for Divorce After 38 Years of Marriage\"\n\n[Candidate News Title]\n\"Nearly all toddlers, and the majority of babies, eat too much added sugar in the US, study says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent study revealing that a significant number of toddlers and babies in the United States consume excessive amounts of added sugars. The user can expect to read about the implications of this finding for children's health, including potential risks associated with high sugar intake at such a young age. The study may also explore dietary habits among young children and suggest recommendations for parents and caregivers to help reduce added sugar consumption. Additionally, it could highlight broader trends in nutrition and public health policies aimed at addressing this issue.",
+  "model": "gpt-4o-mini"
+}

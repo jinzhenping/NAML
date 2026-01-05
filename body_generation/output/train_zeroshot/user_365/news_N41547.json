@@ -1,0 +1,21 @@
+{
+  "user_id": 365,
+  "candidate_news_id": "N41547",
+  "candidate_title": "This is Chick-fil-A's most-ordered menu item",
+  "user_history_count": 10,
+  "user_history": [
+    "Shaquille O'Neal donates home to family of Atlanta boy paralyzed in shooting",
+    "The Latest: Storms lead to 3 deaths in eastern Oklahoma",
+    "Highest paid musicians in 2019",
+    "Dancing with the Stars: Sailor Brinkley-Cook Is Sent Home in 'Shocking' Elimination",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "John Witherspoon Dies: Comedian & 'Friday' Star Was 77",
+    "Whitney Way Thore Responds After Trolls Shamed Her for Attempting a Power Snatch",
+    "Why do you bruise easily? What it means and when to see a doctor",
+    "Kelly Ripa Channeled 'Old Town Road' for Halloween",
+    "Before his execution, a death row inmate told his victim's family he forgives them"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shaquille O'Neal donates home to family of Atlanta boy paralyzed in shooting\"\n\"The Latest: Storms lead to 3 deaths in eastern Oklahoma\"\n\"Highest paid musicians in 2019\"\n\"Dancing with the Stars: Sailor Brinkley-Cook Is Sent Home in 'Shocking' Elimination\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"John Witherspoon Dies: Comedian & 'Friday' Star Was 77\"\n\"Whitney Way Thore Responds After Trolls Shamed Her for Attempting a Power Snatch\"\n\"Why do you bruise easily? What it means and when to see a doctor\"\n\"Kelly Ripa Channeled 'Old Town Road' for Halloween\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\n[Candidate News Title]\n\"This is Chick-fil-A's most-ordered menu item\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"This is Chick-fil-A's most-ordered menu item,\" the user can expect an informative overview of the fast-food chain's most popular item based on sales data or customer preferences. The piece may delve into the factors contributing to its popularity, such as taste, value, or marketing strategies. Additionally, it could include insights from customer reviews or comparisons with other menu items, providing a well-rounded perspective on why this particular dish stands out among Chick-fil-A's offerings.",
+  "model": "gpt-4o-mini"
+}

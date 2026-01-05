@@ -1,0 +1,21 @@
+{
+  "user_id": 681,
+  "candidate_news_id": "N87236",
+  "candidate_title": "Stars   They're Just Like Us!",
+  "user_history_count": 10,
+  "user_history": [
+    "Who will be best team in the NFL after Week 11?",
+    "Top storylines for Week 11 in the NFL",
+    "A Man and His Shelby G.T. 350 51 Years On",
+    "A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "He was a member of a boy band in the 90s. Now he's an ER doctor in Dallas",
+    "Lamar Jackson vs. Deshaun Watson has potential to be NFL's next great quarterback rivalry",
+    "Report: Joe Philbin could run Colin Kaepernick workout",
+    "I moved from the US to the UK. Here are the 8 things that surprised me the most.",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Who will be best team in the NFL after Week 11?\"\n\"Top storylines for Week 11 in the NFL\"\n\"A Man and His Shelby G.T. 350 51 Years On\"\n\"A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"He was a member of a boy band in the 90s. Now he's an ER doctor in Dallas\"\n\"Lamar Jackson vs. Deshaun Watson has potential to be NFL's next great quarterback rivalry\"\n\"Report: Joe Philbin could run Colin Kaepernick workout\"\n\"I moved from the US to the UK. Here are the 8 things that surprised me the most.\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\n[Candidate News Title]\n\"Stars   They're Just Like Us!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"Stars: They're Just Like Us!\", you might expect an exploration of the everyday lives of celebrities, highlighting how they navigate common experiences and challenges similar to those of regular people. The article could provide insights into their routines, interactions, and perhaps lighthearted anecdotes that illustrate how fame does not shield them from life's ordinary moments. This may include references to their hobbies, family life, or even relatable struggles, making them seem more accessible and down-to-earth.",
+  "model": "gpt-4o-mini"
+}

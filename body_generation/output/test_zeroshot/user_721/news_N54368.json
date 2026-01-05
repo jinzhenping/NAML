@@ -1,0 +1,21 @@
+{
+  "user_id": 721,
+  "candidate_news_id": "N54368",
+  "candidate_title": "South Carolina teen gets life in prison for deadly elementary school shooting",
+  "user_history_count": 10,
+  "user_history": [
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "New images capture missing college student on night she vanished",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "The keto diet is hard work   but this hack makes it so much easier",
+    "8 Secret Spots You Never Knew Existed in Disney Parks",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+    "38 men who were worthy competitors for John Legend's Sexiest Man Alive title",
+    "Week in celebrity photos for Nov. 11-15, 2019",
+    "'Lots of Tears!' Teresa Giudice Details Reuniting With Husband Joe in Italy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"New images capture missing college student on night she vanished\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"The keto diet is hard work   but this hack makes it so much easier\"\n\"8 Secret Spots You Never Knew Existed in Disney Parks\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\"38 men who were worthy competitors for John Legend's Sexiest Man Alive title\"\n\"Week in celebrity photos for Nov. 11-15, 2019\"\n\"'Lots of Tears!' Teresa Giudice Details Reuniting With Husband Joe in Italy\"\n\n[Candidate News Title]\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about a South Carolina teen receiving a life sentence for a deadly elementary school shooting is likely to provide a detailed account of the case, including background information on the events leading up to the tragedy. Readers may expect to learn about the circumstances of the shooting, the legal proceedings that followed, and the impact on the community. It is also likely to explore the motivations behind the shooting, although the specifics may not be fully revealed. Additionally, the article could discuss the broader implications of school violence and the legal ramifications for young offenders.",
+  "model": "gpt-4o-mini"
+}

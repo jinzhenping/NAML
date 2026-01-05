@@ -1,0 +1,21 @@
+{
+  "user_id": 532,
+  "candidate_news_id": "N241",
+  "candidate_title": "Spot the Dog One Out - Pooch Fades Into the Crowd as Sheep Stop Traffic",
+  "user_history_count": 10,
+  "user_history": [
+    "Fastest American Muscle Cars EVER",
+    "Sarah Hyland documents painful tattoo removal",
+    "Tarek El Moussa Shares Sweet Pic of Girlfriend Heather Rae Young 'Chillin' With Son at Daughter's Soccer Game",
+    "Abandoned farms for sale with plenty of promise",
+    "Anna Faris and Michael Barrett may have just confirmed their engagement, plus more news",
+    "One of America's biggest solar panel makers quits manufacturing",
+    "No. 1 milk company declares bankruptcy amid drop in demand",
+    "Cat \"repeatedly\" breaks his friends out of animal shelter",
+    "Pregnant firefighter tackles bushfires: 'I don't care if you don't like it'",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Fastest American Muscle Cars EVER\"\n\"Sarah Hyland documents painful tattoo removal\"\n\"Tarek El Moussa Shares Sweet Pic of Girlfriend Heather Rae Young 'Chillin' With Son at Daughter's Soccer Game\"\n\"Abandoned farms for sale with plenty of promise\"\n\"Anna Faris and Michael Barrett may have just confirmed their engagement, plus more news\"\n\"One of America's biggest solar panel makers quits manufacturing\"\n\"No. 1 milk company declares bankruptcy amid drop in demand\"\n\"Cat \"repeatedly\" breaks his friends out of animal shelter\"\n\"Pregnant firefighter tackles bushfires: 'I don't care if you don't like it'\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\n[Candidate News Title]\n\"Spot the Dog One Out - Pooch Fades Into the Crowd as Sheep Stop Traffic\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a light-hearted exploration of a dog that cleverly blends into a crowd of sheep, causing a humorous disruption. The piece may describe the scene in detail, highlighting how the dog’s antics lead to unexpected traffic stoppages and reactions from onlookers. Additionally, it could provide context about the dog's behavior and the dynamics of the situation, offering insights into the interactions between animals and their environments. Overall, the article is likely to focus on the amusing aspects of this scenario while possibly touching on the broader theme of animal behavior.",
+  "model": "gpt-4o-mini"
+}

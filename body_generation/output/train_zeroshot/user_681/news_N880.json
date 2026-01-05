@@ -1,0 +1,21 @@
+{
+  "user_id": 681,
+  "candidate_news_id": "N880",
+  "candidate_title": "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+  "user_history_count": 10,
+  "user_history": [
+    "The first Ford Mustang owner kept the car. It's now worth $350,000",
+    "Grading all 32 NFL teams heading into the last eight weeks of the 2019 season",
+    "Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track",
+    "High school football player asks to pray with opponent whose mother has cancer",
+    "Wild & wonderful treasures of SEMA 2019   US edition",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Confirmed: Even Base 2020 C8 Corvettes Hit 60 MPH in 3.0 Seconds Flat",
+    "Far-reaching snowstorm may take shape over US",
+    "Russell Wilson is MVP front-runner and his signature moment is within grasp",
+    "Top 10 NFL quarterbacks heading into Week 10"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The first Ford Mustang owner kept the car. It's now worth $350,000\"\n\"Grading all 32 NFL teams heading into the last eight weeks of the 2019 season\"\n\"Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track\"\n\"High school football player asks to pray with opponent whose mother has cancer\"\n\"Wild & wonderful treasures of SEMA 2019   US edition\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Confirmed: Even Base 2020 C8 Corvettes Hit 60 MPH in 3.0 Seconds Flat\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Russell Wilson is MVP front-runner and his signature moment is within grasp\"\n\"Top 10 NFL quarterbacks heading into Week 10\"\n\n[Candidate News Title]\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\" is likely to provide a curated list of soup recipes ideal for the autumn season. Readers may expect a variety of options that emphasize seasonal ingredients, such as squash and root vegetables, along with cooking tips and serving suggestions. The piece could also include nutritional information or ideas for pairing these soups with complementary dishes. Overall, it seems aimed at helping families enjoy comforting meals during cooler weather.",
+  "model": "gpt-4o-mini"
+}

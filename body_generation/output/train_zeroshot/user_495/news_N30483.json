@@ -1,0 +1,21 @@
+{
+  "user_id": 495,
+  "candidate_news_id": "N30483",
+  "candidate_title": "Mulvaney Request to Join Subpoena Lawsuit Opposed by House",
+  "user_history_count": 10,
+  "user_history": [
+    "Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math",
+    "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Country music's biggest scandals",
+    "CMA Awards: Reba McEntire, Dolly Parton, Carrie Underwood to celebrate 'the year of the woman'",
+    "Jersey Shore Cast Celebrates Angelina Pivarnick's Bachelorette in New Orleans",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Listen to John Legend and Kelly Clarkson's updated version of 'Baby, It's Cold Outside'",
+    "Prince Harry and Meghan Markle Will Reportedly Visit Oprah While in California",
+    "Lil Pump bit by snake on set of music video"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math\"\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Country music's biggest scandals\"\n\"CMA Awards: Reba McEntire, Dolly Parton, Carrie Underwood to celebrate 'the year of the woman'\"\n\"Jersey Shore Cast Celebrates Angelina Pivarnick's Bachelorette in New Orleans\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Listen to John Legend and Kelly Clarkson's updated version of 'Baby, It's Cold Outside'\"\n\"Prince Harry and Meghan Markle Will Reportedly Visit Oprah While in California\"\n\"Lil Pump bit by snake on set of music video\"\n\n[Candidate News Title]\n\"Mulvaney Request to Join Subpoena Lawsuit Opposed by House\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Mulvaney Request to Join Subpoena Lawsuit Opposed by House,\" you may expect to find an overview of the legal proceedings involving Mick Mulvaney and the House's opposition to his request. The article is likely to outline the context of the subpoena lawsuit, including any relevant political implications and reactions from key figures or committees. Additionally, it could discuss the potential ramifications of Mulvaney's involvement, as well as how this situation fits into broader legislative or political trends.",
+  "model": "gpt-4o-mini"
+}

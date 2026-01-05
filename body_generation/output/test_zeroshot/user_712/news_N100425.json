@@ -1,0 +1,21 @@
+{
+  "user_id": 712,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 10,
+  "user_history": [
+    "Jorge Masvidal says he's 'dead serious' about wanting to box against Canelo Alvarez",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Snow crab sells for record price in Japan",
+    "'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint",
+    "Charlize Theron Just Ditched Her Bowl Cut for a Bright Blonde Pixie",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "Emilia Clarke Stunned in a Cut-Out Dress at the 'Last Christmas' Premiere",
+    "Sidney Crosby injury update: Pittsburgh Penguins star out six weeks after undergoing 'muscle injury repair'",
+    "12 Photos Show What It's Really Like To Grow Up Trans",
+    "Celebrity beach cruising for 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jorge Masvidal says he's 'dead serious' about wanting to box against Canelo Alvarez\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Snow crab sells for record price in Japan\"\n\"'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint\"\n\"Charlize Theron Just Ditched Her Bowl Cut for a Bright Blonde Pixie\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"Emilia Clarke Stunned in a Cut-Out Dress at the 'Last Christmas' Premiere\"\n\"Sidney Crosby injury update: Pittsburgh Penguins star out six weeks after undergoing 'muscle injury repair'\"\n\"12 Photos Show What It's Really Like To Grow Up Trans\"\n\"Celebrity beach cruising for 2019\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The most talked about movie moments of the 2010s,\" you can expect a detailed overview of significant film scenes and events that captured public attention throughout the decade. The article will likely highlight various cinematic moments that became cultural touchstones, possibly including iconic performances, memorable quotes, and groundbreaking visual effects. Additionally, it may delve into the impact these moments had on the film industry and audience perceptions. It could also explore how social media influenced discussions around these films, although this aspect remains uncertain.",
+  "model": "gpt-4o-mini"
+}

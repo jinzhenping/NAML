@@ -1,0 +1,21 @@
+{
+  "user_id": 378,
+  "candidate_news_id": "N20223",
+  "candidate_title": "10 reasons it's better to rent rather than buy a home",
+  "user_history_count": 10,
+  "user_history": [
+    "Butternut Squash + Bacon = Fall's Favorite Riff on Macaroni & Cheese",
+    "The best & worst states for US veterans",
+    "8-year-old girl lands record trout, gives it cute name",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Snow crab sells for record price in Japan",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "Three school workers charged in death of special needs student",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "Celebrity plastic surgery transformations"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Butternut Squash + Bacon = Fall's Favorite Riff on Macaroni & Cheese\"\n\"The best & worst states for US veterans\"\n\"8-year-old girl lands record trout, gives it cute name\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Snow crab sells for record price in Japan\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"Three school workers charged in death of special needs student\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"Celebrity plastic surgery transformations\"\n\n[Candidate News Title]\n\"10 reasons it's better to rent rather than buy a home\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In reading \"10 reasons it's better to rent rather than buy a home,\" the user may expect a detailed exploration of the advantages of renting compared to homeownership. The article is likely to discuss financial factors, such as lower upfront costs and maintenance responsibilities, alongside lifestyle considerations like flexibility and mobility. It could also touch on market trends that might make renting more appealing in certain regions. Overall, the piece is expected to provide a balanced view, helping readers understand the potential benefits of renting as a viable housing option.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 184,
+  "candidate_news_id": "N113723",
+  "candidate_title": "Zlatan Ibrahimovic Announces Departure From LA Galaxy With 'You're Welcome'",
+  "user_history_count": 10,
+  "user_history": [
+    "Rare Vixen Motorhome For Sale Is One Of Nicest We've Seen",
+    "The world's largest nuclear power producer is melting down",
+    "31 TV reboots, remakes, and spin-offs that are in the works",
+    "16 of the Most Historically Inaccurate Movies Ever",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "This stately home is having the ultimate yard sale",
+    "Far-reaching snowstorm may take shape over US",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Rare Vixen Motorhome For Sale Is One Of Nicest We've Seen\"\n\"The world's largest nuclear power producer is melting down\"\n\"31 TV reboots, remakes, and spin-offs that are in the works\"\n\"16 of the Most Historically Inaccurate Movies Ever\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"This stately home is having the ultimate yard sale\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\n[Candidate News Title]\n\"Zlatan Ibrahimovic Announces Departure From LA Galaxy With 'You're Welcome'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find information regarding Zlatan Ibrahimovic's recent announcement about his departure from LA Galaxy, potentially highlighting his contributions to the team and his overall impact on Major League Soccer. The piece may provide insights into the circumstances surrounding his exit, such as reasons for leaving or future career plans. Additionally, it could touch on his legacy within the sport and what this means for the Galaxy moving forward. Overall, the article is expected to present a factual account of Ibrahimovic's departure without delving into personal sentiments.",
+  "model": "gpt-4o-mini"
+}

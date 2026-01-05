@@ -1,0 +1,21 @@
+{
+  "user_id": 96,
+  "candidate_news_id": "N33378",
+  "candidate_title": "Comics - 'Half Full' by Maria Scrivan",
+  "user_history_count": 10,
+  "user_history": [
+    "Woman Texts Dead Father's Phone for 4 Years & Finally Receives an Emotional Reply",
+    "Man sleeping in dumpster injured after garbage truck unloads contents into hopper",
+    "Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage",
+    "Woman in 'Carrie' costume totals car, terrifies first responders",
+    "Porsche-Designed Superyacht Is a 135-Foot-Long Spaceship on Water",
+    "Trailer - Star Wars: The Rise of Skywalker",
+    "Taliban to release 2 professors in prisoner swap",
+    "When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Abandoned 'unicorn' puppy has a tail on its head"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Woman Texts Dead Father's Phone for 4 Years & Finally Receives an Emotional Reply\"\n\"Man sleeping in dumpster injured after garbage truck unloads contents into hopper\"\n\"Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage\"\n\"Woman in 'Carrie' costume totals car, terrifies first responders\"\n\"Porsche-Designed Superyacht Is a 135-Foot-Long Spaceship on Water\"\n\"Trailer - Star Wars: The Rise of Skywalker\"\n\"Taliban to release 2 professors in prisoner swap\"\n\"When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\n[Candidate News Title]\n\"Comics - 'Half Full' by Maria Scrivan\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Comics - 'Half Full' by Maria Scrivan,\" the user may expect a discussion of the comic strip's themes, characters, and unique style. It is likely to explore the humor and insights that Scrivan brings to everyday situations, possibly emphasizing the light-heartedness and relatability of her work. The article could also include background information on the author, her artistic approach, and how this particular comic fits into the broader context of contemporary comic strips. Overall, it aims to provide an overview of both the comic's content and its relevance in the current comic landscape.",
+  "model": "gpt-4o-mini"
+}

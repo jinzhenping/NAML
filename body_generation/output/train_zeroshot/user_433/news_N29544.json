@@ -1,0 +1,21 @@
+{
+  "user_id": 433,
+  "candidate_news_id": "N29544",
+  "candidate_title": "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+  "user_history_count": 10,
+  "user_history": [
+    "ISIS names successor to slain leader al-Baghdadi",
+    "Northern Irish man charged with manslaughter over 39 deaths in UK truck - RTE",
+    "Six deaths in one family over 14 years. Police say they have found their killer: The daughter-in-law.",
+    "Pregnant Florida woman uses AR-15 to fatally shoot armed intruder",
+    "The News In Cartoons",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Comics - 'Pluggers' by Gary Brookins",
+    "A year after deadly fire, Paradise pauses to remember",
+    "Amazing motorhomes of the rich and famous"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"ISIS names successor to slain leader al-Baghdadi\"\n\"Northern Irish man charged with manslaughter over 39 deaths in UK truck - RTE\"\n\"Six deaths in one family over 14 years. Police say they have found their killer: The daughter-in-law.\"\n\"Pregnant Florida woman uses AR-15 to fatally shoot armed intruder\"\n\"The News In Cartoons\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Comics - 'Pluggers' by Gary Brookins\"\n\"A year after deadly fire, Paradise pauses to remember\"\n\"Amazing motorhomes of the rich and famous\"\n\n[Candidate News Title]\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide details about Walmart's upcoming Black Friday promotions, highlighting key deals such as the $129 Apple Watch and various electronics doorbusters. Readers may expect an overview of the types of products included in the sale, as well as information on the timing of the event and any special conditions or promotions. Additionally, the article could discuss Walmart's strategy for attracting customers during the holiday shopping season and how these deals compare to offers from other retailers.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 188,
+  "candidate_news_id": "N14509",
+  "candidate_title": "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Sears says it has secured a $250 million lifeline, will close 96 stores",
+    "North Korea Warns American 'War Exercise' Will Violate Trump's Vow to Kim, Put Nuclear Talks 'On the Verge of Extinction'",
+    "Trump Is Still Sending a Team to World's Biggest Climate Summit",
+    "Republicans urge Bevin to provide proof of election fraud or concede",
+    "10 Common Causes of Itchy, Red Bumps and Skin Rashes",
+    "More than $400K in opioids shipped from India to New Jersey",
+    "New York City man apprehended for punching woman, 53, outside church, police say",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US",
+    "Lil Pump bit by snake on set of music video",
+    "Turkish patrol kills protester amid shaky truce in NE Syria"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Sears says it has secured a $250 million lifeline, will close 96 stores\"\n\"North Korea Warns American 'War Exercise' Will Violate Trump's Vow to Kim, Put Nuclear Talks 'On the Verge of Extinction'\"\n\"Trump Is Still Sending a Team to World's Biggest Climate Summit\"\n\"Republicans urge Bevin to provide proof of election fraud or concede\"\n\"10 Common Causes of Itchy, Red Bumps and Skin Rashes\"\n\"More than $400K in opioids shipped from India to New Jersey\"\n\"New York City man apprehended for punching woman, 53, outside church, police say\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\"Lil Pump bit by snake on set of music video\"\n\"Turkish patrol kills protester amid shaky truce in NE Syria\"\n\n[Candidate News Title]\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers can anticipate an exploration of Kristen Stewart's relationship developments, particularly her intentions to propose to her girlfriend. The piece is likely to provide context about their relationship, including any noteworthy milestones or public appearances that have drawn attention. Additionally, it may touch on broader trends in celebrity relationships and how they are perceived in the media. Overall, the article could offer insights into Stewart's personal life while reflecting on the evolving nature of love among public figures.",
+  "model": "gpt-4o-mini"
+}

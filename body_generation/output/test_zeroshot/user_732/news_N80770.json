@@ -1,0 +1,21 @@
+{
+  "user_id": 732,
+  "candidate_news_id": "N80770",
+  "candidate_title": "Judge agrees Alabama Islamic State recruit is not US citizen",
+  "user_history_count": 10,
+  "user_history": [
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Dodge Put the Wrong Wheels on 173 New Challengers and Chargers",
+    "Neil Young Says U.S. Citizenship Application Delayed By Marijuana Use",
+    "Ryan Fitzpatrick upset about being forced off field for delayed concussion check",
+    "Fuel-theft rings fill South Florida roads with 'moving bombs'",
+    "2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+    "A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Dodge Put the Wrong Wheels on 173 New Challengers and Chargers\"\n\"Neil Young Says U.S. Citizenship Application Delayed By Marijuana Use\"\n\"Ryan Fitzpatrick upset about being forced off field for delayed concussion check\"\n\"Fuel-theft rings fill South Florida roads with 'moving bombs'\"\n\"2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\n[Candidate News Title]\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent legal ruling regarding an individual from Alabama who was recruited by the Islamic State and is now deemed not to be a U.S. citizen. It may provide an overview of the judge's reasoning behind this decision, including potential implications for national security and immigration law. The piece could explore the legal context surrounding citizenship and the challenges faced by individuals linked to terrorism. Additionally, it may touch on broader themes of how such cases are handled within the U.S. judicial system, though specifics are uncertain.",
+  "model": "gpt-4o-mini"
+}

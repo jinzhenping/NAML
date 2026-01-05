@@ -1,0 +1,21 @@
+{
+  "user_id": 744,
+  "candidate_news_id": "N110439",
+  "candidate_title": "Southwest's Spring Travel Sale Includes $39 One-way Tickets",
+  "user_history_count": 10,
+  "user_history": [
+    "40 Fun Facts About Jennifer Aniston",
+    "Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says",
+    "Republicans urge Bevin to provide proof of election fraud or concede",
+    "Young homebuyers are vanishing from the US",
+    "Meghan McCain GOES IN on Donald Trump Jr. on 'The View'",
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+    "Pete Buttigieg Says He Does Not Respect Donald Trump: 'At a Deeper Level I Don't Think He Respects Himself'",
+    "Top official says Trump wanted Ukraine to announce a 'Clinton' probe, further undermining Trump's defenses",
+    "Opinion: President Trump's increased interest in public sporting events hardly a coincidence",
+    "Paramedic finds magic solution to keep kids calm in emergencies"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"40 Fun Facts About Jennifer Aniston\"\n\"Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says\"\n\"Republicans urge Bevin to provide proof of election fraud or concede\"\n\"Young homebuyers are vanishing from the US\"\n\"Meghan McCain GOES IN on Donald Trump Jr. on 'The View'\"\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Pete Buttigieg Says He Does Not Respect Donald Trump: 'At a Deeper Level I Don't Think He Respects Himself'\"\n\"Top official says Trump wanted Ukraine to announce a 'Clinton' probe, further undermining Trump's defenses\"\n\"Opinion: President Trump's increased interest in public sporting events hardly a coincidence\"\n\"Paramedic finds magic solution to keep kids calm in emergencies\"\n\n[Candidate News Title]\n\"Southwest's Spring Travel Sale Includes $39 One-way Tickets\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Southwest's Spring Travel Sale Includes $39 One-way Tickets,\" you are likely expecting to find detailed information about the airline's current promotional fares for spring travel. The article may outline specific destinations included in the sale, the duration of the promotion, and any terms and conditions that apply to the discounted tickets. Additionally, it could provide insights into how these prices compare to typical fares and tips for booking flights during this sale period. Overall, the piece should serve as a practical guide for travelers looking to take advantage of the savings offered by Southwest Airlines.",
+  "model": "gpt-4o-mini"
+}

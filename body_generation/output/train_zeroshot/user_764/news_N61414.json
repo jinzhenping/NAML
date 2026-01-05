@@ -1,0 +1,21 @@
+{
+  "user_id": 764,
+  "candidate_news_id": "N61414",
+  "candidate_title": "Ohio State star Chase Young to miss one more game, return vs. Penn State",
+  "user_history_count": 10,
+  "user_history": [
+    "Celebs celebrate Halloween 2019",
+    "Bradley Cooper Makes Rare Public Appearance With Daughter Lea",
+    "Andy Cohen Says He Doesn't Feel Guilty About Joe and Teresa Giudice's Legal Fate After RHONJ",
+    "John Witherspoon Dies: Comedian & 'Friday' Star Was 77",
+    "How To Open a Can Without a Can Opener",
+    "Jenelle Evans files for divorce: 'The kids and I have moved away'",
+    "Oklahoma news anchor diagnosed with breast cancer after streaming first-ever mammogram on Facebook Live",
+    "Ehlers-Danlos syndrome: Here's what you need to know",
+    "Celebrity kids then and now: See how they've grown",
+    "100 Most Popular Country Music Stars"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebs celebrate Halloween 2019\"\n\"Bradley Cooper Makes Rare Public Appearance With Daughter Lea\"\n\"Andy Cohen Says He Doesn't Feel Guilty About Joe and Teresa Giudice's Legal Fate After RHONJ\"\n\"John Witherspoon Dies: Comedian & 'Friday' Star Was 77\"\n\"How To Open a Can Without a Can Opener\"\n\"Jenelle Evans files for divorce: 'The kids and I have moved away'\"\n\"Oklahoma news anchor diagnosed with breast cancer after streaming first-ever mammogram on Facebook Live\"\n\"Ehlers-Danlos syndrome: Here's what you need to know\"\n\"Celebrity kids then and now: See how they've grown\"\n\"100 Most Popular Country Music Stars\"\n\n[Candidate News Title]\n\"Ohio State star Chase Young to miss one more game, return vs. Penn State\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide an update on Ohio State football player Chase Young, focusing on his recent absence from games and the anticipated timeline for his return. Readers can expect details regarding his performance prior to the missed games, any injuries he may be dealing with, and the implications of his absence for the team's upcoming match against Penn State. It may also discuss how Young's return could impact team dynamics and playoff aspirations, offering insights into his role as a key player in the season.",
+  "model": "gpt-4o-mini"
+}

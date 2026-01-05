@@ -1,0 +1,21 @@
+{
+  "user_id": 544,
+  "candidate_news_id": "N123901",
+  "candidate_title": "Josh Gordon Admits Patriots' Decision To Waive Him Was Surprising",
+  "user_history_count": 10,
+  "user_history": [
+    "The 50 cheapest places to buy land in America",
+    "Chimpanzee monkeys around on skateboard",
+    "Sears says it has secured a $250 million lifeline, will close 96 stores",
+    "It's Easy to Overdose on Acetaminophen and It Can Kill You, New Study Says",
+    "These Are the Top 10 Chicken Chains in America",
+    "A man perched between two traffic lights at busy New York intersection taken down by NYPD",
+    "The first Ford Mustang owner kept the car. It's now worth $350,000",
+    "Iran downs drone over southern port city - IRNA",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Ashley Graham Says She Has a Major Case of Pregnancy Brain But What Is That?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 50 cheapest places to buy land in America\"\n\"Chimpanzee monkeys around on skateboard\"\n\"Sears says it has secured a $250 million lifeline, will close 96 stores\"\n\"It's Easy to Overdose on Acetaminophen and It Can Kill You, New Study Says\"\n\"These Are the Top 10 Chicken Chains in America\"\n\"A man perched between two traffic lights at busy New York intersection taken down by NYPD\"\n\"The first Ford Mustang owner kept the car. It's now worth $350,000\"\n\"Iran downs drone over southern port city - IRNA\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Ashley Graham Says She Has a Major Case of Pregnancy Brain But What Is That?\"\n\n[Candidate News Title]\n\"Josh Gordon Admits Patriots' Decision To Waive Him Was Surprising\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Josh Gordon Admits Patriots' Decision To Waive Him Was Surprising,\" the user is likely to read about the circumstances surrounding Josh Gordon's release from the New England Patriots. The piece may provide insights into Gordon's personal reflections on the decision, including his thoughts on the team's reasoning and his own performance. Additionally, it could explore the implications of this move for both Gordon's career and the Patriots' roster strategy, offering context on his past struggles and potential future opportunities in the NFL.",
+  "model": "gpt-4o-mini"
+}

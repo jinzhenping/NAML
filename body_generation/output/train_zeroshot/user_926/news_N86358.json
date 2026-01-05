@@ -1,0 +1,20 @@
+{
+  "user_id": 926,
+  "candidate_news_id": "N86358",
+  "candidate_title": "Bode Miller delivered his twin boys after midwife didn't make it time for the birth",
+  "user_history_count": 9,
+  "user_history": [
+    "Brady jabs Manning, joins other athletes in costume for Halloween",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "50 Unique Holiday Gift Ideas for Him Under $50",
+    "Celeb couples with big age gaps",
+    "Celeb couples with big age gaps",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "'The Little Mermaid Live!': TV Review",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Brady jabs Manning, joins other athletes in costume for Halloween\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"50 Unique Holiday Gift Ideas for Him Under $50\"\n\"Celeb couples with big age gaps\"\n\"Celeb couples with big age gaps\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"\"\n\n[Candidate News Title]\n\"Bode Miller delivered his twin boys after midwife didn't make it time for the birth\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Bode Miller delivering his twin boys is likely to provide a detailed account of the unexpected circumstances surrounding the birth, particularly focusing on the absence of the midwife. Readers may expect to learn about Miller's experience during the delivery, including any challenges he faced and how he managed the situation. Additionally, the article might touch upon Miller's family dynamics and his reflections on becoming a father of twins. Overall, it could offer insights into both the emotional and practical aspects of this unique birthing experience.",
+  "model": "gpt-4o-mini"
+}

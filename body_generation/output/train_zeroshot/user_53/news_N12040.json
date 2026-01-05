@@ -1,0 +1,21 @@
+{
+  "user_id": 53,
+  "candidate_news_id": "N12040",
+  "candidate_title": "Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media",
+  "user_history_count": 10,
+  "user_history": [
+    "Cartel gunmen terrorize Mexican city, free El Chapo's son",
+    "Nestor makes landfall on Florida island, heads north",
+    "The most haunted roads in the US and the chilling stories behind them",
+    "Report: Adidas working on buyout of $25 million John Wall deal amid injuries",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Holocaust survivor under guard amid death threats",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cartel gunmen terrorize Mexican city, free El Chapo's son\"\n\"Nestor makes landfall on Florida island, heads north\"\n\"The most haunted roads in the US and the chilling stories behind them\"\n\"Report: Adidas working on buyout of $25 million John Wall deal amid injuries\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Holocaust survivor under guard amid death threats\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\n[Candidate News Title]\n\"Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find insights from Le'Veon Bell directed at Antonio Brown regarding his social media presence. The discussion may center on how Brown can manage his online persona and interactions, especially in light of past controversies. There could be practical advice on balancing personal expression with public perception, reflecting Bell's own experiences in the NFL. Additionally, the article might touch on broader themes of athlete behavior in the digital age, but the specifics of Bell's recommendations remain uncertain.",
+  "model": "gpt-4o-mini"
+}

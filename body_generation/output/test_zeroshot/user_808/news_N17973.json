@@ -1,0 +1,21 @@
+{
+  "user_id": 808,
+  "candidate_news_id": "N17973",
+  "candidate_title": "Vaping harms more than just your lungs",
+  "user_history_count": 10,
+  "user_history": [
+    "McConnell discounts quick dismissal of Trump impeachment articles: 'We'll have to have a trial'",
+    "17 restaurants that will be open on Thanksgiving",
+    "Divers salvage 100-year-old liquor from WWI shipwreck",
+    "Is the Alabama Football Dynasty Ending?",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+    "Powell's Warning to Congress About the Next Recession",
+    "Experts crack mystery of ancient Egypt's sacred bird mummies",
+    "Stromboli vs. Calzone: What's the Real Difference Between These Italian Favorites?",
+    "Shortage of Gulf Oysters Threatens Southern Culinary Heritage",
+    "Braves make a splash, signing closer Will Smith to three-year, $39 million deal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McConnell discounts quick dismissal of Trump impeachment articles: 'We'll have to have a trial'\"\n\"17 restaurants that will be open on Thanksgiving\"\n\"Divers salvage 100-year-old liquor from WWI shipwreck\"\n\"Is the Alabama Football Dynasty Ending?\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"Powell's Warning to Congress About the Next Recession\"\n\"Experts crack mystery of ancient Egypt's sacred bird mummies\"\n\"Stromboli vs. Calzone: What's the Real Difference Between These Italian Favorites?\"\n\"Shortage of Gulf Oysters Threatens Southern Culinary Heritage\"\n\"Braves make a splash, signing closer Will Smith to three-year, $39 million deal\"\n\n[Candidate News Title]\n\"Vaping harms more than just your lungs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Vaping harms more than just your lungs\" is likely to explore the various health risks associated with vaping beyond respiratory issues. It may discuss the impact of vaping on cardiovascular health, mental well-being, and other bodily systems, drawing on recent research and expert opinions. Additionally, the piece could highlight the growing concerns regarding the long-term effects of e-cigarettes, especially among younger users. Readers might expect to find statistics and studies that underline these health implications, along with potential regulatory responses.",
+  "model": "gpt-4o-mini"
+}

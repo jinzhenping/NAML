@@ -1,0 +1,21 @@
+{
+  "user_id": 616,
+  "candidate_news_id": "N55792",
+  "candidate_title": "Stars Who Served in the Military",
+  "user_history_count": 10,
+  "user_history": [
+    "The College Hoops Contender Series: Who are the teams that can actually win a title?",
+    "The 25 greatest English rock bands",
+    "Homes in these 25 waterfront cities are a total steal",
+    "This Wedding Photo of a Canine Best Man Captures Just How Deep a Dog's Love Truly Is",
+    "18 of the most iconic record-breaking songs in pop music history",
+    "Rams trade Aqib Talib and fifth-round pick to Dolphins",
+    "Five things we learned from the start of the college basketball season",
+    "Wild & wonderful treasures of SEMA 2019   US edition",
+    "45 Amazing Facts About Airplanes That Will Make Your Mind Soar",
+    "15 Times Country Songs Took Over The Radio"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The College Hoops Contender Series: Who are the teams that can actually win a title?\"\n\"The 25 greatest English rock bands\"\n\"Homes in these 25 waterfront cities are a total steal\"\n\"This Wedding Photo of a Canine Best Man Captures Just How Deep a Dog's Love Truly Is\"\n\"18 of the most iconic record-breaking songs in pop music history\"\n\"Rams trade Aqib Talib and fifth-round pick to Dolphins\"\n\"Five things we learned from the start of the college basketball season\"\n\"Wild & wonderful treasures of SEMA 2019   US edition\"\n\"45 Amazing Facts About Airplanes That Will Make Your Mind Soar\"\n\"15 Times Country Songs Took Over The Radio\"\n\n[Candidate News Title]\n\"Stars Who Served in the Military\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Stars Who Served in the Military,\" the user may expect an exploration of various celebrities who have had military careers or service. It is likely to provide insights into their roles, the branches of the military they served in, and how their experiences may have influenced their careers in entertainment. Additionally, the article could touch on the impact of their service on public perception and highlight any notable contributions they made during their time in the military. Overall, the piece is expected to blend biographical information with reflections on the intersection of fame and service.",
+  "model": "gpt-4o-mini"
+}

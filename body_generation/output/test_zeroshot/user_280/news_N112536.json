@@ -1,0 +1,21 @@
+{
+  "user_id": 280,
+  "candidate_news_id": "N112536",
+  "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+  "user_history_count": 10,
+  "user_history": [
+    "John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet",
+    "Actress Accuses Roman Polanski of Raping Her in 1975",
+    "105 Most Popular Sodas Ranked by How Toxic They Are",
+    "16 Signs You're at Risk for Diabetes",
+    "100 vintage baby names coming back into style",
+    "The Foolproof Ways Health Experts Avoid Getting Sick or Gaining Weight During the Holidays",
+    "Instagram-famous pilot reveals secrets people don't know about the job",
+    "Americans now have a record $14 trillion in debt",
+    "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+    "Husband, 106, and wife, 105, are named world's oldest living couple"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet\"\n\"Actress Accuses Roman Polanski of Raping Her in 1975\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"16 Signs You're at Risk for Diabetes\"\n\"100 vintage baby names coming back into style\"\n\"The Foolproof Ways Health Experts Avoid Getting Sick or Gaining Weight During the Holidays\"\n\"Instagram-famous pilot reveals secrets people don't know about the job\"\n\"Americans now have a record $14 trillion in debt\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\"Husband, 106, and wife, 105, are named world's oldest living couple\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a specific location in the United States that has experienced unusually warm temperatures, remaining above 80 degrees since March. Readers can expect to learn about the geographical features and climate patterns that contribute to this prolonged warmth. The article may also explore the implications of such weather on local ecosystems, tourism, and daily life for residents. Additionally, it could touch on how this phenomenon compares to typical weather patterns in the region, providing context for those interested in climate trends.",
+  "model": "gpt-4o-mini"
+}

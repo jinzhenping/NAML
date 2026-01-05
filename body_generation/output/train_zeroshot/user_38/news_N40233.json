@@ -1,0 +1,21 @@
+{
+  "user_id": 38,
+  "candidate_news_id": "N40233",
+  "candidate_title": "3 pieces of dated retirement advice you should ignore",
+  "user_history_count": 10,
+  "user_history": [
+    "The best and worst states to live in",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Nearly 500 Prisoners Freed on a Single Day",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet",
+    "Best all-inclusive resorts in the world",
+    "Holocaust survivor under guard amid death threats",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "Longtime pastor of Baptist church in Chicago resigns after confessing he sexually abused a relative decades ago: 'I own my sin'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The best and worst states to live in\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Nearly 500 Prisoners Freed on a Single Day\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"John Stamos accidentally 'likes' Lori Loughlin-to-jail tweet\"\n\"Best all-inclusive resorts in the world\"\n\"Holocaust survivor under guard amid death threats\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"Longtime pastor of Baptist church in Chicago resigns after confessing he sexually abused a relative decades ago: 'I own my sin'\"\n\n[Candidate News Title]\n\"3 pieces of dated retirement advice you should ignore\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can likely expect a discussion on outdated retirement advice that may no longer hold relevance in today's financial landscape. It could cover common misconceptions about retirement savings, investment strategies, and lifestyle expectations that many people still believe. The piece might suggest that relying on traditional wisdom, such as solely depending on Social Security or underestimating healthcare costs, could hinder effective retirement planning. Overall, the article is likely to provide insights into more current and practical approaches to retirement, helping readers reassess their strategies.",
+  "model": "gpt-4o-mini"
+}

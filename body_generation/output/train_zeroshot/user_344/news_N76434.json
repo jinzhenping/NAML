@@ -1,0 +1,21 @@
+{
+  "user_id": 344,
+  "candidate_news_id": "N76434",
+  "candidate_title": "Report: Election vendors are 'prime targets,' need oversight",
+  "user_history_count": 10,
+  "user_history": [
+    "Mourners, constituents pay tribute to US Rep. Cummings",
+    "There's a scientific reason you crave junk food when you don't get enough sleep",
+    "Eric Tse, 24, just became a billionaire overnight",
+    "The bucket-list attraction in every state",
+    "7 ways to save serious cash on holiday travel",
+    "The 13 Most Fun-to-Drive SUVs Under $50,000",
+    "The best time to visit Iceland and 49 other top travel destinations",
+    "Heading to Disney World For Christmas? You Won't Want to Miss These 4 New Attractions",
+    "Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka",
+    "These five mistakes could blow your holiday travel budget"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mourners, constituents pay tribute to US Rep. Cummings\"\n\"There's a scientific reason you crave junk food when you don't get enough sleep\"\n\"Eric Tse, 24, just became a billionaire overnight\"\n\"The bucket-list attraction in every state\"\n\"7 ways to save serious cash on holiday travel\"\n\"The 13 Most Fun-to-Drive SUVs Under $50,000\"\n\"The best time to visit Iceland and 49 other top travel destinations\"\n\"Heading to Disney World For Christmas? You Won't Want to Miss These 4 New Attractions\"\n\"Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka\"\n\"These five mistakes could blow your holiday travel budget\"\n\n[Candidate News Title]\n\"Report: Election vendors are 'prime targets,' need oversight\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Report: Election vendors are 'prime targets,' need oversight\" is likely to discuss the vulnerabilities associated with election vendors, emphasizing the need for increased oversight to ensure the integrity of electoral processes. It may outline specific risks that these vendors face, including potential cybersecurity threats and the implications of these vulnerabilities for public trust in elections. Additionally, the article could provide insights into current regulatory measures and recommendations for improving vendor accountability, reflecting broader themes of governance and security in the electoral landscape.",
+  "model": "gpt-4o-mini"
+}

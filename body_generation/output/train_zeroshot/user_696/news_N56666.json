@@ -1,0 +1,21 @@
+{
+  "user_id": 696,
+  "candidate_news_id": "N56666",
+  "candidate_title": "Arkansas town renames a bridge after Maleah Davis",
+  "user_history_count": 10,
+  "user_history": [
+    "Report: Potential new USC AD told he cannot pursue Urban Meyer, could back out",
+    "BART worker rescues man from oncoming train",
+    "Heisman Race 2019: Why LSU-Alabama Won't Eliminate the Losing Quarterback",
+    "Jeff Sessions escorted from Northwestern U. under heavy security amid 'cancel culture' protest",
+    "Opinions | Where is Mike Pompeo? He's hiding in fear of Donald Trump.",
+    "Greg Schiano reportedly making 'significant demands' in Rutgers talks",
+    "Rand Paul blocks Senate resolution backing protection for whistleblowers",
+    "US: Saudis recruited Twitter workers to spy on critics",
+    "Opinions | It's too late to save yourself now, Bill Barr",
+    "Attorney Alan Dershowitz countersues Virginia Giuffre for defamation"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Report: Potential new USC AD told he cannot pursue Urban Meyer, could back out\"\n\"BART worker rescues man from oncoming train\"\n\"Heisman Race 2019: Why LSU-Alabama Won't Eliminate the Losing Quarterback\"\n\"Jeff Sessions escorted from Northwestern U. under heavy security amid 'cancel culture' protest\"\n\"Opinions | Where is Mike Pompeo? He's hiding in fear of Donald Trump.\"\n\"Greg Schiano reportedly making 'significant demands' in Rutgers talks\"\n\"Rand Paul blocks Senate resolution backing protection for whistleblowers\"\n\"US: Saudis recruited Twitter workers to spy on critics\"\n\"Opinions | It's too late to save yourself now, Bill Barr\"\n\"Attorney Alan Dershowitz countersues Virginia Giuffre for defamation\"\n\n[Candidate News Title]\n\"Arkansas town renames a bridge after Maleah Davis\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Arkansas town renames a bridge after Maleah Davis\" is likely to provide an overview of the decision made by the town officials to honor Maleah Davis, a young girl whose tragic story gained significant media attention. Readers can expect details about the motivations behind the renaming, including community sentiments and any public discussions or events surrounding the decision. The piece may also explore the implications of this tribute, reflecting on how it connects to broader themes of remembrance and social issues, though the specific impact on the community is not certain.",
+  "model": "gpt-4o-mini"
+}

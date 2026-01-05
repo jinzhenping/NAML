@@ -1,0 +1,21 @@
+{
+  "user_id": 408,
+  "candidate_news_id": "N33539",
+  "candidate_title": "What 40 Celebrities Look Like Without Their Signature Looks",
+  "user_history_count": 10,
+  "user_history": [
+    "As Warren Gains in Race, Wall Street Sounds the Alarm",
+    "Report: NFL considers allowing a Chargers move to London",
+    "Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs",
+    "The Latest: Kansas City to remove King's name from street",
+    "Supreme Court weighs fate of DACA, 700,000 young immigrants",
+    "USA TODAY interview: Nikki Haley isn't running for president. That is, not yet.",
+    "'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores",
+    "Thousands of people have problems accessing Disney+, and they're not happy",
+    "Sean Spicer Admits He's Somewhat 'Relieved' to Be Eliminated from Dancing with the Stars",
+    "'He's working': White House says Trump is not watching first public impeachment hearing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"As Warren Gains in Race, Wall Street Sounds the Alarm\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Starbucks' Holiday Cups Are Back and They're Very 'Merry'   See the 4 New Designs\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Supreme Court weighs fate of DACA, 700,000 young immigrants\"\n\"USA TODAY interview: Nikki Haley isn't running for president. That is, not yet.\"\n\"'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores\"\n\"Thousands of people have problems accessing Disney+, and they're not happy\"\n\"Sean Spicer Admits He's Somewhat 'Relieved' to Be Eliminated from Dancing with the Stars\"\n\"'He's working': White House says Trump is not watching first public impeachment hearing\"\n\n[Candidate News Title]\n\"What 40 Celebrities Look Like Without Their Signature Looks\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"What 40 Celebrities Look Like Without Their Signature Looks,\" the user may expect to see a collection of images showcasing various celebrities stripped of their iconic hairstyles, makeup, or fashion choices. The piece is likely to explore how these changes affect the public's perception of the stars and may include commentary on the impact of celebrity branding on identity. Additionally, the article could discuss the surprising transformations that some celebrities undergo when they step away from their familiar appearances, providing insights into the relationship between public image and personal expression.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 152,
+  "candidate_news_id": "N58102",
+  "candidate_title": "Beijing slams Pompeo for 'Cold War thinking' in Berlin speech",
+  "user_history_count": 10,
+  "user_history": [
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "New Mexico DE Nahje Flowers dies at 21",
+    "Report: NFL considers allowing a Chargers move to London",
+    "Report: Potential new USC AD told he cannot pursue Urban Meyer, could back out",
+    "Clumsy baby elephant falls into watering hole",
+    "Cam Newton's trip to IR forces Panthers to confront three questions sooner than expected",
+    "'The Little Mermaid Live!': TV Review",
+    "EU ambassador's miraculous 'now I remember' moment",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Attorney Alan Dershowitz countersues Virginia Giuffre for defamation"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"New Mexico DE Nahje Flowers dies at 21\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"Report: Potential new USC AD told he cannot pursue Urban Meyer, could back out\"\n\"Clumsy baby elephant falls into watering hole\"\n\"Cam Newton's trip to IR forces Panthers to confront three questions sooner than expected\"\n\"'The Little Mermaid Live!': TV Review\"\n\"EU ambassador's miraculous 'now I remember' moment\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Attorney Alan Dershowitz countersues Virginia Giuffre for defamation\"\n\n[Candidate News Title]\n\"Beijing slams Pompeo for 'Cold War thinking' in Berlin speech\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to read about recent comments made by former U.S. Secretary of State Mike Pompeo during a speech in Berlin, where he criticized what he perceives as a resurgence of \"Cold War thinking\" in international relations. The piece may delve into China's response, specifically highlighting Beijing's condemnation of Pompeo's remarks and its implications for U.S.-China relations. Additionally, the article might explore the broader context of geopolitical tensions and how such statements could influence diplomatic efforts moving forward.",
+  "model": "gpt-4o-mini"
+}

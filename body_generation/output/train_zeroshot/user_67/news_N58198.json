@@ -1,0 +1,21 @@
+{
+  "user_id": 67,
+  "candidate_news_id": "N58198",
+  "candidate_title": "Cherry disappointed with MacLean's apology: 'He buried me'",
+  "user_history_count": 10,
+  "user_history": [
+    "The world's most luxurious kitchens",
+    "The 50 Best One-Hit Wonders of All Time",
+    "Dangers of tattoos are more than just skin deep",
+    "Celebrity Headshots from Before They Were Famous",
+    "Here Are The Early Signs of Diabetes",
+    "Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2",
+    "15 Food Myths That Are Causing You to Gain Weight",
+    "What Is Clean Fasting, and How Will It Help You Speed Up Weight Loss?",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Here's Why Your Cat Is So Obsessed with Your Keyboard"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The world's most luxurious kitchens\"\n\"The 50 Best One-Hit Wonders of All Time\"\n\"Dangers of tattoos are more than just skin deep\"\n\"Celebrity Headshots from Before They Were Famous\"\n\"Here Are The Early Signs of Diabetes\"\n\"Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2\"\n\"15 Food Myths That Are Causing You to Gain Weight\"\n\"What Is Clean Fasting, and How Will It Help You Speed Up Weight Loss?\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Here's Why Your Cat Is So Obsessed with Your Keyboard\"\n\n[Candidate News Title]\n\"Cherry disappointed with MacLean's apology: 'He buried me'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Cherry disappointed with MacLean's apology: 'He buried me',\" the user can expect to read about the public fallout between two notable figures, likely exploring the context of the apology issued by MacLean and the implications it has for Cherry. The piece may discuss the nature of their relationship, any previous controversies, and how this incident reflects broader themes of accountability in public life. Additionally, it is likely to delve into Cherry's perspective on the matter and the potential impact on his reputation and career.",
+  "model": "gpt-4o-mini"
+}

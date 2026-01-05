@@ -1,0 +1,21 @@
+{
+  "user_id": 883,
+  "candidate_news_id": "N89764",
+  "candidate_title": "Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital",
+  "user_history_count": 10,
+  "user_history": [
+    "Stars we lost in 2019",
+    "Lady Gaga Cancels Her Las Vegas Show After Getting Sick with a Sinus Infection and Bronchitis",
+    "Meghan Markle Chose a Black Brocade Dress For the Royal Family's Important Outing",
+    "Tristan Thompson Gushes Over Ex Khloe Kardashian After Her People's Choice Win",
+    "Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'",
+    "John Legend Is PEOPLE's Sexiest Man Alive 2019: 'I'm Excited but a Little Scared at the Same Time'",
+    "18 Quiet Dogs That Don't Bark (Too Much)",
+    "Shakira reflects on her career-threatening injury, depression in 2017",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "What Chrissy Teigen Eats in a Day to Stay Fit and Glowing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Stars we lost in 2019\"\n\"Lady Gaga Cancels Her Las Vegas Show After Getting Sick with a Sinus Infection and Bronchitis\"\n\"Meghan Markle Chose a Black Brocade Dress For the Royal Family's Important Outing\"\n\"Tristan Thompson Gushes Over Ex Khloe Kardashian After Her People's Choice Win\"\n\"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'\"\n\"John Legend Is PEOPLE's Sexiest Man Alive 2019: 'I'm Excited but a Little Scared at the Same Time'\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\"Shakira reflects on her career-threatening injury, depression in 2017\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"What Chrissy Teigen Eats in a Day to Stay Fit and Glowing\"\n\n[Candidate News Title]\n\"Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to report on the investigation surrounding the death of a woman after she was taken to the hospital by Montae Nicholson, a player for the Washington Redskins. Readers may expect to find details about the circumstances of the incident, including any statements from law enforcement or Nicholson himself. There may also be insights into the timeline of events leading up to the hospitalization and subsequent investigation. Additionally, the article could explore the implications of this case on Nicholson's career and public perception, though this remains uncertain.",
+  "model": "gpt-4o-mini"
+}

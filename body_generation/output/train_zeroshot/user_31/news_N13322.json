@@ -1,0 +1,21 @@
+{
+  "user_id": 31,
+  "candidate_news_id": "N13322",
+  "candidate_title": "Rape victim rejects judge's offer: $150,000 for her, reduced sentence for attacker",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump, Republicans and impeachment: This time feels different, but maybe it's not",
+    "Jeff Bezos lost about $7 billion on Thursday",
+    "The News In Cartoons",
+    "Michigan sends breakup tweet to Notre Dame as series goes on hold",
+    "An optimism doctor explains how to turn around your no good, very bad day",
+    "Opinions | So this is why Trump doesn't want officials to testify",
+    "The News In Cartoons",
+    "Holocaust survivor under guard amid death threats",
+    "3 students allegedly plotted to attack their middle school: Officials",
+    "The News In Cartoons"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump, Republicans and impeachment: This time feels different, but maybe it's not\"\n\"Jeff Bezos lost about $7 billion on Thursday\"\n\"The News In Cartoons\"\n\"Michigan sends breakup tweet to Notre Dame as series goes on hold\"\n\"An optimism doctor explains how to turn around your no good, very bad day\"\n\"Opinions | So this is why Trump doesn't want officials to testify\"\n\"The News In Cartoons\"\n\"Holocaust survivor under guard amid death threats\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\"The News In Cartoons\"\n\n[Candidate News Title]\n\"Rape victim rejects judge's offer: $150,000 for her, reduced sentence for attacker\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find an exploration of a rape victim's decision to reject a judge's offer of $150,000 in compensation in exchange for a reduced sentence for her attacker. The piece may delve into the complexities of the legal and ethical implications surrounding such offers, as well as the victim's perspective on justice and accountability. It could also provide context regarding similar cases and the broader societal issues related to victim rights and judicial practices. Overall, the article is expected to present a nuanced examination of the challenges faced by victims in navigating the legal system.",
+  "model": "gpt-4o-mini"
+}

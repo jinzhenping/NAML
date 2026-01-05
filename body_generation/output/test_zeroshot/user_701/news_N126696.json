@@ -1,0 +1,21 @@
+{
+  "user_id": 701,
+  "candidate_news_id": "N126696",
+  "candidate_title": "Maze of tunnels reveals remains of ancient Jerusalem",
+  "user_history_count": 10,
+  "user_history": [
+    "White House to add two aides to lead impeachment messaging",
+    "This Man Ate Only Potatoes For One Year and Lost 117 Pounds",
+    "US wants UN to take up Dalai Lama succession: envoy",
+    "56 Hottest Holiday Gifts from Amazon",
+    "Prince Harry and Meghan Markle Will Reportedly Visit Oprah While in California",
+    "DIY Thanksgiving decorating ideas you can do at home",
+    "Jillian Michaels Says Intermittent Fasting 'Isn't Actually Good For Weight Loss'",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"White House to add two aides to lead impeachment messaging\"\n\"This Man Ate Only Potatoes For One Year and Lost 117 Pounds\"\n\"US wants UN to take up Dalai Lama succession: envoy\"\n\"56 Hottest Holiday Gifts from Amazon\"\n\"Prince Harry and Meghan Markle Will Reportedly Visit Oprah While in California\"\n\"DIY Thanksgiving decorating ideas you can do at home\"\n\"Jillian Michaels Says Intermittent Fasting 'Isn't Actually Good For Weight Loss'\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\n[Candidate News Title]\n\"Maze of tunnels reveals remains of ancient Jerusalem\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Maze of tunnels reveals remains of ancient Jerusalem\" is likely to discuss recent archaeological findings in Jerusalem, focusing on a complex network of tunnels that have been uncovered. Readers can expect detailed descriptions of the tunnels' structure, their historical significance, and insights into what artifacts or remains have been discovered within them. Additionally, the piece may explore the implications of these findings for our understanding of ancient Jerusalem's history and culture, as well as any ongoing debates within the archaeological community regarding the site's importance.",
+  "model": "gpt-4o-mini"
+}

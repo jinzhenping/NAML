@@ -1,0 +1,21 @@
+{
+  "user_id": 196,
+  "candidate_news_id": "N113100",
+  "candidate_title": "A Woman Ordered A Unicorn Cake For Her Daughter's Birthday And It Was An Epic Fail",
+  "user_history_count": 10,
+  "user_history": [
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "15 Vegan Desserts Your Kids Will Love",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52",
+    "It's Easy to Overdose on Acetaminophen and It Can Kill You, New Study Says",
+    "Holocaust survivor under guard amid death threats",
+    "Police Surprise Woman Who Anonymously Baked Pizzelle Cookies for Years in Heartwarming Video",
+    "Sneaky reason why Ravens, not Patriots, are AFC's best",
+    "Far-reaching snowstorm may take shape over US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"15 Vegan Desserts Your Kids Will Love\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52\"\n\"It's Easy to Overdose on Acetaminophen and It Can Kill You, New Study Says\"\n\"Holocaust survivor under guard amid death threats\"\n\"Police Surprise Woman Who Anonymously Baked Pizzelle Cookies for Years in Heartwarming Video\"\n\"Sneaky reason why Ravens, not Patriots, are AFC's best\"\n\"Far-reaching snowstorm may take shape over US\"\n\n[Candidate News Title]\n\"A Woman Ordered A Unicorn Cake For Her Daughter's Birthday And It Was An Epic Fail\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about a woman's experience ordering a unicorn-themed cake for her daughter's birthday, which ultimately did not meet her expectations. The piece may detail the reasons behind the cake's failure, such as issues with the design, taste, or delivery. Additionally, it could explore the implications of such a mishap on birthday celebrations and offer insights into how to avoid similar situations in the future. Overall, the content is expected to provide a mix of anecdotal elements and practical advice for readers interested in event planning and cake ordering.",
+  "model": "gpt-4o-mini"
+}

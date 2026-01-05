@@ -1,0 +1,21 @@
+{
+  "user_id": 548,
+  "candidate_news_id": "N22562",
+  "candidate_title": "Celebrity PDA of 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Celebrity mug shots",
+    "17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job",
+    "A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral",
+    "Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52",
+    "Celebrity plastic surgery transformations",
+    "Celebrity Engagements of 2019",
+    "The 1 reason you shouldn't hesitate to claim Social Security early",
+    "John Legend Leads a Pack of Gorgeous Men in the Sexiest Man Alive Issue: From Sterling to Jason, Peek at 10 More Hot Guys",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+    "Marcia Cross' anal cancer may have been linked to HPV. She wants people to know they could have the virus, too."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebrity mug shots\"\n\"17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job\"\n\"A wave crashed over a couple during their beach wedding photo shoot, and now the stunning picture is going viral\"\n\"Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52\"\n\"Celebrity plastic surgery transformations\"\n\"Celebrity Engagements of 2019\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\"John Legend Leads a Pack of Gorgeous Men in the Sexiest Man Alive Issue: From Sterling to Jason, Peek at 10 More Hot Guys\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\"Marcia Cross' anal cancer may have been linked to HPV. She wants people to know they could have the virus, too.\"\n\n[Candidate News Title]\n\"Celebrity PDA of 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"Celebrity PDA of 2019,\" you might expect an overview of public displays of affection among celebrities throughout the year. The article is likely to highlight notable couples and their interactions at events, on social media, or during public appearances, showcasing how they express their relationships. You may find discussions about the cultural significance of these displays and how they resonate with fans. Additionally, the piece could include photographs or anecdotes that illustrate these moments, although it may not delve deeply into individual stories behind each couple.",
+  "model": "gpt-4o-mini"
+}

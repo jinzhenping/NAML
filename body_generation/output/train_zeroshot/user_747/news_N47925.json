@@ -1,0 +1,21 @@
+{
+  "user_id": 747,
+  "candidate_news_id": "N47925",
+  "candidate_title": "Three school workers charged in death of special needs student",
+  "user_history_count": 10,
+  "user_history": [
+    "TV reporter fired after climbing on cars live at auto show",
+    "Deer fatally attacks hunter who shot him",
+    "Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news",
+    "Kim Kardashian Transforms Into Elle Woods in Legally Blonde Halloween Costume",
+    "ICYMI: Biggest music news of October 2019",
+    "Severe weather shifts boat stuck on Niagara Falls rocks for 101 years",
+    "Milwaukee mayor blames President's rhetoric in alleged acid attack",
+    "Foles will start for Jaguars over Minshew after bye week",
+    "Election Day 2019: Most Important Races and What to Watch For",
+    "Celebs turning 60 in 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"TV reporter fired after climbing on cars live at auto show\"\n\"Deer fatally attacks hunter who shot him\"\n\"Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news\"\n\"Kim Kardashian Transforms Into Elle Woods in Legally Blonde Halloween Costume\"\n\"ICYMI: Biggest music news of October 2019\"\n\"Severe weather shifts boat stuck on Niagara Falls rocks for 101 years\"\n\"Milwaukee mayor blames President's rhetoric in alleged acid attack\"\n\"Foles will start for Jaguars over Minshew after bye week\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"Celebs turning 60 in 2019\"\n\n[Candidate News Title]\n\"Three school workers charged in death of special needs student\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Three school workers charged in death of special needs student\" is likely to detail the circumstances surrounding a tragic incident involving a special needs student and the subsequent legal actions against three school employees. Readers may expect to find information about the nature of the charges, the events leading up to the student's death, and any official statements from the school district or law enforcement. Additionally, the article could explore the implications of this case for school safety and staff accountability, although specifics may vary.",
+  "model": "gpt-4o-mini"
+}

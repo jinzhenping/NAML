@@ -1,0 +1,21 @@
+{
+  "user_id": 33,
+  "candidate_news_id": "N56410",
+  "candidate_title": "I'm Child-Free and Couldn't Be Happier About It. What's So Bad About That?",
+  "user_history_count": 10,
+  "user_history": [
+    "Internal NOAA emails detail blowback to Trump hurricane claims: 'This has really gotten out of hand'",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Bloomberg ready to spend 'whatever it takes' to become president",
+    "Iran downs drone over southern port city - IRNA",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Stocks close higher on optimism over China trade deal",
+    "Ex-billionaire dragged to court for unpaid $680 million loan",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "Suspect arrested in disappearance of college student",
+    "'No body, no crime,' Patrick Frazee said before fiancée vanished, friend testifies"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Internal NOAA emails detail blowback to Trump hurricane claims: 'This has really gotten out of hand'\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Bloomberg ready to spend 'whatever it takes' to become president\"\n\"Iran downs drone over southern port city - IRNA\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Stocks close higher on optimism over China trade deal\"\n\"Ex-billionaire dragged to court for unpaid $680 million loan\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"Suspect arrested in disappearance of college student\"\n\"'No body, no crime,' Patrick Frazee said before fiancée vanished, friend testifies\"\n\n[Candidate News Title]\n\"I'm Child-Free and Couldn't Be Happier About It. What's So Bad About That?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely explores the decision to remain child-free, presenting perspectives on personal happiness and societal expectations surrounding parenthood. It may discuss the reasons behind the choice to forgo having children, such as financial considerations, lifestyle preferences, or a focus on career and personal fulfillment. The author might also address common criticisms faced by those who choose this lifestyle and highlight the benefits of being child-free. Overall, the piece could provide a balanced view on the topic, encouraging readers to consider varying perspectives on family and personal choices.",
+  "model": "gpt-4o-mini"
+}

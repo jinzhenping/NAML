@@ -1,0 +1,21 @@
+{
+  "user_id": 478,
+  "candidate_news_id": "N64888",
+  "candidate_title": "Alibaba breaks Singles Day record of more than $30 billion in sales and climbing",
+  "user_history_count": 10,
+  "user_history": [
+    "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+    "Thousands lose power as severe thunderstorms sweep north",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Bette Midler mocks Lori Loughlin's college admission scandal",
+    "The 50 Best One-Hit Wonders of All Time",
+    "High Lake Michigan Water Level and Strong Winds Lead to Flooding in New Buffalo",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "Rare deer spotted in Montana",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "A man dies in Hawaii after falling into a lava tube in his yard"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"Thousands lose power as severe thunderstorms sweep north\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Bette Midler mocks Lori Loughlin's college admission scandal\"\n\"The 50 Best One-Hit Wonders of All Time\"\n\"High Lake Michigan Water Level and Strong Winds Lead to Flooding in New Buffalo\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"Rare deer spotted in Montana\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\n[Candidate News Title]\n\"Alibaba breaks Singles Day record of more than $30 billion in sales and climbing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss Alibaba's impressive performance during Singles Day, highlighting the company's record-breaking sales that have surpassed $30 billion. Readers can expect insights into the factors contributing to this success, such as promotional strategies, consumer trends, and the overall impact of the event on e-commerce. Additionally, the piece may provide context on how this year's sales compare to previous years, alongside commentary on the implications for the retail industry in general. Overall, the article is expected to offer a comprehensive overview of the significance of this milestone for Alibaba and the wider market.",
+  "model": "gpt-4o-mini"
+}

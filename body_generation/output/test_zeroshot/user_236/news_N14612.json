@@ -1,0 +1,21 @@
+{
+  "user_id": 236,
+  "candidate_news_id": "N14612",
+  "candidate_title": "DHS Sued for Answers About Its Use of DNA Testing at the Border",
+  "user_history_count": 10,
+  "user_history": [
+    "Why This Couple Is Getting a 'Sleep Divorce'",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "200 Shocking Home Photos You Have to See",
+    "Wrap Your Christmas Gifts Like a Pro With This Guide",
+    "Three school workers charged in death of special needs student",
+    "Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary",
+    "Deadly Arctic blast breaks records set more than 100 years ago",
+    "Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'",
+    "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case",
+    "This Arctic blast is in its final day. But the cold isn't over quite yet"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why This Couple Is Getting a 'Sleep Divorce'\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"200 Shocking Home Photos You Have to See\"\n\"Wrap Your Christmas Gifts Like a Pro With This Guide\"\n\"Three school workers charged in death of special needs student\"\n\"Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary\"\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\"Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'\"\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\"This Arctic blast is in its final day. But the cold isn't over quite yet\"\n\n[Candidate News Title]\n\"DHS Sued for Answers About Its Use of DNA Testing at the Border\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"DHS Sued for Answers About Its Use of DNA Testing at the Border\" is likely to explore the ongoing legal challenges surrounding the Department of Homeland Security's use of DNA testing in border enforcement activities. Readers may expect to find details about the specific lawsuit, including its origins and the organizations or individuals involved. The article could also discuss the implications of DNA testing on privacy rights and immigration policies, as well as the broader context of technology in law enforcement. Overall, it may provide insights into the ethical and legal debates that such practices provoke.",
+  "model": "gpt-4o-mini"
+}

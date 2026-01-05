@@ -1,0 +1,16 @@
+{
+  "user_id": 473,
+  "candidate_news_id": "N71593",
+  "candidate_title": "Every outfit Duchess Kate has worn in 2019",
+  "user_history_count": 5,
+  "user_history": [
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "UK police say truck victims from Vietnam; 3 suspects held",
+    "Man who advocated caning for adultery gets caned for adultery",
+    "Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal",
+    "The first thing 14 lottery winners have bought after finding out they were rich"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"UK police say truck victims from Vietnam; 3 suspects held\"\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"Jess Lost 75 Pounds Without Counting Calories and Did This 1 Inspiring Thing Before Every Meal\"\n\"The first thing 14 lottery winners have bought after finding out they were rich\"\n\"\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Every outfit Duchess Kate has worn in 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Every outfit Duchess Kate has worn in 2019,\" you can expect a comprehensive overview of the Duchess's fashion choices throughout the year. The article is likely to detail various outfits worn at public appearances, highlighting specific designers and styles that she favored. Additionally, it may include insights into the significance of certain outfits, perhaps noting how they reflect her public role or personal taste. Readers could also find commentary on the impact of her fashion decisions on trends and public perception.",
+  "model": "gpt-4o-mini"
+}

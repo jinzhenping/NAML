@@ -1,0 +1,21 @@
+{
+  "user_id": 566,
+  "candidate_news_id": "N86208",
+  "candidate_title": "17 photos that show the ugly truth of living in a tiny house",
+  "user_history_count": 10,
+  "user_history": [
+    "Jordan: Republicans Will Subpoena Whistleblower for Public Hearing",
+    "A white restaurant owner admitted to enslaving a black man. He got 10 years in prison.",
+    "Reporter Can't Stop Laughing After Cat Interrupts News Segment",
+    "Only Two Percent of the World's Population Have This Trait",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Today in History: November 8",
+    "The economic picture is darkening in states critical to Trump's reelection bid",
+    "Ivanka Trump: Whistleblower's motives more important than ID",
+    "Man Pulled From Path Of BART Train Grateful To His Rescuer",
+    "Hill and Vindman Testimony: Key Excerpts From Impeachment Inquiry Transcripts"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jordan: Republicans Will Subpoena Whistleblower for Public Hearing\"\n\"A white restaurant owner admitted to enslaving a black man. He got 10 years in prison.\"\n\"Reporter Can't Stop Laughing After Cat Interrupts News Segment\"\n\"Only Two Percent of the World's Population Have This Trait\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Today in History: November 8\"\n\"The economic picture is darkening in states critical to Trump's reelection bid\"\n\"Ivanka Trump: Whistleblower's motives more important than ID\"\n\"Man Pulled From Path Of BART Train Grateful To His Rescuer\"\n\"Hill and Vindman Testimony: Key Excerpts From Impeachment Inquiry Transcripts\"\n\n[Candidate News Title]\n\"17 photos that show the ugly truth of living in a tiny house\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"17 photos that show the ugly truth of living in a tiny house,\" they may expect a visual exploration of the challenges and realities faced by individuals living in compact spaces. The article is likely to present a series of photographs that capture both the aesthetics and the practical difficulties of tiny house living, such as limited storage, space constraints, and lifestyle adjustments. Additionally, it could provide insights into the emotional or psychological aspects of downsizing, potentially highlighting the trade-offs between simplicity and comfort.",
+  "model": "gpt-4o-mini"
+}

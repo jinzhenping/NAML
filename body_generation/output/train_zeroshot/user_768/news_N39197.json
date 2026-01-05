@@ -1,0 +1,21 @@
+{
+  "user_id": 768,
+  "candidate_news_id": "N39197",
+  "candidate_title": "The 10 Most Popular Wines in America, Ranked",
+  "user_history_count": 10,
+  "user_history": [
+    "Six deaths in one family over 14 years. Police say they have found their killer: The daughter-in-law.",
+    "Cubans were once privileged migrants to the United States. Now they're stuck at the border, like everyone else.",
+    "After the U.S. outlawed polygamy, thousands of Mormons fled to Mexico. Nine just died there.",
+    "The first Ford Mustang owner kept the car. It's now worth $350,000",
+    "8 television shows that didn't age well",
+    "Harley-Davidson Pan America and Bronx coming in late 2020",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "35 musicians you should see live at least once in your life",
+    "Reporter Can't Stop Laughing After Cat Interrupts News Segment",
+    "The Most Beautiful Natural Wonder in Every State"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Six deaths in one family over 14 years. Police say they have found their killer: The daughter-in-law.\"\n\"Cubans were once privileged migrants to the United States. Now they're stuck at the border, like everyone else.\"\n\"After the U.S. outlawed polygamy, thousands of Mormons fled to Mexico. Nine just died there.\"\n\"The first Ford Mustang owner kept the car. It's now worth $350,000\"\n\"8 television shows that didn't age well\"\n\"Harley-Davidson Pan America and Bronx coming in late 2020\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"35 musicians you should see live at least once in your life\"\n\"Reporter Can't Stop Laughing After Cat Interrupts News Segment\"\n\"The Most Beautiful Natural Wonder in Every State\"\n\n[Candidate News Title]\n\"The 10 Most Popular Wines in America, Ranked\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to encounter a detailed ranking of the most popular wines in America, focusing on various types and regions. It may explore the characteristics that contribute to their popularity, such as flavor profiles, price points, and consumer demographics. The piece could also provide insights into trends in wine consumption and perhaps highlight the best-selling brands or varieties over recent years. Additionally, it may include recommendations for pairings with food or occasions, offering practical guidance for readers looking to enhance their wine selections.",
+  "model": "gpt-4o-mini"
+}

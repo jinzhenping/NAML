@@ -1,0 +1,21 @@
+{
+  "user_id": 20,
+  "candidate_news_id": "N43000",
+  "candidate_title": "Highway blockade reveals splits in Hong Kong protest movement",
+  "user_history_count": 10,
+  "user_history": [
+    "Harley-Davidson halts production of new electric motorcycles",
+    "​20 Funny Things People in the 1970s Were Totally Guilty of Doing",
+    "Forde-Yard Dash: This is how bad the playoff picture can get",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "The 13 coolest   and creepiest   ghost towns around the world",
+    "Deer fatally attacks hunter who shot him",
+    "How To Open a Can Without a Can Opener",
+    "Patriots wanted a test. Now, they need some answers",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "'One in a million' deer captured on camera in Michigan woods"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Harley-Davidson halts production of new electric motorcycles\"\n\"​20 Funny Things People in the 1970s Were Totally Guilty of Doing\"\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"The 13 coolest   and creepiest   ghost towns around the world\"\n\"Deer fatally attacks hunter who shot him\"\n\"How To Open a Can Without a Can Opener\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n[Candidate News Title]\n\"Highway blockade reveals splits in Hong Kong protest movement\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Highway blockade reveals splits in Hong Kong protest movement\" is likely to explore the recent developments within the Hong Kong protest movement, particularly focusing on how a highway blockade has exposed divisions among protesters. Readers may expect an analysis of the differing viewpoints and strategies within the movement, as well as the implications of these splits on the overall effectiveness of the protests. The piece could also provide context regarding the current political situation in Hong Kong and the responses from authorities. Overall, it aims to inform readers about the complexities and dynamics shaping the protest landscape.",
+  "model": "gpt-4o-mini"
+}

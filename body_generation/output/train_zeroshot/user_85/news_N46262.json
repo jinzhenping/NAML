@@ -1,0 +1,21 @@
+{
+  "user_id": 85,
+  "candidate_news_id": "N46262",
+  "candidate_title": "U.S. Drones Appear to Show Turkish- Backed Forces Targeting Civilians",
+  "user_history_count": 10,
+  "user_history": [
+    "Photos of the Day",
+    "Cubans were once privileged migrants to the United States. Now they're stuck at the border, like everyone else.",
+    "This type of exercise engages 86% of your muscles here's how to work it into your fitness routine",
+    "After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car",
+    "Election Day 2019: Most Important Races and What to Watch For",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos",
+    "Fracking pioneer Chesapeake Energy is drowning in debt",
+    "45 Amazing Facts About Airplanes That Will Make Your Mind Soar",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Vaping Illnesses Are Linked to Vitamin E Acetate, C.D.C. Says"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Photos of the Day\"\n\"Cubans were once privileged migrants to the United States. Now they're stuck at the border, like everyone else.\"\n\"This type of exercise engages 86% of your muscles here's how to work it into your fitness routine\"\n\"After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\"Fracking pioneer Chesapeake Energy is drowning in debt\"\n\"45 Amazing Facts About Airplanes That Will Make Your Mind Soar\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Vaping Illnesses Are Linked to Vitamin E Acetate, C.D.C. Says\"\n\n[Candidate News Title]\n\"U.S. Drones Appear to Show Turkish- Backed Forces Targeting Civilians\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"U.S. Drones Appear to Show Turkish-Backed Forces Targeting Civilians\" is likely to provide a detailed examination of recent drone footage that suggests potential violations of civilian safety in conflict zones involving Turkish-backed forces. Readers may expect an analysis of the implications of these findings, including possible international reactions and the broader context of U.S. military involvement in the region. The article may also explore the humanitarian impact of such actions, although the specifics of the situation could vary, leaving room for various interpretations and responses from different stakeholders.",
+  "model": "gpt-4o-mini"
+}

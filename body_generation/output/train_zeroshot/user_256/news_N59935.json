@@ -1,0 +1,21 @@
+{
+  "user_id": 256,
+  "candidate_news_id": "N59935",
+  "candidate_title": "Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump Tax Return Case Confronts Supreme Court With a Momentous Choice",
+    "I went to Peter Luger after it received zero stars from New York Times",
+    "Giving advice on the golf course? You won't see it 'thousands of times'",
+    "Don't Save Too Little, or Too Much",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos",
+    "Pro disqualified from Q-School for failing to sign scorecard",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "This Is How Much It Really Takes to Lose One Pound",
+    "Jeff Maggert cards 9 birdies, leads Charles Schwab Cup Championship"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump Tax Return Case Confronts Supreme Court With a Momentous Choice\"\n\"I went to Peter Luger after it received zero stars from New York Times\"\n\"Giving advice on the golf course? You won't see it 'thousands of times'\"\n\"Don't Save Too Little, or Too Much\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\"Pro disqualified from Q-School for failing to sign scorecard\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"This Is How Much It Really Takes to Lose One Pound\"\n\"Jeff Maggert cards 9 birdies, leads Charles Schwab Cup Championship\"\n\n[Candidate News Title]\n\"Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out,\" the user can expect to read about the social media dynamics surrounding a recent controversy involving fashion designer Stella McCartney and actress Meghan Markle. The piece is likely to provide context on the original Instagram post, the reactions it elicited from followers, and McCartney's decision to delete it. Additionally, the article may explore how public figures navigate social media feedback and the implications of such interactions on their brand and public perception.",
+  "model": "gpt-4o-mini"
+}

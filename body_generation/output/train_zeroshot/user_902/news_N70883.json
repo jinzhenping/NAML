@@ -1,0 +1,21 @@
+{
+  "user_id": 902,
+  "candidate_news_id": "N70883",
+  "candidate_title": "There are 14 cheap days to fly left in 2019: When are they and what deals can you score?",
+  "user_history_count": 10,
+  "user_history": [
+    "Ken Block's Home Garage Is Surprisingly Tasteful But Still On-Brand",
+    "Georgia sheriff's 'No Trick-or-Treat' signs trigger lawsuit from sex offenders",
+    "5 Reasons Destin Is a Great Family Vacation Destination",
+    "Here's How to Find the Best Home Security System",
+    "Guy Fieri Opened A Restaurant That Has Over 100 Different Kinds Of Tequilas",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Far-reaching snowstorm may take shape over US",
+    "Trump Bid to End DACA Puts Supreme Court Back in Political Fray",
+    "Woods made the right call keeping Reed in the U.S. fold",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Ken Block's Home Garage Is Surprisingly Tasteful But Still On-Brand\"\n\"Georgia sheriff's 'No Trick-or-Treat' signs trigger lawsuit from sex offenders\"\n\"5 Reasons Destin Is a Great Family Vacation Destination\"\n\"Here's How to Find the Best Home Security System\"\n\"Guy Fieri Opened A Restaurant That Has Over 100 Different Kinds Of Tequilas\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Trump Bid to End DACA Puts Supreme Court Back in Political Fray\"\n\"Woods made the right call keeping Reed in the U.S. fold\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\n[Candidate News Title]\n\"There are 14 cheap days to fly left in 2019: When are they and what deals can you score?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find information about the remaining opportunities to secure low-cost flights in 2019. It may outline specific dates when airlines offer discounted fares and highlight various travel deals that could be beneficial for planning trips. Additionally, the article might discuss the types of destinations that are particularly attractive during these cheap travel days, offering insights into savings and travel planning. Overall, readers can expect a practical guide to making the most of these limited-time offers for budget-friendly travel.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 425,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Curse of the No. 3 Seed in the Initial CFP Rankings: How Would That Work?",
+    "Attorney Alan Dershowitz countersues Virginia Giuffre for defamation",
+    "Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'",
+    "Bloomberg ready to spend 'whatever it takes' to become president",
+    "LSU, Ohio State, and Clemson control path to College Football Playoff, but who else does too?",
+    "4 reasons you shouldn't max out your 401(k)",
+    "The 1 reason you shouldn't hesitate to claim Social Security early",
+    "Fidelity to baby boomers: Lay off the stocks"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Curse of the No. 3 Seed in the Initial CFP Rankings: How Would That Work?\"\n\"Attorney Alan Dershowitz countersues Virginia Giuffre for defamation\"\n\"Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'\"\n\"Bloomberg ready to spend 'whatever it takes' to become president\"\n\"LSU, Ohio State, and Clemson control path to College Football Playoff, but who else does too?\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\"Fidelity to baby boomers: Lay off the stocks\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may find an exploration of a surprising meeting between Meghan Markle and Hillary Clinton at Frogmore Cottage. The piece is likely to detail the context of their gathering, possibly discussing their shared interests or political views, and how this meeting aligns with their public personas. Additionally, there may be insights into the implications of such a friendship, particularly in relation to current political events or social issues. The article could also speculate on how this meeting might influence public perception of both figures.",
+  "model": "gpt-4o-mini"
+}

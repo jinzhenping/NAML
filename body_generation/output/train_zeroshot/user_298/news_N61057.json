@@ -1,0 +1,21 @@
+{
+  "user_id": 298,
+  "candidate_news_id": "N61057",
+  "candidate_title": "The Best (and Worst) Store-Bought Onion Rings, Ranked",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "From cat names to fruit, here are 11 bizarre things celebrities have tried to trademark",
+    "Sun Country Airlines to Add 12 New Routes in 2020",
+    "14 Things That Aren't Worth Buying on Black Friday",
+    "6-year-old Ohio boy brings loaded semi-automatic gun to school in backpack",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Marines Now Allowed to Use Umbrellas, Wear Earrings While in Uniform",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"From cat names to fruit, here are 11 bizarre things celebrities have tried to trademark\"\n\"Sun Country Airlines to Add 12 New Routes in 2020\"\n\"14 Things That Aren't Worth Buying on Black Friday\"\n\"6-year-old Ohio boy brings loaded semi-automatic gun to school in backpack\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Marines Now Allowed to Use Umbrellas, Wear Earrings While in Uniform\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\n[Candidate News Title]\n\"The Best (and Worst) Store-Bought Onion Rings, Ranked\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The Best (and Worst) Store-Bought Onion Rings, Ranked,\" you can expect a detailed evaluation of various brands and types of store-bought onion rings. The article is likely to provide insights into taste, texture, and overall quality, ranking them based on these criteria. Additionally, it may include comparisons between popular brands, highlighting both the standout options and those that fall short. Readers might find practical advice on which products to consider for their next snack or meal, along with some background on how onion rings are typically prepared and marketed.",
+  "model": "gpt-4o-mini"
+}

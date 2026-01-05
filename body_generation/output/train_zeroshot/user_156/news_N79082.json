@@ -1,0 +1,21 @@
+{
+  "user_id": 156,
+  "candidate_news_id": "N79082",
+  "candidate_title": "Ex-Astros say team electronically stole signs during 2017 season",
+  "user_history_count": 10,
+  "user_history": [
+    "30 Funny Dog Photos You Need to See",
+    "The Latest: Storms lead to 3 deaths in eastern Oklahoma",
+    "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+    "Olga takes aim at Gulf Coast as a post-tropical cyclone",
+    "Crews respond to calls for help on roads, thousands without power amid heavy rainfall in Austin area",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Santa Ana winds rapidly spread fire in Southern California",
+    "Explosive new wildfire drives thousands from homes near Los Angeles",
+    "Torrential rain and damaging winds hit mid-Atlantic",
+    "10 of the best fast-food taco chains across the US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"30 Funny Dog Photos You Need to See\"\n\"The Latest: Storms lead to 3 deaths in eastern Oklahoma\"\n\"Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge\"\n\"Olga takes aim at Gulf Coast as a post-tropical cyclone\"\n\"Crews respond to calls for help on roads, thousands without power amid heavy rainfall in Austin area\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Santa Ana winds rapidly spread fire in Southern California\"\n\"Explosive new wildfire drives thousands from homes near Los Angeles\"\n\"Torrential rain and damaging winds hit mid-Atlantic\"\n\"10 of the best fast-food taco chains across the US\"\n\n[Candidate News Title]\n\"Ex-Astros say team electronically stole signs during 2017 season\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Ex-Astros say team electronically stole signs during 2017 season\" is likely to discuss allegations made by former players of the Houston Astros regarding the use of electronic devices to gain an unfair advantage during the 2017 Major League Baseball season. Readers can expect an overview of the claims, including details about how the sign-stealing operation was supposedly carried out, its implications for the team's reputation, and potential consequences for players and staff involved. The article may also explore the broader impact of these revelations on Major League Baseball and its integrity.",
+  "model": "gpt-4o-mini"
+}

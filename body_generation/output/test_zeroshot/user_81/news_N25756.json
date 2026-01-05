@@ -1,0 +1,21 @@
+{
+  "user_id": 81,
+  "candidate_news_id": "N25756",
+  "candidate_title": "A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina",
+  "user_history_count": 10,
+  "user_history": [
+    "Matt Tifft will miss rest of season after suffering seizure at Martinsville",
+    "Biden on being denied communion: 'I'm a practicing Catholic, I practice my faith'",
+    "Collector's items that are actually worthless today",
+    "Big 12 fines K-State, TCU, reprimands Kansas over Week 9 field-storming incidents",
+    "Michigan State standout linebacker Joe Bachie suspended by Big Ten for failed drug test",
+    "How Can a $1000 Motorcycle Jacket Prove Its Worth?",
+    "Student barred from reselling Krispy Kreme now teaming up with the doughnut chain",
+    "Far-reaching snowstorm may take shape over US",
+    "The best burger and fries joint in your state",
+    "Small Canadian island irate that Americans keep opening their mail"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Matt Tifft will miss rest of season after suffering seizure at Martinsville\"\n\"Biden on being denied communion: 'I'm a practicing Catholic, I practice my faith'\"\n\"Collector's items that are actually worthless today\"\n\"Big 12 fines K-State, TCU, reprimands Kansas over Week 9 field-storming incidents\"\n\"Michigan State standout linebacker Joe Bachie suspended by Big Ten for failed drug test\"\n\"How Can a $1000 Motorcycle Jacket Prove Its Worth?\"\n\"Student barred from reselling Krispy Kreme now teaming up with the doughnut chain\"\n\"Far-reaching snowstorm may take shape over US\"\n\"The best burger and fries joint in your state\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\n[Candidate News Title]\n\"A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina\" is likely to explore the implications of a tax break associated with former President Trump, which was intended to assist low-income individuals but allegedly benefited affluent Republican donors instead. Readers may expect a detailed examination of the policy's origins, its intended goals, and the actual outcomes, including the specific case of a superyacht marina owned by a wealthy donor. The article could highlight the discrepancies between the policy's objectives and its effects, raising questions about fairness and accountability in tax legislation.",
+  "model": "gpt-4o-mini"
+}

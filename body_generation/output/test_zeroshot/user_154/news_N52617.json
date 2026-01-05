@@ -1,0 +1,21 @@
+{
+  "user_id": 154,
+  "candidate_news_id": "N52617",
+  "candidate_title": "What Menopause Does to Women's Brains",
+  "user_history_count": 10,
+  "user_history": [
+    "Lance Altimeter Is A Delicious Drop-In Truck Camper Debuting At SEMA",
+    "Stunning NASA Video Shows Mercury's Transit Across The Sun",
+    "College gymnast dies following training accident in Connecticut",
+    "Anna Faris and Michael Barrett may have just confirmed their engagement, plus more news",
+    "Utah death-row inmate featured in best-selling book dies",
+    "No. 1 milk company declares bankruptcy amid drop in demand",
+    "One of America's biggest solar panel makers quits manufacturing",
+    "2020 GMC Sierra 3500HD Review: The Good, the Bad, and the Ugly",
+    "Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'",
+    "Types of cancer on the rise"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lance Altimeter Is A Delicious Drop-In Truck Camper Debuting At SEMA\"\n\"Stunning NASA Video Shows Mercury's Transit Across The Sun\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Anna Faris and Michael Barrett may have just confirmed their engagement, plus more news\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"No. 1 milk company declares bankruptcy amid drop in demand\"\n\"One of America's biggest solar panel makers quits manufacturing\"\n\"2020 GMC Sierra 3500HD Review: The Good, the Bad, and the Ugly\"\n\"Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'\"\n\"Types of cancer on the rise\"\n\n[Candidate News Title]\n\"What Menopause Does to Women's Brains\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"What Menopause Does to Women's Brains\" is likely to explore the neurological and psychological changes that women experience during menopause. Readers can expect a discussion on how hormonal shifts may affect cognitive functions, memory, and mood. The article may also delve into the scientific research surrounding these changes, potentially highlighting studies that examine the impact of menopause on brain health. Additionally, it could provide insights into coping strategies or treatments that may help mitigate these effects, although this is uncertain.",
+  "model": "gpt-4o-mini"
+}

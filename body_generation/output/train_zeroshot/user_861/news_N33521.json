@@ -1,0 +1,21 @@
+{
+  "user_id": 861,
+  "candidate_news_id": "N33521",
+  "candidate_title": "Erdogan says he returned Trump's threatening letter on Syria invasion",
+  "user_history_count": 10,
+  "user_history": [
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Testimony: White House lawyer told Vindman not to discuss Ukraine call",
+    "Porsche-Designed Superyacht Is a 135-Foot-Long Spaceship on Water",
+    "Fisherman faces prison, fine for cruel act on rare fish",
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+    "Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years",
+    "Science reveals 5 ugliest and prettiest cars from last 10 years",
+    "Nolan Ryan leaves advisory role, won't return as Astros shuffle front office",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "Fresh Off the Boat Canceled After Six Seasons"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Testimony: White House lawyer told Vindman not to discuss Ukraine call\"\n\"Porsche-Designed Superyacht Is a 135-Foot-Long Spaceship on Water\"\n\"Fisherman faces prison, fine for cruel act on rare fish\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years\"\n\"Science reveals 5 ugliest and prettiest cars from last 10 years\"\n\"Nolan Ryan leaves advisory role, won't return as Astros shuffle front office\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Fresh Off the Boat Canceled After Six Seasons\"\n\n[Candidate News Title]\n\"Erdogan says he returned Trump's threatening letter on Syria invasion\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find details about Turkish President Recep Tayyip Erdogan's response to a letter from former President Donald Trump regarding the situation in Syria. The article may outline the context of the letter, including any threats or demands made by Trump and Erdogan's rationale for returning it. Additionally, it could discuss the implications of this exchange for U.S.-Turkey relations and the ongoing conflict in Syria. Overall, the piece is expected to provide a factual account of diplomatic interactions and their potential impact on international politics.",
+  "model": "gpt-4o-mini"
+}

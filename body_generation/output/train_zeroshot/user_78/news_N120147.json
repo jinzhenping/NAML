@@ -1,0 +1,21 @@
+{
+  "user_id": 78,
+  "candidate_news_id": "N120147",
+  "candidate_title": "Top Putin aide named by MH17 airliner investigators",
+  "user_history_count": 10,
+  "user_history": [
+    "Birmingham couple charged with murder after abducted 3-year-old's body found in dumpster",
+    "A heartbreaking photo of a dog riding a bus alone went viral, and now people want to adopt her",
+    "3 children, 1 adult found dead in Deer Park home",
+    "John Witherspoon Dies: Comedian & 'Friday' Star Was 77",
+    "Stubborn dog is annoyed after being asked to get off couch",
+    "Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'",
+    "Young trick-or-treater refills stranger's empty candy bowl with his own",
+    "Man arrested for allegedly handing out razor blades with Halloween candy",
+    "13-year-old charged with two murders escapes custody in North Carolina",
+    "More than 130,000 pounds of ground beef recalled for possible plastic contamination"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Birmingham couple charged with murder after abducted 3-year-old's body found in dumpster\"\n\"A heartbreaking photo of a dog riding a bus alone went viral, and now people want to adopt her\"\n\"3 children, 1 adult found dead in Deer Park home\"\n\"John Witherspoon Dies: Comedian & 'Friday' Star Was 77\"\n\"Stubborn dog is annoyed after being asked to get off couch\"\n\"Woman wanted for climbing into Bronx Zoo lion exhibit: 'I am the lion now'\"\n\"Young trick-or-treater refills stranger's empty candy bowl with his own\"\n\"Man arrested for allegedly handing out razor blades with Halloween candy\"\n\"13-year-old charged with two murders escapes custody in North Carolina\"\n\"More than 130,000 pounds of ground beef recalled for possible plastic contamination\"\n\n[Candidate News Title]\n\"Top Putin aide named by MH17 airliner investigators\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent identification of a senior aide to Russian President Vladimir Putin by investigators looking into the downing of Malaysia Airlines Flight MH17. Readers may expect an overview of the aide's background and role within the Russian government, as well as details on how this new information could impact ongoing investigations and international relations. The piece may also explore the implications of this development for accountability regarding the tragedy, which resulted in the loss of 298 lives, although specific conclusions or actions are uncertain at this stage.",
+  "model": "gpt-4o-mini"
+}

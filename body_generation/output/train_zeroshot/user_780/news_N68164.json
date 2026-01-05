@@ -1,0 +1,21 @@
+{
+  "user_id": 780,
+  "candidate_news_id": "N68164",
+  "candidate_title": "​'My Annoying Cough Turned Out To Be Lung Cancer'",
+  "user_history_count": 10,
+  "user_history": [
+    "Flight attendants reveal the wildest things they've seen at work",
+    "Celeb couples with big age gaps",
+    "Spanx Founder Sara Blakely Reveals She Bought Olivia Newton-John's Grease Pants for Over $160K",
+    "17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Virginia Election 2019: First Muslim Women Elected",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Judge strikes down new Trump rule on religious objections",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos",
+    "5 Classic Appetizers That Make Holiday Hosting a Breeze"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Flight attendants reveal the wildest things they've seen at work\"\n\"Celeb couples with big age gaps\"\n\"Spanx Founder Sara Blakely Reveals She Bought Olivia Newton-John's Grease Pants for Over $160K\"\n\"17 hours a day, 7 days a week: Cruise-ship workers describe the grueling conditions they face on the job\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Virginia Election 2019: First Muslim Women Elected\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Judge strikes down new Trump rule on religious objections\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\"5 Classic Appetizers That Make Holiday Hosting a Breeze\"\n\n[Candidate News Title]\n\"​'My Annoying Cough Turned Out To Be Lung Cancer'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"'My Annoying Cough Turned Out To Be Lung Cancer'\" is likely to explore the personal account of an individual who initially dismissed a persistent cough as a minor issue, only to discover it was a symptom of a serious health condition. Readers may expect to learn about the journey from the initial misdiagnosis to the eventual diagnosis of lung cancer, including insights into the importance of paying attention to body signals and seeking medical advice. The narrative could also provide information on lung cancer symptoms and emphasize the need for awareness regarding respiratory health, though this is uncertain.",
+  "model": "gpt-4o-mini"
+}

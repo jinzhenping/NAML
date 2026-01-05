@@ -1,0 +1,21 @@
+{
+  "user_id": 510,
+  "candidate_news_id": "N128389",
+  "candidate_title": "Myanmar accused at UN court of genocide against Rohingya",
+  "user_history_count": 10,
+  "user_history": [
+    "A tourist was fined for wearing a string bikini on a beach in the Philippines, but travelers get punished for the way they dress more often than you might think",
+    "What Causes Vertigo? 15 Things Doctors Wish You Knew",
+    "Woman, 78, gets 22 years for attempted murder of lawyer",
+    "Unexpected Signs of an Unhealthy Heart",
+    "Spicy Tomato Chicken Stew Is Here to Dominate Soup Season",
+    "Growing number of GOP senators consider acknowledging Trump's quid pro quo on Ukraine",
+    "Couple allegedly ran shoplifting ring, sold stolen items online for $2.7M",
+    "Senate Republicans divided over whether whistleblower should testify",
+    "As companies flee blue cities, middle class workers are hurt",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A tourist was fined for wearing a string bikini on a beach in the Philippines, but travelers get punished for the way they dress more often than you might think\"\n\"What Causes Vertigo? 15 Things Doctors Wish You Knew\"\n\"Woman, 78, gets 22 years for attempted murder of lawyer\"\n\"Unexpected Signs of an Unhealthy Heart\"\n\"Spicy Tomato Chicken Stew Is Here to Dominate Soup Season\"\n\"Growing number of GOP senators consider acknowledging Trump's quid pro quo on Ukraine\"\n\"Couple allegedly ran shoplifting ring, sold stolen items online for $2.7M\"\n\"Senate Republicans divided over whether whistleblower should testify\"\n\"As companies flee blue cities, middle class workers are hurt\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\n[Candidate News Title]\n\"Myanmar accused at UN court of genocide against Rohingya\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Myanmar accused at UN court of genocide against Rohingya\" is likely to discuss the ongoing legal proceedings against Myanmar regarding allegations of genocide against the Rohingya population. Readers may expect an overview of the accusations presented at the UN court, including details about the evidence being brought forth and the international response to these claims. The article may also explore the historical context of the Rohingya crisis and the implications of the court's proceedings for Myanmar and its global standing. It could be speculated that the piece will highlight the perspectives of various stakeholders, including human rights organizations and the Myanmar government, though this remains uncertain.",
+  "model": "gpt-4o-mini"
+}

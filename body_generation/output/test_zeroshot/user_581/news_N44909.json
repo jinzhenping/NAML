@@ -1,0 +1,21 @@
+{
+  "user_id": 581,
+  "candidate_news_id": "N44909",
+  "candidate_title": "Debunking the week's tabloid stories: Nov. 15, 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Maybe not the best time to take a dip at the beach",
+    "Red tide, the toxic algae bloom that kills wildlife, returns to southwest Florida",
+    "An Air India flight was delayed nearly 12 hours after a stowaway rat was spotted in the cabin",
+    "Video shows a Boeing 737 plane carrying 196 people burst into flames just after landing at an Egyptian airport",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win",
+    "17 Movie Soundtracks Every Kid from the '80s Loved",
+    "15 of the Best Towing Vehicles That Aren't Trucks",
+    "A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina",
+    "Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Maybe not the best time to take a dip at the beach\"\n\"Red tide, the toxic algae bloom that kills wildlife, returns to southwest Florida\"\n\"An Air India flight was delayed nearly 12 hours after a stowaway rat was spotted in the cabin\"\n\"Video shows a Boeing 737 plane carrying 196 people burst into flames just after landing at an Egyptian airport\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\"17 Movie Soundtracks Every Kid from the '80s Loved\"\n\"15 of the Best Towing Vehicles That Aren't Trucks\"\n\"A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina\"\n\"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\"\n\n[Candidate News Title]\n\"Debunking the week's tabloid stories: Nov. 15, 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect a thorough examination of various tabloid headlines from the week, focusing on their accuracy and credibility. It is likely to provide context for sensational stories, analyzing how they reflect current events or popular culture. The piece may also discuss the impact of such tabloid narratives on public perception and highlight any significant inaccuracies or exaggerations found within these stories. Overall, the article could serve as a critical commentary on the reliability of tabloid journalism.",
+  "model": "gpt-4o-mini"
+}

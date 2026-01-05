@@ -1,0 +1,21 @@
+{
+  "user_id": 645,
+  "candidate_news_id": "N95541",
+  "candidate_title": "Opinion: NFL should suspend Browns' Myles Garrett for rest of season   at minimum   for helmet swing",
+  "user_history_count": 10,
+  "user_history": [
+    "Here's Exactly What Kristen Bell Eats in a Day to Make 39 Look Like 29",
+    "Patriots wanted a test. Now, they need some answers",
+    "IHOP Just Announced a New Elf on the Shelf Menu for the Holidays",
+    "Bette Midler mocks Lori Loughlin's college admission scandal",
+    "12 Things U.S. Presidents Have to Pay for on Their Own",
+    "Walter Mercado, Celebrity Astrologer Known for Daily Horoscopes, Dies at 87: 'Truly an Icon'",
+    "Holocaust survivor under guard amid death threats",
+    "What Menopause Does to Women's Brains",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "He was a member of a boy band in the 90s. Now he's an ER doctor in Dallas"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here's Exactly What Kristen Bell Eats in a Day to Make 39 Look Like 29\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"IHOP Just Announced a New Elf on the Shelf Menu for the Holidays\"\n\"Bette Midler mocks Lori Loughlin's college admission scandal\"\n\"12 Things U.S. Presidents Have to Pay for on Their Own\"\n\"Walter Mercado, Celebrity Astrologer Known for Daily Horoscopes, Dies at 87: 'Truly an Icon'\"\n\"Holocaust survivor under guard amid death threats\"\n\"What Menopause Does to Women's Brains\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"He was a member of a boy band in the 90s. Now he's an ER doctor in Dallas\"\n\n[Candidate News Title]\n\"Opinion: NFL should suspend Browns' Myles Garrett for rest of season   at minimum   for helmet swing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect a discussion about the ongoing controversy surrounding NFL player Myles Garrett and the implications of his actions during a recent game. The piece may analyze whether the league's response, including a potential suspension for the remainder of the season, is warranted based on past precedents and the severity of the incident. It is likely to provide insights from sports analysts and opinions regarding player safety and conduct in professional football, contributing to the broader conversation about accountability within the sport.",
+  "model": "gpt-4o-mini"
+}

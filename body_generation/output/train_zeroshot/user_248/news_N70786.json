@@ -1,0 +1,21 @@
+{
+  "user_id": 248,
+  "candidate_news_id": "N70786",
+  "candidate_title": "Subtle Signs You're Eating Too Much Sugar",
+  "user_history_count": 10,
+  "user_history": [
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Kanye West, with debt piling up, thanks God for $68 million tax refund",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Blackhawks' future is likely without Brent Seabrook and Corey Crawford   and so is their present",
+    "US Fed cuts interest rates, signals it is on hold",
+    "Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.",
+    "Ewan McGregor Asks Judge to Declare Him and Estranged Wife Single Before Finalizing Divorce",
+    "What's in a Brand? A Look at Polestar's Tesla-Fighting Future",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Kanye West, with debt piling up, thanks God for $68 million tax refund\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Blackhawks' future is likely without Brent Seabrook and Corey Crawford   and so is their present\"\n\"US Fed cuts interest rates, signals it is on hold\"\n\"Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.\"\n\"Ewan McGregor Asks Judge to Declare Him and Estranged Wife Single Before Finalizing Divorce\"\n\"What's in a Brand? A Look at Polestar's Tesla-Fighting Future\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\n[Candidate News Title]\n\"Subtle Signs You're Eating Too Much Sugar\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"Subtle Signs You're Eating Too Much Sugar,\" you may expect to read about various indicators that suggest excessive sugar consumption in your diet. The article is likely to outline common symptoms and health implications associated with high sugar intake, such as fatigue, cravings, and potential weight gain. It could also discuss how to identify hidden sugars in everyday foods and provide tips for reducing sugar consumption. Overall, the content may aim to inform you about maintaining a balanced diet and recognizing when sugar intake might be too high.",
+  "model": "gpt-4o-mini"
+}

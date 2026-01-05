@@ -1,0 +1,21 @@
+{
+  "user_id": 827,
+  "candidate_news_id": "N30582",
+  "candidate_title": "Opinion: Baylor football back on top four years after sexual assault scandal rocked campus",
+  "user_history_count": 10,
+  "user_history": [
+    "Tensions, tears, trauma: the Democratic voters suffering under Trump",
+    "President Trump says UFC reception was 'like walking into a Trump Rally'",
+    "Chinese pilot suspended after woman poses in cockpit with drinks",
+    "Trump: US ready to help in 'cleaning out' the 'monsters' who killed Americans",
+    "Woman arrested for 1996 murder of baby girl found dead in reservoir",
+    "Trump Tax Return Case Confronts Supreme Court With a Momentous Choice",
+    "Black man who led neo-Nazi group dies amid bid to destroy it",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "One of America's biggest solar panel makers quits manufacturing",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Tensions, tears, trauma: the Democratic voters suffering under Trump\"\n\"President Trump says UFC reception was 'like walking into a Trump Rally'\"\n\"Chinese pilot suspended after woman poses in cockpit with drinks\"\n\"Trump: US ready to help in 'cleaning out' the 'monsters' who killed Americans\"\n\"Woman arrested for 1996 murder of baby girl found dead in reservoir\"\n\"Trump Tax Return Case Confronts Supreme Court With a Momentous Choice\"\n\"Black man who led neo-Nazi group dies amid bid to destroy it\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"One of America's biggest solar panel makers quits manufacturing\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n[Candidate News Title]\n\"Opinion: Baylor football back on top four years after sexual assault scandal rocked campus\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Opinion: Baylor football back on top four years after sexual assault scandal rocked campus,\" they may expect to read an analysis of Baylor University's football program's resurgence following a significant scandal. The article is likely to discuss the steps the university has taken to rebuild its reputation and the implications for the football team. Additionally, it could explore the broader context of how sports programs navigate crises related to misconduct and the ongoing challenges they face in restoring trust within the community.",
+  "model": "gpt-4o-mini"
+}

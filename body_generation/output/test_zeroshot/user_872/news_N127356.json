@@ -1,0 +1,21 @@
+{
+  "user_id": 872,
+  "candidate_news_id": "N127356",
+  "candidate_title": "In Japan's vanishing rural towns, newcomers are wanted",
+  "user_history_count": 10,
+  "user_history": [
+    "Week in celebrity photos for Nov. 4-8, 2019",
+    "See the stars at the 2019 Baby2Baby gala",
+    "People's Choice Awards 2019: Red Carpet Fashion",
+    "The Best Backstage Moments From the 2019 E! People's Choice Awards",
+    "2019 People's Choice Awards fashion hits and misses",
+    "Week in celebrity photos for Nov. 11-15, 2019",
+    "People's Choice Awards 2019: Red Carpet Fashion",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "Funny celeb pics for November 2019",
+    "Week in celebrity photos for Nov. 11-15, 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Week in celebrity photos for Nov. 4-8, 2019\"\n\"See the stars at the 2019 Baby2Baby gala\"\n\"People's Choice Awards 2019: Red Carpet Fashion\"\n\"The Best Backstage Moments From the 2019 E! People's Choice Awards\"\n\"2019 People's Choice Awards fashion hits and misses\"\n\"Week in celebrity photos for Nov. 11-15, 2019\"\n\"People's Choice Awards 2019: Red Carpet Fashion\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"Funny celeb pics for November 2019\"\n\"Week in celebrity photos for Nov. 11-15, 2019\"\n\n[Candidate News Title]\n\"In Japan's vanishing rural towns, newcomers are wanted\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"In Japan's vanishing rural towns, newcomers are wanted\" is likely to explore the challenges faced by rural communities in Japan as they experience population decline and aging demographics. Readers may expect to learn about initiatives aimed at attracting newcomers to these areas, including potential economic incentives and lifestyle changes. The piece could also discuss the cultural implications of migration to rural towns and how these newcomers might integrate into the local communities. Overall, the article may provide insight into Japan's efforts to revitalize these regions amidst demographic shifts.",
+  "model": "gpt-4o-mini"
+}

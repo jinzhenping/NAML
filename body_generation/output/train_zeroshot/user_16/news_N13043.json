@@ -1,0 +1,21 @@
+{
+  "user_id": 16,
+  "candidate_news_id": "N13043",
+  "candidate_title": "Santa Claus back at work in Germany answering Christmas mail",
+  "user_history_count": 10,
+  "user_history": [
+    "Duchess Meghan Describes 'Really Challenging' Life as New Royal: I'm Not OK",
+    "The biggest celebrity love life stories of October 2019",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "See what your favorite country music stars looked like at the beginning of their careers",
+    "In Honor of Her 64th Birthday, Here Are Kris Jenner's Greatest Throwback Photos",
+    "Kylie Jenner hits Drake's Halloween party amid flirtation rumors, plus more news",
+    "Celebrity kids then and now: See how they've grown",
+    "Stars   They're Just Like Us!",
+    "Long-term celebrity couples who won't get married",
+    "Teresa Giudice, daughters reunite with Joe in Italy: See the pic!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Duchess Meghan Describes 'Really Challenging' Life as New Royal: I'm Not OK\"\n\"The biggest celebrity love life stories of October 2019\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"See what your favorite country music stars looked like at the beginning of their careers\"\n\"In Honor of Her 64th Birthday, Here Are Kris Jenner's Greatest Throwback Photos\"\n\"Kylie Jenner hits Drake's Halloween party amid flirtation rumors, plus more news\"\n\"Celebrity kids then and now: See how they've grown\"\n\"Stars   They're Just Like Us!\"\n\"Long-term celebrity couples who won't get married\"\n\"Teresa Giudice, daughters reunite with Joe in Italy: See the pic!\"\n\n[Candidate News Title]\n\"Santa Claus back at work in Germany answering Christmas mail\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to read about Santa Claus resuming his role in Germany, where he traditionally answers letters from children during the Christmas season. The piece is likely to detail how this annual event unfolds, including the number of letters received and the process by which Santa responds to them. Additionally, it may explore the cultural significance of this tradition in Germany and how it engages children and families during the holiday period. The article could also highlight any special events or changes in the process for this year.",
+  "model": "gpt-4o-mini"
+}

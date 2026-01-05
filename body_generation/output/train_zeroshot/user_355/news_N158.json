@@ -1,0 +1,21 @@
+{
+  "user_id": 355,
+  "candidate_news_id": "N158",
+  "candidate_title": "Actress playing murderer in film charged in real life for killing uncle",
+  "user_history_count": 10,
+  "user_history": [
+    "Astros fire assistant GM for 'inappropriate comments'",
+    "Dallas Judge Rules In Volatile Custody Case Involving 7-Year-Old's Gender Identity",
+    "Search concludes with 42 bodies found in mass grave near Rocky Point",
+    "NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "'When I smelled that smoke ... here we go again': Weary Californians seek shelter amid latest wildfire outbreak",
+    "Trent Williams says he had cancer, alleges Redskins failed to test for it for nearly 6 years",
+    "Flights diverted as pollution chokes New Delhi",
+    "German puzzlers reconstruct secret police files from millions of fragments",
+    "Sunday Night wrap-up: Ravens hand Patriots their first loss"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Astros fire assistant GM for 'inappropriate comments'\"\n\"Dallas Judge Rules In Volatile Custody Case Involving 7-Year-Old's Gender Identity\"\n\"Search concludes with 42 bodies found in mass grave near Rocky Point\"\n\"NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"'When I smelled that smoke ... here we go again': Weary Californians seek shelter amid latest wildfire outbreak\"\n\"Trent Williams says he had cancer, alleges Redskins failed to test for it for nearly 6 years\"\n\"Flights diverted as pollution chokes New Delhi\"\n\"German puzzlers reconstruct secret police files from millions of fragments\"\n\"Sunday Night wrap-up: Ravens hand Patriots their first loss\"\n\n[Candidate News Title]\n\"Actress playing murderer in film charged in real life for killing uncle\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Actress playing murderer in film charged in real life for killing uncle,\" the user is likely to encounter a detailed account of the actress's recent legal troubles, which may include background information on the case, potential motivations behind the alleged crime, and the actress's previous roles, particularly her portrayal of a murderer. The article could also explore the implications of this incident on her career and public image, alongside reactions from fans and industry professionals. Overall, it is expected to provide a factual overview of the situation while examining the intersection of her fictional and real-life actions.",
+  "model": "gpt-4o-mini"
+}

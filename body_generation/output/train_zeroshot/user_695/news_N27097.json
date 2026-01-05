@@ -1,0 +1,21 @@
+{
+  "user_id": 695,
+  "candidate_news_id": "N27097",
+  "candidate_title": "Utah death-row inmate featured in best-selling book dies",
+  "user_history_count": 10,
+  "user_history": [
+    "Somber mood as Germany marks 30 years of Berlin Wall fall",
+    "More than 100 vegetable products recalled for possible listeria",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "George Conway Says Giuliani's Tweet Alone Proves Trump 'Committed an Impeachable Offense' As Giuliani Lawyers Up",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Formjacking: The New Scam You Need To Know About Before You Start Your Holiday Shopping",
+    "Why Virginia's Election Results Mean the Equal Rights Amendment Could Finally Pass",
+    "Holocaust survivor under guard amid death threats",
+    "Fire Ants and Spiders Inspire Metal That Can't Sink",
+    "Bogus Warren Quote Ignites Immigration Anger"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Somber mood as Germany marks 30 years of Berlin Wall fall\"\n\"More than 100 vegetable products recalled for possible listeria\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"George Conway Says Giuliani's Tweet Alone Proves Trump 'Committed an Impeachable Offense' As Giuliani Lawyers Up\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Formjacking: The New Scam You Need To Know About Before You Start Your Holiday Shopping\"\n\"Why Virginia's Election Results Mean the Equal Rights Amendment Could Finally Pass\"\n\"Holocaust survivor under guard amid death threats\"\n\"Fire Ants and Spiders Inspire Metal That Can't Sink\"\n\"Bogus Warren Quote Ignites Immigration Anger\"\n\n[Candidate News Title]\n\"Utah death-row inmate featured in best-selling book dies\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the Utah death-row inmate featured in a best-selling book is likely to provide an overview of the inmate's life, legal battles, and the circumstances surrounding their conviction. It may delve into details about the book that highlights their story, including key themes such as justice, rehabilitation, or the complexities of the criminal justice system. Additionally, the article could explore public reactions to the inmate’s death and its implications on ongoing discussions about capital punishment. Overall, readers may find insights into both the individual’s narrative and broader societal issues connected to the case.",
+  "model": "gpt-4o-mini"
+}

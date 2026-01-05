@@ -1,0 +1,21 @@
+{
+  "user_id": 119,
+  "candidate_news_id": "N95468",
+  "candidate_title": "'He's working': White House says Trump is not watching first public impeachment hearing",
+  "user_history_count": 10,
+  "user_history": [
+    "Florida teen charged with trying to hire hitman to kill high school staffer",
+    "Should goalies ditch quick-release skates? Raanta latest to make 'slide of shame'",
+    "Hong Kong Policeman Who Fired His Gun Now Faces Death Threats",
+    "How daylight saving time works and why these states want to ditch it",
+    "DNA Test Leads Man to Biological Parents He Thought Died 50 Years Ago: 'It Was Surreal'",
+    "Patriots wanted a test. Now, they need some answers",
+    "Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him",
+    "Wildfires, power outages, now flooding? California has a dam problem   and desert communities might be in danger",
+    "Israel's top court clears way for deportation of Human Rights Watch official",
+    "LSU starting linebacker Michael Divinity Jr. leaves program days before Alabama game"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Florida teen charged with trying to hire hitman to kill high school staffer\"\n\"Should goalies ditch quick-release skates? Raanta latest to make 'slide of shame'\"\n\"Hong Kong Policeman Who Fired His Gun Now Faces Death Threats\"\n\"How daylight saving time works and why these states want to ditch it\"\n\"DNA Test Leads Man to Biological Parents He Thought Died 50 Years Ago: 'It Was Surreal'\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Opinion: Willie Taggart's catchphrase is 'Do Something,' and FSU did by firing him\"\n\"Wildfires, power outages, now flooding? California has a dam problem   and desert communities might be in danger\"\n\"Israel's top court clears way for deportation of Human Rights Watch official\"\n\"LSU starting linebacker Michael Divinity Jr. leaves program days before Alabama game\"\n\n[Candidate News Title]\n\"'He's working': White House says Trump is not watching first public impeachment hearing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the White House's response to the first public impeachment hearing involving former President Trump. It may provide insights into the administration's efforts to convey that Trump is focused on his duties rather than the proceedings. Additionally, it could outline key moments from the hearing itself and the implications for Trump's presidency. The article may also explore the political landscape surrounding the impeachment process, highlighting reactions from various stakeholders. Overall, readers can expect a factual summary of the situation and its relevance to current events, though specific details may vary.",
+  "model": "gpt-4o-mini"
+}

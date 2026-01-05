@@ -1,0 +1,21 @@
+{
+  "user_id": 302,
+  "candidate_news_id": "N128371",
+  "candidate_title": "Texas Republican reiterates call to protect Ukraine whistleblower's identity",
+  "user_history_count": 10,
+  "user_history": [
+    "Italian ship with 151 rescued migrants docks in Sicily",
+    "2 Murder suspects escape from Monterey County, California, Jail",
+    "Six deaths in one family over 14 years. Police say they have found their killer: The daughter-in-law.",
+    "Inside the Sheikh of Dubai's 800-acre Kentucky horse farm",
+    "Erdogan: Turkey arrested slain ISIS leader Baghdadi's wife, other relatives",
+    "What Trump Didn't Say About the Massacre in Mexico",
+    "Texas small plane crash was gender reveal gone wrong, NTSB finds",
+    "Alexander Vindman: Soviet emigre and decorated U.S. Army officer wanted to be as American as can be. Now the president questions his motives.",
+    "Turkish patrol kills protester amid shaky truce in NE Syria",
+    "Rockets hit Iraq base with US troops; no word on casualties"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Italian ship with 151 rescued migrants docks in Sicily\"\n\"2 Murder suspects escape from Monterey County, California, Jail\"\n\"Six deaths in one family over 14 years. Police say they have found their killer: The daughter-in-law.\"\n\"Inside the Sheikh of Dubai's 800-acre Kentucky horse farm\"\n\"Erdogan: Turkey arrested slain ISIS leader Baghdadi's wife, other relatives\"\n\"What Trump Didn't Say About the Massacre in Mexico\"\n\"Texas small plane crash was gender reveal gone wrong, NTSB finds\"\n\"Alexander Vindman: Soviet emigre and decorated U.S. Army officer wanted to be as American as can be. Now the president questions his motives.\"\n\"Turkish patrol kills protester amid shaky truce in NE Syria\"\n\"Rockets hit Iraq base with US troops; no word on casualties\"\n\n[Candidate News Title]\n\"Texas Republican reiterates call to protect Ukraine whistleblower's identity\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may find an exploration of the ongoing discussions surrounding the protection of whistleblowers, particularly in the context of Ukraine. It is likely to detail the Texas Republican's rationale for advocating the safeguarding of a whistleblower's identity, especially in relation to sensitive national security matters. The piece could also cover the political implications of this stance, including reactions from both supporters and critics, as well as its relevance to current events involving Ukraine and U.S. foreign policy. Overall, the article is expected to provide a balanced overview of the topic while highlighting the complexities of whistleblower protections.",
+  "model": "gpt-4o-mini"
+}

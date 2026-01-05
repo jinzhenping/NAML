@@ -1,0 +1,21 @@
+{
+  "user_id": 853,
+  "candidate_news_id": "N94572",
+  "candidate_title": "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+  "user_history_count": 10,
+  "user_history": [
+    "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+    "Fisherman faces prison, fine for cruel act on rare fish",
+    "Greg Norman upset Tiger Woods didn't respond to his handwritten letter: \"Maybe Tiger just dislikes me\"",
+    "1 dead, 10 sickened after multistate Salmonella outbreak linked to ground beef",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "The first thing 14 lottery winners have bought after finding out they were rich",
+    "10 Common Causes of Itchy, Red Bumps and Skin Rashes",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "19 Silent Signs of Lung Cancer You Need to Be Aware Of"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"Fisherman faces prison, fine for cruel act on rare fish\"\n\"Greg Norman upset Tiger Woods didn't respond to his handwritten letter: \"Maybe Tiger just dislikes me\"\"\n\"1 dead, 10 sickened after multistate Salmonella outbreak linked to ground beef\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"The first thing 14 lottery winners have bought after finding out they were rich\"\n\"10 Common Causes of Itchy, Red Bumps and Skin Rashes\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"19 Silent Signs of Lung Cancer You Need to Be Aware Of\"\n\n[Candidate News Title]\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers may expect to find an update on Sarah Palin's personal life, particularly her ongoing efforts to mend her marriage. The piece is likely to explore the challenges she faces in this journey, including any public statements she has made about her relationship. Additionally, it may provide context on her previous marital issues and insights into how these personal matters intersect with her public persona. Overall, the article could present a balanced view of Palin's situation, highlighting both her determination and the complexities involved.",
+  "model": "gpt-4o-mini"
+}

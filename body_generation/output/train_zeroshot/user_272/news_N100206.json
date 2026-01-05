@@ -1,0 +1,21 @@
+{
+  "user_id": 272,
+  "candidate_news_id": "N100206",
+  "candidate_title": "Top 100 country songs of all time",
+  "user_history_count": 10,
+  "user_history": [
+    "Kourtney Kardashian Defends Son Reign's Long Hair: He Is 'Happy'",
+    "Jameela Jamil Called Out a New TV Show Where Judges Decide If Contestants \"Deserve\" Plastic Surgery",
+    "The most haunted roads in the US and the chilling stories behind them",
+    "Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage",
+    "Even 'Project Runway' Couldn't Save Zac Posen",
+    "Previewing every key matchup in LSU-Alabama showdown",
+    "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup",
+    "Mario Addison back with \"mixed emotions\" after death of brother",
+    "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kourtney Kardashian Defends Son Reign's Long Hair: He Is 'Happy'\"\n\"Jameela Jamil Called Out a New TV Show Where Judges Decide If Contestants \"Deserve\" Plastic Surgery\"\n\"The most haunted roads in the US and the chilling stories behind them\"\n\"Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage\"\n\"Even 'Project Runway' Couldn't Save Zac Posen\"\n\"Previewing every key matchup in LSU-Alabama showdown\"\n\"4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup\"\n\"Mario Addison back with \"mixed emotions\" after death of brother\"\n\"4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\n[Candidate News Title]\n\"Top 100 country songs of all time\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Top 100 country songs of all time\" is likely to provide a curated list of influential and popular country songs throughout history, highlighting their significance in the genre. Readers may expect to see a mix of classic tracks and contemporary hits, along with brief descriptions that explain why each song deserves a spot on the list. The article could also include insights into the artists behind these songs and their impact on country music. Additionally, it may feature commentary on the evolution of the genre, offering context for the selections made.",
+  "model": "gpt-4o-mini"
+}

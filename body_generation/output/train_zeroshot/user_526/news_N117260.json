@@ -1,0 +1,20 @@
+{
+  "user_id": 526,
+  "candidate_news_id": "N117260",
+  "candidate_title": "Hey, Millennials, look out below! Gen Z may already be catching up in the salary race",
+  "user_history_count": 9,
+  "user_history": [
+    "MLB umpire Eric Cooper dead at 52",
+    "Why the Patriots made a very un-Patriots trade for Mohamed Sanu",
+    "Pirates fire GM Neal Huntington as front office shake-up continues",
+    "'Rich Kids' Stars Morgan Stewart and Brendan Fitzpatrick to Divorce After 3 Years of Marriage",
+    "Le'Veon Bell says Steelers tried to trade for him this season",
+    "Previewing the Debut of the 2019 College Football Playoff Rankings",
+    "Mayfield's postgame outfit gets all the memes",
+    "105 Most Popular Sodas Ranked by How Toxic They Are",
+    "Cause determined in Jessi Combs' fatal speed record crash"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"MLB umpire Eric Cooper dead at 52\"\n\"Why the Patriots made a very un-Patriots trade for Mohamed Sanu\"\n\"Pirates fire GM Neal Huntington as front office shake-up continues\"\n\"'Rich Kids' Stars Morgan Stewart and Brendan Fitzpatrick to Divorce After 3 Years of Marriage\"\n\"Le'Veon Bell says Steelers tried to trade for him this season\"\n\"Previewing the Debut of the 2019 College Football Playoff Rankings\"\n\"Mayfield's postgame outfit gets all the memes\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"\"\n\n[Candidate News Title]\n\"Hey, Millennials, look out below! Gen Z may already be catching up in the salary race\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the evolving financial landscape between generations, specifically highlighting how Gen Z is beginning to match or surpass Millennials in salary levels. It may explore potential reasons for this shift, such as changes in the job market, educational attainment, or emerging industries. The piece could also provide insights into the implications of these trends on economic stability and intergenerational wealth dynamics. Overall, readers may expect a data-driven analysis that examines current salary trends and their potential future impact.",
+  "model": "gpt-4o-mini"
+}

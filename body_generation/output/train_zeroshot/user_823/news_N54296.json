@@ -1,0 +1,21 @@
+{
+  "user_id": 823,
+  "candidate_news_id": "N54296",
+  "candidate_title": "Georgia executes man convicted of killing convenience store clerk",
+  "user_history_count": 10,
+  "user_history": [
+    "Wild fall freeze: Utah falls close to minus-35 as West shivers, while bitter cold oozes east",
+    "How much land the government owns in every state and what it's used for",
+    "'Vamos to Victory': Trump's Spanish ads skirt immigration, warn of socialism",
+    "Watch Obama's Reaction When Someone Calls Him 'Your Excellency'",
+    "Allegations against Biden 'not credible,' testified US official now touted by Trump",
+    "Impeachment transcripts reveal a consistent, damaging narrative for Trump",
+    "These five mistakes could blow your holiday travel budget",
+    "GOP complaint takes sports radio host and potential Mitch McConnell challenger Matt Jones off air",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'",
+    "13 Ways You're Shortening the Life of Your Car"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Wild fall freeze: Utah falls close to minus-35 as West shivers, while bitter cold oozes east\"\n\"How much land the government owns in every state and what it's used for\"\n\"'Vamos to Victory': Trump's Spanish ads skirt immigration, warn of socialism\"\n\"Watch Obama's Reaction When Someone Calls Him 'Your Excellency'\"\n\"Allegations against Biden 'not credible,' testified US official now touted by Trump\"\n\"Impeachment transcripts reveal a consistent, damaging narrative for Trump\"\n\"These five mistakes could blow your holiday travel budget\"\n\"GOP complaint takes sports radio host and potential Mitch McConnell challenger Matt Jones off air\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\"13 Ways You're Shortening the Life of Your Car\"\n\n[Candidate News Title]\n\"Georgia executes man convicted of killing convenience store clerk\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent execution of a man in Georgia who was convicted of killing a convenience store clerk, providing details about the crime, trial, and sentencing process. It may outline the legal arguments made during the trial, the reactions from the victim's family, and any broader implications regarding capital punishment in the state. Additionally, the piece could explore public opinion on the execution and its context within ongoing debates about justice and crime in the U.S. However, the specifics of the case and the execution's aftermath may vary.",
+  "model": "gpt-4o-mini"
+}

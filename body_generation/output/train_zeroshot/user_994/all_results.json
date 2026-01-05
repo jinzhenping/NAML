@@ -1,0 +1,202 @@
+[
+  {
+    "user_id": 994,
+    "candidate_news_id": "N99486",
+    "candidate_title": "The best independent bakery in every state",
+    "user_history_count": 9,
+    "user_history": [
+      "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+      "High school sports with highest concussion rates revealed in new study",
+      "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+      "12 burning questions for Nationals-Astros World Series",
+      "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+      "Best Photos of the World Series",
+      "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "Comics - '9 to 5' by Harley Schwadron"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"\"\n\n[Candidate News Title]\n\"The best independent bakery in every state\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"The best independent bakery in every state,\" the user may expect to find a comprehensive overview of notable independent bakeries across the United States. The piece is likely to highlight unique offerings from each bakery, such as signature pastries, artisanal breads, and local specialties that set them apart. Readers may also anticipate insights into the bakery's history, its impact on the local community, and perhaps interviews with the owners or bakers. This exploration could provide a valuable resource for anyone interested in discovering local culinary gems.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 994,
+    "candidate_news_id": "N100449",
+    "candidate_title": "Comics - '9 to 5' by Harley Schwadron",
+    "user_history_count": 9,
+    "user_history": [
+      "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+      "High school sports with highest concussion rates revealed in new study",
+      "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+      "12 burning questions for Nationals-Astros World Series",
+      "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+      "Best Photos of the World Series",
+      "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "Comics - '9 to 5' by Harley Schwadron"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"\"\n\n[Candidate News Title]\n\"Comics - '9 to 5' by Harley Schwadron\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to find a comic strip titled \"9 to 5\" by Harley Schwadron, which may explore themes related to the daily routines and challenges of working life. The comic could feature humorous scenarios that resonate with the experiences of office workers, highlighting the absurdities and quirks of a typical workday. Readers might expect clever illustrations and witty dialogue that reflect common frustrations and interactions in a professional setting, providing a light-hearted commentary on the modern workplace.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 994,
+    "candidate_news_id": "N32154",
+    "candidate_title": "Porsche launches into second story of New Jersey building, killing 2",
+    "user_history_count": 9,
+    "user_history": [
+      "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+      "High school sports with highest concussion rates revealed in new study",
+      "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+      "12 burning questions for Nationals-Astros World Series",
+      "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+      "Best Photos of the World Series",
+      "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "Comics - '9 to 5' by Harley Schwadron"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"\"\n\n[Candidate News Title]\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely reports on a tragic incident involving a Porsche that crashed into the second story of a building in New Jersey, resulting in the deaths of two individuals. Readers may expect details about the circumstances surrounding the incident, including the time and location of the crash, as well as any potential factors that contributed to the accident. The article might also provide information on the victims and any ongoing investigations by local authorities. It is possible that the piece will explore broader implications related to vehicle safety or urban driving regulations.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 994,
+    "candidate_news_id": "N98178",
+    "candidate_title": "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "user_history_count": 9,
+    "user_history": [
+      "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+      "High school sports with highest concussion rates revealed in new study",
+      "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+      "12 burning questions for Nationals-Astros World Series",
+      "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+      "Best Photos of the World Series",
+      "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "Comics - '9 to 5' by Harley Schwadron"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"\"\n\n[Candidate News Title]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article on Charles Rogers, a former Michigan State football player and Detroit Lions star who has passed away at the age of 38, is likely to provide an overview of his career achievements in college and professional football. Readers can expect details about his time at Michigan State, where he was recognized as a standout wide receiver, and his subsequent draft into the NFL. The piece may also touch on his impact on the teams he played for, along with any relevant context regarding his life after football and the circumstances surrounding his death.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 994,
+    "candidate_news_id": "N114526",
+    "candidate_title": "SpaceX set to launch another 60 Starlink internet satellites",
+    "user_history_count": 9,
+    "user_history": [
+      "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+      "High school sports with highest concussion rates revealed in new study",
+      "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+      "12 burning questions for Nationals-Astros World Series",
+      "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+      "Best Photos of the World Series",
+      "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "Comics - '9 to 5' by Harley Schwadron"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"\"\n\n[Candidate News Title]\n\"SpaceX set to launch another 60 Starlink internet satellites\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"SpaceX set to launch another 60 Starlink internet satellites\" is likely to provide an overview of SpaceX's upcoming launch, detailing the specifics of the satellite deployment and its significance for global internet coverage. Readers may expect to learn about the technology behind the Starlink satellites, the objectives of this particular launch, and how it fits into SpaceX's broader mission to enhance internet accessibility. Additionally, the article could discuss potential implications for users in underserved areas, though this aspect may be explored with varying levels of detail.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 994,
+    "candidate_news_id": "N73137",
+    "candidate_title": "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "user_history_count": 9,
+    "user_history": [
+      "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+      "High school sports with highest concussion rates revealed in new study",
+      "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+      "12 burning questions for Nationals-Astros World Series",
+      "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+      "Best Photos of the World Series",
+      "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "Comics - '9 to 5' by Harley Schwadron"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"\"\n\n[Candidate News Title]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to find a comprehensive overview of the most significant deals anticipated for Black Friday. The piece may outline various categories such as electronics, clothing, and home goods, highlighting expected discounts from popular retailers. Additionally, it could provide insights on shopping trends and tips for maximizing savings during the event. The article is likely to emphasize the importance of planning ahead and staying informed about the best offers, making it a useful resource for savvy shoppers preparing for the holiday season.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 994,
+    "candidate_news_id": "N111912",
+    "candidate_title": "Maternity Store Closing Ohio Sites: This Week's Most Read",
+    "user_history_count": 9,
+    "user_history": [
+      "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+      "High school sports with highest concussion rates revealed in new study",
+      "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+      "12 burning questions for Nationals-Astros World Series",
+      "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+      "Best Photos of the World Series",
+      "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "Comics - '9 to 5' by Harley Schwadron"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"\"\n\n[Candidate News Title]\n\"Maternity Store Closing Ohio Sites: This Week's Most Read\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Maternity Store Closing Ohio Sites: This Week's Most Read\" is likely to address the recent closures of maternity stores in Ohio, detailing the reasons behind these decisions, such as economic challenges or shifts in consumer behavior. It may provide insights into the impact on local communities and possibly a broader trend in the retail sector related to maternity products. Additionally, the article could include quotes from store representatives or customers affected by the closures, although this is uncertain. Overall, readers can expect a factual overview of the situation and its implications.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 994,
+    "candidate_news_id": "N12258",
+    "candidate_title": "For a healthy heart, eat the biggest meal early in the day",
+    "user_history_count": 9,
+    "user_history": [
+      "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+      "High school sports with highest concussion rates revealed in new study",
+      "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+      "12 burning questions for Nationals-Astros World Series",
+      "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+      "Best Photos of the World Series",
+      "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "Comics - '9 to 5' by Harley Schwadron"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"\"\n\n[Candidate News Title]\n\"For a healthy heart, eat the biggest meal early in the day\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "This article is likely to discuss the potential benefits of consuming larger meals earlier in the day for heart health. It may outline findings from recent studies that suggest timing of meals can impact cardiovascular well-being, highlighting specific nutrients or food types that are particularly beneficial when eaten in the morning. The piece could also explore the science behind metabolism and its relationship with meal timing, providing readers with actionable insights to improve their diet for better heart health.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 994,
+    "candidate_news_id": "N23086",
+    "candidate_title": "The Best Backstage Moments From the 2019 E! People's Choice Awards",
+    "user_history_count": 9,
+    "user_history": [
+      "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+      "High school sports with highest concussion rates revealed in new study",
+      "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+      "12 burning questions for Nationals-Astros World Series",
+      "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+      "Best Photos of the World Series",
+      "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "Comics - '9 to 5' by Harley Schwadron"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"\"\n\n[Candidate News Title]\n\"The Best Backstage Moments From the 2019 E! People's Choice Awards\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on \"The Best Backstage Moments From the 2019 E! People's Choice Awards,\" you can expect a detailed overview of notable interactions and events that occurred behind the scenes during the awards ceremony. The article may highlight amusing or unexpected encounters between celebrities, as well as insights into their candid reactions during the event. Additionally, it could provide context about the atmosphere backstage, capturing the excitement and spontaneity of the moments that fans don’t typically see on camera.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 994,
+    "candidate_news_id": "N89210",
+    "candidate_title": "New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November",
+    "user_history_count": 9,
+    "user_history": [
+      "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+      "High school sports with highest concussion rates revealed in new study",
+      "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+      "12 burning questions for Nationals-Astros World Series",
+      "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+      "Best Photos of the World Series",
+      "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+      "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+      "Comics - '9 to 5' by Harley Schwadron"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"\"\n\n[Candidate News Title]\n\"New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"New Movies and TV Shows You'll Be Able to Cozy Up With on Netflix in November,\" the user is likely to find a comprehensive overview of the latest additions to Netflix's streaming library for the upcoming month. This could include details on various genres, such as dramas, comedies, and documentaries, along with brief descriptions of notable titles that may be highlighted for their popularity or critical acclaim. Additionally, the article might discuss any anticipated sequels or original series, providing insights into what viewers can expect from these new releases.",
+    "model": "gpt-4o-mini"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "user_id": 786,
+  "candidate_news_id": "N29016",
+  "candidate_title": "Police look for motive behind California school shooting",
+  "user_history_count": 10,
+  "user_history": [
+    "'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint",
+    "Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Dean Foods files for bankruptcy",
+    "Hyatt is eliminating travel-sized plastic toiletries",
+    "Eerie photos of an abandoned airport that hasn't been touched in 25 years",
+    "Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded",
+    "My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'We're standing by it': Sheriff doubles down on 'In God We Trust' decals after atheist group's complaint\"\n\"Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Dean Foods files for bankruptcy\"\n\"Hyatt is eliminating travel-sized plastic toiletries\"\n\"Eerie photos of an abandoned airport that hasn't been touched in 25 years\"\n\"Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded\"\n\"My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\n[Candidate News Title]\n\"Police look for motive behind California school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on the California school shooting is likely to explore the details surrounding the incident, including the timeline of events and the response from law enforcement. It may discuss the identities of the individuals involved and any information about potential motives behind the shooting. Additionally, the piece could provide context by looking at the impact on the local community and the measures being taken to ensure safety in schools. There may also be insights into how this incident fits into the broader issues of gun violence in educational settings.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 339,
+  "candidate_news_id": "N96805",
+  "candidate_title": "Hernandez: Anthony Davis' impact on LeBron James apparent even when he doesn't play",
+  "user_history_count": 10,
+  "user_history": [
+    "125 Cast Iron Recipes for Fall",
+    "'Ghost kitchens' are taking over fast-food chains from Chick-fil-A to Wendy's",
+    "Here's What Malls Looked Like Back in the '50s",
+    "Missing West Point cadet Kade Kurita found dead 4 days after disappearing",
+    "World's largest treehouse burns to the ground",
+    "Report: Adidas working on buyout of $25 million John Wall deal amid injuries",
+    "Bill Macy, Bea Arthur's Husband on 'Maude,' Dies at 97",
+    "The ice used to protect them. Now their island is crumbling into the sea.",
+    "Jeremy Roloff Vows to Pay More 'Attention' to His Health After Undergoing Hernia Surgery",
+    "At stressful time, Boy Scouts top boss goes on medical leave"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"125 Cast Iron Recipes for Fall\"\n\"'Ghost kitchens' are taking over fast-food chains from Chick-fil-A to Wendy's\"\n\"Here's What Malls Looked Like Back in the '50s\"\n\"Missing West Point cadet Kade Kurita found dead 4 days after disappearing\"\n\"World's largest treehouse burns to the ground\"\n\"Report: Adidas working on buyout of $25 million John Wall deal amid injuries\"\n\"Bill Macy, Bea Arthur's Husband on 'Maude,' Dies at 97\"\n\"The ice used to protect them. Now their island is crumbling into the sea.\"\n\"Jeremy Roloff Vows to Pay More 'Attention' to His Health After Undergoing Hernia Surgery\"\n\"At stressful time, Boy Scouts top boss goes on medical leave\"\n\n[Candidate News Title]\n\"Hernandez: Anthony Davis' impact on LeBron James apparent even when he doesn't play\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Hernandez: Anthony Davis' impact on LeBron James apparent even when he doesn't play,\" the user can expect an analysis of the dynamic between Anthony Davis and LeBron James, particularly focusing on how Davis’s presence—or absence—affects the performance and strategy of the Los Angeles Lakers. The piece may explore statistical data, historical comparisons, and expert opinions to illustrate how Davis contributes to the team's overall success, even when sidelined due to injury. Additionally, it could highlight the implications of this relationship on the team’s playoff aspirations and future lineup decisions.",
+  "model": "gpt-4o-mini"
+}

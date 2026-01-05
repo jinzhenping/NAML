@@ -1,0 +1,21 @@
+{
+  "user_id": 598,
+  "candidate_news_id": "N119838",
+  "candidate_title": "Bucs release former first-round pick Vernon Hargreaves",
+  "user_history_count": 10,
+  "user_history": [
+    "Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge",
+    "Deer fatally attacks hunter who shot him",
+    "Mountain skeleton may be man from Japanese internment camp",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him",
+    "Surfing executive sentenced to prison in college admissions scam",
+    "30 Thanksgiving Casserole Recipes",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Spanx Founder Sara Blakely Reveals She Bought Olivia Newton-John's Grease Pants for Over $160K"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lori Loughlin Is 'Absolutely Terrified' After Being Hit With New Charge\"\n\"Deer fatally attacks hunter who shot him\"\n\"Mountain skeleton may be man from Japanese internment camp\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him\"\n\"Surfing executive sentenced to prison in college admissions scam\"\n\"30 Thanksgiving Casserole Recipes\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Spanx Founder Sara Blakely Reveals She Bought Olivia Newton-John's Grease Pants for Over $160K\"\n\n[Candidate News Title]\n\"Bucs release former first-round pick Vernon Hargreaves\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Bucs release former first-round pick Vernon Hargreaves\" is likely to discuss the recent decision by the Tampa Bay Buccaneers to part ways with Hargreaves, who was once considered a promising player after being drafted in the first round. The piece may provide context regarding his performance with the team, including any challenges he faced, and insights into the team's current roster strategy and future plans. Additionally, it could explore potential implications for Hargreaves' career moving forward and the reactions from fans and analysts regarding the release.",
+  "model": "gpt-4o-mini"
+}

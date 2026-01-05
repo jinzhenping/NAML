@@ -1,0 +1,21 @@
+{
+  "user_id": 617,
+  "candidate_news_id": "N38304",
+  "candidate_title": "Meghan Markle Chose a Black Brocade Dress For the Royal Family's Important Outing",
+  "user_history_count": 10,
+  "user_history": [
+    "Ambushed in Mexico, Mormon Children Tried to Save One Another",
+    "Las Vegas adopts ban on sleeping, camping on streets, sidewalks",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Holocaust survivor under guard amid death threats",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Prince Harry just hinted that he and Meghan Markle may want another baby",
+    "Court to rehear law on adoptions of Native American children",
+    "Loved ones arrive for funerals of 9 members of American family slain in Mexico",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Ambushed in Mexico, Mormon Children Tried to Save One Another\"\n\"Las Vegas adopts ban on sleeping, camping on streets, sidewalks\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Holocaust survivor under guard amid death threats\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Prince Harry just hinted that he and Meghan Markle may want another baby\"\n\"Court to rehear law on adoptions of Native American children\"\n\"Loved ones arrive for funerals of 9 members of American family slain in Mexico\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\n[Candidate News Title]\n\"Meghan Markle Chose a Black Brocade Dress For the Royal Family's Important Outing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Meghan Markle Chose a Black Brocade Dress For the Royal Family's Important Outing,\" the user is likely to find a detailed description of Markle's fashion choice, emphasizing the significance of the event she attended. The piece may include information about the dress's designer, style, and how it aligns with her public image. Additionally, the article could explore the reactions of the royal family and the media to her outfit, as well as any broader implications regarding her role within the royal context.",
+  "model": "gpt-4o-mini"
+}

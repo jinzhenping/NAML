@@ -1,0 +1,21 @@
+{
+  "user_id": 458,
+  "candidate_news_id": "N123784",
+  "candidate_title": "Is the Alabama Football Dynasty Ending?",
+  "user_history_count": 10,
+  "user_history": [
+    "'Slender Man' survivor's brother: 'I couldn't believe... that kind of thing' happened",
+    "8-year-old hailed as hero for stopping potential school shooting",
+    "Lindsay Lohan's dad weighs in on her relationship with the Saudi crown prince",
+    "The best celebrity couple Halloween costumes",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "This girl nails the wave pool   then fails the exit spectacularly",
+    "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup",
+    "Chase Young fiasco highlights absurdity of NCAA's outdated model",
+    "College football Week 11: Picks and preview",
+    "Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Slender Man' survivor's brother: 'I couldn't believe... that kind of thing' happened\"\n\"8-year-old hailed as hero for stopping potential school shooting\"\n\"Lindsay Lohan's dad weighs in on her relationship with the Saudi crown prince\"\n\"The best celebrity couple Halloween costumes\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"This girl nails the wave pool   then fails the exit spectacularly\"\n\"4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup\"\n\"Chase Young fiasco highlights absurdity of NCAA's outdated model\"\n\"College football Week 11: Picks and preview\"\n\"Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'\"\n\n[Candidate News Title]\n\"Is the Alabama Football Dynasty Ending?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Is the Alabama Football Dynasty Ending?\" is likely to explore the current state of the Alabama football program, examining factors that could suggest a decline in its dominance in college football. Readers can expect an analysis of recent performance trends, coaching decisions, and recruiting efforts that may impact the team's future success. It is possible that the article will include insights from sports analysts and data on rival teams that are rising in prominence, providing a broader context for Alabama's standing in the sport.",
+  "model": "gpt-4o-mini"
+}

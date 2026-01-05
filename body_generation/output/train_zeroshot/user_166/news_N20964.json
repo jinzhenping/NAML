@@ -1,0 +1,21 @@
+{
+  "user_id": 166,
+  "candidate_news_id": "N20964",
+  "candidate_title": "Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter",
+  "user_history_count": 10,
+  "user_history": [
+    "Passenger wears over 5 lbs of clothes to avoid excess baggage charge",
+    "Jennifer Lawrence Hired A Food Truck For Her Wedding And The Owner Had No Idea Who She Was",
+    "Home prices are overheating again, causing buyers to turn away",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "Rising California gasoline prices highlight growing divide in US",
+    "Eric Tse, 24, just became a billionaire overnight",
+    "Northern Michigan father of 7 wins $80M Powerball jackpot",
+    "New Hyundai Azera Looks Pretty Gorgeous",
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Passenger wears over 5 lbs of clothes to avoid excess baggage charge\"\n\"Jennifer Lawrence Hired A Food Truck For Her Wedding And The Owner Had No Idea Who She Was\"\n\"Home prices are overheating again, causing buyers to turn away\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"Rising California gasoline prices highlight growing divide in US\"\n\"Eric Tse, 24, just became a billionaire overnight\"\n\"Northern Michigan father of 7 wins $80M Powerball jackpot\"\n\"New Hyundai Azera Looks Pretty Gorgeous\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\n[Candidate News Title]\n\"Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter,\" the user may expect a narrative focusing on a wedding ceremony where a groom expresses deep affection and commitment not only to his bride but also to her young daughter. The piece is likely to detail the groom's vows, highlighting the significance of this bond and how it reflects modern family dynamics. Additionally, it could include insights into the relationship between the stepfather and stepdaughter, exploring themes of love and family integration. This article may resonate with readers interested in personal stories that emphasize familial connections and emotional commitments.",
+  "model": "gpt-4o-mini"
+}

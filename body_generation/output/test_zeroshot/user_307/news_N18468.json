@@ -1,0 +1,21 @@
+{
+  "user_id": 307,
+  "candidate_news_id": "N18468",
+  "candidate_title": "Belichick mocks social media in comments on Garrett incident",
+  "user_history_count": 10,
+  "user_history": [
+    "The problem with diamonds is they keep getting cheaper",
+    "Dad took 11-month-old to drug deal as 'human shield'. The baby was shot.",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "Mother-in-law poses as teenage boy to catch man in child porn case",
+    "Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Could this court case be the key to finding Dubai's missing princesses?",
+    "Experts crack mystery of ancient Egypt's sacred bird mummies",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The problem with diamonds is they keep getting cheaper\"\n\"Dad took 11-month-old to drug deal as 'human shield'. The baby was shot.\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Mother-in-law poses as teenage boy to catch man in child porn case\"\n\"Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Could this court case be the key to finding Dubai's missing princesses?\"\n\"Experts crack mystery of ancient Egypt's sacred bird mummies\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\n[Candidate News Title]\n\"Belichick mocks social media in comments on Garrett incident\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to read about Bill Belichick's recent remarks regarding the incident involving player Garrett. The focus is likely to be on Belichick's critique of social media commentary surrounding the situation, providing insights into his perspective on how public discourse can impact team dynamics and player reputations. The article could explore the implications of Belichick's comments, particularly in the context of media scrutiny in professional sports, and how such incidents reflect broader trends in athlete conduct and public perception.",
+  "model": "gpt-4o-mini"
+}

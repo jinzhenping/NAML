@@ -1,0 +1,21 @@
+{
+  "user_id": 909,
+  "candidate_news_id": "N116118",
+  "candidate_title": "Stocks close higher on optimism over China trade deal",
+  "user_history_count": 10,
+  "user_history": [
+    "Where is Mr. Mabel? Texas family searching desperately for 90-pound pet tortoise",
+    "'The Masked Singer' Recap: A Grammy Winner Is Revealed As The Skeleton",
+    "Funeral services set for US Rep. Elijah Cummings",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Where is Mr. Mabel? Texas family searching desperately for 90-pound pet tortoise\"\n\"'The Masked Singer' Recap: A Grammy Winner Is Revealed As The Skeleton\"\n\"Funeral services set for US Rep. Elijah Cummings\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\n[Candidate News Title]\n\"Stocks close higher on optimism over China trade deal\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to read about the recent performance of the stock market, particularly focusing on the gains attributed to positive sentiment surrounding a potential trade deal with China. The piece is likely to explore how investor optimism has influenced stock prices, highlighting specific sectors or companies that have benefited. Additionally, it could provide insights from financial analysts on the implications of these developments for future market trends. Overall, the article is probably aimed at offering a clear overview of the current economic climate and its impact on investors.",
+  "model": "gpt-4o-mini"
+}

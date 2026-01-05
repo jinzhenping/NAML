@@ -1,0 +1,21 @@
+{
+  "user_id": 102,
+  "candidate_news_id": "N51406",
+  "candidate_title": "Watch: Maggert wins Champions finale with walk-off eagle holeout",
+  "user_history_count": 10,
+  "user_history": [
+    "$16.8 Million In Campaign Funds Went To Trump Businesses, Latest Records Reveal",
+    "Gary McCord speaks out loudly about being dropped from CBS golf team: 'Bottom line, they fired me'",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Daylight saving time is ending this weekend. These states want to make DST permanent",
+    "Dog kicks cat out of his bed",
+    "Doberman Pinscher throws tantrum for Halloween candy",
+    "Third time's (not always) the charm: From silver screen icons to a world heavyweight boxer - celebs who've been married more than three times",
+    "Las Vegas adopts ban on sleeping, camping on streets, sidewalks",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "Friendly deer plays with dog"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"$16.8 Million In Campaign Funds Went To Trump Businesses, Latest Records Reveal\"\n\"Gary McCord speaks out loudly about being dropped from CBS golf team: 'Bottom line, they fired me'\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Daylight saving time is ending this weekend. These states want to make DST permanent\"\n\"Dog kicks cat out of his bed\"\n\"Doberman Pinscher throws tantrum for Halloween candy\"\n\"Third time's (not always) the charm: From silver screen icons to a world heavyweight boxer - celebs who've been married more than three times\"\n\"Las Vegas adopts ban on sleeping, camping on streets, sidewalks\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"Friendly deer plays with dog\"\n\n[Candidate News Title]\n\"Watch: Maggert wins Champions finale with walk-off eagle holeout\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Maggert winning the Champions finale with a walk-off eagle holeout is likely to focus on the details of the tournament's concluding moments and the significance of this achievement in the context of his career. Readers may expect to find an analysis of the final hole, including the challenges faced and the strategies employed by Maggert. Additionally, the piece could provide insights into the reactions of fellow competitors and fans, as well as the implications of this victory for Maggert's standing in the Champions Tour.",
+  "model": "gpt-4o-mini"
+}

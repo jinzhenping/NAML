@@ -1,0 +1,21 @@
+{
+  "user_id": 214,
+  "candidate_news_id": "N32154",
+  "candidate_title": "Porsche launches into second story of New Jersey building, killing 2",
+  "user_history_count": 10,
+  "user_history": [
+    "Ewan McGregor Asks Judge to Declare Him and Estranged Wife Single Before Finalizing Divorce",
+    "Girlfriend testifies at trial of man in death of his fiancee",
+    "125 Classic Thanksgiving Menu Ideas",
+    "For the first time, a man has been sentenced for sexual slavery by the International Criminal Court. He got 30 years.",
+    "Celebrities, others ask Texas to halt inmate's execution",
+    "Oprah Winfrey bought her next-door neighbor's California ranch for $6.85 million   take a look inside",
+    "Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'",
+    "This Is The Moment A Senior Shelter Dog Knew He Was Safe",
+    "Man Pulled From Path Of BART Train Grateful To His Rescuer",
+    "Everyday heroes step up to help lone Waffle House employee"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Ewan McGregor Asks Judge to Declare Him and Estranged Wife Single Before Finalizing Divorce\"\n\"Girlfriend testifies at trial of man in death of his fiancee\"\n\"125 Classic Thanksgiving Menu Ideas\"\n\"For the first time, a man has been sentenced for sexual slavery by the International Criminal Court. He got 30 years.\"\n\"Celebrities, others ask Texas to halt inmate's execution\"\n\"Oprah Winfrey bought her next-door neighbor's California ranch for $6.85 million   take a look inside\"\n\"Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'\"\n\"This Is The Moment A Senior Shelter Dog Knew He Was Safe\"\n\"Man Pulled From Path Of BART Train Grateful To His Rescuer\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\n[Candidate News Title]\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to report on a tragic incident in New Jersey where a Porsche vehicle crashed into the second story of a building, resulting in the deaths of two individuals. Readers may expect details about the circumstances surrounding the crash, including any information on the driver, the building's occupants, and the emergency response. The article may also explore potential safety concerns related to such incidents and provide insights into the impact on the local community. Additionally, it could discuss any ongoing investigations or legal repercussions stemming from the event.",
+  "model": "gpt-4o-mini"
+}

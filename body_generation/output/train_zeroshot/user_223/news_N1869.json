@@ -1,0 +1,21 @@
+{
+  "user_id": 223,
+  "candidate_news_id": "N1869",
+  "candidate_title": "Alicia Keys Returns as GRAMMY Awards Host for a Second Time",
+  "user_history_count": 10,
+  "user_history": [
+    "Amber Portwood strikes plea deal for alleged machete attack",
+    "New Jersey woman sues waiter for spilling wine on her Hermès handbag",
+    "Silent Signs of Colon Cancer",
+    "South Dakota set to execute man who stabbed former co-worker",
+    "Katharine McPhee Shares New Wedding Photo in 70th Birthday Tribute to Husband David Foster",
+    "Meet SCAD, a Major Cause of Heart Attacks in Women 50 and Under",
+    "I looked into 'house hacking' to live for free, but there are a few reasons I've decided it's not for me",
+    "Dallas police: Woman trafficked, sold underage family members for sex",
+    "Counting On's Kendra, Joe Duggar Welcome Baby No. 2",
+    "Everyday heroes step up to help lone Waffle House employee"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Amber Portwood strikes plea deal for alleged machete attack\"\n\"New Jersey woman sues waiter for spilling wine on her Hermès handbag\"\n\"Silent Signs of Colon Cancer\"\n\"South Dakota set to execute man who stabbed former co-worker\"\n\"Katharine McPhee Shares New Wedding Photo in 70th Birthday Tribute to Husband David Foster\"\n\"Meet SCAD, a Major Cause of Heart Attacks in Women 50 and Under\"\n\"I looked into 'house hacking' to live for free, but there are a few reasons I've decided it's not for me\"\n\"Dallas police: Woman trafficked, sold underage family members for sex\"\n\"Counting On's Kendra, Joe Duggar Welcome Baby No. 2\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\n[Candidate News Title]\n\"Alicia Keys Returns as GRAMMY Awards Host for a Second Time\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Alicia Keys returning as the host for the GRAMMY Awards, the user can expect to find details on her previous hosting experiences, including any notable moments from past ceremonies. The piece may also discuss what this return signifies for the event and how Keys' involvement could influence the show's atmosphere and viewer engagement. Additionally, there may be insights into the preparations for the upcoming awards, including any anticipated performances or changes in format. Overall, the article is likely to highlight Keys' role in enhancing the prestige of the GRAMMYs while addressing her impact on the music industry.",
+  "model": "gpt-4o-mini"
+}

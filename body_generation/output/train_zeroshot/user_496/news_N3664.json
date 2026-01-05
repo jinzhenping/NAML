@@ -1,0 +1,17 @@
+{
+  "user_id": 496,
+  "candidate_news_id": "N3664",
+  "candidate_title": "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+  "user_history_count": 6,
+  "user_history": [
+    "This waterfront city is the top place in America to retire",
+    "If You Don't Eat a Banana Every Day, This Might Convince You to Start",
+    "Forde-Yard Dash: This is how bad the playoff picture can get",
+    "Northern Michigan father of 7 wins $80M Powerball jackpot",
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "Scientists discover new strain of HIV"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"This waterfront city is the top place in America to retire\"\n\"If You Don't Eat a Banana Every Day, This Might Convince You to Start\"\n\"Forde-Yard Dash: This is how bad the playoff picture can get\"\n\"Northern Michigan father of 7 wins $80M Powerball jackpot\"\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"Scientists discover new strain of HIV\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the tragic circumstances surrounding the death of Broadway star Laurel Griggs, who reportedly suffered an asthma attack prior to her passing at the young age of 13. Readers may expect to learn about her career achievements and contributions to theater, as well as details regarding her health struggles that led to this unfortunate event. It could also provide insights into the impact of her loss on her family and the broader theater community, highlighting the importance of asthma awareness and management.",
+  "model": "gpt-4o-mini"
+}

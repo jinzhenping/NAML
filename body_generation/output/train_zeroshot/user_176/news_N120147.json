@@ -1,0 +1,21 @@
+{
+  "user_id": 176,
+  "candidate_news_id": "N120147",
+  "candidate_title": "Top Putin aide named by MH17 airliner investigators",
+  "user_history_count": 10,
+  "user_history": [
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "Catherine Deneuve Hospitalized After Mild Stroke",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.",
+    "Sneaky reason why Ravens, not Patriots, are AFC's best",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "Mary Cain details alleged physical and emotional abuse at the hands of Nike, Alberto Salazar",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Where will Cam Newton play in 2020? Ranking the 7 best fits, from Panthers to Dolphins"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"Catherine Deneuve Hospitalized After Mild Stroke\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"Reality television star Kevin O'Leary and his wife were sued Wednesday for wrongful deaths in a boat crash in Canada's backwoods.\"\n\"Sneaky reason why Ravens, not Patriots, are AFC's best\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Mary Cain details alleged physical and emotional abuse at the hands of Nike, Alberto Salazar\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Where will Cam Newton play in 2020? Ranking the 7 best fits, from Panthers to Dolphins\"\n\n[Candidate News Title]\n\"Top Putin aide named by MH17 airliner investigators\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent identification of a key aide to Russian President Vladimir Putin by investigators probing the downing of Malaysia Airlines Flight MH17. Readers may expect an overview of the implications of this development in the context of international relations and accountability for the tragedy, which occurred in 2014. The article might explore the potential impact this revelation could have on ongoing investigations and diplomatic tensions between Russia and other nations involved. Furthermore, it may include insights into the background of the aide and their role in the events surrounding the incident.",
+  "model": "gpt-4o-mini"
+}

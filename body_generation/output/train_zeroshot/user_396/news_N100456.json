@@ -1,0 +1,21 @@
+{
+  "user_id": 396,
+  "candidate_news_id": "N100456",
+  "candidate_title": "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win",
+  "user_history_count": 10,
+  "user_history": [
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "DOJ sues Walmart for allegedly discriminating against a Navy reserve officer",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "As Warren Gains in Race, Wall Street Sounds the Alarm",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Meghan McCain GOES IN on Donald Trump Jr. on 'The View'",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "More than 130,000 pounds of ground beef recalled for possible plastic contamination",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "Jennifer Aniston looks amazing in a makeup-free selfie, plus more news"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"DOJ sues Walmart for allegedly discriminating against a Navy reserve officer\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"As Warren Gains in Race, Wall Street Sounds the Alarm\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Meghan McCain GOES IN on Donald Trump Jr. on 'The View'\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"More than 130,000 pounds of ground beef recalled for possible plastic contamination\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Jennifer Aniston looks amazing in a makeup-free selfie, plus more news\"\n\n[Candidate News Title]\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\" is likely to explore allegations made against a contestant from the reality television show \"Survivor.\" Readers can expect to find details regarding the nature of the accusations, the reactions from the involved parties, and the implications for the show's dynamics. Additionally, the piece may discuss how the allegations were reportedly used strategically by other contestants in the game, potentially shedding light on the intersection of reality television and personal conduct.",
+  "model": "gpt-4o-mini"
+}

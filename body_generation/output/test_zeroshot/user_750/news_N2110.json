@@ -1,0 +1,21 @@
+{
+  "user_id": 750,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "The News In Cartoons",
+    "Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'",
+    "The News In Cartoons",
+    "Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'",
+    "This Is What the 2020 Toyota Supra Should've Looked Like From the Start",
+    "The News In Cartoons",
+    "See adorable rescued sea otters get released back into the wild",
+    "The News In Cartoons",
+    "Ford v Ferrari: the real story",
+    "19 hysterical winners from this year's Comedy Wildlife Photography Awards"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The News In Cartoons\"\n\"Dog Learning to Talk By Using a Custom Soundboard to Speak: 'I'm in Constant Amazement'\"\n\"The News In Cartoons\"\n\"Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'\"\n\"This Is What the 2020 Toyota Supra Should've Looked Like From the Start\"\n\"The News In Cartoons\"\n\"See adorable rescued sea otters get released back into the wild\"\n\"The News In Cartoons\"\n\"Ford v Ferrari: the real story\"\n\"19 hysterical winners from this year's Comedy Wildlife Photography Awards\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive,\" you can expect a compilation of innovative and appealing technology products that are suitable for gifting. The article is likely to highlight a range of items, from the latest gadgets and accessories to unique tech solutions that cater to various interests and age groups. It may include brief descriptions of each product, outlining their features and potential uses, as well as suggestions for who might appreciate them the most. Overall, the piece is expected to provide a resourceful guide for anyone looking to find the perfect tech gift.",
+  "model": "gpt-4o-mini"
+}

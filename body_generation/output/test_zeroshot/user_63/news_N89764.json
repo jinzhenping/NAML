@@ -1,0 +1,21 @@
+{
+  "user_id": 63,
+  "candidate_news_id": "N89764",
+  "candidate_title": "Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital",
+  "user_history_count": 10,
+  "user_history": [
+    "Neil Patrick Harris Has Surgery on His Hand After a Sea Urchin Accident While on Holiday",
+    "Gigantic bull \"moos\" his appreciation when he gets his ear scratched",
+    "The decisions that have backfired on the Yankees in the ALCS",
+    "Steelers linebacker Anthony Chickillo arrested, facing assault charges",
+    "Willie Brown, Hall of Famer and Raiders legend, dies at 78",
+    "Fearsome Sight: Bees Move Into Lion Statue in Perth",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Neil Patrick Harris Has Surgery on His Hand After a Sea Urchin Accident While on Holiday\"\n\"Gigantic bull \"moos\" his appreciation when he gets his ear scratched\"\n\"The decisions that have backfired on the Yankees in the ALCS\"\n\"Steelers linebacker Anthony Chickillo arrested, facing assault charges\"\n\"Willie Brown, Hall of Famer and Raiders legend, dies at 78\"\n\"Fearsome Sight: Bees Move Into Lion Statue in Perth\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\n[Candidate News Title]\n\"Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the investigation surrounding the death of a woman who was reportedly taken to a hospital by Montae Nicholson, a player for the Washington Redskins. Readers can expect details on the circumstances leading to the woman's hospitalization and the ongoing police inquiry. The report may also touch on the potential implications for Nicholson, including any statements from law enforcement or the team. Additionally, it could provide context regarding similar incidents involving athletes, highlighting the intersection of sports and legal matters.",
+  "model": "gpt-4o-mini"
+}

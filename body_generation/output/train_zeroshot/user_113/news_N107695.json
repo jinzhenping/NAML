@@ -1,0 +1,19 @@
+{
+  "user_id": 113,
+  "candidate_news_id": "N107695",
+  "candidate_title": "The best Airbnb under $100 in every state",
+  "user_history_count": 8,
+  "user_history": [
+    "The Latest: Powerful typhoon makes landfall in Japan",
+    "The Weirdest Animals You Can Legally Own In The US",
+    "The Most Haunted Place in Every State (Don't Visit These Alone!)",
+    "How Each Zodiac Sign Knows They've Found Their Soulmate",
+    "The most terrifying birds in the world",
+    "One shrinking Japanese town's plan: Give away houses for free",
+    "What Is Each Zodiac Sign Allergic To?",
+    "This Simple Hack Will Keep Spiders Out of Your House"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Latest: Powerful typhoon makes landfall in Japan\"\n\"The Weirdest Animals You Can Legally Own In The US\"\n\"The Most Haunted Place in Every State (Don't Visit These Alone!)\"\n\"How Each Zodiac Sign Knows They've Found Their Soulmate\"\n\"The most terrifying birds in the world\"\n\"One shrinking Japanese town's plan: Give away houses for free\"\n\"What Is Each Zodiac Sign Allergic To?\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"The best Airbnb under $100 in every state\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The best Airbnb under $100 in every state,\" the user can expect a comprehensive guide highlighting affordable accommodation options across the United States. The content is likely to include a curated list of noteworthy Airbnb properties that provide good value for travelers seeking budget-friendly stays. Each state's selection may be accompanied by brief descriptions of the properties, including unique features or amenities that make them appealing. Additionally, the article could provide insights into the locations, perhaps mentioning nearby attractions or activities that enhance the travel experience, although specific details may vary.",
+  "model": "gpt-4o-mini"
+}

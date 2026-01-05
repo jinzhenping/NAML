@@ -1,0 +1,21 @@
+{
+  "user_id": 630,
+  "candidate_news_id": "N123615",
+  "candidate_title": "McDonald's launches first seasonal McFlurry in 7 years",
+  "user_history_count": 10,
+  "user_history": [
+    "Cornell student, 18, found dead in gorge after frat party, reports say",
+    "Taylor Swift can't shake 'Shake It Off' copyright suit reinstated by federal court panel",
+    "Kylie Jenner Throws Dinner for Caitlyn Jenner's 70th Birthday   See Which Kardashians Attended",
+    "Every Must-See Photo of Stars Celebrating Halloween 2019",
+    "Celebrity Headshots from Before They Were Famous",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Kristen Stewart Just Made Leather Bras a Thing, and We're All For It",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "A guide to the 2019 People's Choice Awards nominees' significant others",
+    "A guide to the 2019 People's Choice Awards nominees' significant others"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cornell student, 18, found dead in gorge after frat party, reports say\"\n\"Taylor Swift can't shake 'Shake It Off' copyright suit reinstated by federal court panel\"\n\"Kylie Jenner Throws Dinner for Caitlyn Jenner's 70th Birthday   See Which Kardashians Attended\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"Celebrity Headshots from Before They Were Famous\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Kristen Stewart Just Made Leather Bras a Thing, and We're All For It\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\n[Candidate News Title]\n\"McDonald's launches first seasonal McFlurry in 7 years\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about McDonald's introduction of its first seasonal McFlurry in seven years, which could detail the flavors being offered and the inspiration behind this limited-time treat. The article may also provide context on the popularity of McFlurry items in general, discussing consumer trends and previous seasonal offerings. Additionally, it might include insights into the promotional strategies McDonald's is employing to attract customers during this seasonal launch, highlighting any special marketing campaigns associated with the product.",
+  "model": "gpt-4o-mini"
+}

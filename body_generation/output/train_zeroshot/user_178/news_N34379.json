@@ -1,0 +1,21 @@
+{
+  "user_id": 178,
+  "candidate_news_id": "N34379",
+  "candidate_title": "1990s Mall Rats Will Definitely Remember These Iconic Stores and Activities",
+  "user_history_count": 10,
+  "user_history": [
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "Takeaways From Champions Classic: Tyrese Maxey's Breakout, Kansas' Turnovers and More",
+    "Brazil oil auction a 'total disaster' as bidders stay away",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Eric Bledsoe forgot the rules of basketball on this inbound play",
+    "4 Things to Know About Keanu Reeves' New Girlfriend",
+    "3 students allegedly plotted to attack their middle school: Officials",
+    "Chase Young fiasco highlights absurdity of NCAA's outdated model",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"Takeaways From Champions Classic: Tyrese Maxey's Breakout, Kansas' Turnovers and More\"\n\"Brazil oil auction a 'total disaster' as bidders stay away\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Eric Bledsoe forgot the rules of basketball on this inbound play\"\n\"4 Things to Know About Keanu Reeves' New Girlfriend\"\n\"3 students allegedly plotted to attack their middle school: Officials\"\n\"Chase Young fiasco highlights absurdity of NCAA's outdated model\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"1990s Mall Rats Will Definitely Remember These Iconic Stores and Activities\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"1990s Mall Rats Will Definitely Remember These Iconic Stores and Activities,\" they are likely expecting a nostalgic exploration of popular retail stores and activities that defined shopping malls in the 1990s. The article may highlight well-known brands and stores that were staples of that era, alongside descriptions of common mall activities such as food court gatherings and arcade gaming. Additionally, it could discuss the cultural significance of these malls during that time, reflecting on how they served as social hubs for teenagers. Overall, readers might anticipate a blend of fond memories and insights into the shopping trends of the 1990s.",
+  "model": "gpt-4o-mini"
+}

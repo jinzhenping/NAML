@@ -1,0 +1,21 @@
+{
+  "user_id": 138,
+  "candidate_news_id": "N119419",
+  "candidate_title": "Five games in Week 11 that will impact the College Football Playoff race",
+  "user_history_count": 10,
+  "user_history": [
+    "NFL world reacts to officials handing Packers win over Lions",
+    "Funeral services set for US Rep. Elijah Cummings",
+    "Deer fatally attacks hunter who shot him",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+    "Wild fall freeze: Utah falls close to minus-35 as West shivers, while bitter cold oozes east",
+    "Applebee's Is Selling Boneless Wings For 25 Cents Each Because There Are So Many Sports On Right Now",
+    "8 Things on the McDonald's Secret Menu You Need to Know About",
+    "Abandoned farms for sale with plenty of promise",
+    "PHOTOS: America's Best High School Football Stadiums",
+    "Fisherman faces prison, fine for cruel act on rare fish"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL world reacts to officials handing Packers win over Lions\"\n\"Funeral services set for US Rep. Elijah Cummings\"\n\"Deer fatally attacks hunter who shot him\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"Wild fall freeze: Utah falls close to minus-35 as West shivers, while bitter cold oozes east\"\n\"Applebee's Is Selling Boneless Wings For 25 Cents Each Because There Are So Many Sports On Right Now\"\n\"8 Things on the McDonald's Secret Menu You Need to Know About\"\n\"Abandoned farms for sale with plenty of promise\"\n\"PHOTOS: America's Best High School Football Stadiums\"\n\"Fisherman faces prison, fine for cruel act on rare fish\"\n\n[Candidate News Title]\n\"Five games in Week 11 that will impact the College Football Playoff race\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find an analysis of five key college football games scheduled for Week 11 that could significantly influence the College Football Playoff race. The piece may outline the implications of each matchup, including team standings and player performances that could sway the selection committee's decisions. Additionally, it could provide insights into the rivalries and stakes involved, highlighting which teams are under pressure to secure a win as the season approaches its critical juncture.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 228,
+  "candidate_news_id": "N81051",
+  "candidate_title": "Stars who've played royals",
+  "user_history_count": 10,
+  "user_history": [
+    "Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Holocaust survivor under guard amid death threats",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "The most famous game show hosts",
+    "Lil Pump bit by snake on set of music video",
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'",
+    "Oprah Winfrey bought her next-door neighbor's California ranch for $6.85 million   take a look inside",
+    "Everyday heroes step up to help lone Waffle House employee",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Holocaust survivor under guard amid death threats\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"The most famous game show hosts\"\n\"Lil Pump bit by snake on set of music video\"\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\"Oprah Winfrey bought her next-door neighbor's California ranch for $6.85 million   take a look inside\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\n[Candidate News Title]\n\"Stars who've played royals\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Stars who've played royals,\" you can likely expect a discussion of various celebrities who have portrayed royal figures in film or television. The article may explore the performances of actors like Helen Mirren, who is known for her role as Queen Elizabeth II, and other notable portrayals that have captured public interest. Additionally, it could provide insights into the significance of these roles and their impact on the actors’ careers. Overall, the content is likely to highlight the intersection of celebrity culture and historical representation.",
+  "model": "gpt-4o-mini"
+}

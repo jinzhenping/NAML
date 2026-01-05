@@ -1,0 +1,21 @@
+{
+  "user_id": 43,
+  "candidate_news_id": "N20990",
+  "candidate_title": "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+  "user_history_count": 10,
+  "user_history": [
+    "2020 Airstream Caravel Is a Miniature Hotel Room on Wheels",
+    "Rising California gasoline prices highlight growing divide in US",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Does Tire Rotation Include Tightening Lug Nuts? Michigan Court Thinks About It For Awhile, Concludes 'No'",
+    "The first Ford Mustang owner kept the car. It's now worth $350,000",
+    "This Man Is Behind Every Single Antique You See In Cracker Barrel Stores",
+    "Watch: Kevin Harlan's call of streaking cat on 'MNF' is epic",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Brazil oil auction a 'total disaster' as bidders stay away",
+    "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"2020 Airstream Caravel Is a Miniature Hotel Room on Wheels\"\n\"Rising California gasoline prices highlight growing divide in US\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Does Tire Rotation Include Tightening Lug Nuts? Michigan Court Thinks About It For Awhile, Concludes 'No'\"\n\"The first Ford Mustang owner kept the car. It's now worth $350,000\"\n\"This Man Is Behind Every Single Antique You See In Cracker Barrel Stores\"\n\"Watch: Kevin Harlan's call of streaking cat on 'MNF' is epic\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Brazil oil auction a 'total disaster' as bidders stay away\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\n[Candidate News Title]\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the restrictions placed on the son of a Chinese billionaire, detailing the specific limitations on his lifestyle, such as being prohibited from flying first class, playing golf, or purchasing property. It may explore the context behind these restrictions, possibly linking them to broader societal issues or legal measures targeting wealthy individuals in China. The piece could also touch upon the implications of such bans for the elite class in the country, raising questions about public perception and the enforcement of regulations.",
+  "model": "gpt-4o-mini"
+}

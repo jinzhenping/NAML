@@ -1,0 +1,21 @@
+{
+  "user_id": 165,
+  "candidate_news_id": "N26703",
+  "candidate_title": "Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame",
+  "user_history_count": 10,
+  "user_history": [
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'",
+    "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+    "15 Themed Christmas Trees That Will Make You Rethink Your Holiday Decor",
+    "Gwen Stefani Reveals New Nickname for Her and Blake Shelton",
+    "Three school workers charged in death of special needs student",
+    "Jane Seymour, 68, claims many designers won't 'dress someone my age'",
+    "How to Make Cornbread Without a Recipe",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "50 amazing gifts for every type of person and budget"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"15 Themed Christmas Trees That Will Make You Rethink Your Holiday Decor\"\n\"Gwen Stefani Reveals New Nickname for Her and Blake Shelton\"\n\"Three school workers charged in death of special needs student\"\n\"Jane Seymour, 68, claims many designers won't 'dress someone my age'\"\n\"How to Make Cornbread Without a Recipe\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"50 amazing gifts for every type of person and budget\"\n\n[Candidate News Title]\n\"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent incident involving NFL quarterback Mason Rudolph, who faced criticism following a head injury caused by his own helmet. It may explore the differing opinions on whether Rudolph deserves blame for the situation or if the focus should shift to the circumstances surrounding the incident. The piece could also include perspectives from sports analysts and fans, detailing the implications of this event on Rudolph's career and the broader conversation about player safety in the league.",
+  "model": "gpt-4o-mini"
+}

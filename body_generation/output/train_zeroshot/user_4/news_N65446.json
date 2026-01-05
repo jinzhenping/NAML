@@ -1,0 +1,21 @@
+{
+  "user_id": 4,
+  "candidate_news_id": "N65446",
+  "candidate_title": "The most exclusive hotel in every state",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump 'meltdown' at White House meeting on Syria sends Democrats storming out",
+    "15 Things You're Doing to Your Car That Mechanics Wouldn't",
+    "Students wanted to win a water-gun fight   so they hacked thousands of records, school says",
+    "Sondland Updates Impeachment Testimony, Describing Ukraine Quid Pro Quo",
+    "32 Most Reliable Trucks of All Time",
+    "Sondland Updates Impeachment Testimony, Describing Ukraine Quid Pro Quo",
+    "Democrats Win Control in Virginia and Claim Narrow Victory in Kentucky Governor's Race",
+    "100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season",
+    "Book by 'Anonymous' describes Trump as cruel, inept and a danger to the nation",
+    "Trump 'violates all recognized democratic norms,' federal judge says in biting speech on judicial independence"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump 'meltdown' at White House meeting on Syria sends Democrats storming out\"\n\"15 Things You're Doing to Your Car That Mechanics Wouldn't\"\n\"Students wanted to win a water-gun fight   so they hacked thousands of records, school says\"\n\"Sondland Updates Impeachment Testimony, Describing Ukraine Quid Pro Quo\"\n\"32 Most Reliable Trucks of All Time\"\n\"Sondland Updates Impeachment Testimony, Describing Ukraine Quid Pro Quo\"\n\"Democrats Win Control in Virginia and Claim Narrow Victory in Kentucky Governor's Race\"\n\"100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season\"\n\"Book by 'Anonymous' describes Trump as cruel, inept and a danger to the nation\"\n\"Trump 'violates all recognized democratic norms,' federal judge says in biting speech on judicial independence\"\n\n[Candidate News Title]\n\"The most exclusive hotel in every state\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The most exclusive hotel in every state,\" the user is likely to find a detailed exploration of luxury accommodations across the United States. The content may provide insights into the unique features and amenities that distinguish these hotels, such as personalized services, exclusive access, and distinctive architectural styles. Readers might also expect to see information about the locations and historical significance of each hotel, which could enhance their understanding of why these establishments are considered exclusive. Overall, the article is likely to offer a comprehensive overview, highlighting the allure of high-end travel experiences.",
+  "model": "gpt-4o-mini"
+}

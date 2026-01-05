@@ -1,0 +1,21 @@
+{
+  "user_id": 773,
+  "candidate_news_id": "N47925",
+  "candidate_title": "Three school workers charged in death of special needs student",
+  "user_history_count": 10,
+  "user_history": [
+    "Meghan Markle earns Duchess Camilla's support, royal expert says",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Mother Is Freed After 15 Years in Prison for Father's Abuse",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "Ashley Graham Says She Has a Major Case of Pregnancy Brain But What Is That?",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week",
+    "Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan Markle earns Duchess Camilla's support, royal expert says\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Mother Is Freed After 15 Years in Prison for Father's Abuse\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"Ashley Graham Says She Has a Major Case of Pregnancy Brain But What Is That?\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week\"\n\"Dog Tries To Jump On Recliner With Dad   And It Doesn't Quite Go As Planned\"\n\n[Candidate News Title]\n\"Three school workers charged in death of special needs student\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Three school workers charged in death of special needs student\" is likely to provide details about a serious incident involving the tragic death of a special needs student and the subsequent legal actions taken against the school employees involved. Readers can expect information about the circumstances surrounding the student's death, including any relevant background on the case and the nature of the charges filed against the workers. The piece may also explore the implications of this incident on school safety and the treatment of special needs students, shedding light on the broader issues within educational environments.",
+  "model": "gpt-4o-mini"
+}

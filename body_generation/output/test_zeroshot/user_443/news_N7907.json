@@ -1,0 +1,21 @@
+{
+  "user_id": 443,
+  "candidate_news_id": "N7907",
+  "candidate_title": "Washington police announce arrest of 'Potomac River rapist'",
+  "user_history_count": 10,
+  "user_history": [
+    "A white restaurant owner admitted to enslaving a black man. He got 10 years in prison.",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "This Is The Moment A Senior Shelter Dog Knew He Was Safe",
+    "Texas small plane crash was gender reveal gone wrong, NTSB finds",
+    "This little Montana town is full of Power Wagons and Mustangs",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "Wild deer found in South Sacramento mortuary",
+    "Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "One of America's biggest solar panel makers quits manufacturing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A white restaurant owner admitted to enslaving a black man. He got 10 years in prison.\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"This Is The Moment A Senior Shelter Dog Knew He Was Safe\"\n\"Texas small plane crash was gender reveal gone wrong, NTSB finds\"\n\"This little Montana town is full of Power Wagons and Mustangs\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Wild deer found in South Sacramento mortuary\"\n\"Colorado's buffalo mascot, Ralphie V, gets the boot for being too fast\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"One of America's biggest solar panel makers quits manufacturing\"\n\n[Candidate News Title]\n\"Washington police announce arrest of 'Potomac River rapist'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to report on the recent arrest made by Washington police in connection with the so-called \"Potomac River rapist,\" a case that has garnered attention due to its long-standing nature. Readers can expect details about the investigation leading up to the arrest, including any significant evidence or tips that led to the suspect's identification. The piece may also explore the implications of this arrest for the community and the ongoing legal proceedings. Additionally, it is likely to provide context about the historical background of the case and its impact on public safety.",
+  "model": "gpt-4o-mini"
+}

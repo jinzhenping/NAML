@@ -1,0 +1,16 @@
+{
+  "user_id": 126,
+  "candidate_news_id": "N78032",
+  "candidate_title": "A Mining Town Buried in Mud Is Awash in Cash. It Will Soon Run Out.",
+  "user_history_count": 5,
+  "user_history": [
+    "Hong Kong crashes into recession as protests hit economy",
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "Here's Every Costume the Kardashian-Jenner Family Wore This Halloween",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Arizona high school football playoff schedule, picks, Nov. 8-9"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Hong Kong crashes into recession as protests hit economy\"\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"Here's Every Costume the Kardashian-Jenner Family Wore This Halloween\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Arizona high school football playoff schedule, picks, Nov. 8-9\"\n\"\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"A Mining Town Buried in Mud Is Awash in Cash. It Will Soon Run Out.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"A Mining Town Buried in Mud Is Awash in Cash. It Will Soon Run Out.\" is likely to explore the economic implications following a significant disaster that impacted a mining community. Readers can expect to learn about how the town is currently experiencing a financial influx, possibly due to disaster relief funds or a temporary spike in mining activity. However, it may also discuss the challenges ahead, suggesting that this financial boost is not sustainable and could lead to future economic instability. The article might provide insights into local government responses and the community's long-term recovery plans.",
+  "model": "gpt-4o-mini"
+}

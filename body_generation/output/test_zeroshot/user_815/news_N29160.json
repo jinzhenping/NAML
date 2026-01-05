@@ -1,0 +1,20 @@
+{
+  "user_id": 815,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 9,
+  "user_history": [
+    "Milania Giudice Says She'll See Dad Joe 'Soon' After He Leaves ICE Custody",
+    "Melting Ice Redraws the World Map and Starts a Power Struggle",
+    "13 Spooky Hotels to Visit in October",
+    "Billionaires who live in the smallest American towns",
+    "These YouTube Channels are Changing How We Learn to Cook",
+    "Hugh Hefner's son Cooper weds 'Harry Potter' actress",
+    "College gymnast dies following training accident in Connecticut",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Milania Giudice Says She'll See Dad Joe 'Soon' After He Leaves ICE Custody\"\n\"Melting Ice Redraws the World Map and Starts a Power Struggle\"\n\"13 Spooky Hotels to Visit in October\"\n\"Billionaires who live in the smallest American towns\"\n\"These YouTube Channels are Changing How We Learn to Cook\"\n\"Hugh Hefner's son Cooper weds 'Harry Potter' actress\"\n\"College gymnast dies following training accident in Connecticut\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\"\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Opinion: Colin Kaepernick is about to get what he deserves: a chance\" is likely to explore the current landscape surrounding Colin Kaepernick's potential return to professional football. Readers can expect an analysis of the factors contributing to the renewed interest in Kaepernick, including discussions on social justice, his previous activism, and the evolving attitudes of teams and fans. It may also consider the broader implications of his return for the NFL and the ongoing dialogue about race in sports, although the specifics of these points are uncertain.",
+  "model": "gpt-4o-mini"
+}

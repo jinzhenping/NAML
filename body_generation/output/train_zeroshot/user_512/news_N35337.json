@@ -1,0 +1,21 @@
+{
+  "user_id": 512,
+  "candidate_news_id": "N35337",
+  "candidate_title": "Snow Falls on Suspension Bridge in Tennessee's Great Smoky Mountains",
+  "user_history_count": 10,
+  "user_history": [
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "This girl nails the wave pool   then fails the exit spectacularly",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Christina Anstead shares new pic of son Hudson at 2 months old",
+    "40 Fun Facts About Jennifer Aniston",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Australian tourist killed by elephant in Namibia",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"This girl nails the wave pool   then fails the exit spectacularly\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\n[Candidate News Title]\n\"Snow Falls on Suspension Bridge in Tennessee's Great Smoky Mountains\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Snow Falls on Suspension Bridge in Tennessee's Great Smoky Mountains\" likely covers a recent weather event in the region, detailing the snowfall that has impacted the iconic suspension bridge. Readers can expect to find information about the amount of snow received, how it affects the bridge's accessibility, and any safety measures being implemented in response to the weather conditions. Additionally, the piece may highlight the scenic beauty of the area during winter and could include insights from local officials or visitors.",
+  "model": "gpt-4o-mini"
+}

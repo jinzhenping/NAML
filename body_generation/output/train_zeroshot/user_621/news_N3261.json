@@ -1,0 +1,21 @@
+{
+  "user_id": 621,
+  "candidate_news_id": "N3261",
+  "candidate_title": "China's Commerce Ministry says trade war should be ended by removing tariffs",
+  "user_history_count": 10,
+  "user_history": [
+    "Northeastern US braces for storm that may seem like a hurricane for a time",
+    "DOJ sues Walmart for allegedly discriminating against a Navy reserve officer",
+    "Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody",
+    "Man's trip to a cheese shop helps unravel missing persons case",
+    "2 murder suspects escape from jail, still on the run",
+    "BART worker rescues man from oncoming train",
+    "Man stabbed to death outside Popeyes after fight over chicken sandwich, police say",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Tourists stabbed in Jordanian city near Roman ruins: police",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Northeastern US braces for storm that may seem like a hurricane for a time\"\n\"DOJ sues Walmart for allegedly discriminating against a Navy reserve officer\"\n\"Girl, 7, critically wounded in shooting while trick-or-treating in Little Village on Southwest Side; suspect in custody\"\n\"Man's trip to a cheese shop helps unravel missing persons case\"\n\"2 murder suspects escape from jail, still on the run\"\n\"BART worker rescues man from oncoming train\"\n\"Man stabbed to death outside Popeyes after fight over chicken sandwich, police say\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Tourists stabbed in Jordanian city near Roman ruins: police\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\n[Candidate News Title]\n\"China's Commerce Ministry says trade war should be ended by removing tariffs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss China's recent position on the ongoing trade war, specifically highlighting the Commerce Ministry's assertion that removing tariffs could lead to a resolution. Readers can expect an analysis of the implications this stance may have on international trade relations, particularly between China and the United States. It may also touch upon the economic factors driving these discussions and the potential benefits of easing trade tensions. Additionally, the article could provide insights into the broader context of global trade dynamics, though the specifics of any proposed actions remain uncertain.",
+  "model": "gpt-4o-mini"
+}

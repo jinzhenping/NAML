@@ -1,0 +1,21 @@
+{
+  "user_id": 703,
+  "candidate_news_id": "N3623",
+  "candidate_title": "The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump wanted Barr to hold news conference saying the president broke no laws in call with Ukrainian leader",
+    "Report: Deion a candidate for Florida State coaching job",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "'Absent yourself': Transcripts reveal what Schiff told Gaetz when he crashed secure hearing",
+    "5 struggling teams that can still make NFL playoffs",
+    "Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings",
+    "The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping",
+    "College gymnast dies following training accident in Connecticut",
+    "Kyle Shanahan blasts 49ers WRs over dropped passes",
+    "Auburn coach Gus Malzahn on open Arkansas job: 'Nothing's changed'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump wanted Barr to hold news conference saying the president broke no laws in call with Ukrainian leader\"\n\"Report: Deion a candidate for Florida State coaching job\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"'Absent yourself': Transcripts reveal what Schiff told Gaetz when he crashed secure hearing\"\n\"5 struggling teams that can still make NFL playoffs\"\n\"Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings\"\n\"The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Kyle Shanahan blasts 49ers WRs over dropped passes\"\n\"Auburn coach Gus Malzahn on open Arkansas job: 'Nothing's changed'\"\n\n[Candidate News Title]\n\"The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Brad Pitt and Angelina Jolie's post-split relationship, the user can likely expect a detailed overview of their current interactions and any public statements made by either party. The piece may explore how their relationship has evolved since their separation, including insights into their co-parenting dynamics and any legal matters that remain unresolved. Additionally, it could touch on the impact of their split on their respective careers and public perceptions. Overall, the article is likely to provide a balanced account of their situation while highlighting key developments.",
+  "model": "gpt-4o-mini"
+}

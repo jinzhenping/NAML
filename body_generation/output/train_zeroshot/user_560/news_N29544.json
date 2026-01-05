@@ -1,0 +1,21 @@
+{
+  "user_id": 560,
+  "candidate_news_id": "N29544",
+  "candidate_title": "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+  "user_history_count": 10,
+  "user_history": [
+    "For the first time ever, a US cheese is named best in the world",
+    "200 Shocking Home Photos You Have to See",
+    "Stores that opened for business the year you were born",
+    "Survivor pays tribute to 'icon' Rudy Boesch on show",
+    "The healthiest fast food option at every well-known chain",
+    "The Single Biggest Shopping Day? Nov. 11, in China",
+    "Listen to John Legend and Kelly Clarkson's updated version of 'Baby, It's Cold Outside'",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Jennifer Aniston looks amazing in a makeup-free selfie, plus more news",
+    "These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"For the first time ever, a US cheese is named best in the world\"\n\"200 Shocking Home Photos You Have to See\"\n\"Stores that opened for business the year you were born\"\n\"Survivor pays tribute to 'icon' Rudy Boesch on show\"\n\"The healthiest fast food option at every well-known chain\"\n\"The Single Biggest Shopping Day? Nov. 11, in China\"\n\"Listen to John Legend and Kelly Clarkson's updated version of 'Baby, It's Cold Outside'\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Jennifer Aniston looks amazing in a makeup-free selfie, plus more news\"\n\"These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED\"\n\n[Candidate News Title]\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to find details about Walmart's Black Friday promotions, including significant discounts on popular items such as a $129 Apple Watch and various electronics. The piece is likely to outline the types of doorbuster deals available, particularly for TVs and other tech products, as well as general shopping trends for the holiday season. Additionally, it may explore how these offers compare to previous years or to competitors, providing insights into consumer behavior during this major shopping event.",
+  "model": "gpt-4o-mini"
+}

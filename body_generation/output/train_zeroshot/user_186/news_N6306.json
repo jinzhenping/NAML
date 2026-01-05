@@ -1,0 +1,19 @@
+{
+  "user_id": 186,
+  "candidate_news_id": "N6306",
+  "candidate_title": "Barn Find: Large Collection Of Pontiac Firebirds Uncovered",
+  "user_history_count": 8,
+  "user_history": [
+    "Shepard Smith leaving Fox News",
+    "NFL players who should be traded before the deadline",
+    "Rock 'n' Roll Rarities! Ultra-Rare 1966 Color Photos of The Beatles in Concert Up for Auction",
+    "A man went viral for snubbing Mitch McConnell at Elijah Cummings's memorial. He says there's more to the story.",
+    "12 Things U.S. Presidents Have to Pay for on Their Own",
+    "The Trump impeachment is all about an allegation of quid pro quo. But what does that mean?",
+    "Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito",
+    "The Best Way to Reheat Fried Chicken So It's as Crispy as Night One"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Shepard Smith leaving Fox News\"\n\"NFL players who should be traded before the deadline\"\n\"Rock 'n' Roll Rarities! Ultra-Rare 1966 Color Photos of The Beatles in Concert Up for Auction\"\n\"A man went viral for snubbing Mitch McConnell at Elijah Cummings's memorial. He says there's more to the story.\"\n\"12 Things U.S. Presidents Have to Pay for on Their Own\"\n\"The Trump impeachment is all about an allegation of quid pro quo. But what does that mean?\"\n\"Oprah Winfrey Just Bought Jeff Bridges' Ranch in Montecito\"\n\"The Best Way to Reheat Fried Chicken So It's as Crispy as Night One\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Barn Find: Large Collection Of Pontiac Firebirds Uncovered\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Barn Find: Large Collection Of Pontiac Firebirds Uncovered,\" the user may expect to read about the discovery of a significant number of Pontiac Firebirds, likely detailing the circumstances of the find, including the location and the condition of the vehicles. The piece might explore the historical significance of these cars, their rarity, and what collectors or enthusiasts might find appealing about them. Additionally, it could provide insights into the potential value of the collection, while also touching on the broader relevance of classic car finds in automotive culture.",
+  "model": "gpt-4o-mini"
+}

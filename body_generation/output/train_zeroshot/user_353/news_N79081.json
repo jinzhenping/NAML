@@ -1,0 +1,21 @@
+{
+  "user_id": 353,
+  "candidate_news_id": "N79081",
+  "candidate_title": "What Happens When a Plane Collides with a Flock of Birds?",
+  "user_history_count": 10,
+  "user_history": [
+    "Amber Portwood strikes plea deal for alleged machete attack",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Best all-inclusive resorts in the world",
+    "Celeb couples with big age gaps",
+    "Zac Posen, red carpet favorite, shuts down fashion label",
+    "Rob Kardashian shows off incredible weight loss in new pic",
+    "Vicki Gunvalson suing fellow 'Housewives' star Kelly Dodd",
+    "Brian Tarantina, 'Marvelous Mrs. Maisel' and 'Gilmore Girls' Actor, Dies at 60",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Amber Portwood strikes plea deal for alleged machete attack\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Best all-inclusive resorts in the world\"\n\"Celeb couples with big age gaps\"\n\"Zac Posen, red carpet favorite, shuts down fashion label\"\n\"Rob Kardashian shows off incredible weight loss in new pic\"\n\"Vicki Gunvalson suing fellow 'Housewives' star Kelly Dodd\"\n\"Brian Tarantina, 'Marvelous Mrs. Maisel' and 'Gilmore Girls' Actor, Dies at 60\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\n[Candidate News Title]\n\"What Happens When a Plane Collides with a Flock of Birds?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "When clicking on the article titled \"What Happens When a Plane Collides with a Flock of Birds?\", the user is likely expecting to read about the scientific and safety aspects of bird strikes in aviation. The article may cover the frequency of such incidents, the potential damage to aircraft, and the measures that airlines and airports take to mitigate these risks. It could also provide insights into the impact on flight safety and the protocols pilots follow in these situations. Additionally, it is likely to include examples or case studies of past incidents to illustrate the phenomenon.",
+  "model": "gpt-4o-mini"
+}

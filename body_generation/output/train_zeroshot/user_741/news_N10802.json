@@ -1,0 +1,21 @@
+{
+  "user_id": 741,
+  "candidate_news_id": "N10802",
+  "candidate_title": "See the most expensive watch ever sold at auction",
+  "user_history_count": 10,
+  "user_history": [
+    "NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "South Florida principal who made controversial comments about the Holocaust is fired",
+    "Patriots wanted a test. Now, they need some answers",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Chargers owner Dean Spanos shoots down report of possible London move with expletive-laden denial",
+    "The Latest: Kansas City to remove King's name from street",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL Week 9 Power Rankings: More ammo for Belichick as greatest coach ever\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"South Florida principal who made controversial comments about the Holocaust is fired\"\n\"Patriots wanted a test. Now, they need some answers\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Chargers owner Dean Spanos shoots down report of possible London move with expletive-laden denial\"\n\"The Latest: Kansas City to remove King's name from street\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\n[Candidate News Title]\n\"See the most expensive watch ever sold at auction\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"See the most expensive watch ever sold at auction,\" you may expect a detailed overview of the auction event where this record-breaking timepiece was sold. The article is likely to describe the watch's features, including its brand, materials, and historical significance, while also providing information about the auction house and the bidding process. Additionally, it may touch on the implications of such a sale for the luxury watch market and collectors. Overall, the piece should present a factual account of the event and its importance in the world of high-value collectibles.",
+  "model": "gpt-4o-mini"
+}

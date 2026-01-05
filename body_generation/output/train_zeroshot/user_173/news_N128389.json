@@ -1,0 +1,17 @@
+{
+  "user_id": 173,
+  "candidate_news_id": "N128389",
+  "candidate_title": "Myanmar accused at UN court of genocide against Rohingya",
+  "user_history_count": 6,
+  "user_history": [
+    "A Texas mom is going to prison after putting her son through unnecessary medical procedures",
+    "Scientists freak out over deep sea feast",
+    "Lisa Rinna Just Flaunted Her Insanely Sculpted Abs And Fans Can't Believe She's 56",
+    "Can you spot the cat hiding among the bats in this spooky Halloween brainteaser?",
+    "Beirut protesters perform 'Baby Shark' for toddler",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A Texas mom is going to prison after putting her son through unnecessary medical procedures\"\n\"Scientists freak out over deep sea feast\"\n\"Lisa Rinna Just Flaunted Her Insanely Sculpted Abs And Fans Can't Believe She's 56\"\n\"Can you spot the cat hiding among the bats in this spooky Halloween brainteaser?\"\n\"Beirut protesters perform 'Baby Shark' for toddler\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Myanmar accused at UN court of genocide against Rohingya\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent accusations made against Myanmar at the United Nations court, focusing on allegations of genocide against the Rohingya people. Readers can expect an overview of the claims presented, including any supporting evidence or testimonies from affected individuals or human rights organizations. The piece may also explore the international response to these allegations and the implications for Myanmar's government. Additionally, it could provide context on the Rohingya crisis and previous actions taken by the UN regarding this humanitarian issue.",
+  "model": "gpt-4o-mini"
+}

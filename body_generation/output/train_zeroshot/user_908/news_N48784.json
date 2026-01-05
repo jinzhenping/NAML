@@ -1,0 +1,21 @@
+{
+  "user_id": 908,
+  "candidate_news_id": "N48784",
+  "candidate_title": "Don't be fooled: Costco says $75 coupon is a scam",
+  "user_history_count": 10,
+  "user_history": [
+    "Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say",
+    "America's Test Kitchen's new book shows off 20 years of obsessive cooking",
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Report: NFL considers allowing a Chargers move to London",
+    "'The Little Mermaid Live!': TV Review",
+    "Mid-Engine C8 Corvette Production Postponed Until February 2020",
+    "Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math",
+    "Chicago Police Superintendent Eddie Johnson announces retirement",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say\"\n\"America's Test Kitchen's new book shows off 20 years of obsessive cooking\"\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Report: NFL considers allowing a Chargers move to London\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Mid-Engine C8 Corvette Production Postponed Until February 2020\"\n\"Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math\"\n\"Chicago Police Superintendent Eddie Johnson announces retirement\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\n[Candidate News Title]\n\"Don't be fooled: Costco says $75 coupon is a scam\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Don't be fooled: Costco says $75 coupon is a scam,\" they are likely expecting a clear explanation of the alleged scam involving a fraudulent coupon that claims to offer significant savings at Costco. The article may outline how the scam works, including details on how consumers might encounter the coupon and the potential risks of engaging with it. Additionally, there could be insights into Costco's response to the scam, including any warnings or advice they provide to protect customers. The article is likely to emphasize the importance of verifying offers before acting on them.",
+  "model": "gpt-4o-mini"
+}

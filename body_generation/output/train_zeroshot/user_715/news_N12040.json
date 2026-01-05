@@ -1,0 +1,21 @@
+{
+  "user_id": 715,
+  "candidate_news_id": "N12040",
+  "candidate_title": "Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media",
+  "user_history_count": 10,
+  "user_history": [
+    "18 of the most iconic record-breaking songs in pop music history",
+    "'A Football Life': How Ronnie Lott challenged Bill Walsh during his career",
+    "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+    "Panga Boat Makes Landfall Near San Clemente Beach; Chinese, Mexican Nationals Arrested",
+    "Browns cut Jermaine Whitehead after racist Twitter rant that included death threats",
+    "Vietnam arrests 8 in connection with discovery of 39 bodies in truck in UK",
+    "Dakota Johnson's Tribute to Former Stepdad Antonio Banderas Will Leave You In Tears",
+    "Jordan attack: 8 injured during knife attack in Jerash",
+    "Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says",
+    "'I am scared all the time': Chimps and people are clashing in rural Uganda"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"18 of the most iconic record-breaking songs in pop music history\"\n\"'A Football Life': How Ronnie Lott challenged Bill Walsh during his career\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Panga Boat Makes Landfall Near San Clemente Beach; Chinese, Mexican Nationals Arrested\"\n\"Browns cut Jermaine Whitehead after racist Twitter rant that included death threats\"\n\"Vietnam arrests 8 in connection with discovery of 39 bodies in truck in UK\"\n\"Dakota Johnson's Tribute to Former Stepdad Antonio Banderas Will Leave You In Tears\"\n\"Jordan attack: 8 injured during knife attack in Jerash\"\n\"Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says\"\n\"'I am scared all the time': Chimps and people are clashing in rural Uganda\"\n\n[Candidate News Title]\n\"Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media,\" the reader may expect to find insights into the dynamics of social media use among professional athletes. The piece is likely to detail Bell's perspective on managing public image and personal branding, particularly in the context of Brown's history of controversial online behavior. There may be discussions on the impact of social media on athletes' careers and mental health, as well as practical advice for maintaining a balanced online presence. Overall, the article could provide a thoughtful examination of the intersection between sports and social media.",
+  "model": "gpt-4o-mini"
+}

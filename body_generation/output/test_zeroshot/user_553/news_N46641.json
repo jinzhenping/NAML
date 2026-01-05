@@ -1,0 +1,21 @@
+{
+  "user_id": 553,
+  "candidate_news_id": "N46641",
+  "candidate_title": "Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "Odell Beckham's Comments After Browns-Patriots Prove Exactly Why Giants Traded Him",
+    "Today in History: October 29",
+    "Arnold Schwarzenegger's photo flashback",
+    "Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "Girlfriend testifies at trial of man in death of his fiancee",
+    "Helen Mirren Says it Was 'Very Flattering' to Be Mistaken for Keanu Reeves' Girlfriend",
+    "Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Odell Beckham's Comments After Browns-Patriots Prove Exactly Why Giants Traded Him\"\n\"Today in History: October 29\"\n\"Arnold Schwarzenegger's photo flashback\"\n\"Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"Girlfriend testifies at trial of man in death of his fiancee\"\n\"Helen Mirren Says it Was 'Very Flattering' to Be Mistaken for Keanu Reeves' Girlfriend\"\n\"Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage\"\n\n[Candidate News Title]\n\"Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the death of former North Carolina State and NBA player Anthony Grundy is likely to provide details surrounding the circumstances of his stabbing, including any available information from law enforcement. Readers may expect a discussion of Grundy's career highlights and contributions to basketball, as well as reactions from the sports community. The article could also touch on broader themes related to violence and safety in the context of sports figures, exploring how such incidents impact fans and the legacy of athletes.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 630,
+  "candidate_news_id": "N72485",
+  "candidate_title": "See what your favorite stars look like without makeup",
+  "user_history_count": 10,
+  "user_history": [
+    "Cornell student, 18, found dead in gorge after frat party, reports say",
+    "Taylor Swift can't shake 'Shake It Off' copyright suit reinstated by federal court panel",
+    "Kylie Jenner Throws Dinner for Caitlyn Jenner's 70th Birthday   See Which Kardashians Attended",
+    "Every Must-See Photo of Stars Celebrating Halloween 2019",
+    "Celebrity Headshots from Before They Were Famous",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Kristen Stewart Just Made Leather Bras a Thing, and We're All For It",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "A guide to the 2019 People's Choice Awards nominees' significant others",
+    "A guide to the 2019 People's Choice Awards nominees' significant others"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cornell student, 18, found dead in gorge after frat party, reports say\"\n\"Taylor Swift can't shake 'Shake It Off' copyright suit reinstated by federal court panel\"\n\"Kylie Jenner Throws Dinner for Caitlyn Jenner's 70th Birthday   See Which Kardashians Attended\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"Celebrity Headshots from Before They Were Famous\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Kristen Stewart Just Made Leather Bras a Thing, and We're All For It\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\n[Candidate News Title]\n\"See what your favorite stars look like without makeup\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"See what your favorite stars look like without makeup,\" the user can expect to find a collection of images showcasing various celebrities in their natural state, free from cosmetic enhancements. The piece is likely to discuss the impact of makeup on public perceptions of beauty and might highlight how these stars embrace their authentic selves. Additionally, it could include commentary on the trend of celebrities opting for makeup-free appearances on social media, which may reflect a growing cultural movement towards authenticity in beauty standards.",
+  "model": "gpt-4o-mini"
+}

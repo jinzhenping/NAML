@@ -1,0 +1,21 @@
+{
+  "user_id": 920,
+  "candidate_news_id": "N94356",
+  "candidate_title": "This 'new' strain of HIV is actually a good thing",
+  "user_history_count": 10,
+  "user_history": [
+    "Former DHS Secretary Kirstjen Nielsen says she left post because 'saying no' wasn't enough",
+    "Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo",
+    "Navy Reduces Punishment for SEAL in War Crimes Case",
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "The world's largest nuclear power producer is melting down",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Grading all 32 NFL teams heading into the last eight weeks of the 2019 season"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former DHS Secretary Kirstjen Nielsen says she left post because 'saying no' wasn't enough\"\n\"Emily Ratajkowski Is Being Sued for $150,000 Over an Instagram Photo\"\n\"Navy Reduces Punishment for SEAL in War Crimes Case\"\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"The world's largest nuclear power producer is melting down\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Shia LaBeouf Thanks Officer Who Arrested Him in 2017 for 'Changing My Life' in Emotional Speech\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Grading all 32 NFL teams heading into the last eight weeks of the 2019 season\"\n\n[Candidate News Title]\n\"This 'new' strain of HIV is actually a good thing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"This 'new' strain of HIV is actually a good thing\" is likely to discuss recent developments in HIV research, particularly focusing on a newly identified strain that may offer unexpected benefits. Readers can expect an explanation of how this strain differs from previous ones and the potential implications for treatment or prevention strategies. The article may also explore scientific perspectives on why this development could be seen in a positive light, possibly highlighting advancements in medical understanding or therapy options. Overall, it could provide insights into a complex topic while framing the situation as an opportunity for progress in HIV management.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 794,
+  "candidate_news_id": "N37648",
+  "candidate_title": "12 Cars Lose Consumer Reports' Recommendation Over Reliability Issues",
+  "user_history_count": 10,
+  "user_history": [
+    "A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too",
+    "Harry and Meghan Revive Feud Rumors By Staying Away From the Royal Family's Christmas",
+    "Celebrity plastic surgery transformations",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "40 Health Habits Jennifer Lopez Swears By To Stay Insanely Fit And Young",
+    "Long-term celebrity couples who won't get married",
+    "Jane Seymour, 68, claims many designers won't 'dress someone my age'",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+    "Here's What It Means If You Have Ridges on Your Nails"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too\"\n\"Harry and Meghan Revive Feud Rumors By Staying Away From the Royal Family's Christmas\"\n\"Celebrity plastic surgery transformations\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"40 Health Habits Jennifer Lopez Swears By To Stay Insanely Fit And Young\"\n\"Long-term celebrity couples who won't get married\"\n\"Jane Seymour, 68, claims many designers won't 'dress someone my age'\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"Here's What It Means If You Have Ridges on Your Nails\"\n\n[Candidate News Title]\n\"12 Cars Lose Consumer Reports' Recommendation Over Reliability Issues\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"12 Cars Lose Consumer Reports' Recommendation Over Reliability Issues,\" the user may expect a detailed analysis of specific car models that have recently been flagged for reliability concerns by Consumer Reports. The piece is likely to outline the criteria used for these recommendations and might include insights into the performance factors that led to the loss of endorsement. Additionally, it could explore potential implications for buyers considering these vehicles, emphasizing the importance of reliability in automotive purchases. Overall, the user may find useful information that informs their understanding of vehicle reliability trends and consumer advice.",
+  "model": "gpt-4o-mini"
+}

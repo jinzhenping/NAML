@@ -1,0 +1,20 @@
+{
+  "user_id": 915,
+  "candidate_news_id": "N21096",
+  "candidate_title": "60 of the Most Adorable Animal Pictures That Will Make You Say \"Awww\"",
+  "user_history_count": 9,
+  "user_history": [
+    "'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says",
+    "Danica Patrick shared a sweet message congratulating Aaron Rodgers on perfect game",
+    "Missing West Point cadet found dead, officials say",
+    "50 Foods You Should Never Eat, According to Health Experts",
+    "Medication side effects: Time to call the doctor",
+    "Kirk Cousins is playing at an MVP level. Here's why it won't last.",
+    "4 big takeaways from Fiona Hill's and Alexander Vindman's transcripts",
+    "105 Most Popular Sodas Ranked by How Toxic They Are",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Tarzan' Actor Ron Ely: Actor's son allegedly killed his mother before deputies shot and killed him, sheriff's office says\"\n\"Danica Patrick shared a sweet message congratulating Aaron Rodgers on perfect game\"\n\"Missing West Point cadet found dead, officials say\"\n\"50 Foods You Should Never Eat, According to Health Experts\"\n\"Medication side effects: Time to call the doctor\"\n\"Kirk Cousins is playing at an MVP level. Here's why it won't last.\"\n\"4 big takeaways from Fiona Hill's and Alexander Vindman's transcripts\"\n\"105 Most Popular Sodas Ranked by How Toxic They Are\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"\"\n\n[Candidate News Title]\n\"60 of the Most Adorable Animal Pictures That Will Make You Say \"Awww\"\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to find a curated collection of charming and heartwarming animal pictures that evoke feelings of joy and amusement. The images are likely to feature a variety of adorable animals, possibly including pets and wildlife, and could be accompanied by brief descriptions highlighting their playful or endearing behaviors. Given the user's interest in diverse topics, this light-hearted content may serve as a welcome contrast to more serious news stories, providing a delightful visual escape while appealing to their appreciation for engaging and informative imagery.",
+  "model": "gpt-4o-mini"
+}

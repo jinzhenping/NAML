@@ -1,0 +1,21 @@
+{
+  "user_id": 658,
+  "candidate_news_id": "N62203",
+  "candidate_title": "Stephen Curry calls out Michael Jordan for being a 'hater'",
+  "user_history_count": 10,
+  "user_history": [
+    "7 Things That Happen to Your Body When You Watch Scary Movies",
+    "John Witherspoon Dies: Comedian & 'Friday' Star Was 77",
+    "The Amazing All-You-Can-Eat Restaurant in Every State",
+    "ICYMI: The week in TV news for Oct. 27-Nov. 2, 2019",
+    "Kylie Jenner hits Drake's Halloween party amid flirtation rumors, plus more news",
+    "Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post",
+    "Week 9 winners, losers: Russell Wilson taking lead in MVP race; Adam Gase in trouble",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.",
+    "Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"7 Things That Happen to Your Body When You Watch Scary Movies\"\n\"John Witherspoon Dies: Comedian & 'Friday' Star Was 77\"\n\"The Amazing All-You-Can-Eat Restaurant in Every State\"\n\"ICYMI: The week in TV news for Oct. 27-Nov. 2, 2019\"\n\"Kylie Jenner hits Drake's Halloween party amid flirtation rumors, plus more news\"\n\"Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post\"\n\"Week 9 winners, losers: Russell Wilson taking lead in MVP race; Adam Gase in trouble\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.\"\n\"Luke DeCock: After Cole Anthony's spectacular UNC debut, he's not just talented. He's indispensable.\"\n\n[Candidate News Title]\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Stephen Curry calls out Michael Jordan for being a 'hater',\" the user may expect to read about a recent exchange between NBA stars Stephen Curry and Michael Jordan that highlights their differing views on competitiveness and sportsmanship. The piece is likely to detail Curry's comments, possibly including context about any recent events or interviews that prompted these remarks. Additionally, it could explore the implications of this dynamic on their respective legacies and how it reflects broader themes within the NBA culture. Overall, the article is likely to provide insight into the relationship between these two prominent figures in basketball.",
+  "model": "gpt-4o-mini"
+}

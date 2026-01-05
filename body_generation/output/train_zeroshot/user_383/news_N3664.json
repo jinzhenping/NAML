@@ -1,0 +1,21 @@
+{
+  "user_id": 383,
+  "candidate_news_id": "N3664",
+  "candidate_title": "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+  "user_history_count": 10,
+  "user_history": [
+    "Boris Johnson wins key Brexit bill vote but faces another",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family",
+    "Helen Hunt Posts First Pic Following Car Accident: 'Back at Work'",
+    "Orlando Scandrick rips Eagles: They have 'accountability issues'",
+    "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Man's trip to a cheese shop helps unravel missing persons case",
+    "Anderson Cooper to Steve Bannon: You know this is bull",
+    "President Trump says UFC reception was 'like walking into a Trump Rally'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Boris Johnson wins key Brexit bill vote but faces another\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family\"\n\"Helen Hunt Posts First Pic Following Car Accident: 'Back at Work'\"\n\"Orlando Scandrick rips Eagles: They have 'accountability issues'\"\n\"Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Man's trip to a cheese shop helps unravel missing persons case\"\n\"Anderson Cooper to Steve Bannon: You know this is bull\"\n\"President Trump says UFC reception was 'like walking into a Trump Rally'\"\n\n[Candidate News Title]\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Broadway star Laurel Griggs is likely to provide an overview of her tragic passing at a young age due to an asthma attack, along with details about her career and notable performances. Readers may expect information on her contributions to the theater community and reactions from friends and colleagues. Additionally, the piece could explore the implications of her death for awareness around asthma and its management, potentially highlighting how such a health condition can impact young performers.",
+  "model": "gpt-4o-mini"
+}

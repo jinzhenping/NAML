@@ -1,0 +1,21 @@
+{
+  "user_id": 265,
+  "candidate_news_id": "N1328",
+  "candidate_title": "Navy Submarine, Missing for 75 Years, Is Found Off Okinawa",
+  "user_history_count": 10,
+  "user_history": [
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "Celebrities dressed as other stars for Halloween",
+    "Celebrities dressed as other stars for Halloween",
+    "Halloween snowstorm wallops the Midwest",
+    "Mayfield's postgame outfit gets all the memes",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Even 'Project Runway' Couldn't Save Zac Posen",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "How the Panthers will approach their breakup with Cam Newton before 2020 season",
+    "The 50 cheapest places to buy land in America"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Celebrities dressed as other stars for Halloween\"\n\"Celebrities dressed as other stars for Halloween\"\n\"Halloween snowstorm wallops the Midwest\"\n\"Mayfield's postgame outfit gets all the memes\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Even 'Project Runway' Couldn't Save Zac Posen\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"How the Panthers will approach their breakup with Cam Newton before 2020 season\"\n\"The 50 cheapest places to buy land in America\"\n\n[Candidate News Title]\n\"Navy Submarine, Missing for 75 Years, Is Found Off Okinawa\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent discovery of a Navy submarine that had been missing for 75 years off the coast of Okinawa. Readers may expect to learn about the circumstances surrounding its disappearance during World War II, along with any historical context regarding its mission and significance. The piece could also delve into the search efforts that led to its discovery, possibly highlighting technological advancements in underwater exploration. Additionally, it may touch on the implications of this finding for naval history and the legacy of the submarine.",
+  "model": "gpt-4o-mini"
+}

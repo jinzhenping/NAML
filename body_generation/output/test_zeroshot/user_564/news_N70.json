@@ -1,0 +1,21 @@
+{
+  "user_id": 564,
+  "candidate_news_id": "N70",
+  "candidate_title": "President Trump grants clemency to 2 Army officers, restores rank to Navy SEAL Eddie Gallagher",
+  "user_history_count": 10,
+  "user_history": [
+    "Roommate, her boyfriend charged in death of missing Atlanta student",
+    "Explainer: Is it illegal for Trump or Congress to name the impeachment whistleblower?",
+    "Redskins name rookie Dwayne Haskins starter for rest of season",
+    "Eric Reid likens Colin Kaepernick workout to PR stunt: 'I'll believe it when I see it'",
+    "Richard Sherman tells NFL players to save their money and prepare for a strike",
+    "Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy",
+    "2021 Ford Mustang Mach-E: This Electric SUV is a Mustang Family Member",
+    "AWOL Marine accused of murder is still on the run",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+    "Hue Jackson will run Colin Kaepernick's passing drills, 11 teams have said they'll attend"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Roommate, her boyfriend charged in death of missing Atlanta student\"\n\"Explainer: Is it illegal for Trump or Congress to name the impeachment whistleblower?\"\n\"Redskins name rookie Dwayne Haskins starter for rest of season\"\n\"Eric Reid likens Colin Kaepernick workout to PR stunt: 'I'll believe it when I see it'\"\n\"Richard Sherman tells NFL players to save their money and prepare for a strike\"\n\"Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy\"\n\"2021 Ford Mustang Mach-E: This Electric SUV is a Mustang Family Member\"\n\"AWOL Marine accused of murder is still on the run\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\"Hue Jackson will run Colin Kaepernick's passing drills, 11 teams have said they'll attend\"\n\n[Candidate News Title]\n\"President Trump grants clemency to 2 Army officers, restores rank to Navy SEAL Eddie Gallagher\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss President Trump's recent decision to grant clemency to two Army officers and the restoration of rank to Navy SEAL Eddie Gallagher. Readers may expect an overview of the circumstances surrounding these clemency grants, including any relevant details about the officers involved and the reasons for their convictions. The article could also explore the implications of this decision on military justice, public opinion, and Trump's broader approach to clemency. Additionally, it may provide context regarding Gallagher's case and how these actions align with the administration's stance on military personnel and legal matters.",
+  "model": "gpt-4o-mini"
+}

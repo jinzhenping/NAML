@@ -1,0 +1,21 @@
+{
+  "user_id": 996,
+  "candidate_news_id": "N92905",
+  "candidate_title": "The Unlikely Star of My Family's Thanksgiving Table",
+  "user_history_count": 10,
+  "user_history": [
+    "Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says",
+    "NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue",
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup",
+    "The most beautiful places to visit in the US",
+    "Powell's Warning to Congress About the Next Recession",
+    "12 Things Your Mother's Health Says About You",
+    "3 pieces of dated retirement advice you should ignore"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Roger Stone Lied to Congress After Helping Trump Win, Prosecutor Says\"\n\"NFL teams reportedly believe Browns could trade Odell Beckham if struggles continue\"\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"4 Bold Predictions for Alabama vs. LSU Heavyweight SEC Matchup\"\n\"The most beautiful places to visit in the US\"\n\"Powell's Warning to Congress About the Next Recession\"\n\"12 Things Your Mother's Health Says About You\"\n\"3 pieces of dated retirement advice you should ignore\"\n\n[Candidate News Title]\n\"The Unlikely Star of My Family's Thanksgiving Table\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In \"The Unlikely Star of My Family's Thanksgiving Table,\" the user may expect to read about an unexpected guest or dish that becomes a highlight during Thanksgiving celebrations. The article could explore the stories behind this surprising element, possibly detailing how it gained its prominence at the table, along with anecdotes from family members or recipes that transform traditional meals. Additionally, it may touch on themes of family dynamics and the importance of inclusivity during holiday gatherings, providing insights that resonate with those interested in both culinary and familial traditions.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 79,
+    "candidate_news_id": "N26703",
+    "candidate_title": "Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame",
+    "user_history_count": 10,
+    "user_history": [
+      "A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.",
+      "Dean Foods files for bankruptcy",
+      "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+      "The Take Down Trump Project",
+      "Top Putin aide named by MH17 airliner investigators",
+      "If Trump Were Anyone Else …",
+      "House Republicans Lash Out Because They Can't Defend Trump's Conduct",
+      "California's wildfire, blackout crisis: Who's to blame?",
+      "Tense TV: CNN's Blitzer asks Kellyanne Conway about husband",
+      "Did Tiger Woods just drop a major hint he plans to play on the senior tour?"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.\"\n\"Dean Foods files for bankruptcy\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\"The Take Down Trump Project\"\n\"Top Putin aide named by MH17 airliner investigators\"\n\"If Trump Were Anyone Else …\"\n\"House Republicans Lash Out Because They Can't Defend Trump's Conduct\"\n\"California's wildfire, blackout crisis: Who's to blame?\"\n\"Tense TV: CNN's Blitzer asks Kellyanne Conway about husband\"\n\"Did Tiger Woods just drop a major hint he plans to play on the senior tour?\"\n\n[Candidate News Title]\n\"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to read about the ongoing discussion surrounding Mason Rudolph, particularly in relation to an incident where he was struck in the head with his own helmet during a game. The piece may analyze how this incident has affected perceptions of his performance and accountability, as well as the implications for his career. It could also explore reactions from fans and analysts who believe that he may not be receiving adequate scrutiny for his role in the situation, potentially shedding light on broader themes of player responsibility and media coverage in sports.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 79,
+    "candidate_news_id": "N53018",
+    "candidate_title": "U.S. Troops Will Die If They Remain in Syria, Bashar Al-Assad Warns",
+    "user_history_count": 10,
+    "user_history": [
+      "A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.",
+      "Dean Foods files for bankruptcy",
+      "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+      "The Take Down Trump Project",
+      "Top Putin aide named by MH17 airliner investigators",
+      "If Trump Were Anyone Else …",
+      "House Republicans Lash Out Because They Can't Defend Trump's Conduct",
+      "California's wildfire, blackout crisis: Who's to blame?",
+      "Tense TV: CNN's Blitzer asks Kellyanne Conway about husband",
+      "Did Tiger Woods just drop a major hint he plans to play on the senior tour?"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.\"\n\"Dean Foods files for bankruptcy\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\"The Take Down Trump Project\"\n\"Top Putin aide named by MH17 airliner investigators\"\n\"If Trump Were Anyone Else …\"\n\"House Republicans Lash Out Because They Can't Defend Trump's Conduct\"\n\"California's wildfire, blackout crisis: Who's to blame?\"\n\"Tense TV: CNN's Blitzer asks Kellyanne Conway about husband\"\n\"Did Tiger Woods just drop a major hint he plans to play on the senior tour?\"\n\n[Candidate News Title]\n\"U.S. Troops Will Die If They Remain in Syria, Bashar Al-Assad Warns\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"U.S. Troops Will Die If They Remain in Syria, Bashar Al-Assad Warns\" is likely to discuss the current situation of U.S. military involvement in Syria, particularly in light of comments made by Syrian President Bashar Al-Assad. Readers may expect an analysis of the implications of Assad's warning, including potential risks to U.S. forces and the broader geopolitical context. The piece could explore the dynamics between U.S. military strategy and Syrian government actions, as well as the reactions from U.S. officials.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 79,
+    "candidate_news_id": "N129416",
+    "candidate_title": "Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties",
+    "user_history_count": 10,
+    "user_history": [
+      "A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.",
+      "Dean Foods files for bankruptcy",
+      "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+      "The Take Down Trump Project",
+      "Top Putin aide named by MH17 airliner investigators",
+      "If Trump Were Anyone Else …",
+      "House Republicans Lash Out Because They Can't Defend Trump's Conduct",
+      "California's wildfire, blackout crisis: Who's to blame?",
+      "Tense TV: CNN's Blitzer asks Kellyanne Conway about husband",
+      "Did Tiger Woods just drop a major hint he plans to play on the senior tour?"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.\"\n\"Dean Foods files for bankruptcy\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\"The Take Down Trump Project\"\n\"Top Putin aide named by MH17 airliner investigators\"\n\"If Trump Were Anyone Else …\"\n\"House Republicans Lash Out Because They Can't Defend Trump's Conduct\"\n\"California's wildfire, blackout crisis: Who's to blame?\"\n\"Tense TV: CNN's Blitzer asks Kellyanne Conway about husband\"\n\"Did Tiger Woods just drop a major hint he plans to play on the senior tour?\"\n\n[Candidate News Title]\n\"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article, the user may expect to read about the ongoing dispute between Taylor Swift and Big Machine Records regarding unpaid royalties, with a focus on the claim that Swift is owed $7.9 million. The piece might provide insights into the legal and financial implications of this conflict, as well as details about how it relates to her broader career and previous controversies with the label. Additionally, it could explore the impact of this situation on Swift's fanbase and the music industry at large, highlighting the complexities of artist-label relationships.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 79,
+    "candidate_news_id": "N30206",
+    "candidate_title": "Cows swept away by Hurricane Dorian found alive   but how?",
+    "user_history_count": 10,
+    "user_history": [
+      "A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.",
+      "Dean Foods files for bankruptcy",
+      "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+      "The Take Down Trump Project",
+      "Top Putin aide named by MH17 airliner investigators",
+      "If Trump Were Anyone Else …",
+      "House Republicans Lash Out Because They Can't Defend Trump's Conduct",
+      "California's wildfire, blackout crisis: Who's to blame?",
+      "Tense TV: CNN's Blitzer asks Kellyanne Conway about husband",
+      "Did Tiger Woods just drop a major hint he plans to play on the senior tour?"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.\"\n\"Dean Foods files for bankruptcy\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\"The Take Down Trump Project\"\n\"Top Putin aide named by MH17 airliner investigators\"\n\"If Trump Were Anyone Else …\"\n\"House Republicans Lash Out Because They Can't Defend Trump's Conduct\"\n\"California's wildfire, blackout crisis: Who's to blame?\"\n\"Tense TV: CNN's Blitzer asks Kellyanne Conway about husband\"\n\"Did Tiger Woods just drop a major hint he plans to play on the senior tour?\"\n\n[Candidate News Title]\n\"Cows swept away by Hurricane Dorian found alive   but how?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to explore the impact of Hurricane Dorian on livestock, specifically focusing on a group of cows that were swept away but have since been found alive. It may detail the circumstances surrounding their rescue, including the efforts made by local farmers or animal rescue organizations. Additionally, the piece could provide insights into the broader implications of extreme weather events on agriculture and livestock management. This may highlight challenges faced by farmers during natural disasters and the resilience of animals in such situations.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 79,
+    "candidate_news_id": "N2110",
+    "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+    "user_history_count": 10,
+    "user_history": [
+      "A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.",
+      "Dean Foods files for bankruptcy",
+      "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+      "The Take Down Trump Project",
+      "Top Putin aide named by MH17 airliner investigators",
+      "If Trump Were Anyone Else …",
+      "House Republicans Lash Out Because They Can't Defend Trump's Conduct",
+      "California's wildfire, blackout crisis: Who's to blame?",
+      "Tense TV: CNN's Blitzer asks Kellyanne Conway about husband",
+      "Did Tiger Woods just drop a major hint he plans to play on the senior tour?"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.\"\n\"Dean Foods files for bankruptcy\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\"The Take Down Trump Project\"\n\"Top Putin aide named by MH17 airliner investigators\"\n\"If Trump Were Anyone Else …\"\n\"House Republicans Lash Out Because They Can't Defend Trump's Conduct\"\n\"California's wildfire, blackout crisis: Who's to blame?\"\n\"Tense TV: CNN's Blitzer asks Kellyanne Conway about husband\"\n\"Did Tiger Woods just drop a major hint he plans to play on the senior tour?\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\" is likely to present a curated list of innovative and appealing technology-related gifts suitable for various occasions. Readers can expect to find a range of gadgets and devices, from the latest smart home products to unique accessories that enhance everyday life. The article may also provide insights into the functionality and appeal of these gifts, helping readers identify options that would be well-received by friends or family who are interested in technology. Overall, it aims to serve as a practical guide for gift-giving in the tech realm.",
+    "model": "gpt-4o-mini"
+  }
+]

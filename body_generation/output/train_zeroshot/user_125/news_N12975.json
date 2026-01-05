@@ -1,0 +1,21 @@
+{
+  "user_id": 125,
+  "candidate_news_id": "N12975",
+  "candidate_title": "College Football Playoff picture: 4 in, 2 out, 5 to watch",
+  "user_history_count": 10,
+  "user_history": [
+    "Court rules for LA in lawsuit against Trump",
+    "Miller Lite offers free beer for unfollowing them, Natural Light joins in",
+    "DOJ sues Walmart for allegedly discriminating against a Navy reserve officer",
+    "Long Island high school football coach suspended for running up the score against previously undefeated foe",
+    "There was an unspoken pact between narcos and civilians. Then El Chapo's son was captured.",
+    "Report: Timberwolves 'fuming' over NBA's ruling in Karl-Anthony Towns-Joel Embiid fight",
+    "Brady on his shoulder injury: 'I'm a quick healer'",
+    "Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!",
+    "Report: Jaguars QB Gardner Minshew could be playing for his job Sunday",
+    "Supreme Court seems prepared to rule for police in traffic-stop case"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Court rules for LA in lawsuit against Trump\"\n\"Miller Lite offers free beer for unfollowing them, Natural Light joins in\"\n\"DOJ sues Walmart for allegedly discriminating against a Navy reserve officer\"\n\"Long Island high school football coach suspended for running up the score against previously undefeated foe\"\n\"There was an unspoken pact between narcos and civilians. Then El Chapo's son was captured.\"\n\"Report: Timberwolves 'fuming' over NBA's ruling in Karl-Anthony Towns-Joel Embiid fight\"\n\"Brady on his shoulder injury: 'I'm a quick healer'\"\n\"Greatest eBay Listing Of 2019? Or In All Of Human History? You Decide!\"\n\"Report: Jaguars QB Gardner Minshew could be playing for his job Sunday\"\n\"Supreme Court seems prepared to rule for police in traffic-stop case\"\n\n[Candidate News Title]\n\"College Football Playoff picture: 4 in, 2 out, 5 to watch\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"College Football Playoff picture: 4 in, 2 out, 5 to watch\" is likely to provide an analysis of the current standings and potential matchups for the College Football Playoff. Readers can expect a breakdown of the teams that are currently secure in playoff positions, those at risk of being ousted, and a shortlist of teams that may still have a chance to qualify. The discussion may include insights into the implications of recent games and strategies that could influence the playoff landscape as the season progresses.",
+  "model": "gpt-4o-mini"
+}

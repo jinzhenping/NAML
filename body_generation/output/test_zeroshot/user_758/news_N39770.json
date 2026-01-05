@@ -1,0 +1,21 @@
+{
+  "user_id": 758,
+  "candidate_news_id": "N39770",
+  "candidate_title": "Dow tops 28,000 for first time, capping 4-week win streak",
+  "user_history_count": 10,
+  "user_history": [
+    "Titans rally late to stun Chiefs, spoil Mahomes' return",
+    "Flight Attendants Have a Secret Language You Didn't Know About",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Labor unrest again lurks just below the surface as baseball's Hot Stove heats up",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "Angels hire Tony La Russa as baseball operations special assistant",
+    "Could Red Sox and Yankees make blockbuster trade?",
+    "Cashman: Yankees will pursue free agents Cole, Strasburg",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Titans rally late to stun Chiefs, spoil Mahomes' return\"\n\"Flight Attendants Have a Secret Language You Didn't Know About\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Labor unrest again lurks just below the surface as baseball's Hot Stove heats up\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"Angels hire Tony La Russa as baseball operations special assistant\"\n\"Could Red Sox and Yankees make blockbuster trade?\"\n\"Cashman: Yankees will pursue free agents Cole, Strasburg\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.\"\n\n[Candidate News Title]\n\"Dow tops 28,000 for first time, capping 4-week win streak\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to report on the recent performance of the Dow Jones Industrial Average, highlighting its milestone of surpassing 28,000 points for the first time and detailing the factors contributing to its four-week winning streak. Readers can expect an analysis of economic conditions, potential market drivers, and insights from financial experts regarding the implications of this achievement. Additionally, the article may explore how this upward trend could influence investor sentiment and future market expectations, though specific predictions remain uncertain.",
+  "model": "gpt-4o-mini"
+}

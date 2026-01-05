@@ -1,0 +1,21 @@
+{
+  "user_id": 530,
+  "candidate_news_id": "N63322",
+  "candidate_title": "Bevin concedes in Kentucky governor's race",
+  "user_history_count": 10,
+  "user_history": [
+    "8 spooky Halloween tricks you didn't know your Echo could do",
+    "These Workers Retire Earlier Than Anyone Else! And It's Not Who You Think!",
+    "NFL fines Tyreek Hill $10K for flashing peace sign at defense during TD again",
+    "President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'",
+    "Trump botches a boast about giving away his presidential salary",
+    "Authorities identify Iowa woman killed in explosion during gender reveal party",
+    "Flynn hearing canceled after lawyer claims FBI manipulated files",
+    "Comics - 'Bottom Liners' by Eric and Bill Teitelbaum",
+    "Republicans Know Trump Is Innocent They're Trying to Figure Out Why",
+    "Dean Foods files for bankruptcy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"8 spooky Halloween tricks you didn't know your Echo could do\"\n\"These Workers Retire Earlier Than Anyone Else! And It's Not Who You Think!\"\n\"NFL fines Tyreek Hill $10K for flashing peace sign at defense during TD again\"\n\"President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'\"\n\"Trump botches a boast about giving away his presidential salary\"\n\"Authorities identify Iowa woman killed in explosion during gender reveal party\"\n\"Flynn hearing canceled after lawyer claims FBI manipulated files\"\n\"Comics - 'Bottom Liners' by Eric and Bill Teitelbaum\"\n\"Republicans Know Trump Is Innocent They're Trying to Figure Out Why\"\n\"Dean Foods files for bankruptcy\"\n\n[Candidate News Title]\n\"Bevin concedes in Kentucky governor's race\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Bevin concedes in Kentucky governor's race,\" the user is likely to find an overview of the recent election results in Kentucky, focusing on Governor Matt Bevin's concession speech following the election. The piece may detail the circumstances surrounding the election, including voter turnout and key issues that influenced the outcome. Additionally, it could provide context about the political implications of Bevin's concession for both the state and national politics. The article is likely to explore reactions from various stakeholders, including Bevin's supporters and the eventual winner, while also discussing possible future political ramifications.",
+  "model": "gpt-4o-mini"
+}

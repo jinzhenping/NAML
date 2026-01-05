@@ -1,0 +1,21 @@
+{
+  "user_id": 913,
+  "candidate_news_id": "N28518",
+  "candidate_title": "Lamar Odom is Engaged to Girlfriend Sabrina Parr -- See Her Stunning Ring!",
+  "user_history_count": 10,
+  "user_history": [
+    "2019 People's Choice Awards fashion hits and misses",
+    "College gymnast dies following training accident in Connecticut",
+    "Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out",
+    "Dog tries to pick up his ball despite it being frozen to the ground",
+    "Dog reunited with owner after running loose on Houston highway overpass after car wreck",
+    "A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.",
+    "4 frat deaths this month. 2 this week alone. What's going on with fraternity hazing?",
+    "Celebrity plastic surgery transformations",
+    "Search underway on Staten Island in connection to disappearance of Stephanie Parze",
+    "Abandoned 'unicorn' puppy has a tail on its head"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"2019 People's Choice Awards fashion hits and misses\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out\"\n\"Dog tries to pick up his ball despite it being frozen to the ground\"\n\"Dog reunited with owner after running loose on Houston highway overpass after car wreck\"\n\"A $30,000 handbag. A disastrous wine spill. And now, a country club is suing its own waiter.\"\n\"4 frat deaths this month. 2 this week alone. What's going on with fraternity hazing?\"\n\"Celebrity plastic surgery transformations\"\n\"Search underway on Staten Island in connection to disappearance of Stephanie Parze\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\n[Candidate News Title]\n\"Lamar Odom is Engaged to Girlfriend Sabrina Parr -- See Her Stunning Ring!\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Lamar Odom's engagement to girlfriend Sabrina Parr, the user can expect to find details about the couple's relationship, including how long they have been together and any significant milestones leading to the engagement. The piece is likely to describe the engagement ring, highlighting its design and value, as well as any public reactions or comments from fans and followers. Additionally, it may touch on Odom's journey since his previous challenges, providing context for this new chapter in his life. Overall, readers may find insights into their love story and the implications of this engagement for both individuals.",
+  "model": "gpt-4o-mini"
+}

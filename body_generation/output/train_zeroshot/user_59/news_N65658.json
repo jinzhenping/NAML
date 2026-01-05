@@ -1,0 +1,21 @@
+{
+  "user_id": 59,
+  "candidate_news_id": "N65658",
+  "candidate_title": "How the Trump Administration Eroded Its Own Legal Case on DACA",
+  "user_history_count": 10,
+  "user_history": [
+    "The 25 Best Shows of the Decade",
+    "17 of the best things to get at Aldi this month for under $5",
+    "The Greek Royals Dressed as the Royal Tenenbaums for Halloween",
+    "Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly",
+    "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+    "Kate Middleton Enjoys Secret Ladies Night Out",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Snow crab sells for record price in Japan",
+    "A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 25 Best Shows of the Decade\"\n\"17 of the best things to get at Aldi this month for under $5\"\n\"The Greek Royals Dressed as the Royal Tenenbaums for Halloween\"\n\"Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"Kate Middleton Enjoys Secret Ladies Night Out\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Snow crab sells for record price in Japan\"\n\"A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\n[Candidate News Title]\n\"How the Trump Administration Eroded Its Own Legal Case on DACA\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"How the Trump Administration Eroded Its Own Legal Case on DACA,\" you can expect a detailed examination of the legal challenges surrounding the Deferred Action for Childhood Arrivals (DACA) program during the Trump administration. The article is likely to discuss specific policies and actions taken by the administration that may have undermined its legal arguments, such as public statements and procedural changes. It may also analyze the implications of these actions on the future of DACA and its recipients, providing insights into the broader legal landscape surrounding immigration policy during that time.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 518,
+  "candidate_news_id": "N112335",
+  "candidate_title": "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+  "user_history_count": 10,
+  "user_history": [
+    "Woman found dead in Ohio home was likely killed by her Great Danes, police say",
+    "Celebrity kids then and now: See how they've grown",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Napoleon Bonaparte's general believed unearthed in Russia",
+    "Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'",
+    "Pence aide said Trump's July 25 call with Ukraine was political and not a normal diplomatic call",
+    "Survivor pays tribute to 'icon' Rudy Boesch on show",
+    "Costco Shoppers Are Loving This $9 Eggnog Wine Cocktail",
+    "Jennifer Aniston looks amazing in a makeup-free selfie, plus more news"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Woman found dead in Ohio home was likely killed by her Great Danes, police say\"\n\"Celebrity kids then and now: See how they've grown\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Napoleon Bonaparte's general believed unearthed in Russia\"\n\"Woman delivered a speech to NASA wearing sequin dress so girls would see a 'sparkly scientist'\"\n\"Pence aide said Trump's July 25 call with Ukraine was political and not a normal diplomatic call\"\n\"Survivor pays tribute to 'icon' Rudy Boesch on show\"\n\"Costco Shoppers Are Loving This $9 Eggnog Wine Cocktail\"\n\"Jennifer Aniston looks amazing in a makeup-free selfie, plus more news\"\n\n[Candidate News Title]\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle,\" the user is likely expecting to read about Selena Gomez's personal experiences with body image issues, particularly in the context of her health struggles related to lupus. The piece may discuss her reflections on the societal pressures surrounding body image and the impact of public scrutiny on her self-esteem. Additionally, it is likely to explore her advocacy for self-acceptance and mental health awareness, providing insights into how she copes with both her condition and the challenges of fame.",
+  "model": "gpt-4o-mini"
+}

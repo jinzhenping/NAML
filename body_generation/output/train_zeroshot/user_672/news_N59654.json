@@ -1,0 +1,21 @@
+{
+  "user_id": 672,
+  "candidate_news_id": "N59654",
+  "candidate_title": "Duke reports minor violation after Coach K mentions name of unsigned recruit",
+  "user_history_count": 10,
+  "user_history": [
+    "Bears' Khalil Mack calls out Eagles C Jason Kelce's controversial tactics in offsides penalties",
+    "2020 Performance Car of the Year",
+    "Election Day 2019: Most Important Races and What to Watch For",
+    "Chevrolet Somehow Makes One (1) Electric Pickup Truck",
+    "50 states, 50 places: The top natural wonder in your state",
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Load up on vintage trucks and SUVs crossing the block in Iowa",
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bears' Khalil Mack calls out Eagles C Jason Kelce's controversial tactics in offsides penalties\"\n\"2020 Performance Car of the Year\"\n\"Election Day 2019: Most Important Races and What to Watch For\"\n\"Chevrolet Somehow Makes One (1) Electric Pickup Truck\"\n\"50 states, 50 places: The top natural wonder in your state\"\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Load up on vintage trucks and SUVs crossing the block in Iowa\"\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\n[Candidate News Title]\n\"Duke reports minor violation after Coach K mentions name of unsigned recruit\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Duke reports minor violation after Coach K mentions name of unsigned recruit,\" the user can expect a detailed account of a recent incident involving Duke University's basketball program. The piece is likely to outline the specifics of the violation, including how it relates to Coach K's comments about a potential recruit who has not yet signed with the program. It may provide context regarding NCAA regulations and the implications of such a violation for the team and its coaching staff. Additionally, the article could discuss how this incident fits into the broader landscape of college basketball recruitment practices.",
+  "model": "gpt-4o-mini"
+}

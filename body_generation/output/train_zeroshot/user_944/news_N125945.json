@@ -1,0 +1,21 @@
+{
+  "user_id": 944,
+  "candidate_news_id": "N125945",
+  "candidate_title": "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+  "user_history_count": 10,
+  "user_history": [
+    "$16.8 Million In Campaign Funds Went To Trump Businesses, Latest Records Reveal",
+    "Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion",
+    "Former Fox News hosts want out of non-disclosure agreements",
+    "Trump judicial pick breaks down in tears at hearing over legal group's attack",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "8 Things on the McDonald's Secret Menu You Need to Know About",
+    "A day in the life of the top real-estate broker in Miami, who commutes by ferry to the richest ZIP code in the US and sold more than $189 million of luxury homes in 2018",
+    "Tom Draper, Black Music Industry Pioneer, Dies at 79",
+    "Debunking the week's tabloid stories: Nov. 1, 2019",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"$16.8 Million In Campaign Funds Went To Trump Businesses, Latest Records Reveal\"\n\"Whoopi Goldberg Asks Meghan McCain to 'Respect' Her 'View' Co-Hosts During Heated Discussion\"\n\"Former Fox News hosts want out of non-disclosure agreements\"\n\"Trump judicial pick breaks down in tears at hearing over legal group's attack\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"8 Things on the McDonald's Secret Menu You Need to Know About\"\n\"A day in the life of the top real-estate broker in Miami, who commutes by ferry to the richest ZIP code in the US and sold more than $189 million of luxury homes in 2018\"\n\"Tom Draper, Black Music Industry Pioneer, Dies at 79\"\n\"Debunking the week's tabloid stories: Nov. 1, 2019\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\n[Candidate News Title]\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Tamron Hall's departure from the Today Show, readers may expect to learn about her reasons for leaving the program and the circumstances surrounding her exit. The piece is likely to provide insights into her career trajectory and the implications of her move for both her and the show. Additionally, it may include Hall's reflections on her time at the Today Show, along with her humorous remarks regarding Megyn Kelly's reported payout. Overall, the article could highlight the evolving landscape of morning television and the dynamics between prominent figures in the industry.",
+  "model": "gpt-4o-mini"
+}

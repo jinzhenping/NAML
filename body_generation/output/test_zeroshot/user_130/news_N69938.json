@@ -1,0 +1,21 @@
+{
+  "user_id": 130,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "2020 Cadillac CT5 2.0T Review: A Sport Sedan With Big Shoes to Fill",
+    "Chilly down to the Gulf of Mexico: What you should know about the arctic blast",
+    "2020 Hyundai Venue Priced Well under $19,000",
+    "Chevrolet Performance Reveals New Small Block Crate Engine",
+    "What's in a Brand? A Look at Polestar's Tesla-Fighting Future",
+    "Dodge Put the Wrong Wheels on 173 New Challengers and Chargers",
+    "2020 Ford Explorer launch hardly went according to plan, company admits",
+    "This Arctic blast is in its final day. But the cold isn't over quite yet",
+    "Small Canadian island irate that Americans keep opening their mail",
+    "2020 Kia Telluride Pros and Cons Review: The Heartland Kia"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"2020 Cadillac CT5 2.0T Review: A Sport Sedan With Big Shoes to Fill\"\n\"Chilly down to the Gulf of Mexico: What you should know about the arctic blast\"\n\"2020 Hyundai Venue Priced Well under $19,000\"\n\"Chevrolet Performance Reveals New Small Block Crate Engine\"\n\"What's in a Brand? A Look at Polestar's Tesla-Fighting Future\"\n\"Dodge Put the Wrong Wheels on 173 New Challengers and Chargers\"\n\"2020 Ford Explorer launch hardly went according to plan, company admits\"\n\"This Arctic blast is in its final day. But the cold isn't over quite yet\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"2020 Kia Telluride Pros and Cons Review: The Heartland Kia\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article about Meghan Markle and Hillary Clinton spending time together at Frogmore Cottage, they may expect to read about the details of this unexpected meeting between the two prominent figures. The article is likely to provide context on their relationship, discussing any shared interests or initiatives they might have in common. Additionally, it could explore the significance of the location, Frogmore Cottage, known for its royal connections, and speculate on the topics of conversation that could have taken place during their time together.",
+  "model": "gpt-4o-mini"
+}

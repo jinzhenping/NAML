@@ -1,0 +1,21 @@
+{
+  "user_id": 410,
+  "candidate_news_id": "N63262",
+  "candidate_title": "Robert Kraft reportedly told Rob Gronkowski he wants him to come back before season's end",
+  "user_history_count": 10,
+  "user_history": [
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Woman Finds A Giant Wild Snake Just Chilling In Her Bed",
+    "Woman found dead in Ohio home was likely killed by her Great Danes, police say",
+    "Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly",
+    "Kate Middleton Enjoys Secret Ladies Night Out",
+    "Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid",
+    "36 Old Words We Use Today but with New Meanings",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Woman Finds A Giant Wild Snake Just Chilling In Her Bed\"\n\"Woman found dead in Ohio home was likely killed by her Great Danes, police say\"\n\"Queen Elizabeth Finally Had Her Dream Photoshoot, Thanks to Royal Dresser Angela Kelly\"\n\"Kate Middleton Enjoys Secret Ladies Night Out\"\n\"Princess Charlotte Looks Identical to Her Cousin Lady Kitty Spencer as a Kid\"\n\"36 Old Words We Use Today but with New Meanings\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\n[Candidate News Title]\n\"Robert Kraft reportedly told Rob Gronkowski he wants him to come back before season's end\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article regarding Robert Kraft's reported comments to Rob Gronkowski, the user can expect a discussion about Kraft's desire for Gronkowski to return to the New England Patriots before the end of the current season. The piece is likely to explore the context of this statement, including Gronkowski's previous retirement and his significance to the team. Additionally, it may touch on the implications of such a return for the team's dynamics and playoff prospects, along with any potential reactions from fans and analysts.",
+  "model": "gpt-4o-mini"
+}

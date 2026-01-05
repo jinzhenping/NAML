@@ -1,0 +1,21 @@
+{
+  "user_id": 417,
+  "candidate_news_id": "N118908",
+  "candidate_title": "Envoy Was 'Obstacle' to Trump, Schiff Says: Impeachment Update",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump, Erdogan to meet as thorny issues stress relations",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Harry and Meghan Revive Feud Rumors By Staying Away From the Royal Family's Christmas",
+    "Kaley Cuoco Says Having 'Separate Lives' Has Helped Her Marriage to Karl Cook",
+    "Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+    "We made a 3-course feast using Chrissy Teigen's recipes, and had the best homemade pizza we've ever tasted",
+    "Pelosi says Trump has admitted to bribery"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump, Erdogan to meet as thorny issues stress relations\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Harry and Meghan Revive Feud Rumors By Staying Away From the Royal Family's Christmas\"\n\"Kaley Cuoco Says Having 'Separate Lives' Has Helped Her Marriage to Karl Cook\"\n\"Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\"We made a 3-course feast using Chrissy Teigen's recipes, and had the best homemade pizza we've ever tasted\"\n\"Pelosi says Trump has admitted to bribery\"\n\n[Candidate News Title]\n\"Envoy Was 'Obstacle' to Trump, Schiff Says: Impeachment Update\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Envoy Was 'Obstacle' to Trump, Schiff Says: Impeachment Update,\" the user may find an overview of recent developments in the ongoing impeachment discourse surrounding former President Trump. The piece is likely to detail comments made by Representative Adam Schiff regarding the role of a particular envoy in the impeachment proceedings. It could outline key arguments and evidence presented by Schiff, as well as the broader implications for Trump's political standing. Additionally, the article may explore how this situation ties into the current political climate and public sentiment regarding impeachment.",
+  "model": "gpt-4o-mini"
+}

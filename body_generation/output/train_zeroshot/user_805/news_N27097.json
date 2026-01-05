@@ -1,0 +1,21 @@
+{
+  "user_id": 805,
+  "candidate_news_id": "N27097",
+  "candidate_title": "Utah death-row inmate featured in best-selling book dies",
+  "user_history_count": 10,
+  "user_history": [
+    "Russia Is 'Definitely Concerned' Over U.S. Plans to Send Troops to Syria Oil Fields",
+    "Prosecutors want black judge who criticized incarceration rates of African Americans removed",
+    "Trump's visit to Chicago creates stir before he even arrives",
+    "Jets trade DL Leonard Williams to Giants",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion",
+    "Reports: LSU LB Michael Divinity removed from team days before Alabama game",
+    "Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Russia Is 'Definitely Concerned' Over U.S. Plans to Send Troops to Syria Oil Fields\"\n\"Prosecutors want black judge who criticized incarceration rates of African Americans removed\"\n\"Trump's visit to Chicago creates stir before he even arrives\"\n\"Jets trade DL Leonard Williams to Giants\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"McDonald's apologizes for 'Sundae Bloody Sundae' Halloween promotion\"\n\"Reports: LSU LB Michael Divinity removed from team days before Alabama game\"\n\"Opinion: Browns' Freddie Kitchens, Jets' Adam Gase could be headed for one-and-done territory\"\n\n[Candidate News Title]\n\"Utah death-row inmate featured in best-selling book dies\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Utah death-row inmate featured in best-selling book dies\" is likely to provide an overview of the inmate’s background, including details about their conviction and the circumstances surrounding their death. It may discuss the book that brought attention to the case, highlighting key themes or arguments presented by the author regarding the justice system. Additionally, the article could explore any public or legal reactions to the inmate's passing, particularly in relation to ongoing debates about capital punishment. Overall, readers can expect a factual account that reflects on the implications of this event within a broader societal context.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 914,
+  "candidate_news_id": "N84706",
+  "candidate_title": "Olympic swimmer Ryan Lochte went from earning millions to living paycheck-to-paycheck   here's what he learned",
+  "user_history_count": 10,
+  "user_history": [
+    "NFL Week 9's top game: A unanimous desire to see undefeated Patriots vs. Lamar Jackson",
+    "Apple pledges $2.5 billion to address California's affordable housing problem",
+    "New York City police commissioner resigns, de Blasio announces new chief",
+    "Why McDonald's had no choice but to fire CEO Steve Easterbrook for his relationship with an employee",
+    "Analysis: Extreme greed reigns on Wall Street. Here's why investors are so confident",
+    "The Woman Who Flipped Off Trump Has Won an Election in Virginia",
+    "States that are falling apart",
+    "This is What Will Happen When Queen Elizabeth Dies",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis",
+    "The economic picture is darkening in states critical to Trump's reelection bid"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"NFL Week 9's top game: A unanimous desire to see undefeated Patriots vs. Lamar Jackson\"\n\"Apple pledges $2.5 billion to address California's affordable housing problem\"\n\"New York City police commissioner resigns, de Blasio announces new chief\"\n\"Why McDonald's had no choice but to fire CEO Steve Easterbrook for his relationship with an employee\"\n\"Analysis: Extreme greed reigns on Wall Street. Here's why investors are so confident\"\n\"The Woman Who Flipped Off Trump Has Won an Election in Virginia\"\n\"States that are falling apart\"\n\"This is What Will Happen When Queen Elizabeth Dies\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\"The economic picture is darkening in states critical to Trump's reelection bid\"\n\n[Candidate News Title]\n\"Olympic swimmer Ryan Lochte went from earning millions to living paycheck-to-paycheck   here's what he learned\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Olympic swimmer Ryan Lochte's transition from a lucrative career to living paycheck-to-paycheck, the user can expect to read an analysis of the financial challenges he has faced post-competition. It may explore the reasons behind his drastic lifestyle change, including potential mismanagement of funds or external factors impacting his income. The piece is likely to include insights into Lochte's reflections on his experiences and the lessons he has learned about financial stability and career transitions in the spotlight.",
+  "model": "gpt-4o-mini"
+}

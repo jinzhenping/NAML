@@ -1,0 +1,21 @@
+{
+  "user_id": 800,
+  "candidate_news_id": "N96805",
+  "candidate_title": "Hernandez: Anthony Davis' impact on LeBron James apparent even when he doesn't play",
+  "user_history_count": 10,
+  "user_history": [
+    "Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days",
+    "EU contracts with Microsoft raising \"serious\" data concerns, says watchdog",
+    "6 Wealthy Power Couples on How They Make It Work",
+    "Seattle Has Some of the Oldest Hole-in-the-Wall Bars in the Country",
+    "Seahawks have NFL's most difficult remaining schedule",
+    "Andy Cohen Says He Lost 12 Pounds in 3 Months By Simply Cutting Out Booze",
+    "You're better than plain mashed potatoes",
+    "Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math",
+    "Debunking the week's tabloid stories: Nov. 8, 2019",
+    "Oprah Just Revealed Her 2019 Favorite Things Here Are the Best Food Picks"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days\"\n\"EU contracts with Microsoft raising \"serious\" data concerns, says watchdog\"\n\"6 Wealthy Power Couples on How They Make It Work\"\n\"Seattle Has Some of the Oldest Hole-in-the-Wall Bars in the Country\"\n\"Seahawks have NFL's most difficult remaining schedule\"\n\"Andy Cohen Says He Lost 12 Pounds in 3 Months By Simply Cutting Out Booze\"\n\"You're better than plain mashed potatoes\"\n\"Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math\"\n\"Debunking the week's tabloid stories: Nov. 8, 2019\"\n\"Oprah Just Revealed Her 2019 Favorite Things Here Are the Best Food Picks\"\n\n[Candidate News Title]\n\"Hernandez: Anthony Davis' impact on LeBron James apparent even when he doesn't play\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Hernandez: Anthony Davis' impact on LeBron James apparent even when he doesn't play,\" the user can expect an analysis of the relationship between Anthony Davis and LeBron James, particularly focusing on how Davis' presence or absence affects James' performance and the overall dynamics of the team. The piece may explore statistical insights and commentary from analysts, emphasizing the strategic implications for the Los Angeles Lakers. Additionally, it is likely to highlight how Davis' influence extends beyond the court, potentially impacting team morale and game strategy even when he is sidelined.",
+  "model": "gpt-4o-mini"
+}

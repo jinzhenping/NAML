@@ -1,0 +1,21 @@
+{
+  "user_id": 973,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Survivor pays tribute to 'icon' Rudy Boesch on show",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US",
+    "3 arrested in $7 million mortgage fraud that targeted the elderly",
+    "Today in History: November 10",
+    "Today in History: November 12",
+    "College gymnast dies following training accident in Connecticut",
+    "Most Unsafe Cars on the Road",
+    "Cherry disappointed with MacLean's apology: 'He buried me'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Survivor pays tribute to 'icon' Rudy Boesch on show\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\"3 arrested in $7 million mortgage fraud that targeted the elderly\"\n\"Today in History: November 10\"\n\"Today in History: November 12\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Most Unsafe Cars on the Road\"\n\"Cherry disappointed with MacLean's apology: 'He buried me'\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to find a curated list of 66 technology-related gifts that are appealing and practical for various occasions. The piece is likely to highlight a range of gadgets and innovative products suitable for different interests and age groups, possibly including items like smart home devices, wearable tech, and unique accessories. Additionally, the article may provide brief descriptions of each item, detailing their features and potential uses, helping readers identify suitable gifts for friends, family, or themselves.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 837,
+  "candidate_news_id": "N92566",
+  "candidate_title": "Tips, strategies and secrets for easy Thanksgiving shopping",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Nearly 500 Prisoners Freed on a Single Day",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Holocaust survivor under guard amid death threats",
+    "Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?",
+    "Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years",
+    "Harry Potter's Childhood Home in England Is Now on Airbnb",
+    "Five Cheese Board Recipes For Every College Experience",
+    "From beards to bricks, history's strangest taxes",
+    "How to Split an Apple in Half With Your Bare Hands"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Nearly 500 Prisoners Freed on a Single Day\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Holocaust survivor under guard amid death threats\"\n\"Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?\"\n\"Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years\"\n\"Harry Potter's Childhood Home in England Is Now on Airbnb\"\n\"Five Cheese Board Recipes For Every College Experience\"\n\"From beards to bricks, history's strangest taxes\"\n\"How to Split an Apple in Half With Your Bare Hands\"\n\n[Candidate News Title]\n\"Tips, strategies and secrets for easy Thanksgiving shopping\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Tips, strategies and secrets for easy Thanksgiving shopping,\" the user is likely expecting to find practical advice for navigating the holiday shopping season. The content may cover a range of strategies, such as how to plan a shopping list effectively, the best times to shop for deals, and tips for avoiding crowds. It could also offer insights into online shopping options and highlight specific products or categories that are expected to be popular this year. Overall, the article is likely focused on making the Thanksgiving shopping experience more manageable and efficient.",
+  "model": "gpt-4o-mini"
+}

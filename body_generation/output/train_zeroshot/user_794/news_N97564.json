@@ -1,0 +1,21 @@
+{
+  "user_id": 794,
+  "candidate_news_id": "N97564",
+  "candidate_title": "Evansville's upset at No. 1 Kentucky illustrates college basketball's uncertain landscape",
+  "user_history_count": 10,
+  "user_history": [
+    "Retired doctor, 67, gives birth in China after getting 'pregnant naturally'",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Kylie Jenner Throws Dinner for Caitlyn Jenner's 70th Birthday   See Which Kardashians Attended",
+    "US Fed cuts interest rates, signals it is on hold",
+    "Meghan Markle Personally Calls British Politician to Thank Her for Orchestrating Letter of 'Solidarity'",
+    "The One Thing Kourtney Kardashian Drinks Every Morning for Younger-Looking Skin",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "Meghan Markle Says She Doesn't Want People to Love Her, She Wants Them to Hear Her",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Retired doctor, 67, gives birth in China after getting 'pregnant naturally'\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Kylie Jenner Throws Dinner for Caitlyn Jenner's 70th Birthday   See Which Kardashians Attended\"\n\"US Fed cuts interest rates, signals it is on hold\"\n\"Meghan Markle Personally Calls British Politician to Thank Her for Orchestrating Letter of 'Solidarity'\"\n\"The One Thing Kourtney Kardashian Drinks Every Morning for Younger-Looking Skin\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"Meghan Markle Says She Doesn't Want People to Love Her, She Wants Them to Hear Her\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\n[Candidate News Title]\n\"Evansville's upset at No. 1 Kentucky illustrates college basketball's uncertain landscape\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on Evansville's upset victory over No. 1 Kentucky is likely to explore the implications of this surprising outcome within the context of college basketball's current season. Readers can expect a breakdown of the game highlights, including key player performances and strategic decisions that contributed to the upset. Additionally, it may discuss how this game reflects the unpredictable nature of college basketball, potentially influencing rankings and team morale as the season progresses. The article could also speculate on how this result might impact Kentucky's championship aspirations moving forward.",
+  "model": "gpt-4o-mini"
+}

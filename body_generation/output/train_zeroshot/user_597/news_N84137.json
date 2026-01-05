@@ -1,0 +1,21 @@
+{
+  "user_id": 597,
+  "candidate_news_id": "N84137",
+  "candidate_title": "Why Do Cats Meow?",
+  "user_history_count": 10,
+  "user_history": [
+    "Best, worst QB performances from NFL Week 7",
+    "Reactions to the College Basketball Preseason AP Top 25 Poll: Is This the Best Champions Classic Ever?",
+    "16 transgender celebrities who are changing television",
+    "Trump isn't 'bringing our soldiers back home' from Syria",
+    "What the Protests Breaking Out All Over the World Have in Common",
+    "Trump's unimpeachable foreign policy",
+    "You're Eating Your Fancy Dinners Wrong",
+    "Hong Kong Protesters Call for U.S. Help. China Sees a Conspiracy.",
+    "Football coach resigns after celebration with racial slurs posted on Instagram",
+    "Pentagon: Revenue from Syria oil fields going to Kurdish-led forces"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Best, worst QB performances from NFL Week 7\"\n\"Reactions to the College Basketball Preseason AP Top 25 Poll: Is This the Best Champions Classic Ever?\"\n\"16 transgender celebrities who are changing television\"\n\"Trump isn't 'bringing our soldiers back home' from Syria\"\n\"What the Protests Breaking Out All Over the World Have in Common\"\n\"Trump's unimpeachable foreign policy\"\n\"You're Eating Your Fancy Dinners Wrong\"\n\"Hong Kong Protesters Call for U.S. Help. China Sees a Conspiracy.\"\n\"Football coach resigns after celebration with racial slurs posted on Instagram\"\n\"Pentagon: Revenue from Syria oil fields going to Kurdish-led forces\"\n\n[Candidate News Title]\n\"Why Do Cats Meow?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to click on the article titled \"Why Do Cats Meow?\", you may expect an exploration of the various reasons behind feline vocalizations. The article is likely to discuss how meowing serves as a form of communication between cats and humans, highlighting factors such as hunger, attention-seeking, and social interaction. Additionally, it could delve into the different types of meows and their meanings, as well as how these vocalizations vary among individual cats. Overall, the piece may provide insights into the complex relationship between cats and their owners, enhancing your understanding of this common pet behavior.",
+  "model": "gpt-4o-mini"
+}

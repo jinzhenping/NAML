@@ -1,0 +1,21 @@
+{
+  "user_id": 932,
+  "candidate_news_id": "N19858",
+  "candidate_title": "100 vintage baby names coming back into style",
+  "user_history_count": 10,
+  "user_history": [
+    "100 books to read in a lifetime   according to Amazon Books editors",
+    "Ford's Big Nugget is a tiny home built inside a Transit cargo van   see inside the 4-'room' vehicle",
+    "President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'",
+    "Fox News contributor: 'Most likely' outcome is Trump doesn't run in 2020",
+    "President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'",
+    "Hurricane-force winds intensify California wildfires as nearly 200,000 evacuate",
+    "'Extremely disturbing:' Top Dems alarmed over Vindman's testimony on Trump Ukraine call",
+    "Falcons cut franchise mainstay Matt Bryant",
+    "MLB free-agent predictions: Rankings, rumors for the top players on the market",
+    "America's Unsafe Drugs and Medical Products"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"100 books to read in a lifetime   according to Amazon Books editors\"\n\"Ford's Big Nugget is a tiny home built inside a Transit cargo van   see inside the 4-'room' vehicle\"\n\"President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'\"\n\"Fox News contributor: 'Most likely' outcome is Trump doesn't run in 2020\"\n\"President Donald Trump greeted with boos at Game 5 of World Series, fans chant 'lock him up'\"\n\"Hurricane-force winds intensify California wildfires as nearly 200,000 evacuate\"\n\"'Extremely disturbing:' Top Dems alarmed over Vindman's testimony on Trump Ukraine call\"\n\"Falcons cut franchise mainstay Matt Bryant\"\n\"MLB free-agent predictions: Rankings, rumors for the top players on the market\"\n\"America's Unsafe Drugs and Medical Products\"\n\n[Candidate News Title]\n\"100 vintage baby names coming back into style\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"100 vintage baby names coming back into style,\" the user is likely to find a curated list of classic baby names that have gained renewed popularity in recent years. The piece may explore the cultural and societal trends contributing to this resurgence, highlighting names that evoke nostalgia or have historical significance. Additionally, it could provide insights into the meanings and origins of these names, as well as potential factors influencing parents' choices today. Overall, the article is expected to serve as a resource for those interested in naming trends and the revival of traditional names.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 302,
+    "candidate_news_id": "N93879",
+    "candidate_title": "Ohio GOP lawmakers want to ban all abortions, charge doctors who perform them with murder",
+    "user_history_count": 10,
+    "user_history": [
+      "Turkish patrol kills protester amid shaky truce in NE Syria",
+      "Rockets hit Iraq base with US troops; no word on casualties",
+      "Thailand wants to ban these three pesticides. The US government says no",
+      "Opinions | We've never needed Remembrance Day poppies more than right now",
+      "Turkey starts repatriation of captured Islamic State militants: media",
+      "Spain Is Stuck After Sanchez's Election Gamble Backfires Badly",
+      "The biggest wastes of money in 2019",
+      "Mother of missing Florida girl charged; human remains found",
+      "Most distant world ever explored gets new name: Arrokoth",
+      "American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Turkish patrol kills protester amid shaky truce in NE Syria\"\n\"Rockets hit Iraq base with US troops; no word on casualties\"\n\"Thailand wants to ban these three pesticides. The US government says no\"\n\"Opinions | We've never needed Remembrance Day poppies more than right now\"\n\"Turkey starts repatriation of captured Islamic State militants: media\"\n\"Spain Is Stuck After Sanchez's Election Gamble Backfires Badly\"\n\"The biggest wastes of money in 2019\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"Most distant world ever explored gets new name: Arrokoth\"\n\"American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says\"\n\n[Candidate News Title]\n\"Ohio GOP lawmakers want to ban all abortions, charge doctors who perform them with murder\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses proposed legislation by Ohio GOP lawmakers aimed at banning all abortions within the state, presenting the implications of such a measure on both healthcare providers and women seeking reproductive services. It may detail the legal ramifications for doctors who perform abortions, including potential charges of murder, and explore the political context surrounding this initiative. Additionally, the article could highlight public reactions and debates within Ohio, reflecting a broader national conversation about reproductive rights and legislation.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 302,
+    "candidate_news_id": "N50180",
+    "candidate_title": "Russia Releases Norwegian, Lithuanians in Unusual Spy Swap",
+    "user_history_count": 10,
+    "user_history": [
+      "Turkish patrol kills protester amid shaky truce in NE Syria",
+      "Rockets hit Iraq base with US troops; no word on casualties",
+      "Thailand wants to ban these three pesticides. The US government says no",
+      "Opinions | We've never needed Remembrance Day poppies more than right now",
+      "Turkey starts repatriation of captured Islamic State militants: media",
+      "Spain Is Stuck After Sanchez's Election Gamble Backfires Badly",
+      "The biggest wastes of money in 2019",
+      "Mother of missing Florida girl charged; human remains found",
+      "Most distant world ever explored gets new name: Arrokoth",
+      "American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Turkish patrol kills protester amid shaky truce in NE Syria\"\n\"Rockets hit Iraq base with US troops; no word on casualties\"\n\"Thailand wants to ban these three pesticides. The US government says no\"\n\"Opinions | We've never needed Remembrance Day poppies more than right now\"\n\"Turkey starts repatriation of captured Islamic State militants: media\"\n\"Spain Is Stuck After Sanchez's Election Gamble Backfires Badly\"\n\"The biggest wastes of money in 2019\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"Most distant world ever explored gets new name: Arrokoth\"\n\"American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says\"\n\n[Candidate News Title]\n\"Russia Releases Norwegian, Lithuanians in Unusual Spy Swap\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Russia Releases Norwegian, Lithuanians in Unusual Spy Swap\" is likely to detail a recent diplomatic event involving the exchange of prisoners between Russia and Norway, as well as Lithuania. Readers can expect information on the context of the espionage allegations that led to the swap, the identities and backgrounds of the individuals involved, and the implications for international relations between these countries. It may also explore how this event fits into broader trends in geopolitical tensions and negotiations, highlighting the significance of such exchanges in the realm of diplomacy.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 302,
+    "candidate_news_id": "N61442",
+    "candidate_title": "Ukraine 'invisible' as impeachment hearings focus on Washington drama",
+    "user_history_count": 10,
+    "user_history": [
+      "Turkish patrol kills protester amid shaky truce in NE Syria",
+      "Rockets hit Iraq base with US troops; no word on casualties",
+      "Thailand wants to ban these three pesticides. The US government says no",
+      "Opinions | We've never needed Remembrance Day poppies more than right now",
+      "Turkey starts repatriation of captured Islamic State militants: media",
+      "Spain Is Stuck After Sanchez's Election Gamble Backfires Badly",
+      "The biggest wastes of money in 2019",
+      "Mother of missing Florida girl charged; human remains found",
+      "Most distant world ever explored gets new name: Arrokoth",
+      "American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Turkish patrol kills protester amid shaky truce in NE Syria\"\n\"Rockets hit Iraq base with US troops; no word on casualties\"\n\"Thailand wants to ban these three pesticides. The US government says no\"\n\"Opinions | We've never needed Remembrance Day poppies more than right now\"\n\"Turkey starts repatriation of captured Islamic State militants: media\"\n\"Spain Is Stuck After Sanchez's Election Gamble Backfires Badly\"\n\"The biggest wastes of money in 2019\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"Most distant world ever explored gets new name: Arrokoth\"\n\"American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says\"\n\n[Candidate News Title]\n\"Ukraine 'invisible' as impeachment hearings focus on Washington drama\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Ukraine 'invisible' as impeachment hearings focus on Washington drama\" is likely to discuss the current political landscape in the United States, particularly how the ongoing impeachment hearings may be overshadowing international issues such as the situation in Ukraine. You can expect an analysis of the implications of this focus on domestic affairs, potentially exploring how it affects U.S. foreign policy and relations with Ukraine amidst ongoing conflict. The article may also touch on the perspectives of various stakeholders, suggesting that the attention on impeachment could lead to a lack of support for Ukraine during a critical time.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 302,
+    "candidate_news_id": "N44493",
+    "candidate_title": "How Google Interferes With Its Search Algorithms and Changes Your Results",
+    "user_history_count": 10,
+    "user_history": [
+      "Turkish patrol kills protester amid shaky truce in NE Syria",
+      "Rockets hit Iraq base with US troops; no word on casualties",
+      "Thailand wants to ban these three pesticides. The US government says no",
+      "Opinions | We've never needed Remembrance Day poppies more than right now",
+      "Turkey starts repatriation of captured Islamic State militants: media",
+      "Spain Is Stuck After Sanchez's Election Gamble Backfires Badly",
+      "The biggest wastes of money in 2019",
+      "Mother of missing Florida girl charged; human remains found",
+      "Most distant world ever explored gets new name: Arrokoth",
+      "American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Turkish patrol kills protester amid shaky truce in NE Syria\"\n\"Rockets hit Iraq base with US troops; no word on casualties\"\n\"Thailand wants to ban these three pesticides. The US government says no\"\n\"Opinions | We've never needed Remembrance Day poppies more than right now\"\n\"Turkey starts repatriation of captured Islamic State militants: media\"\n\"Spain Is Stuck After Sanchez's Election Gamble Backfires Badly\"\n\"The biggest wastes of money in 2019\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"Most distant world ever explored gets new name: Arrokoth\"\n\"American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says\"\n\n[Candidate News Title]\n\"How Google Interferes With Its Search Algorithms and Changes Your Results\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"How Google Interferes With Its Search Algorithms and Changes Your Results,\" you can expect an exploration of Google's search algorithm modifications and their implications for users. The article is likely to discuss how these changes can affect the relevance and visibility of information, potentially outlining specific examples of algorithm updates and their impacts on search results. Additionally, it may examine the broader consequences of these modifications on user experience and information accessibility, raising questions about transparency and the influence of corporate interests in shaping online content.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 302,
+    "candidate_news_id": "N30280",
+    "candidate_title": "'Holy cow': Jim Jordan and Adam Schiff share heated exchange at impeachment hearing",
+    "user_history_count": 10,
+    "user_history": [
+      "Turkish patrol kills protester amid shaky truce in NE Syria",
+      "Rockets hit Iraq base with US troops; no word on casualties",
+      "Thailand wants to ban these three pesticides. The US government says no",
+      "Opinions | We've never needed Remembrance Day poppies more than right now",
+      "Turkey starts repatriation of captured Islamic State militants: media",
+      "Spain Is Stuck After Sanchez's Election Gamble Backfires Badly",
+      "The biggest wastes of money in 2019",
+      "Mother of missing Florida girl charged; human remains found",
+      "Most distant world ever explored gets new name: Arrokoth",
+      "American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Turkish patrol kills protester amid shaky truce in NE Syria\"\n\"Rockets hit Iraq base with US troops; no word on casualties\"\n\"Thailand wants to ban these three pesticides. The US government says no\"\n\"Opinions | We've never needed Remembrance Day poppies more than right now\"\n\"Turkey starts repatriation of captured Islamic State militants: media\"\n\"Spain Is Stuck After Sanchez's Election Gamble Backfires Badly\"\n\"The biggest wastes of money in 2019\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"Most distant world ever explored gets new name: Arrokoth\"\n\"American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says\"\n\n[Candidate News Title]\n\"'Holy cow': Jim Jordan and Adam Schiff share heated exchange at impeachment hearing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to read about a contentious exchange between Jim Jordan and Adam Schiff during an impeachment hearing, highlighting the political tensions surrounding the proceedings. The discussion may delve into their differing perspectives on the impeachment process, particularly focusing on key arguments raised by both lawmakers. Additionally, the article could provide insights into the broader implications of their confrontation for the ongoing political landscape and public opinion regarding the impeachment inquiry. Overall, the content is expected to emphasize the significance of this exchange in the context of current political events.",
+    "model": "gpt-4o-mini"
+  }
+]

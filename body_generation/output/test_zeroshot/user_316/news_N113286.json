@@ -1,0 +1,21 @@
+{
+  "user_id": 316,
+  "candidate_news_id": "N113286",
+  "candidate_title": "Fashion hits and misses from the 2019 Latin Grammy Awards",
+  "user_history_count": 10,
+  "user_history": [
+    "Insiders predict: NFL week 10 winners",
+    "Nike hit with another damning op-ed: 'I was emotionally and physically abused'",
+    "As L.A. ports automate, some workers are cheering on the robots",
+    "Flight Attendants Have a Secret Language You Didn't Know About",
+    "AP Top 25: LSU landslide No. 1; Minnesota jumps into top 10",
+    "7 Women Share What It's Really Like To Work On A Cruise Ship",
+    "Five questions the second College Football Playoff rankings will answer",
+    "Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary",
+    "Harrods accused of ruining the spirit of Christmas after limiting Santa visits to customers who spend over $2,500",
+    "College football rankings: The Bottom 25 congratulates Jim Delany on his latest masterpiece"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Insiders predict: NFL week 10 winners\"\n\"Nike hit with another damning op-ed: 'I was emotionally and physically abused'\"\n\"As L.A. ports automate, some workers are cheering on the robots\"\n\"Flight Attendants Have a Secret Language You Didn't Know About\"\n\"AP Top 25: LSU landslide No. 1; Minnesota jumps into top 10\"\n\"7 Women Share What It's Really Like To Work On A Cruise Ship\"\n\"Five questions the second College Football Playoff rankings will answer\"\n\"Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary\"\n\"Harrods accused of ruining the spirit of Christmas after limiting Santa visits to customers who spend over $2,500\"\n\"College football rankings: The Bottom 25 congratulates Jim Delany on his latest masterpiece\"\n\n[Candidate News Title]\n\"Fashion hits and misses from the 2019 Latin Grammy Awards\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find an analysis of the notable fashion choices displayed during the 2019 Latin Grammy Awards, highlighting both standout looks and missteps on the red carpet. The piece may feature commentary on the trends observed among attendees, including the use of vibrant colors, unique designs, and celebrity appearances that drew attention. Additionally, it could explore how these fashion statements reflect broader cultural themes within the music industry. Overall, readers can expect a balanced overview of the event's fashion landscape, though specific details on individual outfits may vary.",
+  "model": "gpt-4o-mini"
+}

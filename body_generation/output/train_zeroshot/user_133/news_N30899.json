@@ -1,0 +1,21 @@
+{
+  "user_id": 133,
+  "candidate_news_id": "N30899",
+  "candidate_title": "College gymnast dies following training accident in Connecticut",
+  "user_history_count": 10,
+  "user_history": [
+    "8 of the best and 8 of the worst TV shows that got canceled this year, so far",
+    "Chinese hitmen jailed over repeatedly outsourced murder",
+    "America's pile of uneaten bacon is the biggest in 48 years",
+    "Things aren't looking great for China's economy, and it may only be getting worse",
+    "Networks vying to score first Felicity Huffman's post-prison interview",
+    "GDP growth rose better than expected in the third quarter",
+    "Obama calls out call-out culture: \"That's not activism\"",
+    "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt",
+    "The 50 Best One-Hit Wonders of All Time",
+    "Ellen DeGeneres, Sandra Bullock go after 'celebrity endorsement theft industry' in lawsuit"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"8 of the best and 8 of the worst TV shows that got canceled this year, so far\"\n\"Chinese hitmen jailed over repeatedly outsourced murder\"\n\"America's pile of uneaten bacon is the biggest in 48 years\"\n\"Things aren't looking great for China's economy, and it may only be getting worse\"\n\"Networks vying to score first Felicity Huffman's post-prison interview\"\n\"GDP growth rose better than expected in the third quarter\"\n\"Obama calls out call-out culture: \"That's not activism\"\"\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"The 50 Best One-Hit Wonders of All Time\"\n\"Ellen DeGeneres, Sandra Bullock go after 'celebrity endorsement theft industry' in lawsuit\"\n\n[Candidate News Title]\n\"College gymnast dies following training accident in Connecticut\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the tragic death of a college gymnast following a training accident in Connecticut. Readers might expect to learn about the circumstances surrounding the incident, including details about the gymnast's background, the nature of the training accident, and any statements from the college or gymnastics community. The article could also touch on broader themes, such as the safety measures in place for athletes and the potential impacts of such incidents on collegiate sports programs. Additionally, it may include responses from teammates, coaches, or officials regarding the unfortunate event.",
+  "model": "gpt-4o-mini"
+}

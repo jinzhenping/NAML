@@ -1,0 +1,21 @@
+{
+  "user_id": 128,
+  "candidate_news_id": "N100073",
+  "candidate_title": "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+  "user_history_count": 10,
+  "user_history": [
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "1 Family's Adoption Photo Shoot Is on Point, but the Touching Story Behind It Is Everything",
+    "Caring dalmatians preciously adopt tiny kitten",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Lufthansa strike cancels 1,300 flights, stranding thousands",
+    "Cincinnati Zoo pairs up cute rescue dog Remus and baby cheetah Kris for a 'BFF sleepover'",
+    "Friendly deer plays with dog",
+    "Too Cute! Baby Giraffe at Czech Zoo Makes His First Public Appearance!",
+    "Holocaust survivor under guard amid death threats",
+    "Is Miss USA Ready for Its First Woman In a Wheelchair?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"1 Family's Adoption Photo Shoot Is on Point, but the Touching Story Behind It Is Everything\"\n\"Caring dalmatians preciously adopt tiny kitten\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Lufthansa strike cancels 1,300 flights, stranding thousands\"\n\"Cincinnati Zoo pairs up cute rescue dog Remus and baby cheetah Kris for a 'BFF sleepover'\"\n\"Friendly deer plays with dog\"\n\"Too Cute! Baby Giraffe at Czech Zoo Makes His First Public Appearance!\"\n\"Holocaust survivor under guard amid death threats\"\n\"Is Miss USA Ready for Its First Woman In a Wheelchair?\"\n\n[Candidate News Title]\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family,\" the user can expect an exploration of Prince Harry's choice to wear his poppy in a distinct manner during a recent remembrance event. The piece may provide context regarding the significance of the poppy in commemorating fallen soldiers, while also discussing any potential symbolic meanings behind his choice. Additionally, it could touch upon reactions from the royal family and the public, highlighting how this decision aligns with or diverges from royal traditions.",
+  "model": "gpt-4o-mini"
+}

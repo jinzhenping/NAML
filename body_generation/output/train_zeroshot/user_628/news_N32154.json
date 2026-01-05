@@ -1,0 +1,19 @@
+{
+  "user_id": 628,
+  "candidate_news_id": "N32154",
+  "candidate_title": "Porsche launches into second story of New Jersey building, killing 2",
+  "user_history_count": 8,
+  "user_history": [
+    "Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage",
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween",
+    "John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt",
+    "Bad news for Boeing: Company says more 737 NGs found to have wing cracks",
+    "Lane Kiffin interested in Florida State head coach job"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan King Edmonds and Jim Edmonds Split After 5 Years of Marriage\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Plane crashes into NJ home, igniting fire: 'Everything was just a massive blaze'\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween\"\n\"John Krasinski Shares the Secret to His 9-Year Marriage to Emily Blunt\"\n\"Bad news for Boeing: Company says more 737 NGs found to have wing cracks\"\n\"Lane Kiffin interested in Florida State head coach job\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely reports on a tragic incident involving a Porsche that crashed into the second story of a building in New Jersey, resulting in the deaths of two individuals. Readers may expect details about the circumstances surrounding the crash, including potential causes, the location of the incident, and any information regarding the victims. Additionally, there could be insights into emergency response efforts and the implications of such incidents on local safety regulations or automotive practices. The article may also explore community reactions to this event, though this remains uncertain.",
+  "model": "gpt-4o-mini"
+}

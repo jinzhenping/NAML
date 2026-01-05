@@ -1,0 +1,21 @@
+{
+  "user_id": 223,
+  "candidate_news_id": "N114195",
+  "candidate_title": "Celebrity Christmas albums: From beloved classics to big surprises",
+  "user_history_count": 10,
+  "user_history": [
+    "Amber Portwood strikes plea deal for alleged machete attack",
+    "New Jersey woman sues waiter for spilling wine on her Hermès handbag",
+    "Silent Signs of Colon Cancer",
+    "South Dakota set to execute man who stabbed former co-worker",
+    "Katharine McPhee Shares New Wedding Photo in 70th Birthday Tribute to Husband David Foster",
+    "Meet SCAD, a Major Cause of Heart Attacks in Women 50 and Under",
+    "I looked into 'house hacking' to live for free, but there are a few reasons I've decided it's not for me",
+    "Dallas police: Woman trafficked, sold underage family members for sex",
+    "Counting On's Kendra, Joe Duggar Welcome Baby No. 2",
+    "Everyday heroes step up to help lone Waffle House employee"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Amber Portwood strikes plea deal for alleged machete attack\"\n\"New Jersey woman sues waiter for spilling wine on her Hermès handbag\"\n\"Silent Signs of Colon Cancer\"\n\"South Dakota set to execute man who stabbed former co-worker\"\n\"Katharine McPhee Shares New Wedding Photo in 70th Birthday Tribute to Husband David Foster\"\n\"Meet SCAD, a Major Cause of Heart Attacks in Women 50 and Under\"\n\"I looked into 'house hacking' to live for free, but there are a few reasons I've decided it's not for me\"\n\"Dallas police: Woman trafficked, sold underage family members for sex\"\n\"Counting On's Kendra, Joe Duggar Welcome Baby No. 2\"\n\"Everyday heroes step up to help lone Waffle House employee\"\n\n[Candidate News Title]\n\"Celebrity Christmas albums: From beloved classics to big surprises\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Celebrity Christmas albums: From beloved classics to big surprises,\" you may expect an overview of various Christmas albums released by celebrities over the years. The article could explore a mix of traditional holiday music and contemporary tracks, highlighting standout releases and the artists behind them. It may also discuss how these albums have evolved, possibly featuring insights into the creative processes of the artists or the impact these albums have had on holiday music trends. Overall, the piece is likely to provide a balanced look at the intersection of celebrity culture and holiday music.",
+  "model": "gpt-4o-mini"
+}

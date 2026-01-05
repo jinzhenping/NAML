@@ -1,0 +1,21 @@
+{
+  "user_id": 657,
+  "candidate_news_id": "N100289",
+  "candidate_title": "American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says",
+  "user_history_count": 10,
+  "user_history": [
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "Burger King's new 'Ghost Whopper' is here to haunt your Halloween order",
+    "Tick-borne illness that can cause brain inflammation detected in UK for the first time: officials",
+    "Falcons cut franchise mainstay Matt Bryant",
+    "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+    "Three takeaways from 49ers' road win over Cardinals",
+    "Astronomers may have discovered a new class of tiny black holes",
+    "'The Little Mermaid Live!': TV Review",
+    "Aston Martin DBX Luxury SUV: Price, First Interior Image Released",
+    "Strange balls of ice have covered a beach in Finland"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"Burger King's new 'Ghost Whopper' is here to haunt your Halloween order\"\n\"Tick-borne illness that can cause brain inflammation detected in UK for the first time: officials\"\n\"Falcons cut franchise mainstay Matt Bryant\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Three takeaways from 49ers' road win over Cardinals\"\n\"Astronomers may have discovered a new class of tiny black holes\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Aston Martin DBX Luxury SUV: Price, First Interior Image Released\"\n\"Strange balls of ice have covered a beach in Finland\"\n\n[Candidate News Title]\n\"American ISIS fighter stranded in no-man's to be repatriated to U.S., Turkey says\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the situation surrounding an American ISIS fighter who is reportedly stranded in a no-man's land and is set to be repatriated to the U.S. by Turkey. It may provide details about the fighter's background, including their involvement with ISIS and the circumstances that led to their current predicament. Additionally, the piece could explore the implications of their repatriation for U.S. national security and the legal processes that will follow. The article is likely to include insights from officials or experts on the potential challenges and considerations involved in handling such cases.",
+  "model": "gpt-4o-mini"
+}

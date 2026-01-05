@@ -1,0 +1,21 @@
+{
+  "user_id": 345,
+  "candidate_news_id": "N122640",
+  "candidate_title": "This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.",
+  "user_history_count": 10,
+  "user_history": [
+    "Wrong-way driver killed in crash on U.S. 301 in Riverview",
+    "Opinion: With elimination race on deck, NASCAR champ Joey Logano could have his hands full",
+    "Michael Jordan: Steph Curry is not a Hall of Famer yet",
+    "Frustrated with season so far, Melvin Gordon appears to regret his holdout",
+    "Winners and losers from NBA's opening night",
+    "Martin Truex Jr. gets redemption with Martinsville win",
+    "Former NFL GM blasts Gus Malzahn, Auburn: 'Worst offense I've ever seen'",
+    "Felicity Huffman Smiles as She Begins Community Service Following Prison Release",
+    "Butler, Dragic lead Heat over Suns 124-108",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Wrong-way driver killed in crash on U.S. 301 in Riverview\"\n\"Opinion: With elimination race on deck, NASCAR champ Joey Logano could have his hands full\"\n\"Michael Jordan: Steph Curry is not a Hall of Famer yet\"\n\"Frustrated with season so far, Melvin Gordon appears to regret his holdout\"\n\"Winners and losers from NBA's opening night\"\n\"Martin Truex Jr. gets redemption with Martinsville win\"\n\"Former NFL GM blasts Gus Malzahn, Auburn: 'Worst offense I've ever seen'\"\n\"Felicity Huffman Smiles as She Begins Community Service Following Prison Release\"\n\"Butler, Dragic lead Heat over Suns 124-108\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\n[Candidate News Title]\n\"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack,\" you may expect a detailed analysis of the recent incident involving Myles Garrett and the ensuing debate regarding his conduct. The article is likely to outline the circumstances of the incident, including any relevant game footage or reactions from players and coaches. It could also delve into the implications of a potential suspension, discussing the impact on the team's performance and the league's stance on player safety. Overall, the article may provide insights into the broader context of player discipline in professional sports.",
+  "model": "gpt-4o-mini"
+}

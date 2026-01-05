@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 184,
+    "candidate_news_id": "N29160",
+    "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+    "user_history_count": 10,
+    "user_history": [
+      "This stately home is having the ultimate yard sale",
+      "Far-reaching snowstorm may take shape over US",
+      "Here are the 96 Sears and Kmart stores that are closing next",
+      "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+      "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe",
+      "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+      "Celebrity plastic surgery transformations",
+      "Deadly Arctic blast breaks records set more than 100 years ago",
+      "Sky Bars are coming back to stores and classic candy fans are freaking out",
+      "Comics - 'Pluggers' by Gary Brookins"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"This stately home is having the ultimate yard sale\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\"Celebrity plastic surgery transformations\"\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\"Sky Bars are coming back to stores and classic candy fans are freaking out\"\n\"Comics - 'Pluggers' by Gary Brookins\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If the user clicks on the article titled \"Opinion: Colin Kaepernick is about to get what he deserves: a chance,\" they may expect a detailed analysis of Colin Kaepernick's current situation in the realm of professional sports, particularly regarding his potential return to the NFL. The article could discuss his previous career, the controversies surrounding his protests, and the evolving perspectives on athlete activism. Additionally, it may feature opinions on how recent developments in sports culture and team dynamics could influence his chances of being signed by a team.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 184,
+    "candidate_news_id": "N18190",
+    "candidate_title": "30 Best Black Friday Deals from Costco",
+    "user_history_count": 10,
+    "user_history": [
+      "This stately home is having the ultimate yard sale",
+      "Far-reaching snowstorm may take shape over US",
+      "Here are the 96 Sears and Kmart stores that are closing next",
+      "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+      "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe",
+      "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+      "Celebrity plastic surgery transformations",
+      "Deadly Arctic blast breaks records set more than 100 years ago",
+      "Sky Bars are coming back to stores and classic candy fans are freaking out",
+      "Comics - 'Pluggers' by Gary Brookins"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"This stately home is having the ultimate yard sale\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\"Celebrity plastic surgery transformations\"\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\"Sky Bars are coming back to stores and classic candy fans are freaking out\"\n\"Comics - 'Pluggers' by Gary Brookins\"\n\n[Candidate News Title]\n\"30 Best Black Friday Deals from Costco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, readers can expect to find a curated list of the best Black Friday deals available at Costco, highlighting a diverse range of products. The piece is likely to detail specific categories such as electronics, home goods, and grocery items, providing insights into significant discounts and promotions. Additionally, it may include tips on how to navigate the sales effectively or maximize savings during the shopping event. Overall, the article aims to assist consumers in making informed purchasing decisions amidst the holiday shopping frenzy.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 184,
+    "candidate_news_id": "N82503",
+    "candidate_title": "FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'",
+    "user_history_count": 10,
+    "user_history": [
+      "This stately home is having the ultimate yard sale",
+      "Far-reaching snowstorm may take shape over US",
+      "Here are the 96 Sears and Kmart stores that are closing next",
+      "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+      "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe",
+      "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+      "Celebrity plastic surgery transformations",
+      "Deadly Arctic blast breaks records set more than 100 years ago",
+      "Sky Bars are coming back to stores and classic candy fans are freaking out",
+      "Comics - 'Pluggers' by Gary Brookins"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"This stately home is having the ultimate yard sale\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\"Celebrity plastic surgery transformations\"\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\"Sky Bars are coming back to stores and classic candy fans are freaking out\"\n\"Comics - 'Pluggers' by Gary Brookins\"\n\n[Candidate News Title]\n\"FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses a recent warning issued by the FDA to Dollar Tree regarding the sale of potentially unsafe drugs. It may detail the specific products involved, the reasons for the warning, and any potential health risks associated with these items. Additionally, the article could explore the implications for consumers and the company's response to the FDA's concerns. Overall, readers can expect a factual overview of the situation, including any regulatory measures that may follow.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 184,
+    "candidate_news_id": "N55801",
+    "candidate_title": "High tides surge through Venice, locals rush to protect art",
+    "user_history_count": 10,
+    "user_history": [
+      "This stately home is having the ultimate yard sale",
+      "Far-reaching snowstorm may take shape over US",
+      "Here are the 96 Sears and Kmart stores that are closing next",
+      "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+      "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe",
+      "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+      "Celebrity plastic surgery transformations",
+      "Deadly Arctic blast breaks records set more than 100 years ago",
+      "Sky Bars are coming back to stores and classic candy fans are freaking out",
+      "Comics - 'Pluggers' by Gary Brookins"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"This stately home is having the ultimate yard sale\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\"Celebrity plastic surgery transformations\"\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\"Sky Bars are coming back to stores and classic candy fans are freaking out\"\n\"Comics - 'Pluggers' by Gary Brookins\"\n\n[Candidate News Title]\n\"High tides surge through Venice, locals rush to protect art\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article is likely to discuss the recent high tides affecting Venice, detailing how locals are responding to the situation in order to protect their cultural heritage and artwork. It may provide insights into the specific areas of the city that are most impacted, as well as the historical context of flooding in Venice. Additionally, the article could explore the broader implications of climate change on the city's future and the measures being taken by residents and authorities to mitigate damage during such events.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 184,
+    "candidate_news_id": "N80770",
+    "candidate_title": "Judge agrees Alabama Islamic State recruit is not US citizen",
+    "user_history_count": 10,
+    "user_history": [
+      "This stately home is having the ultimate yard sale",
+      "Far-reaching snowstorm may take shape over US",
+      "Here are the 96 Sears and Kmart stores that are closing next",
+      "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+      "After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe",
+      "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+      "Celebrity plastic surgery transformations",
+      "Deadly Arctic blast breaks records set more than 100 years ago",
+      "Sky Bars are coming back to stores and classic candy fans are freaking out",
+      "Comics - 'Pluggers' by Gary Brookins"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"This stately home is having the ultimate yard sale\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"After Mormon Family's Terror in Mexico, a Message Emerges: No One Is Safe\"\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\"Celebrity plastic surgery transformations\"\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\"Sky Bars are coming back to stores and classic candy fans are freaking out\"\n\"Comics - 'Pluggers' by Gary Brookins\"\n\n[Candidate News Title]\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Judge agrees Alabama Islamic State recruit is not US citizen\" is likely to provide an overview of a legal ruling regarding an individual connected to the Islamic State in Alabama. Readers can expect to find details about the implications of the judge's decision, including the legal arguments presented and the potential consequences for the individual involved. The article may also explore the broader context of citizenship laws in relation to terrorism-related cases, highlighting how this ruling fits into ongoing discussions about national security and immigration.",
+    "model": "gpt-4o-mini"
+  }
+]

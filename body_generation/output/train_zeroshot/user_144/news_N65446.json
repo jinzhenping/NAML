@@ -1,0 +1,18 @@
+{
+  "user_id": 144,
+  "candidate_news_id": "N65446",
+  "candidate_title": "The most exclusive hotel in every state",
+  "user_history_count": 7,
+  "user_history": [
+    "Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care",
+    "Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "Bette Midler and Kathy Najimy Dish on Upcoming 'Hocus Pocus' Sequel and If They'd Be Involved",
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Miguel Cervantes' Wife Reveals Daughter, 3, 'Died in My Arms' After Entering Hospice Care\"\n\"Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"Bette Midler and Kathy Najimy Dish on Upcoming 'Hocus Pocus' Sequel and If They'd Be Involved\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"The most exclusive hotel in every state\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The most exclusive hotel in every state,\" the user may expect to learn about unique and luxurious accommodations across the United States. It is likely to provide a detailed overview of each state's most prestigious hotels, highlighting distinctive features such as exceptional service, exclusive amenities, and architectural significance. The article could also include insights into the locations of these hotels, making it easier for readers to envision potential travel destinations. Overall, the user might seek information that combines both lavish experiences and geographical diversity.",
+  "model": "gpt-4o-mini"
+}

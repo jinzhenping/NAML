@@ -1,0 +1,21 @@
+{
+  "user_id": 47,
+  "candidate_news_id": "N96729",
+  "candidate_title": "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "24 Ways to Shrink Your Belly in 24 Hours",
+    "18 Ingredients Nutritionists Say Should Be Banned From Your Kitchen",
+    "Andy Cohen lost 12 pounds by making this one change...",
+    "This is how much water you need to drink for weight loss",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Lil Pump bit by snake on set of music video",
+    "Must-See Fashion Police Moments to Swoon Over This Week"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"24 Ways to Shrink Your Belly in 24 Hours\"\n\"18 Ingredients Nutritionists Say Should Be Banned From Your Kitchen\"\n\"Andy Cohen lost 12 pounds by making this one change...\"\n\"This is how much water you need to drink for weight loss\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Lil Pump bit by snake on set of music video\"\n\"Must-See Fashion Police Moments to Swoon Over This Week\"\n\n[Candidate News Title]\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely details the tragic circumstances surrounding the death of Atlanta college student Alexis Crawford, who was reportedly choked to death and subsequently found in a park. Readers may expect to learn about the investigation led by local authorities, including any potential suspects or motives behind the crime. The article might also provide context regarding Crawford's background, her college life, and any community reactions to this incident. Additionally, it could explore broader themes related to violence against women and campus safety, although these aspects may vary in emphasis.",
+  "model": "gpt-4o-mini"
+}

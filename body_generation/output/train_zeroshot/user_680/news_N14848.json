@@ -1,0 +1,21 @@
+{
+  "user_id": 680,
+  "candidate_news_id": "N14848",
+  "candidate_title": "Mural of activist Greta Thunberg going up in San Francisco",
+  "user_history_count": 10,
+  "user_history": [
+    "The Navy just revealed the official seal for its newest aircraft carrier",
+    "Catherine Deneuve Hospitalized After Mild Stroke",
+    "Inside the world's largest plane, which has a wingspan longer than a football field and a mysterious new owner",
+    "Justin Theroux Reaches Out to Ex Jennifer Aniston on Instagram for a Good Cause",
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Next Ford F-150 Spied By Motor1.com Reader",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Trump could slap steep tariffs on imported cars next week",
+    "A guide to the 2019 People's Choice Awards nominees' significant others"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Navy just revealed the official seal for its newest aircraft carrier\"\n\"Catherine Deneuve Hospitalized After Mild Stroke\"\n\"Inside the world's largest plane, which has a wingspan longer than a football field and a mysterious new owner\"\n\"Justin Theroux Reaches Out to Ex Jennifer Aniston on Instagram for a Good Cause\"\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Next Ford F-150 Spied By Motor1.com Reader\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Trump could slap steep tariffs on imported cars next week\"\n\"A guide to the 2019 People's Choice Awards nominees' significant others\"\n\n[Candidate News Title]\n\"Mural of activist Greta Thunberg going up in San Francisco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the installation of a mural dedicated to activist Greta Thunberg in San Francisco, highlighting her contributions to environmental activism. It may provide details about the mural's location, the artist behind it, and the significance of Thunberg's message in the context of climate change. Additionally, the piece could explore the local community's response to the mural and its intended impact on raising awareness about environmental issues. Overall, readers can expect a comprehensive overview of this artistic tribute and its broader implications.",
+  "model": "gpt-4o-mini"
+}

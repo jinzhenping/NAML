@@ -1,0 +1,21 @@
+{
+  "user_id": 122,
+  "candidate_news_id": "N11682",
+  "candidate_title": "Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago",
+  "user_history_count": 10,
+  "user_history": [
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "Most Underrated College Football Teams After 9 Weeks: Louisville, SMU, and Others",
+    "Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news",
+    "Walmart's Pre-Holiday Deals Are Live Right Now",
+    "Las Vegas adopts ban on sleeping, camping on streets, sidewalks",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Mezcal vs. Tequila What Are the Differences?",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Happy Friday! What if You Always Had It Off? Why Don't You?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"Most Underrated College Football Teams After 9 Weeks: Louisville, SMU, and Others\"\n\"Melanie Griffith, 62, shows off her insane figure in lingerie selfie, plus more news\"\n\"Walmart's Pre-Holiday Deals Are Live Right Now\"\n\"Las Vegas adopts ban on sleeping, camping on streets, sidewalks\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Mezcal vs. Tequila What Are the Differences?\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Happy Friday! What if You Always Had It Off? Why Don't You?\"\n\n[Candidate News Title]\n\"Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is expected to provide a detailed account of a recent incident involving a plane skidding off the runway at O'Hare Airport in Chicago. It may include descriptions of the circumstances leading up to the event, such as weather conditions or technical issues, as well as the immediate response from airport authorities and emergency services. Additionally, the report could outline any disruptions to flight schedules and provide insights into safety protocols in place at the airport. Overall, the piece is likely to focus on the factual aspects of the incident while highlighting its implications for travelers and airline operations.",
+  "model": "gpt-4o-mini"
+}

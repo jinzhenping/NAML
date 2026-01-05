@@ -1,0 +1,21 @@
+{
+  "user_id": 178,
+  "candidate_news_id": "N53018",
+  "candidate_title": "U.S. Troops Will Die If They Remain in Syria, Bashar Al-Assad Warns",
+  "user_history_count": 10,
+  "user_history": [
+    "Andrew Yang's Campaign Has a Lot of Money. Now What?",
+    "Teen survivor recalls horrifying details of ambush in Mexico that killed 9",
+    "MLB awards week: Our picks for MVP, Cy Young, Rookie of the Year and more",
+    "Dean Foods files for bankruptcy",
+    "Kansas lands commitment from five-star guard Bryce Thompson",
+    "I'm 55 and have no retirement savings: What should I do?",
+    "1990s Mall Rats Will Definitely Remember These Iconic Stores and Activities",
+    "4 reasons you shouldn't max out your 401(k)",
+    "The McLaren Elva Is a $1.7 Million Topless, Windshield-less Hypercar",
+    "My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Andrew Yang's Campaign Has a Lot of Money. Now What?\"\n\"Teen survivor recalls horrifying details of ambush in Mexico that killed 9\"\n\"MLB awards week: Our picks for MVP, Cy Young, Rookie of the Year and more\"\n\"Dean Foods files for bankruptcy\"\n\"Kansas lands commitment from five-star guard Bryce Thompson\"\n\"I'm 55 and have no retirement savings: What should I do?\"\n\"1990s Mall Rats Will Definitely Remember These Iconic Stores and Activities\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"The McLaren Elva Is a $1.7 Million Topless, Windshield-less Hypercar\"\n\"My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.\"\n\n[Candidate News Title]\n\"U.S. Troops Will Die If They Remain in Syria, Bashar Al-Assad Warns\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the implications of Bashar Al-Assad's warning regarding U.S. troops remaining in Syria, focusing on military strategy and regional stability. It may outline the current situation in Syria, including the ongoing conflict and the role of U.S. forces. The piece could also explore potential consequences for both American soldiers and the geopolitical landscape, especially in light of Assad's comments. Additionally, it might provide insights into the broader context of U.S. military involvement in the region and possible future actions.",
+  "model": "gpt-4o-mini"
+}

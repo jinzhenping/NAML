@@ -1,0 +1,21 @@
+{
+  "user_id": 922,
+  "candidate_news_id": "N3664",
+  "candidate_title": "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Companies are experimenting with a 4-day week   and it's working",
+    "Trump Taxes: Appeals Court Rules President Must Turn Over 8 Years of Tax Returns",
+    "15 Work Conversations That Could Cost You Your Job",
+    "What Are Ocular Migraines and How Are They Different from Regular Migraines?",
+    "Families urge Buffalo Wild Wings to adopt 'zero tolerance' policies after racist incident at Illinois restaurant",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "China says have agreed with US to cancel tariffs in different phases",
+    "Here are the new income tax brackets for 2020",
+    "Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Companies are experimenting with a 4-day week   and it's working\"\n\"Trump Taxes: Appeals Court Rules President Must Turn Over 8 Years of Tax Returns\"\n\"15 Work Conversations That Could Cost You Your Job\"\n\"What Are Ocular Migraines and How Are They Different from Regular Migraines?\"\n\"Families urge Buffalo Wild Wings to adopt 'zero tolerance' policies after racist incident at Illinois restaurant\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"China says have agreed with US to cancel tariffs in different phases\"\n\"Here are the new income tax brackets for 2020\"\n\"Trump Seethes After NY Judge Orders Him to Pay $2 Million For Misusing Charitable Funds: 'No Wonder Why We Are All Leaving!'\"\n\n[Candidate News Title]\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Broadway star Laurel Griggs, readers may expect a recounting of her tragic passing at a young age due to an asthma attack. The piece is likely to provide background on her career, detailing her achievements and roles, particularly if she was known for notable performances. Additionally, it could explore the impact of her death on her family, friends, and the Broadway community, as well as discussions around asthma management and awareness for young performers. Overall, the article may aim to honor her memory while highlighting the importance of health considerations in high-pressure environments like theater.",
+  "model": "gpt-4o-mini"
+}

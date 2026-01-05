@@ -1,0 +1,21 @@
+{
+  "user_id": 579,
+  "candidate_news_id": "N48644",
+  "candidate_title": "Brexit donor Arron Banks tells Farage to stand down in Labour marginal seats",
+  "user_history_count": 10,
+  "user_history": [
+    "The News In Cartoons",
+    "NFL: Referees 'held accountable' after criticism from Bucs coach Arians",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "Arizona 'Wizard Rock,' missing 1-ton boulder, mysteriously returns",
+    "Will Freddie Kitchens be one and done in Cleveland?",
+    "The News In Cartoons",
+    "The News In Cartoons",
+    "Republican Lt. Gov. Reeves wins Mississippi governor's race",
+    "The News In Cartoons",
+    "Dez Bryant plans to reach out to NFL teams in two weeks"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The News In Cartoons\"\n\"NFL: Referees 'held accountable' after criticism from Bucs coach Arians\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"Arizona 'Wizard Rock,' missing 1-ton boulder, mysteriously returns\"\n\"Will Freddie Kitchens be one and done in Cleveland?\"\n\"The News In Cartoons\"\n\"The News In Cartoons\"\n\"Republican Lt. Gov. Reeves wins Mississippi governor's race\"\n\"The News In Cartoons\"\n\"Dez Bryant plans to reach out to NFL teams in two weeks\"\n\n[Candidate News Title]\n\"Brexit donor Arron Banks tells Farage to stand down in Labour marginal seats\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent comments made by Brexit donor Arron Banks regarding Nigel Farage's role in Labour marginal seats, particularly in light of the upcoming political landscape. It may provide insights into Banks' rationale for urging Farage to step back, as well as the potential implications for both their political strategies. Additionally, the piece might explore the reactions from various political factions and how this development could influence voter sentiments in key areas. Overall, it seems poised to offer an analysis of the shifting dynamics within the UK political scene.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 672,
+  "candidate_news_id": "N33983",
+  "candidate_title": "Jorge Vergara, former owner of Chivas USA, dies at 64",
+  "user_history_count": 10,
+  "user_history": [
+    "The most beautiful main street in every state",
+    "'Baby Trump' balloon slashed at Alabama appearance",
+    "'Baby Trump' balloon slashed at Alabama appearance",
+    "Fastest American Muscle Cars EVER",
+    "Fire Destroys Classic Porsche Cars And Parts Worth $3 Million",
+    "Here's the Best Small Town in Every State",
+    "Dodge Put the Wrong Wheels on 173 New Challengers and Chargers",
+    "Barn Find: Large Collection Of Pontiac Firebirds Uncovered",
+    "Sears is laying off hundreds of corporate employees after announcing 96 store closings",
+    "Johnson opens door to subpoenaing whistleblower, Schiff, Bidens"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The most beautiful main street in every state\"\n\"'Baby Trump' balloon slashed at Alabama appearance\"\n\"'Baby Trump' balloon slashed at Alabama appearance\"\n\"Fastest American Muscle Cars EVER\"\n\"Fire Destroys Classic Porsche Cars And Parts Worth $3 Million\"\n\"Here's the Best Small Town in Every State\"\n\"Dodge Put the Wrong Wheels on 173 New Challengers and Chargers\"\n\"Barn Find: Large Collection Of Pontiac Firebirds Uncovered\"\n\"Sears is laying off hundreds of corporate employees after announcing 96 store closings\"\n\"Johnson opens door to subpoenaing whistleblower, Schiff, Bidens\"\n\n[Candidate News Title]\n\"Jorge Vergara, former owner of Chivas USA, dies at 64\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Jorge Vergara, former owner of Chivas USA, is likely to provide an overview of his life and career, highlighting his contributions to soccer in the United States and Mexico. It may discuss his role in the establishment and operation of Chivas USA, including key moments during his ownership. Additionally, the piece could explore his impact on the sport, including any initiatives he championed or controversies he faced. Overall, readers can expect a balanced account of Vergara's legacy, with a focus on both his achievements and challenges in the world of soccer.",
+  "model": "gpt-4o-mini"
+}

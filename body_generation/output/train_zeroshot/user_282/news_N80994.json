@@ -1,0 +1,21 @@
+{
+  "user_id": 282,
+  "candidate_news_id": "N80994",
+  "candidate_title": "Thanksgiving side dishes: 11 unique recipes to try this season",
+  "user_history_count": 10,
+  "user_history": [
+    "Bears' Khalil Mack calls out Eagles C Jason Kelce's controversial tactics in offsides penalties",
+    "The News In Cartoons",
+    "Stunning photos of redheads from around the world",
+    "Winners, losers from Cowboys' win over Giants on 'Monday Night Football'",
+    "The News In Cartoons",
+    "The News In Cartoons",
+    "Saquon Barkley's dad to wear Jets jersey, root for both teams on Sunday",
+    "Snow crab sells for record price in Japan",
+    "Luke Falk files injury grievance against Jets",
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Bears' Khalil Mack calls out Eagles C Jason Kelce's controversial tactics in offsides penalties\"\n\"The News In Cartoons\"\n\"Stunning photos of redheads from around the world\"\n\"Winners, losers from Cowboys' win over Giants on 'Monday Night Football'\"\n\"The News In Cartoons\"\n\"The News In Cartoons\"\n\"Saquon Barkley's dad to wear Jets jersey, root for both teams on Sunday\"\n\"Snow crab sells for record price in Japan\"\n\"Luke Falk files injury grievance against Jets\"\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\n[Candidate News Title]\n\"Thanksgiving side dishes: 11 unique recipes to try this season\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on \"Thanksgiving side dishes: 11 unique recipes to try this season,\" they may expect to find a curated list of innovative and distinct recipes that go beyond traditional Thanksgiving fare. The article is likely to provide detailed descriptions of each dish, including ingredients and preparation methods, catering to those looking to enhance their holiday meals. Additionally, it could emphasize seasonal ingredients and suggest how these unique dishes can complement classic Thanksgiving staples, appealing to users interested in culinary creativity during festive gatherings.",
+  "model": "gpt-4o-mini"
+}

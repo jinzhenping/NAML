@@ -1,0 +1,21 @@
+{
+  "user_id": 378,
+  "candidate_news_id": "N13761",
+  "candidate_title": "Celebrity plastic surgery transformations",
+  "user_history_count": 10,
+  "user_history": [
+    "Celebs celebrate Halloween 2019",
+    "Bebe Rexha Claps Back at Body Shamers With Kelly Clarkson: 'A Number Doesn't Define You'",
+    "Ellen DeGeneres, Sandra Bullock go after 'celebrity endorsement theft industry' in lawsuit",
+    "Disabled Dog Surrendered to Shelter Takes First Steps to Finding a Home Thanks to Wheelchair",
+    "Butternut Squash + Bacon = Fall's Favorite Riff on Macaroni & Cheese",
+    "The best & worst states for US veterans",
+    "8-year-old girl lands record trout, gives it cute name",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Snow crab sells for record price in Japan"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebs celebrate Halloween 2019\"\n\"Bebe Rexha Claps Back at Body Shamers With Kelly Clarkson: 'A Number Doesn't Define You'\"\n\"Ellen DeGeneres, Sandra Bullock go after 'celebrity endorsement theft industry' in lawsuit\"\n\"Disabled Dog Surrendered to Shelter Takes First Steps to Finding a Home Thanks to Wheelchair\"\n\"Butternut Squash + Bacon = Fall's Favorite Riff on Macaroni & Cheese\"\n\"The best & worst states for US veterans\"\n\"8-year-old girl lands record trout, gives it cute name\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Snow crab sells for record price in Japan\"\n\n[Candidate News Title]\n\"Celebrity plastic surgery transformations\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Celebrity plastic surgery transformations,\" the user can expect an exploration of various celebrity cases involving significant changes due to cosmetic procedures. The content is likely to highlight before-and-after images of well-known figures, discussing the motivations behind their choices and the societal implications of these transformations. Additionally, the article may delve into the public's perception of beauty standards and how they influence celebrity culture. While it is uncertain, the piece could also provide insights from experts in the field of plastic surgery, shedding light on trends and techniques that are popular among celebrities today.",
+  "model": "gpt-4o-mini"
+}

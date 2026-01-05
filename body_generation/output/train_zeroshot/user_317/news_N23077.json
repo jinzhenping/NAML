@@ -1,0 +1,21 @@
+{
+  "user_id": 317,
+  "candidate_news_id": "N23077",
+  "candidate_title": "The most famous celebrity kids born this decade",
+  "user_history_count": 10,
+  "user_history": [
+    "Former US Senator Kay Hagan dead at 66",
+    "Will the Dolphins go 0-16? Ranking Miami's six best chances to avoid a winless 2019 season",
+    "Selena Gomez Deletes Photo Praising Kim Kardashian's SKIMS, Shares a Taylor Swift Post Instead",
+    "Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights",
+    "Trump hints that dog injured in al-Baghdadi raid will visit White House",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Jimmy Garoppolo tells Erin Andrews being 8-0 'feels great, baby'",
+    "The most notable celebrity deaths of the decade",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former US Senator Kay Hagan dead at 66\"\n\"Will the Dolphins go 0-16? Ranking Miami's six best chances to avoid a winless 2019 season\"\n\"Selena Gomez Deletes Photo Praising Kim Kardashian's SKIMS, Shares a Taylor Swift Post Instead\"\n\"Lupita Nyong'o Reprises Her 'Us' Character Red to Terrify Fans at Halloween Horror Nights\"\n\"Trump hints that dog injured in al-Baghdadi raid will visit White House\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Jimmy Garoppolo tells Erin Andrews being 8-0 'feels great, baby'\"\n\"The most notable celebrity deaths of the decade\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\n[Candidate News Title]\n\"The most famous celebrity kids born this decade\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In exploring the topic of the most famous celebrity kids born this decade, the user is likely expecting an overview of notable offspring of high-profile celebrities, highlighting their parents' backgrounds and any significant public appearances or achievements. The article may discuss how these children have been raised in the public eye, touching on their unique experiences and the influence of their parents' fame. Additionally, it could delve into their ventures, such as modeling, acting, or social media presence, shedding light on how they are carving out their own identities. Overall, the piece is likely to provide insights into the intersection of celebrity culture and family dynamics.",
+  "model": "gpt-4o-mini"
+}

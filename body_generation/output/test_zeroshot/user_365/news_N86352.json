@@ -1,0 +1,21 @@
+{
+  "user_id": 365,
+  "candidate_news_id": "N86352",
+  "candidate_title": "I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)",
+  "user_history_count": 10,
+  "user_history": [
+    "John Witherspoon Dies: Comedian & 'Friday' Star Was 77",
+    "Whitney Way Thore Responds After Trolls Shamed Her for Attempting a Power Snatch",
+    "Why do you bruise easily? What it means and when to see a doctor",
+    "Kelly Ripa Channeled 'Old Town Road' for Halloween",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Dean Foods files for bankruptcy",
+    "100 Best-Ever Thanksgiving Pies",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "I ordered clothes from those cheap online stores, and I'm not sold",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"John Witherspoon Dies: Comedian & 'Friday' Star Was 77\"\n\"Whitney Way Thore Responds After Trolls Shamed Her for Attempting a Power Snatch\"\n\"Why do you bruise easily? What it means and when to see a doctor\"\n\"Kelly Ripa Channeled 'Old Town Road' for Halloween\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Dean Foods files for bankruptcy\"\n\"100 Best-Ever Thanksgiving Pies\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"I ordered clothes from those cheap online stores, and I'm not sold\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\n[Candidate News Title]\n\"I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!),\" you may expect to read about a straightforward strategy for managing overeating during dinner. The article is likely to outline a specific practice that can be implemented weekly, possibly focusing on meal preparation or mindful eating techniques that take little time to integrate into a Sunday routine. Additionally, it could provide insights into how this approach could help improve overall dietary habits, potentially leading to healthier eating choices throughout the week.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,18 @@
+{
+  "user_id": 846,
+  "candidate_news_id": "N123968",
+  "candidate_title": "Ford v Ferrari: the real story",
+  "user_history_count": 7,
+  "user_history": [
+    "Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days",
+    "Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence",
+    "19 Mysterious Old Home Features That Aren't Useful Anymore",
+    "Courteney Cox Reunites with Jennifer Aniston and Matt LeBlanc in Friends Selfie: 'Rare Night'",
+    "35 celebrities who don't identify as either straight or gay",
+    "Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn",
+    "Singer Lauren Alaina Has Lost 25 Lbs. on Dancing with the Stars: 'None of My Clothes Fit'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Felicity Huffman Is Scheduled to Be Released from Prison on October 27 After Serving 13 Days\"\n\"Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence\"\n\"19 Mysterious Old Home Features That Aren't Useful Anymore\"\n\"Courteney Cox Reunites with Jennifer Aniston and Matt LeBlanc in Friends Selfie: 'Rare Night'\"\n\"35 celebrities who don't identify as either straight or gay\"\n\"Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn\"\n\"Singer Lauren Alaina Has Lost 25 Lbs. on Dancing with the Stars: 'None of My Clothes Fit'\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Ford v Ferrari: the real story\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Ford v Ferrari: the real story\" is likely to explore the true events behind the 2019 film, focusing on the intense rivalry between the Ford Motor Company and Ferrari during the 1960s. Readers may expect an examination of the historical context of the Le Mans race, key figures involved such as Carroll Shelby and Ken Miles, and how their efforts contributed to Ford's automotive legacy. The piece could also delve into the challenges faced during the development of the Ford GT40, providing insights that extend beyond the cinematic portrayal.",
+  "model": "gpt-4o-mini"
+}

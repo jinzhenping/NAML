@@ -1,0 +1,21 @@
+{
+  "user_id": 60,
+  "candidate_news_id": "N62800",
+  "candidate_title": "9 renovation tips to boost resale value",
+  "user_history_count": 10,
+  "user_history": [
+    "The Best Things to Add to Your Home For Fall Décor",
+    "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+    "35 Landscaping Plants You'll Love If You Hate Fall Yard Work",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post",
+    "New details on why Meg Ryan, John Mellencamp split, plus more news",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Prince Harry and Meghan Markle are taking a royal respite",
+    "All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news",
+    "Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Best Things to Add to Your Home For Fall Décor\"\n\"1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef\"\n\"35 Landscaping Plants You'll Love If You Hate Fall Yard Work\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post\"\n\"New details on why Meg Ryan, John Mellencamp split, plus more news\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Prince Harry and Meghan Markle are taking a royal respite\"\n\"All the details on Jennifer Lawrence and Cooke Maroney's honeymoon, plus more news\"\n\"Next week's Arctic blast will be so cold, forecasters expect it to break 170 records across US\"\n\n[Candidate News Title]\n\"9 renovation tips to boost resale value\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"9 renovation tips to boost resale value,\" the user is likely to find practical advice aimed at enhancing the financial return on home improvements. The content may include specific renovation projects that are known to appeal to prospective buyers, such as kitchen upgrades, bathroom remodels, or landscaping enhancements. Additionally, the article could discuss the importance of prioritizing renovations based on market trends and buyer preferences. Overall, readers may expect a blend of strategic insights and actionable tips to help maximize their home's value in a competitive real estate market.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 437,
+  "candidate_news_id": "N8236",
+  "candidate_title": "Best and Worst Run States in America: A Survey of All 50",
+  "user_history_count": 10,
+  "user_history": [
+    "'He's working': White House says Trump is not watching first public impeachment hearing",
+    "Cowboys to be among NFL teams in attendance for Colin Kaepernick's workout",
+    "Takeaways so far from House public impeachment hearings",
+    "Impeachment Could Save Democracy; Americans Should Embrace It",
+    "Senate GOP waves Trump off early motion to dismiss impeachment charges",
+    "Bill Taylor Reveals New Trump Call on Ukraine: Impeachment Takeaways",
+    "Trump juggles statecraft and impeachment on a historic day",
+    "Former Acting AG: Partisan impeachment of Trump sets a dangerous precedent",
+    "Please stop calling the impeachment proceedings a 'coup'",
+    "Hue Jackson will run Colin Kaepernick's passing drills, 11 teams have said they'll attend"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'He's working': White House says Trump is not watching first public impeachment hearing\"\n\"Cowboys to be among NFL teams in attendance for Colin Kaepernick's workout\"\n\"Takeaways so far from House public impeachment hearings\"\n\"Impeachment Could Save Democracy; Americans Should Embrace It\"\n\"Senate GOP waves Trump off early motion to dismiss impeachment charges\"\n\"Bill Taylor Reveals New Trump Call on Ukraine: Impeachment Takeaways\"\n\"Trump juggles statecraft and impeachment on a historic day\"\n\"Former Acting AG: Partisan impeachment of Trump sets a dangerous precedent\"\n\"Please stop calling the impeachment proceedings a 'coup'\"\n\"Hue Jackson will run Colin Kaepernick's passing drills, 11 teams have said they'll attend\"\n\n[Candidate News Title]\n\"Best and Worst Run States in America: A Survey of All 50\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Best and Worst Run States in America: A Survey of All 50\" is likely to provide an analytical overview of various states in the U.S., evaluating their governance and operational efficiency. Readers may expect to find a ranking system based on criteria such as economic performance, public safety, education, and healthcare. The article could also include specific examples of states that excel or struggle in these areas, potentially offering insights into the implications of effective versus ineffective governance.",
+  "model": "gpt-4o-mini"
+}

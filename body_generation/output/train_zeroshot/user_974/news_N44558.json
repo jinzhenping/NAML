@@ -1,0 +1,21 @@
+{
+  "user_id": 974,
+  "candidate_news_id": "N44558",
+  "candidate_title": "Watch the Lamborghini Huracán Evo's Crazy Acceleration to 180 MPH",
+  "user_history_count": 10,
+  "user_history": [
+    "13-year-old charged with two murders escapes custody in North Carolina",
+    "Why You Shouldn't Ever Go for the Cheapest Brake Pads",
+    "Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track",
+    "Woman accused of sneaking into Bronx Zoo lion exhibit arraigned",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "This Record-Breaking 1800-HP Land Speed Car Is Coming up for Sale",
+    "Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"13-year-old charged with two murders escapes custody in North Carolina\"\n\"Why You Shouldn't Ever Go for the Cheapest Brake Pads\"\n\"Watch Gordon Ramsay Take a Dozen of His Hottest Cars to the Track\"\n\"Woman accused of sneaking into Bronx Zoo lion exhibit arraigned\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"This Record-Breaking 1800-HP Land Speed Car Is Coming up for Sale\"\n\"Jim Jordan assigned to Intel Committee ahead of Trump impeachment hearings\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"Gilroy mom suspected of killing 2-year-old daughter allegedly told dispatcher she 'just snapped'\"\n\n[Candidate News Title]\n\"Watch the Lamborghini Huracán Evo's Crazy Acceleration to 180 MPH\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find an overview of the Lamborghini Huracán Evo's impressive performance, particularly its acceleration capabilities, which may include technical specifications and comparisons to other high-performance vehicles. The content could detail how the car achieves its rapid acceleration to 180 MPH, possibly highlighting its engine power, design features, and technological advancements that contribute to its speed. Additionally, the article may feature insights from automotive experts or enthusiasts, discussing the driving experience and the car's place in the supercar market.",
+  "model": "gpt-4o-mini"
+}

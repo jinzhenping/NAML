@@ -1,0 +1,17 @@
+{
+  "user_id": 35,
+  "candidate_news_id": "N31102",
+  "candidate_title": "Teresa Giudice Opens Up About Her Future With Husband Joe and the Cheating Rumors (Exclusive)",
+  "user_history_count": 6,
+  "user_history": [
+    "5 NBA stars who could get traded this season (plus one who probably won't)",
+    "Potential trade targets for all 32 NFL teams at the 2019 deadline, from A.J. Green to Trent Williams",
+    "10 players receive qualifying offers",
+    "The HoopsHype Daily: Cavs GM shoots down Kevin Love trade rumors",
+    "Antonio Brown meeting with NFL next week",
+    "5 bold predictions for MLB's offseason"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"5 NBA stars who could get traded this season (plus one who probably won't)\"\n\"Potential trade targets for all 32 NFL teams at the 2019 deadline, from A.J. Green to Trent Williams\"\n\"10 players receive qualifying offers\"\n\"The HoopsHype Daily: Cavs GM shoots down Kevin Love trade rumors\"\n\"Antonio Brown meeting with NFL next week\"\n\"5 bold predictions for MLB's offseason\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Teresa Giudice Opens Up About Her Future With Husband Joe and the Cheating Rumors (Exclusive)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the user may expect to read about Teresa Giudice's perspectives on her relationship with her husband, Joe, particularly in light of ongoing rumors regarding infidelity. It is likely that the piece will explore their current marital dynamics and any public statements Giudice has made about their future together. Additionally, the article could provide context about the cheating allegations, including how they have impacted their relationship and any potential implications for their family life. Overall, the focus will likely be on clarifying the couple's status amidst speculation.",
+  "model": "gpt-4o-mini"
+}

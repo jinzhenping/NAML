@@ -1,0 +1,21 @@
+{
+  "user_id": 253,
+  "candidate_news_id": "N10802",
+  "candidate_title": "See the most expensive watch ever sold at auction",
+  "user_history_count": 10,
+  "user_history": [
+    "Todd and Julie Chrisley Fire Back at Estranged Daughter Lindsie's 'Dr. Phil' Interview (Exclusive)",
+    "Science Says Only a Third of People Experience This Health Downside of Breakups",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "What 72 celebrities look like without a lick of makeup",
+    "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+    "50 Facts So Genius You'll Feel Like Einstein",
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Todd and Julie Chrisley Fire Back at Estranged Daughter Lindsie's 'Dr. Phil' Interview (Exclusive)\"\n\"Science Says Only a Third of People Experience This Health Downside of Breakups\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"What 72 celebrities look like without a lick of makeup\"\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"50 Facts So Genius You'll Feel Like Einstein\"\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Elizabeth Warren to Bill Gates: I'll explain my wealth tax to you\"\n\n[Candidate News Title]\n\"See the most expensive watch ever sold at auction\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"See the most expensive watch ever sold at auction,\" the user may expect a detailed exploration of the watch's specifications, history, and the auction process that led to its record-breaking sale. The piece could provide insights into the significance of the watch within the luxury market, potentially highlighting its brand, unique features, and the previous owner if notable. Additionally, it is likely to discuss the implications of this sale for collectors and enthusiasts, as well as trends in high-value watch auctions.",
+  "model": "gpt-4o-mini"
+}

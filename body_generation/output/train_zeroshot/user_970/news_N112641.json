@@ -1,0 +1,21 @@
+{
+  "user_id": 970,
+  "candidate_news_id": "N112641",
+  "candidate_title": "My Immigrant Parents Wanted A Better Life For Me. This Is Why I Chose My Path Over Theirs.",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump calls Dem candidates 'clowns,' claims none can defeat him in 2020",
+    "Former NFL lineman Justin Bannan arrested for attempted murder",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "Phoenix police officer involved in viral video stop of couple fired",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "In A Reversal, Joe Biden Wants A Super PAC",
+    "Nationals closer Sean Doolittle says he won't join team's White House visit",
+    "Rodgers rips Packers' road focus after blowout loss to Bolts",
+    "What Gas Stations Were Like In 1957"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump calls Dem candidates 'clowns,' claims none can defeat him in 2020\"\n\"Former NFL lineman Justin Bannan arrested for attempted murder\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"Phoenix police officer involved in viral video stop of couple fired\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"In A Reversal, Joe Biden Wants A Super PAC\"\n\"Nationals closer Sean Doolittle says he won't join team's White House visit\"\n\"Rodgers rips Packers' road focus after blowout loss to Bolts\"\n\"What Gas Stations Were Like In 1957\"\n\n[Candidate News Title]\n\"My Immigrant Parents Wanted A Better Life For Me. This Is Why I Chose My Path Over Theirs.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"My Immigrant Parents Wanted A Better Life For Me. This Is Why I Chose My Path Over Theirs\" is likely to explore the personal narrative of an individual reflecting on their immigrant background and the aspirations their parents had for them. Readers can expect insights into the challenges faced by immigrant families and the author's decision-making process in navigating their identity and career path. The piece may also touch on themes of cultural heritage, sacrifice, and the pursuit of personal goals, providing a thoughtful context for understanding the complexities of immigrant experiences.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 383,
+  "candidate_news_id": "N55944",
+  "candidate_title": "4 injured in shooting at adult club in Kansas City, Missouri",
+  "user_history_count": 10,
+  "user_history": [
+    "Boris Johnson wins key Brexit bill vote but faces another",
+    "Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say",
+    "Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family",
+    "Helen Hunt Posts First Pic Following Car Accident: 'Back at Work'",
+    "Orlando Scandrick rips Eagles: They have 'accountability issues'",
+    "Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Man's trip to a cheese shop helps unravel missing persons case",
+    "Anderson Cooper to Steve Bannon: You know this is bull",
+    "President Trump says UFC reception was 'like walking into a Trump Rally'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Boris Johnson wins key Brexit bill vote but faces another\"\n\"Four flight attendants were arrested in Miami's airport after bringing in thousands in cash, police say\"\n\"Here's Why Harry and Meghan's Latest Interview Could Be the Final Straw for the Royal Family\"\n\"Helen Hunt Posts First Pic Following Car Accident: 'Back at Work'\"\n\"Orlando Scandrick rips Eagles: They have 'accountability issues'\"\n\"Mitch McConnell snubbed by Elijah Cummings' pallbearer in handshake line at U.S. Capitol ceremony\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Man's trip to a cheese shop helps unravel missing persons case\"\n\"Anderson Cooper to Steve Bannon: You know this is bull\"\n\"President Trump says UFC reception was 'like walking into a Trump Rally'\"\n\n[Candidate News Title]\n\"4 injured in shooting at adult club in Kansas City, Missouri\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely reports on a shooting incident that occurred at an adult club in Kansas City, Missouri, resulting in injuries to four individuals. Readers can expect details surrounding the event, including the time and location of the shooting, any ongoing investigations by law enforcement, and statements from witnesses or officials. Additionally, the article may explore the broader implications of such incidents in nightlife venues or discuss community responses to violence. Given the user's interest in current events and political implications, there could be an analysis of how this event ties into larger conversations about public safety.",
+  "model": "gpt-4o-mini"
+}

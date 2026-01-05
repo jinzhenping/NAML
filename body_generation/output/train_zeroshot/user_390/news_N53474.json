@@ -1,0 +1,21 @@
+{
+  "user_id": 390,
+  "candidate_news_id": "N53474",
+  "candidate_title": "Rep. Tim Ryan endorses Biden in Democratic primary",
+  "user_history_count": 10,
+  "user_history": [
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "1950s Palm Springs home boasts bevy of breeze blocks for $599K",
+    "Niagara Falls: Boat stuck on rocks 101 years dislodged",
+    "12 Things U.S. Presidents Have to Pay for on Their Own",
+    "When this Echo Park bungalow court vanishes, so does the $878 rent",
+    "The penthouse of NYC's Woolworth Building just got a $31 million price cut. Check out 'The Pinnacle,' which occupies the top 5 floors of the iconic, green-roofed skyscraper.",
+    "Johnson, in phone call, urges Trump to lift tariffs on scotch whisky",
+    "Shake Shack stock tanks after it says it will temporarily shutter locations in 2020 for upgrades",
+    "Spiking health problems in US millennials may make them poorer",
+    "The 32 most affordable winter vacation spots in the US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"1950s Palm Springs home boasts bevy of breeze blocks for $599K\"\n\"Niagara Falls: Boat stuck on rocks 101 years dislodged\"\n\"12 Things U.S. Presidents Have to Pay for on Their Own\"\n\"When this Echo Park bungalow court vanishes, so does the $878 rent\"\n\"The penthouse of NYC's Woolworth Building just got a $31 million price cut. Check out 'The Pinnacle,' which occupies the top 5 floors of the iconic, green-roofed skyscraper.\"\n\"Johnson, in phone call, urges Trump to lift tariffs on scotch whisky\"\n\"Shake Shack stock tanks after it says it will temporarily shutter locations in 2020 for upgrades\"\n\"Spiking health problems in US millennials may make them poorer\"\n\"The 32 most affordable winter vacation spots in the US\"\n\n[Candidate News Title]\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Rep. Tim Ryan endorses Biden in Democratic primary,\" you might expect to read about Rep. Tim Ryan's rationale for supporting President Biden in the upcoming Democratic primary. The article could detail Ryan's political background, his views on key issues, and how his endorsement aligns with the current political landscape. Additionally, it may explore the implications of this endorsement for both Biden's campaign and the broader Democratic Party, providing insights into potential voter reactions and strategic considerations.",
+  "model": "gpt-4o-mini"
+}

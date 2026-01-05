@@ -1,0 +1,21 @@
+{
+  "user_id": 92,
+  "candidate_news_id": "N129416",
+  "candidate_title": "Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties",
+  "user_history_count": 10,
+  "user_history": [
+    "South Florida principal who made controversial comments about the Holocaust is fired",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "She Fought for Muslim Women. Then She Was Found Dead.",
+    "430 Bags Of Heroin Seized, 2 Arrested In Manchester: Police",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka",
+    "Mother of missing Florida girl charged; human remains found",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Police searching park with bloodhounds for missing woman"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"South Florida principal who made controversial comments about the Holocaust is fired\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"She Fought for Muslim Women. Then She Was Found Dead.\"\n\"430 Bags Of Heroin Seized, 2 Arrested In Manchester: Police\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Elephant dies of 'exhaustion' from carrying tourists in Sri Lanka\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Police searching park with bloodhounds for missing woman\"\n\n[Candidate News Title]\n\"Taylor Swift Rep Hits Back at Big Machine, Claims She's Actually Owed $7.9 Million in Unpaid Royalties\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to click on the article about Taylor Swift's representative addressing claims from Big Machine regarding unpaid royalties, you can expect to find details about the ongoing legal and financial disputes between Swift and her former record label. The article is likely to outline the context of the claims, including specific figures mentioned, and may provide insights into the implications for Swift's career and her relationship with the label. Additionally, it could explore broader themes regarding artist rights and financial transparency in the music industry.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 837,
+  "candidate_news_id": "N38902",
+  "candidate_title": "Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Nearly 500 Prisoners Freed on a Single Day",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Holocaust survivor under guard amid death threats",
+    "Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?",
+    "Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years",
+    "Harry Potter's Childhood Home in England Is Now on Airbnb",
+    "Five Cheese Board Recipes For Every College Experience",
+    "From beards to bricks, history's strangest taxes",
+    "How to Split an Apple in Half With Your Bare Hands"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Nearly 500 Prisoners Freed on a Single Day\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Holocaust survivor under guard amid death threats\"\n\"Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?\"\n\"Dubrovnik Has So Many Tourists It May Ban New Restaurants for Five Years\"\n\"Harry Potter's Childhood Home in England Is Now on Airbnb\"\n\"Five Cheese Board Recipes For Every College Experience\"\n\"From beards to bricks, history's strangest taxes\"\n\"How to Split an Apple in Half With Your Bare Hands\"\n\n[Candidate News Title]\n\"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the user can expect to read about Carrie Underwood's remarks on her relationship with fellow country artist Miranda Lambert. It is likely to highlight their supportive friendship and collaboration within the music industry, illustrating how they uplift each other in both personal and professional contexts. The piece may also touch upon their shared experiences as women in a predominantly male-driven genre, providing insights into their camaraderie and the dynamics of their careers. Overall, the content will likely reflect themes of collaboration and mutual respect among artists.",
+  "model": "gpt-4o-mini"
+}

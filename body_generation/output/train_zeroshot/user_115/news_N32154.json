@@ -1,0 +1,21 @@
+{
+  "user_id": 115,
+  "candidate_news_id": "N32154",
+  "candidate_title": "Porsche launches into second story of New Jersey building, killing 2",
+  "user_history_count": 10,
+  "user_history": [
+    "Florida man demands deputies take down his mug shot. They replaced it with his booking photo.",
+    "Behind-the-scenes facts about 'Sesame Street'",
+    "The Best Trader Joe's Desserts for Your Thanksgiving Dinner Table",
+    "The Infertility Secret I Kept From My Mother",
+    "Man who inherited 6 figures shares advice he'd give his younger self",
+    "Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Is Miss USA Ready for Its First Woman In a Wheelchair?",
+    "Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week",
+    "I ate one of Meghan Markle's favorite foods from Toronto here's what I thought"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Florida man demands deputies take down his mug shot. They replaced it with his booking photo.\"\n\"Behind-the-scenes facts about 'Sesame Street'\"\n\"The Best Trader Joe's Desserts for Your Thanksgiving Dinner Table\"\n\"The Infertility Secret I Kept From My Mother\"\n\"Man who inherited 6 figures shares advice he'd give his younger self\"\n\"Shawn Johnson Names Newborn Daughter After 'the Most Incredible Person I Know'\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Is Miss USA Ready for Its First Woman In a Wheelchair?\"\n\"Why Everyone in the Royal Family Is Wearing a Red Poppy Pin This Week\"\n\"I ate one of Meghan Markle's favorite foods from Toronto here's what I thought\"\n\n[Candidate News Title]\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely reports on a tragic incident involving a Porsche that crashed into the second story of a building in New Jersey, resulting in two fatalities. Readers can expect details regarding the circumstances of the accident, including possible causes and the response from local authorities. The article may also provide information about the victims and any impact this event has on the community. Additionally, it could explore broader themes related to vehicle safety and urban driving challenges, especially in relation to high-performance cars.",
+  "model": "gpt-4o-mini"
+}

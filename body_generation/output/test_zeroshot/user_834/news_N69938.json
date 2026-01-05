@@ -1,0 +1,21 @@
+{
+  "user_id": 834,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "Former NFL lineman Justin Bannan arrested for attempted murder",
+    "TobyMac says late son 'had an untamable grand personality,' shares last text exchange",
+    "Cornell student, 18, found dead in gorge after frat party, reports say",
+    "25 Foods and Drinks That Are Wrecking Your Teeth and Gums",
+    "The 20 best gifts of 2019",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'",
+    "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+    "Is retirement dying? The old work model is disappearing for Boomers, Gen Xers"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Former NFL lineman Justin Bannan arrested for attempted murder\"\n\"TobyMac says late son 'had an untamable grand personality,' shares last text exchange\"\n\"Cornell student, 18, found dead in gorge after frat party, reports say\"\n\"25 Foods and Drinks That Are Wrecking Your Teeth and Gums\"\n\"The 20 best gifts of 2019\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'\"\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\"Is retirement dying? The old work model is disappearing for Boomers, Gen Xers\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article about Meghan Markle and Hillary Clinton spending time together at Frogmore Cottage, they may expect to read about the context of their meeting, including any topics of discussion or collaboration that might have occurred during their time together. The article could provide insight into their relationship, particularly how it reflects their respective public personas and advocacy efforts. Additionally, it is likely to touch on the significance of the location and any media coverage surrounding their friendship, highlighting what this gathering might imply for their influence in social and political spheres.",
+  "model": "gpt-4o-mini"
+}

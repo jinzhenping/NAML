@@ -1,0 +1,17 @@
+{
+  "user_id": 139,
+  "candidate_news_id": "N43450",
+  "candidate_title": "American suspected of ISIS connections trapped in no man's land between Turkish, Greek borders: reports",
+  "user_history_count": 6,
+  "user_history": [
+    "See McQueen's Bullitt Mustang In Charlotte Before Auction",
+    "2021 Toyota Mirai Concept Revealed: Ugly Duckling Becomes Beautiful Swan",
+    "Confused dog can't find hiding kitten",
+    "Most famous musician born the same year as you",
+    "How Often Should You Change Synthetic Oil?",
+    "Watch And Listen As Insane 9.5-Liter LS V12 Engine Comes To Life"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"See McQueen's Bullitt Mustang In Charlotte Before Auction\"\n\"2021 Toyota Mirai Concept Revealed: Ugly Duckling Becomes Beautiful Swan\"\n\"Confused dog can't find hiding kitten\"\n\"Most famous musician born the same year as you\"\n\"How Often Should You Change Synthetic Oil?\"\n\"Watch And Listen As Insane 9.5-Liter LS V12 Engine Comes To Life\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"American suspected of ISIS connections trapped in no man's land between Turkish, Greek borders: reports\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide an overview of an American individual suspected of having connections to ISIS, currently caught in a precarious situation at the borders between Turkey and Greece. Readers may expect details about the circumstances leading to this person's entrapment, including any relevant geopolitical tensions in the area. The piece could also explore the implications of such situations for international security and border control. Additionally, it may contain insights into the individual's background and how they ended up in this no man's land, though specifics may vary.",
+  "model": "gpt-4o-mini"
+}

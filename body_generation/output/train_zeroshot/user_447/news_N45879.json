@@ -1,0 +1,21 @@
+{
+  "user_id": 447,
+  "candidate_news_id": "N45879",
+  "candidate_title": "Corporate whistleblowers can make millions, and a select few are turning it into a business model",
+  "user_history_count": 10,
+  "user_history": [
+    "K-9 Officer Meets the Woman Who Provided the Bulletproof Vest That Saved Him",
+    "Six deaths in one family over 14 years. Police say they have found their killer: The daughter-in-law.",
+    "Returning home to nothing: Destruction after the California wildfires",
+    "After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car",
+    "Trump, Newsom wildfire clash came days after Newsom lauded president as 'partner'",
+    "Man stabbed to death over Popeyes chicken sandwich",
+    "2 dead, 14 injured following New Mexico Navajo religious ceremony: report",
+    "Buffalo Wild Wings employee dies after exposure to 'common' cleaning agent, 10 others hospitalized",
+    "Hundreds arrested ahead of verdict on Indian holy site",
+    "Texas small plane crash was gender reveal gone wrong, NTSB finds"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"K-9 Officer Meets the Woman Who Provided the Bulletproof Vest That Saved Him\"\n\"Six deaths in one family over 14 years. Police say they have found their killer: The daughter-in-law.\"\n\"Returning home to nothing: Destruction after the California wildfires\"\n\"After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car\"\n\"Trump, Newsom wildfire clash came days after Newsom lauded president as 'partner'\"\n\"Man stabbed to death over Popeyes chicken sandwich\"\n\"2 dead, 14 injured following New Mexico Navajo religious ceremony: report\"\n\"Buffalo Wild Wings employee dies after exposure to 'common' cleaning agent, 10 others hospitalized\"\n\"Hundreds arrested ahead of verdict on Indian holy site\"\n\"Texas small plane crash was gender reveal gone wrong, NTSB finds\"\n\n[Candidate News Title]\n\"Corporate whistleblowers can make millions, and a select few are turning it into a business model\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely explores the phenomenon of corporate whistleblowers who have turned their disclosures into lucrative business models. Readers may expect a discussion on the legal and financial implications of whistleblowing, including how individuals can earn significant rewards for exposing wrongdoing within corporations. The piece may also highlight notable cases of successful whistleblowers and the challenges they face, such as retaliation or legal battles. Additionally, it could provide insights into the motivations behind whistleblowing and its impact on corporate governance.",
+  "model": "gpt-4o-mini"
+}

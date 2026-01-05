@@ -1,0 +1,21 @@
+{
+  "user_id": 739,
+  "candidate_news_id": "N2750",
+  "candidate_title": "Man cuffed for eating sandwich on train platform gets an apology",
+  "user_history_count": 10,
+  "user_history": [
+    "Michigan apples being recalled in eight states for possible Listeria contamination",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "This Mom Had a Hilarious Response to a Man Who Told Her to 'Cover Up' While Breastfeeding in Public",
+    "Subtropical Storm Rebekah forms in north Atlantic",
+    "15-year-old boy charged with attempted murder in Little Village shooting that wounded 7-year-old trick-or-treater",
+    "Florida air show crash: Pilot killed when plane crashes",
+    "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+    "Bette Midler mocks Lori Loughlin's college admission scandal",
+    "California authorities found and destroyed $1 billion worth of marijuana plants",
+    "Alexandria Ocasio-Cortez to join Bernie Sanders on campaign trail in Iowa"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Michigan apples being recalled in eight states for possible Listeria contamination\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"This Mom Had a Hilarious Response to a Man Who Told Her to 'Cover Up' While Breastfeeding in Public\"\n\"Subtropical Storm Rebekah forms in north Atlantic\"\n\"15-year-old boy charged with attempted murder in Little Village shooting that wounded 7-year-old trick-or-treater\"\n\"Florida air show crash: Pilot killed when plane crashes\"\n\"1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef\"\n\"Bette Midler mocks Lori Loughlin's college admission scandal\"\n\"California authorities found and destroyed $1 billion worth of marijuana plants\"\n\"Alexandria Ocasio-Cortez to join Bernie Sanders on campaign trail in Iowa\"\n\n[Candidate News Title]\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Man cuffed for eating sandwich on train platform gets an apology,\" you can expect to read about an incident involving a man who was detained by authorities for consuming food in a public transport area. The article is likely to provide details on the circumstances surrounding the event, including any relevant rules or regulations about eating in such locations. It may also discuss the subsequent apology issued by officials, possibly highlighting public reactions to the incident and sparking a conversation about enforcement practices in public spaces.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 686,
+  "candidate_news_id": "N86352",
+  "candidate_title": "I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)",
+  "user_history_count": 10,
+  "user_history": [
+    "Halloween tales from the ER: Doctors share their spooky stories",
+    "Grey's Recap: Till Death Do Us Part",
+    "As Warren Gains in Race, Wall Street Sounds the Alarm",
+    "Before his execution, a death row inmate told his victim's family he forgives them",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "We Had a Babysitter Come to Our Hotel Room at Disney World, and It Was SO Worth It",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "Teresa Giudice Opens Up About Her Future With Husband Joe and the Cheating Rumors (Exclusive)",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "Celine Dion Shares What She Misses Most About Late Husband Rene Angelil"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Halloween tales from the ER: Doctors share their spooky stories\"\n\"Grey's Recap: Till Death Do Us Part\"\n\"As Warren Gains in Race, Wall Street Sounds the Alarm\"\n\"Before his execution, a death row inmate told his victim's family he forgives them\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"We Had a Babysitter Come to Our Hotel Room at Disney World, and It Was SO Worth It\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Teresa Giudice Opens Up About Her Future With Husband Joe and the Cheating Rumors (Exclusive)\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"Celine Dion Shares What She Misses Most About Late Husband Rene Angelil\"\n\n[Candidate News Title]\n\"I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you choose to read \"I Overate at Dinner Until I Started Doing This 1 Simple Thing on Sundays (It Takes 10 Minutes!),\" you might expect a practical guide focused on managing overeating, particularly in social situations like dinner. The article could outline a straightforward, time-efficient strategy that can be implemented weekly to help control food intake. You may find specific tips or routines that emphasize mindfulness or preparation techniques that enhance self-discipline at meals. Overall, it likely aims to provide actionable insights for healthier eating habits.",
+  "model": "gpt-4o-mini"
+}

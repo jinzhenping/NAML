@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 266,
+    "candidate_news_id": "N112536",
+    "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+    "user_history_count": 10,
+    "user_history": [
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+      "Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago",
+      "Man cuffed for eating sandwich on train platform gets an apology",
+      "Shakira reflects on her career-threatening injury, depression in 2017",
+      "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+      "A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia",
+      "This is Chick-fil-A's most-ordered menu item",
+      "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+      "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+      "People Pull Together To Save A Frightened Dog Loose On Highway"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"Shakira reflects on her career-threatening injury, depression in 2017\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"People Pull Together To Save A Frightened Dog Loose On Highway\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely discusses a specific location in the United States that has experienced unusually warm temperatures, consistently exceeding 80 degrees since March. Readers can expect to learn about the geographic characteristics of this area, as well as potential implications of such weather patterns on local lifestyles and ecosystems. The article may also explore how this prolonged warmth compares to seasonal averages and could include insights from meteorologists or residents about the impact on daily life and activities.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 266,
+    "candidate_news_id": "N73774",
+    "candidate_title": "11 Regional Thanksgiving Recipes That Food Bloggers Swear By",
+    "user_history_count": 10,
+    "user_history": [
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+      "Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago",
+      "Man cuffed for eating sandwich on train platform gets an apology",
+      "Shakira reflects on her career-threatening injury, depression in 2017",
+      "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+      "A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia",
+      "This is Chick-fil-A's most-ordered menu item",
+      "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+      "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+      "People Pull Together To Save A Frightened Dog Loose On Highway"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"Shakira reflects on her career-threatening injury, depression in 2017\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"People Pull Together To Save A Frightened Dog Loose On Highway\"\n\n[Candidate News Title]\n\"11 Regional Thanksgiving Recipes That Food Bloggers Swear By\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to find a collection of Thanksgiving recipes curated by various food bloggers, highlighting regional specialties that reflect diverse culinary traditions. The recipes may provide unique twists on classic dishes, showcasing ingredients that are popular in different parts of the country. Additionally, the article could offer insights into the backgrounds of the bloggers or the significance of these recipes in their respective regions. Readers may also expect practical cooking tips or suggestions for meal preparation to enhance their holiday celebrations.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 266,
+    "candidate_news_id": "N122775",
+    "candidate_title": "I'm A Queer Woman Dating A Trans Man   & No One Knows",
+    "user_history_count": 10,
+    "user_history": [
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+      "Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago",
+      "Man cuffed for eating sandwich on train platform gets an apology",
+      "Shakira reflects on her career-threatening injury, depression in 2017",
+      "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+      "A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia",
+      "This is Chick-fil-A's most-ordered menu item",
+      "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+      "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+      "People Pull Together To Save A Frightened Dog Loose On Highway"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"Shakira reflects on her career-threatening injury, depression in 2017\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"People Pull Together To Save A Frightened Dog Loose On Highway\"\n\n[Candidate News Title]\n\"I'm A Queer Woman Dating A Trans Man   & No One Knows\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article likely explores the personal experiences of a queer woman in a relationship with a trans man, discussing the dynamics of their relationship and the challenges they may face in societal perceptions. Readers might expect insights into their daily life, how they navigate their identities together, and the importance of communication and understanding in their partnership. The piece could also touch on broader themes of gender identity and sexuality, while reflecting on the author's journey of acceptance and love.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 266,
+    "candidate_news_id": "N100425",
+    "candidate_title": "The most talked about movie moments of the 2010s",
+    "user_history_count": 10,
+    "user_history": [
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+      "Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago",
+      "Man cuffed for eating sandwich on train platform gets an apology",
+      "Shakira reflects on her career-threatening injury, depression in 2017",
+      "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+      "A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia",
+      "This is Chick-fil-A's most-ordered menu item",
+      "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+      "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+      "People Pull Together To Save A Frightened Dog Loose On Highway"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"Shakira reflects on her career-threatening injury, depression in 2017\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"People Pull Together To Save A Frightened Dog Loose On Highway\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"The most talked about movie moments of the 2010s\" is likely to provide an overview of significant scenes and pivotal points from popular films released during that decade. Readers may expect a discussion of how these moments influenced popular culture, shaped audience perceptions, or became iconic in cinematic history. The article could also highlight notable performances or directorial choices that contributed to these memorable scenes. Additionally, it may include commentary on audience reactions and the lasting impact these moments have had on the film industry.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 266,
+    "candidate_news_id": "N48476",
+    "candidate_title": "Why you're not rich: A financial therapist explains the mindset standing between you and your money goals",
+    "user_history_count": 10,
+    "user_history": [
+      "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+      "Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago",
+      "Man cuffed for eating sandwich on train platform gets an apology",
+      "Shakira reflects on her career-threatening injury, depression in 2017",
+      "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+      "A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia",
+      "This is Chick-fil-A's most-ordered menu item",
+      "Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle",
+      "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+      "People Pull Together To Save A Frightened Dog Loose On Highway"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"Shakira reflects on her career-threatening injury, depression in 2017\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"A man lost 400,000 frequent flyer miles for sneaking a fat cat onto his flight in Russia\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"Selena Gomez Opens Up About Being Body Shamed for Gaining Weight Amidst Lupus Battle\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"People Pull Together To Save A Frightened Dog Loose On Highway\"\n\n[Candidate News Title]\n\"Why you're not rich: A financial therapist explains the mindset standing between you and your money goals\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user is likely to find insights from a financial therapist who discusses the psychological barriers that can hinder one's ability to achieve financial success. It may explore common mindsets and beliefs that prevent individuals from reaching their money goals, offering practical advice on how to overcome these obstacles. The article could also include examples or case studies to illustrate how changing one’s perspective on money can lead to improved financial outcomes. Overall, the content aims to provide a thoughtful examination of the relationship between mindset and financial well-being.",
+    "model": "gpt-4o-mini"
+  }
+]

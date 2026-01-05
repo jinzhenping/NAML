@@ -1,0 +1,21 @@
+{
+  "user_id": 241,
+  "candidate_news_id": "N10544",
+  "candidate_title": "13 Best Fall Superfoods for Weight Loss",
+  "user_history_count": 10,
+  "user_history": [
+    "Infected toe stops R. Kelly from attending court hearing",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "Democrats push candidates to fully commit to 2020 nominee",
+    "Why President Trump's kids are probably celebrating his move to Florida",
+    "Warren Leads Tight Iowa Race as Biden Fades, Poll Finds",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "The Sante Fe High School massacre suspect isn't fit to stand trial and will get psychiatric treatment, attorney says",
+    "Katie Hill's office receives white powder in envelope, but it tests negative for harmful toxins",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Yang on possible Bloomberg run: 'There are limits to what money can do'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Infected toe stops R. Kelly from attending court hearing\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"Democrats push candidates to fully commit to 2020 nominee\"\n\"Why President Trump's kids are probably celebrating his move to Florida\"\n\"Warren Leads Tight Iowa Race as Biden Fades, Poll Finds\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"The Sante Fe High School massacre suspect isn't fit to stand trial and will get psychiatric treatment, attorney says\"\n\"Katie Hill's office receives white powder in envelope, but it tests negative for harmful toxins\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Yang on possible Bloomberg run: 'There are limits to what money can do'\"\n\n[Candidate News Title]\n\"13 Best Fall Superfoods for Weight Loss\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"13 Best Fall Superfoods for Weight Loss,\" the user may expect to find a detailed overview of various seasonal foods that are beneficial for weight management. It is likely to include a list of foods that are particularly nutritious and effective for promoting a healthy weight, along with their specific health benefits and potential recipes or serving suggestions. The article may also discuss how these superfoods fit into a balanced diet and provide insights on incorporating them into daily meals during the fall season.",
+  "model": "gpt-4o-mini"
+}

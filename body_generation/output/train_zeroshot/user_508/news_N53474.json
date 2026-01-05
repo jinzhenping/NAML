@@ -1,0 +1,21 @@
+{
+  "user_id": 508,
+  "candidate_news_id": "N53474",
+  "candidate_title": "Rep. Tim Ryan endorses Biden in Democratic primary",
+  "user_history_count": 10,
+  "user_history": [
+    "The 50 Most Common Last Names in America",
+    "Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet",
+    "How the Panthers will approach their breakup with Cam Newton before 2020 season",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "They Are Racist; Some of Them Have Guns. Inside the White Supremacist Group Hiding in Plain Sight.",
+    "Snow crab sells for record price in Japan",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 50 Most Common Last Names in America\"\n\"Presenting: The 41 All-Time Most Stunning Dresses From the People's Choice Awards Red Carpet\"\n\"How the Panthers will approach their breakup with Cam Newton before 2020 season\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"100+ Funny White Elephant Gifts That'll Leave Everyone Laughing Hard This Holiday Season\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"They Are Racist; Some of Them Have Guns. Inside the White Supremacist Group Hiding in Plain Sight.\"\n\"Snow crab sells for record price in Japan\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\n[Candidate News Title]\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to read about Representative Tim Ryan's endorsement of President Biden in the upcoming Democratic primary. The piece is likely to explore the implications of this endorsement for both Ryan's political positioning and the broader Democratic landscape as the election approaches. It may also provide context on Ryan's previous political stances and how this endorsement aligns with party unity efforts. Additionally, the article could discuss potential reactions from other Democratic candidates and party members, highlighting the strategic significance of such endorsements in primary elections.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 566,
+  "candidate_news_id": "N63391",
+  "candidate_title": "A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000",
+  "user_history_count": 10,
+  "user_history": [
+    "Jordan: Republicans Will Subpoena Whistleblower for Public Hearing",
+    "A white restaurant owner admitted to enslaving a black man. He got 10 years in prison.",
+    "Reporter Can't Stop Laughing After Cat Interrupts News Segment",
+    "Only Two Percent of the World's Population Have This Trait",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Today in History: November 8",
+    "The economic picture is darkening in states critical to Trump's reelection bid",
+    "Ivanka Trump: Whistleblower's motives more important than ID",
+    "Man Pulled From Path Of BART Train Grateful To His Rescuer",
+    "Hill and Vindman Testimony: Key Excerpts From Impeachment Inquiry Transcripts"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jordan: Republicans Will Subpoena Whistleblower for Public Hearing\"\n\"A white restaurant owner admitted to enslaving a black man. He got 10 years in prison.\"\n\"Reporter Can't Stop Laughing After Cat Interrupts News Segment\"\n\"Only Two Percent of the World's Population Have This Trait\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Today in History: November 8\"\n\"The economic picture is darkening in states critical to Trump's reelection bid\"\n\"Ivanka Trump: Whistleblower's motives more important than ID\"\n\"Man Pulled From Path Of BART Train Grateful To His Rescuer\"\n\"Hill and Vindman Testimony: Key Excerpts From Impeachment Inquiry Transcripts\"\n\n[Candidate News Title]\n\"A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the sale of a decommissioned nuclear missile complex in Arizona, highlighting its historical significance and the implications of its sale. Readers may expect details about the location, the condition of the complex, and any unique features that might attract potential buyers. Additionally, the article could explore the reasons behind the sale and any regulatory or safety considerations involved in purchasing such a property. It may also touch on the broader context of military infrastructure and its transformation in the post-Cold War era.",
+  "model": "gpt-4o-mini"
+}

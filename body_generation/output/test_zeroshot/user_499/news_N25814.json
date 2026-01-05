@@ -1,0 +1,21 @@
+{
+  "user_id": 499,
+  "candidate_news_id": "N25814",
+  "candidate_title": "Video shows a Boeing 737 plane carrying 196 people burst into flames just after landing at an Egyptian airport",
+  "user_history_count": 10,
+  "user_history": [
+    "Why Trump's tariffs haven't revitalized American steelmakers",
+    "South Dakota executes man in '92 slaying of former co-worker",
+    "IHSA Challenges Ruling That Allowed CPS Cross-Country Runners To Advance Despite Recent Teachers' Strike",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Snow crab sells for record price in Japan",
+    "Rare 1838 coin could sell for $500K",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why Trump's tariffs haven't revitalized American steelmakers\"\n\"South Dakota executes man in '92 slaying of former co-worker\"\n\"IHSA Challenges Ruling That Allowed CPS Cross-Country Runners To Advance Despite Recent Teachers' Strike\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Lady Gaga Opens Up to Oprah About Trauma, Self-Harm, and Choosing Kindness\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Snow crab sells for record price in Japan\"\n\"Rare 1838 coin could sell for $500K\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\n[Candidate News Title]\n\"Video shows a Boeing 737 plane carrying 196 people burst into flames just after landing at an Egyptian airport\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely reports on a significant incident involving a Boeing 737 that caught fire shortly after landing at an Egyptian airport, which could raise concerns about aviation safety and emergency response protocols. Readers may expect details about the incident, including the flight's origin, the number of passengers and crew on board, and any injuries or casualties resulting from the fire. Additionally, the article may provide context regarding the airline's safety record and reactions from authorities, while also exploring potential implications for air travel in the region.",
+  "model": "gpt-4o-mini"
+}

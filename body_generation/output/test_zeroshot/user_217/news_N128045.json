@@ -1,0 +1,21 @@
+{
+  "user_id": 217,
+  "candidate_news_id": "N128045",
+  "candidate_title": "How to Watch the Leonid Meteor Shower This Weekend",
+  "user_history_count": 10,
+  "user_history": [
+    "World's largest treehouse burns to the ground",
+    "These are the Most Luxurious SUVs You Can Buy",
+    "Northern Michigan father of 7 wins $80M Powerball jackpot",
+    "Trump records 'strongly corroborate' sex assault claims, accuser says",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "Kanye West, with debt piling up, thanks God for $68 million tax refund",
+    "Vanna White hosts 'Wheel of Fortune' after Sajak has surgery",
+    "See what your favorite stars look like without makeup",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "The 1 reason you shouldn't hesitate to claim Social Security early"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"World's largest treehouse burns to the ground\"\n\"These are the Most Luxurious SUVs You Can Buy\"\n\"Northern Michigan father of 7 wins $80M Powerball jackpot\"\n\"Trump records 'strongly corroborate' sex assault claims, accuser says\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"Kanye West, with debt piling up, thanks God for $68 million tax refund\"\n\"Vanna White hosts 'Wheel of Fortune' after Sajak has surgery\"\n\"See what your favorite stars look like without makeup\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\n[Candidate News Title]\n\"How to Watch the Leonid Meteor Shower This Weekend\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"How to Watch the Leonid Meteor Shower This Weekend,\" the user can expect a detailed guide on the upcoming meteor shower, including the best times and locations for optimal viewing. It may provide tips on how to prepare for the event, such as finding a dark area away from city lights and checking the weather forecast. Additionally, the article is likely to include information on the history and significance of the Leonid meteor shower, as well as what makes this particular event noteworthy. Overall, the user will likely find practical advice and background context to enhance their viewing experience.",
+  "model": "gpt-4o-mini"
+}

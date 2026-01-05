@@ -1,0 +1,21 @@
+{
+  "user_id": 72,
+  "candidate_news_id": "N129969",
+  "candidate_title": "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+  "user_history_count": 10,
+  "user_history": [
+    "John Collins issues statement after being suspended 25 games for PED use",
+    "Aubrey O'Day Responded to Critics Who Say Plastic Surgery Has Dramatically Changed Her Appearance",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "Kristen Stewart on Rupert Sanders affair: 'The slut-shaming that went down was so absurd'",
+    "Katie Holmes Talks About That Bra and Cardigan Moment",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"John Collins issues statement after being suspended 25 games for PED use\"\n\"Aubrey O'Day Responded to Critics Who Say Plastic Surgery Has Dramatically Changed Her Appearance\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"Kristen Stewart on Rupert Sanders affair: 'The slut-shaming that went down was so absurd'\"\n\"Katie Holmes Talks About That Bra and Cardigan Moment\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\n[Candidate News Title]\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Chrissy Teigen's weekend activities, the user can expect a detailed recap of her recent social media interactions and public appearances, particularly focusing on her responses to critics or comments made about her. The piece is likely to highlight the context of her “clapback” moments, offering insight into her approach to handling public scrutiny. Additionally, it may provide examples of her engagement with fans and the broader implications of her remarks on celebrity culture and social media dynamics. Overall, the article could present a balanced view of Teigen's recent endeavors and her influence in the entertainment sphere.",
+  "model": "gpt-4o-mini"
+}

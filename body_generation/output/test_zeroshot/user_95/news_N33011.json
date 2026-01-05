@@ -1,0 +1,21 @@
+{
+  "user_id": 95,
+  "candidate_news_id": "N33011",
+  "candidate_title": "What Chrissy Teigen Eats in a Day to Stay Fit and Glowing",
+  "user_history_count": 10,
+  "user_history": [
+    "Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'",
+    "Lance Altimeter Is A Delicious Drop-In Truck Camper Debuting At SEMA",
+    "Deer-like animal thought lost to science photographed for first time in 30 years",
+    "The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping",
+    "Cat \"repeatedly\" breaks his friends out of animal shelter",
+    "Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media",
+    "Cherry disappointed with MacLean's apology: 'He buried me'",
+    "23 Worst Things You Can Say to a New Parent",
+    "The Top Thanksgiving Recipe from Every State",
+    "A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dean Martin's Daughter Speaks Out About John Legend's New Version of 'Baby, It's Cold Outside'\"\n\"Lance Altimeter Is A Delicious Drop-In Truck Camper Debuting At SEMA\"\n\"Deer-like animal thought lost to science photographed for first time in 30 years\"\n\"The NFL Hot Seat: Sean McVay ran out of magic, and Jared Goff isn't helping\"\n\"Cat \"repeatedly\" breaks his friends out of animal shelter\"\n\"Le'Veon Bell's advice to Antonio Brown: Try not to do too much over social media\"\n\"Cherry disappointed with MacLean's apology: 'He buried me'\"\n\"23 Worst Things You Can Say to a New Parent\"\n\"The Top Thanksgiving Recipe from Every State\"\n\"A decommissioned nuclear missile complex in Arizona that was abandoned for decades is now on sale for $400,000\"\n\n[Candidate News Title]\n\"What Chrissy Teigen Eats in a Day to Stay Fit and Glowing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"What Chrissy Teigen Eats in a Day to Stay Fit and Glowing,\" the user is likely expecting an overview of Teigen's daily dietary habits, focusing on her approach to nutrition and wellness. The content may detail specific meals and snacks she enjoys, along with insights into her food choices that contribute to her health and appearance. Additionally, it could explore any particular dietary philosophy she follows, such as balance or moderation. The article may also include tips or recommendations for readers interested in adopting similar eating habits, although this aspect is uncertain.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 348,
+  "candidate_news_id": "N10683",
+  "candidate_title": "MVP or not, Mike Trout deserves better",
+  "user_history_count": 10,
+  "user_history": [
+    "McDonald's new CEO doesn't own a single share of the company",
+    "Evander Kane sued by hotel for gambling debt built during playoffs",
+    "Trump Tax Return Case Confronts Supreme Court With a Momentous Choice",
+    "Poll: Majority expects Trump to win in 2020",
+    "Why Alabama must beat LSU to make College Football Playoff",
+    "Fresh Off the Boat Canceled After Six Seasons",
+    "These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED",
+    "2019 Rookie of the Year: Breaking down the finalists",
+    "10 Funny Christmas Gifts to Make Your Friends Giggle",
+    "Bloomberg to pass on Iowa, NH, focus on Super Tuesday states"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"McDonald's new CEO doesn't own a single share of the company\"\n\"Evander Kane sued by hotel for gambling debt built during playoffs\"\n\"Trump Tax Return Case Confronts Supreme Court With a Momentous Choice\"\n\"Poll: Majority expects Trump to win in 2020\"\n\"Why Alabama must beat LSU to make College Football Playoff\"\n\"Fresh Off the Boat Canceled After Six Seasons\"\n\"These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED\"\n\"2019 Rookie of the Year: Breaking down the finalists\"\n\"10 Funny Christmas Gifts to Make Your Friends Giggle\"\n\"Bloomberg to pass on Iowa, NH, focus on Super Tuesday states\"\n\n[Candidate News Title]\n\"MVP or not, Mike Trout deserves better\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"MVP or not, Mike Trout deserves better\" is likely to explore the current standing and achievements of baseball player Mike Trout, particularly in relation to his MVP status and overall career. It may discuss his performance metrics, highlight his contributions to the team, and contrast them with the recognition he receives from the league and media. Readers might expect an analysis of the reasons behind Trout's perceived lack of appreciation despite his talent, as well as insights into the broader implications for player recognition in sports. The article could also speculate on the impact of these factors on Trout's legacy and future career prospects.",
+  "model": "gpt-4o-mini"
+}

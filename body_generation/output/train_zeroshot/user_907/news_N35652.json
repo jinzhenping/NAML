@@ -1,0 +1,21 @@
+{
+  "user_id": 907,
+  "candidate_news_id": "N35652",
+  "candidate_title": "Bolivia's Jeanine Anez declares herself acting president as Evo Morales vows to fight from abroad",
+  "user_history_count": 10,
+  "user_history": [
+    "Simone Biles Shares Sweet Birthday Tribute for \"Man of My Dreams\" Stacey Ervin Jr.",
+    "Body of missing Alabama girl found; 2 being charged",
+    "Nurses reveal 10 things they wish they could tell patients, but can't",
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "The states where taxpayers should worry most about pensions",
+    "Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say",
+    "Solange Knowles splits with husband ahead of anniversary",
+    "Tarek El Moussa: I'm 'Looking Forward' to Knowing Christina Anstead's Son",
+    "Salmonella linked to ground beef",
+    "30 Thanksgiving Casserole Recipes"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Simone Biles Shares Sweet Birthday Tribute for \"Man of My Dreams\" Stacey Ervin Jr.\"\n\"Body of missing Alabama girl found; 2 being charged\"\n\"Nurses reveal 10 things they wish they could tell patients, but can't\"\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"The states where taxpayers should worry most about pensions\"\n\"Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say\"\n\"Solange Knowles splits with husband ahead of anniversary\"\n\"Tarek El Moussa: I'm 'Looking Forward' to Knowing Christina Anstead's Son\"\n\"Salmonella linked to ground beef\"\n\"30 Thanksgiving Casserole Recipes\"\n\n[Candidate News Title]\n\"Bolivia's Jeanine Anez declares herself acting president as Evo Morales vows to fight from abroad\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Bolivia's Jeanine Añez declaring herself acting president, the user may expect to read about the political ramifications of her announcement, particularly in the context of Evo Morales's response from abroad. The piece is likely to detail the circumstances leading to Añez's declaration, including any significant events or unrest in Bolivia that prompted this leadership change. Additionally, it could explore the implications for Bolivian governance and international relations, as well as the reactions from various political factions within the country.",
+  "model": "gpt-4o-mini"
+}

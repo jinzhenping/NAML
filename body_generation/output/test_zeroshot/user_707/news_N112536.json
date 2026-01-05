@@ -1,0 +1,21 @@
+{
+  "user_id": 707,
+  "candidate_news_id": "N112536",
+  "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+  "user_history_count": 10,
+  "user_history": [
+    "Chinese pilot suspended after woman poses in cockpit with drinks",
+    "This pilot influencer is giving her nearly 500,000 Instagram followers an inside look at the world of aviation",
+    "Mickelson's streak of 26 years in the top 50 comes to an end",
+    "Airline Struggles to Explain Why Plane's Cracked Window Was Fixed With Tape",
+    "NBA fines Clippers $50K for Kawhi 'load management' drama",
+    "The captain becomes a player as Tiger Woods picks himself",
+    "Woman who jumped into Bronx Zoo lion exhibit arrested for trespassing",
+    "Charles Howell III takes family on 'once-in-a-lifetime' trip",
+    "FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says",
+    "California teen killed in gang-related shooting, 2 people charged with murder, police say"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chinese pilot suspended after woman poses in cockpit with drinks\"\n\"This pilot influencer is giving her nearly 500,000 Instagram followers an inside look at the world of aviation\"\n\"Mickelson's streak of 26 years in the top 50 comes to an end\"\n\"Airline Struggles to Explain Why Plane's Cracked Window Was Fixed With Tape\"\n\"NBA fines Clippers $50K for Kawhi 'load management' drama\"\n\"The captain becomes a player as Tiger Woods picks himself\"\n\"Woman who jumped into Bronx Zoo lion exhibit arrested for trespassing\"\n\"Charles Howell III takes family on 'once-in-a-lifetime' trip\"\n\"FAA threatened to ground 38 Southwest Airlines jets over maintenance concerns, report says\"\n\"California teen killed in gang-related shooting, 2 people charged with murder, police say\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"There's a place in the US where it's been over 80 degrees since March,\" you may expect to read about a specific location in the United States that has experienced unusually warm temperatures for an extended period. The article could detail the climate conditions contributing to this heat, including geographical factors or local weather patterns. Additionally, it might explore the implications of such temperatures on the environment, tourism, or daily life in the area, providing a broader context regarding climate trends.",
+  "model": "gpt-4o-mini"
+}
