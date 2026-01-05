@@ -697,8 +697,8 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                 # 리스트를 NumPy 배열로 변환하여 인덱싱
                 candidate_indices = np.array(all_train_pn[idx], dtype='int32')
                 candidate = news_words[candidate_indices]  # shape: (5, 30)
-                # 각 후보 뉴스의 제목을 개별적으로 추출 (5개의 (30,) 배열)
-                candidate_split = [candidate[k] for k in range(candidate.shape[0])]
+                # 각 후보 뉴스의 제목을 개별적으로 추출하고 배치 차원 추가 (5개의 (1, 30) 배열)
+                candidate_split = [np.expand_dims(candidate[k], axis=0) for k in range(candidate.shape[0])]
                 
                 # 후보 뉴스는 유저별 기대 본문 사용
                 if expected_bodies is not None and all_userid_str is not None and all_newsid_str is not None:
@@ -735,23 +735,23 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                 else:
                     candidate_body = news_body[candidate_indices]  # shape: (5, 300)
                 
-                # 각 후보 뉴스의 본문을 개별적으로 추출 (5개의 (300,) 배열)
-                candidate_body_split = [candidate_body[k] for k in range(candidate_body.shape[0])]
+                # 각 후보 뉴스의 본문을 개별적으로 추출하고 배치 차원 추가 (5개의 (1, 300) 배열)
+                candidate_body_split = [np.expand_dims(candidate_body[k], axis=0) for k in range(candidate_body.shape[0])]
                 
                 candidate_vertical = news_v[candidate_indices]  # shape: (5, 1)
-                candidate_vertical_split = [candidate_vertical[k] for k in range(candidate_vertical.shape[0])]
+                candidate_vertical_split = [np.expand_dims(candidate_vertical[k], axis=0) for k in range(candidate_vertical.shape[0])]
                 candidate_subvertical = news_sv[candidate_indices]  # shape: (5, 1)
-                candidate_subvertical_split = [candidate_subvertical[k] for k in range(candidate_subvertical.shape[0])]
+                candidate_subvertical_split = [np.expand_dims(candidate_subvertical[k], axis=0) for k in range(candidate_subvertical.shape[0])]
                 
                 user_pos_indices = np.array(all_user_pos[idx], dtype='int32')
                 browsed_news = news_words[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 30)
-                browsed_news_split = [browsed_news[k] for k in range(browsed_news.shape[0])]
+                browsed_news_split = [np.expand_dims(browsed_news[k], axis=0) for k in range(browsed_news.shape[0])]
                 browsed_news_body = news_body[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 300)
-                browsed_news_body_split = [browsed_news_body[k] for k in range(browsed_news_body.shape[0])]
+                browsed_news_body_split = [np.expand_dims(browsed_news_body[k], axis=0) for k in range(browsed_news_body.shape[0])]
                 browsed_news_vertical = news_v[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 1)
-                browsed_news_vertical_split = [browsed_news_vertical[k] for k in range(browsed_news_vertical.shape[0])]
+                browsed_news_vertical_split = [np.expand_dims(browsed_news_vertical[k], axis=0) for k in range(browsed_news_vertical.shape[0])]
                 browsed_news_subvertical = news_sv[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 1)
-                browsed_news_subvertical_split = [browsed_news_subvertical[k] for k in range(browsed_news_subvertical.shape[0])]
+                browsed_news_subvertical_split = [np.expand_dims(browsed_news_subvertical[k], axis=0) for k in range(browsed_news_subvertical.shape[0])]
                 
                 label = all_label[idx]
                 # label을 numpy array로 변환 (categorical_crossentropy는 one-hot 형식 필요)
@@ -790,7 +790,8 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
             for idx in batch_indices:
                 # all_test_pn[idx]는 단일 정수 (각 후보 뉴스가 개별 샘플)
                 news_idx = int(all_test_pn[idx])
-                candidate = news_words[news_idx]
+                candidate = news_words[news_idx]  # shape: (30,)
+                candidate = np.expand_dims(candidate, axis=0)  # shape: (1, 30)
                 
                 # 후보 뉴스는 유저별 기대 본문 사용
                 if expected_bodies is not None and all_userid_str is not None and all_newsid_str is not None:
@@ -822,18 +823,19 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                 else:
                     candidate_body = news_body[news_idx]
                 
-                candidate_vertical = news_v[news_idx]
-                candidate_subvertical = news_sv[news_idx]
+                candidate_body = np.expand_dims(candidate_body, axis=0)  # shape: (1, 300)
+                candidate_vertical = np.expand_dims(news_v[news_idx], axis=0)  # shape: (1, 1)
+                candidate_subvertical = np.expand_dims(news_sv[news_idx], axis=0)  # shape: (1, 1)
 
                 user_pos_indices = np.array(all_test_user_pos[idx], dtype='int32')
                 browsed_news = news_words[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 30)
-                browsed_news_split = [browsed_news[k] for k in range(browsed_news.shape[0])]
+                browsed_news_split = [np.expand_dims(browsed_news[k], axis=0) for k in range(browsed_news.shape[0])]
                 browsed_news_body = news_body[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 300)
-                browsed_news_body_split = [browsed_news_body[k] for k in range(browsed_news_body.shape[0])]
+                browsed_news_body_split = [np.expand_dims(browsed_news_body[k], axis=0) for k in range(browsed_news_body.shape[0])]
                 browsed_news_vertical = news_v[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 1)
-                browsed_news_vertical_split = [browsed_news_vertical[k] for k in range(browsed_news_vertical.shape[0])]
+                browsed_news_vertical_split = [np.expand_dims(browsed_news_vertical[k], axis=0) for k in range(browsed_news_vertical.shape[0])]
                 browsed_news_subvertical = news_sv[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 1)
-                browsed_news_subvertical_split = [browsed_news_subvertical[k] for k in range(browsed_news_subvertical.shape[0])]
+                browsed_news_subvertical_split = [np.expand_dims(browsed_news_subvertical[k], axis=0) for k in range(browsed_news_subvertical.shape[0])]
                 
                 label = all_label[idx]
                 yield ([candidate] + browsed_news_split + [candidate_body] + browsed_news_body_split + [candidate_vertical]
