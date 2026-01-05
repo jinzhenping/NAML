@@ -690,68 +690,69 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
     batches = [inputid[range(batch_size*i, min(len(y), batch_size*(i+1)))] for i in range(len(y)//batch_size+1)]
 
     while (True):
-        for i in batches:
-
-            candidate = news_words[all_train_pn[i]]
-            candidate_split=[candidate[:,k,:] for k in range(candidate.shape[1])]
-            
-            # 후보 뉴스는 유저별 기대 본문 사용
-            if expected_bodies is not None and all_userid_str is not None and all_newsid_str is not None:
-                # 각 후보 뉴스에 대해 해당 유저의 기대본문 찾기
-                user_id_str = all_userid_str[i]
-                news_ids_str = all_newsid_str[i]  # 5개 후보 뉴스 ID
-                candidate_body_list = []
+        for batch_indices in batches:
+            # batch_indices는 배치 내 샘플 인덱스 배열
+            # 각 샘플에 대해 개별적으로 yield (원래 구조 유지)
+            for idx in batch_indices:
+                candidate = news_words[all_train_pn[idx]]
+                candidate_split=[candidate[:,k,:] for k in range(candidate.shape[1])]
                 
-                for j, news_idx in enumerate(all_train_pn[i]):
-                    if news_idx == 0:  # 패딩
-                        candidate_body_list.append(news_body[0])
-                    else:
-                        news_id_str = news_ids_str[j] if j < len(news_ids_str) else ''
-                        # 유저별 기대본문 찾기
-                        key = (user_id_str, news_id_str)
-                        if key in expected_bodies:
-                            # 기대본문 토큰화 및 인덱스 변환
-                            expected_body = expected_bodies[key]
-                            body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
-                            word_id = []
-                            for word in body_tokens:
-                                if word in word_dict:
-                                    word_id.append(word_dict[word][0])
-                            word_id = word_id[:300]
-                            word_id = word_id + [0] * (300 - len(word_id))
-                            candidate_body_list.append(np.array(word_id, dtype='int32'))
+                # 후보 뉴스는 유저별 기대 본문 사용
+                if expected_bodies is not None and all_userid_str is not None and all_newsid_str is not None:
+                    # 각 후보 뉴스에 대해 해당 유저의 기대본문 찾기
+                    user_id_str = all_userid_str[idx]  # 리스트 인덱싱
+                    news_ids_str = all_newsid_str[idx]  # 리스트 인덱싱, 5개 후보 뉴스 ID
+                    candidate_body_list = []
+                    
+                    for j, news_idx in enumerate(all_train_pn[idx]):
+                        if news_idx == 0:  # 패딩
+                            candidate_body_list.append(news_body[0])
                         else:
-                            # 기대본문이 없으면 원본 본문 사용
-                            candidate_body_list.append(news_body[news_idx])
+                            news_id_str = news_ids_str[j] if j < len(news_ids_str) else ''
+                            # 유저별 기대본문 찾기
+                            key = (user_id_str, news_id_str)
+                            if key in expected_bodies:
+                                # 기대본문 토큰화 및 인덱스 변환
+                                expected_body = expected_bodies[key]
+                                body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
+                                word_id = []
+                                for word in body_tokens:
+                                    if word in word_dict:
+                                        word_id.append(word_dict[word][0])
+                                word_id = word_id[:300]
+                                word_id = word_id + [0] * (300 - len(word_id))
+                                candidate_body_list.append(np.array(word_id, dtype='int32'))
+                            else:
+                                # 기대본문이 없으면 원본 본문 사용
+                                candidate_body_list.append(news_body[news_idx])
+                    
+                    candidate_body = np.array(candidate_body_list)
+                elif candidate_news_body is not None:
+                    candidate_body = candidate_news_body[all_train_pn[idx]]
+                else:
+                    candidate_body = news_body[all_train_pn[idx]]
                 
-                candidate_body = np.array(candidate_body_list)
-            elif candidate_news_body is not None:
-                candidate_body = candidate_news_body[all_train_pn[i]]
-            else:
-                candidate_body = news_body[all_train_pn[i]]
-            
-            candidate_body_split=[candidate_body[:,k,:] for k in range(candidate_body.shape[1])]
-            candidate_vertical = news_v[all_train_pn[i]]
-            candidate_vertical_split=[candidate_vertical[:,k,:] for k in range(candidate_vertical.shape[1])]
-            candidate_subvertical = news_sv[all_train_pn[i]]
-            candidate_subvertical_split=[candidate_subvertical[:,k,:] for k in range(candidate_subvertical.shape[1])]
-            
-            browsed_news=news_words[all_user_pos[i]]
-            browsed_news_split=[browsed_news[:,k,:] for k in range(browsed_news.shape[1])]
-            browsed_news_body=news_body[all_user_pos[i]]
-            browsed_news_body_split=[browsed_news_body[:,k,:] for k in range(browsed_news_body.shape[1])]
-            browsed_news_vertical=news_v[all_user_pos[i]]
-            browsed_news_vertical_split=[browsed_news_vertical[:,k,:] for k in range(browsed_news_vertical.shape[1])]
-            browsed_news_subvertical=news_sv[all_user_pos[i]]
-            browsed_news_subvertical_split=[browsed_news_subvertical[:,k,:] for k in range(browsed_news_subvertical.shape[1])]
-            
-        
-            label=all_label[i]
-            # label을 numpy array로 변환 (categorical_crossentropy는 one-hot 형식 필요)
-            label = np.array(label, dtype='float32')
+                candidate_body_split=[candidate_body[:,k,:] for k in range(candidate_body.shape[1])]
+                candidate_vertical = news_v[all_train_pn[idx]]
+                candidate_vertical_split=[candidate_vertical[:,k,:] for k in range(candidate_vertical.shape[1])]
+                candidate_subvertical = news_sv[all_train_pn[idx]]
+                candidate_subvertical_split=[candidate_subvertical[:,k,:] for k in range(candidate_subvertical.shape[1])]
+                
+                browsed_news=news_words[all_user_pos[idx]]
+                browsed_news_split=[browsed_news[:,k,:] for k in range(browsed_news.shape[1])]
+                browsed_news_body=news_body[all_user_pos[idx]]
+                browsed_news_body_split=[browsed_news_body[:,k,:] for k in range(browsed_news_body.shape[1])]
+                browsed_news_vertical=news_v[all_user_pos[idx]]
+                browsed_news_vertical_split=[browsed_news_vertical[:,k,:] for k in range(browsed_news_vertical.shape[1])]
+                browsed_news_subvertical=news_sv[all_user_pos[idx]]
+                browsed_news_subvertical_split=[browsed_news_subvertical[:,k,:] for k in range(browsed_news_subvertical.shape[1])]
+                
+                label=all_label[idx]
+                # label을 numpy array로 변환 (categorical_crossentropy는 one-hot 형식 필요)
+                label = np.array(label, dtype='float32')
 
-            yield (candidate_split+browsed_news_split+candidate_body_split+browsed_news_body_split
-                   +candidate_vertical_split+browsed_news_vertical_split +candidate_subvertical_split+browsed_news_subvertical_split, label)
+                yield (candidate_split+browsed_news_split+candidate_body_split+browsed_news_body_split
+                       +candidate_vertical_split+browsed_news_vertical_split +candidate_subvertical_split+browsed_news_subvertical_split, label)
 
 
 # In[ ]:
@@ -777,54 +778,58 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
     batches = [inputid[range(batch_size*i, min(len(y), batch_size*(i+1)))] for i in range(len(y)//batch_size+1)]
 
     while (True):
-        for i in batches:
-            candidate = news_words[all_test_pn[i]]
-            
-            # 후보 뉴스는 유저별 기대 본문 사용
-            if expected_bodies is not None and all_userid_str is not None and all_newsid_str is not None:
-                # 해당 유저의 기대본문 찾기
-                user_id_str = all_userid_str[i]
-                news_id_str = all_newsid_str[i]  # 단일 후보 뉴스 ID
-                news_idx = all_test_pn[i]
+        for batch_indices in batches:
+            # batch_indices는 배치 내 샘플 인덱스 배열
+            # 각 샘플에 대해 개별적으로 yield (원래 구조 유지)
+            for idx in batch_indices:
+                candidate = news_words[all_test_pn[idx]]
                 
-                if news_idx == 0:  # 패딩
-                    candidate_body = news_body[0]
-                else:
-                    # 유저별 기대본문 찾기
-                    key = (user_id_str, news_id_str)
-                    if key in expected_bodies:
-                        # 기대본문 토큰화 및 인덱스 변환
-                        expected_body = expected_bodies[key]
-                        body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
-                        word_id = []
-                        for word in body_tokens:
-                            if word in word_dict:
-                                word_id.append(word_dict[word][0])
-                        word_id = word_id[:300]
-                        word_id = word_id + [0] * (300 - len(word_id))
-                        candidate_body = np.array(word_id, dtype='int32')
+                # 후보 뉴스는 유저별 기대 본문 사용
+                if expected_bodies is not None and all_userid_str is not None and all_newsid_str is not None:
+                    # 해당 유저의 기대본문 찾기
+                    user_id_str = all_userid_str[idx]  # 리스트 인덱싱
+                    news_id_str = all_newsid_str[idx]  # 리스트 인덱싱, 단일 후보 뉴스 ID
+                    news_idx = all_test_pn[idx]
+                    
+                    if news_idx == 0:  # 패딩
+                        candidate_body = news_body[0]
                     else:
-                        # 기대본문이 없으면 원본 본문 사용
-                        candidate_body = news_body[news_idx]
-            elif candidate_news_body is not None:
-                candidate_body = candidate_news_body[all_test_pn[i]]
-            else:
-                candidate_body = news_body[all_test_pn[i]]
-            candidate_vertical = news_v[all_test_pn[i]]
-            candidate_subvertical = news_sv[all_test_pn[i]]
+                        # 유저별 기대본문 찾기
+                        key = (user_id_str, news_id_str)
+                        if key in expected_bodies:
+                            # 기대본문 토큰화 및 인덱스 변환
+                            expected_body = expected_bodies[key]
+                            body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
+                            word_id = []
+                            for word in body_tokens:
+                                if word in word_dict:
+                                    word_id.append(word_dict[word][0])
+                            word_id = word_id[:300]
+                            word_id = word_id + [0] * (300 - len(word_id))
+                            candidate_body = np.array(word_id, dtype='int32')
+                        else:
+                            # 기대본문이 없으면 원본 본문 사용
+                            candidate_body = news_body[news_idx]
+                elif candidate_news_body is not None:
+                    candidate_body = candidate_news_body[all_test_pn[idx]]
+                else:
+                    candidate_body = news_body[all_test_pn[idx]]
+                
+                candidate_vertical = news_v[all_test_pn[idx]]
+                candidate_subvertical = news_sv[all_test_pn[idx]]
 
-            browsed_news = news_words[all_test_user_pos[i]]
-            browsed_news_split = [browsed_news[:, k, :] for k in range(browsed_news.shape[1])]
-            browsed_news_body = news_body[all_test_user_pos[i]]
-            browsed_news_body_split = [browsed_news_body[:, k, :] for k in range(browsed_news_body.shape[1])]
-            browsed_news_vertical = news_v[all_test_user_pos[i]]
-            browsed_news_vertical_split = [browsed_news_vertical[:, k, :] for k in range(browsed_news_vertical.shape[1])]
-            browsed_news_subvertical = news_sv[all_test_user_pos[i]]
-            browsed_news_subvertical_split = [browsed_news_subvertical[:, k, :] for k in range(browsed_news_subvertical.shape[1])]
-            
-            label = all_label[i]
-            yield ([candidate] + browsed_news_split + [candidate_body] + browsed_news_body_split + [candidate_vertical]
-                   + browsed_news_vertical_split + [candidate_subvertical] + browsed_news_subvertical_split, [label])
+                browsed_news = news_words[all_test_user_pos[idx]]
+                browsed_news_split = [browsed_news[:, k, :] for k in range(browsed_news.shape[1])]
+                browsed_news_body = news_body[all_test_user_pos[idx]]
+                browsed_news_body_split = [browsed_news_body[:, k, :] for k in range(browsed_news_body.shape[1])]
+                browsed_news_vertical = news_v[all_test_user_pos[idx]]
+                browsed_news_vertical_split = [browsed_news_vertical[:, k, :] for k in range(browsed_news_vertical.shape[1])]
+                browsed_news_subvertical = news_sv[all_test_user_pos[idx]]
+                browsed_news_subvertical_split = [browsed_news_subvertical[:, k, :] for k in range(browsed_news_subvertical.shape[1])]
+                
+                label = all_label[idx]
+                yield ([candidate] + browsed_news_split + [candidate_body] + browsed_news_body_split + [candidate_vertical]
+                       + browsed_news_vertical_split + [candidate_subvertical] + browsed_news_subvertical_split, [label])
 
 
 # In[ ]:
