@@ -550,6 +550,18 @@ if USE_EXPECTED_BODY:
     expected_bodies_test = load_expected_bodies(output_dir='body_generation/output', dataset_type='test')
     
     print(f"로드된 기대 본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
+    
+    # 디버깅: 로드된 기대본문 샘플 확인
+    if len(expected_bodies_train) > 0:
+        sample_keys = list(expected_bodies_train.keys())[:3]
+        print(f"기대본문 샘플 키 (train): {sample_keys}")
+        for key in sample_keys:
+            print(f"  키: {key}, 본문 길이: {len(expected_bodies_train[key])}자")
+    if len(expected_bodies_test) > 0:
+        sample_keys = list(expected_bodies_test.keys())[:3]
+        print(f"기대본문 샘플 키 (test): {sample_keys}")
+        for key in sample_keys:
+            print(f"  키: {key}, 본문 길이: {len(expected_bodies_test[key])}자")
 
 # 뉴스 인덱스를 사용하여 유저 데이터 전처리
     userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test, all_train_userid_str, all_train_newsid_str, all_test_userid_str, all_test_newsid_str = preprocess_user_file(
@@ -707,6 +719,18 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                     news_ids_str = all_newsid_str[idx]  # 리스트 인덱싱, 5개 후보 뉴스 ID
                     candidate_body_list = []
                     
+                    # 디버깅: 첫 번째 샘플에서만 확인
+                    debug_first_sample = (idx == 0 and not hasattr(generate_batch_data_train, '_debug_done'))
+                    if debug_first_sample:
+                        generate_batch_data_train._debug_done = True
+                        print(f"\n[디버깅] 첫 번째 학습 샘플:")
+                        print(f"  user_id_str: {user_id_str} (type: {type(user_id_str)})")
+                        print(f"  news_ids_str: {news_ids_str} (type: {type(news_ids_str)})")
+                        print(f"  expected_bodies에 있는 키 샘플: {list(expected_bodies.keys())[:3]}")
+                    
+                    found_count = 0
+                    not_found_keys = []
+                    
                     for j, news_idx in enumerate(all_train_pn[idx]):
                         if news_idx == 0:  # 패딩
                             candidate_body_list.append(news_body[0])
@@ -715,6 +739,7 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                             # 유저별 기대본문 찾기
                             key = (user_id_str, news_id_str)
                             if key in expected_bodies:
+                                found_count += 1
                                 # 기대본문 토큰화 및 인덱스 변환
                                 expected_body = expected_bodies[key]
                                 body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
@@ -725,9 +750,25 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                                 word_id = word_id[:300]
                                 word_id = word_id + [0] * (300 - len(word_id))
                                 candidate_body_list.append(np.array(word_id, dtype='int32'))
+                                
+                                if debug_first_sample:
+                                    print(f"  ✓ 찾음: 키={key}, 본문 길이={len(expected_body)}자")
                             else:
+                                not_found_keys.append(key)
                                 # 기대본문이 없으면 원본 본문 사용
                                 candidate_body_list.append(news_body[news_idx])
+                                if debug_first_sample:
+                                    print(f"  ✗ 못 찾음: 키={key}")
+                    
+                    if debug_first_sample:
+                        print(f"  총 {found_count}/5개 기대본문 찾음")
+                        if not_found_keys:
+                            print(f"  못 찾은 키들: {not_found_keys[:3]}")
+                            # 유사한 키 찾기
+                            for nf_key in not_found_keys[:2]:
+                                similar_keys = [k for k in expected_bodies.keys() if k[0] == nf_key[0] or k[1] == nf_key[1]]
+                                if similar_keys:
+                                    print(f"    유사한 키 (user_id={nf_key[0]} 또는 news_id={nf_key[1]}): {similar_keys[:2]}")
                     
                     candidate_body = np.array(candidate_body_list)  # shape: (5, 300)
                 elif candidate_news_body is not None:
@@ -800,12 +841,23 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                     user_id_str = all_userid_str[idx]  # 리스트 인덱싱
                     news_id_str = all_newsid_str[idx]  # 리스트 인덱싱, 단일 후보 뉴스 ID
                     
+                    # 디버깅: 첫 번째 샘플에서만 확인
+                    debug_first_sample = (idx == 0 and not hasattr(generate_batch_data_test, '_debug_done'))
+                    if debug_first_sample:
+                        generate_batch_data_test._debug_done = True
+                        print(f"\n[디버깅] 첫 번째 테스트 샘플:")
+                        print(f"  user_id_str: {user_id_str} (type: {type(user_id_str)})")
+                        print(f"  news_id_str: {news_id_str} (type: {type(news_id_str)})")
+                        print(f"  expected_bodies에 있는 키 샘플: {list(expected_bodies.keys())[:3]}")
+                    
                     if news_idx == 0:  # 패딩
                         candidate_body = news_body[0]
                     else:
                         # 유저별 기대본문 찾기
                         key = (user_id_str, news_id_str)
                         if key in expected_bodies:
+                            if debug_first_sample:
+                                print(f"  ✓ 찾음: 키={key}, 본문 길이={len(expected_bodies[key])}자")
                             # 기대본문 토큰화 및 인덱스 변환
                             expected_body = expected_bodies[key]
                             body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
@@ -817,6 +869,12 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                             word_id = word_id + [0] * (300 - len(word_id))
                             candidate_body = np.array(word_id, dtype='int32')
                         else:
+                            if debug_first_sample:
+                                print(f"  ✗ 못 찾음: 키={key}")
+                                # 유사한 키 찾기
+                                similar_keys = [k for k in expected_bodies.keys() if k[0] == key[0] or k[1] == key[1]]
+                                if similar_keys:
+                                    print(f"    유사한 키 (user_id={key[0]} 또는 news_id={key[1]}): {similar_keys[:2]}")
                             # 기대본문이 없으면 원본 본문 사용
                             candidate_body = news_body[news_idx]
                 elif candidate_news_body is not None:
@@ -954,7 +1012,7 @@ model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metric
 # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
 news_index_reverse = {v: k for k, v in news_index.items()}
 
-for ep in range(30):  # 최대 에폭을 30으로 증가
+for ep in range(100):  # 최대 에폭을 100으로 설정
     if USE_EXPECTED_BODY:
         # 유저별 기대본문 사용
         traingen=generate_batch_data_train(
