@@ -181,12 +181,20 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         # 후보 뉴스들을 news_index로 변환
         candidate_indices = []
         candidate_labels = []
+        missing_positive_count = 0  # 첫 번째가 positive인데 news_index에 없는 경우
+        
         for i, cand_id in enumerate(candidate_news):
             if cand_id in news_index:
                 candidate_indices.append(news_index[cand_id])
                 candidate_news_ids_train.add(cand_id)  # 후보 뉴스 ID 수집
                 is_clicked = int(clicked[i]) if i < len(clicked) else 0
                 candidate_labels.append(is_clicked)
+            else:
+                # news_index에 없는 경우
+                is_clicked = int(clicked[i]) if i < len(clicked) else 0
+                if is_clicked == 1 and i == 0:
+                    # 첫 번째 후보가 positive인데 news_index에 없음
+                    missing_positive_count += 1
         
         # 후보가 2개 미만이거나 positive가 없으면 스킵
         if len(candidate_indices) < 2:
@@ -195,6 +203,10 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         
         if sum(candidate_labels) == 0:
             train_skip_stats['no_positive'] += 1
+            if missing_positive_count > 0:
+                # 첫 번째가 positive였는데 news_index에 없어서 스킵된 경우
+                train_skip_stats.setdefault('missing_positive_in_index', 0)
+                train_skip_stats['missing_positive_in_index'] += 1
             continue
         
         # 정확히 5개 후보로 맞추기 (npratio=4이므로 1+4=5)
@@ -255,6 +267,8 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         print(f"  clicked_news_ids 비어있음: {train_skip_stats['empty_clicked']}개 라인")
         print(f"  후보 2개 미만: {train_skip_stats['insufficient_candidates']}개 라인")
         print(f"  positive 없음: {train_skip_stats['no_positive']}개 라인")
+        if 'missing_positive_in_index' in train_skip_stats:
+            print(f"    (첫 번째 positive가 news_index에 없어서 스킵: {train_skip_stats['missing_positive_in_index']}개)")
         print(f"  총 스킵: {sum(train_skip_stats.values())}개 라인")
         print(f"  처리된 라인: {len(train_data) - sum(train_skip_stats.values())}개")
         print(f"  생성된 샘플 수: {len(all_train_pn)}개")
