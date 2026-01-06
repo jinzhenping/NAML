@@ -149,9 +149,18 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
     candidate_news_ids_test = set()
     
     # 학습 데이터 처리
+    # 스킵 통계 추적
+    train_skip_stats = {
+        'invalid_format': 0,  # 형식 오류
+        'empty_clicked': 0,   # clicked_news_ids가 비어있음
+        'insufficient_candidates': 0,  # 후보가 2개 미만
+        'no_positive': 0  # positive 샘플이 없음
+    }
+    
     for line in train_data:
         parts = line.strip().split('\t')
         if len(parts) < 4:
+            train_skip_stats['invalid_format'] += 1
             continue
         
         userid = parts[0]
@@ -166,6 +175,7 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
                 clicked_news_ids.append(news_index[news_id])
         
         if len(clicked_news_ids) == 0:
+            train_skip_stats['empty_clicked'] += 1
             continue
         
         # 후보 뉴스들을 news_index로 변환
@@ -179,7 +189,12 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
                 candidate_labels.append(is_clicked)
         
         # 후보가 2개 미만이거나 positive가 없으면 스킵
-        if len(candidate_indices) < 2 or sum(candidate_labels) == 0:
+        if len(candidate_indices) < 2:
+            train_skip_stats['insufficient_candidates'] += 1
+            continue
+        
+        if sum(candidate_labels) == 0:
+            train_skip_stats['no_positive'] += 1
             continue
         
         # 정확히 5개 후보로 맞추기 (npratio=4이므로 1+4=5)
@@ -233,10 +248,30 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         all_train_newsid_str.append(shuffle_news_ids)
         all_user_pos.append(allpos)
     
+    # 학습 데이터 스킵 통계 출력
+    if sum(train_skip_stats.values()) > 0:
+        print(f"\n[학습 데이터 스킵 통계]")
+        print(f"  형식 오류: {train_skip_stats['invalid_format']}개 라인")
+        print(f"  clicked_news_ids 비어있음: {train_skip_stats['empty_clicked']}개 라인")
+        print(f"  후보 2개 미만: {train_skip_stats['insufficient_candidates']}개 라인")
+        print(f"  positive 없음: {train_skip_stats['no_positive']}개 라인")
+        print(f"  총 스킵: {sum(train_skip_stats.values())}개 라인")
+        print(f"  처리된 라인: {len(train_data) - sum(train_skip_stats.values())}개")
+        print(f"  생성된 샘플 수: {len(all_train_pn)}개")
+    
     # 테스트 데이터 처리
+    # 스킵 통계 추적
+    skip_stats = {
+        'invalid_format': 0,  # 형식 오류
+        'empty_clicked': 0,   # clicked_news_ids가 비어있음
+        'empty_candidates': 0, # candidate_news가 비어있음
+        'insufficient_candidates': 0  # 후보가 2개 미만
+    }
+    
     for line in test_data:
         parts = line.strip().split('\t')
         if len(parts) < 3:
+            skip_stats['invalid_format'] += 1
             continue
         
         userid = parts[0]
@@ -249,7 +284,12 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
             if news_id in news_index:
                 clicked_news_ids.append(news_index[news_id])
         
-        if len(clicked_news_ids) == 0 or len(candidate_news) == 0:
+        if len(clicked_news_ids) == 0:
+            skip_stats['empty_clicked'] += 1
+            continue
+        
+        if len(candidate_news) == 0:
+            skip_stats['empty_candidates'] += 1
             continue
         
         # 세션 인덱스 시작
@@ -269,6 +309,7 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
                 candidate_news_ids_test.add(cand_id)  # 후보 뉴스 ID 수집
         
         if len(candidate_indices) < 2:
+            skip_stats['insufficient_candidates'] += 1
             continue
         
         # 5개 후보 중 첫 번째가 positive, 나머지가 negative
@@ -297,6 +338,17 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         
         sess_index.append(len(all_test_pn))
         all_test_index.append(sess_index)
+    
+    # 스킵 통계 출력
+    if sum(skip_stats.values()) > 0:
+        print(f"\n[테스트 데이터 스킵 통계]")
+        print(f"  형식 오류: {skip_stats['invalid_format']}개 라인")
+        print(f"  clicked_news_ids 비어있음: {skip_stats['empty_clicked']}개 라인")
+        print(f"  candidate_news 비어있음: {skip_stats['empty_candidates']}개 라인")
+        print(f"  후보 2개 미만: {skip_stats['insufficient_candidates']}개 라인")
+        print(f"  총 스킵: {sum(skip_stats.values())}개 라인")
+        print(f"  처리된 라인: {len(test_data) - sum(skip_stats.values())}개")
+        print(f"  생성된 샘플 수: {len(all_test_pn)}개")
     
     all_train_pn = np.array(all_train_pn, dtype='int32')
     all_label = np.array(all_label, dtype='int32')
