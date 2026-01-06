@@ -1083,7 +1083,7 @@ model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=current_lr), me
 # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
 news_index_reverse = {v: k for k, v in news_index.items()}
 
-for ep in range(50):  # 최대 에폭을 50으로 설정
+for ep in range(30):  # 최대 에폭을 50으로 설정
     if USE_EXPECTED_BODY:
         # 유저별 기대본문 사용
         traingen=generate_batch_data_train(
@@ -1149,7 +1149,7 @@ for ep in range(50):  # 최대 에폭을 50으로 설정
     
     # 보기 좋게 출력
     print(f"\n{'='*60}")
-    print(f"Epoch {ep+1}/50 - Test Results (LR: {current_lr:.6f})")
+    print(f"Epoch {ep+1}/30 - Test Results (LR: {current_lr:.6f})")
     print(f"{'='*60}")
     print(f"AUC      : {epoch_results['AUC']:.6f} (Best: {best_auc:.6f})")
     print(f"MRR      : {epoch_results['MRR']:.6f}")
