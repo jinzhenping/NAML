@@ -1070,20 +1070,15 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
 
 
 # Learning rate를 약간 낮춰서 더 안정적인 학습
-# 학습률 스케줄러를 수동으로 구현 (매 에폭마다 fit을 호출하므로)
-best_auc = 0.0
-patience_counter = 0
-current_lr = 0.0005
-min_lr = 1e-6
-lr_reduce_factor = 0.5
-patience = 5  # 5 에폭 동안 개선이 없으면 학습률 감소
+model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])
 
-model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=current_lr), metrics=['acc'])
+# Best AUC 추적 (최종 요약용)
+best_auc = 0.0
 
 # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
 news_index_reverse = {v: k for k, v in news_index.items()}
 
-for ep in range(30):  # 최대 에폭을 50으로 설정
+for ep in range(20):  # 최대 에폭을 50으로 설정
     if USE_EXPECTED_BODY:
         # 유저별 기대본문 사용
         traingen=generate_batch_data_train(
@@ -1134,22 +1129,13 @@ for ep in range(30):  # 최대 에폭을 50으로 설정
     }
     results.append([epoch_results['AUC'], epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['Hit@1']])
     
-    # 학습률 스케줄러: AUC가 개선되지 않으면 학습률 감소
-    current_auc = epoch_results['AUC']
-    if current_auc > best_auc:
-        best_auc = current_auc
-        patience_counter = 0
-    else:
-        patience_counter += 1
-        if patience_counter >= patience and current_lr > min_lr:
-            current_lr = max(current_lr * lr_reduce_factor, min_lr)
-            model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=current_lr), metrics=['acc'])
-            patience_counter = 0
-            print(f"  [학습률 감소: {current_lr:.6f}]")
+    # Best AUC 업데이트
+    if epoch_results['AUC'] > best_auc:
+        best_auc = epoch_results['AUC']
     
     # 보기 좋게 출력
     print(f"\n{'='*60}")
-    print(f"Epoch {ep+1}/30 - Test Results (LR: {current_lr:.6f})")
+    print(f"Epoch {ep+1}/20 - Test Results")
     print(f"{'='*60}")
     print(f"AUC      : {epoch_results['AUC']:.6f} (Best: {best_auc:.6f})")
     print(f"MRR      : {epoch_results['MRR']:.6f}")
