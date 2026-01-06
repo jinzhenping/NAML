@@ -698,13 +698,22 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
     
     inputid = np.arange(len(all_label))
     np.random.shuffle(inputid)
-    y=all_label
+    y = all_label
     batches = [inputid[range(batch_size*i, min(len(y), batch_size*(i+1)))] for i in range(len(y)//batch_size+1)]
 
     while (True):
         for batch_indices in batches:
-            # batch_indices는 배치 내 샘플 인덱스 배열
-            # 각 샘플에 대해 개별적으로 yield (원래 구조 유지)
+            # 배치 내 모든 샘플을 모아서 한 번에 yield
+            batch_candidate_splits = [[] for _ in range(5)]  # 5개 후보 뉴스
+            batch_browsed_news_splits = [[] for _ in range(MAX_HISTORY_CLICKS)]
+            batch_candidate_body_splits = [[] for _ in range(5)]
+            batch_browsed_news_body_splits = [[] for _ in range(MAX_HISTORY_CLICKS)]
+            batch_candidate_vertical_splits = [[] for _ in range(5)]
+            batch_browsed_news_vertical_splits = [[] for _ in range(MAX_HISTORY_CLICKS)]
+            batch_candidate_subvertical_splits = [[] for _ in range(5)]
+            batch_browsed_news_subvertical_splits = [[] for _ in range(MAX_HISTORY_CLICKS)]
+            batch_labels = []
+            
             for idx in batch_indices:
                 # 리스트를 NumPy 배열로 변환하여 인덱싱
                 candidate_indices = np.array(all_train_pn[idx], dtype='int32')
@@ -795,12 +804,66 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                 browsed_news_subvertical_split = [np.expand_dims(browsed_news_subvertical[k], axis=0) for k in range(browsed_news_subvertical.shape[0])]
                 
                 label = all_label[idx]
-                # label을 numpy array로 변환하고 배치 차원 추가 (categorical_crossentropy는 one-hot 형식 필요)
+                # label을 numpy array로 변환 (categorical_crossentropy는 one-hot 형식 필요)
                 label = np.array(label, dtype='float32')  # shape: (5,)
-                label = np.expand_dims(label, axis=0)  # shape: (1, 5)
-
-                yield (candidate_split+browsed_news_split+candidate_body_split+browsed_news_body_split
-                       +candidate_vertical_split+browsed_news_vertical_split +candidate_subvertical_split+browsed_news_subvertical_split, label)
+                
+                # 배치에 추가
+                for k in range(5):
+                    batch_candidate_splits[k].append(candidate_split[k])
+                for k in range(len(browsed_news_split)):
+                    batch_browsed_news_splits[k].append(browsed_news_split[k])
+                for k in range(5):
+                    batch_candidate_body_splits[k].append(candidate_body_split[k])
+                for k in range(len(browsed_news_body_split)):
+                    batch_browsed_news_body_splits[k].append(browsed_news_body_split[k])
+                for k in range(5):
+                    batch_candidate_vertical_splits[k].append(candidate_vertical_split[k])
+                for k in range(len(browsed_news_vertical_split)):
+                    batch_browsed_news_vertical_splits[k].append(browsed_news_vertical_split[k])
+                for k in range(5):
+                    batch_candidate_subvertical_splits[k].append(candidate_subvertical_split[k])
+                for k in range(len(browsed_news_subvertical_split)):
+                    batch_browsed_news_subvertical_splits[k].append(browsed_news_subvertical_split[k])
+                batch_labels.append(label)
+            
+            # 배치를 concatenate하여 yield
+            batch_inputs = []
+            # candidate splits (5개)
+            for k in range(5):
+                if len(batch_candidate_splits[k]) > 0:
+                    batch_inputs.append(np.concatenate(batch_candidate_splits[k], axis=0))
+            # browsed news splits
+            for k in range(MAX_HISTORY_CLICKS):
+                if len(batch_browsed_news_splits[k]) > 0:
+                    batch_inputs.append(np.concatenate(batch_browsed_news_splits[k], axis=0))
+            # candidate body splits (5개)
+            for k in range(5):
+                if len(batch_candidate_body_splits[k]) > 0:
+                    batch_inputs.append(np.concatenate(batch_candidate_body_splits[k], axis=0))
+            # browsed news body splits
+            for k in range(MAX_HISTORY_CLICKS):
+                if len(batch_browsed_news_body_splits[k]) > 0:
+                    batch_inputs.append(np.concatenate(batch_browsed_news_body_splits[k], axis=0))
+            # candidate vertical splits (5개)
+            for k in range(5):
+                if len(batch_candidate_vertical_splits[k]) > 0:
+                    batch_inputs.append(np.concatenate(batch_candidate_vertical_splits[k], axis=0))
+            # browsed news vertical splits
+            for k in range(MAX_HISTORY_CLICKS):
+                if len(batch_browsed_news_vertical_splits[k]) > 0:
+                    batch_inputs.append(np.concatenate(batch_browsed_news_vertical_splits[k], axis=0))
+            # candidate subvertical splits (5개)
+            for k in range(5):
+                if len(batch_candidate_subvertical_splits[k]) > 0:
+                    batch_inputs.append(np.concatenate(batch_candidate_subvertical_splits[k], axis=0))
+            # browsed news subvertical splits
+            for k in range(MAX_HISTORY_CLICKS):
+                if len(batch_browsed_news_subvertical_splits[k]) > 0:
+                    batch_inputs.append(np.concatenate(batch_browsed_news_subvertical_splits[k], axis=0))
+            
+            batch_labels_array = np.array(batch_labels)  # shape: (batch_size, 5)
+            
+            yield (batch_inputs, batch_labels_array)
 
 
 # In[ ]:
