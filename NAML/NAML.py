@@ -149,18 +149,9 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
     candidate_news_ids_test = set()
     
     # 학습 데이터 처리
-    # 스킵 통계 추적
-    train_skip_stats = {
-        'invalid_format': 0,  # 형식 오류
-        'empty_clicked': 0,   # clicked_news_ids가 비어있음
-        'insufficient_candidates': 0,  # 후보가 2개 미만
-        'no_positive': 0  # positive 샘플이 없음
-    }
-    
     for line in train_data:
         parts = line.strip().split('\t')
         if len(parts) < 4:
-            train_skip_stats['invalid_format'] += 1
             continue
         
         userid = parts[0]
@@ -175,38 +166,20 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
                 clicked_news_ids.append(news_index[news_id])
         
         if len(clicked_news_ids) == 0:
-            train_skip_stats['empty_clicked'] += 1
             continue
         
         # 후보 뉴스들을 news_index로 변환
         candidate_indices = []
         candidate_labels = []
-        missing_positive_count = 0  # 첫 번째가 positive인데 news_index에 없는 경우
-        
         for i, cand_id in enumerate(candidate_news):
             if cand_id in news_index:
                 candidate_indices.append(news_index[cand_id])
                 candidate_news_ids_train.add(cand_id)  # 후보 뉴스 ID 수집
                 is_clicked = int(clicked[i]) if i < len(clicked) else 0
                 candidate_labels.append(is_clicked)
-            else:
-                # news_index에 없는 경우
-                is_clicked = int(clicked[i]) if i < len(clicked) else 0
-                if is_clicked == 1 and i == 0:
-                    # 첫 번째 후보가 positive인데 news_index에 없음
-                    missing_positive_count += 1
         
         # 후보가 2개 미만이거나 positive가 없으면 스킵
-        if len(candidate_indices) < 2:
-            train_skip_stats['insufficient_candidates'] += 1
-            continue
-        
-        if sum(candidate_labels) == 0:
-            train_skip_stats['no_positive'] += 1
-            if missing_positive_count > 0:
-                # 첫 번째가 positive였는데 news_index에 없어서 스킵된 경우
-                train_skip_stats.setdefault('missing_positive_in_index', 0)
-                train_skip_stats['missing_positive_in_index'] += 1
+        if len(candidate_indices) < 2 or sum(candidate_labels) == 0:
             continue
         
         # 정확히 5개 후보로 맞추기 (npratio=4이므로 1+4=5)
@@ -260,32 +233,10 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         all_train_newsid_str.append(shuffle_news_ids)
         all_user_pos.append(allpos)
     
-    # 학습 데이터 스킵 통계 출력
-    if sum(train_skip_stats.values()) > 0:
-        print(f"\n[학습 데이터 스킵 통계]")
-        print(f"  형식 오류: {train_skip_stats['invalid_format']}개 라인")
-        print(f"  clicked_news_ids 비어있음: {train_skip_stats['empty_clicked']}개 라인")
-        print(f"  후보 2개 미만: {train_skip_stats['insufficient_candidates']}개 라인")
-        print(f"  positive 없음: {train_skip_stats['no_positive']}개 라인")
-        if 'missing_positive_in_index' in train_skip_stats:
-            print(f"    (첫 번째 positive가 news_index에 없어서 스킵: {train_skip_stats['missing_positive_in_index']}개)")
-        print(f"  총 스킵: {sum(train_skip_stats.values())}개 라인")
-        print(f"  처리된 라인: {len(train_data) - sum(train_skip_stats.values())}개")
-        print(f"  생성된 샘플 수: {len(all_train_pn)}개")
-    
     # 테스트 데이터 처리
-    # 스킵 통계 추적
-    skip_stats = {
-        'invalid_format': 0,  # 형식 오류
-        'empty_clicked': 0,   # clicked_news_ids가 비어있음
-        'empty_candidates': 0, # candidate_news가 비어있음
-        'insufficient_candidates': 0  # 후보가 2개 미만
-    }
-    
     for line in test_data:
         parts = line.strip().split('\t')
         if len(parts) < 3:
-            skip_stats['invalid_format'] += 1
             continue
         
         userid = parts[0]
@@ -298,12 +249,7 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
             if news_id in news_index:
                 clicked_news_ids.append(news_index[news_id])
         
-        if len(clicked_news_ids) == 0:
-            skip_stats['empty_clicked'] += 1
-            continue
-        
-        if len(candidate_news) == 0:
-            skip_stats['empty_candidates'] += 1
+        if len(clicked_news_ids) == 0 or len(candidate_news) == 0:
             continue
         
         # 세션 인덱스 시작
@@ -323,7 +269,6 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
                 candidate_news_ids_test.add(cand_id)  # 후보 뉴스 ID 수집
         
         if len(candidate_indices) < 2:
-            skip_stats['insufficient_candidates'] += 1
             continue
         
         # 5개 후보 중 첫 번째가 positive, 나머지가 negative
@@ -352,17 +297,6 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         
         sess_index.append(len(all_test_pn))
         all_test_index.append(sess_index)
-    
-    # 스킵 통계 출력
-    if sum(skip_stats.values()) > 0:
-        print(f"\n[테스트 데이터 스킵 통계]")
-        print(f"  형식 오류: {skip_stats['invalid_format']}개 라인")
-        print(f"  clicked_news_ids 비어있음: {skip_stats['empty_clicked']}개 라인")
-        print(f"  candidate_news 비어있음: {skip_stats['empty_candidates']}개 라인")
-        print(f"  후보 2개 미만: {skip_stats['insufficient_candidates']}개 라인")
-        print(f"  총 스킵: {sum(skip_stats.values())}개 라인")
-        print(f"  처리된 라인: {len(test_data) - sum(skip_stats.values())}개")
-        print(f"  생성된 샘플 수: {len(all_test_pn)}개")
     
     all_train_pn = np.array(all_train_pn, dtype='int32')
     all_label = np.array(all_label, dtype='int32')
@@ -616,18 +550,6 @@ if USE_EXPECTED_BODY:
     expected_bodies_test = load_expected_bodies(output_dir='body_generation/output', dataset_type='test')
     
     print(f"로드된 기대 본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
-    
-    # 디버깅: 로드된 기대본문 샘플 확인
-    if len(expected_bodies_train) > 0:
-        sample_keys = list(expected_bodies_train.keys())[:3]
-        print(f"기대본문 샘플 키 (train): {sample_keys}")
-        for key in sample_keys:
-            print(f"  키: {key}, 본문 길이: {len(expected_bodies_train[key])}자")
-    if len(expected_bodies_test) > 0:
-        sample_keys = list(expected_bodies_test.keys())[:3]
-        print(f"기대본문 샘플 키 (test): {sample_keys}")
-        for key in sample_keys:
-            print(f"  키: {key}, 본문 길이: {len(expected_bodies_test[key])}자")
 
 # 뉴스 인덱스를 사용하여 유저 데이터 전처리
     userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test, all_train_userid_str, all_train_newsid_str, all_test_userid_str, all_test_newsid_str = preprocess_user_file(
@@ -794,18 +716,6 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                     news_ids_str = all_newsid_str[idx]  # 리스트 인덱싱, 5개 후보 뉴스 ID
                     candidate_body_list = []
                     
-                    # 디버깅: 첫 번째 샘플에서만 확인
-                    debug_first_sample = (idx == 0 and not hasattr(generate_batch_data_train, '_debug_done'))
-                    if debug_first_sample:
-                        generate_batch_data_train._debug_done = True
-                        print(f"\n[디버깅] 첫 번째 학습 샘플:")
-                        print(f"  user_id_str: {user_id_str} (type: {type(user_id_str)})")
-                        print(f"  news_ids_str: {news_ids_str} (type: {type(news_ids_str)})")
-                        print(f"  expected_bodies에 있는 키 샘플: {list(expected_bodies.keys())[:3]}")
-                    
-                    found_count = 0
-                    not_found_keys = []
-                    
                     for j, news_idx in enumerate(all_train_pn[idx]):
                         if news_idx == 0:  # 패딩
                             candidate_body_list.append(news_body[0])
@@ -814,7 +724,6 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                             # 유저별 기대본문 찾기
                             key = (user_id_str, news_id_str)
                             if key in expected_bodies:
-                                found_count += 1
                                 # 기대본문 토큰화 및 인덱스 변환
                                 expected_body = expected_bodies[key]
                                 body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
@@ -825,25 +734,9 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                                 word_id = word_id[:300]
                                 word_id = word_id + [0] * (300 - len(word_id))
                                 candidate_body_list.append(np.array(word_id, dtype='int32'))
-                                
-                                if debug_first_sample:
-                                    print(f"  ✓ 찾음: 키={key}, 본문 길이={len(expected_body)}자")
                             else:
-                                not_found_keys.append(key)
                                 # 기대본문이 없으면 원본 본문 사용
                                 candidate_body_list.append(news_body[news_idx])
-                                if debug_first_sample:
-                                    print(f"  ✗ 못 찾음: 키={key}")
-                    
-                    if debug_first_sample:
-                        print(f"  총 {found_count}/5개 기대본문 찾음")
-                        if not_found_keys:
-                            print(f"  못 찾은 키들: {not_found_keys[:3]}")
-                            # 유사한 키 찾기
-                            for nf_key in not_found_keys[:2]:
-                                similar_keys = [k for k in expected_bodies.keys() if k[0] == nf_key[0] or k[1] == nf_key[1]]
-                                if similar_keys:
-                                    print(f"    유사한 키 (user_id={nf_key[0]} 또는 news_id={nf_key[1]}): {similar_keys[:2]}")
                     
                     candidate_body = np.array(candidate_body_list)  # shape: (5, 300)
                 elif candidate_news_body is not None:
@@ -970,23 +863,12 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                     user_id_str = all_userid_str[idx]  # 리스트 인덱싱
                     news_id_str = all_newsid_str[idx]  # 리스트 인덱싱, 단일 후보 뉴스 ID
                     
-                    # 디버깅: 첫 번째 샘플에서만 확인
-                    debug_first_sample = (idx == 0 and not hasattr(generate_batch_data_test, '_debug_done'))
-                    if debug_first_sample:
-                        generate_batch_data_test._debug_done = True
-                        print(f"\n[디버깅] 첫 번째 테스트 샘플:")
-                        print(f"  user_id_str: {user_id_str} (type: {type(user_id_str)})")
-                        print(f"  news_id_str: {news_id_str} (type: {type(news_id_str)})")
-                        print(f"  expected_bodies에 있는 키 샘플: {list(expected_bodies.keys())[:3]}")
-                    
                     if news_idx == 0:  # 패딩
                         candidate_body = news_body[0]
                     else:
                         # 유저별 기대본문 찾기
                         key = (user_id_str, news_id_str)
                         if key in expected_bodies:
-                            if debug_first_sample:
-                                print(f"  ✓ 찾음: 키={key}, 본문 길이={len(expected_bodies[key])}자")
                             # 기대본문 토큰화 및 인덱스 변환
                             expected_body = expected_bodies[key]
                             body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
@@ -998,12 +880,6 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                             word_id = word_id + [0] * (300 - len(word_id))
                             candidate_body = np.array(word_id, dtype='int32')
                         else:
-                            if debug_first_sample:
-                                print(f"  ✗ 못 찾음: 키={key}")
-                                # 유사한 키 찾기
-                                similar_keys = [k for k in expected_bodies.keys() if k[0] == key[0] or k[1] == key[1]]
-                                if similar_keys:
-                                    print(f"    유사한 키 (user_id={key[0]} 또는 news_id={key[1]}): {similar_keys[:2]}")
                             # 기대본문이 없으면 원본 본문 사용
                             candidate_body = news_body[news_idx]
                 elif candidate_news_body is not None:
@@ -1144,7 +1020,11 @@ best_auc = 0.0
 # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
 news_index_reverse = {v: k for k, v in news_index.items()}
 
-for ep in range(20):  # 최대 에폭을 50으로 설정
+for ep in range(20):
+    # 매 에폭마다 다른 순서로 셔플링하기 위해 seed에 에폭 번호 추가
+    np.random.seed(SEED + ep)
+    random.seed(SEED + ep)
+    
     if USE_EXPECTED_BODY:
         # 유저별 기대본문 사용
         traingen=generate_batch_data_train(
@@ -1200,8 +1080,9 @@ for ep in range(20):  # 최대 에폭을 50으로 설정
         best_auc = epoch_results['AUC']
     
     # 보기 좋게 출력
+    current_lr = model.optimizer.learning_rate.numpy() if hasattr(model.optimizer.learning_rate, 'numpy') else model.optimizer.learning_rate
     print(f"\n{'='*60}")
-    print(f"Epoch {ep+1}/20 - Test Results")
+    print(f"Epoch {ep+1}/20 - Test Results (LR: {current_lr:.6f})")
     print(f"{'='*60}")
     print(f"AUC      : {epoch_results['AUC']:.6f} (Best: {best_auc:.6f})")
     print(f"MRR      : {epoch_results['MRR']:.6f}")
