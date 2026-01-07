@@ -1033,7 +1033,7 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
 
 
 # Learning rate를 약간 낮춰서 더 안정적인 학습
-model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])
+model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
 
 # Best AUC 추적 (최종 요약용)
 best_auc = 0.0
@@ -1041,7 +1041,7 @@ best_auc = 0.0
 # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
 news_index_reverse = {v: k for k, v in news_index.items()}
 
-for ep in range(20):
+for ep in range(10):
     # 매 에폭마다 다른 순서로 셔플링하기 위해 seed에 에폭 번호 추가
     np.random.seed(SEED + ep)
     random.seed(SEED + ep)
@@ -1107,7 +1107,7 @@ for ep in range(20):
     # 보기 좋게 출력
     current_lr = model.optimizer.learning_rate.numpy() if hasattr(model.optimizer.learning_rate, 'numpy') else model.optimizer.learning_rate
     print(f"\n{'='*60}")
-    print(f"Epoch {ep+1}/20 - Test Results (LR: {current_lr:.6f})")
+    print(f"Epoch {ep+1}/10 - Test Results (LR: {current_lr:.6f})")
     print(f"{'='*60}")
     print(f"AUC      : {epoch_results['AUC']:.6f} (Best: {best_auc:.6f})")
     print(f"MRR      : {epoch_results['MRR']:.6f}")
