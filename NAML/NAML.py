@@ -1085,7 +1085,7 @@ for ep in range(20):
     all_ndcg=[]
     all_hit1=[]
     for m in all_test_index:
-        if np.sum(all_test_label[m[0]:m[1]])!=0 and m[1]<len(click_score):
+        if np.sum(all_test_label[m[0]:m[1]])!=0 and m[1]<=len(click_score):
             all_auc.append(roc_auc_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0]))
             all_mrr.append(mrr_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0]))
             all_ndcg.append(ndcg_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0],k=5))
