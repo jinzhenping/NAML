@@ -171,9 +171,11 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         # 후보 뉴스들을 news_index로 변환
         candidate_indices = []
         candidate_labels = []
+        candidate_news_filtered = []  # 필터링된 candidate_news (인덱스 대응 보장)
         for i, cand_id in enumerate(candidate_news):
             if cand_id in news_index:
                 candidate_indices.append(news_index[cand_id])
+                candidate_news_filtered.append(cand_id)  # 필터링된 뉴스 ID 저장
                 candidate_news_ids_train.add(cand_id)  # 후보 뉴스 ID 수집
                 is_clicked = int(clicked[i]) if i < len(clicked) else 0
                 candidate_labels.append(is_clicked)
@@ -190,21 +192,23 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
             # 처음 target_size개만 사용
             candidate_indices = candidate_indices[:target_size]
             candidate_labels = candidate_labels[:target_size]
+            candidate_news_filtered = candidate_news_filtered[:target_size]
         elif len(candidate_indices) < target_size:
             # 부족한 만큼 패딩 (0으로 채움, label도 0)
             padding_size = target_size - len(candidate_indices)
             candidate_indices += [0] * padding_size
             candidate_labels += [0] * padding_size
+            candidate_news_filtered += [''] * padding_size  # 패딩에 대응하는 빈 문자열
         
         # 5개 후보 중 1개 positive, 나머지 negative
         # 순서를 섞기
-        combined = list(zip(candidate_indices, candidate_labels))
+        combined = list(zip(candidate_indices, candidate_labels, candidate_news_filtered))
         random.shuffle(combined)
-        shuffle_indices, shuffle_labels = zip(*combined)
+        shuffle_indices, shuffle_labels, shuffle_news_ids = zip(*combined)
         
         # 유저 히스토리 (최근 MAX_HISTORY_CLICKS개 사용)
         # 후보 뉴스를 제외한 최근 클릭 기록 사용
-        candidate_set = set([idx for idx in candidate_indices if idx != 0])
+        candidate_set = set([idx for idx in shuffle_indices if idx != 0])
         filtered_history = [idx for idx in clicked_news_ids if idx not in candidate_set]
         # 최근 MAX_HISTORY_CLICKS개 선택 (순서 유지)
         recent_history = filtered_history[-MAX_HISTORY_CLICKS:] if len(filtered_history) >= MAX_HISTORY_CLICKS else filtered_history
@@ -217,20 +221,8 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         all_train_userid_str.append(userid)  # 유저 ID 문자열 저장
         
         # 후보 뉴스 ID 문자열 저장 (shuffle된 순서에 맞춰)
-        # candidate_indices와 candidate_news의 매핑 생성
-        idx_to_news_id = {}
-        for orig_idx, news_idx in enumerate(candidate_indices):
-            if orig_idx < len(candidate_news):
-                idx_to_news_id[news_idx] = candidate_news[orig_idx]
-        
-        # shuffle된 순서에 맞춰 뉴스 ID 재배열
-        shuffle_news_ids = []
-        for shuffle_idx in shuffle_indices:
-            if shuffle_idx in idx_to_news_id:
-                shuffle_news_ids.append(idx_to_news_id[shuffle_idx])
-            else:
-                shuffle_news_ids.append('')  # 패딩
-        all_train_newsid_str.append(shuffle_news_ids)
+        # candidate_indices와 candidate_news의 매핑은 이미 shuffle_news_ids에 포함됨
+        all_train_newsid_str.append(list(shuffle_news_ids))
         all_user_pos.append(allpos)
     
     # 테스트 데이터 처리
@@ -263,9 +255,11 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         
         # 후보 뉴스들을 news_index로 변환
         candidate_indices = []
+        candidate_news_filtered = []  # 필터링된 candidate_news (인덱스 대응 보장)
         for cand_id in candidate_news:
             if cand_id in news_index:
                 candidate_indices.append(news_index[cand_id])
+                candidate_news_filtered.append(cand_id)  # 필터링된 뉴스 ID 저장
                 candidate_news_ids_test.add(cand_id)  # 후보 뉴스 ID 수집
         
         if len(candidate_indices) < 2:
@@ -274,18 +268,10 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         # 5개 후보 중 첫 번째가 positive, 나머지가 negative
         # 테스트에서도 순서를 섞어야 모델이 순서 패턴을 학습하지 않음
         candidate_labels = [1 if i == 0 else 0 for i in range(len(candidate_indices))]
-        combined = list(zip(candidate_indices, candidate_labels))
+        combined = list(zip(candidate_indices, candidate_labels, candidate_news_filtered))
         random.shuffle(combined)
-        shuffle_indices, shuffle_labels = zip(*combined)
-        
-        # 후보 뉴스 ID 문자열 저장 (shuffle된 순서에 맞춰)
-        shuffle_news_ids = []
-        for shuffle_idx in shuffle_indices:
-            if shuffle_idx in candidate_indices:
-                orig_idx = candidate_indices.index(shuffle_idx)
-                shuffle_news_ids.append(candidate_news[orig_idx] if orig_idx < len(candidate_news) else '')
-            else:
-                shuffle_news_ids.append('')
+        shuffle_indices, shuffle_labels, shuffle_news_ids = zip(*combined)
+        shuffle_news_ids = list(shuffle_news_ids)  # 튜플을 리스트로 변환
         
         for cand_idx, label, news_id_str in zip(shuffle_indices, shuffle_labels, shuffle_news_ids):
             all_test_pn.append(int(cand_idx))
@@ -1038,7 +1024,9 @@ for ep in range(20):
     else:
         # 원본 본문 사용
         traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30, candidate_news_body=None)
-    model.fit(traingen, epochs=1, steps_per_epoch=len(all_train_id)//30)
+    # 나머지 샘플도 처리하기 위해 올림 계산
+    steps_per_epoch = (len(all_train_id) + 29) // 30
+    model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch)
     
     if USE_EXPECTED_BODY:
         # 유저별 기대본문 사용
@@ -1053,7 +1041,9 @@ for ep in range(20):
     else:
         # 원본 본문 사용
         testgen=generate_batch_data_test(all_test_pn,all_test_label,all_test_id, 30, candidate_news_body=None)
-    click_score = model_test.predict(testgen, steps=len(all_test_id)//30, verbose=1)
+    # 나머지 샘플도 처리하기 위해 올림 계산
+    test_steps = (len(all_test_id) + 29) // 30
+    click_score = model_test.predict(testgen, steps=test_steps, verbose=1)
     from sklearn.metrics import roc_auc_score
     all_auc=[]
     all_mrr=[]
