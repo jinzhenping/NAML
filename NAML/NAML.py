@@ -651,6 +651,10 @@ from tensorflow.keras.optimizers import Adam
 
 print(f"Seed 고정 완료: {SEED}")
 
+# 기대본문이 없어서 원본 본문을 사용하는 경우 카운터
+train_fallback_count = 0  # 학습 데이터에서 기대본문 없음 -> 원본 사용
+test_fallback_count = 0   # 테스트 데이터에서 기대본문 없음 -> 원본 사용
+
 
 # In[ ]:
 
@@ -702,6 +706,7 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                     news_ids_str = all_newsid_str[idx]  # 리스트 인덱싱, 5개 후보 뉴스 ID
                     candidate_body_list = []
                     
+                    global train_fallback_count
                     for j, news_idx in enumerate(all_train_pn[idx]):
                         if news_idx == 0:  # 패딩
                             candidate_body_list.append(news_body[0])
@@ -722,12 +727,15 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                                 candidate_body_list.append(np.array(word_id, dtype='int32'))
                             else:
                                 # 기대본문이 없으면 원본 본문 사용
+                                train_fallback_count += 1
                                 candidate_body_list.append(news_body[news_idx])
                     
                     candidate_body = np.array(candidate_body_list)  # shape: (5, 300)
                 elif candidate_news_body is not None:
+                    # candidate_news_body 사용 (현재 사용되지 않음)
                     candidate_body = candidate_news_body[candidate_indices]  # shape: (5, 300)
                 else:
+                    # 원본 본문 사용 (USE_EXPECTED_BODY=False일 때 이 경로 사용)
                     candidate_body = news_body[candidate_indices]  # shape: (5, 300)
                 
                 # 각 후보 뉴스의 본문을 개별적으로 추출하고 배치 차원 추가 (5개의 (1, 300) 배열)
@@ -849,6 +857,7 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                     user_id_str = all_userid_str[idx]  # 리스트 인덱싱
                     news_id_str = all_newsid_str[idx]  # 리스트 인덱싱, 단일 후보 뉴스 ID
                     
+                    global test_fallback_count
                     if news_idx == 0:  # 패딩
                         candidate_body = news_body[0]
                     else:
@@ -867,10 +876,13 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                             candidate_body = np.array(word_id, dtype='int32')
                         else:
                             # 기대본문이 없으면 원본 본문 사용
+                            test_fallback_count += 1
                             candidate_body = news_body[news_idx]
                 elif candidate_news_body is not None:
+                    # candidate_news_body 사용 (현재 사용되지 않음)
                     candidate_body = candidate_news_body[news_idx]
                 else:
+                    # 원본 본문 사용 (USE_EXPECTED_BODY=False일 때 이 경로 사용)
                     candidate_body = news_body[news_idx]
                 
                 candidate_body = np.expand_dims(candidate_body, axis=0)  # shape: (1, 300)
@@ -1011,6 +1023,10 @@ for ep in range(20):
     np.random.seed(SEED + ep)
     random.seed(SEED + ep)
     
+    # 에폭 시작 시 카운터 초기화
+    train_fallback_count = 0
+    test_fallback_count = 0
+    
     if USE_EXPECTED_BODY:
         # 유저별 기대본문 사용
         traingen=generate_batch_data_train(
@@ -1078,6 +1094,18 @@ for ep in range(20):
     print(f"MRR      : {epoch_results['MRR']:.6f}")
     print(f"NDCG@5   : {epoch_results['NDCG@5']:.6f}")
     print(f"Hit@1    : {epoch_results['Hit@1']:.6f}")
+    
+    # 기대본문 fallback 통계 출력
+    if USE_EXPECTED_BODY:
+        total_train_candidates = len(all_train_id) * (1 + npratio)  # 각 샘플마다 5개 후보
+        total_test_candidates = len(all_test_id)  # 각 샘플이 하나의 후보
+        train_fallback_pct = (train_fallback_count / total_train_candidates * 100) if total_train_candidates > 0 else 0
+        test_fallback_pct = (test_fallback_count / total_test_candidates * 100) if total_test_candidates > 0 else 0
+        
+        print(f"\n[기대본문 Fallback 통계]")
+        print(f"  학습 데이터: {train_fallback_count}/{total_train_candidates}개 ({train_fallback_pct:.2f}%) - 기대본문 없음 -> 원본 사용")
+        print(f"  테스트 데이터: {test_fallback_count}/{total_test_candidates}개 ({test_fallback_pct:.2f}%) - 기대본문 없음 -> 원본 사용")
+    
     print(f"{'='*60}\n")
 
 # 전체 결과 요약
