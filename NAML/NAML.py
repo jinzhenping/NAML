@@ -247,13 +247,7 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         # 세션 인덱스 시작
         sess_index = [len(all_test_pn)]
         
-        # 유저 히스토리 (최근 MAX_HISTORY_CLICKS개 사용)
-        # 최근 MAX_HISTORY_CLICKS개 선택 (순서 유지)
-        recent_history = clicked_news_ids[-MAX_HISTORY_CLICKS:] if len(clicked_news_ids) >= MAX_HISTORY_CLICKS else clicked_news_ids
-        allpos = [int(p) for p in recent_history]
-        allpos += [0] * (MAX_HISTORY_CLICKS - len(allpos))
-        
-        # 후보 뉴스들을 news_index로 변환
+        # 후보 뉴스들을 news_index로 변환 (히스토리 필터링 전에 먼저 처리)
         candidate_indices = []
         candidate_news_filtered = []  # 필터링된 candidate_news (인덱스 대응 보장)
         for cand_id in candidate_news:
@@ -264,6 +258,15 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         
         if len(candidate_indices) < 2:
             continue
+        
+        # 유저 히스토리 (최근 MAX_HISTORY_CLICKS개 사용)
+        # 후보 뉴스를 제외한 최근 클릭 기록 사용 (데이터 누수 방지)
+        candidate_set = set([idx for idx in candidate_indices if idx != 0])
+        filtered_history = [idx for idx in clicked_news_ids if idx not in candidate_set]
+        # 최근 MAX_HISTORY_CLICKS개 선택 (순서 유지)
+        recent_history = filtered_history[-MAX_HISTORY_CLICKS:] if len(filtered_history) >= MAX_HISTORY_CLICKS else filtered_history
+        allpos = [int(p) for p in recent_history]
+        allpos += [0] * (MAX_HISTORY_CLICKS - len(allpos))
         
         # 5개 후보 중 첫 번째가 positive, 나머지가 negative
         # 테스트에서도 순서를 섞어야 모델이 순서 패턴을 학습하지 않음
@@ -651,10 +654,6 @@ from tensorflow.keras.optimizers import Adam
 
 print(f"Seed 고정 완료: {SEED}")
 
-# 기대본문이 없어서 원본 본문을 사용하는 경우 카운터
-train_fallback_count = 0  # 학습 데이터에서 기대본문 없음 -> 원본 사용
-test_fallback_count = 0   # 테스트 데이터에서 기대본문 없음 -> 원본 사용
-
 
 # In[ ]:
 
@@ -706,7 +705,6 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                     news_ids_str = all_newsid_str[idx]  # 리스트 인덱싱, 5개 후보 뉴스 ID
                     candidate_body_list = []
                     
-                    global train_fallback_count
                     for j, news_idx in enumerate(all_train_pn[idx]):
                         if news_idx == 0:  # 패딩
                             candidate_body_list.append(news_body[0])
@@ -727,7 +725,6 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                                 candidate_body_list.append(np.array(word_id, dtype='int32'))
                             else:
                                 # 기대본문이 없으면 원본 본문 사용
-                                train_fallback_count += 1
                                 candidate_body_list.append(news_body[news_idx])
                     
                     candidate_body = np.array(candidate_body_list)  # shape: (5, 300)
@@ -857,7 +854,6 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                     user_id_str = all_userid_str[idx]  # 리스트 인덱싱
                     news_id_str = all_newsid_str[idx]  # 리스트 인덱싱, 단일 후보 뉴스 ID
                     
-                    global test_fallback_count
                     if news_idx == 0:  # 패딩
                         candidate_body = news_body[0]
                     else:
@@ -876,7 +872,6 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                             candidate_body = np.array(word_id, dtype='int32')
                         else:
                             # 기대본문이 없으면 원본 본문 사용
-                            test_fallback_count += 1
                             candidate_body = news_body[news_idx]
                 elif candidate_news_body is not None:
                     # candidate_news_body 사용 (현재 사용되지 않음)
@@ -1023,10 +1018,6 @@ for ep in range(20):
     np.random.seed(SEED + ep)
     random.seed(SEED + ep)
     
-    # 에폭 시작 시 카운터 초기화
-    train_fallback_count = 0
-    test_fallback_count = 0
-    
     if USE_EXPECTED_BODY:
         # 유저별 기대본문 사용
         traingen=generate_batch_data_train(
@@ -1094,18 +1085,6 @@ for ep in range(20):
     print(f"MRR      : {epoch_results['MRR']:.6f}")
     print(f"NDCG@5   : {epoch_results['NDCG@5']:.6f}")
     print(f"Hit@1    : {epoch_results['Hit@1']:.6f}")
-    
-    # 기대본문 fallback 통계 출력
-    if USE_EXPECTED_BODY:
-        total_train_candidates = len(all_train_id) * (1 + npratio)  # 각 샘플마다 5개 후보
-        total_test_candidates = len(all_test_id)  # 각 샘플이 하나의 후보
-        train_fallback_pct = (train_fallback_count / total_train_candidates * 100) if total_train_candidates > 0 else 0
-        test_fallback_pct = (test_fallback_count / total_test_candidates * 100) if total_test_candidates > 0 else 0
-        
-        print(f"\n[기대본문 Fallback 통계]")
-        print(f"  학습 데이터: {train_fallback_count}/{total_train_candidates}개 ({train_fallback_pct:.2f}%) - 기대본문 없음 -> 원본 사용")
-        print(f"  테스트 데이터: {test_fallback_count}/{total_test_candidates}개 ({test_fallback_pct:.2f}%) - 기대본문 없음 -> 원본 사용")
-    
     print(f"{'='*60}\n")
 
 # 전체 결과 요약
@@ -1122,10 +1101,10 @@ print(f"{'='*72}")
 # 최고 성능 찾기
 best_auc_idx = np.argmax([r[0] for r in results])
 best_auc_epoch = best_auc_idx + 1
-best_hit1_idx = np.argmax([r[3] for r in results])  # 인덱스 변경: 4 -> 3 (NDCG@10 제거)
+best_hit1_idx = np.argmax([r[3] for r in results])
 best_hit1_epoch = best_hit1_idx + 1
 print(f"\nBest AUC  : Epoch {best_auc_epoch} - {results[best_auc_idx][0]:.6f}")
-print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][3]:.6f}")  # 인덱스 변경: 4 -> 3
+print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][3]:.6f}")
 print(f"{'='*60}\n")
 # In[ ]:
 
