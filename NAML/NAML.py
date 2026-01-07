@@ -303,10 +303,11 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
 # In[ ]:
 
 
-def preprocess_news_file(file='dataset/MIND/MIND_news.tsv'):
+def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_train=None, expected_bodies_test=None):
     """
     MIND 뉴스 데이터 전처리
     형식: news_id, category, subcategory, title, body
+    expected_bodies_train, expected_bodies_test: 기대본문 딕셔너리 (word_dict 생성에 포함)
     """
     with open(file, 'r', encoding='utf-8') as f:
         newsdata = f.readlines()
@@ -339,6 +340,7 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv'):
     # 단어 사전 생성
     word_dict_raw = {'PADDING': [0, 999999]}
     
+    # 원본 본문으로 word_dict_raw 생성
     for docid in news:
         for word in news[docid][2]:  # title
             if word in word_dict_raw:
@@ -350,6 +352,24 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv'):
                 word_dict_raw[word][1] += 1
             else:
                 word_dict_raw[word] = [len(word_dict_raw), 1]
+    
+    # 기대본문도 word_dict_raw에 추가
+    if expected_bodies_train is not None or expected_bodies_test is not None:
+        expected_body_count = 0
+        for expected_bodies in [expected_bodies_train, expected_bodies_test]:
+            if expected_bodies is None:
+                continue
+            for (user_id, news_id), generated_body in expected_bodies.items():
+                if generated_body:
+                    body_tokens = word_tokenize(generated_body.lower())
+                    for word in body_tokens:
+                        if word in word_dict_raw:
+                            word_dict_raw[word][1] += 1
+                        else:
+                            word_dict_raw[word] = [len(word_dict_raw), 1]
+                    expected_body_count += 1
+        if expected_body_count > 0:
+            print(f"기대본문 {expected_body_count}개를 word_dict 생성에 포함했습니다.")
     
     # 최소 빈도 3 이상만 사용
     word_dict = {}
@@ -528,10 +548,11 @@ def get_embedding(word_dict, glove_path='glove.840B.300d.txt'):
 # In[ ]:
 
 
-# 먼저 뉴스 데이터를 전처리해야 news_index를 얻을 수 있음
-word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file()
-
 # 기대 본문 사용 여부는 상단에서 설정 (USE_EXPECTED_BODY)
+# word_dict 생성에 기대본문을 포함하기 위해 먼저 기대본문을 로드
+expected_bodies_train = None
+expected_bodies_test = None
+
 if USE_EXPECTED_BODY:
     # 기대 본문 로드
     print("\n기대 본문 로드 중...")
@@ -540,7 +561,14 @@ if USE_EXPECTED_BODY:
     
     print(f"로드된 기대 본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
 
+# 뉴스 데이터를 전처리 (기대본문도 word_dict 생성에 포함)
+word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(
+    expected_bodies_train=expected_bodies_train,
+    expected_bodies_test=expected_bodies_test
+)
+
 # 뉴스 인덱스를 사용하여 유저 데이터 전처리
+if USE_EXPECTED_BODY:
     userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test, all_train_userid_str, all_train_newsid_str, all_test_userid_str, all_test_newsid_str = preprocess_user_file(
         news_index=news_index,
         expected_bodies_train=expected_bodies_train,
