@@ -645,6 +645,9 @@ def hit_at_k(y_true, y_score, k=1):
     """
     if len(y_true) == 0 or np.sum(y_true) == 0:
         return 0.0
+    # y_score를 1차원 배열로 변환 (필요한 경우)
+    y_score = np.array(y_score).flatten()
+    y_true = np.array(y_true).flatten()
     sorted_indices = np.argsort(y_score)[::-1]  # 점수 내림차순 정렬
     top_k_indices = sorted_indices[:k]
     return 1.0 if np.any(y_true[top_k_indices] == 1) else 0.0
@@ -1033,7 +1036,7 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
 
 
 # Learning rate를 약간 낮춰서 더 안정적인 학습
-model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
+model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])
 
 # Best AUC 추적 (최종 요약용)
 best_auc = 0.0
