@@ -1063,7 +1063,11 @@ for ep in range(10):
         # 원본 본문 사용
         traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30, candidate_news_body=None)
     # 나머지 샘플도 처리하기 위해 올림 계산
-    steps_per_epoch = (len(all_train_id) + 29) // 30
+    actual_train_samples = len(all_train_id)
+    steps_per_epoch = (actual_train_samples + 29) // 30  # 올림 계산 (배치 수)
+    print(f"[디버깅] 학습 샘플 수: {actual_train_samples}개")
+    print(f"[디버깅] steps_per_epoch 계산: {actual_train_samples}개 샘플 / 30 = {steps_per_epoch} steps (예상 처리 샘플 수: {steps_per_epoch * 30})")
+    print(f"[디버깅] generate_batch_data_train은 배치 단위로 yield하므로 steps_per_epoch={steps_per_epoch}이 올바릅니다.")
     model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch)
     
     if USE_EXPECTED_BODY:
