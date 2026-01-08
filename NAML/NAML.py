@@ -238,18 +238,18 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         all_train_newsid_str.append(list(shuffle_news_ids))
         all_user_pos.append(allpos)
     
-    # 스킵 통계 출력
-    total_train_lines = len(train_data)
-    total_skipped = sum(skip_stats.values())
-    total_processed = total_train_lines - total_skipped
-    print(f"\n[학습 데이터 전처리 통계]")
-    print(f"  - 총 라인 수: {total_train_lines}")
-    print(f"  - 처리된 라인 수: {total_processed}")
-    print(f"  - 제외된 라인 수: {total_skipped}")
-    print(f"    * 컬럼 부족 (4개 미만): {skip_stats['invalid_format']}개")
-    print(f"    * 클릭 히스토리 없음: {skip_stats['no_clicked_history']}개")
-    print(f"    * 후보 부족 (2개 미만): {skip_stats['insufficient_candidates']}개")
-    print(f"    * positive 없음: {skip_stats['no_positive']}개")
+    # 스킵 통계 출력 (디버깅용, 필요 시 주석 해제)
+    # total_train_lines = len(train_data)
+    # total_skipped = sum(skip_stats.values())
+    # total_processed = total_train_lines - total_skipped
+    # print(f"\n[학습 데이터 전처리 통계]")
+    # print(f"  - 총 라인 수: {total_train_lines}")
+    # print(f"  - 처리된 라인 수: {total_processed}")
+    # print(f"  - 제외된 라인 수: {total_skipped}")
+    # print(f"    * 컬럼 부족 (4개 미만): {skip_stats['invalid_format']}개")
+    # print(f"    * 클릭 히스토리 없음: {skip_stats['no_clicked_history']}개")
+    # print(f"    * 후보 부족 (2개 미만): {skip_stats['insufficient_candidates']}개")
+    # print(f"    * positive 없음: {skip_stats['no_positive']}개")
     
     # 테스트 데이터 처리
     for line in test_data:
@@ -582,8 +582,8 @@ expected_bodies_test = None
 if USE_EXPECTED_BODY:
     # 기대 본문 로드
     print("\n기대 본문 로드 중...")
-    expected_bodies_train = load_expected_bodies(output_dir='body_generation/output', dataset_type='train_zeroshot')
-    expected_bodies_test = load_expected_bodies(output_dir='body_generation/output', dataset_type='test_zeroshot')
+    expected_bodies_train = load_expected_bodies(output_dir='body_generation/output', dataset_type='train')
+    expected_bodies_test = load_expected_bodies(output_dir='body_generation/output', dataset_type='test')
     
     print(f"로드된 기대 본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
 
@@ -1091,9 +1091,9 @@ for ep in range(10):
     # 나머지 샘플도 처리하기 위해 올림 계산
     actual_train_samples = len(all_train_id)
     steps_per_epoch = (actual_train_samples + 29) // 30  # 올림 계산 (배치 수)
-    print(f"[디버깅] 학습 샘플 수: {actual_train_samples}개")
-    print(f"[디버깅] steps_per_epoch 계산: {actual_train_samples}개 샘플 / 30 = {steps_per_epoch} steps (예상 처리 샘플 수: {steps_per_epoch * 30})")
-    print(f"[디버깅] generate_batch_data_train은 배치 단위로 yield하므로 steps_per_epoch={steps_per_epoch}이 올바릅니다.")
+    # print(f"[디버깅] 학습 샘플 수: {actual_train_samples}개")
+    # print(f"[디버깅] steps_per_epoch 계산: {actual_train_samples}개 샘플 / 30 = {steps_per_epoch} steps (예상 처리 샘플 수: {steps_per_epoch * 30})")
+    # print(f"[디버깅] generate_batch_data_train은 배치 단위로 yield하므로 steps_per_epoch={steps_per_epoch}이 올바릅니다.")
     model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch)
     
     if USE_EXPECTED_BODY:
@@ -1115,35 +1115,35 @@ for ep in range(10):
     # generate_batch_data_test는 각 샘플을 개별적으로 yield하므로, 
     # steps는 실제 샘플 수와 같아야 합니다 (배치 크기와 무관)
     test_steps = actual_test_samples
-    print(f"[디버깅] test_steps 계산: {actual_test_samples}개 샘플 (각 샘플을 개별 yield하므로 steps=샘플 수)")
+    # print(f"[디버깅] test_steps 계산: {actual_test_samples}개 샘플 (각 샘플을 개별 yield하므로 steps=샘플 수)")
     click_score = model_test.predict(testgen, steps=test_steps, verbose=1)
-    print(f"[디버깅] 실제 생성된 click_score 수: {len(click_score)}")
+    # print(f"[디버깅] 실제 생성된 click_score 수: {len(click_score)}")
     
-    # click_score가 실제 샘플 수와 일치하는지 확인
-    if len(click_score) != actual_test_samples:
-        print(f"[경고] click_score({len(click_score)})가 실제 샘플 수({actual_test_samples})와 일치하지 않습니다!")
-        print(f"[경고] 차이: {actual_test_samples - len(click_score)}개 샘플이 누락되었습니다.")
+    # click_score가 실제 샘플 수와 일치하는지 확인 (디버깅용, 필요 시 주석 해제)
+    # if len(click_score) != actual_test_samples:
+    #     print(f"[경고] click_score({len(click_score)})가 실제 샘플 수({actual_test_samples})와 일치하지 않습니다!")
+    #     print(f"[경고] 차이: {actual_test_samples - len(click_score)}개 샘플이 누락되었습니다.")
     from sklearn.metrics import roc_auc_score
     all_auc=[]
     all_mrr=[]
     all_ndcg=[]
     all_hit1=[]
     
-    # click_score 디버깅 출력 (처음 5개 세션만)
-    print(f"\n[디버깅] click_score 형태: {click_score.shape}")
-    print(f"[디버깅] 전체 click_score 통계:")
-    print(f"  - 최소값: {np.min(click_score):.6f}")
-    print(f"  - 최대값: {np.max(click_score):.6f}")
-    print(f"  - 평균값: {np.mean(click_score):.6f}")
-    print(f"  - 표준편차: {np.std(click_score):.6f}")
-    print(f"[디버깅] 실제 샘플 수: {len(all_test_id)}")
-    print(f"[디버깅] all_test_index에 저장된 세션 수: {len(all_test_index)}")
+    # # click_score 디버깅 출력 (필요 시 주석 해제)
+    # print(f"\n[디버깅] click_score 형태: {click_score.shape}")
+    # print(f"[디버깅] 전체 click_score 통계:")
+    # print(f"  - 최소값: {np.min(click_score):.6f}")
+    # print(f"  - 최대값: {np.max(click_score):.6f}")
+    # print(f"  - 평균값: {np.mean(click_score):.6f}")
+    # print(f"  - 표준편차: {np.std(click_score):.6f}")
+    # print(f"[디버깅] 실제 샘플 수: {len(all_test_id)}")
+    # print(f"[디버깅] all_test_index에 저장된 세션 수: {len(all_test_index)}")
     
     session_count = 0
     excluded_no_label = 0  # 정답이 없는 세션
     excluded_out_of_range = 0  # click_score 범위를 벗어난 세션
     total_sessions = len(all_test_index)
-    
+
     # 범위를 벗어난 세션의 예시 출력
     out_of_range_examples = []
     
@@ -1163,18 +1163,18 @@ for ep in range(10):
             session_scores = click_score[m[0]:m[1],0]
             session_labels = all_test_label[m[0]:m[1]]
             
-            # 처음 5개 세션만 상세 출력
-            if session_count < 5:
-                print(f"\n[디버깅] 세션 {session_count + 1}:")
-                print(f"  - 인덱스 범위: [{m[0]}, {m[1]})")
-                print(f"  - 점수: {session_scores}")
-                print(f"  - 레이블: {session_labels}")
-                print(f"  - 정답 위치: {np.where(session_labels == 1)[0]}")
-                sorted_indices = np.argsort(session_scores)[::-1]
-                print(f"  - 정렬된 인덱스 (내림차순): {sorted_indices}")
-                print(f"  - 1위 인덱스: {sorted_indices[0]}, 점수: {session_scores[sorted_indices[0]]:.6f}")
-                hit1_val = hit_at_k(session_labels, session_scores, k=1)
-                print(f"  - Hit@1: {hit1_val}")
+            # # 처음 5개 세션만 상세 출력 (필요 시 주석 해제)
+            # if session_count < 5:
+            #     print(f"\n[디버깅] 세션 {session_count + 1}:")
+            #     print(f"  - 인덱스 범위: [{m[0]}, {m[1]})")
+            #     print(f"  - 점수: {session_scores}")
+            #     print(f"  - 레이블: {session_labels}")
+            #     print(f"  - 정답 위치: {np.where(session_labels == 1)[0]}")
+            #     sorted_indices = np.argsort(session_scores)[::-1]
+            #     print(f"  - 정렬된 인덱스 (내림차순): {sorted_indices}")
+            #     print(f"  - 1위 인덱스: {sorted_indices[0]}, 점수: {session_scores[sorted_indices[0]]:.6f}")
+            #     hit1_val = hit_at_k(session_labels, session_scores, k=1)
+            #     print(f"  - Hit@1: {hit1_val}")
             
             all_auc.append(roc_auc_score(session_labels, session_scores))
             all_mrr.append(mrr_score(session_labels, session_scores))
@@ -1182,19 +1182,20 @@ for ep in range(10):
             all_hit1.append(hit_at_k(session_labels, session_scores, k=1))
             session_count += 1
     
-    print(f"\n[디버깅] 세션 통계:")
-    print(f"  - all_test_index에 저장된 총 세션 수: {total_sessions}")
-    print(f"  - 실제 샘플 수 (all_test_id): {len(all_test_id)}")
-    print(f"  - click_score 샘플 수: {len(click_score)}")
-    print(f"  - 평가된 세션 수: {session_count}")
-    print(f"  - 제외된 세션 수: {total_sessions - session_count}")
-    print(f"    * 정답 없음: {excluded_no_label}개")
-    print(f"    * click_score 범위 벗어남: {excluded_out_of_range}개")
-    if out_of_range_examples:
-        print(f"\n[디버깅] 범위 벗어난 세션 예시:")
-        for start, end, max_idx in out_of_range_examples:
-            print(f"    - 인덱스 [{start}, {end}), click_score 길이: {max_idx}, 초과: {end - max_idx}")
-    print(f"  - Hit@1 값 분포: 0={sum(1 for x in all_hit1 if x == 0)}, 1={sum(1 for x in all_hit1 if x == 1)}")
+    # # 디버깅용 세션 통계 출력 (필요 시 주석 해제)
+    # print(f"\n[디버깅] 세션 통계:")
+    # print(f"  - all_test_index에 저장된 총 세션 수: {total_sessions}")
+    # print(f"  - 실제 샘플 수 (all_test_id): {len(all_test_id)}")
+    # print(f"  - click_score 샘플 수: {len(click_score)}")
+    # print(f"  - 평가된 세션 수: {session_count}")
+    # print(f"  - 제외된 세션 수: {total_sessions - session_count}")
+    # print(f"    * 정답 없음: {excluded_no_label}개")
+    # print(f"    * click_score 범위 벗어남: {excluded_out_of_range}개")
+    # if out_of_range_examples:
+    #     print(f"\n[디버깅] 범위 벗어난 세션 예시:")
+    #     for start, end, max_idx in out_of_range_examples:
+    #         print(f"    - 인덱스 [{start}, {end}), click_score 길이: {max_idx}, 초과: {end - max_idx}")
+    # print(f"  - Hit@1 값 분포: 0={sum(1 for x in all_hit1 if x == 0)}, 1={sum(1 for x in all_hit1 if x == 1)}")
     
     # 결과 저장
     epoch_results = {
