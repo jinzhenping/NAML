@@ -273,6 +273,10 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         # 세션 인덱스 시작
         sess_index = [len(all_test_pn)]
         
+        # 정답(첫 번째 후보)이 news_index에 있는지 먼저 확인
+        if len(candidate_news) == 0 or candidate_news[0] not in news_index:
+            continue  # 정답이 news_index에 없으면 세션 스킵
+        
         # 후보 뉴스들을 news_index로 변환 (히스토리 필터링 전에 먼저 처리)
         candidate_indices = []
         candidate_news_filtered = []  # 필터링된 candidate_news (인덱스 대응 보장)
@@ -281,6 +285,10 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
                 candidate_indices.append(news_index[cand_id])
                 candidate_news_filtered.append(cand_id)  # 필터링된 뉴스 ID 저장
                 candidate_news_ids_test.add(cand_id)  # 후보 뉴스 ID 수집
+        
+        # 정답이 필터링된 후보에 포함되어 있는지 확인 (이미 위에서 확인했지만 안전장치)
+        if candidate_news[0] not in candidate_news_filtered:
+            continue  # 정답이 필터링된 후보에 없으면 세션 스킵
         
         if len(candidate_indices) < 2:
             continue
@@ -296,7 +304,9 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         
         # 5개 후보 중 첫 번째가 positive, 나머지가 negative
         # 테스트에서도 순서를 섞어야 모델이 순서 패턴을 학습하지 않음
-        candidate_labels = [1 if i == 0 else 0 for i in range(len(candidate_indices))]
+        # 정답(첫 번째 후보)이 candidate_news_filtered에서의 인덱스 찾기
+        positive_index_in_filtered = candidate_news_filtered.index(candidate_news[0])
+        candidate_labels = [1 if i == positive_index_in_filtered else 0 for i in range(len(candidate_indices))]
         combined = list(zip(candidate_indices, candidate_labels, candidate_news_filtered))
         random.shuffle(combined)
         shuffle_indices, shuffle_labels, shuffle_news_ids = zip(*combined)
