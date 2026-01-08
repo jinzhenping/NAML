@@ -1097,8 +1097,21 @@ for ep in range(10):
     print(f"  - 표준편차: {np.std(click_score):.6f}")
     
     session_count = 0
+    excluded_no_label = 0  # 정답이 없는 세션
+    excluded_out_of_range = 0  # click_score 범위를 벗어난 세션
+    total_sessions = len(all_test_index)
+    
     for m in all_test_index:
-        if np.sum(all_test_label[m[0]:m[1]])!=0 and m[1]<=len(click_score):
+        # 제외 이유 확인
+        has_label = np.sum(all_test_label[m[0]:m[1]]) != 0
+        in_range = m[1] <= len(click_score)
+        
+        if not has_label:
+            excluded_no_label += 1
+        if not in_range:
+            excluded_out_of_range += 1
+        
+        if has_label and in_range:
             session_scores = click_score[m[0]:m[1],0]
             session_labels = all_test_label[m[0]:m[1]]
             
@@ -1121,8 +1134,13 @@ for ep in range(10):
             all_hit1.append(hit_at_k(session_labels, session_scores, k=1))
             session_count += 1
     
-    print(f"\n[디버깅] 총 평가 세션 수: {session_count}")
-    print(f"[디버깅] Hit@1 값 분포: 0={sum(1 for x in all_hit1 if x == 0)}, 1={sum(1 for x in all_hit1 if x == 1)}")
+    print(f"\n[디버깅] 세션 통계:")
+    print(f"  - all_test_index에 저장된 총 세션 수: {total_sessions}")
+    print(f"  - 평가된 세션 수: {session_count}")
+    print(f"  - 제외된 세션 수: {total_sessions - session_count}")
+    print(f"    * 정답 없음: {excluded_no_label}개")
+    print(f"    * click_score 범위 벗어남: {excluded_out_of_range}개")
+    print(f"  - Hit@1 값 분포: 0={sum(1 for x in all_hit1 if x == 0)}, 1={sum(1 for x in all_hit1 if x == 1)}")
     
     # 결과 저장
     epoch_results = {
