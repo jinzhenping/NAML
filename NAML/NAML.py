@@ -1080,8 +1080,19 @@ for ep in range(10):
         # 원본 본문 사용
         testgen=generate_batch_data_test(all_test_pn,all_test_label,all_test_id, 30, candidate_news_body=None)
     # 나머지 샘플도 처리하기 위해 올림 계산
-    test_steps = (len(all_test_id) + 29) // 30
+    # 실제 샘플 수를 기준으로 정확하게 계산
+    actual_test_samples = len(all_test_id)
+    # generate_batch_data_test는 각 샘플을 개별적으로 yield하므로, 
+    # steps는 실제 샘플 수와 같아야 합니다 (배치 크기와 무관)
+    test_steps = actual_test_samples
+    print(f"[디버깅] test_steps 계산: {actual_test_samples}개 샘플 (각 샘플을 개별 yield하므로 steps=샘플 수)")
     click_score = model_test.predict(testgen, steps=test_steps, verbose=1)
+    print(f"[디버깅] 실제 생성된 click_score 수: {len(click_score)}")
+    
+    # click_score가 실제 샘플 수와 일치하는지 확인
+    if len(click_score) != actual_test_samples:
+        print(f"[경고] click_score({len(click_score)})가 실제 샘플 수({actual_test_samples})와 일치하지 않습니다!")
+        print(f"[경고] 차이: {actual_test_samples - len(click_score)}개 샘플이 누락되었습니다.")
     from sklearn.metrics import roc_auc_score
     all_auc=[]
     all_mrr=[]
