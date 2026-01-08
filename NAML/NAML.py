@@ -556,8 +556,8 @@ expected_bodies_test = None
 if USE_EXPECTED_BODY:
     # 기대 본문 로드
     print("\n기대 본문 로드 중...")
-    expected_bodies_train = load_expected_bodies(output_dir='body_generation/output', dataset_type='train')
-    expected_bodies_test = load_expected_bodies(output_dir='body_generation/output', dataset_type='test')
+    expected_bodies_train = load_expected_bodies(output_dir='body_generation/output', dataset_type='train_zeroshot')
+    expected_bodies_test = load_expected_bodies(output_dir='body_generation/output', dataset_type='test_zeroshot')
     
     print(f"로드된 기대 본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
 
@@ -1095,11 +1095,16 @@ for ep in range(10):
     print(f"  - 최대값: {np.max(click_score):.6f}")
     print(f"  - 평균값: {np.mean(click_score):.6f}")
     print(f"  - 표준편차: {np.std(click_score):.6f}")
+    print(f"[디버깅] 실제 샘플 수: {len(all_test_id)}")
+    print(f"[디버깅] all_test_index에 저장된 세션 수: {len(all_test_index)}")
     
     session_count = 0
     excluded_no_label = 0  # 정답이 없는 세션
     excluded_out_of_range = 0  # click_score 범위를 벗어난 세션
     total_sessions = len(all_test_index)
+    
+    # 범위를 벗어난 세션의 예시 출력
+    out_of_range_examples = []
     
     for m in all_test_index:
         # 제외 이유 확인
@@ -1110,6 +1115,8 @@ for ep in range(10):
             excluded_no_label += 1
         if not in_range:
             excluded_out_of_range += 1
+            if len(out_of_range_examples) < 3:
+                out_of_range_examples.append((m[0], m[1], len(click_score)))
         
         if has_label and in_range:
             session_scores = click_score[m[0]:m[1],0]
@@ -1136,10 +1143,16 @@ for ep in range(10):
     
     print(f"\n[디버깅] 세션 통계:")
     print(f"  - all_test_index에 저장된 총 세션 수: {total_sessions}")
+    print(f"  - 실제 샘플 수 (all_test_id): {len(all_test_id)}")
+    print(f"  - click_score 샘플 수: {len(click_score)}")
     print(f"  - 평가된 세션 수: {session_count}")
     print(f"  - 제외된 세션 수: {total_sessions - session_count}")
     print(f"    * 정답 없음: {excluded_no_label}개")
     print(f"    * click_score 범위 벗어남: {excluded_out_of_range}개")
+    if out_of_range_examples:
+        print(f"\n[디버깅] 범위 벗어난 세션 예시:")
+        for start, end, max_idx in out_of_range_examples:
+            print(f"    - 인덱스 [{start}, {end}), click_score 길이: {max_idx}, 초과: {end - max_idx}")
     print(f"  - Hit@1 값 분포: 0={sum(1 for x in all_hit1 if x == 0)}, 1={sum(1 for x in all_hit1 if x == 1)}")
     
     # 결과 저장
