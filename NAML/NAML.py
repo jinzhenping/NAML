@@ -23,7 +23,7 @@ random.seed(SEED)
 np.random.seed(SEED)
 
 # 모델 하이퍼파라미터 설정
-MAX_HISTORY_CLICKS = 50  # 클릭 히스토리 개수 (한 곳에서 설정)
+MAX_HISTORY_CLICKS = 10  # 클릭 히스토리 개수 (한 곳에서 설정)
 MAX_SENT_LENGTH = 30     # 제목 최대 단어 수
 MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
@@ -1087,12 +1087,42 @@ for ep in range(10):
     all_mrr=[]
     all_ndcg=[]
     all_hit1=[]
+    
+    # click_score 디버깅 출력 (처음 5개 세션만)
+    print(f"\n[디버깅] click_score 형태: {click_score.shape}")
+    print(f"[디버깅] 전체 click_score 통계:")
+    print(f"  - 최소값: {np.min(click_score):.6f}")
+    print(f"  - 최대값: {np.max(click_score):.6f}")
+    print(f"  - 평균값: {np.mean(click_score):.6f}")
+    print(f"  - 표준편차: {np.std(click_score):.6f}")
+    
+    session_count = 0
     for m in all_test_index:
         if np.sum(all_test_label[m[0]:m[1]])!=0 and m[1]<=len(click_score):
-            all_auc.append(roc_auc_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0]))
-            all_mrr.append(mrr_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0]))
-            all_ndcg.append(ndcg_score(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0],k=5))
-            all_hit1.append(hit_at_k(all_test_label[m[0]:m[1]],click_score[m[0]:m[1],0],k=1))
+            session_scores = click_score[m[0]:m[1],0]
+            session_labels = all_test_label[m[0]:m[1]]
+            
+            # 처음 5개 세션만 상세 출력
+            if session_count < 5:
+                print(f"\n[디버깅] 세션 {session_count + 1}:")
+                print(f"  - 인덱스 범위: [{m[0]}, {m[1]})")
+                print(f"  - 점수: {session_scores}")
+                print(f"  - 레이블: {session_labels}")
+                print(f"  - 정답 위치: {np.where(session_labels == 1)[0]}")
+                sorted_indices = np.argsort(session_scores)[::-1]
+                print(f"  - 정렬된 인덱스 (내림차순): {sorted_indices}")
+                print(f"  - 1위 인덱스: {sorted_indices[0]}, 점수: {session_scores[sorted_indices[0]]:.6f}")
+                hit1_val = hit_at_k(session_labels, session_scores, k=1)
+                print(f"  - Hit@1: {hit1_val}")
+            
+            all_auc.append(roc_auc_score(session_labels, session_scores))
+            all_mrr.append(mrr_score(session_labels, session_scores))
+            all_ndcg.append(ndcg_score(session_labels, session_scores, k=5))
+            all_hit1.append(hit_at_k(session_labels, session_scores, k=1))
+            session_count += 1
+    
+    print(f"\n[디버깅] 총 평가 세션 수: {session_count}")
+    print(f"[디버깅] Hit@1 값 분포: 0={sum(1 for x in all_hit1 if x == 0)}, 1={sum(1 for x in all_hit1 if x == 1)}")
     
     # 결과 저장
     epoch_results = {
