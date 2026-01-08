@@ -149,9 +149,17 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
     candidate_news_ids_test = set()
     
     # 학습 데이터 처리
+    skip_stats = {
+        'invalid_format': 0,  # 컬럼이 4개 미만
+        'no_clicked_history': 0,  # 클릭 히스토리가 없음
+        'insufficient_candidates': 0,  # 후보가 2개 미만
+        'no_positive': 0,  # positive가 없음
+    }
+    
     for line in train_data:
         parts = line.strip().split('\t')
         if len(parts) < 4:
+            skip_stats['invalid_format'] += 1
             continue
         
         userid = parts[0]
@@ -166,6 +174,7 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
                 clicked_news_ids.append(news_index[news_id])
         
         if len(clicked_news_ids) == 0:
+            skip_stats['no_clicked_history'] += 1
             continue
         
         # 후보 뉴스들을 news_index로 변환
@@ -181,7 +190,11 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
                 candidate_labels.append(is_clicked)
         
         # 후보가 2개 미만이거나 positive가 없으면 스킵
-        if len(candidate_indices) < 2 or sum(candidate_labels) == 0:
+        if len(candidate_indices) < 2:
+            skip_stats['insufficient_candidates'] += 1
+            continue
+        if sum(candidate_labels) == 0:
+            skip_stats['no_positive'] += 1
             continue
         
         # 정확히 5개 후보로 맞추기 (npratio=4이므로 1+4=5)
@@ -224,6 +237,19 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
         # candidate_indices와 candidate_news의 매핑은 이미 shuffle_news_ids에 포함됨
         all_train_newsid_str.append(list(shuffle_news_ids))
         all_user_pos.append(allpos)
+    
+    # 스킵 통계 출력
+    total_train_lines = len(train_data)
+    total_skipped = sum(skip_stats.values())
+    total_processed = total_train_lines - total_skipped
+    print(f"\n[학습 데이터 전처리 통계]")
+    print(f"  - 총 라인 수: {total_train_lines}")
+    print(f"  - 처리된 라인 수: {total_processed}")
+    print(f"  - 제외된 라인 수: {total_skipped}")
+    print(f"    * 컬럼 부족 (4개 미만): {skip_stats['invalid_format']}개")
+    print(f"    * 클릭 히스토리 없음: {skip_stats['no_clicked_history']}개")
+    print(f"    * 후보 부족 (2개 미만): {skip_stats['insufficient_candidates']}개")
+    print(f"    * positive 없음: {skip_stats['no_positive']}개")
     
     # 테스트 데이터 처리
     for line in test_data:
