@@ -558,6 +558,8 @@ if USE_EXPECTED_BODY:
     available_expected_bodies_test = 0
     total_candidates_train = 0
     total_candidates_test = 0
+    missing_expected_bodies_train = 0
+    missing_expected_bodies_test = 0
     
     # 학습 데이터: 각 샘플의 (user_id, news_id) 조합 확인
     # 학습 데이터는 샘플당 5개 후보를 포함
@@ -565,18 +567,24 @@ if USE_EXPECTED_BODY:
         user_id = all_train_userid_str[i]
         news_ids = all_train_newsid_str[i]  # 5개 후보 뉴스 ID 리스트
         for news_id in news_ids:
-            total_candidates_train += 1
-            if news_id and (user_id, news_id) in expected_bodies_train:
-                available_expected_bodies_train += 1
+            if news_id:  # 빈 문자열이 아닌 경우만
+                total_candidates_train += 1
+                if (user_id, news_id) in expected_bodies_train:
+                    available_expected_bodies_train += 1
+                else:
+                    missing_expected_bodies_train += 1
     
     # 테스트 데이터: 각 샘플의 (user_id, news_id) 조합 확인
     # 테스트 데이터는 각 샘플이 개별 후보 뉴스
     for i in range(len(all_test_userid_str)):
         user_id = all_test_userid_str[i]
         news_id = all_test_newsid_str[i]  # 단일 후보 뉴스 ID
-        total_candidates_test += 1
-        if news_id and (user_id, news_id) in expected_bodies_test:
-            available_expected_bodies_test += 1
+        if news_id:  # 빈 문자열이 아닌 경우만
+            total_candidates_test += 1
+            if (user_id, news_id) in expected_bodies_test:
+                available_expected_bodies_test += 1
+            else:
+                missing_expected_bodies_test += 1
     
     print(f"\n[기대본문 사용 통계]")
     print(f"  - 로드된 기대본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
@@ -586,9 +594,13 @@ if USE_EXPECTED_BODY:
     if total_candidates_train > 0:
         train_coverage = (available_expected_bodies_train / total_candidates_train) * 100
         print(f"  - 학습 데이터 기대본문 커버리지: {train_coverage:.2f}% ({available_expected_bodies_train}/{total_candidates_train})")
+        if missing_expected_bodies_train > 0:
+            print(f"  - 학습 데이터 기대본문 누락: {missing_expected_bodies_train}개 (원본 본문 사용)")
     if total_candidates_test > 0:
         test_coverage = (available_expected_bodies_test / total_candidates_test) * 100
         print(f"  - 테스트 데이터 기대본문 커버리지: {test_coverage:.2f}% ({available_expected_bodies_test}/{total_candidates_test})")
+        if missing_expected_bodies_test > 0:
+            print(f"  - 테스트 데이터 기대본문 누락: {missing_expected_bodies_test}개 (원본 본문 사용)")
     
     # 유저별 기대본문을 사용하므로 create_candidate_news_body는 사용하지 않음
     # 배치 생성 시 유저 ID와 뉴스 ID를 사용하여 해당 유저의 기대본문을 찾아서 사용
