@@ -407,10 +407,10 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_trai
         if expected_body_count > 0:
             print(f"기대본문 {expected_body_count}개를 word_dict 생성에 포함했습니다.")
     
-    # 최소 빈도 3 이상만 사용
+    # 최소 빈도 2 이상만 사용
     word_dict = {}
     for i in word_dict_raw:
-        if word_dict_raw[i][1] >= 3:
+        if word_dict_raw[i][1] >= 2:
             word_dict[i] = [len(word_dict), word_dict_raw[i][1]]
     
     print(f"단어 사전 크기: {len(word_dict)} (전체: {len(word_dict_raw)})")
@@ -454,67 +454,6 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_trai
     news_sv = np.array(news_sv, dtype='int32')
     
     return word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index
-
-
-def create_candidate_news_body(news_index, news_body, candidate_news_ids, expected_bodies, word_dict):
-    """
-    후보 뉴스의 본문을 기대 본문으로 대체한 배열 생성
-    news_body: 원본 본문 배열
-    candidate_news_ids: 후보 뉴스 ID 집합
-    expected_bodies: 기대 본문 딕셔너리 {news_id: generated_body}
-    word_dict: 단어 사전
-    """
-    # news_body를 깊은 복사 (NumPy 배열이므로 .copy()로 충분하지만 명시적으로)
-    import numpy as np
-    candidate_news_body = np.array(news_body, copy=True)
-    
-    # 후보 뉴스의 본문을 기대 본문으로 대체
-    replaced_count = 0
-    not_in_index = 0
-    not_in_expected = 0
-    empty_body = 0
-    
-    for news_id in candidate_news_ids:
-        if news_id not in news_index:
-            not_in_index += 1
-            continue
-        if news_id not in expected_bodies:
-            not_in_expected += 1
-            continue
-            
-        news_idx = news_index[news_id]
-        if news_idx >= len(candidate_news_body):
-            continue
-            
-        # 기대 본문 토큰화
-        expected_body = expected_bodies[news_id]
-        if not expected_body or len(expected_body.strip()) == 0:
-            empty_body += 1
-            continue
-            
-        body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
-        
-        # 단어 인덱스로 변환
-        word_id = []
-        for word in body_tokens:
-            if word in word_dict:
-                word_id.append(word_dict[word][0])
-        word_id = word_id[:300]
-        word_id = word_id + [0] * (300 - len(word_id))
-        
-        # 본문 대체 (NumPy 배열이므로 직접 할당)
-        candidate_news_body[news_idx] = np.array(word_id, dtype='int32')
-        replaced_count += 1
-    
-    print(f"후보 뉴스 본문 대체 완료: {replaced_count}/{len(candidate_news_ids)}개")
-    if not_in_index > 0:
-        print(f"  - news_index에 없음: {not_in_index}개")
-    if not_in_expected > 0:
-        print(f"  - 기대 본문에 없음: {not_in_expected}개")
-    if empty_body > 0:
-        print(f"  - 빈 본문: {empty_body}개")
-    
-    return candidate_news_body
 
 
 # In[ ]:
@@ -613,6 +552,43 @@ if USE_EXPECTED_BODY:
     )
     
     print(f"수집된 후보 뉴스 ID: train={len(candidate_news_ids_train)}개, test={len(candidate_news_ids_test)}개")
+    
+    # 실제로 사용 가능한 기대본문 개수 확인
+    available_expected_bodies_train = 0
+    available_expected_bodies_test = 0
+    total_candidates_train = 0
+    total_candidates_test = 0
+    
+    # 학습 데이터: 각 샘플의 (user_id, news_id) 조합 확인
+    # 학습 데이터는 샘플당 5개 후보를 포함
+    for i in range(len(all_train_userid_str)):
+        user_id = all_train_userid_str[i]
+        news_ids = all_train_newsid_str[i]  # 5개 후보 뉴스 ID 리스트
+        for news_id in news_ids:
+            total_candidates_train += 1
+            if news_id and (user_id, news_id) in expected_bodies_train:
+                available_expected_bodies_train += 1
+    
+    # 테스트 데이터: 각 샘플의 (user_id, news_id) 조합 확인
+    # 테스트 데이터는 각 샘플이 개별 후보 뉴스
+    for i in range(len(all_test_userid_str)):
+        user_id = all_test_userid_str[i]
+        news_id = all_test_newsid_str[i]  # 단일 후보 뉴스 ID
+        total_candidates_test += 1
+        if news_id and (user_id, news_id) in expected_bodies_test:
+            available_expected_bodies_test += 1
+    
+    print(f"\n[기대본문 사용 통계]")
+    print(f"  - 로드된 기대본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
+    print(f"  - 실제 사용 가능한 기대본문: train={available_expected_bodies_train}개, test={available_expected_bodies_test}개")
+    print(f"  - 학습 샘플 수: {len(all_train_id)}개 (총 후보 뉴스 수: {total_candidates_train}개)")
+    print(f"  - 테스트 샘플 수: {len(all_test_id)}개 (총 후보 뉴스 수: {total_candidates_test}개)")
+    if total_candidates_train > 0:
+        train_coverage = (available_expected_bodies_train / total_candidates_train) * 100
+        print(f"  - 학습 데이터 기대본문 커버리지: {train_coverage:.2f}% ({available_expected_bodies_train}/{total_candidates_train})")
+    if total_candidates_test > 0:
+        test_coverage = (available_expected_bodies_test / total_candidates_test) * 100
+        print(f"  - 테스트 데이터 기대본문 커버리지: {test_coverage:.2f}% ({available_expected_bodies_test}/{total_candidates_test})")
     
     # 유저별 기대본문을 사용하므로 create_candidate_news_body는 사용하지 않음
     # 배치 생성 시 유저 ID와 뉴스 ID를 사용하여 해당 유저의 기대본문을 찾아서 사용
