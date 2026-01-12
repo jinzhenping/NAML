@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # coding: utf-8
 
 # In[ ]:
@@ -15,15 +14,13 @@ import itertools
 import numpy as np
 import pickle
 from numpy.linalg import cholesky
-# from keras.utils.np_utils import *  # 최신 Keras에서는 제거됨, 사용하지 않으므로 주석 처리
 
-# 재현성을 위한 seed 고정 (전역 설정)
 SEED = 42
 random.seed(SEED)
 np.random.seed(SEED)
 
 # 모델 하이퍼파라미터 설정
-MAX_HISTORY_CLICKS = 10  # 클릭 히스토리 개수 (한 곳에서 설정)
+MAX_HISTORY_CLICKS = 10  # 클릭 히스토리 개수
 MAX_SENT_LENGTH = 30     # 제목 최대 단어 수
 MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
@@ -83,7 +80,6 @@ def load_expected_bodies(output_dir='body_generation/output', dataset_type='trai
                             # (user_id, news_id) 튜플을 키로 사용
                             expected_bodies[(user_id, news_id)] = data['generated_body']
                 except Exception as e:
-                    # 조용히 넘어감 (파일이 없거나 형식이 다를 수 있음)
                     continue
     
     print(f"기대 본문 로드 완료: {len(expected_bodies)}개 ({dataset_type})")
@@ -415,7 +411,7 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_trai
     
     print(f"단어 사전 크기: {len(word_dict)} (전체: {len(word_dict_raw)})")
     
-    # 뉴스 제목 인덱싱 (최대 30단어)
+    # 뉴스 제목 인덱싱
     news_words = [[0] * 30]
     news_index = {'0': 0}
     
@@ -430,7 +426,7 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_trai
     
     news_words = np.array(news_words, dtype='int32')
     
-    # 뉴스 본문 인덱싱 (최대 300단어)
+    # 뉴스 본문 인덱싱
     news_body = [[0] * 300]
     for newsid in news:
         word_id = []
@@ -622,9 +618,6 @@ else:
 
 # In[ ]:
 
-
-# 이미 위에서 처리했으므로 주석 처리
-# word_dict,category,subcategory,news_words,news_body,news_v,news_sv,news_index=preprocess_news_file()
 print(f"뉴스 개수: {len(news_index)}")
 print(f"카테고리 개수: {len(category)}")
 print(f"서브카테고리 개수: {len(subcategory)}")
@@ -682,29 +675,21 @@ def hit_at_k(y_true, y_score, k=1):
 
 import os
 
-# 재현성을 위한 seed 고정
 SEED = 42
-
-# Python random seed
 random.seed(SEED)
-
-# NumPy random seed
 np.random.seed(SEED)
 
-# Python hash seed (선택적, 딕셔너리 순서 고정)
 os.environ['PYTHONHASHSEED'] = str(SEED)
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 import keras
 import tensorflow as tf
 
-# TensorFlow/Keras random seed
 tf.random.set_seed(SEED)
 
 from keras.layers import *
 from keras.models import Model
 from keras import backend as K
-# TensorFlow 2.8.0에서는 tensorflow.keras.optimizers 사용
 from tensorflow.keras.optimizers import Adam
 
 print(f"Seed 고정 완료: {SEED}")
@@ -731,14 +716,12 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
     inputid = np.arange(len(all_label))
     np.random.shuffle(inputid)
     y = all_label
-    # 빈 배치 방지: 마지막 배치가 비어있을 수 있으므로 필터링
     batches = [inputid[range(batch_size*i, min(len(y), batch_size*(i+1)))] 
                for i in range(len(y)//batch_size+1)
-               if batch_size*i < len(y)]  # 빈 배치 제외
+               if batch_size*i < len(y)]
 
     while (True):
         for batch_indices in batches:
-            # 배치 내 모든 샘플을 모아서 한 번에 yield
             batch_candidate_splits = [[] for _ in range(5)]  # 5개 후보 뉴스
             batch_browsed_news_splits = [[] for _ in range(MAX_HISTORY_CLICKS)]
             batch_candidate_body_splits = [[] for _ in range(5)]
@@ -969,7 +952,6 @@ import random
 results=[]
 keras.backend.clear_session()
 
-# 모델 파라미터 (상단에서 정의한 전역 변수 사용)
 MAX_SENTS = MAX_HISTORY_CLICKS  # 히스토리 클릭 개수
 title_input = Input(shape=(MAX_SENT_LENGTH,), dtype='int32')
 
@@ -977,13 +959,13 @@ body_input = Input(shape=(MAX_BODY_LENGTH,), dtype='int32')
 embedding_layer = Embedding(len(word_dict), 300, weights=[embedding_mat],trainable=True)
 
 embedded_sequences_title = embedding_layer(title_input)
-embedded_sequences_title=Dropout(0.3)(embedded_sequences_title)  # 0.2 -> 0.3으로 증가
+embedded_sequences_title=Dropout(0.3)(embedded_sequences_title)
 
 embedded_sequences_body = embedding_layer(body_input)
-embedded_sequences_body=Dropout(0.3)(embedded_sequences_body)  # 0.2 -> 0.3으로 증가
+embedded_sequences_body=Dropout(0.3)(embedded_sequences_body)
 
 title_cnn = Conv1D(filters=400, kernel_size=3, padding='same', activation='relu', strides=1)(embedded_sequences_title)
-title_cnn=Dropout(0.3)(title_cnn)  # 0.2 -> 0.3으로 증가
+title_cnn=Dropout(0.3)(title_cnn)
 
 attention = Dense(200,activation='tanh')(title_cnn)
 attention = Flatten()(Dense(1)(attention))
@@ -991,7 +973,7 @@ attention_weight = Activation('softmax')(attention)
 title_rep=keras.layers.Dot((1, 1))([title_cnn, attention_weight])
 
 body_cnn = Conv1D(filters=400, kernel_size=3, padding='same', activation='relu', strides=1)(embedded_sequences_body)
-body_cnn=Dropout(0.3)(body_cnn)  # 0.2 -> 0.3으로 증가
+body_cnn=Dropout(0.3)(body_cnn)
 
 attention_body = Dense(200,activation='tanh')(body_cnn)
 attention_body = Flatten()(Dense(1)(attention_body))
@@ -1006,8 +988,7 @@ v_embedding=Dense(400,activation='relu')(Flatten()(v_embedding_layer(vinput)))
 sv_embedding=Dense(400,activation='relu')(Flatten()(sv_embedding_layer(svinput)))
 
 all_channel=[title_rep,body_rep,v_embedding,sv_embedding]
-    
-# Lambda 대신 Reshape 사용 (최신 Keras 호환)
+
 views=concatenate([Reshape((1, -1))(channel) for channel in all_channel],axis=1)
 
 attentionv = Dense(200,activation='tanh')(views)
@@ -1065,17 +1046,14 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
                          +[candidate_one_v]+browsed_v_input+[candidate_one_sv]+browsed_sv_input, score)
 
 
-# Learning rate를 약간 낮춰서 더 안정적인 학습
 model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])
 
-# Best AUC 추적 (최종 요약용)
 best_auc = 0.0
 
 # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
 news_index_reverse = {v: k for k, v in news_index.items()}
 
 for ep in range(10):
-    # 매 에폭마다 다른 순서로 셔플링하기 위해 seed에 에폭 번호 추가
     np.random.seed(SEED + ep)
     random.seed(SEED + ep)
     
@@ -1092,9 +1070,9 @@ for ep in range(10):
     else:
         # 원본 본문 사용
         traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30, candidate_news_body=None)
-    # 나머지 샘플도 처리하기 위해 올림 계산
+
     actual_train_samples = len(all_train_id)
-    steps_per_epoch = (actual_train_samples + 29) // 30  # 올림 계산 (배치 수)
+    steps_per_epoch = (actual_train_samples + 29) // 30
     # print(f"[디버깅] 학습 샘플 수: {actual_train_samples}개")
     # print(f"[디버깅] steps_per_epoch 계산: {actual_train_samples}개 샘플 / 30 = {steps_per_epoch} steps (예상 처리 샘플 수: {steps_per_epoch * 30})")
     # print(f"[디버깅] generate_batch_data_train은 배치 단위로 yield하므로 steps_per_epoch={steps_per_epoch}이 올바릅니다.")
@@ -1113,11 +1091,8 @@ for ep in range(10):
     else:
         # 원본 본문 사용
         testgen=generate_batch_data_test(all_test_pn,all_test_label,all_test_id, 30, candidate_news_body=None)
-    # 나머지 샘플도 처리하기 위해 올림 계산
-    # 실제 샘플 수를 기준으로 정확하게 계산
+
     actual_test_samples = len(all_test_id)
-    # generate_batch_data_test는 각 샘플을 개별적으로 yield하므로, 
-    # steps는 실제 샘플 수와 같아야 합니다 (배치 크기와 무관)
     test_steps = actual_test_samples
     # print(f"[디버깅] test_steps 계산: {actual_test_samples}개 샘플 (각 샘플을 개별 yield하므로 steps=샘플 수)")
     click_score = model_test.predict(testgen, steps=test_steps, verbose=1)
@@ -1133,7 +1108,7 @@ for ep in range(10):
     all_ndcg=[]
     all_hit1=[]
     
-    # # click_score 디버깅 출력 (필요 시 주석 해제)
+    # # click_score 디버깅 출력
     # print(f"\n[디버깅] click_score 형태: {click_score.shape}")
     # print(f"[디버깅] 전체 click_score 통계:")
     # print(f"  - 최소값: {np.min(click_score):.6f}")
@@ -1167,7 +1142,7 @@ for ep in range(10):
             session_scores = click_score[m[0]:m[1],0]
             session_labels = all_test_label[m[0]:m[1]]
             
-            # # 처음 5개 세션만 상세 출력 (필요 시 주석 해제)
+            # # 처음 5개 세션만 상세 출력
             # if session_count < 5:
             #     print(f"\n[디버깅] 세션 {session_count + 1}:")
             #     print(f"  - 인덱스 범위: [{m[0]}, {m[1]})")
@@ -1186,7 +1161,7 @@ for ep in range(10):
             all_hit1.append(hit_at_k(session_labels, session_scores, k=1))
             session_count += 1
     
-    # # 디버깅용 세션 통계 출력 (필요 시 주석 해제)
+    # # 디버깅용 세션 통계 출력
     # print(f"\n[디버깅] 세션 통계:")
     # print(f"  - all_test_index에 저장된 총 세션 수: {total_sessions}")
     # print(f"  - 실제 샘플 수 (all_test_id): {len(all_test_id)}")
@@ -1214,7 +1189,6 @@ for ep in range(10):
     if epoch_results['AUC'] > best_auc:
         best_auc = epoch_results['AUC']
     
-    # 보기 좋게 출력
     current_lr = model.optimizer.learning_rate.numpy() if hasattr(model.optimizer.learning_rate, 'numpy') else model.optimizer.learning_rate
     print(f"\n{'='*60}")
     print(f"Epoch {ep+1}/10 - Test Results (LR: {current_lr:.6f})")
