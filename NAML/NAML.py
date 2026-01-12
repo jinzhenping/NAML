@@ -359,7 +359,7 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_trai
             subcategory[subcat] = len(subcategory)
     
     # 단어 사전 생성
-    word_dict_raw = {'PADDING': [0, 999999]}
+    word_dict_raw = {'PADDING': [0, 999999], '<UNK>': [1, 999999]}  # PADDING=0, UNK=1
     
     # 원본 본문으로 word_dict_raw 생성
     for docid in news:
@@ -392,10 +392,14 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_trai
         if expected_body_count > 0:
             print(f"기대본문 {expected_body_count}개를 word_dict 생성에 포함했습니다.")
     
-    # 최소 빈도 2 이상만 사용
+    # 최소 빈도 2 이상만 사용 (PADDING과 <UNK>는 항상 포함)
     word_dict = {}
+    # PADDING과 <UNK>를 먼저 추가 (고정 인덱스 0, 1)
+    word_dict['PADDING'] = [0, word_dict_raw['PADDING'][1]]
+    word_dict['<UNK>'] = [1, word_dict_raw['<UNK>'][1]]
+    # 나머지 단어들은 인덱스 2부터 시작
     for i in word_dict_raw:
-        if word_dict_raw[i][1] >= 2:
+        if i != 'PADDING' and i != '<UNK>' and word_dict_raw[i][1] >= 2:
             word_dict[i] = [len(word_dict), word_dict_raw[i][1]]
     
     print(f"단어 사전 크기: {len(word_dict)} (전체: {len(word_dict_raw)})")
@@ -404,12 +408,15 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_trai
     news_words = [[0] * 30]
     news_index = {'0': 0}
     
+    unk_idx = word_dict['<UNK>'][0]  # <UNK> 인덱스
     for newsid in news:
         word_id = []
         news_index[newsid] = len(news_index)
         for word in news[newsid][2]:  # title
             if word in word_dict:
                 word_id.append(word_dict[word][0])
+            else:
+                word_id.append(unk_idx)  # word_dict에 없는 단어는 <UNK>로 처리
         word_id = word_id[:30]
         news_words.append(word_id + [0] * (30 - len(word_id)))
     
@@ -417,11 +424,14 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_trai
     
     # 뉴스 본문 인덱싱
     news_body = [[0] * 300]
+    unk_idx = word_dict['<UNK>'][0]  # <UNK> 인덱스
     for newsid in news:
         word_id = []
         for word in news[newsid][3]:  # body
             if word in word_dict:
                 word_id.append(word_dict[word][0])
+            else:
+                word_id.append(unk_idx)  # word_dict에 없는 단어는 <UNK>로 처리
         word_id = word_id[:300]
         news_body.append(word_id + [0] * (300 - len(word_id)))
     
@@ -497,9 +507,17 @@ def get_embedding(word_dict, glove_path='glove.840B.300d.txt'):
         if type(embedding_matrix[i]) == int:
             embedding_matrix[i] = np.reshape(norm, 300)
     
-    embedding_matrix[0] = np.zeros(300, dtype='float32')
+    embedding_matrix[0] = np.zeros(300, dtype='float32')  # PADDING 임베딩 (0)
+    
+    # <UNK> 임베딩 초기화 (인덱스 1)
+    if len(embedding_matrix) > 1:
+        # <UNK>는 평균 0, 표준편차 0.1로 랜덤 초기화
+        embedding_matrix[1] = np.random.normal(0, 0.1, 300).astype('float32')
+    
     embedding_matrix = np.array(embedding_matrix, dtype='float32')
     print(f"임베딩 행렬 shape: {embedding_matrix.shape}")
+    print(f"  - PADDING 인덱스: 0 (모두 0)")
+    print(f"  - <UNK> 인덱스: 1 (랜덤 초기화)")
     return embedding_matrix
 
 
@@ -709,9 +727,12 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                                 expected_body = expected_bodies[key]
                                 body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
                                 word_id = []
+                                unk_idx = word_dict['<UNK>'][0]  # <UNK> 인덱스
                                 for word in body_tokens:
                                     if word in word_dict:
                                         word_id.append(word_dict[word][0])
+                                    else:
+                                        word_id.append(unk_idx)  # word_dict에 없는 단어는 <UNK>로 처리
                                 word_id = word_id[:300]
                                 word_id = word_id + [0] * (300 - len(word_id))
                                 candidate_body_list.append(np.array(word_id, dtype='int32'))
@@ -855,9 +876,12 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                             expected_body = expected_bodies[key]
                             body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
                             word_id = []
+                            unk_idx = word_dict['<UNK>'][0]  # <UNK> 인덱스
                             for word in body_tokens:
                                 if word in word_dict:
                                     word_id.append(word_dict[word][0])
+                                else:
+                                    word_id.append(unk_idx)  # word_dict에 없는 단어는 <UNK>로 처리
                             word_id = word_id[:300]
                             word_id = word_id + [0] * (300 - len(word_id))
                             candidate_body = np.array(word_id, dtype='int32')
