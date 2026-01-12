@@ -731,7 +731,10 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
     inputid = np.arange(len(all_label))
     np.random.shuffle(inputid)
     y = all_label
-    batches = [inputid[range(batch_size*i, min(len(y), batch_size*(i+1)))] for i in range(len(y)//batch_size+1)]
+    # 빈 배치 방지: 마지막 배치가 비어있을 수 있으므로 필터링
+    batches = [inputid[range(batch_size*i, min(len(y), batch_size*(i+1)))] 
+               for i in range(len(y)//batch_size+1)
+               if batch_size*i < len(y)]  # 빈 배치 제외
 
     while (True):
         for batch_indices in batches:
@@ -891,7 +894,10 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
     
     inputid = np.arange(len(all_label))
     y = all_label
-    batches = [inputid[range(batch_size*i, min(len(y), batch_size*(i+1)))] for i in range(len(y)//batch_size+1)]
+    # 빈 배치 방지: 마지막 배치가 비어있을 수 있으므로 필터링
+    batches = [inputid[range(batch_size*i, min(len(y), batch_size*(i+1)))] 
+               for i in range(len(y)//batch_size+1)
+               if batch_size*i < len(y)]  # 빈 배치 제외
 
     while (True):
         for batch_indices in batches:
