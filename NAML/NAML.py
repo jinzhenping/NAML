@@ -7,6 +7,18 @@ import itertools
 import numpy as np
 import pickle
 from numpy.linalg import cholesky
+import json
+import os
+import keras
+import tensorflow as tf
+from keras.layers import *
+from keras.models import Model
+from keras import backend as K
+from tensorflow.keras.optimizers import Adam
+import numpy as np
+from nltk.tokenize import word_tokenize
+from sklearn.metrics import roc_auc_score
+
 
 SEED = 42
 random.seed(SEED)
@@ -19,8 +31,6 @@ MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
 USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사용
 
-# In[ ]:
-
 
 def load_expected_bodies(output_dir='body_generation/output', dataset_type='train'):
     """
@@ -28,8 +38,6 @@ def load_expected_bodies(output_dir='body_generation/output', dataset_type='trai
     output_dir/{dataset_type}/user_{user_id}/news_{news_id}.json에서 기대 본문 로드
     반환: {(user_id, news_id): generated_body} 형태의 딕셔너리
     """
-    import json
-    import os
     
     expected_bodies = {}  # {(user_id, news_id): generated_body}
     base_path = os.path.join(output_dir, dataset_type)
@@ -315,8 +323,6 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
     return userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test, all_train_userid_str, all_train_newsid_str, all_test_userid_str, all_test_newsid_str
 
 
-# In[ ]:
-
 
 def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_train=None, expected_bodies_test=None):
     """
@@ -435,8 +441,6 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_trai
     return word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index
 
 
-# In[ ]:
-
 
 def get_embedding(word_dict, glove_path='glove.840B.300d.txt'):
     """
@@ -498,8 +502,6 @@ def get_embedding(word_dict, glove_path='glove.840B.300d.txt'):
     print(f"임베딩 행렬 shape: {embedding_matrix.shape}")
     return embedding_matrix
 
-
-# In[ ]:
 
 
 # 기대 본문 사용 여부는 상단에서 설정 (USE_EXPECTED_BODY)
@@ -592,14 +594,10 @@ else:
     )
 
 
-# In[ ]:
-
 print(f"뉴스 개수: {len(news_index)}")
 print(f"카테고리 개수: {len(category)}")
 print(f"서브카테고리 개수: {len(subcategory)}")
 
-
-# In[ ]:
 
 
 # GloVe 파일 경로를 지정하거나 없으면 랜덤 초기화 사용
@@ -607,8 +605,6 @@ print(f"서브카테고리 개수: {len(subcategory)}")
 # embedding_mat = get_embedding(word_dict, glove_path='NAML/glove.840B.300d.txt')
 embedding_mat = get_embedding(word_dict)  # 랜덤 초기화 사용
 
-
-# In[ ]:
 
 
 def dcg_score(y_true, y_score, k=10):
@@ -645,33 +641,14 @@ def hit_at_k(y_true, y_score, k=1):
     top_k_indices = sorted_indices[:k]
     return 1.0 if np.any(y_true[top_k_indices] == 1) else 0.0
 
-
-# In[ ]:
-
-
-import os
-
-SEED = 42
-random.seed(SEED)
-np.random.seed(SEED)
-
 os.environ['PYTHONHASHSEED'] = str(SEED)
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
-import keras
-import tensorflow as tf
 
 tf.random.set_seed(SEED)
 
-from keras.layers import *
-from keras.models import Model
-from keras import backend as K
-from tensorflow.keras.optimizers import Adam
-
 print(f"Seed 고정 완료: {SEED}")
 
-
-# In[ ]:
 
 
 def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, candidate_news_body=None, expected_bodies=None, all_userid_str=None, all_newsid_str=None, news_index_reverse=None):
@@ -682,8 +659,6 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
     all_newsid_str: 후보 뉴스 ID 문자열 배열 (각 샘플마다 5개)
     news_index_reverse: 뉴스 인덱스 -> 뉴스 ID 역매핑
     """
-    import numpy as np
-    from nltk.tokenize import word_tokenize
     
     # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
     if news_index_reverse is None:
@@ -833,8 +808,6 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
             yield (batch_inputs, batch_labels_array)
 
 
-# In[ ]:
-
 
 def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, candidate_news_body=None, expected_bodies=None, all_userid_str=None, all_newsid_str=None, news_index_reverse=None):
     """
@@ -844,8 +817,6 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
     all_newsid_str: 후보 뉴스 ID 문자열 배열
     news_index_reverse: 뉴스 인덱스 -> 뉴스 ID 역매핑
     """
-    import numpy as np
-    from nltk.tokenize import word_tokenize
     
     # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
     if news_index_reverse is None:
@@ -918,7 +889,6 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                 yield ([candidate] + browsed_news_split + [candidate_body] + browsed_news_body_split + [candidate_vertical]
                        + browsed_news_vertical_split + [candidate_subvertical] + browsed_news_subvertical_split, [label])
 
-import keras
 results=[]
 keras.backend.clear_session()
 
@@ -1072,7 +1042,7 @@ for ep in range(10):
     # if len(click_score) != actual_test_samples:
     #     print(f"[경고] click_score({len(click_score)})가 실제 샘플 수({actual_test_samples})와 일치하지 않습니다!")
     #     print(f"[경고] 차이: {actual_test_samples - len(click_score)}개 샘플이 누락되었습니다.")
-    from sklearn.metrics import roc_auc_score
+
     all_auc=[]
     all_mrr=[]
     all_ndcg=[]
@@ -1188,8 +1158,3 @@ best_hit1_epoch = best_hit1_idx + 1
 print(f"\nBest AUC  : Epoch {best_auc_epoch} - {results[best_auc_idx][0]:.6f}")
 print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][3]:.6f}")
 print(f"{'='*60}\n")
-# In[ ]:
-
-
-
-
