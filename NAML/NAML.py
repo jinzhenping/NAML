@@ -1,15 +1,8 @@
-# coding: utf-8
-
-# In[ ]:
-
-
-import csv
 import random
 import nltk 
 from nltk.tokenize import word_tokenize
 import datetime
 import time
-import random
 import itertools
 import numpy as np
 import pickle
@@ -25,16 +18,6 @@ MAX_SENT_LENGTH = 30     # 제목 최대 단어 수
 MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
 USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사용
-
-# In[ ]:
-
-
-def newsample(nnn,ratio):
-    if ratio >len(nnn):
-        return random.sample(nnn*(ratio//len(nnn)+1),ratio)
-    else:
-        return random.sample(nnn,ratio)
-
 
 # In[ ]:
 
@@ -597,11 +580,7 @@ if USE_EXPECTED_BODY:
         print(f"  - 테스트 데이터 기대본문 커버리지: {test_coverage:.2f}% ({available_expected_bodies_test}/{total_candidates_test})")
         if missing_expected_bodies_test > 0:
             print(f"  - 테스트 데이터 기대본문 누락: {missing_expected_bodies_test}개 (원본 본문 사용)")
-    
-    # 유저별 기대본문을 사용하므로 create_candidate_news_body는 사용하지 않음
-    # 배치 생성 시 유저 ID와 뉴스 ID를 사용하여 해당 유저의 기대본문을 찾아서 사용
-    candidate_news_body_train = None  # 배치 생성 시 동적으로 처리
-    candidate_news_body_test = None  # 배치 생성 시 동적으로 처리
+
 else:
     # 원본 본문 사용
     print("\n원본 본문 사용 모드")
@@ -611,9 +590,6 @@ else:
         expected_bodies_test=None,
         word_dict=word_dict
     )
-    # 원본 본문 사용 (None 전달 시 자동으로 원본 사용)
-    candidate_news_body_train = None
-    candidate_news_body_test = None
 
 
 # In[ ]:
@@ -942,13 +918,7 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                 yield ([candidate] + browsed_news_split + [candidate_body] + browsed_news_body_split + [candidate_vertical]
                        + browsed_news_vertical_split + [candidate_subvertical] + browsed_news_subvertical_split, [label])
 
-
-# In[ ]:
-
-
-import itertools
 import keras
-import random
 results=[]
 keras.backend.clear_session()
 
