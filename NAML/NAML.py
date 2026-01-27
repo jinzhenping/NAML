@@ -17,7 +17,6 @@ from keras import backend as K
 from tensorflow.keras.optimizers import Adam
 import numpy as np
 from nltk.tokenize import word_tokenize
-from sklearn.metrics import roc_auc_score
 
 
 SEED = 42
@@ -984,8 +983,6 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
 
 model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])
 
-best_auc = 0.0
-
 # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
 news_index_reverse = {v: k for k, v in news_index.items()}
 
@@ -1039,7 +1036,6 @@ for ep in range(10):
     #     print(f"[경고] click_score({len(click_score)})가 실제 샘플 수({actual_test_samples})와 일치하지 않습니다!")
     #     print(f"[경고] 차이: {actual_test_samples - len(click_score)}개 샘플이 누락되었습니다.")
 
-    all_auc=[]
     all_mrr=[]
     all_ndcg=[]
     all_hit1=[]
@@ -1091,7 +1087,6 @@ for ep in range(10):
             #     hit1_val = hit_at_k(session_labels, session_scores, k=1)
             #     print(f"  - Hit@1: {hit1_val}")
             
-            all_auc.append(roc_auc_score(session_labels, session_scores))
             all_mrr.append(mrr_score(session_labels, session_scores))
             all_ndcg.append(ndcg_score(session_labels, session_scores, k=5))
             all_hit1.append(hit_at_k(session_labels, session_scores, k=1))
@@ -1114,22 +1109,16 @@ for ep in range(10):
     
     # 결과 저장
     epoch_results = {
-        'AUC': np.mean(all_auc),
         'MRR': np.mean(all_mrr),
         'NDCG@5': np.mean(all_ndcg),
         'Hit@1': np.mean(all_hit1)
     }
-    results.append([epoch_results['AUC'], epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['Hit@1']])
-    
-    # Best AUC 업데이트
-    if epoch_results['AUC'] > best_auc:
-        best_auc = epoch_results['AUC']
+    results.append([epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['Hit@1']])
     
     current_lr = model.optimizer.learning_rate.numpy() if hasattr(model.optimizer.learning_rate, 'numpy') else model.optimizer.learning_rate
     print(f"\n{'='*60}")
     print(f"Epoch {ep+1}/10 - Test Results (LR: {current_lr:.6f})")
     print(f"{'='*60}")
-    print(f"AUC      : {epoch_results['AUC']:.6f} (Best: {best_auc:.6f})")
     print(f"MRR      : {epoch_results['MRR']:.6f}")
     print(f"NDCG@5   : {epoch_results['NDCG@5']:.6f}")
     print(f"Hit@1    : {epoch_results['Hit@1']:.6f}")
@@ -1139,18 +1128,18 @@ for ep in range(10):
 print(f"\n{'='*60}")
 print("Final Results Summary (All Epochs)")
 print(f"{'='*60}")
-print(f"{'Epoch':<10} {'AUC':<12} {'MRR':<12} {'NDCG@5':<12} {'Hit@1':<12}")
+print(f"{'Epoch':<10} {'MRR':<12} {'NDCG@5':<12} {'Hit@1':<12}")
 print(f"{'-'*60}")
 for i, result in enumerate(results, 1):
-    auc, mrr, ndcg5, hit1 = result
-    print(f"{i:<10} {auc:<12.6f} {mrr:<12.6f} {ndcg5:<12.6f} {hit1:<12.6f}")
+    mrr, ndcg5, hit1 = result
+    print(f"{i:<10} {mrr:<12.6f} {ndcg5:<12.6f} {hit1:<12.6f}")
 print(f"{'='*72}")
 
 # 최고 성능 찾기
-best_auc_idx = np.argmax([r[0] for r in results])
-best_auc_epoch = best_auc_idx + 1
-best_hit1_idx = np.argmax([r[3] for r in results])
+best_mrr_idx = np.argmax([r[0] for r in results])
+best_mrr_epoch = best_mrr_idx + 1
+best_hit1_idx = np.argmax([r[2] for r in results])
 best_hit1_epoch = best_hit1_idx + 1
-print(f"\nBest AUC  : Epoch {best_auc_epoch} - {results[best_auc_idx][0]:.6f}")
-print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][3]:.6f}")
+print(f"\nBest MRR  : Epoch {best_mrr_epoch} - {results[best_mrr_idx][0]:.6f}")
+print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][2]:.6f}")
 print(f"{'='*60}\n")
