@@ -30,7 +30,7 @@ MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
 USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사용
 DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, False: pretraining 건너뛰기
-PRETRAINING_EPOCHS = 10    # Pretraining 에폭 수
+PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
 
 
