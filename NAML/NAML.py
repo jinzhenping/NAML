@@ -30,7 +30,7 @@ MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
 USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사용
 DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, False: pretraining 건너뛰기
-PRETRAINING_EPOCHS = 5    # Pretraining 에폭 수
+PRETRAINING_EPOCHS = 10    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
 
 
@@ -1012,6 +1012,9 @@ if DO_PRETRAINING:
     print(f"{'='*60}\n")
     
     # Pretraining 루프 (원본 본문 사용)
+    pretrain_results = []  # Pretraining 에폭별 결과 저장
+    best_mrr = -1.0  # 최고 MRR 추적
+    best_mrr_epoch = -1  # 최고 MRR 에폭
     for pretrain_ep in range(PRETRAINING_EPOCHS):
         np.random.seed(SEED + pretrain_ep)
         random.seed(SEED + pretrain_ep)
@@ -1025,23 +1028,102 @@ if DO_PRETRAINING:
         actual_pretrain_samples = len(pretrain_id)
         pretrain_steps_per_epoch = (actual_pretrain_samples + 29) // 30
         
-        print(f"Pretraining Epoch {pretrain_ep+1}/{PRETRAINING_EPOCHS} - 샘플 수: {actual_pretrain_samples}개, Steps: {pretrain_steps_per_epoch}")
+        print(f"\nPretraining Epoch {pretrain_ep+1}/{PRETRAINING_EPOCHS} - 샘플 수: {actual_pretrain_samples}개, Steps: {pretrain_steps_per_epoch}")
         model.fit(pretrain_gen, epochs=1, steps_per_epoch=pretrain_steps_per_epoch, verbose=1)
+        
+        # ========== Pretraining 에폭별 테스트 평가 (원본 본문 사용) ==========
+        print(f"\n[Pretraining Epoch {pretrain_ep+1}] 테스트셋 평가 중... (원본 본문 사용)")
+        
+        # 테스트 데이터 생성 (원본 본문 사용)
+        pretrain_testgen = generate_batch_data_test(
+            all_test_pn, all_test_label, all_test_id, 30, 
+            candidate_news_body=None
+        )
+        
+        actual_test_samples = len(all_test_id)
+        test_steps = actual_test_samples
+        click_score = model_test.predict(pretrain_testgen, steps=test_steps, verbose=0)
+        
+        # 평가 지표 계산
+        pretrain_all_mrr = []
+        pretrain_all_ndcg = []
+        pretrain_all_hit1 = []
+        
+        session_count = 0
+        for m in all_test_index:
+            has_label = np.sum(all_test_label[m[0]:m[1]]) != 0
+            in_range = m[1] <= len(click_score)
+            
+            if has_label and in_range:
+                session_scores = click_score[m[0]:m[1], 0]
+                session_labels = all_test_label[m[0]:m[1]]
+                
+                pretrain_all_mrr.append(mrr_score(session_labels, session_scores))
+                pretrain_all_ndcg.append(ndcg_score(session_labels, session_scores, k=5))
+                pretrain_all_hit1.append(hit_at_k(session_labels, session_scores, k=1))
+                session_count += 1
+        
+        # 결과 저장 및 출력
+        if len(pretrain_all_mrr) > 0:
+            pretrain_epoch_results = {
+                'MRR': np.mean(pretrain_all_mrr),
+                'NDCG@5': np.mean(pretrain_all_ndcg),
+                'Hit@1': np.mean(pretrain_all_hit1)
+            }
+            pretrain_results.append(pretrain_epoch_results)
+            
+            current_mrr = pretrain_epoch_results['MRR']
+            print(f"[Pretraining Epoch {pretrain_ep+1}] 테스트 결과:")
+            print(f"  평가된 세션 수: {session_count}개")
+            print(f"  MRR      : {current_mrr:.6f}")
+            print(f"  NDCG@5   : {pretrain_epoch_results['NDCG@5']:.6f}")
+            print(f"  Hit@1    : {pretrain_epoch_results['Hit@1']:.6f}")
+            
+            # 최고 MRR 갱신 시 모델 저장
+            if current_mrr > best_mrr:
+                best_mrr = current_mrr
+                best_mrr_epoch = pretrain_ep + 1
+                
+                # 모델 저장 디렉토리 생성
+                save_dir = os.path.dirname(PRETRAINING_SAVE_PATH)
+                if save_dir and not os.path.exists(save_dir):
+                    os.makedirs(save_dir, exist_ok=True)
+                
+                # 최고 성능 모델 저장
+                model.save_weights(PRETRAINING_SAVE_PATH)
+                print(f"  → 최고 MRR 갱신! 모델 저장: {PRETRAINING_SAVE_PATH} (MRR: {best_mrr:.6f})")
+        else:
+            print(f"[Pretraining Epoch {pretrain_ep+1}] 평가 가능한 세션이 없습니다.")
     
-    # Pretraining 완료 후 모델 저장
+    # Pretraining 완료 후 결과 요약 및 모델 저장
     print(f"\n{'='*60}")
-    print(f"Pretraining 완료! 모델 저장 중: {PRETRAINING_SAVE_PATH}")
+    print("Pretraining 완료! 결과 요약")
     print(f"{'='*60}")
     
-    # 모델 저장 디렉토리 생성
-    save_dir = os.path.dirname(PRETRAINING_SAVE_PATH)
-    if save_dir and not os.path.exists(save_dir):
-        os.makedirs(save_dir, exist_ok=True)
+    if len(pretrain_results) > 0:
+        print(f"{'Epoch':<10} {'MRR':<12} {'NDCG@5':<12} {'Hit@1':<12}")
+        print(f"{'-'*60}")
+        for i, result in enumerate(pretrain_results, 1):
+            print(f"{i:<10} {result['MRR']:<12.6f} {result['NDCG@5']:<12.6f} {result['Hit@1']:<12.6f}")
+        
+        # 최고 성능 요약 (이미 저장된 모델 정보 출력)
+        best_hit1_idx = np.argmax([r['Hit@1'] for r in pretrain_results])
+        best_hit1_epoch = best_hit1_idx + 1
+        print(f"{'='*60}")
+        print(f"Best MRR  : Epoch {best_mrr_epoch} - {best_mrr:.6f} (모델 저장됨)")
+        print(f"Best Hit@1: Epoch {best_hit1_epoch} - {pretrain_results[best_hit1_idx]['Hit@1']:.6f}")
     
-    # 모델 가중치 저장
-    model.save_weights(PRETRAINING_SAVE_PATH)
-    print(f"Pretraining 모델 저장 완료: {PRETRAINING_SAVE_PATH}")
+    print(f"\n{'='*60}")
+    print(f"최고 성능 모델 저장 완료: {PRETRAINING_SAVE_PATH}")
+    print(f"  - 저장된 모델: Epoch {best_mrr_epoch} (MRR: {best_mrr:.6f})")
     print(f"{'='*60}\n")
+    
+    # Pretraining 완료 후 프로그램 종료
+    print(f"{'='*60}")
+    print("Pretraining 완료 후 프로그램을 종료합니다.")
+    print(f"{'='*60}")
+    import sys
+    sys.exit(0)
 
 # ========== 메인 학습 루프 ==========
 for ep in range(10):
