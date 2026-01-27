@@ -29,6 +29,9 @@ MAX_SENT_LENGTH = 30     # 제목 최대 단어 수
 MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
 USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사용
+DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, False: pretraining 건너뛰기
+PRETRAINING_EPOCHS = 5    # Pretraining 에폭 수
+PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
 
 
 def load_expected_bodies(output_dir='body_generation/output', dataset_type='train'):
@@ -986,6 +989,61 @@ model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metric
 # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
 news_index_reverse = {v: k for k, v in news_index.items()}
 
+# ========== Pretraining 섹션 ==========
+if DO_PRETRAINING:
+    print(f"\n{'='*60}")
+    print("Pretraining 시작: 트레이닝셋 전반부 80% 데이터로 원본 본문 사용")
+    print(f"{'='*60}")
+    
+    # 학습 데이터를 전반부 80%로 슬라이싱
+    pretrain_size = int(len(all_train_id) * 0.8)
+    print(f"전체 학습 샘플 수: {len(all_train_id)}개")
+    print(f"Pretraining에 사용할 샘플 수: {pretrain_size}개 (80%)")
+    
+    # 모든 관련 리스트를 동일한 비율로 슬라이싱
+    pretrain_id = all_train_id[:pretrain_size]
+    pretrain_pn = all_train_pn[:pretrain_size]
+    pretrain_label = all_label[:pretrain_size]
+    pretrain_userid_str = all_train_userid_str[:pretrain_size] if USE_EXPECTED_BODY else None
+    pretrain_newsid_str = all_train_newsid_str[:pretrain_size] if USE_EXPECTED_BODY else None
+    
+    print(f"Pretraining 데이터 준비 완료")
+    print(f"Pretraining 에폭 수: {PRETRAINING_EPOCHS}")
+    print(f"{'='*60}\n")
+    
+    # Pretraining 루프 (원본 본문 사용)
+    for pretrain_ep in range(PRETRAINING_EPOCHS):
+        np.random.seed(SEED + pretrain_ep)
+        random.seed(SEED + pretrain_ep)
+        
+        # 원본 본문 사용 (USE_EXPECTED_BODY=False)
+        pretrain_gen = generate_batch_data_train(
+            pretrain_pn, pretrain_label, pretrain_id, 30, 
+            candidate_news_body=None
+        )
+        
+        actual_pretrain_samples = len(pretrain_id)
+        pretrain_steps_per_epoch = (actual_pretrain_samples + 29) // 30
+        
+        print(f"Pretraining Epoch {pretrain_ep+1}/{PRETRAINING_EPOCHS} - 샘플 수: {actual_pretrain_samples}개, Steps: {pretrain_steps_per_epoch}")
+        model.fit(pretrain_gen, epochs=1, steps_per_epoch=pretrain_steps_per_epoch, verbose=1)
+    
+    # Pretraining 완료 후 모델 저장
+    print(f"\n{'='*60}")
+    print(f"Pretraining 완료! 모델 저장 중: {PRETRAINING_SAVE_PATH}")
+    print(f"{'='*60}")
+    
+    # 모델 저장 디렉토리 생성
+    save_dir = os.path.dirname(PRETRAINING_SAVE_PATH)
+    if save_dir and not os.path.exists(save_dir):
+        os.makedirs(save_dir, exist_ok=True)
+    
+    # 모델 가중치 저장
+    model.save_weights(PRETRAINING_SAVE_PATH)
+    print(f"Pretraining 모델 저장 완료: {PRETRAINING_SAVE_PATH}")
+    print(f"{'='*60}\n")
+
+# ========== 메인 학습 루프 ==========
 for ep in range(10):
     np.random.seed(SEED + ep)
     random.seed(SEED + ep)
