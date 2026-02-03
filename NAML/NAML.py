@@ -32,6 +32,8 @@ USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사
 DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, False: pretraining 건너뛰기
 PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
+EVAL_PRETRAINED_ON_TRAIN80 = False  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
+PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # EVAL_PRETRAINED_ON_TRAIN80 시 로드할 모델 경로
 
 
 def load_expected_bodies(output_dir='body_generation/output', dataset_type='train'):
@@ -807,13 +809,14 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
 
 
 
-def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, candidate_news_body=None, expected_bodies=None, all_userid_str=None, all_newsid_str=None, news_index_reverse=None):
+def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, candidate_news_body=None, expected_bodies=None, all_userid_str=None, all_newsid_str=None, news_index_reverse=None, all_test_user_pos_override=None):
     """
     candidate_news_body: 후보 뉴스의 기대 본문 배열 (None이면 원본 news_body 사용)
     expected_bodies: 유저별 기대 본문 딕셔너리 {(user_id, news_id): generated_body}
     all_userid_str: 유저 ID 문자열 배열
     all_newsid_str: 후보 뉴스 ID 문자열 배열
     news_index_reverse: 뉴스 인덱스 -> 뉴스 ID 역매핑
+    all_test_user_pos_override: None이면 전역 all_test_user_pos 사용, 지정 시 해당 배열로 유저 히스토리 사용 (트레이닝 80% 평가용)
     """
     
     # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
@@ -873,7 +876,8 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                 candidate_vertical = np.expand_dims(news_v[news_idx], axis=0)  # shape: (1, 1)
                 candidate_subvertical = np.expand_dims(news_sv[news_idx], axis=0)  # shape: (1, 1)
 
-                user_pos_indices = np.array(all_test_user_pos[idx], dtype='int32')
+                user_pos = all_test_user_pos_override if all_test_user_pos_override is not None else all_test_user_pos
+                user_pos_indices = np.array(user_pos[idx], dtype='int32')
                 browsed_news = news_words[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 30)
                 browsed_news_split = [np.expand_dims(browsed_news[k], axis=0) for k in range(browsed_news.shape[0])]
                 browsed_news_body = news_body[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 300)
@@ -1123,6 +1127,170 @@ if DO_PRETRAINING:
     print("Pretraining 완료 후 프로그램을 종료합니다.")
     print(f"{'='*60}")
     import sys
+    sys.exit(0)
+
+# ========== 프리트레이닝 모델 로드 후 트레이닝 80% 평가 (실제본문 / 기대본문 각각) ==========
+if EVAL_PRETRAINED_ON_TRAIN80:
+    import sys
+    if not os.path.exists(PRETRAINED_MODEL_PATH):
+        print(f"오류: 프리트레이닝 모델을 찾을 수 없습니다: {PRETRAINED_MODEL_PATH}")
+        sys.exit(1)
+    
+    print(f"\n{'='*60}")
+    print(f"프리트레이닝 모델 로드: {PRETRAINED_MODEL_PATH}")
+    print(f"{'='*60}")
+    model.load_weights(PRETRAINED_MODEL_PATH)
+    print("모델 로드 완료.")
+    
+    # 트레이닝셋 전반부 80%를 테스트 형식으로 구성 (샘플당 5개 후보 → 5개 테스트 행)
+    pretrain_size = int(len(all_train_id) * 0.8)
+    train80_test_pn = []
+    train80_test_label = []
+    train80_test_id = []
+    train80_test_user_pos = []
+    train80_test_index = []
+    train80_test_userid_str = []
+    train80_test_newsid_str = []
+    
+    for i in range(pretrain_size):
+        start = len(train80_test_pn)
+        pn_row = all_train_pn[i]
+        label_row = all_label[i]
+        n_cand = len(pn_row) if hasattr(pn_row, '__len__') else 5
+        for j in range(n_cand):
+            train80_test_pn.append(int(pn_row[j]) if hasattr(pn_row[j], '__int__') else pn_row[j])
+            train80_test_label.append(int(label_row[j]) if hasattr(label_row[j], '__int__') else label_row[j])
+            train80_test_id.append(all_train_id[i])
+            train80_test_user_pos.append(all_user_pos[i])
+        if all_train_userid_str is not None and all_train_newsid_str is not None:
+            for j in range(n_cand):
+                train80_test_userid_str.append(all_train_userid_str[i])
+                train80_test_newsid_str.append(all_train_newsid_str[i][j] if j < len(all_train_newsid_str[i]) else '')
+        train80_test_index.append([start, len(train80_test_pn)])
+    
+    train80_test_pn = np.array(train80_test_pn, dtype='int32')
+    train80_test_label = np.array(train80_test_label, dtype='int32')
+    train80_test_id = np.array(train80_test_id, dtype='int32')
+    train80_test_user_pos = np.array(train80_test_user_pos, dtype='int32')
+    
+    def eval_train80_run(use_expected_body, expected_bodies=None, all_userid_str=None, all_newsid_str=None):
+        """한 번의 평가 실행. 세션별 loss/ndcg와 click_score 반환 (세션 인덱스와 1:1 대응)."""
+        if use_expected_body and (expected_bodies is None or all_userid_str is None or all_newsid_str is None):
+            return None, None, None
+        testgen = generate_batch_data_test(
+            train80_test_pn, train80_test_label, train80_test_id, 30,
+            candidate_news_body=None,
+            expected_bodies=expected_bodies,
+            all_userid_str=all_userid_str,
+            all_newsid_str=all_newsid_str,
+            news_index_reverse=news_index_reverse,
+            all_test_user_pos_override=train80_test_user_pos
+        )
+        steps = len(train80_test_id)
+        click_score = model_test.predict(testgen, steps=steps, verbose=0)
+        
+        eps = 1e-7
+        # train80_test_index와 동일한 길이, 유효한 세션만 값 저장 (나머지 None)
+        all_session_loss = []
+        all_session_ndcg = []
+        for m in train80_test_index:
+            s, e = m[0], m[1]
+            if e > len(click_score):
+                all_session_loss.append(None)
+                all_session_ndcg.append(None)
+                continue
+            labels = train80_test_label[s:e].astype(np.float32)
+            if np.sum(labels) == 0:
+                all_session_loss.append(None)
+                all_session_ndcg.append(None)
+                continue
+            scores = np.clip(click_score[s:e, 0], eps, 1 - eps)
+            session_bce = -np.mean(labels * np.log(scores) + (1 - labels) * np.log(1 - scores))
+            all_session_loss.append(float(session_bce))
+            all_session_ndcg.append(ndcg_score(train80_test_label[s:e], click_score[s:e, 0], k=5))
+        
+        valid_loss = [x for x in all_session_loss if x is not None]
+        if not valid_loss:
+            return None, None, None
+        return all_session_loss, all_session_ndcg, click_score
+    
+    print(f"\n트레이닝셋 전반부 80% 평가 (샘플 수: {pretrain_size}, 테스트 행: {len(train80_test_id)})")
+    print(f"{'='*60}")
+    
+    print("\n[1] 실제 본문 사용:")
+    loss_actual_list, ndcg_actual_list, click_actual = eval_train80_run(use_expected_body=False)
+    if loss_actual_list is not None:
+        valid = [x for x in loss_actual_list if x is not None]
+        print(f"  Loss     : {np.mean(valid):.6f}  (유저당 BCE 평균)")
+        print(f"  NDCG@5   : {np.mean([x for x in ndcg_actual_list if x is not None]):.6f}")
+    else:
+        print("  평가 가능한 세션 없음")
+    
+    print("\n[2] 기대 본문 사용:")
+    expected_bodies_train_eval = expected_bodies_train
+    if expected_bodies_train_eval is None:
+        print("  기대 본문 로드 중 (train)...")
+        expected_bodies_train_eval = load_expected_bodies(output_dir='body_generation/output', dataset_type='train')
+        print(f"  로드된 기대 본문: {len(expected_bodies_train_eval)}개")
+    loss_expected_list, ndcg_expected_list, click_expected = eval_train80_run(
+        use_expected_body=True,
+        expected_bodies=expected_bodies_train_eval,
+        all_userid_str=train80_test_userid_str,
+        all_newsid_str=train80_test_newsid_str
+    )
+    if loss_expected_list is not None:
+        valid = [x for x in loss_expected_list if x is not None]
+        print(f"  Loss     : {np.mean(valid):.6f}  (유저당 BCE 평균)")
+        print(f"  NDCG@5   : {np.mean([x for x in ndcg_expected_list if x is not None]):.6f}")
+    else:
+        print("  [건너뜀] 기대본문 데이터 없음")
+    
+    # 두 loss 차이가 가장 큰 세션 찾기 (기대본문 loss - 실제본문 loss 가 최대인 세션 = 기대본문이 상대적으로 가장 못한 세션)
+    if loss_actual_list is not None and loss_expected_list is not None:
+        max_diff = -np.inf
+        best_sess_idx = None
+        for i in range(len(train80_test_index)):
+            la, le = loss_actual_list[i], loss_expected_list[i]
+            if la is None or le is None:
+                continue
+            diff = le - la  # 양수면 해당 세션에서 기대본문이 실제본문보다 성능 못함
+            if diff > max_diff:
+                max_diff = diff
+                best_sess_idx = i
+        
+        if best_sess_idx is not None:
+            s, e = train80_test_index[best_sess_idx][0], train80_test_index[best_sess_idx][1]
+            labels = train80_test_label[s:e]
+            scores_actual = click_actual[s:e, 0]
+            scores_expected = click_expected[s:e, 0]
+            # 후보 뉴스 ID (트레이닝 80%의 원본 샘플 인덱스 = best_sess_idx)
+            news_ids = all_train_newsid_str[best_sess_idx] if best_sess_idx < len(all_train_newsid_str) else ['?'] * 5
+            user_id_str = all_train_userid_str[best_sess_idx] if all_train_userid_str and best_sess_idx < len(all_train_userid_str) else '?'
+            
+            rank_actual = np.argsort(scores_actual)[::-1]
+            rank_expected = np.argsort(scores_expected)[::-1]
+            positive_pos_actual = np.where(labels == 1)[0][0]
+            positive_pos_expected = np.where(labels == 1)[0][0]
+            
+            print(f"\n{'='*60}")
+            print("성능 차이가 가장 큰 세션 (기대본문 Loss - 실제본문 Loss 최대 = 기대본문이 상대적으로 가장 못한 세션)")
+            print(f"{'='*60}")
+            print(f"  세션 인덱스(트레이닝 80% 내) : {best_sess_idx}")
+            print(f"  유저 ID                    : {user_id_str}")
+            print(f"  후보 뉴스 ID (5개)         : {list(news_ids)}")
+            print(f"  정답 레이블 (1=클릭)        : {list(labels)}")
+            print(f"  실제본문 Loss (해당 세션)   : {loss_actual_list[best_sess_idx]:.6f}")
+            print(f"  기대본문 Loss (해당 세션)   : {loss_expected_list[best_sess_idx]:.6f}")
+            print(f"  Loss 차이 (기대 - 실제)     : {max_diff:.6f}")
+            print(f"  실제본문 점수 (5개 후보)    : {[round(float(x), 6) for x in scores_actual]}")
+            print(f"  기대본문 점수 (5개 후보)    : {[round(float(x), 6) for x in scores_expected]}")
+            print(f"  실제본문 랭킹(점수순)      : {rank_actual.tolist()} (정답 위치: {int(positive_pos_actual)})")
+            print(f"  기대본문 랭킹(점수순)      : {rank_expected.tolist()} (정답 위치: {int(positive_pos_expected)})")
+            print(f"{'='*60}\n")
+    
+    print(f"{'='*60}")
+    print("프리트레이닝 모델 트레이닝 80% 평가 완료. 프로그램을 종료합니다.")
+    print(f"{'='*60}\n")
     sys.exit(0)
 
 # ========== 메인 학습 루프 ==========
