@@ -24,7 +24,7 @@ random.seed(SEED)
 np.random.seed(SEED)
 
 # 모델 하이퍼파라미터 설정
-MAX_HISTORY_CLICKS = 10  # 클릭 히스토리 개수
+MAX_HISTORY_CLICKS = 50  # 클릭 히스토리 개수
 MAX_SENT_LENGTH = 30     # 제목 최대 단어 수
 MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
