@@ -21,7 +21,8 @@ class BodyGenerator:
                  test_data_path: str = "dataset/MIND/MIND_test_(1000).tsv",
                  use_test: bool = False,
                  api_key: Optional[str] = None,
-                 model: str = "gpt-4o-mini"):
+                 model: str = "gpt-4o-mini",
+                 coordinator_output_dir: str = "coordinator_LLM/output"):
         """
         Args:
             prompt_path: 프롬프트 YAML 파일 경로
@@ -32,6 +33,7 @@ class BodyGenerator:
             use_test: True면 test 데이터 사용, False면 train 데이터 사용
             api_key: OpenAI API 키 (없으면 환경변수 OPENAI_API_KEY 사용)
             model: 사용할 모델명
+            coordinator_output_dir: coordinator_LLM 출력 디렉토리 (Tone 등 설정을 N.txt에서 로드)
         """
         self.prompt_path = prompt_path
         self.settings_path = settings_path
@@ -40,6 +42,7 @@ class BodyGenerator:
         self.test_data_path = test_data_path
         self.use_test = use_test
         self.model = model
+        self.coordinator_output_dir = coordinator_output_dir
         
         # API 키 설정
         api_key = api_key or os.getenv("OPENAI_API_KEY")
@@ -55,6 +58,9 @@ class BodyGenerator:
         
         # 프롬프트 로딩
         self._load_prompt()
+        
+        # coordinator 출력에서 Tone 등 설정 로드 (가장 숫자가 큰 N.txt)
+        self._load_coordinator_policy()
     
     def _load_data(self):
         """뉴스 데이터와 학습/테스트 데이터 로딩"""
@@ -128,6 +134,35 @@ class BodyGenerator:
         """프롬프트 YAML 파일 로딩"""
         with open(self.prompt_path, 'r', encoding='utf-8') as f:
             self.prompt_template = f.read()
+    
+    def _load_coordinator_policy(self) -> None:
+        """coordinator_LLM/output 폴더에서 숫자가 가장 큰 N.txt를 찾아 updated_policy 로드."""
+        self.coordinator_policy = None
+        if not os.path.isdir(self.coordinator_output_dir):
+            return
+        max_num = -1
+        best_path = None
+        for f in os.listdir(self.coordinator_output_dir):
+            if not f.endswith('.txt'):
+                continue
+            base = f[:-4]
+            try:
+                n = int(base)
+                if n > max_num:
+                    max_num = n
+                    best_path = os.path.join(self.coordinator_output_dir, f)
+            except ValueError:
+                continue
+        if best_path is None:
+            return
+        try:
+            with open(best_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            self.coordinator_policy = data.get("updated_policy") or data.get("current_policy")
+            if self.coordinator_policy:
+                print(f"Coordinator 설정 로드: {best_path} (tone={self.coordinator_policy.get('tone', '?')}, ...)")
+        except Exception as e:
+            print(f"경고: Coordinator 설정 로드 실패 ({best_path}): {e}")
     
     def _get_user_click_history(self, user_id: int, max_items: int = 10) -> List[str]:
         """
@@ -203,23 +238,28 @@ class BodyGenerator:
         # 후보 뉴스 제목 채우기 (제목만 사용)
         prompt = prompt.replace("{candidate_news}", candidate_title)
         
-        # 설정값들을 generation_settings.yaml의 설명으로 교체
-        # 각 카테고리별로 설정값 교체
-        setting_mappings = {
-            "Tone": "neutral",
-            "Abstraction Level": "mixed",
-            "Speculation Count": "1",
-            "Length Bucket": "medium",
-            "Format": "narrative"
+        # Tone, Abstraction Level 등: coordinator_LLM/output의 가장 큰 N.txt(updated_policy)에서 로드, 없으면 기본값
+        # 프롬프트에는 generation_settings.yaml의 구체적 설명을 채움 (설명이 없으면 값만 사용)
+        policy = self.coordinator_policy or {}
+        defaults = {"tone": "neutral", "abstraction_level": "mixed", "speculation_count": 1, "length_bucket": "medium", "format": "narrative"}
+        category_map = {
+            "tone": "Tone",
+            "abstraction_level": "Abstraction Level",
+            "speculation_count": "Speculation Count",
+            "length_bucket": "Length Bucket",
+            "format": "Format",
         }
-        
-        for category, setting_key in setting_mappings.items():
-            # {설정값} 패턴 찾기
-            pattern = f"{category}: {{{setting_key}}}"
-            if pattern in prompt:
-                description = self.settings_dict.get(category, {}).get(setting_key, "")
-                if description:
-                    prompt = prompt.replace(pattern, f"{category}: {description}")
+        for key in ["tone", "abstraction_level", "speculation_count", "length_bucket", "format"]:
+            val = policy.get(key, defaults[key])
+            if isinstance(val, (int, float)):
+                val_str = str(int(val))
+            else:
+                val_str = str(val)
+            category = category_map.get(key)
+            description = ""
+            if category and self.settings_dict.get(category) and val_str in self.settings_dict[category]:
+                description = (self.settings_dict[category].get(val_str) or "").strip()
+            prompt = prompt.replace("{" + key + "}", description if description else val_str)
         
         return prompt
     
