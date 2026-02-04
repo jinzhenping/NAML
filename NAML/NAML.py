@@ -33,7 +33,8 @@ DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, Fals
 PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
 EVAL_PRETRAINED_ON_TRAIN80 = False  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
-PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # EVAL_PRETRAINED_ON_TRAIN80 시 로드할 모델 경로
+EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
+PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
 
 
 def load_expected_bodies(output_dir='body_generation/output', dataset_type='train'):
@@ -1288,8 +1289,102 @@ if EVAL_PRETRAINED_ON_TRAIN80:
             print(f"  기대본문 랭킹(점수순)      : {rank_expected.tolist()} (정답 위치: {int(positive_pos_expected)})")
             print(f"{'='*60}\n")
     
+    print(f"\n{'='*60}")
+    print("프리트레이닝 모델 - 트레이닝 80% 평가 완료. 프로그램을 종료합니다.")
+    print(f"{'='*60}\n")
+    sys.exit(0)
+
+# ========== 프리트레이닝 모델 로드 후 테스트셋만 평가 (실제본문 / 기대본문 각각) ==========
+if EVAL_PRETRAINED_ON_TESTSET:
+    import sys
+    if not os.path.exists(PRETRAINED_MODEL_PATH):
+        print(f"오류: 프리트레이닝 모델을 찾을 수 없습니다: {PRETRAINED_MODEL_PATH}")
+        sys.exit(1)
+    
+    print(f"\n{'='*60}")
+    print(f"프리트레이닝 모델 로드: {PRETRAINED_MODEL_PATH}")
     print(f"{'='*60}")
-    print("프리트레이닝 모델 트레이닝 80% 평가 완료. 프로그램을 종료합니다.")
+    model.load_weights(PRETRAINED_MODEL_PATH)
+    print("모델 로드 완료.")
+    
+    print(f"\n{'='*60}")
+    print("프리트레이닝 모델 - 테스트셋 평가")
+    print(f"{'='*60}")
+    
+    def eval_testset_run(use_expected_body, expected_bodies=None, all_userid_str=None, all_newsid_str=None):
+        """테스트셋 한 번 평가. NDCG@5, MRR, Hit@1, Loss(유저당 BCE 평균) 반환."""
+        if use_expected_body and (expected_bodies is None or all_userid_str is None or all_newsid_str is None):
+            return None
+        testgen = generate_batch_data_test(
+            all_test_pn, all_test_label, all_test_id, 30,
+            candidate_news_body=None,
+            expected_bodies=expected_bodies,
+            all_userid_str=all_userid_str,
+            all_newsid_str=all_newsid_str,
+            news_index_reverse=news_index_reverse
+        )
+        test_steps = len(all_test_id)
+        click_score = model_test.predict(testgen, steps=test_steps, verbose=0)
+        
+        eps = 1e-7
+        all_ndcg, all_mrr, all_hit1, all_session_loss = [], [], [], []
+        for m in all_test_index:
+            s, e = m[0], m[1]
+            if e > len(click_score):
+                continue
+            labels = all_test_label[s:e]
+            if np.sum(labels) == 0:
+                continue
+            scores = click_score[s:e, 0]
+            all_ndcg.append(ndcg_score(labels, scores, k=5))
+            all_mrr.append(mrr_score(labels, scores))
+            all_hit1.append(hit_at_k(labels, scores, k=1))
+            labels_f = labels.astype(np.float32)
+            scores_clip = np.clip(scores, eps, 1 - eps)
+            session_bce = -np.mean(labels_f * np.log(scores_clip) + (1 - labels_f) * np.log(1 - scores_clip))
+            all_session_loss.append(float(session_bce))
+        
+        if not all_ndcg:
+            return None
+        return {
+            'NDCG@5': np.mean(all_ndcg),
+            'MRR': np.mean(all_mrr),
+            'Hit@1': np.mean(all_hit1),
+            'Loss': np.mean(all_session_loss),
+        }
+    
+    print("\n[1] 실제 본문 사용:")
+    res_actual = eval_testset_run(use_expected_body=False)
+    if res_actual is not None:
+        print(f"  NDCG@5   : {res_actual['NDCG@5']:.6f}")
+        print(f"  MRR      : {res_actual['MRR']:.6f}")
+        print(f"  Hit@1    : {res_actual['Hit@1']:.6f}")
+        print(f"  Loss     : {res_actual['Loss']:.6f}  (유저당 BCE 평균)")
+    else:
+        print("  평가 가능한 세션 없음")
+    
+    print("\n[2] 기대 본문 사용:")
+    expected_bodies_test_eval = expected_bodies_test
+    if expected_bodies_test_eval is None:
+        print("  기대 본문 로드 중 (test)...")
+        expected_bodies_test_eval = load_expected_bodies(output_dir='body_generation/output', dataset_type='test')
+        print(f"  로드된 기대 본문: {len(expected_bodies_test_eval)}개")
+    res_expected = eval_testset_run(
+        use_expected_body=True,
+        expected_bodies=expected_bodies_test_eval,
+        all_userid_str=all_test_userid_str,
+        all_newsid_str=all_test_newsid_str
+    )
+    if res_expected is not None:
+        print(f"  NDCG@5   : {res_expected['NDCG@5']:.6f}")
+        print(f"  MRR      : {res_expected['MRR']:.6f}")
+        print(f"  Hit@1    : {res_expected['Hit@1']:.6f}")
+        print(f"  Loss     : {res_expected['Loss']:.6f}  (유저당 BCE 평균)")
+    else:
+        print("  [건너뜀] 기대본문 데이터 없음")
+    
+    print(f"\n{'='*60}")
+    print("프리트레이닝 모델 - 테스트셋 평가 완료. 프로그램을 종료합니다.")
     print(f"{'='*60}\n")
     sys.exit(0)
 
