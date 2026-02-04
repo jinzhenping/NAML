@@ -1338,6 +1338,7 @@ if EVAL_PRETRAINED_ON_TRAIN80:
         positive_news_id = sess_news_ids[pos_pos] if pos_pos < len(sess_news_ids) else '?'
         user_pos_indices = all_user_pos[best_sess_idx]
         user_click_history_titles = [news_titles.get(news_index_reverse.get(int(i), ''), '') for i in user_pos_indices if int(i) != 0]
+        user_click_history_titles = user_click_history_titles[-10:]  # 최근 10개까지만 저장
         candidate_news_title = news_titles.get(positive_news_id, '')
         generated_expected_body = (expected_bodies_train_eval.get((sess_user_id_str, positive_news_id), '') or '') if expected_bodies_train_eval else ''
         diagnostic_samples.append({
