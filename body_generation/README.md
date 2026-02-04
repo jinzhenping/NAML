@@ -53,6 +53,12 @@ python body_generation/generate_body.py
 python body_generation/generate_body.py --use_test
 ```
 
+# 트레이닝셋 앞 80% 후보에만 생성
+python body_generation/generate_body.py --train80_only
+
+# 특정 유저만, 트레이닝 80% 후보만
+python body_generation/generate_body.py --user_id 1 --train80_only
+
 ### 옵션
 
 - `--user_id`: 유저 ID (선택, 없으면 모든 유저 처리)

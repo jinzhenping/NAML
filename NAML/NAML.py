@@ -82,6 +82,55 @@ def load_expected_bodies(output_dir='body_generation/output', dataset_type='trai
     return expected_bodies
 
 
+def get_latest_train_folder(base_output_dir):
+    """
+    base_output_dir 아래에서 train0, train1, ... 중 숫자가 가장 큰 폴더 경로 반환.
+    없으면 None 반환.
+    """
+    if not os.path.isdir(base_output_dir):
+        return None
+    max_num = -1
+    for name in os.listdir(base_output_dir):
+        path = os.path.join(base_output_dir, name)
+        if not os.path.isdir(path):
+            continue
+        if name.startswith("train") and len(name) > 5:
+            try:
+                n = int(name[5:])
+                if n > max_num:
+                    max_num = n
+            except ValueError:
+                continue
+    if max_num < 0:
+        return None
+    return os.path.join(base_output_dir, f"train{max_num}")
+
+
+def load_expected_body_from_train_dir(train_dir, user_id_str, news_id_str):
+    """
+    body_generation/output/trainN 구조에서 한 (user, news)에 대한 기대 본문과 유저 클릭 히스토리 로드.
+    train_dir: trainN 폴더 전체 경로. user_{id}/news_{id}.json 에서 generated_body, user_history 반환.
+    반환: (generated_body, user_history) — user_history는 리스트(최대 10개) 또는 None(파일 없음/오류 시).
+    """
+    if not train_dir or not user_id_str or not news_id_str or user_id_str == '?' or news_id_str == '?':
+        return '', None
+    path = os.path.join(train_dir, f"user_{user_id_str}", f"news_{news_id_str}.json")
+    if not os.path.isfile(path):
+        return '', None
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            body = data.get('generated_body', '') or ''
+            history = data.get('user_history')
+            if isinstance(history, list):
+                history = history[-10:]
+            else:
+                history = None
+            return body, history
+    except Exception:
+        return '', None
+
+
 def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv', 
                          test_file='dataset/MIND/MIND_test_(1000).tsv',
                          news_index=None, npratio=4,
@@ -1337,10 +1386,20 @@ if EVAL_PRETRAINED_ON_TRAIN80:
         pos_pos = int(np.where(sess_labels == 1)[0][0])
         positive_news_id = sess_news_ids[pos_pos] if pos_pos < len(sess_news_ids) else '?'
         user_pos_indices = all_user_pos[best_sess_idx]
-        user_click_history_titles = [news_titles.get(news_index_reverse.get(int(i), ''), '') for i in user_pos_indices if int(i) != 0]
-        user_click_history_titles = user_click_history_titles[-10:]  # 최근 10개까지만 저장
+        fallback_click_titles = [news_titles.get(news_index_reverse.get(int(i), ''), '') for i in user_pos_indices if int(i) != 0]
+        fallback_click_titles = fallback_click_titles[-10:]
         candidate_news_title = news_titles.get(positive_news_id, '')
-        generated_expected_body = (expected_bodies_train_eval.get((sess_user_id_str, positive_news_id), '') or '') if expected_bodies_train_eval else ''
+        # 기대 본문·유저 클릭 히스토리: body_generation/output/trainN 중 가장 큰 N 폴더의 해당 세션 JSON에서 로드
+        body_gen_output = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
+        latest_train_dir = get_latest_train_folder(body_gen_output)
+        if latest_train_dir:
+            generated_expected_body, json_user_history = load_expected_body_from_train_dir(latest_train_dir, sess_user_id_str, positive_news_id)
+            user_click_history_titles = json_user_history if json_user_history is not None else fallback_click_titles
+            if generated_expected_body == '' and expected_bodies_train_eval:
+                generated_expected_body = expected_bodies_train_eval.get((sess_user_id_str, positive_news_id), '') or ''
+        else:
+            generated_expected_body = (expected_bodies_train_eval.get((sess_user_id_str, positive_news_id), '') or '') if expected_bodies_train_eval else ''
+            user_click_history_titles = fallback_click_titles
         diagnostic_samples.append({
             "type": "failure",
             "user_click_history_titles": user_click_history_titles,

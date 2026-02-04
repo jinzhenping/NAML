@@ -22,7 +22,8 @@ class BodyGenerator:
                  use_test: bool = False,
                  api_key: Optional[str] = None,
                  model: str = "gpt-4o-mini",
-                 coordinator_output_dir: str = "coordinator_LLM/output"):
+                 coordinator_output_dir: str = "coordinator_LLM/output",
+                 train80_only: bool = False):
         """
         Args:
             prompt_path: 프롬프트 YAML 파일 경로
@@ -34,6 +35,7 @@ class BodyGenerator:
             api_key: OpenAI API 키 (없으면 환경변수 OPENAI_API_KEY 사용)
             model: 사용할 모델명
             coordinator_output_dir: coordinator_LLM 출력 디렉토리 (Tone 등 설정을 N.txt에서 로드)
+            train80_only: True면 트레이닝셋 앞 80%에 등장하는 (유저, 후보뉴스)에 대해서만 생성 (use_test=False일 때만 적용)
         """
         self.prompt_path = prompt_path
         self.settings_path = settings_path
@@ -43,6 +45,7 @@ class BodyGenerator:
         self.use_test = use_test
         self.model = model
         self.coordinator_output_dir = coordinator_output_dir
+        self.train80_only = train80_only
         
         # API 키 설정
         api_key = api_key or os.getenv("OPENAI_API_KEY")
@@ -93,6 +96,23 @@ class BodyGenerator:
         self.train_df['user'] = pd.to_numeric(self.train_df['user'], errors='coerce').astype('Int64')
         # NaN 값 제거
         self.train_df = self.train_df.dropna(subset=['user', 'clicked_news'])
+        
+        # train80_only: 트레이닝셋 앞 80%에 등장하는 (user_id, candidate_news_id)만 허용 (학습 데이터일 때만)
+        self.allowed_train80_pairs = None
+        if self.train80_only and not self.use_test and len(self.train_df) > 0:
+            n80 = max(1, int(0.8 * len(self.train_df)))
+            first80 = self.train_df.iloc[:n80]
+            allowed = set()
+            for _, row in first80.iterrows():
+                uid = row['user']
+                if pd.isna(uid):
+                    continue
+                uid = int(uid)
+                for cand_id in str(row['candidate_news']).split():
+                    if cand_id.strip():
+                        allowed.add((uid, cand_id.strip()))
+            self.allowed_train80_pairs = allowed
+            print(f"트레이닝셋 앞 80% 후보만 생성: 허용 (user, candidate_news) 쌍 {len(self.allowed_train80_pairs)}개")
         
         print(f"뉴스 데이터: {len(self.news_df)}개")
         print(f"{data_type} 데이터: {len(self.train_df)}개")
@@ -288,6 +308,9 @@ class BodyGenerator:
         if candidate_news_id not in self.news_dict:
             raise ValueError(f"뉴스 ID {candidate_news_id}를 찾을 수 없습니다.")
         
+        if self.allowed_train80_pairs is not None and (user_id, candidate_news_id) not in self.allowed_train80_pairs:
+            raise ValueError(f"(user_id={user_id}, candidate_news_id={candidate_news_id})는 트레이닝셋 앞 80%에 포함되지 않아 생성하지 않습니다.")
+        
         candidate_news = self.news_dict[candidate_news_id]
         candidate_title = candidate_news['title']
         
@@ -327,22 +350,11 @@ class BodyGenerator:
                 'model': self.model
             }
             
-            # 결과 저장
+            # 결과 저장 (save_path의 부모가 run 폴더 trainN 이면 그 아래 user_X 로 저장)
             if save_path:
-                # train/test 폴더 구분
-                dataset_type = "test" if self.use_test else "train"
-                # save_path에서 base_dir 추출 (output 디렉토리)
-                if os.path.dirname(save_path):
-                    base_dir = os.path.dirname(save_path)
-                else:
-                    # 파일명만 있는 경우 현재 디렉토리 사용
-                    base_dir = "."
-                # output/train 또는 output/test 폴더 생성
-                dataset_dir = os.path.join(base_dir, dataset_type)
-                # user_id 기반 폴더 생성
-                user_dir = os.path.join(dataset_dir, f"user_{user_id}")
+                base_dir = os.path.dirname(save_path) if os.path.dirname(save_path) else "."
+                user_dir = os.path.join(base_dir, f"user_{user_id}")
                 os.makedirs(user_dir, exist_ok=True)
-                # 파일명만 사용하여 user 폴더 안에 저장
                 filename = os.path.basename(save_path)
                 final_path = os.path.join(user_dir, filename)
                 self._save_result(result, final_path)
@@ -389,6 +401,15 @@ class BodyGenerator:
         # 중복 제거
         unique_candidate_news_ids = list(dict.fromkeys(all_candidate_news_ids))  # 순서 유지하면서 중복 제거
         
+        # train80_only이면 트레이닝셋 앞 80%에 등장하는 (user_id, 후보)만 남김
+        if self.allowed_train80_pairs is not None:
+            unique_candidate_news_ids = [c for c in unique_candidate_news_ids if (user_id, c) in self.allowed_train80_pairs]
+            print(f"트레이닝셋 앞 80% 필터 적용: {len(unique_candidate_news_ids)}개의 후보 뉴스에 대해 본문을 생성합니다...")
+        
+        if not unique_candidate_news_ids:
+            print(f"유저 {user_id}: 트레이닝셋 앞 80%에 해당하는 후보 뉴스가 없습니다. 건너뜁니다.")
+            return []
+        
         print(f"\n유저 {user_id}에 대해 {len(unique_candidate_news_ids)}개의 후보 뉴스에 대한 본문을 생성합니다...")
         
         results = []
@@ -433,13 +454,9 @@ class BodyGenerator:
                 
                 results.append(result)
                 
-                # 개별 파일로 저장
+                # 개별 파일로 저장 (output_dir = run 폴더 trainN, 그 아래 user_X)
                 if output_dir:
-                    # train/test 폴더 구분
-                    dataset_type = "test" if self.use_test else "train"
-                    dataset_dir = os.path.join(output_dir, dataset_type)
-                    # user_id 기반 폴더 생성
-                    user_dir = os.path.join(dataset_dir, f"user_{user_id}")
+                    user_dir = os.path.join(output_dir, f"user_{user_id}")
                     os.makedirs(user_dir, exist_ok=True)
                     save_path = os.path.join(user_dir, f"news_{candidate_news_id}.json")
                     self._save_result(result, save_path)
@@ -452,11 +469,7 @@ class BodyGenerator:
         
         # 전체 결과를 하나의 파일로도 저장
         if output_dir and results:
-            # train/test 폴더 구분
-            dataset_type = "test" if self.use_test else "train"
-            dataset_dir = os.path.join(output_dir, dataset_type)
-            # user_id 기반 폴더 생성
-            user_dir = os.path.join(dataset_dir, f"user_{user_id}")
+            user_dir = os.path.join(output_dir, f"user_{user_id}")
             os.makedirs(user_dir, exist_ok=True)
             all_results_path = os.path.join(user_dir, "all_results.json")
             with open(all_results_path, 'w', encoding='utf-8') as f:
@@ -476,6 +489,29 @@ class BodyGenerator:
         print(f"결과가 {save_path}에 저장되었습니다.")
 
 
+def get_next_train_folder(base_output_dir: str) -> str:
+    """
+    base_output_dir 아래에서 train0, train1, ... 중 가장 큰 숫자의 다음 폴더 경로 반환.
+    예: train10이 있으면 train11 경로 반환, 없으면 train0 반환.
+    """
+    os.makedirs(base_output_dir, exist_ok=True)
+    max_num = -1
+    for name in os.listdir(base_output_dir):
+        if not os.path.isdir(os.path.join(base_output_dir, name)):
+            continue
+        if name.startswith("train") and len(name) > 5:
+            try:
+                n = int(name[5:])
+                if n > max_num:
+                    max_num = n
+            except ValueError:
+                continue
+    next_num = max_num + 1
+    run_dir = os.path.join(base_output_dir, f"train{next_num}")
+    os.makedirs(run_dir, exist_ok=True)
+    return run_dir
+
+
 def main():
     """예제 실행"""
     import argparse
@@ -486,20 +522,24 @@ def main():
     parser.add_argument('--candidate_news_id', type=str, default=None, help='후보 뉴스 ID (단일 뉴스 처리용, 없으면 모든 candidate_news 처리)')
     parser.add_argument('--output', type=str, default='body_generation/output', help='출력 디렉토리 경로')
     parser.add_argument('--use_test', action='store_true', help='테스트 데이터 사용 (기본값: 학습 데이터 사용)')
+    parser.add_argument('--train80_only', action='store_true', help='트레이닝셋 앞 80%의 후보뉴스에 대해서만 생성 (학습 데이터 사용 시)')
     parser.add_argument('--api_key', type=str, default=None, help='OpenAI API 키 (선택, 환경변수 사용 가능)')
     parser.add_argument('--model', type=str, default='gpt-4o-mini', help='사용할 모델명')
     
     args = parser.parse_args()
     
+    # 출력 run 폴더 결정: output 아래 train0, train1, ... 중 다음 번호
+    run_dir = get_next_train_folder(args.output)
+    print(f"저장 경로: {run_dir}")
+    
     # 생성기 초기화
-    generator = BodyGenerator(api_key=args.api_key, model=args.model, use_test=args.use_test)
+    generator = BodyGenerator(api_key=args.api_key, model=args.model, use_test=args.use_test, train80_only=args.train80_only)
     
     if args.candidate_news_id:
         # 단일 뉴스 처리 (user_id 필수)
         if args.user_id is None:
             raise ValueError("단일 뉴스 처리를 위해서는 --user_id를 지정해야 합니다.")
-        # user 폴더 안에 저장하므로 파일명만 지정
-        save_path = os.path.join(args.output, f"news_{args.candidate_news_id}.json")
+        save_path = os.path.join(run_dir, f"news_{args.candidate_news_id}.json")
         result = generator.generate_body(
             user_id=args.user_id,
             candidate_news_id=args.candidate_news_id,
@@ -517,7 +557,7 @@ def main():
         # 특정 유저의 모든 candidate_news 처리
         results = generator.generate_bodies_for_user(
             user_id=args.user_id,
-            output_dir=args.output
+            output_dir=run_dir
         )
         
         print(f"\n=== 생성 완료 ===")
@@ -545,7 +585,7 @@ def main():
             try:
                 results = generator.generate_bodies_for_user(
                     user_id=user_id,
-                    output_dir=args.output
+                    output_dir=run_dir
                 )
                 total_results += len(results)
                 print(f"유저 {user_id}: {len(results)}개의 본문 생성 완료")
