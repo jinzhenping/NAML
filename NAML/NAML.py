@@ -82,6 +82,37 @@ def load_expected_bodies(output_dir='body_generation/output', dataset_type='trai
     return expected_bodies
 
 
+def load_expected_bodies_from_train_dir(train_dir):
+    """
+    body_generation/output/trainN 구조에서 해당 폴더 전체의 기대 본문 로드.
+    train_dir: trainN 폴더 전체 경로. user_{id}/news_{id}.json 에서 generated_body 수집.
+    반환: {(user_id, news_id): generated_body} 형태의 딕셔너리
+    """
+    expected_bodies = {}
+    if not train_dir or not os.path.isdir(train_dir):
+        return expected_bodies
+    for user_folder in os.listdir(train_dir):
+        user_path = os.path.join(train_dir, user_folder)
+        if not os.path.isdir(user_path):
+            continue
+        if not user_folder.startswith('user_'):
+            continue
+        user_id = user_folder.replace('user_', '')
+        for filename in os.listdir(user_path):
+            if not (filename.startswith('news_') and filename.endswith('.json')):
+                continue
+            news_id = filename.replace('news_', '').replace('.json', '')
+            file_path = os.path.join(user_path, filename)
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    if 'generated_body' in data:
+                        expected_bodies[(user_id, news_id)] = data['generated_body']
+            except Exception:
+                continue
+    return expected_bodies
+
+
 def get_latest_train_folder(base_output_dir):
     """
     base_output_dir 아래에서 train0, train1, ... 중 숫자가 가장 큰 폴더 경로 반환.
@@ -1191,6 +1222,11 @@ if EVAL_PRETRAINED_ON_TRAIN80:
     print(f"{'='*60}")
     model.load_weights(PRETRAINED_MODEL_PATH)
     print("모델 로드 완료.")
+    body_gen_output = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
+    latest_train_dir = get_latest_train_folder(body_gen_output)
+    ref_folder_name = os.path.basename(latest_train_dir) if latest_train_dir else '(trainN 없음)'
+    print(f"모델 경로: {PRETRAINED_MODEL_PATH}")
+    print(f"기대 본문 참조 폴더: {ref_folder_name}")
     
     # 트레이닝셋 전반부 80%를 테스트 형식으로 구성 (샘플당 5개 후보 → 5개 테스트 행)
     pretrain_size = int(len(all_train_id) * 0.8)
@@ -1272,6 +1308,8 @@ if EVAL_PRETRAINED_ON_TRAIN80:
     
     add(f"\n트레이닝셋 전반부 80% 평가 (샘플 수: {pretrain_size}, 테스트 행: {len(train80_test_id)})")
     add(f"{'='*60}")
+    add(f"모델 경로: {PRETRAINED_MODEL_PATH}")
+    add(f"기대 본문 참조 폴더: {ref_folder_name}")
     
     add("\n[1] 실제 본문 사용:")
     loss_actual_list, ndcg_actual_list, click_actual = eval_train80_run(use_expected_body=False)
@@ -1283,11 +1321,16 @@ if EVAL_PRETRAINED_ON_TRAIN80:
         add("  평가 가능한 세션 없음")
     
     add("\n[2] 기대 본문 사용:")
-    expected_bodies_train_eval = expected_bodies_train
-    if expected_bodies_train_eval is None:
-        add("  기대 본문 로드 중 (train)...")
-        expected_bodies_train_eval = load_expected_bodies(output_dir='body_generation/output', dataset_type='train')
+    if latest_train_dir:
+        add(f"  기대 본문 로드: {os.path.basename(latest_train_dir)} 폴더 참조")
+        expected_bodies_train_eval = load_expected_bodies_from_train_dir(latest_train_dir)
         add(f"  로드된 기대 본문: {len(expected_bodies_train_eval)}개")
+    else:
+        expected_bodies_train_eval = expected_bodies_train
+        if expected_bodies_train_eval is None:
+            add("  기대 본문 로드 중 (train)...")
+            expected_bodies_train_eval = load_expected_bodies(output_dir='body_generation/output', dataset_type='train')
+            add(f"  로드된 기대 본문: {len(expected_bodies_train_eval)}개")
     loss_expected_list, ndcg_expected_list, click_expected = eval_train80_run(
         use_expected_body=True,
         expected_bodies=expected_bodies_train_eval,
