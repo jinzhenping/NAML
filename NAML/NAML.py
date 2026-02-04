@@ -1215,24 +1215,30 @@ if EVAL_PRETRAINED_ON_TRAIN80:
             return None, None, None
         return all_session_loss, all_session_ndcg, click_score
     
-    print(f"\n트레이닝셋 전반부 80% 평가 (샘플 수: {pretrain_size}, 테스트 행: {len(train80_test_id)})")
-    print(f"{'='*60}")
+    # 결과 수집 (콘솔 출력 + 파일 저장용)
+    lines = []
+    def add(s=""):
+        lines.append(s)
+        print(s)
     
-    print("\n[1] 실제 본문 사용:")
+    add(f"\n트레이닝셋 전반부 80% 평가 (샘플 수: {pretrain_size}, 테스트 행: {len(train80_test_id)})")
+    add(f"{'='*60}")
+    
+    add("\n[1] 실제 본문 사용:")
     loss_actual_list, ndcg_actual_list, click_actual = eval_train80_run(use_expected_body=False)
     if loss_actual_list is not None:
         valid = [x for x in loss_actual_list if x is not None]
-        print(f"  Loss     : {np.mean(valid):.6f}  (유저당 BCE 평균)")
-        print(f"  NDCG@5   : {np.mean([x for x in ndcg_actual_list if x is not None]):.6f}")
+        add(f"  Loss     : {np.mean(valid):.6f}  (유저당 BCE 평균)")
+        add(f"  NDCG@5   : {np.mean([x for x in ndcg_actual_list if x is not None]):.6f}")
     else:
-        print("  평가 가능한 세션 없음")
+        add("  평가 가능한 세션 없음")
     
-    print("\n[2] 기대 본문 사용:")
+    add("\n[2] 기대 본문 사용:")
     expected_bodies_train_eval = expected_bodies_train
     if expected_bodies_train_eval is None:
-        print("  기대 본문 로드 중 (train)...")
+        add("  기대 본문 로드 중 (train)...")
         expected_bodies_train_eval = load_expected_bodies(output_dir='body_generation/output', dataset_type='train')
-        print(f"  로드된 기대 본문: {len(expected_bodies_train_eval)}개")
+        add(f"  로드된 기대 본문: {len(expected_bodies_train_eval)}개")
     loss_expected_list, ndcg_expected_list, click_expected = eval_train80_run(
         use_expected_body=True,
         expected_bodies=expected_bodies_train_eval,
@@ -1241,15 +1247,15 @@ if EVAL_PRETRAINED_ON_TRAIN80:
     )
     if loss_expected_list is not None:
         valid = [x for x in loss_expected_list if x is not None]
-        print(f"  Loss     : {np.mean(valid):.6f}  (유저당 BCE 평균)")
-        print(f"  NDCG@5   : {np.mean([x for x in ndcg_expected_list if x is not None]):.6f}")
+        add(f"  Loss     : {np.mean(valid):.6f}  (유저당 BCE 평균)")
+        add(f"  NDCG@5   : {np.mean([x for x in ndcg_expected_list if x is not None]):.6f}")
     else:
-        print("  [건너뜀] 기대본문 데이터 없음")
+        add("  [건너뜀] 기대본문 데이터 없음")
     
     # 두 loss 차이가 가장 큰 세션 찾기 (기대본문 loss - 실제본문 loss 가 최대인 세션 = 기대본문이 상대적으로 가장 못한 세션)
+    best_sess_idx = None
     if loss_actual_list is not None and loss_expected_list is not None:
         max_diff = -np.inf
-        best_sess_idx = None
         for i in range(len(train80_test_index)):
             la, le = loss_actual_list[i], loss_expected_list[i]
             if la is None or le is None:
@@ -1273,25 +1279,87 @@ if EVAL_PRETRAINED_ON_TRAIN80:
             positive_pos_actual = np.where(labels == 1)[0][0]
             positive_pos_expected = np.where(labels == 1)[0][0]
             
-            print(f"\n{'='*60}")
-            print("성능 차이가 가장 큰 세션 (기대본문 Loss - 실제본문 Loss 최대 = 기대본문이 상대적으로 가장 못한 세션)")
-            print(f"{'='*60}")
-            print(f"  세션 인덱스(트레이닝 80% 내) : {best_sess_idx}")
-            print(f"  유저 ID                    : {user_id_str}")
-            print(f"  후보 뉴스 ID (5개)         : {list(news_ids)}")
-            print(f"  정답 레이블 (1=클릭)        : {list(labels)}")
-            print(f"  실제본문 Loss (해당 세션)   : {loss_actual_list[best_sess_idx]:.6f}")
-            print(f"  기대본문 Loss (해당 세션)   : {loss_expected_list[best_sess_idx]:.6f}")
-            print(f"  Loss 차이 (기대 - 실제)     : {max_diff:.6f}")
-            print(f"  실제본문 점수 (5개 후보)    : {[round(float(x), 6) for x in scores_actual]}")
-            print(f"  기대본문 점수 (5개 후보)    : {[round(float(x), 6) for x in scores_expected]}")
-            print(f"  실제본문 랭킹(점수순)      : {rank_actual.tolist()} (정답 위치: {int(positive_pos_actual)})")
-            print(f"  기대본문 랭킹(점수순)      : {rank_expected.tolist()} (정답 위치: {int(positive_pos_expected)})")
-            print(f"{'='*60}\n")
+            add(f"\n{'='*60}")
+            add("성능 차이가 가장 큰 세션 (기대본문 Loss - 실제본문 Loss 최대 = 기대본문이 상대적으로 가장 못한 세션)")
+            add(f"{'='*60}")
+            add(f"  세션 인덱스(트레이닝 80% 내) : {best_sess_idx}")
+            add(f"  유저 ID                    : {user_id_str}")
+            add(f"  후보 뉴스 ID (5개)         : {list(news_ids)}")
+            add(f"  정답 레이블 (1=클릭)        : {list(labels)}")
+            add(f"  실제본문 Loss (해당 세션)   : {loss_actual_list[best_sess_idx]:.6f}")
+            add(f"  기대본문 Loss (해당 세션)   : {loss_expected_list[best_sess_idx]:.6f}")
+            add(f"  Loss 차이 (기대 - 실제)     : {max_diff:.6f}")
+            add(f"  실제본문 점수 (5개 후보)    : {[round(float(x), 6) for x in scores_actual]}")
+            add(f"  기대본문 점수 (5개 후보)    : {[round(float(x), 6) for x in scores_expected]}")
+            add(f"  실제본문 랭킹(점수순)      : {rank_actual.tolist()} (정답 위치: {int(positive_pos_actual)})")
+            add(f"  기대본문 랭킹(점수순)      : {rank_expected.tolist()} (정답 위치: {int(positive_pos_expected)})")
+            add(f"{'='*60}\n")
     
-    print(f"\n{'='*60}")
-    print("프리트레이닝 모델 - 트레이닝 80% 평가 완료. 프로그램을 종료합니다.")
-    print(f"{'='*60}\n")
+    add(f"\n{'='*60}")
+    add("프리트레이닝 모델 - 트레이닝 80% 평가 완료. 프로그램을 종료합니다.")
+    add(f"{'='*60}\n")
+    
+    # NAML/results 에 JSON 저장 (performance_feedback + diagnostic_samples, result0.txt부터 순번)
+    results_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
+    os.makedirs(results_dir, exist_ok=True)
+    existing = [f for f in os.listdir(results_dir) if f.startswith('result') and f.endswith('.txt')]
+    next_num = 0
+    for f in existing:
+        try:
+            n = int(f.replace('result', '').replace('.txt', ''))
+            if n >= next_num:
+                next_num = n + 1
+        except ValueError:
+            pass
+    out_path = os.path.join(results_dir, f'result{next_num}.txt')
+    
+    # performance_feedback: 실제=real, 기대=expected
+    loss_real = np.mean([x for x in loss_actual_list if x is not None]) if loss_actual_list else None
+    loss_expected = np.mean([x for x in loss_expected_list if x is not None]) if loss_expected_list else None
+    ndcg5_real = np.mean([x for x in ndcg_actual_list if x is not None]) if ndcg_actual_list else None
+    ndcg5_expected = np.mean([x for x in ndcg_expected_list if x is not None]) if ndcg_expected_list else None
+    
+    # diagnostic_samples: 성능 차이 최대 세션 정보 (뉴스 제목·기대본문 로드)
+    diagnostic_samples = []
+    if loss_actual_list is not None and loss_expected_list is not None and best_sess_idx is not None:
+        news_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'dataset', 'MIND', 'MIND_news.tsv')
+        news_titles = {}
+        if os.path.exists(news_file):
+            with open(news_file, 'r', encoding='utf-8') as nf:
+                for nline in nf:
+                    parts = nline.strip().split('\t')
+                    if len(parts) >= 4:
+                        news_titles[parts[0]] = parts[3]
+        sess_news_ids = all_train_newsid_str[best_sess_idx] if best_sess_idx < len(all_train_newsid_str) else ['?'] * 5
+        sess_user_id_str = all_train_userid_str[best_sess_idx] if all_train_userid_str and best_sess_idx < len(all_train_userid_str) else '?'
+        s, e = train80_test_index[best_sess_idx][0], train80_test_index[best_sess_idx][1]
+        sess_labels = train80_test_label[s:e]
+        pos_pos = int(np.where(sess_labels == 1)[0][0])
+        positive_news_id = sess_news_ids[pos_pos] if pos_pos < len(sess_news_ids) else '?'
+        user_pos_indices = all_user_pos[best_sess_idx]
+        user_click_history_titles = [news_titles.get(news_index_reverse.get(int(i), ''), '') for i in user_pos_indices if int(i) != 0]
+        candidate_news_title = news_titles.get(positive_news_id, '')
+        generated_expected_body = (expected_bodies_train_eval.get((sess_user_id_str, positive_news_id), '') or '') if expected_bodies_train_eval else ''
+        diagnostic_samples.append({
+            "type": "failure",
+            "user_click_history_titles": user_click_history_titles,
+            "candidate_news_title": candidate_news_title,
+            "generated_expected_body": generated_expected_body
+        })
+    
+    payload = {
+        "performance_feedback": {
+            "loss_expected": float(loss_expected) if loss_expected is not None else None,
+            "loss_real": float(loss_real) if loss_real is not None else None,
+            "ndcg5_expected": float(ndcg5_expected) if ndcg5_expected is not None else None,
+            "ndcg5_real": float(ndcg5_real) if ndcg5_real is not None else None
+        },
+        "diagnostic_samples": diagnostic_samples
+    }
+    with open(out_path, 'w', encoding='utf-8') as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+    print(f"결과 저장: {out_path}")
+    
     sys.exit(0)
 
 # ========== 프리트레이닝 모델 로드 후 테스트셋만 평가 (실제본문 / 기대본문 각각) ==========

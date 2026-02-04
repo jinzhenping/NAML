@@ -1,0 +1,29 @@
+{
+  "allowed_policy_space": {
+    "tone": ["very_neutral", "neutral", "mildly_expressive"],
+    "abstraction_level": ["high_level", "mixed", "specific"],
+    "speculation_count": [0, 1, 2],
+    "length_bucket": ["short", "medium", "long"],
+    "format": ["narrative", "bullet"]
+  },
+  "current_policy": {
+    {policy}
+  },
+  "performance_feedback": {
+    "loss_expected": "{loss_expected}",
+    "loss_real": "{loss_real}",
+    "ndcg5_expected": "{ndcg5_expected}",
+    "ndcg5_real": "{ndcg5_real}"
+  },
+  "diagnostic_samples": [
+    {
+      "type": "failure",
+      "user_click_history_titles": "{user_click_history_titles}",
+      "candidate_news_title": "{candidate_news_title}",
+      "generated_expected_body": "{generated_expected_body}"
+    }
+  ],
+  "running_policy_summary": [
+    {running_policy_summary}
+  ]
+}
