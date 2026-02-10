@@ -60,7 +60,7 @@ def load_expected_bodies(output_dir='body_generation/output', dataset_type='trai
         # user_folder에서 user_id 추출 (예: "user_1" -> "1")
         if user_folder.startswith('user_'):
             user_id = user_folder.replace('user_', '')
-    else:
+        else:
             continue
         
         # 각 뉴스 JSON 파일 읽기
