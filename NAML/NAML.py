@@ -32,7 +32,7 @@ USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사
 DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, False: pretraining 건너뛰기
 PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
-EVAL_PRETRAINED_ON_TRAIN80 = False  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
+EVAL_PRETRAINED_ON_TRAIN80 = True  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
 EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
 
@@ -60,7 +60,7 @@ def load_expected_bodies(output_dir='body_generation/output', dataset_type='trai
         # user_folder에서 user_id 추출 (예: "user_1" -> "1")
         if user_folder.startswith('user_'):
             user_id = user_folder.replace('user_', '')
-        else:
+    else:
             continue
         
         # 각 뉴스 JSON 파일 읽기
@@ -1011,7 +1011,7 @@ v_embedding=Dense(400,activation='relu')(Flatten()(v_embedding_layer(vinput)))
 sv_embedding=Dense(400,activation='relu')(Flatten()(sv_embedding_layer(svinput)))
 
 all_channel=[title_rep,body_rep,v_embedding,sv_embedding]
-
+    
 views=concatenate([Reshape((1, -1))(channel) for channel in all_channel],axis=1)
 
 attentionv = Dense(200,activation='tanh')(views)
