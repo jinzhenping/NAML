@@ -73,8 +73,8 @@ def load_expected_bodies(output_dir='body_generation/output', dataset_type='trai
                     with open(file_path, 'r', encoding='utf-8') as f:
                         data = json.load(f)
                         if 'generated_body' in data:
-                            # (user_id, news_id) 튜플을 키로 사용
-                            expected_bodies[(user_id, news_id)] = data['generated_body']
+                            # (user_id, news_id) 튜플을 키로 사용 (문자열로 통일)
+                            expected_bodies[(str(user_id), str(news_id))] = data['generated_body']
                 except Exception as e:
                     continue
     
@@ -107,7 +107,7 @@ def load_expected_bodies_from_train_dir(train_dir):
                 with open(file_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                     if 'generated_body' in data:
-                        expected_bodies[(user_id, news_id)] = data['generated_body']
+                        expected_bodies[(str(user_id), str(news_id))] = data['generated_body']
             except Exception:
                 continue
     return expected_bodies
@@ -931,7 +931,7 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                         candidate_body = news_body[0]
                     else:
                         # 유저별 기대본문 찾기
-                        key = (user_id_str, news_id_str)
+                        key = (str(user_id_str), str(news_id_str))
                         if key in expected_bodies:
                             # 기대본문 토큰화 및 인덱스 변환
                             expected_body = expected_bodies[key]
@@ -1345,9 +1345,11 @@ if EVAL_PRETRAINED_ON_TRAIN80:
         add("  [건너뜀] 기대본문 데이터 없음")
     
     # 두 loss 차이가 가장 큰 세션 찾기 (기대본문 loss - 실제본문 loss 가 최대인 세션 = 기대본문이 상대적으로 가장 못한 세션)
+    # 동점이면 그중 하나를 무작위로 선택 (매 실행마다 같은 세션만 나오지 않도록)
     best_sess_idx = None
     if loss_actual_list is not None and loss_expected_list is not None:
         max_diff = -np.inf
+        candidates = []  # (diff, i) 목록
         for i in range(len(train80_test_index)):
             la, le = loss_actual_list[i], loss_expected_list[i]
             if la is None or le is None:
@@ -1355,7 +1357,35 @@ if EVAL_PRETRAINED_ON_TRAIN80:
             diff = le - la  # 양수면 해당 세션에서 기대본문이 실제본문보다 성능 못함
             if diff > max_diff:
                 max_diff = diff
-                best_sess_idx = i
+                candidates = [(diff, i)]
+            elif diff == max_diff:
+                candidates.append((diff, i))
+        if candidates:
+            best_sess_idx = random.choice([c[1] for c in candidates])
+        
+        # diff 분포 출력 (기대 - 실제, 세션별)
+        all_diffs = []
+        for i in range(len(train80_test_index)):
+            la, le = loss_actual_list[i], loss_expected_list[i]
+            if la is None or le is None:
+                continue
+            all_diffs.append(le - la)
+        if all_diffs:
+            all_diffs = np.array(all_diffs)
+            add(f"\n[Loss 차이(기대-실제) 분포] 세션 수: {len(all_diffs)}")
+            add(f"  min    : {float(np.min(all_diffs)):.6f}")
+            add(f"  max    : {float(np.max(all_diffs)):.6f}")
+            add(f"  mean   : {float(np.mean(all_diffs)):.6f}")
+            add(f"  std    : {float(np.std(all_diffs)):.6f}")
+            add(f"  25%    : {float(np.percentile(all_diffs, 25)):.6f}")
+            add(f"  50%    : {float(np.percentile(all_diffs, 50)):.6f}")
+            add(f"  75%    : {float(np.percentile(all_diffs, 75)):.6f}")
+            # 간단한 히스토그램 (10구간)
+            hist, bin_edges = np.histogram(all_diffs, bins=10)
+            add("  히스토그램 (10구간):")
+            for j in range(len(hist)):
+                add(f"    [{bin_edges[j]:.4f}, {bin_edges[j+1]:.4f}) : {int(hist[j])}개")
+            add("")
         
         if best_sess_idx is not None:
             s, e = train80_test_index[best_sess_idx][0], train80_test_index[best_sess_idx][1]
