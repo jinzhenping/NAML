@@ -1362,6 +1362,7 @@ if EVAL_PRETRAINED_ON_TRAIN80:
                 candidates.append((diff, i))
         if candidates:
             best_sess_idx = random.choice([c[1] for c in candidates])
+            add(f"\n최대 diff를 가진 세션 수: {len(candidates)}개 (이 중 1개를 선택)")
         
         # diff 분포 출력 (기대 - 실제, 세션별)
         all_diffs = []
