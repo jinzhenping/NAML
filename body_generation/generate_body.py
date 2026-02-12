@@ -594,7 +594,7 @@ def main():
     parser.add_argument('--start_user_id', type=int, default=None, help='시작 유저 ID (지정하면 해당 ID부터 이후 모든 유저 처리)')
     parser.add_argument('--candidate_news_id', type=str, default=None, help='후보 뉴스 ID (단일 뉴스 처리용, 없으면 모든 candidate_news 처리)')
     parser.add_argument('--output', type=str, default='body_generation/output', help='출력 디렉토리 경로')
-    policy_group = parser.add_mutually_exclusive_group(required=True, help='생성 대상을 하나 선택')
+    policy_group = parser.add_mutually_exclusive_group(required=True)
     policy_group.add_argument('--train80_only', action='store_true', help='트레이닝셋 앞 80%% 후보만 생성')
     policy_group.add_argument('--train20_only', action='store_true', help='트레이닝셋 뒤 20%% 후보만 생성')
     policy_group.add_argument('--use_test', action='store_true', help='테스트셋 후보로 생성')
