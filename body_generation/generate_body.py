@@ -23,7 +23,9 @@ class BodyGenerator:
                  api_key: Optional[str] = None,
                  model: str = "gpt-4o-mini",
                  coordinator_output_dir: str = "coordinator_LLM/output",
-                 train80_only: bool = False):
+                 train80_only: bool = False,
+                 train20_only: bool = False,
+                 coordinator_policy_n: Optional[int] = None):
         """
         Args:
             prompt_path: 프롬프트 YAML 파일 경로
@@ -36,6 +38,8 @@ class BodyGenerator:
             model: 사용할 모델명
             coordinator_output_dir: coordinator_LLM 출력 디렉토리 (Tone 등 설정을 N.txt에서 로드)
             train80_only: True면 트레이닝셋 앞 80%에 등장하는 (유저, 후보뉴스)에 대해서만 생성 (use_test=False일 때만 적용)
+            train20_only: True면 트레이닝셋 뒤 20%에 등장하는 (유저, 후보뉴스)에 대해서만 생성 (use_test=False일 때만 적용)
+            coordinator_policy_n: 사용할 정책 파일 번호 (N.txt). None이면 가장 큰 N 사용.
         """
         self.prompt_path = prompt_path
         self.settings_path = settings_path
@@ -46,6 +50,8 @@ class BodyGenerator:
         self.model = model
         self.coordinator_output_dir = coordinator_output_dir
         self.train80_only = train80_only
+        self.train20_only = train20_only
+        self.coordinator_policy_n = coordinator_policy_n
         
         # API 키 설정
         api_key = api_key or os.getenv("OPENAI_API_KEY")
@@ -114,6 +120,23 @@ class BodyGenerator:
             self.allowed_train80_pairs = allowed
             print(f"트레이닝셋 앞 80% 후보만 생성: 허용 (user, candidate_news) 쌍 {len(self.allowed_train80_pairs)}개")
         
+        # train20_only: 트레이닝셋 뒤 20%에 등장하는 (user_id, candidate_news_id)만 허용 (학습 데이터일 때만)
+        self.allowed_train20_pairs = None
+        if self.train20_only and not self.use_test and len(self.train_df) > 0:
+            n80 = max(1, int(0.8 * len(self.train_df)))
+            last20 = self.train_df.iloc[n80:]
+            allowed = set()
+            for _, row in last20.iterrows():
+                uid = row['user']
+                if pd.isna(uid):
+                    continue
+                uid = int(uid)
+                for cand_id in str(row['candidate_news']).split():
+                    if cand_id.strip():
+                        allowed.add((uid, cand_id.strip()))
+            self.allowed_train20_pairs = allowed
+            print(f"트레이닝셋 뒤 20% 후보만 생성: 허용 (user, candidate_news) 쌍 {len(self.allowed_train20_pairs)}개")
+        
         print(f"뉴스 데이터: {len(self.news_df)}개")
         print(f"{data_type} 데이터: {len(self.train_df)}개")
         print(f"뉴스 딕셔너리: {len(self.news_dict)}개")
@@ -156,29 +179,34 @@ class BodyGenerator:
             self.prompt_template = f.read()
     
     def _load_coordinator_policy(self) -> None:
-        """coordinator_LLM/output 폴더에서 숫자가 가장 큰 N.txt를 찾아 updated_policy 로드."""
+        """coordinator_LLM/output 폴더에서 N.txt를 찾아 정책 로드. coordinator_policy_n이 있으면 해당 번호, 없으면 가장 큰 N."""
         self.coordinator_policy = None
         if not os.path.isdir(self.coordinator_output_dir):
             return
-        max_num = -1
         best_path = None
-        for f in os.listdir(self.coordinator_output_dir):
-            if not f.endswith('.txt'):
-                continue
-            base = f[:-4]
-            try:
-                n = int(base)
-                if n > max_num:
-                    max_num = n
-                    best_path = os.path.join(self.coordinator_output_dir, f)
-            except ValueError:
-                continue
+        if self.coordinator_policy_n is not None:
+            path = os.path.join(self.coordinator_output_dir, f"{self.coordinator_policy_n}.txt")
+            if os.path.isfile(path):
+                best_path = path
+        else:
+            max_num = -1
+            for f in os.listdir(self.coordinator_output_dir):
+                if not f.endswith('.txt'):
+                    continue
+                base = f[:-4]
+                try:
+                    n = int(base)
+                    if n > max_num:
+                        max_num = n
+                        best_path = os.path.join(self.coordinator_output_dir, f)
+                except ValueError:
+                    continue
         if best_path is None:
             return
         try:
             with open(best_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            self.coordinator_policy = data.get("updated_policy") or data.get("current_policy")
+            self.coordinator_policy = data.get("updated_policy") or data.get("current_policy") or data.get("policy")
             if self.coordinator_policy:
                 print(f"Coordinator 설정 로드: {best_path} (tone={self.coordinator_policy.get('tone', '?')}, ...)")
         except Exception as e:
@@ -310,6 +338,8 @@ class BodyGenerator:
         
         if self.allowed_train80_pairs is not None and (user_id, candidate_news_id) not in self.allowed_train80_pairs:
             raise ValueError(f"(user_id={user_id}, candidate_news_id={candidate_news_id})는 트레이닝셋 앞 80%에 포함되지 않아 생성하지 않습니다.")
+        if self.allowed_train20_pairs is not None and (user_id, candidate_news_id) not in self.allowed_train20_pairs:
+            raise ValueError(f"(user_id={user_id}, candidate_news_id={candidate_news_id})는 트레이닝셋 뒤 20%에 포함되지 않아 생성하지 않습니다.")
         
         candidate_news = self.news_dict[candidate_news_id]
         candidate_title = candidate_news['title']
@@ -401,13 +431,21 @@ class BodyGenerator:
         # 중복 제거
         unique_candidate_news_ids = list(dict.fromkeys(all_candidate_news_ids))  # 순서 유지하면서 중복 제거
         
-        # train80_only이면 트레이닝셋 앞 80%에 등장하는 (user_id, 후보)만 남김
+        # train80_only / train20_only이면 해당 구간에 등장하는 (user_id, 후보)만 남김
         if self.allowed_train80_pairs is not None:
             unique_candidate_news_ids = [c for c in unique_candidate_news_ids if (user_id, c) in self.allowed_train80_pairs]
             print(f"트레이닝셋 앞 80% 필터 적용: {len(unique_candidate_news_ids)}개의 후보 뉴스에 대해 본문을 생성합니다...")
+        if self.allowed_train20_pairs is not None:
+            unique_candidate_news_ids = [c for c in unique_candidate_news_ids if (user_id, c) in self.allowed_train20_pairs]
+            print(f"트레이닝셋 뒤 20% 필터 적용: {len(unique_candidate_news_ids)}개의 후보 뉴스에 대해 본문을 생성합니다...")
         
         if not unique_candidate_news_ids:
-            print(f"유저 {user_id}: 트레이닝셋 앞 80%에 해당하는 후보 뉴스가 없습니다. 건너뜁니다.")
+            if self.allowed_train80_pairs is not None:
+                print(f"유저 {user_id}: 트레이닝셋 앞 80%에 해당하는 후보 뉴스가 없습니다. 건너뜁니다.")
+            elif self.allowed_train20_pairs is not None:
+                print(f"유저 {user_id}: 트레이닝셋 뒤 20%에 해당하는 후보 뉴스가 없습니다. 건너뜁니다.")
+            else:
+                print(f"유저 {user_id}: 생성할 후보 뉴스가 없습니다. 건너뜁니다.")
             return []
         
         print(f"\n유저 {user_id}에 대해 {len(unique_candidate_news_ids)}개의 후보 뉴스에 대한 본문을 생성합니다...")
@@ -489,25 +527,60 @@ class BodyGenerator:
         print(f"결과가 {save_path}에 저장되었습니다.")
 
 
-def get_next_train_folder(base_output_dir: str) -> str:
+def get_next_run_folder(base_output_dir: str, mode: str) -> str:
     """
-    base_output_dir 아래에서 train0, train1, ... 중 가장 큰 숫자의 다음 폴더 경로 반환.
-    예: train10이 있으면 train11 경로 반환, 없으면 train0 반환.
+    생성 정책(대상)에 따라 출력 폴더 경로 반환.
+    mode: "train" -> train0, train1, ... (트레이닝 앞 80%)
+          "train20" -> train20_0, train20_1, ... (트레이닝 뒤 20%)
+          "test" -> test_0, test_1, ... (테스트셋)
     """
     os.makedirs(base_output_dir, exist_ok=True)
-    max_num = -1
-    for name in os.listdir(base_output_dir):
-        if not os.path.isdir(os.path.join(base_output_dir, name)):
-            continue
-        if name.startswith("train") and len(name) > 5:
-            try:
-                n = int(name[5:])
-                if n > max_num:
-                    max_num = n
-            except ValueError:
+    if mode == "train":
+        max_num = -1
+        for name in os.listdir(base_output_dir):
+            if not os.path.isdir(os.path.join(base_output_dir, name)):
                 continue
-    next_num = max_num + 1
-    run_dir = os.path.join(base_output_dir, f"train{next_num}")
+            if name.startswith("train") and len(name) > 5:
+                try:
+                    n = int(name[5:])
+                    if n > max_num:
+                        max_num = n
+                except ValueError:
+                    continue
+        next_num = max_num + 1
+        run_dir = os.path.join(base_output_dir, f"train{next_num}")
+    elif mode == "train20":
+        prefix = "train20_"
+        max_num = -1
+        for name in os.listdir(base_output_dir):
+            if not os.path.isdir(os.path.join(base_output_dir, name)):
+                continue
+            if name.startswith(prefix):
+                try:
+                    n = int(name[len(prefix):])
+                    if n > max_num:
+                        max_num = n
+                except ValueError:
+                    continue
+        next_num = max_num + 1
+        run_dir = os.path.join(base_output_dir, f"train20_{next_num}")
+    elif mode == "test":
+        prefix = "test_"
+        max_num = -1
+        for name in os.listdir(base_output_dir):
+            if not os.path.isdir(os.path.join(base_output_dir, name)):
+                continue
+            if name.startswith(prefix):
+                try:
+                    n = int(name[len(prefix):])
+                    if n > max_num:
+                        max_num = n
+                except ValueError:
+                    continue
+        next_num = max_num + 1
+        run_dir = os.path.join(base_output_dir, f"test_{next_num}")
+    else:
+        raise ValueError(f"mode must be 'train', 'train20', or 'test', got '{mode}'")
     os.makedirs(run_dir, exist_ok=True)
     return run_dir
 
@@ -521,19 +594,35 @@ def main():
     parser.add_argument('--start_user_id', type=int, default=None, help='시작 유저 ID (지정하면 해당 ID부터 이후 모든 유저 처리)')
     parser.add_argument('--candidate_news_id', type=str, default=None, help='후보 뉴스 ID (단일 뉴스 처리용, 없으면 모든 candidate_news 처리)')
     parser.add_argument('--output', type=str, default='body_generation/output', help='출력 디렉토리 경로')
-    parser.add_argument('--use_test', action='store_true', help='테스트 데이터 사용 (기본값: 학습 데이터 사용)')
-    parser.add_argument('--train80_only', action='store_true', help='트레이닝셋 앞 80%의 후보뉴스에 대해서만 생성 (학습 데이터 사용 시)')
+    policy_group = parser.add_mutually_exclusive_group(required=True, help='생성 대상을 하나 선택')
+    policy_group.add_argument('--train80_only', action='store_true', help='트레이닝셋 앞 80%% 후보만 생성')
+    policy_group.add_argument('--train20_only', action='store_true', help='트레이닝셋 뒤 20%% 후보만 생성')
+    policy_group.add_argument('--use_test', action='store_true', help='테스트셋 후보로 생성')
+    parser.add_argument('--policy_file', type=int, default=None, metavar='N', help='정책으로 사용할 coordinator 출력 파일 번호 (N이면 N.txt). 생략 시 가장 큰 번호 사용')
     parser.add_argument('--api_key', type=str, default=None, help='OpenAI API 키 (선택, 환경변수 사용 가능)')
     parser.add_argument('--model', type=str, default='gpt-4o-mini', help='사용할 모델명')
     
     args = parser.parse_args()
     
-    # 출력 run 폴더 결정: output 아래 train0, train1, ... 중 다음 번호
-    run_dir = get_next_train_folder(args.output)
-    print(f"저장 경로: {run_dir}")
+    # 생성 정책에 따라 출력 폴더 결정
+    if args.train80_only:
+        mode = "train"
+    elif args.train20_only:
+        mode = "train20"
+    else:
+        mode = "test"
+    run_dir = get_next_run_folder(args.output, mode)
+    print(f"생성 정책: {mode}, 저장 경로: {run_dir}")
     
     # 생성기 초기화
-    generator = BodyGenerator(api_key=args.api_key, model=args.model, use_test=args.use_test, train80_only=args.train80_only)
+    generator = BodyGenerator(
+        api_key=args.api_key,
+        model=args.model,
+        use_test=args.use_test,
+        train80_only=args.train80_only,
+        train20_only=args.train20_only,
+        coordinator_policy_n=args.policy_file
+    )
     
     if args.candidate_news_id:
         # 단일 뉴스 처리 (user_id 필수)

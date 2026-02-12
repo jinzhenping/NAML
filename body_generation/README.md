@@ -59,11 +59,8 @@ python body_generation/generate_body.py --train80_only
 # 특정 유저만, 트레이닝 80% 후보만
 python body_generation/generate_body.py --user_id 1 --train80_only
 
-### 옵션
+# 트레이닝셋 뒤 20% 후보에만 생성
+# 정책을 2.txt로 고정
+python body_generation/generate_body.py --train20_only --policy_file 2
 
-- `--user_id`: 유저 ID (선택, 없으면 모든 유저 처리)
-- `--candidate_news_id`: 후보 뉴스 ID (선택, 없으면 모든 candidate_news 처리)
-- `--output`: 출력 디렉토리 경로 (기본값: body_generation/output)
-- `--use_test`: 테스트 데이터 사용 (기본값: 학습 데이터 사용)
-- `--api_key`: OpenAI API 키 (선택, 환경변수 사용 가능)
-- `--model`: 사용할 모델명 (기본값: gpt-4o-mini)
+python body_generation/generate_body.py --use_test --policy_file 2
