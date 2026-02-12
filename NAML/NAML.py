@@ -35,6 +35,11 @@ PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining �
 EVAL_PRETRAINED_ON_TRAIN80 = True  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
 EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
+# 유저 인코더만 파인튜닝 (뉴스 인코더 고정, 트레이닝 뒤 20% + 기대본문 폴더 사용)
+FINETUNE_USER_ENCODER = False  # True: 프리트레이닝 모델 로드 후 유저 인코더만 파인튜닝
+FINETUNE_EXPECTED_BODY_DIR = 'train20_0'  # 기대본문 폴더 (body_generation/output/train20_0)
+FINETUNE_EPOCHS = 10  # 파인튜닝 에폭 수
+FINETUNE_SAVE_PATH = 'saved_models/finetuned_user_encoder.h5'  # 파인튜닝 후 저장 경로 (None이면 저장 안 함)
 
 
 def load_expected_bodies(output_dir='body_generation/output', dataset_type='train'):
@@ -1208,6 +1213,56 @@ if DO_PRETRAINING:
     print("Pretraining 완료 후 프로그램을 종료합니다.")
     print(f"{'='*60}")
     import sys
+    sys.exit(0)
+
+# ========== 유저 인코더만 파인튜닝 (뉴스 인코더 고정, 트레이닝 뒤 20% + train20_0 기대본문) ==========
+if FINETUNE_USER_ENCODER:
+    import sys
+    if not os.path.exists(PRETRAINED_MODEL_PATH):
+        print(f"오류: 프리트레이닝 모델을 찾을 수 없습니다: {PRETRAINED_MODEL_PATH}")
+        sys.exit(1)
+    body_gen_output = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
+    finetune_body_dir = os.path.join(body_gen_output, FINETUNE_EXPECTED_BODY_DIR)
+    if not os.path.isdir(finetune_body_dir):
+        print(f"오류: 기대본문 폴더를 찾을 수 없습니다: {finetune_body_dir}")
+        sys.exit(1)
+    print(f"\n{'='*60}")
+    print("유저 인코더만 파인튜닝 (뉴스 인코더 고정)")
+    print(f"{'='*60}")
+    print(f"모델 로드: {PRETRAINED_MODEL_PATH}")
+    model.load_weights(PRETRAINED_MODEL_PATH)
+    print("뉴스 인코더 고정 (newsEncoder.trainable = False)")
+    newsEncoder.trainable = False
+    model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])
+    print("기대본문 로드:", finetune_body_dir)
+    expected_bodies_finetune = load_expected_bodies_from_train_dir(finetune_body_dir)
+    print(f"로드된 기대 본문: {len(expected_bodies_finetune)}개")
+    pretrain_size = int(len(all_train_id) * 0.8)
+    last20_size = len(all_train_id) - pretrain_size
+    train20_pn = all_train_pn[pretrain_size:]
+    train20_label = all_label[pretrain_size:]
+    train20_id = all_train_id[pretrain_size:]
+    train20_user_pos = all_user_pos[pretrain_size:]
+    train20_userid_str = all_train_userid_str[pretrain_size:] if all_train_userid_str is not None else None
+    train20_newsid_str = all_train_newsid_str[pretrain_size:] if all_train_newsid_str is not None else None
+    print(f"트레이닝 뒤 20% 샘플 수: {last20_size}개")
+    finetune_gen = generate_batch_data_train(
+        train20_pn, train20_label, train20_id, 30,
+        candidate_news_body=None,
+        expected_bodies=expected_bodies_finetune,
+        all_userid_str=train20_userid_str,
+        all_newsid_str=train20_newsid_str,
+        news_index_reverse=news_index_reverse
+    )
+    steps_per_epoch = (last20_size + 29) // 30
+    print(f"파인튜닝 에폭 수: {FINETUNE_EPOCHS}, steps_per_epoch: {steps_per_epoch}")
+    print(f"{'='*60}\n")
+    model.fit(finetune_gen, epochs=FINETUNE_EPOCHS, steps_per_epoch=steps_per_epoch, verbose=1)
+    if FINETUNE_SAVE_PATH:
+        os.makedirs(os.path.dirname(FINETUNE_SAVE_PATH) or '.', exist_ok=True)
+        model.save_weights(FINETUNE_SAVE_PATH)
+        print(f"\n파인튜닝 모델 저장: {FINETUNE_SAVE_PATH}")
+    print("유저 인코더 파인튜닝 완료. 프로그램을 종료합니다.")
     sys.exit(0)
 
 # ========== 프리트레이닝 모델 로드 후 트레이닝 80% 평가 (실제본문 / 기대본문 각각) ==========
