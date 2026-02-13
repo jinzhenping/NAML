@@ -39,8 +39,9 @@ PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평�
 # 유저 인코더만 파인튜닝 (뉴스 인코더 고정, 트레이닝 뒤 20% + 기대본문 폴더 사용)
 FINETUNE_USER_ENCODER = False  # True: 프리트레이닝 모델 로드 후 유저 인코더만 파인튜닝
 FINETUNE_EXPECTED_BODY_DIR = 'train20_0'  # 기대본문 폴더 (body_generation/output/train20_0)
+FINETUNE_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 파인튜닝 시 매 에폭 테스트셋 평가용 기대본문 폴더 (body_generation/output 아래)
 FINETUNE_EPOCHS = 10  # 파인튜닝 에폭 수
-FINETUNE_SAVE_PATH = 'saved_models/finetuned_user_encoder.h5'  # 파인튜닝 후 저장 경로 (None이면 저장 안 함)
+FINETUNE_SAVE_PATH = 'saved_models/finetuned_user_encoder.h5'  # 기대본문 NDCG@5 최고 모델 저장 경로 (None이면 저장 안 함)
 
 
 def load_expected_bodies(output_dir='body_generation/output', dataset_type='train'):
@@ -1256,13 +1257,74 @@ if FINETUNE_USER_ENCODER:
         news_index_reverse=news_index_reverse
     )
     steps_per_epoch = (last20_size + 29) // 30
+    # 테스트셋 기대본문 로드 (매 에폭 기대본문 NDCG 평가용)
+    test_body_dir = os.path.join(body_gen_output, FINETUNE_TESTSET_EXPECTED_BODY_DIR)
+    expected_bodies_test_finetune = None
+    if os.path.isdir(test_body_dir):
+        expected_bodies_test_finetune = load_expected_bodies_from_train_dir(test_body_dir)
+        print(f"테스트셋 기대본문 로드: {FINETUNE_TESTSET_EXPECTED_BODY_DIR} ({len(expected_bodies_test_finetune)}개)")
+    else:
+        print(f"경고: 테스트셋 기대본문 폴더 없음 ({test_body_dir}). 기대본문 NDCG 기준 저장 불가, 마지막 에폭만 저장합니다.")
+    
+    def _eval_testset(use_expected_body, expected_bodies=None):
+        if use_expected_body and (expected_bodies is None or all_test_userid_str is None or all_test_newsid_str is None):
+            return None
+        testgen = generate_batch_data_test(
+            all_test_pn, all_test_label, all_test_id, 30,
+            candidate_news_body=None,
+            expected_bodies=expected_bodies,
+            all_userid_str=all_test_userid_str,
+            all_newsid_str=all_test_newsid_str,
+            news_index_reverse=news_index_reverse
+        )
+        click_score = model_test.predict(testgen, steps=len(all_test_id), verbose=0)
+        eps = 1e-7
+        all_ndcg, all_mrr, all_hit1, all_loss = [], [], [], []
+        for m in all_test_index:
+            s, e = m[0], m[1]
+            if e > len(click_score):
+                continue
+            labels = all_test_label[s:e]
+            if np.sum(labels) == 0:
+                continue
+            scores = click_score[s:e, 0]
+            all_ndcg.append(ndcg_score(labels, scores, k=5))
+            all_mrr.append(mrr_score(labels, scores))
+            all_hit1.append(hit_at_k(labels, scores, k=1))
+            labels_f = labels.astype(np.float32)
+            scores_clip = np.clip(scores, eps, 1 - eps)
+            all_loss.append(-np.mean(labels_f * np.log(scores_clip) + (1 - labels_f) * np.log(1 - scores_clip)))
+        if not all_ndcg:
+            return None
+        return {'NDCG@5': np.mean(all_ndcg), 'MRR': np.mean(all_mrr), 'Hit@1': np.mean(all_hit1), 'Loss': np.mean(all_loss)}
+    
     print(f"파인튜닝 에폭 수: {FINETUNE_EPOCHS}, steps_per_epoch: {steps_per_epoch}")
+    print("매 에폭 테스트셋 평가(실제/기대 본문) 후 기대본문 NDCG@5 최고 모델 저장")
     print(f"{'='*60}\n")
-    model.fit(finetune_gen, epochs=FINETUNE_EPOCHS, steps_per_epoch=steps_per_epoch, verbose=1)
-    if FINETUNE_SAVE_PATH:
-        os.makedirs(os.path.dirname(FINETUNE_SAVE_PATH) or '.', exist_ok=True)
-        model.save_weights(FINETUNE_SAVE_PATH)
-        print(f"\n파인튜닝 모델 저장: {FINETUNE_SAVE_PATH}")
+    best_ndcg_expected = -1.0
+    best_epoch = -1
+    for epoch in range(FINETUNE_EPOCHS):
+        model.fit(finetune_gen, epochs=1, steps_per_epoch=steps_per_epoch, verbose=1)
+        res_actual = _eval_testset(use_expected_body=False)
+        res_expected = _eval_testset(use_expected_body=True, expected_bodies=expected_bodies_test_finetune) if expected_bodies_test_finetune else None
+        print(f"\n[에폭 {epoch+1}/{FINETUNE_EPOCHS}] 테스트셋 — 실제본문: NDCG@5={res_actual['NDCG@5']:.4f}, MRR={res_actual['MRR']:.4f}, Hit@1={res_actual['Hit@1']:.4f}, Loss={res_actual['Loss']:.4f}")
+        if res_expected is not None:
+            print(f"                테스트셋 — 기대본문: NDCG@5={res_expected['NDCG@5']:.4f}, MRR={res_expected['MRR']:.4f}, Hit@1={res_expected['Hit@1']:.4f}, Loss={res_expected['Loss']:.4f}")
+            if res_expected['NDCG@5'] > best_ndcg_expected and FINETUNE_SAVE_PATH:
+                best_ndcg_expected = res_expected['NDCG@5']
+                best_epoch = epoch + 1
+                os.makedirs(os.path.dirname(FINETUNE_SAVE_PATH) or '.', exist_ok=True)
+                model.save_weights(FINETUNE_SAVE_PATH)
+                print(f"                → 기대본문 NDCG@5 최고 갱신 ({best_ndcg_expected:.4f}), 모델 저장: {FINETUNE_SAVE_PATH}")
+        else:
+            if res_actual['NDCG@5'] > best_ndcg_expected and FINETUNE_SAVE_PATH and expected_bodies_test_finetune is None:
+                best_ndcg_expected = res_actual['NDCG@5']
+                best_epoch = epoch + 1
+                os.makedirs(os.path.dirname(FINETUNE_SAVE_PATH) or '.', exist_ok=True)
+                model.save_weights(FINETUNE_SAVE_PATH)
+                print(f"                → (기대본문 없음) 실제본문 NDCG@5 기준 저장")
+    if FINETUNE_SAVE_PATH and best_epoch >= 0:
+        print(f"\n기대본문 NDCG@5 최고 모델: 에폭 {best_epoch}, NDCG@5={best_ndcg_expected:.4f} — {FINETUNE_SAVE_PATH}")
     print("유저 인코더 파인튜닝 완료. 프로그램을 종료합니다.")
     sys.exit(0)
 
