@@ -34,6 +34,7 @@ PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
 EVAL_PRETRAINED_ON_TRAIN80 = True  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
 EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
+EVAL_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 테스트셋 기대본문 폴더 (body_generation/output 아래). 예: 'test', 'test_0', 'test_1'
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
 # 유저 인코더만 파인튜닝 (뉴스 인코더 고정, 트레이닝 뒤 20% + 기대본문 폴더 사용)
 FINETUNE_USER_ENCODER = False  # True: 프리트레이닝 모델 로드 후 유저 인코더만 파인튜닝
@@ -1621,11 +1622,18 @@ if EVAL_PRETRAINED_ON_TESTSET:
         print("  평가 가능한 세션 없음")
     
     print("\n[2] 기대 본문 사용:")
-    expected_bodies_test_eval = expected_bodies_test
-    if expected_bodies_test_eval is None:
-        print("  기대 본문 로드 중 (test)...")
-        expected_bodies_test_eval = load_expected_bodies(output_dir='body_generation/output', dataset_type='test')
+    body_gen_output = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
+    test_body_dir = os.path.join(body_gen_output, EVAL_TESTSET_EXPECTED_BODY_DIR)
+    if os.path.isdir(test_body_dir):
+        print(f"  기대 본문 로드: {EVAL_TESTSET_EXPECTED_BODY_DIR} 폴더 참조")
+        expected_bodies_test_eval = load_expected_bodies_from_train_dir(test_body_dir)
         print(f"  로드된 기대 본문: {len(expected_bodies_test_eval)}개")
+    else:
+        expected_bodies_test_eval = expected_bodies_test
+        if expected_bodies_test_eval is None:
+            print("  기대 본문 로드 중 (output/test)...")
+            expected_bodies_test_eval = load_expected_bodies(output_dir='body_generation/output', dataset_type='test')
+            print(f"  로드된 기대 본문: {len(expected_bodies_test_eval)}개")
     res_expected = eval_testset_run(
         use_expected_body=True,
         expected_bodies=expected_bodies_test_eval,
