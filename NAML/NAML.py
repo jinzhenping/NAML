@@ -28,11 +28,11 @@ MAX_HISTORY_CLICKS = 50  # 클릭 히스토리 개수
 MAX_SENT_LENGTH = 30     # 제목 최대 단어 수
 MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
-USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사용
+USE_EXPECTED_BODY = False  # True: 기대 본문 사용, False: 원본 본문 사용
 DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, False: pretraining 건너뛰기
 PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
-EVAL_PRETRAINED_ON_TRAIN80 = True  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
+EVAL_PRETRAINED_ON_TRAIN80 = False  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
 EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
 EVAL_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 테스트셋 기대본문 폴더 (body_generation/output 아래). 예: 'test', 'test_0', 'test_1'
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
@@ -1716,6 +1716,13 @@ if EVAL_PRETRAINED_ON_TESTSET:
     sys.exit(0)
 
 # ========== 메인 학습 루프 ==========
+# 매 에폭 테스트셋 기대본문 평가용 (EVAL_TESTSET_EXPECTED_BODY_DIR 폴더)
+body_gen_output_main = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
+test_body_dir_main = os.path.join(body_gen_output_main, EVAL_TESTSET_EXPECTED_BODY_DIR)
+expected_bodies_main_test = load_expected_bodies_from_train_dir(test_body_dir_main) if os.path.isdir(test_body_dir_main) else None
+if expected_bodies_main_test is not None:
+    print(f"메인 학습: 매 에폭 테스트셋 기대본문 평가 시 {EVAL_TESTSET_EXPECTED_BODY_DIR} 사용 ({len(expected_bodies_main_test)}개)\n")
+
 for ep in range(10):
     np.random.seed(SEED + ep)
     random.seed(SEED + ep)
@@ -1736,29 +1743,14 @@ for ep in range(10):
 
     actual_train_samples = len(all_train_id)
     steps_per_epoch = (actual_train_samples + 29) // 30
-    # print(f"[디버깅] 학습 샘플 수: {actual_train_samples}개")
-    # print(f"[디버깅] steps_per_epoch 계산: {actual_train_samples}개 샘플 / 30 = {steps_per_epoch} steps (예상 처리 샘플 수: {steps_per_epoch * 30})")
-    # print(f"[디버깅] generate_batch_data_train은 배치 단위로 yield하므로 steps_per_epoch={steps_per_epoch}이 올바릅니다.")
     model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch)
     
-    if USE_EXPECTED_BODY:
-        # 유저별 기대본문 사용
-        testgen=generate_batch_data_test(
-            all_test_pn, all_test_label, all_test_id, 30,
-            candidate_news_body=None,
-            expected_bodies=expected_bodies_test,
-            all_userid_str=all_test_userid_str,
-            all_newsid_str=all_test_newsid_str,
-            news_index_reverse=news_index_reverse
-        )
-    else:
-        # 원본 본문 사용
-        testgen=generate_batch_data_test(all_test_pn,all_test_label,all_test_id, 30, candidate_news_body=None)
-
     actual_test_samples = len(all_test_id)
     test_steps = actual_test_samples
-    # print(f"[디버깅] test_steps 계산: {actual_test_samples}개 샘플 (각 샘플을 개별 yield하므로 steps=샘플 수)")
-    click_score = model_test.predict(testgen, steps=test_steps, verbose=1)
+
+    # [1] 테스트셋 실제본문으로 평가
+    testgen_actual = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, 30, candidate_news_body=None)
+    click_score = model_test.predict(testgen_actual, steps=test_steps, verbose=1)
     # print(f"[디버깅] 실제 생성된 click_score 수: {len(click_score)}")
     
     # click_score가 실제 샘플 수와 일치하는지 확인 (디버깅용, 필요 시 주석 해제)
@@ -1845,13 +1837,42 @@ for ep in range(10):
     }
     results.append([epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['Hit@1']])
     
+    # [2] 테스트셋 기대본문(EVAL_TESTSET_EXPECTED_BODY_DIR)으로 평가
+    epoch_results_expected = None
+    if expected_bodies_main_test is not None:
+        testgen_expected = generate_batch_data_test(
+            all_test_pn, all_test_label, all_test_id, 30,
+            candidate_news_body=None,
+            expected_bodies=expected_bodies_main_test,
+            all_userid_str=all_test_userid_str,
+            all_newsid_str=all_test_newsid_str,
+            news_index_reverse=news_index_reverse
+        )
+        click_score_exp = model_test.predict(testgen_expected, steps=test_steps, verbose=0)
+        all_mrr_exp, all_ndcg_exp, all_hit1_exp = [], [], []
+        for i in range(len(all_test_index)):
+            start, end = all_test_index[i]
+            session_scores = click_score_exp[start:end].flatten()
+            session_labels = all_test_label[start:end]
+            if np.sum(session_labels) == 0:
+                continue
+            all_mrr_exp.append(mrr_score(session_labels, session_scores))
+            all_ndcg_exp.append(ndcg_score(session_labels, session_scores, k=5))
+            all_hit1_exp.append(hit_at_k(session_labels, session_scores, k=1))
+        if all_mrr_exp:
+            epoch_results_expected = {
+                'MRR': np.mean(all_mrr_exp),
+                'NDCG@5': np.mean(all_ndcg_exp),
+                'Hit@1': np.mean(all_hit1_exp)
+            }
+    
     current_lr = model.optimizer.learning_rate.numpy() if hasattr(model.optimizer.learning_rate, 'numpy') else model.optimizer.learning_rate
     print(f"\n{'='*60}")
     print(f"Epoch {ep+1}/10 - Test Results (LR: {current_lr:.6f})")
     print(f"{'='*60}")
-    print(f"MRR      : {epoch_results['MRR']:.6f}")
-    print(f"NDCG@5   : {epoch_results['NDCG@5']:.6f}")
-    print(f"Hit@1    : {epoch_results['Hit@1']:.6f}")
+    print(f"[실제본문] MRR: {epoch_results['MRR']:.6f}  NDCG@5: {epoch_results['NDCG@5']:.6f}  Hit@1: {epoch_results['Hit@1']:.6f}")
+    if epoch_results_expected is not None:
+        print(f"[기대본문({EVAL_TESTSET_EXPECTED_BODY_DIR})] MRR: {epoch_results_expected['MRR']:.6f}  NDCG@5: {epoch_results_expected['NDCG@5']:.6f}  Hit@1: {epoch_results_expected['Hit@1']:.6f}")
     print(f"{'='*60}\n")
 
 # 전체 결과 요약
