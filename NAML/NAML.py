@@ -38,7 +38,7 @@ EVAL_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 테스트셋 기대본문 폴더 (b
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
 # 유저 인코더만 파인튜닝 (뉴스 인코더 고정, 트레이닝 뒤 20% + 기대본문 폴더 사용)
 FINETUNE_USER_ENCODER = False  # True: 프리트레이닝 모델 로드 후 유저 인코더만 파인튜닝
-FINETUNE_EXPECTED_BODY_DIR = 'train20_0'  # 기대본문 폴더 (body_generation/output/train20_0)
+FINETUNE_EXPECTED_BODY_DIR = 'train_last20'  # 기대본문 폴더 (body_generation/output/train20_0)
 FINETUNE_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 파인튜닝 시 매 에폭 테스트셋 평가용 기대본문 폴더 (body_generation/output 아래)
 FINETUNE_EPOCHS = 10  # 파인튜닝 에폭 수
 FINETUNE_SAVE_PATH = 'saved_models/finetuned_user_encoder.h5'  # 기대본문 NDCG@5 최고 모델 저장 경로 (None이면 저장 안 함)
@@ -1232,7 +1232,7 @@ if FINETUNE_USER_ENCODER:
     print("유저 인코더만 파인튜닝 (뉴스 인코더 고정)")
     print(f"{'='*60}")
     print(f"모델 로드: {PRETRAINED_MODEL_PATH}")
-    model.load_weights(PRETRAINED_MODEL_PATH)
+    model.load_weights(PRETRAINED_MODEL_PATH, skip_mismatch=True)
     print("뉴스 인코더 고정 (newsEncoder.trainable = False)")
     newsEncoder.trainable = False
     model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])
@@ -1338,8 +1338,8 @@ if EVAL_PRETRAINED_ON_TRAIN80:
     print(f"\n{'='*60}")
     print(f"프리트레이닝 모델 로드: {PRETRAINED_MODEL_PATH}")
     print(f"{'='*60}")
-    model.load_weights(PRETRAINED_MODEL_PATH)
-    print("모델 로드 완료.")
+    model.load_weights(PRETRAINED_MODEL_PATH, skip_mismatch=True)
+    print("모델 로드 완료. (데이터/어휘 크기가 저장 시와 다르면 embedding 등 일부 레이어는 로드되지 않을 수 있음)")
     body_gen_output = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
     latest_train_dir = get_latest_train_folder(body_gen_output)
     ref_folder_name = os.path.basename(latest_train_dir) if latest_train_dir else '(trainN 없음)'
@@ -1624,9 +1624,9 @@ if EVAL_PRETRAINED_ON_TESTSET:
     print(f"\n{'='*60}")
     print(f"프리트레이닝 모델 로드: {PRETRAINED_MODEL_PATH}")
     print(f"{'='*60}")
-    model.load_weights(PRETRAINED_MODEL_PATH)
-    print("모델 로드 완료.")
-    
+    model.load_weights(PRETRAINED_MODEL_PATH, skip_mismatch=True)
+    print("모델 로드 완료. (데이터/어휘 크기가 저장 시와 다르면 embedding 등 일부 레이어는 로드되지 않을 수 있음)")
+
     print(f"\n{'='*60}")
     print("프리트레이닝 모델 - 테스트셋 평가")
     print(f"{'='*60}")
