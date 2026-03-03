@@ -32,7 +32,7 @@ USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사
 DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, False: pretraining 건너뛰기
 PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
-EVAL_PRETRAINED_ON_TRAIN80 = False  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
+EVAL_PRETRAINED_ON_TRAIN80 = True  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
 EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
 EVAL_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 테스트셋 기대본문 폴더 (body_generation/output 아래). 예: 'test', 'test_0', 'test_1'
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
@@ -1572,12 +1572,15 @@ if EVAL_PRETRAINED_ON_TRAIN80:
     else:
         add("  [건너뜀] 기대본문 데이터 없음")
     
-    # 두 loss 차이가 가장 큰 세션 찾기 (기대본문 loss - 실제본문 loss 가 최대인 세션 = 기대본문이 상대적으로 가장 못한 세션)
-    # 동점이면 그중 하나를 무작위로 선택 (매 실행마다 같은 세션만 나오지 않도록)
-    best_sess_idx = None
+    # 두 loss 차이가 가장 큰 세션(failure) / 가장 작은 세션(success) 찾기
+    # diff = 기대본문 loss - 실제본문 loss. 최대 = 기대본문이 상대적으로 가장 못한 세션, 최소 = 가장 잘 맞춘 세션
+    best_sess_idx = None  # failure: diff 최대
+    success_sess_idx = None  # success: diff 최소
+    max_diff = -np.inf
+    min_diff = np.inf
     if loss_actual_list is not None and loss_expected_list is not None:
-        max_diff = -np.inf
-        candidates = []  # (diff, i) 목록
+        candidates_max = []  # (diff, i) 최대 diff
+        candidates_min = []  # (diff, i) 최소 diff
         for i in range(len(train80_test_index)):
             la, le = loss_actual_list[i], loss_expected_list[i]
             if la is None or le is None:
@@ -1585,12 +1588,20 @@ if EVAL_PRETRAINED_ON_TRAIN80:
             diff = le - la  # 양수면 해당 세션에서 기대본문이 실제본문보다 성능 못함
             if diff > max_diff:
                 max_diff = diff
-                candidates = [(diff, i)]
+                candidates_max = [(diff, i)]
             elif diff == max_diff:
-                candidates.append((diff, i))
-        if candidates:
-            best_sess_idx = random.choice([c[1] for c in candidates])
-            add(f"\n최대 diff를 가진 세션 수: {len(candidates)}개 (이 중 1개를 선택)")
+                candidates_max.append((diff, i))
+            if diff < min_diff:
+                min_diff = diff
+                candidates_min = [(diff, i)]
+            elif diff == min_diff:
+                candidates_min.append((diff, i))
+        if candidates_max:
+            best_sess_idx = random.choice([c[1] for c in candidates_max])
+            add(f"\n최대 diff를 가진 세션 수: {len(candidates_max)}개 (이 중 1개를 failure로 선택)")
+        if candidates_min:
+            success_sess_idx = random.choice([c[1] for c in candidates_min])
+            add(f"최소 diff를 가진 세션 수: {len(candidates_min)}개 (이 중 1개를 success로 선택)")
         
         # diff 분포 출력 (기대 - 실제, 세션별)
         all_diffs = []
@@ -1645,6 +1656,34 @@ if EVAL_PRETRAINED_ON_TRAIN80:
             add(f"  실제본문 랭킹(점수순)      : {rank_actual.tolist()} (정답 위치: {int(positive_pos_actual)})")
             add(f"  기대본문 랭킹(점수순)      : {rank_expected.tolist()} (정답 위치: {int(positive_pos_expected)})")
             add(f"{'='*60}\n")
+        
+        # 로스 차이가 가장 작은 세션 (success) 출력
+        if success_sess_idx is not None:
+            s, e = train80_test_index[success_sess_idx][0], train80_test_index[success_sess_idx][1]
+            labels_s = train80_test_label[s:e]
+            scores_actual_s = click_actual[s:e, 0]
+            scores_expected_s = click_expected[s:e, 0]
+            news_ids_s = all_train_newsid_str[success_sess_idx] if success_sess_idx < len(all_train_newsid_str) else ['?'] * 5
+            user_id_str_s = all_train_userid_str[success_sess_idx] if all_train_userid_str and success_sess_idx < len(all_train_userid_str) else '?'
+            rank_actual_s = np.argsort(scores_actual_s)[::-1]
+            rank_expected_s = np.argsort(scores_expected_s)[::-1]
+            positive_pos_actual_s = np.where(labels_s == 1)[0][0]
+            positive_pos_expected_s = np.where(labels_s == 1)[0][0]
+            add(f"\n{'='*60}")
+            add("성능 차이가 가장 작은 세션 (기대본문 Loss - 실제본문 Loss 최소 = 기대본문이 상대적으로 잘 맞춘 세션)")
+            add(f"{'='*60}")
+            add(f"  세션 인덱스(트레이닝 80% 내) : {success_sess_idx}")
+            add(f"  유저 ID                    : {user_id_str_s}")
+            add(f"  후보 뉴스 ID (5개)         : {list(news_ids_s)}")
+            add(f"  정답 레이블 (1=클릭)        : {list(labels_s)}")
+            add(f"  실제본문 Loss (해당 세션)   : {loss_actual_list[success_sess_idx]:.6f}")
+            add(f"  기대본문 Loss (해당 세션)   : {loss_expected_list[success_sess_idx]:.6f}")
+            add(f"  Loss 차이 (기대 - 실제)     : {min_diff:.6f}")
+            add(f"  실제본문 점수 (5개 후보)    : {[round(float(x), 6) for x in scores_actual_s]}")
+            add(f"  기대본문 점수 (5개 후보)    : {[round(float(x), 6) for x in scores_expected_s]}")
+            add(f"  실제본문 랭킹(점수순)      : {rank_actual_s.tolist()} (정답 위치: {int(positive_pos_actual_s)})")
+            add(f"  기대본문 랭킹(점수순)      : {rank_expected_s.tolist()} (정답 위치: {int(positive_pos_expected_s)})")
+            add(f"{'='*60}\n")
     
     add(f"\n{'='*60}")
     add("프리트레이닝 모델 - 트레이닝 80% 평가 완료. 프로그램을 종료합니다.")
@@ -1670,9 +1709,9 @@ if EVAL_PRETRAINED_ON_TRAIN80:
     ndcg5_real = np.mean([x for x in ndcg_actual_list if x is not None]) if ndcg_actual_list else None
     ndcg5_expected = np.mean([x for x in ndcg_expected_list if x is not None]) if ndcg_expected_list else None
     
-    # diagnostic_samples: 성능 차이 최대 세션 정보 (뉴스 제목·기대본문 로드)
+    # diagnostic_samples: 성능 차이 최대(failure) / 최소(success) 세션 정보 (뉴스 제목·기대본문 로드)
     diagnostic_samples = []
-    if loss_actual_list is not None and loss_expected_list is not None and best_sess_idx is not None:
+    if loss_actual_list is not None and loss_expected_list is not None and (best_sess_idx is not None or success_sess_idx is not None):
         news_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'dataset', 'MIND', 'MIND_news.tsv')
         news_titles = {}
         if os.path.exists(news_file):
@@ -1681,33 +1720,35 @@ if EVAL_PRETRAINED_ON_TRAIN80:
                     parts = nline.strip().split('\t')
                     if len(parts) >= 4:
                         news_titles[parts[0]] = parts[3]
-        sess_news_ids = all_train_newsid_str[best_sess_idx] if best_sess_idx < len(all_train_newsid_str) else ['?'] * 5
-        sess_user_id_str = all_train_userid_str[best_sess_idx] if all_train_userid_str and best_sess_idx < len(all_train_userid_str) else '?'
-        s, e = train80_test_index[best_sess_idx][0], train80_test_index[best_sess_idx][1]
-        sess_labels = train80_test_label[s:e]
-        pos_pos = int(np.where(sess_labels == 1)[0][0])
-        positive_news_id = sess_news_ids[pos_pos] if pos_pos < len(sess_news_ids) else '?'
-        user_pos_indices = all_user_pos[best_sess_idx]
-        fallback_click_titles = [news_titles.get(news_index_reverse.get(int(i), ''), '') for i in user_pos_indices if int(i) != 0]
-        fallback_click_titles = fallback_click_titles[-10:]
-        candidate_news_title = news_titles.get(positive_news_id, '')
-        # 기대 본문·유저 클릭 히스토리: body_generation/output/trainN 중 가장 큰 N 폴더의 해당 세션 JSON에서 로드
         body_gen_output = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
         latest_train_dir = get_latest_train_folder(body_gen_output)
-        if latest_train_dir:
-            generated_expected_body, json_user_history = load_expected_body_from_train_dir(latest_train_dir, sess_user_id_str, positive_news_id)
-            user_click_history_titles = json_user_history if json_user_history is not None else fallback_click_titles
-            if generated_expected_body == '' and expected_bodies_train_eval:
-                generated_expected_body = expected_bodies_train_eval.get((sess_user_id_str, positive_news_id), '') or ''
-        else:
-            generated_expected_body = (expected_bodies_train_eval.get((sess_user_id_str, positive_news_id), '') or '') if expected_bodies_train_eval else ''
-            user_click_history_titles = fallback_click_titles
-        diagnostic_samples.append({
-            "type": "failure",
-            "user_click_history_titles": user_click_history_titles,
-            "candidate_news_title": candidate_news_title,
-            "generated_expected_body": generated_expected_body
-        })
+        for sess_idx, type_str in [(best_sess_idx, "failure"), (success_sess_idx, "success")]:
+            if sess_idx is None:
+                continue
+            sess_news_ids = all_train_newsid_str[sess_idx] if sess_idx < len(all_train_newsid_str) else ['?'] * 5
+            sess_user_id_str = all_train_userid_str[sess_idx] if all_train_userid_str and sess_idx < len(all_train_userid_str) else '?'
+            s, e = train80_test_index[sess_idx][0], train80_test_index[sess_idx][1]
+            sess_labels = train80_test_label[s:e]
+            pos_pos = int(np.where(sess_labels == 1)[0][0])
+            positive_news_id = sess_news_ids[pos_pos] if pos_pos < len(sess_news_ids) else '?'
+            user_pos_indices = all_user_pos[sess_idx]
+            fallback_click_titles = [news_titles.get(news_index_reverse.get(int(i), ''), '') for i in user_pos_indices if int(i) != 0]
+            fallback_click_titles = fallback_click_titles[-10:]
+            candidate_news_title = news_titles.get(positive_news_id, '')
+            if latest_train_dir:
+                generated_expected_body, json_user_history = load_expected_body_from_train_dir(latest_train_dir, sess_user_id_str, positive_news_id)
+                user_click_history_titles = json_user_history if json_user_history is not None else fallback_click_titles
+                if generated_expected_body == '' and expected_bodies_train_eval:
+                    generated_expected_body = expected_bodies_train_eval.get((sess_user_id_str, positive_news_id), '') or ''
+            else:
+                generated_expected_body = (expected_bodies_train_eval.get((sess_user_id_str, positive_news_id), '') or '') if expected_bodies_train_eval else ''
+                user_click_history_titles = fallback_click_titles
+            diagnostic_samples.append({
+                "type": type_str,
+                "user_click_history_titles": user_click_history_titles,
+                "candidate_news_title": candidate_news_title,
+                "generated_expected_body": generated_expected_body
+            })
     
     payload = {
         "performance_feedback": {
