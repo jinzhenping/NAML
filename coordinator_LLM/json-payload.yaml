@@ -15,14 +15,7 @@
     "ndcg5_expected": "{ndcg5_expected}",
     "ndcg5_real": "{ndcg5_real}"
   },
-  "diagnostic_samples": [
-    {
-      "type": "failure",
-      "user_click_history_titles": "{user_click_history_titles}",
-      "candidate_news_title": "{candidate_news_title}",
-      "generated_expected_body": "{generated_expected_body}"
-    }
-  ],
+  "diagnostic_samples": {diagnostic_samples},
   "running_policy_summary": [
     {running_policy_summary}
   ]

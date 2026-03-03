@@ -129,17 +129,10 @@ def fill_payload_template(
             val = str(val)
         out = out.replace("{" + key + "}", val)
 
-    # diagnostic_samples (첫 샘플만 사용)
+    # diagnostic_samples (failure / success 모두 전달)
     samples = naml_data.get("diagnostic_samples") or []
-    if samples:
-        s0 = samples[0]
-        out = out.replace("{user_click_history_titles}", json.dumps(s0.get("user_click_history_titles", [])))
-        out = out.replace("{candidate_news_title}", json.dumps(s0.get("candidate_news_title", "")))
-        out = out.replace("{generated_expected_body}", json.dumps(s0.get("generated_expected_body", "")))
-    else:
-        out = out.replace("{user_click_history_titles}", "[]")
-        out = out.replace("{candidate_news_title}", '""')
-        out = out.replace("{generated_expected_body}", '""')
+    diagnostic_samples_str = json.dumps(samples, ensure_ascii=False)
+    out = out.replace("{diagnostic_samples}", diagnostic_samples_str)
 
     return out
 
