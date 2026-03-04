@@ -8,7 +8,11 @@
 **기본 실행** (API 키는 환경변수 `OPENAI_API_KEY` 사용)
 
 ```bash
+# 최신 result 사용
 python coordinator_LLM/coordinator.py
+
+# result0.txt 사용
+python coordinator_LLM/coordinator.py --result_n 0
 ```
 
 **옵션**

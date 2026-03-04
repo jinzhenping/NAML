@@ -60,23 +60,27 @@ def load_coordinator_output(output_dir: str) -> Tuple[Optional[int], Dict[str, A
         return latest_n, {"policy": {}, "running_policy_summary": []}
 
 
-def load_naml_result(results_dir: str) -> Tuple[Optional[int], Dict[str, Any]]:
+def load_naml_result(results_dir: str, result_n: Optional[int] = None) -> Tuple[Optional[int], Dict[str, Any]]:
     """
-    NAML/results 에서 숫자가 가장 큰 resultN.txt 로드.
+    NAML/results 에서 resultN.txt 로드.
+    result_n이 지정되면 result{result_n}.txt 사용, 아니면 숫자가 가장 큰 파일 사용.
     반환: (N, data). 없으면 (None, {}).
     """
-    latest_n = get_latest_output_number(results_dir, r"result(\d+)\.txt")
-    if latest_n is None:
+    if result_n is not None:
+        n = result_n
+    else:
+        n = get_latest_output_number(results_dir, r"result(\d+)\.txt")
+    if n is None:
         return None, {}
-    path = os.path.join(results_dir, f"result{latest_n}.txt")
+    path = os.path.join(results_dir, f"result{n}.txt")
     if not os.path.isfile(path):
-        return latest_n, {}
+        return n, {}
     try:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        return latest_n, data
+        return n, data
     except Exception:
-        return latest_n, {}
+        return n, {}
 
 
 def load_system_prompt(system_path: str) -> str:
@@ -184,6 +188,8 @@ def main():
                         help="coordinator_LLM/output 경로 (기본: 이 스크립트 기준 output)")
     parser.add_argument("--results_dir", type=str, default=None,
                         help="NAML/results 경로 (기본: 프로젝트 루트 기준 NAML/results)")
+    parser.add_argument("--result_n", type=int, default=None,
+                        help="사용할 NAML 결과 파일 번호 (예: 0 이면 result0.txt). 미지정 시 가장 큰 번호 사용")
     args = parser.parse_args()
 
     base = _dir_here()
@@ -195,9 +201,12 @@ def main():
     payload_path = os.path.join(base, "json-payload.yaml")
 
     coord_n, coordinator_data = load_coordinator_output(output_dir)
-    naml_n, naml_data = load_naml_result(results_dir)
+    naml_n, naml_data = load_naml_result(results_dir, result_n=args.result_n)
 
-    print(f"참조: coordinator output 최대 N = {coord_n}, NAML results 최대 N = {naml_n}")
+    if args.result_n is not None:
+        print(f"참조: coordinator output 최대 N = {coord_n}, NAML results 사용 = result{naml_n}.txt (--result_n={args.result_n})")
+    else:
+        print(f"참조: coordinator output 최대 N = {coord_n}, NAML results 최대 N = {naml_n}")
 
     prompt = build_prompt(system_path, payload_path, coordinator_data, naml_data)
     print("프롬프트 구성 완료. 조율기 LLM 호출 중...")
