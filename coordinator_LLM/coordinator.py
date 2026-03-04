@@ -34,20 +34,24 @@ def get_latest_output_number(folder: str, pattern: str) -> Optional[int]:
     return max_n if max_n >= 0 else None
 
 
-def load_coordinator_output(output_dir: str) -> Tuple[Optional[int], Dict[str, Any]]:
+def load_coordinator_output(output_dir: str, coord_n: Optional[int] = None) -> Tuple[Optional[int], Dict[str, Any]]:
     """
-    coordinator_LLM/output 에서 숫자가 가장 큰 N.txt 로드.
+    coordinator_LLM/output 에서 N.txt 로드.
+    coord_n이 지정되면 N.txt 사용, 아니면 숫자가 가장 큰 파일 사용.
     반환: (N, data). 없으면 (None, {}) 또는 (None, 기본 policy/summary).
     """
-    latest_n = get_latest_output_number(output_dir, r"(\d+)\.txt")
-    if latest_n is None:
+    if coord_n is not None:
+        n = coord_n
+    else:
+        n = get_latest_output_number(output_dir, r"(\d+)\.txt")
+    if n is None:
         return None, {
             "policy": {},
             "running_policy_summary": []
         }
-    path = os.path.join(output_dir, f"{latest_n}.txt")
+    path = os.path.join(output_dir, f"{n}.txt")
     if not os.path.isfile(path):
-        return latest_n, {"policy": {}, "running_policy_summary": []}
+        return n, {"policy": {}, "running_policy_summary": []}
     try:
         with open(path, "r", encoding="utf-8") as f:
             raw = f.read().strip()
@@ -55,9 +59,9 @@ def load_coordinator_output(output_dir: str) -> Tuple[Optional[int], Dict[str, A
         # 이전 조율기 출력은 updated_policy / updated_running_policy_summary, 시드/초기 파일은 policy / running_policy_summary
         policy = data.get("updated_policy") or data.get("policy") or {}
         summary = data.get("updated_running_policy_summary") or data.get("running_policy_summary") or []
-        return latest_n, {"policy": policy, "running_policy_summary": summary}
+        return n, {"policy": policy, "running_policy_summary": summary}
     except Exception:
-        return latest_n, {"policy": {}, "running_policy_summary": []}
+        return n, {"policy": {}, "running_policy_summary": []}
 
 
 def load_naml_result(results_dir: str, result_n: Optional[int] = None) -> Tuple[Optional[int], Dict[str, Any]]:
@@ -188,8 +192,8 @@ def main():
                         help="coordinator_LLM/output 경로 (기본: 이 스크립트 기준 output)")
     parser.add_argument("--results_dir", type=str, default=None,
                         help="NAML/results 경로 (기본: 프로젝트 루트 기준 NAML/results)")
-    parser.add_argument("--result_n", type=int, default=None,
-                        help="사용할 NAML 결과 파일 번호 (예: 0 이면 result0.txt). 미지정 시 가장 큰 번호 사용")
+    parser.add_argument("--n", type=int, default=None,
+                        help="사용할 라운드 번호 (예: 2 이면 2.txt + result2.txt). 미지정 시 각각 가장 큰 번호 사용")
     args = parser.parse_args()
 
     base = _dir_here()
@@ -200,11 +204,11 @@ def main():
     system_path = os.path.join(base, "system_prompt.yaml")
     payload_path = os.path.join(base, "json-payload.yaml")
 
-    coord_n, coordinator_data = load_coordinator_output(output_dir)
-    naml_n, naml_data = load_naml_result(results_dir, result_n=args.result_n)
+    coord_n, coordinator_data = load_coordinator_output(output_dir, coord_n=args.n)
+    naml_n, naml_data = load_naml_result(results_dir, result_n=args.n)
 
-    if args.result_n is not None:
-        print(f"참조: coordinator output 최대 N = {coord_n}, NAML results 사용 = result{naml_n}.txt (--result_n={args.result_n})")
+    if args.n is not None:
+        print(f"참조: 라운드 N = {args.n} (coordinator {coord_n}.txt, NAML result{naml_n}.txt)")
     else:
         print(f"참조: coordinator output 최대 N = {coord_n}, NAML results 최대 N = {naml_n}")
 
