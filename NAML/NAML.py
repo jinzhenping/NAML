@@ -32,7 +32,10 @@ USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사
 DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, False: pretraining 건너뛰기
 PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
-EVAL_PRETRAINED_ON_TRAIN80 = True  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
+EVAL_PRETRAINED_ON_TRAIN80 = False  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
+EVAL_PRETRAINED_ON_TRAIN80_FIRST_BATCH = True  # True: 트레이닝 80% 지정 배치만 평가, 기대본문은 train80_batch{N} 로드, result{N}.txt 저장
+EVAL_TRAIN80_BATCH_SIZE = 500  # 배치당 세션 수
+EVAL_TRAIN80_BATCH_INDEX = 0   # 배치 번호 (0=첫 500세션→result0.txt, 1=다음 500세션→result1.txt, ...)
 EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
 EVAL_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 테스트셋 기대본문 폴더 (body_generation/output 아래). 예: 'test', 'test_0', 'test_1'
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
@@ -1436,6 +1439,212 @@ if FINETUNE_FULL_MODEL:
     if FINETUNE_FULL_SAVE_PATH and best_epoch >= 0:
         print(f"\n기대본문 NDCG@5 최고 모델: 에폭 {best_epoch}, NDCG@5={best_ndcg_expected:.4f} — {FINETUNE_FULL_SAVE_PATH}")
     print("모델 전체 파인튜닝 완료. 프로그램을 종료합니다.")
+    sys.exit(0)
+
+# ========== 프리트레이닝 모델 로드 후 트레이닝 80% 지정 배치만 평가 → result{N}.txt ==========
+if EVAL_PRETRAINED_ON_TRAIN80_FIRST_BATCH:
+    import sys
+    if not os.path.exists(PRETRAINED_MODEL_PATH):
+        print(f"오류: 프리트레이닝 모델을 찾을 수 없습니다: {PRETRAINED_MODEL_PATH}")
+        sys.exit(1)
+    body_gen_output = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
+    batch_dir_name = f"train80_batch{EVAL_TRAIN80_BATCH_INDEX}"
+    batch_dir = os.path.join(body_gen_output, batch_dir_name)
+    if not os.path.isdir(batch_dir):
+        print(f"오류: 배치 기대본문 폴더가 없습니다: {batch_dir}")
+        print(f"  coordinator_LLM/output/{EVAL_TRAIN80_BATCH_INDEX}.txt 정책으로 train80 배치 {EVAL_TRAIN80_BATCH_INDEX} 기대본문 생성 후 다시 실행하세요.")
+        sys.exit(1)
+    print(f"\n{'='*60}")
+    print(f"프리트레이닝 모델 로드: {PRETRAINED_MODEL_PATH}")
+    print(f"{'='*60}")
+    model.load_weights(PRETRAINED_MODEL_PATH, by_name=True, skip_mismatch=True)
+    print("모델 로드 완료.")
+    pretrain_size = int(len(all_train_id) * 0.8)
+    batch_start = EVAL_TRAIN80_BATCH_INDEX * EVAL_TRAIN80_BATCH_SIZE
+    if batch_start >= pretrain_size:
+        print(f"오류: 배치 인덱스 {EVAL_TRAIN80_BATCH_INDEX}가 범위 초과 (train80 세션 수: {pretrain_size})")
+        sys.exit(1)
+    n_sessions = min(EVAL_TRAIN80_BATCH_SIZE, pretrain_size - batch_start)
+    print(f"트레이닝 80% 배치 {EVAL_TRAIN80_BATCH_INDEX}: 세션 {batch_start}~{batch_start + n_sessions - 1} ({n_sessions}개), 기대본문: {batch_dir_name}")
+    train80_test_pn = []
+    train80_test_label = []
+    train80_test_id = []
+    train80_test_user_pos = []
+    train80_test_index = []
+    train80_test_userid_str = []
+    train80_test_newsid_str = []
+    for i in range(batch_start, batch_start + n_sessions):
+        start = len(train80_test_pn)
+        pn_row = all_train_pn[i]
+        label_row = all_label[i]
+        n_cand = len(pn_row) if hasattr(pn_row, '__len__') else 5
+        for j in range(n_cand):
+            train80_test_pn.append(int(pn_row[j]) if hasattr(pn_row[j], '__int__') else pn_row[j])
+            train80_test_label.append(int(label_row[j]) if hasattr(label_row[j], '__int__') else label_row[j])
+            train80_test_id.append(all_train_id[i])
+            train80_test_user_pos.append(all_user_pos[i])
+        if all_train_userid_str is not None and all_train_newsid_str is not None:
+            for j in range(n_cand):
+                train80_test_userid_str.append(all_train_userid_str[i])
+                train80_test_newsid_str.append(all_train_newsid_str[i][j] if j < len(all_train_newsid_str[i]) else '')
+        train80_test_index.append([start, len(train80_test_pn)])
+    train80_test_pn = np.array(train80_test_pn, dtype='int32')
+    train80_test_label = np.array(train80_test_label, dtype='int32')
+    train80_test_id = np.array(train80_test_id, dtype='int32')
+    train80_test_user_pos = np.array(train80_test_user_pos, dtype='int32')
+    expected_bodies_batch = load_expected_bodies_from_train_dir(batch_dir)
+    print(f"로드된 기대 본문: {len(expected_bodies_batch)}개")
+
+    def eval_train80_batch_run(use_expected_body, expected_bodies=None, all_userid_str=None, all_newsid_str=None):
+        if use_expected_body and (expected_bodies is None or all_userid_str is None or all_newsid_str is None):
+            return None, None, None
+        testgen = generate_batch_data_test(
+            train80_test_pn, train80_test_label, train80_test_id, 30,
+            candidate_news_body=None,
+            expected_bodies=expected_bodies,
+            all_userid_str=all_userid_str,
+            all_newsid_str=all_newsid_str,
+            news_index_reverse=news_index_reverse,
+            all_test_user_pos_override=train80_test_user_pos
+        )
+        steps = len(train80_test_id)
+        click_score = model_test.predict(testgen, steps=steps, verbose=0)
+        eps = 1e-7
+        all_session_loss = []
+        all_session_ndcg = []
+        for m in train80_test_index:
+            s, e = m[0], m[1]
+            if e > len(click_score):
+                all_session_loss.append(None)
+                all_session_ndcg.append(None)
+                continue
+            labels = train80_test_label[s:e].astype(np.float32)
+            if np.sum(labels) == 0:
+                all_session_loss.append(None)
+                all_session_ndcg.append(None)
+                continue
+            scores = np.clip(click_score[s:e, 0], eps, 1 - eps)
+            session_bce = -np.mean(labels * np.log(scores) + (1 - labels) * np.log(1 - scores))
+            all_session_loss.append(float(session_bce))
+            all_session_ndcg.append(ndcg_score(train80_test_label[s:e], click_score[s:e, 0], k=5))
+        valid_loss = [x for x in all_session_loss if x is not None]
+        if not valid_loss:
+            return None, None, None
+        return all_session_loss, all_session_ndcg, click_score
+
+    lines = []
+    def add(s=""):
+        lines.append(s)
+        print(s)
+    add(f"\n트레이닝셋 전반부 80% 배치 {EVAL_TRAIN80_BATCH_INDEX} 평가 (샘플 수: {n_sessions}, 테스트 행: {len(train80_test_id)})")
+    add(f"모델 경로: {PRETRAINED_MODEL_PATH}, 기대본문: {batch_dir_name}")
+    add("\n[1] 실제 본문 사용:")
+    loss_actual_list, ndcg_actual_list, click_actual = eval_train80_batch_run(use_expected_body=False)
+    if loss_actual_list is not None:
+        valid = [x for x in loss_actual_list if x is not None]
+        add(f"  Loss     : {np.mean(valid):.6f}")
+        add(f"  NDCG@5   : {np.mean([x for x in ndcg_actual_list if x is not None]):.6f}")
+    else:
+        add("  평가 가능한 세션 없음")
+    add("\n[2] 기대 본문 사용:")
+    loss_expected_list, ndcg_expected_list, click_expected = eval_train80_batch_run(
+        use_expected_body=True,
+        expected_bodies=expected_bodies_batch,
+        all_userid_str=train80_test_userid_str,
+        all_newsid_str=train80_test_newsid_str
+    )
+    if loss_expected_list is not None:
+        valid = [x for x in loss_expected_list if x is not None]
+        add(f"  Loss     : {np.mean(valid):.6f}")
+        add(f"  NDCG@5   : {np.mean([x for x in ndcg_expected_list if x is not None]):.6f}")
+    else:
+        add("  [건너뜀] 기대본문 데이터 없음")
+
+    best_sess_idx = None
+    success_sess_idx = None
+    max_diff = -np.inf
+    min_diff = np.inf
+    if loss_actual_list is not None and loss_expected_list is not None:
+        candidates_max = []
+        candidates_min = []
+        for i in range(len(train80_test_index)):
+            la, le = loss_actual_list[i], loss_expected_list[i]
+            if la is None or le is None:
+                continue
+            diff = le - la
+            if diff > max_diff:
+                max_diff = diff
+                candidates_max = [(diff, i)]
+            elif diff == max_diff:
+                candidates_max.append((diff, i))
+            if diff < min_diff:
+                min_diff = diff
+                candidates_min = [(diff, i)]
+            elif diff == min_diff:
+                candidates_min.append((diff, i))
+        if candidates_max:
+            best_sess_idx = random.choice([c[1] for c in candidates_max])
+            add(f"\n최대 diff 세션 수: {len(candidates_max)}개 (failure 1개 선택)")
+        if candidates_min:
+            success_sess_idx = random.choice([c[1] for c in candidates_min])
+            add(f"최소 diff 세션 수: {len(candidates_min)}개 (success 1개 선택)")
+
+    loss_real = np.mean([x for x in loss_actual_list if x is not None]) if loss_actual_list else None
+    loss_expected = np.mean([x for x in loss_expected_list if x is not None]) if loss_expected_list else None
+    ndcg5_real = np.mean([x for x in ndcg_actual_list if x is not None]) if ndcg_actual_list else None
+    ndcg5_expected = np.mean([x for x in ndcg_expected_list if x is not None]) if ndcg_expected_list else None
+
+    diagnostic_samples = []
+    if loss_actual_list is not None and loss_expected_list is not None and (best_sess_idx is not None or success_sess_idx is not None):
+        news_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'dataset', 'MIND', 'MIND_news.tsv')
+        news_titles = {}
+        if os.path.exists(news_file):
+            with open(news_file, 'r', encoding='utf-8') as nf:
+                for nline in nf:
+                    parts = nline.strip().split('\t')
+                    if len(parts) >= 4:
+                        news_titles[parts[0]] = parts[3]
+        for sess_idx, type_str in [(best_sess_idx, "failure"), (success_sess_idx, "success")]:
+            if sess_idx is None:
+                continue
+            global_idx = batch_start + sess_idx
+            sess_news_ids = all_train_newsid_str[global_idx] if global_idx < len(all_train_newsid_str) else ['?'] * 5
+            sess_user_id_str = all_train_userid_str[global_idx] if all_train_userid_str and global_idx < len(all_train_userid_str) else '?'
+            s, e = train80_test_index[sess_idx][0], train80_test_index[sess_idx][1]
+            sess_labels = train80_test_label[s:e]
+            pos_pos = int(np.where(sess_labels == 1)[0][0])
+            positive_news_id = sess_news_ids[pos_pos] if pos_pos < len(sess_news_ids) else '?'
+            user_pos_indices = all_user_pos[global_idx]
+            fallback_click_titles = [news_titles.get(news_index_reverse.get(int(i), ''), '') for i in user_pos_indices if int(i) != 0]
+            fallback_click_titles = fallback_click_titles[-10:]
+            candidate_news_title = news_titles.get(positive_news_id, '')
+            generated_expected_body, json_user_history = load_expected_body_from_train_dir(batch_dir, sess_user_id_str, positive_news_id)
+            user_click_history_titles = json_user_history if json_user_history is not None else fallback_click_titles
+            if generated_expected_body == '' and expected_bodies_batch:
+                generated_expected_body = expected_bodies_batch.get((sess_user_id_str, positive_news_id), '') or ''
+            diagnostic_samples.append({
+                "type": type_str,
+                "user_click_history_titles": user_click_history_titles,
+                "candidate_news_title": candidate_news_title,
+                "generated_expected_body": generated_expected_body
+            })
+
+    results_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
+    os.makedirs(results_dir, exist_ok=True)
+    out_path = os.path.join(results_dir, f'result{EVAL_TRAIN80_BATCH_INDEX}.txt')
+    payload = {
+        "performance_feedback": {
+            "loss_expected": float(loss_expected) if loss_expected is not None else None,
+            "loss_real": float(loss_real) if loss_real is not None else None,
+            "ndcg5_expected": float(ndcg5_expected) if ndcg5_expected is not None else None,
+            "ndcg5_real": float(ndcg5_real) if ndcg5_real is not None else None
+        },
+        "diagnostic_samples": diagnostic_samples
+    }
+    with open(out_path, 'w', encoding='utf-8') as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+    print(f"결과 저장: {out_path}")
+    add(f"\n프리트레이닝 모델 - 트레이닝 80% 배치 {EVAL_TRAIN80_BATCH_INDEX} 평가 완료. 프로그램을 종료합니다.")
     sys.exit(0)
 
 # ========== 프리트레이닝 모델 로드 후 트레이닝 80% 평가 (실제본문 / 기대본문 각각) ==========

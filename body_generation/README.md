@@ -56,6 +56,12 @@ python body_generation/generate_body.py --use_test
 # 트레이닝셋 앞 80% 후보에만 생성
 python body_generation/generate_body.py --train80_only
 
+# 트레이닝셋 앞 80% 중 앞 500세션만 생성 (NAML 배치 0 → train80_batch0)
+python body_generation/generate_body.py --train80_only --train80_first_k 500 --policy_file 0
+
+# 두 번째 500세션 생성 (NAML 배치 1 → train80_batch1, coordinator 1.txt 정책)
+python body_generation/generate_body.py --train80_only --train80_first_k 500 --train80_batch_index 1 --policy_file 1
+
 # 특정 유저만, 트레이닝 80% 후보만
 python body_generation/generate_body.py --user_id 1 --train80_only
 

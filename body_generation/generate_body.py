@@ -25,6 +25,8 @@ class BodyGenerator:
                  coordinator_output_dir: str = "coordinator_LLM/output",
                  train80_only: bool = False,
                  train20_only: bool = False,
+                 train80_first_k: Optional[int] = None,
+                 train80_batch_index: int = 0,
                  coordinator_policy_n: Optional[int] = None):
         """
         Args:
@@ -39,6 +41,8 @@ class BodyGenerator:
             coordinator_output_dir: coordinator_LLM 출력 디렉토리 (Tone 등 설정을 N.txt에서 로드)
             train80_only: True면 트레이닝셋 앞 80%에 등장하는 (유저, 후보뉴스)에 대해서만 생성 (use_test=False일 때만 적용)
             train20_only: True면 트레이닝셋 뒤 20%에 등장하는 (유저, 후보뉴스)에 대해서만 생성 (use_test=False일 때만 적용)
+            train80_first_k: train80_only일 때 배치당 세션 수 (예: 500). None이면 전체 80% 사용.
+            train80_batch_index: train80_first_k 사용 시 배치 번호 (0=첫 500세션, 1=다음 500세션). 출력 train80_batch{N}.
             coordinator_policy_n: 사용할 정책 파일 번호 (N.txt). None이면 가장 큰 N 사용.
         """
         self.prompt_path = prompt_path
@@ -51,6 +55,8 @@ class BodyGenerator:
         self.coordinator_output_dir = coordinator_output_dir
         self.train80_only = train80_only
         self.train20_only = train20_only
+        self.train80_first_k = train80_first_k
+        self.train80_batch_index = train80_batch_index
         self.coordinator_policy_n = coordinator_policy_n
         
         # API 키 설정
@@ -107,7 +113,13 @@ class BodyGenerator:
         self.allowed_train80_pairs = None
         if self.train80_only and not self.use_test and len(self.train_df) > 0:
             n80 = max(1, int(0.8 * len(self.train_df)))
-            first80 = self.train_df.iloc[:n80]
+            if self.train80_first_k is not None:
+                start = self.train80_batch_index * self.train80_first_k
+                end = min(start + self.train80_first_k, n80)
+                first80 = self.train_df.iloc[start:end]
+                print(f"트레이닝셋 앞 80% 중 배치 {self.train80_batch_index}: 세션 {start}~{end-1} ({end-start}개, train80_first_k={self.train80_first_k})")
+            else:
+                first80 = self.train_df.iloc[:n80]
             allowed = set()
             for _, row in first80.iterrows():
                 uid = row['user']
@@ -598,6 +610,8 @@ def main():
     policy_group.add_argument('--train80_only', action='store_true', help='트레이닝셋 앞 80%% 후보만 생성')
     policy_group.add_argument('--train20_only', action='store_true', help='트레이닝셋 뒤 20%% 후보만 생성')
     policy_group.add_argument('--use_test', action='store_true', help='테스트셋 후보로 생성')
+    parser.add_argument('--train80_first_k', type=int, default=None, metavar='K', help='--train80_only일 때 배치당 K세션 (예: 500). --train80_batch_index와 함께 사용')
+    parser.add_argument('--train80_batch_index', type=int, default=0, metavar='N', help='배치 번호 (0=첫 500세션→train80_batch0, 1=다음 500세션→train80_batch1). --train80_first_k와 함께 사용')
     parser.add_argument('--policy_file', type=int, default=None, metavar='N', help='정책으로 사용할 coordinator 출력 파일 번호 (N이면 N.txt). 생략 시 가장 큰 번호 사용')
     parser.add_argument('--api_key', type=str, default=None, help='OpenAI API 키 (선택, 환경변수 사용 가능)')
     parser.add_argument('--model', type=str, default='gpt-4o-mini', help='사용할 모델명')
@@ -607,12 +621,21 @@ def main():
     # 생성 정책에 따라 출력 폴더 결정
     if args.train80_only:
         mode = "train"
+        if args.train80_first_k is not None:
+            run_dir = os.path.join(args.output, f"train80_batch{args.train80_batch_index}")
+            os.makedirs(run_dir, exist_ok=True)
+            print(f"생성 정책: train80 배치 {args.train80_batch_index} ({args.train80_first_k}세션), 저장 경로: {run_dir}")
+        else:
+            run_dir = get_next_run_folder(args.output, mode)
+            print(f"생성 정책: {mode}, 저장 경로: {run_dir}")
     elif args.train20_only:
         mode = "train20"
+        run_dir = get_next_run_folder(args.output, mode)
+        print(f"생성 정책: {mode}, 저장 경로: {run_dir}")
     else:
         mode = "test"
-    run_dir = get_next_run_folder(args.output, mode)
-    print(f"생성 정책: {mode}, 저장 경로: {run_dir}")
+        run_dir = get_next_run_folder(args.output, mode)
+        print(f"생성 정책: {mode}, 저장 경로: {run_dir}")
     
     # 생성기 초기화
     generator = BodyGenerator(
@@ -621,6 +644,8 @@ def main():
         use_test=args.use_test,
         train80_only=args.train80_only,
         train20_only=args.train20_only,
+        train80_first_k=args.train80_first_k,
+        train80_batch_index=args.train80_batch_index,
         coordinator_policy_n=args.policy_file
     )
     
