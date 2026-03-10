@@ -1124,7 +1124,7 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
                          +[candidate_one_v]+browsed_v_input+[candidate_one_sv]+browsed_sv_input, score)
 
 
-model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])
+model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=0.0005), metrics=['acc'])
 
 # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
 news_index_reverse = {v: k for k, v in news_index.items()}
@@ -1283,7 +1283,8 @@ if FINETUNE_USER_ENCODER:
     model.load_weights(PRETRAINED_MODEL_PATH, by_name=True, skip_mismatch=True)
     print("뉴스 인코더 고정 (newsEncoder.trainable = False)")
     newsEncoder.trainable = False
-    model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=FINETUNE_LR), metrics=['acc'])
+    model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=FINETUNE_LR), metrics=['acc'])
+    print(f"파인튜닝 학습률: {FINETUNE_LR} (Adam learning_rate)")
     print("기대본문 로드:", finetune_body_dir)
     expected_bodies_finetune = load_expected_bodies_from_train_dir(finetune_body_dir)
     print(f"로드된 기대 본문: {len(expected_bodies_finetune)}개")
@@ -1411,7 +1412,8 @@ if FINETUNE_NEWS_ENCODER:
         layer.trainable = False
     for layer in newsEncoder.layers:
         layer.trainable = True
-    model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=FINETUNE_LR), metrics=['acc'])
+    model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=FINETUNE_LR), metrics=['acc'])
+    print(f"파인튜닝 학습률: {FINETUNE_LR} (Adam learning_rate)")
     print("기대본문 로드:", finetune_body_dir)
     expected_bodies_finetune = load_expected_bodies_from_train_dir(finetune_body_dir)
     print(f"로드된 기대 본문: {len(expected_bodies_finetune)}개")
@@ -1532,7 +1534,8 @@ if FINETUNE_FULL_MODEL:
     print(f"{'='*60}")
     print(f"모델 로드: {PRETRAINED_MODEL_PATH}")
     model.load_weights(PRETRAINED_MODEL_PATH, by_name=True, skip_mismatch=True)
-    model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=FINETUNE_LR), metrics=['acc'])
+    model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=FINETUNE_LR), metrics=['acc'])
+    print(f"파인튜닝 학습률: {FINETUNE_LR} (Adam learning_rate)")
     print("기대본문 로드:", finetune_body_dir)
     expected_bodies_finetune = load_expected_bodies_from_train_dir(finetune_body_dir)
     print(f"로드된 기대 본문: {len(expected_bodies_finetune)}개")
