@@ -1296,6 +1296,20 @@ if FINETUNE_USER_ENCODER:
     train20_userid_str = all_train_userid_str[pretrain_size:] if all_train_userid_str is not None else None
     train20_newsid_str = all_train_newsid_str[pretrain_size:] if all_train_newsid_str is not None else None
     print(f"트레이닝 뒤 20% 샘플 수: {last20_size}개")
+    # 파인튜닝 구간 (user, news) 키 중 기대본문 매칭 개수
+    if expected_bodies_finetune and train20_userid_str is not None and train20_newsid_str is not None:
+        need_keys = set()
+        for i in range(len(train20_userid_str)):
+            u = train20_userid_str[i]
+            ids = train20_newsid_str[i]
+            if hasattr(ids, '__len__') and not isinstance(ids, str):
+                for j in range(len(ids)):
+                    need_keys.add(_norm_expected_body_key(u, ids[j] if j < len(ids) else ''))
+            else:
+                need_keys.add(_norm_expected_body_key(u, ids))
+        need_keys.discard(('', ''))
+        matched = sum(1 for k in need_keys if k in expected_bodies_finetune)
+        print(f"파인튜닝 매칭: 필요 (user,news) 키 {len(need_keys)}개 중 기대본문 존재 {matched}개 ({100.0*matched/len(need_keys):.1f}%)" if need_keys else "파인튜닝 매칭: 필요 키 없음")
     finetune_gen = generate_batch_data_train(
         train20_pn, train20_label, train20_id, 30,
         candidate_news_body=None,
@@ -1410,6 +1424,19 @@ if FINETUNE_NEWS_ENCODER:
     train20_userid_str = all_train_userid_str[pretrain_size:] if all_train_userid_str is not None else None
     train20_newsid_str = all_train_newsid_str[pretrain_size:] if all_train_newsid_str is not None else None
     print(f"트레이닝 뒤 20% 샘플 수: {last20_size}개")
+    if expected_bodies_finetune and train20_userid_str is not None and train20_newsid_str is not None:
+        need_keys = set()
+        for i in range(len(train20_userid_str)):
+            u = train20_userid_str[i]
+            ids = train20_newsid_str[i]
+            if hasattr(ids, '__len__') and not isinstance(ids, str):
+                for j in range(len(ids)):
+                    need_keys.add(_norm_expected_body_key(u, ids[j] if j < len(ids) else ''))
+            else:
+                need_keys.add(_norm_expected_body_key(u, ids))
+        need_keys.discard(('', ''))
+        matched = sum(1 for k in need_keys if k in expected_bodies_finetune)
+        print(f"파인튜닝 매칭: 필요 (user,news) 키 {len(need_keys)}개 중 기대본문 존재 {matched}개 ({100.0*matched/len(need_keys):.1f}%)" if need_keys else "파인튜닝 매칭: 필요 키 없음")
     finetune_gen = generate_batch_data_train(
         train20_pn, train20_label, train20_id, 30,
         candidate_news_body=None,
@@ -1518,6 +1545,19 @@ if FINETUNE_FULL_MODEL:
     train20_userid_str = all_train_userid_str[pretrain_size:] if all_train_userid_str is not None else None
     train20_newsid_str = all_train_newsid_str[pretrain_size:] if all_train_newsid_str is not None else None
     print(f"트레이닝 뒤 20% 샘플 수: {last20_size}개")
+    if expected_bodies_finetune and train20_userid_str is not None and train20_newsid_str is not None:
+        need_keys = set()
+        for i in range(len(train20_userid_str)):
+            u = train20_userid_str[i]
+            ids = train20_newsid_str[i]
+            if hasattr(ids, '__len__') and not isinstance(ids, str):
+                for j in range(len(ids)):
+                    need_keys.add(_norm_expected_body_key(u, ids[j] if j < len(ids) else ''))
+            else:
+                need_keys.add(_norm_expected_body_key(u, ids))
+        need_keys.discard(('', ''))
+        matched = sum(1 for k in need_keys if k in expected_bodies_finetune)
+        print(f"파인튜닝 매칭: 필요 (user,news) 키 {len(need_keys)}개 중 기대본문 존재 {matched}개 ({100.0*matched/len(need_keys):.1f}%)" if need_keys else "파인튜닝 매칭: 필요 키 없음")
     finetune_gen = generate_batch_data_train(
         train20_pn, train20_label, train20_id, 30,
         candidate_news_body=None,
