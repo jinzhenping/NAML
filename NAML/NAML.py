@@ -90,8 +90,8 @@ def load_expected_bodies(output_dir='body_generation/output', dataset_type='trai
                     with open(file_path, 'r', encoding='utf-8') as f:
                         data = json.load(f)
                         if 'generated_body' in data:
-                            # (user_id, news_id) 튜플을 키로 사용 (문자열로 통일)
-                            expected_bodies[(str(user_id), str(news_id))] = data['generated_body']
+                            key = _norm_expected_body_key(user_id, news_id)
+                            expected_bodies[key] = data['generated_body']
                 except Exception as e:
                     continue
     
@@ -99,11 +99,23 @@ def load_expected_bodies(output_dir='body_generation/output', dataset_type='trai
     return expected_bodies
 
 
+def _norm_expected_body_key(uid, nid):
+    """
+    기대본문 딕셔너리 키 정규화. TSV의 user가 758.0으로 들어오거나 body_generation이 user_758로 저장해도 동일 키로 매칭.
+    """
+    try:
+        u = str(int(float(uid))).strip() if uid is not None and str(uid).strip() else ''
+    except (ValueError, TypeError):
+        u = str(uid).strip() if uid is not None else ''
+    n = str(nid).strip() if nid is not None else ''
+    return (u, n)
+
+
 def load_expected_bodies_from_train_dir(train_dir):
     """
     body_generation/output/trainN 구조에서 해당 폴더 전체의 기대 본문 로드.
     train_dir: trainN 폴더 전체 경로. user_{id}/news_{id}.json 에서 generated_body 수집.
-    반환: {(user_id, news_id): generated_body} 형태의 딕셔너리
+    반환: {(user_id, news_id): generated_body} — 키는 _norm_expected_body_key로 정규화됨.
     """
     expected_bodies = {}
     if not train_dir or not os.path.isdir(train_dir):
@@ -124,7 +136,8 @@ def load_expected_bodies_from_train_dir(train_dir):
                 with open(file_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                     if 'generated_body' in data:
-                        expected_bodies[(str(user_id), str(news_id))] = data['generated_body']
+                        key = _norm_expected_body_key(user_id, news_id)
+                        expected_bodies[key] = data['generated_body']
             except Exception:
                 continue
     return expected_bodies
@@ -825,8 +838,8 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                             candidate_body_list.append(news_body[0])
                         else:
                             news_id_str = news_ids_str[j] if j < len(news_ids_str) else ''
-                            # 유저별 기대본문 찾기
-                            key = (user_id_str, news_id_str)
+                            # 유저별 기대본문 찾기 (키 정규화로 758 vs 758.0 등 통일)
+                            key = _norm_expected_body_key(user_id_str, news_id_str)
                             if key in expected_bodies:
                                 # 기대본문 토큰화 및 인덱스 변환
                                 expected_body = expected_bodies[key]
@@ -972,8 +985,8 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                     if news_idx == 0:  # 패딩
                         candidate_body = news_body[0]
                     else:
-                        # 유저별 기대본문 찾기
-                        key = (str(user_id_str), str(news_id_str))
+                        # 유저별 기대본문 찾기 (키 정규화로 758 vs 758.0 등 통일)
+                        key = _norm_expected_body_key(user_id_str, news_id_str)
                         if key in expected_bodies:
                             # 기대본문 토큰화 및 인덱스 변환
                             expected_body = expected_bodies[key]
@@ -2236,8 +2249,27 @@ if EVAL_PRETRAINED_ON_TRAIN20:
     add("\n[2] 기대 본문 사용:")
     if latest_train20_dir:
         add(f"  기대 본문 로드: {os.path.basename(latest_train20_dir)} 폴더 참조")
+        abs_train20_dir = os.path.abspath(latest_train20_dir)
+        add(f"  절대 경로: {abs_train20_dir}")
+        if os.path.isdir(abs_train20_dir):
+            user_dirs = [d for d in os.listdir(abs_train20_dir) if os.path.isdir(os.path.join(abs_train20_dir, d)) and d.startswith('user_')]
+            add(f"  user_* 하위 폴더 수: {len(user_dirs)}개")
         expected_bodies_train20_eval = load_expected_bodies_from_train_dir(latest_train20_dir)
         add(f"  로드된 기대 본문: {len(expected_bodies_train20_eval)}개")
+        # 트레이닝 후반 20% 매칭 진단: NAML이 필요로 하는 (user, news) 키 중 기대본문에 있는 비율
+        if expected_bodies_train20_eval and train20_test_userid_str and train20_test_newsid_str:
+            need_keys = set()
+            for i in range(len(train20_test_userid_str)):
+                u = train20_test_userid_str[i] if i < len(train20_test_userid_str) else ''
+                n = train20_test_newsid_str[i] if i < len(train20_test_newsid_str) else ''
+                need_keys.add(_norm_expected_body_key(u, n))
+            matched = sum(1 for k in need_keys if k in expected_bodies_train20_eval)
+            add(f"  트레이닝 후반 20% 매칭: 필요 키 {len(need_keys)}개 중 기대본문 존재 {matched}개 ({100.0*matched/len(need_keys):.1f}%)" if need_keys else "  트레이닝 후반 20% 매칭: 필요 키 없음")
+            if expected_bodies_train20_eval and need_keys:
+                sample_loaded = list(expected_bodies_train20_eval.keys())[:3]
+                sample_need = list(need_keys)[:3]
+                add(f"  (참고) 로드 키 샘플: {sample_loaded}")
+                add(f"  (참고) 필요 키 샘플: {sample_need}")
     else:
         expected_bodies_train20_eval = None
         add("  기대 본문 폴더 없음 (train20_0, train20_1, ... 중 하나 생성 후 다시 실행)")
