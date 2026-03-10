@@ -41,7 +41,7 @@ EVAL_TRAIN20_EXPECTED_BODY_DIR = 'train_20'  # 트레이닝 후반 20% 평가 �
 EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
 EVAL_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 테스트셋 기대본문 폴더 (body_generation/output 아래). 예: 'test', 'test_0', 'test_1'
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
-# 유저 인코더만 파인튜닝 (뉴스 인코더 고정, 트레이닝 뒤 20% + 기대본문 폴더 사용)
+
 FINETUNE_USER_ENCODER = False  # True: 프리트레이닝 모델 로드 후 유저 인코더만 파인튜닝 (뉴스 인코더 고정)
 FINETUNE_NEWS_ENCODER = False  # True: 프리트레이닝 모델 로드 후 뉴스 인코더만 파인튜닝 (유저 쪽 attention 등 고정)
 FINETUNE_FULL_MODEL = False  # True: 프리트레이닝 모델 로드 후 모델 전체 파인튜닝 (유저+뉴스 인코더 모두 학습)
@@ -787,13 +787,14 @@ print(f"Seed 고정 완료: {SEED}")
 
 
 
-def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, candidate_news_body=None, expected_bodies=None, all_userid_str=None, all_newsid_str=None, news_index_reverse=None):
+def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, candidate_news_body=None, expected_bodies=None, all_userid_str=None, all_newsid_str=None, news_index_reverse=None, use_expected_body_positive_only=False):
     """
     candidate_news_body: 후보 뉴스의 기대 본문 배열 (None이면 원본 news_body 사용)
     expected_bodies: 유저별 기대 본문 딕셔너리 {(user_id, news_id): generated_body}
     all_userid_str: 유저 ID 문자열 배열
     all_newsid_str: 후보 뉴스 ID 문자열 배열 (각 샘플마다 5개)
     news_index_reverse: 뉴스 인덱스 -> 뉴스 ID 역매핑
+    use_expected_body_positive_only: True이면 label=1인 정답 후보에만 기대본문을 사용하고, 나머지 negative 후보는 실제 본문 사용
     """
     
     # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
@@ -832,11 +833,18 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                     user_id_str = all_userid_str[idx]  # 리스트 인덱싱
                     news_ids_str = all_newsid_str[idx]  # 리스트 인덱싱, 5개 후보 뉴스 ID
                     candidate_body_list = []
+                    label_vec = all_label[idx] if use_expected_body_positive_only else None
                     
                     for j, news_idx in enumerate(all_train_pn[idx]):
                         if news_idx == 0:  # 패딩
                             candidate_body_list.append(news_body[0])
                         else:
+                            # 정답 후보만 기대본문을 사용하도록 설정된 경우, negative 후보는 실제 본문 사용
+                            if use_expected_body_positive_only and label_vec is not None:
+                                is_positive = (j < len(label_vec) and label_vec[j] == 1)
+                                if not is_positive:
+                                    candidate_body_list.append(news_body[news_idx])
+                                    continue
                             news_id_str = news_ids_str[j] if j < len(news_ids_str) else ''
                             # 유저별 기대본문 찾기 (키 정규화로 758 vs 758.0 등 통일)
                             key = _norm_expected_body_key(user_id_str, news_id_str)
@@ -1318,7 +1326,8 @@ if FINETUNE_USER_ENCODER:
         expected_bodies=expected_bodies_finetune,
         all_userid_str=train20_userid_str,
         all_newsid_str=train20_newsid_str,
-        news_index_reverse=news_index_reverse
+        news_index_reverse=news_index_reverse,
+        use_expected_body_positive_only=True  # 유저 인코더 파인튜닝: 정답 후보만 기대본문 사용
     )
     steps_per_epoch = (last20_size + 29) // 30
     # 테스트셋 기대본문 로드 (매 에폭 기대본문 NDCG 평가용)
