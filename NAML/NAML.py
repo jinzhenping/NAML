@@ -37,7 +37,7 @@ EVAL_PRETRAINED_ON_TRAIN80_FIRST_BATCH = False  # True: 트레이닝 80% 지정 
 EVAL_TRAIN80_BATCH_SIZE = 500  # 배치당 세션 수
 EVAL_TRAIN80_BATCH_INDEX = 0   # 배치 번호 (0=첫 500세션→result0.txt, 1=다음 500세션→result1.txt, ...)
 EVAL_PRETRAINED_ON_TRAIN20 = False  # True: 프리트레이닝 모델 로드 후 트레이닝 후반 20%에 대해 실제/기대 본문 각각 평가
-EVAL_TRAIN20_EXPECTED_BODY_DIR = None  # 트레이닝 후반 20% 평가 시 기대본문 폴더 (예: 'train20_0'). None이면 train20_N 중 가장 큰 N 사용
+EVAL_TRAIN20_EXPECTED_BODY_DIR = 'train_20'  # 트레이닝 후반 20% 평가 시 기대본문 폴더 (예: 'train20_0'). None이면 train20_N 중 가장 큰 N 사용
 EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
 EVAL_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 테스트셋 기대본문 폴더 (body_generation/output 아래). 예: 'test', 'test_0', 'test_1'
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
@@ -2171,7 +2171,7 @@ if EVAL_PRETRAINED_ON_TRAIN20:
 
     def eval_train20_run(use_expected_body, expected_bodies=None, all_userid_str=None, all_newsid_str=None):
         if use_expected_body and (expected_bodies is None or all_userid_str is None or all_newsid_str is None):
-            return None, None, None
+            return None, None, None, None, None
         testgen = generate_batch_data_test(
             train20_test_pn, train20_test_label, train20_test_id, 30,
             candidate_news_body=None,
@@ -2186,25 +2186,34 @@ if EVAL_PRETRAINED_ON_TRAIN20:
         eps = 1e-7
         all_session_loss = []
         all_session_ndcg = []
+        all_session_mrr = []
+        all_session_hit1 = []
         for m in train20_test_index:
             s, e = m[0], m[1]
             if e > len(click_score):
                 all_session_loss.append(None)
                 all_session_ndcg.append(None)
+                all_session_mrr.append(None)
+                all_session_hit1.append(None)
                 continue
-            labels = train20_test_label[s:e].astype(np.float32)
+            labels = train20_test_label[s:e]
             if np.sum(labels) == 0:
                 all_session_loss.append(None)
                 all_session_ndcg.append(None)
+                all_session_mrr.append(None)
+                all_session_hit1.append(None)
                 continue
             scores = np.clip(click_score[s:e, 0], eps, 1 - eps)
-            session_bce = -np.mean(labels * np.log(scores) + (1 - labels) * np.log(1 - scores))
+            labels_f = labels.astype(np.float32)
+            session_bce = -np.mean(labels_f * np.log(scores) + (1 - labels_f) * np.log(1 - scores))
             all_session_loss.append(float(session_bce))
-            all_session_ndcg.append(ndcg_score(train20_test_label[s:e], click_score[s:e, 0], k=5))
+            all_session_ndcg.append(ndcg_score(labels, click_score[s:e, 0], k=5))
+            all_session_mrr.append(mrr_score(labels, click_score[s:e, 0]))
+            all_session_hit1.append(hit_at_k(labels, click_score[s:e, 0], k=1))
         valid_loss = [x for x in all_session_loss if x is not None]
         if not valid_loss:
-            return None, None, None
-        return all_session_loss, all_session_ndcg, click_score
+            return None, None, None, None, None
+        return all_session_loss, all_session_ndcg, all_session_mrr, all_session_hit1, click_score
 
     lines = []
     def add(s=""):
@@ -2215,11 +2224,13 @@ if EVAL_PRETRAINED_ON_TRAIN20:
     add(f"모델 경로: {PRETRAINED_MODEL_PATH}")
     add(f"기대 본문 참조 폴더: {ref_folder_name}")
     add("\n[1] 실제 본문 사용:")
-    loss_actual_list, ndcg_actual_list, click_actual = eval_train20_run(use_expected_body=False)
+    loss_actual_list, ndcg_actual_list, mrr_actual_list, hit1_actual_list, click_actual = eval_train20_run(use_expected_body=False)
     if loss_actual_list is not None:
         valid = [x for x in loss_actual_list if x is not None]
         add(f"  Loss     : {np.mean(valid):.6f}  (유저당 BCE 평균)")
         add(f"  NDCG@5   : {np.mean([x for x in ndcg_actual_list if x is not None]):.6f}")
+        add(f"  MRR      : {np.mean([x for x in mrr_actual_list if x is not None]):.6f}")
+        add(f"  Hit@1    : {np.mean([x for x in hit1_actual_list if x is not None]):.6f}")
     else:
         add("  평가 가능한 세션 없음")
     add("\n[2] 기대 본문 사용:")
@@ -2231,18 +2242,20 @@ if EVAL_PRETRAINED_ON_TRAIN20:
         expected_bodies_train20_eval = None
         add("  기대 본문 폴더 없음 (train20_0, train20_1, ... 중 하나 생성 후 다시 실행)")
     if latest_train20_dir and expected_bodies_train20_eval is not None:
-        loss_expected_list, ndcg_expected_list, click_expected = eval_train20_run(
+        loss_expected_list, ndcg_expected_list, mrr_expected_list, hit1_expected_list, click_expected = eval_train20_run(
             use_expected_body=True,
             expected_bodies=expected_bodies_train20_eval,
             all_userid_str=train20_test_userid_str,
             all_newsid_str=train20_test_newsid_str
         )
     else:
-        loss_expected_list, ndcg_expected_list, click_expected = None, None, None
+        loss_expected_list, ndcg_expected_list, mrr_expected_list, hit1_expected_list = None, None, None, None
     if loss_expected_list is not None:
         valid = [x for x in loss_expected_list if x is not None]
         add(f"  Loss     : {np.mean(valid):.6f}  (유저당 BCE 평균)")
         add(f"  NDCG@5   : {np.mean([x for x in ndcg_expected_list if x is not None]):.6f}")
+        add(f"  MRR      : {np.mean([x for x in mrr_expected_list if x is not None]):.6f}")
+        add(f"  Hit@1    : {np.mean([x for x in hit1_expected_list if x is not None]):.6f}")
     else:
         add("  [건너뜀] 기대본문 데이터 없음")
     add(f"\n{'='*60}")
