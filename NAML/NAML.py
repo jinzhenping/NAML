@@ -45,6 +45,7 @@ FINETUNE_FULL_MODEL = False  # True: 프리트레이닝 모델 로드 후 모델
 FINETUNE_EXPECTED_BODY_DIR = 'train_last20'  # 기대본문 폴더 (body_generation/output/train20_0)
 FINETUNE_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 파인튜닝 시 매 에폭 테스트셋 평가용 기대본문 폴더 (body_generation/output 아래)
 FINETUNE_EPOCHS = 10  # 파인튜닝 에폭 수
+FINETUNE_LR = 0.0001  # 파인튜닝 학습률
 FINETUNE_SAVE_PATH = 'saved_models/finetuned_user_encoder.h5'  # 유저인코더만 파인튜닝 시 기대본문 NDCG@5 최고 모델 저장 경로 (None이면 저장 안 함)
 FINETUNE_FULL_SAVE_PATH = 'saved_models/finetuned_full_model.h5'  # 모델 전체 파인튜닝 시 기대본문 NDCG@5 최고 모델 저장 경로 (None이면 저장 안 함)
 
@@ -1240,7 +1241,7 @@ if FINETUNE_USER_ENCODER:
     model.load_weights(PRETRAINED_MODEL_PATH, by_name=True, skip_mismatch=True)
     print("뉴스 인코더 고정 (newsEncoder.trainable = False)")
     newsEncoder.trainable = False
-    model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])
+    model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=FINETUNE_LR), metrics=['acc'])
     print("기대본문 로드:", finetune_body_dir)
     expected_bodies_finetune = load_expected_bodies_from_train_dir(finetune_body_dir)
     print(f"로드된 기대 본문: {len(expected_bodies_finetune)}개")
@@ -1349,7 +1350,7 @@ if FINETUNE_FULL_MODEL:
     print(f"{'='*60}")
     print(f"모델 로드: {PRETRAINED_MODEL_PATH}")
     model.load_weights(PRETRAINED_MODEL_PATH, by_name=True, skip_mismatch=True)
-    model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0005), metrics=['acc'])
+    model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=FINETUNE_LR), metrics=['acc'])
     print("기대본문 로드:", finetune_body_dir)
     expected_bodies_finetune = load_expected_bodies_from_train_dir(finetune_body_dir)
     print(f"로드된 기대 본문: {len(expected_bodies_finetune)}개")
