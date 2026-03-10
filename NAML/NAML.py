@@ -33,20 +33,24 @@ DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, Fals
 PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
 EVAL_PRETRAINED_ON_TRAIN80 = False  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
-EVAL_PRETRAINED_ON_TRAIN80_FIRST_BATCH = True  # True: 트레이닝 80% 지정 배치만 평가, 기대본문은 train80_batch{N} 로드, result{N}.txt 저장
+EVAL_PRETRAINED_ON_TRAIN80_FIRST_BATCH = False  # True: 트레이닝 80% 지정 배치만 평가, 기대본문은 train80_batch{N} 로드, result{N}.txt 저장
 EVAL_TRAIN80_BATCH_SIZE = 500  # 배치당 세션 수
 EVAL_TRAIN80_BATCH_INDEX = 0   # 배치 번호 (0=첫 500세션→result0.txt, 1=다음 500세션→result1.txt, ...)
+EVAL_PRETRAINED_ON_TRAIN20 = False  # True: 프리트레이닝 모델 로드 후 트레이닝 후반 20%에 대해 실제/기대 본문 각각 평가
+EVAL_TRAIN20_EXPECTED_BODY_DIR = None  # 트레이닝 후반 20% 평가 시 기대본문 폴더 (예: 'train20_0'). None이면 train20_N 중 가장 큰 N 사용
 EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
 EVAL_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 테스트셋 기대본문 폴더 (body_generation/output 아래). 예: 'test', 'test_0', 'test_1'
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
 # 유저 인코더만 파인튜닝 (뉴스 인코더 고정, 트레이닝 뒤 20% + 기대본문 폴더 사용)
-FINETUNE_USER_ENCODER = False  # True: 프리트레이닝 모델 로드 후 유저 인코더만 파인튜닝
+FINETUNE_USER_ENCODER = False  # True: 프리트레이닝 모델 로드 후 유저 인코더만 파인튜닝 (뉴스 인코더 고정)
+FINETUNE_NEWS_ENCODER = False  # True: 프리트레이닝 모델 로드 후 뉴스 인코더만 파인튜닝 (유저 쪽 attention 등 고정)
 FINETUNE_FULL_MODEL = False  # True: 프리트레이닝 모델 로드 후 모델 전체 파인튜닝 (유저+뉴스 인코더 모두 학습)
 FINETUNE_EXPECTED_BODY_DIR = 'train_last20'  # 기대본문 폴더 (body_generation/output/train20_0)
 FINETUNE_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 파인튜닝 시 매 에폭 테스트셋 평가용 기대본문 폴더 (body_generation/output 아래)
 FINETUNE_EPOCHS = 10  # 파인튜닝 에폭 수
 FINETUNE_LR = 0.0001  # 파인튜닝 학습률
 FINETUNE_SAVE_PATH = 'saved_models/finetuned_user_encoder.h5'  # 유저인코더만 파인튜닝 시 기대본문 NDCG@5 최고 모델 저장 경로 (None이면 저장 안 함)
+FINETUNE_NEWS_ENCODER_SAVE_PATH = 'saved_models/finetuned_news_encoder.h5'  # 뉴스 인코더만 파인튜닝 시 기대본문 NDCG@5 최고 모델 저장 경로 (None이면 저장 안 함)
 FINETUNE_FULL_SAVE_PATH = 'saved_models/finetuned_full_model.h5'  # 모델 전체 파인튜닝 시 기대본문 NDCG@5 최고 모델 저장 경로 (None이면 저장 안 함)
 
 
@@ -148,6 +152,31 @@ def get_latest_train_folder(base_output_dir):
     if max_num < 0:
         return None
     return os.path.join(base_output_dir, f"train{max_num}")
+
+
+def get_latest_train20_folder(base_output_dir):
+    """
+    base_output_dir 아래에서 train20_0, train20_1, ... 중 숫자가 가장 큰 폴더 경로 반환.
+    없으면 None 반환.
+    """
+    if not os.path.isdir(base_output_dir):
+        return None
+    prefix = "train20_"
+    max_num = -1
+    for name in os.listdir(base_output_dir):
+        path = os.path.join(base_output_dir, name)
+        if not os.path.isdir(path):
+            continue
+        if name.startswith(prefix):
+            try:
+                n = int(name[len(prefix):])
+                if n > max_num:
+                    max_num = n
+            except ValueError:
+                continue
+    if max_num < 0:
+        return None
+    return os.path.join(base_output_dir, f"train20_{max_num}")
 
 
 def load_expected_body_from_train_dir(train_dir, user_id_str, news_id_str):
@@ -1334,6 +1363,119 @@ if FINETUNE_USER_ENCODER:
     print("유저 인코더 파인튜닝 완료. 프로그램을 종료합니다.")
     sys.exit(0)
 
+# ========== 뉴스 인코더만 파인튜닝 (유저 쪽 attention 등 고정, 트레이닝 뒤 20% + 기대본문) ==========
+if FINETUNE_NEWS_ENCODER:
+    import sys
+    if not os.path.exists(PRETRAINED_MODEL_PATH):
+        print(f"오류: 프리트레이닝 모델을 찾을 수 없습니다: {PRETRAINED_MODEL_PATH}")
+        sys.exit(1)
+    body_gen_output = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
+    finetune_body_dir = os.path.join(body_gen_output, FINETUNE_EXPECTED_BODY_DIR)
+    if not os.path.isdir(finetune_body_dir):
+        print(f"오류: 기대본문 폴더를 찾을 수 없습니다: {finetune_body_dir}")
+        sys.exit(1)
+    print(f"\n{'='*60}")
+    print("뉴스 인코더만 파인튜닝 (유저 쪽 attention 등 고정)")
+    print(f"{'='*60}")
+    print(f"모델 로드: {PRETRAINED_MODEL_PATH}")
+    model.load_weights(PRETRAINED_MODEL_PATH, by_name=True, skip_mismatch=True)
+    # 유저 쪽 고정: 전체 레이어 비학습 후 newsEncoder 레이어만 학습
+    for layer in model.layers:
+        layer.trainable = False
+    for layer in newsEncoder.layers:
+        layer.trainable = True
+    model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=FINETUNE_LR), metrics=['acc'])
+    print("기대본문 로드:", finetune_body_dir)
+    expected_bodies_finetune = load_expected_bodies_from_train_dir(finetune_body_dir)
+    print(f"로드된 기대 본문: {len(expected_bodies_finetune)}개")
+    pretrain_size = int(len(all_train_id) * 0.8)
+    last20_size = len(all_train_id) - pretrain_size
+    train20_pn = all_train_pn[pretrain_size:]
+    train20_label = all_label[pretrain_size:]
+    train20_id = all_train_id[pretrain_size:]
+    train20_user_pos = all_user_pos[pretrain_size:]
+    train20_userid_str = all_train_userid_str[pretrain_size:] if all_train_userid_str is not None else None
+    train20_newsid_str = all_train_newsid_str[pretrain_size:] if all_train_newsid_str is not None else None
+    print(f"트레이닝 뒤 20% 샘플 수: {last20_size}개")
+    finetune_gen = generate_batch_data_train(
+        train20_pn, train20_label, train20_id, 30,
+        candidate_news_body=None,
+        expected_bodies=expected_bodies_finetune,
+        all_userid_str=train20_userid_str,
+        all_newsid_str=train20_newsid_str,
+        news_index_reverse=news_index_reverse
+    )
+    steps_per_epoch = (last20_size + 29) // 30
+    test_body_dir = os.path.join(body_gen_output, FINETUNE_TESTSET_EXPECTED_BODY_DIR)
+    expected_bodies_test_finetune = None
+    if os.path.isdir(test_body_dir):
+        expected_bodies_test_finetune = load_expected_bodies_from_train_dir(test_body_dir)
+        print(f"테스트셋 기대본문 로드: {FINETUNE_TESTSET_EXPECTED_BODY_DIR} ({len(expected_bodies_test_finetune)}개)")
+    else:
+        print(f"경고: 테스트셋 기대본문 폴더 없음 ({test_body_dir}). 기대본문 NDCG 기준 저장 불가, 마지막 에폭만 저장합니다.")
+
+    def _eval_testset_news(use_expected_body, expected_bodies=None):
+        if use_expected_body and (expected_bodies is None or all_test_userid_str is None or all_test_newsid_str is None):
+            return None
+        testgen = generate_batch_data_test(
+            all_test_pn, all_test_label, all_test_id, 30,
+            candidate_news_body=None,
+            expected_bodies=expected_bodies,
+            all_userid_str=all_test_userid_str,
+            all_newsid_str=all_test_newsid_str,
+            news_index_reverse=news_index_reverse
+        )
+        click_score = model_test.predict(testgen, steps=len(all_test_id), verbose=0)
+        eps = 1e-7
+        all_ndcg, all_mrr, all_hit1, all_loss = [], [], [], []
+        for m in all_test_index:
+            s, e = m[0], m[1]
+            if e > len(click_score):
+                continue
+            labels = all_test_label[s:e]
+            if np.sum(labels) == 0:
+                continue
+            scores = click_score[s:e, 0]
+            all_ndcg.append(ndcg_score(labels, scores, k=5))
+            all_mrr.append(mrr_score(labels, scores))
+            all_hit1.append(hit_at_k(labels, scores, k=1))
+            labels_f = labels.astype(np.float32)
+            scores_clip = np.clip(scores, eps, 1 - eps)
+            all_loss.append(-np.mean(labels_f * np.log(scores_clip) + (1 - labels_f) * np.log(1 - scores_clip)))
+        if not all_ndcg:
+            return None
+        return {'NDCG@5': np.mean(all_ndcg), 'MRR': np.mean(all_mrr), 'Hit@1': np.mean(all_hit1), 'Loss': np.mean(all_loss)}
+
+    print(f"파인튜닝 에폭 수: {FINETUNE_EPOCHS}, steps_per_epoch: {steps_per_epoch}")
+    print("매 에폭 테스트셋 평가(실제/기대 본문) 후 기대본문 NDCG@5 최고 모델 저장")
+    print(f"{'='*60}\n")
+    best_ndcg_expected = -1.0
+    best_epoch = -1
+    for epoch in range(FINETUNE_EPOCHS):
+        model.fit(finetune_gen, epochs=1, steps_per_epoch=steps_per_epoch, verbose=1)
+        res_actual = _eval_testset_news(use_expected_body=False)
+        res_expected = _eval_testset_news(use_expected_body=True, expected_bodies=expected_bodies_test_finetune) if expected_bodies_test_finetune else None
+        print(f"\n[에폭 {epoch+1}/{FINETUNE_EPOCHS}] 테스트셋 — 실제본문: NDCG@5={res_actual['NDCG@5']:.4f}, MRR={res_actual['MRR']:.4f}, Hit@1={res_actual['Hit@1']:.4f}, Loss={res_actual['Loss']:.4f}")
+        if res_expected is not None:
+            print(f"                테스트셋 — 기대본문: NDCG@5={res_expected['NDCG@5']:.4f}, MRR={res_expected['MRR']:.4f}, Hit@1={res_expected['Hit@1']:.4f}, Loss={res_expected['Loss']:.4f}")
+            if res_expected['NDCG@5'] > best_ndcg_expected and FINETUNE_NEWS_ENCODER_SAVE_PATH:
+                best_ndcg_expected = res_expected['NDCG@5']
+                best_epoch = epoch + 1
+                os.makedirs(os.path.dirname(FINETUNE_NEWS_ENCODER_SAVE_PATH) or '.', exist_ok=True)
+                model.save_weights(FINETUNE_NEWS_ENCODER_SAVE_PATH)
+                print(f"                → 기대본문 NDCG@5 최고 갱신 ({best_ndcg_expected:.4f}), 모델 저장: {FINETUNE_NEWS_ENCODER_SAVE_PATH}")
+        else:
+            if res_actual['NDCG@5'] > best_ndcg_expected and FINETUNE_NEWS_ENCODER_SAVE_PATH and expected_bodies_test_finetune is None:
+                best_ndcg_expected = res_actual['NDCG@5']
+                best_epoch = epoch + 1
+                os.makedirs(os.path.dirname(FINETUNE_NEWS_ENCODER_SAVE_PATH) or '.', exist_ok=True)
+                model.save_weights(FINETUNE_NEWS_ENCODER_SAVE_PATH)
+                print(f"                → (기대본문 없음) 실제본문 NDCG@5 기준 저장")
+    if FINETUNE_NEWS_ENCODER_SAVE_PATH and best_epoch >= 0:
+        print(f"\n기대본문 NDCG@5 최고 모델: 에폭 {best_epoch}, NDCG@5={best_ndcg_expected:.4f} — {FINETUNE_NEWS_ENCODER_SAVE_PATH}")
+    print("뉴스 인코더 파인튜닝 완료. 프로그램을 종료합니다.")
+    sys.exit(0)
+
 # ========== 모델 전체 파인튜닝 (유저+뉴스 인코더 모두 학습, 트레이닝 뒤 20% + 기대본문) ==========
 if FINETUNE_FULL_MODEL:
     import sys
@@ -1973,6 +2115,139 @@ if EVAL_PRETRAINED_ON_TRAIN80:
         json.dump(payload, f, ensure_ascii=False, indent=2)
     print(f"결과 저장: {out_path}")
     
+    sys.exit(0)
+
+# ========== 프리트레이닝 모델 로드 후 트레이닝 후반 20% 평가 (실제본문 / 기대본문 각각) ==========
+if EVAL_PRETRAINED_ON_TRAIN20:
+    import sys
+    if not os.path.exists(PRETRAINED_MODEL_PATH):
+        print(f"오류: 프리트레이닝 모델을 찾을 수 없습니다: {PRETRAINED_MODEL_PATH}")
+        sys.exit(1)
+    print(f"\n{'='*60}")
+    print(f"프리트레이닝 모델 로드: {PRETRAINED_MODEL_PATH}")
+    print(f"{'='*60}")
+    model.load_weights(PRETRAINED_MODEL_PATH, by_name=True, skip_mismatch=True)
+    print("모델 로드 완료.")
+    body_gen_output = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
+    if EVAL_TRAIN20_EXPECTED_BODY_DIR:
+        latest_train20_dir = os.path.join(body_gen_output, EVAL_TRAIN20_EXPECTED_BODY_DIR)
+        if not os.path.isdir(latest_train20_dir):
+            print(f"오류: 기대본문 폴더가 없습니다: {latest_train20_dir}")
+            sys.exit(1)
+    else:
+        latest_train20_dir = get_latest_train20_folder(body_gen_output)
+    ref_folder_name = os.path.basename(latest_train20_dir) if latest_train20_dir else '(train20_N 없음)'
+    print(f"모델 경로: {PRETRAINED_MODEL_PATH}")
+    print(f"기대 본문 참조 폴더: {ref_folder_name}")
+
+    pretrain_size = int(len(all_train_id) * 0.8)
+    last20_size = len(all_train_id) - pretrain_size
+    train20_test_pn = []
+    train20_test_label = []
+    train20_test_id = []
+    train20_test_user_pos = []
+    train20_test_index = []
+    train20_test_userid_str = []
+    train20_test_newsid_str = []
+    for i in range(pretrain_size, len(all_train_id)):
+        start = len(train20_test_pn)
+        pn_row = all_train_pn[i]
+        label_row = all_label[i]
+        n_cand = len(pn_row) if hasattr(pn_row, '__len__') else 5
+        for j in range(n_cand):
+            train20_test_pn.append(int(pn_row[j]) if hasattr(pn_row[j], '__int__') else pn_row[j])
+            train20_test_label.append(int(label_row[j]) if hasattr(label_row[j], '__int__') else label_row[j])
+            train20_test_id.append(all_train_id[i])
+            train20_test_user_pos.append(all_user_pos[i])
+        if all_train_userid_str is not None and all_train_newsid_str is not None:
+            for j in range(n_cand):
+                train20_test_userid_str.append(all_train_userid_str[i])
+                train20_test_newsid_str.append(all_train_newsid_str[i][j] if j < len(all_train_newsid_str[i]) else '')
+        train20_test_index.append([start, len(train20_test_pn)])
+    train20_test_pn = np.array(train20_test_pn, dtype='int32')
+    train20_test_label = np.array(train20_test_label, dtype='int32')
+    train20_test_id = np.array(train20_test_id, dtype='int32')
+    train20_test_user_pos = np.array(train20_test_user_pos, dtype='int32')
+
+    def eval_train20_run(use_expected_body, expected_bodies=None, all_userid_str=None, all_newsid_str=None):
+        if use_expected_body and (expected_bodies is None or all_userid_str is None or all_newsid_str is None):
+            return None, None, None
+        testgen = generate_batch_data_test(
+            train20_test_pn, train20_test_label, train20_test_id, 30,
+            candidate_news_body=None,
+            expected_bodies=expected_bodies,
+            all_userid_str=all_userid_str,
+            all_newsid_str=all_newsid_str,
+            news_index_reverse=news_index_reverse,
+            all_test_user_pos_override=train20_test_user_pos
+        )
+        steps = len(train20_test_id)
+        click_score = model_test.predict(testgen, steps=steps, verbose=0)
+        eps = 1e-7
+        all_session_loss = []
+        all_session_ndcg = []
+        for m in train20_test_index:
+            s, e = m[0], m[1]
+            if e > len(click_score):
+                all_session_loss.append(None)
+                all_session_ndcg.append(None)
+                continue
+            labels = train20_test_label[s:e].astype(np.float32)
+            if np.sum(labels) == 0:
+                all_session_loss.append(None)
+                all_session_ndcg.append(None)
+                continue
+            scores = np.clip(click_score[s:e, 0], eps, 1 - eps)
+            session_bce = -np.mean(labels * np.log(scores) + (1 - labels) * np.log(1 - scores))
+            all_session_loss.append(float(session_bce))
+            all_session_ndcg.append(ndcg_score(train20_test_label[s:e], click_score[s:e, 0], k=5))
+        valid_loss = [x for x in all_session_loss if x is not None]
+        if not valid_loss:
+            return None, None, None
+        return all_session_loss, all_session_ndcg, click_score
+
+    lines = []
+    def add(s=""):
+        lines.append(s)
+        print(s)
+    add(f"\n트레이닝셋 후반 20% 평가 (샘플 수: {last20_size}, 테스트 행: {len(train20_test_id)})")
+    add(f"{'='*60}")
+    add(f"모델 경로: {PRETRAINED_MODEL_PATH}")
+    add(f"기대 본문 참조 폴더: {ref_folder_name}")
+    add("\n[1] 실제 본문 사용:")
+    loss_actual_list, ndcg_actual_list, click_actual = eval_train20_run(use_expected_body=False)
+    if loss_actual_list is not None:
+        valid = [x for x in loss_actual_list if x is not None]
+        add(f"  Loss     : {np.mean(valid):.6f}  (유저당 BCE 평균)")
+        add(f"  NDCG@5   : {np.mean([x for x in ndcg_actual_list if x is not None]):.6f}")
+    else:
+        add("  평가 가능한 세션 없음")
+    add("\n[2] 기대 본문 사용:")
+    if latest_train20_dir:
+        add(f"  기대 본문 로드: {os.path.basename(latest_train20_dir)} 폴더 참조")
+        expected_bodies_train20_eval = load_expected_bodies_from_train_dir(latest_train20_dir)
+        add(f"  로드된 기대 본문: {len(expected_bodies_train20_eval)}개")
+    else:
+        expected_bodies_train20_eval = None
+        add("  기대 본문 폴더 없음 (train20_0, train20_1, ... 중 하나 생성 후 다시 실행)")
+    if latest_train20_dir and expected_bodies_train20_eval is not None:
+        loss_expected_list, ndcg_expected_list, click_expected = eval_train20_run(
+            use_expected_body=True,
+            expected_bodies=expected_bodies_train20_eval,
+            all_userid_str=train20_test_userid_str,
+            all_newsid_str=train20_test_newsid_str
+        )
+    else:
+        loss_expected_list, ndcg_expected_list, click_expected = None, None, None
+    if loss_expected_list is not None:
+        valid = [x for x in loss_expected_list if x is not None]
+        add(f"  Loss     : {np.mean(valid):.6f}  (유저당 BCE 평균)")
+        add(f"  NDCG@5   : {np.mean([x for x in ndcg_expected_list if x is not None]):.6f}")
+    else:
+        add("  [건너뜀] 기대본문 데이터 없음")
+    add(f"\n{'='*60}")
+    add("프리트레이닝 모델 - 트레이닝 후반 20% 평가 완료. 프로그램을 종료합니다.")
+    add(f"{'='*60}\n")
     sys.exit(0)
 
 # ========== 프리트레이닝 모델 로드 후 테스트셋만 평가 (실제본문 / 기대본문 각각) ==========
