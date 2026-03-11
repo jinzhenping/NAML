@@ -40,7 +40,9 @@ EVAL_PRETRAINED_ON_TRAIN20 = False  # True: 프리트레이닝 모델 로드 후
 EVAL_TRAIN20_EXPECTED_BODY_DIR = 'train_20'  # 트레이닝 후반 20% 평가 시 기대본문 폴더 (예: 'train20_0'). None이면 train20_N 중 가장 큰 N 사용
 EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
 EVAL_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 테스트셋 기대본문 폴더 (body_generation/output 아래). 예: 'test', 'test_0', 'test_1'
+EVAL_TESTSET_EXPECTED_BODY_DIR_2 = None  # 두 번째 기대본문 폴더 (None이면 사용 안 함). 설정 시 매 에폭 두 버전 모두 평가
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
+MAIN_TRAINING_EPOCHS = 20  # 메인 학습 루프 에폭 수
 
 FINETUNE_USER_ENCODER = False  # True: 프리트레이닝 모델 로드 후 유저 인코더만 파인튜닝 (뉴스 인코더 고정)
 FINETUNE_NEWS_ENCODER = False  # True: 프리트레이닝 모델 로드 후 뉴스 인코더만 파인튜닝 (유저 쪽 attention 등 고정)
@@ -2455,12 +2457,38 @@ if EVAL_PRETRAINED_ON_TESTSET:
 # ========== 메인 학습 루프 ==========
 # 매 에폭 테스트셋 기대본문 평가용 (EVAL_TESTSET_EXPECTED_BODY_DIR 폴더)
 body_gen_output_main = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
+need_keys_test = set()
+if all_test_userid_str is not None and all_test_newsid_str is not None:
+    for i in range(len(all_test_userid_str)):
+        u = all_test_userid_str[i]
+        n = all_test_newsid_str[i] if i < len(all_test_newsid_str) else ''
+        need_keys_test.add(_norm_expected_body_key(u, n))
+    need_keys_test.discard(('', ''))
 test_body_dir_main = os.path.join(body_gen_output_main, EVAL_TESTSET_EXPECTED_BODY_DIR)
 expected_bodies_main_test = load_expected_bodies_from_train_dir(test_body_dir_main) if os.path.isdir(test_body_dir_main) else None
 if expected_bodies_main_test is not None:
-    print(f"메인 학습: 매 에폭 테스트셋 기대본문 평가 시 {EVAL_TESTSET_EXPECTED_BODY_DIR} 사용 ({len(expected_bodies_main_test)}개)\n")
+    print(f"메인 학습: 매 에폭 테스트셋 기대본문 평가 시 {EVAL_TESTSET_EXPECTED_BODY_DIR} 사용 ({len(expected_bodies_main_test)}개)")
+    if need_keys_test:
+        matched_test = sum(1 for k in need_keys_test if k in expected_bodies_main_test)
+        pct = 100.0 * matched_test / len(need_keys_test)
+        print(f"테스트셋 기대본문 매칭: 필요 키 {len(need_keys_test)}개 중 기대본문 존재 {matched_test}개 ({pct:.1f}%)")
+    print()
+# 두 번째 기대본문 폴더 (EVAL_TESTSET_EXPECTED_BODY_DIR_2)
+expected_bodies_main_test_2 = None
+if EVAL_TESTSET_EXPECTED_BODY_DIR_2:
+    test_body_dir_main_2 = os.path.join(body_gen_output_main, EVAL_TESTSET_EXPECTED_BODY_DIR_2)
+    if os.path.isdir(test_body_dir_main_2):
+        expected_bodies_main_test_2 = load_expected_bodies_from_train_dir(test_body_dir_main_2)
+        print(f"메인 학습: 매 에폭 테스트셋 기대본문(2) 평가 시 {EVAL_TESTSET_EXPECTED_BODY_DIR_2} 사용 ({len(expected_bodies_main_test_2)}개)")
+        if need_keys_test:
+            matched_test_2 = sum(1 for k in need_keys_test if k in expected_bodies_main_test_2)
+            pct_2 = 100.0 * matched_test_2 / len(need_keys_test)
+            print(f"테스트셋 기대본문(2) 매칭: 필요 키 {len(need_keys_test)}개 중 기대본문 존재 {matched_test_2}개 ({pct_2:.1f}%)")
+        print()
+    else:
+        print(f"경고: 두 번째 기대본문 폴더 없음 ({test_body_dir_main_2}), 기대본문(2) 평가 생략\n")
 
-for ep in range(10):
+for ep in range(MAIN_TRAINING_EPOCHS):
     np.random.seed(SEED + ep)
     random.seed(SEED + ep)
     
@@ -2602,14 +2630,43 @@ for ep in range(10):
                 'NDCG@5': np.mean(all_ndcg_exp),
                 'Hit@1': np.mean(all_hit1_exp)
             }
-    
+    # [3] 테스트셋 기대본문(2)(EVAL_TESTSET_EXPECTED_BODY_DIR_2)으로 평가
+    epoch_results_expected_2 = None
+    if expected_bodies_main_test_2 is not None:
+        testgen_expected_2 = generate_batch_data_test(
+            all_test_pn, all_test_label, all_test_id, 30,
+            candidate_news_body=None,
+            expected_bodies=expected_bodies_main_test_2,
+            all_userid_str=all_test_userid_str,
+            all_newsid_str=all_test_newsid_str,
+            news_index_reverse=news_index_reverse
+        )
+        click_score_exp_2 = model_test.predict(testgen_expected_2, steps=test_steps, verbose=0)
+        all_mrr_exp_2, all_ndcg_exp_2, all_hit1_exp_2 = [], [], []
+        for i in range(len(all_test_index)):
+            start, end = all_test_index[i]
+            session_scores = click_score_exp_2[start:end].flatten()
+            session_labels = all_test_label[start:end]
+            if np.sum(session_labels) == 0:
+                continue
+            all_mrr_exp_2.append(mrr_score(session_labels, session_scores))
+            all_ndcg_exp_2.append(ndcg_score(session_labels, session_scores, k=5))
+            all_hit1_exp_2.append(hit_at_k(session_labels, session_scores, k=1))
+        if all_mrr_exp_2:
+            epoch_results_expected_2 = {
+                'MRR': np.mean(all_mrr_exp_2),
+                'NDCG@5': np.mean(all_ndcg_exp_2),
+                'Hit@1': np.mean(all_hit1_exp_2)
+            }
     current_lr = model.optimizer.learning_rate.numpy() if hasattr(model.optimizer.learning_rate, 'numpy') else model.optimizer.learning_rate
     print(f"\n{'='*60}")
-    print(f"Epoch {ep+1}/10 - Test Results (LR: {current_lr:.6f})")
+    print(f"Epoch {ep+1}/{MAIN_TRAINING_EPOCHS} - Test Results (LR: {current_lr:.6f})")
     print(f"{'='*60}")
     print(f"[실제본문] MRR: {epoch_results['MRR']:.6f}  NDCG@5: {epoch_results['NDCG@5']:.6f}  Hit@1: {epoch_results['Hit@1']:.6f}")
     if epoch_results_expected is not None:
         print(f"[기대본문({EVAL_TESTSET_EXPECTED_BODY_DIR})] MRR: {epoch_results_expected['MRR']:.6f}  NDCG@5: {epoch_results_expected['NDCG@5']:.6f}  Hit@1: {epoch_results_expected['Hit@1']:.6f}")
+    if epoch_results_expected_2 is not None:
+        print(f"[기대본문(2)({EVAL_TESTSET_EXPECTED_BODY_DIR_2})] MRR: {epoch_results_expected_2['MRR']:.6f}  NDCG@5: {epoch_results_expected_2['NDCG@5']:.6f}  Hit@1: {epoch_results_expected_2['Hit@1']:.6f}")
     print(f"{'='*60}\n")
 
 # 전체 결과 요약
