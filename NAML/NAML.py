@@ -47,9 +47,10 @@ MAIN_TRAINING_EPOCHS = 20  # 메인 학습 루프 에폭 수
 # 트레이닝 후반 20%만 사용해 처음부터 학습 후 테스트셋 실제/기대본문 각각 평가 (메인 학습 루프 대신 실행)
 TRAIN_ON_TRAIN20_FROM_SCRATCH = False  # True: 트레이닝 후반 20%만 사용, 처음부터 학습
 TRAIN_ON_TRAIN20_USE_EXPECTED_BODY = False  # True: 학습 시 기대본문 사용, False: 실제본문 사용
-TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR = 'train_last20'  # 기대본문 사용 시 폴더 (body_generation/output 아래)
+TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR = 'train_last20'  # 기대본문으로 학습 시 폴더 (body_generation/output 아래)
 TRAIN_ON_TRAIN20_EPOCHS = 20  # 학습 에폭 수
-TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 학습 종료 후 테스트셋 기대본문 평가용 폴더
+TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 매 에폭 테스트셋 기대본문 평가용 폴더
+TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR_2 = None  # 두 번째 기대본문 폴더 (None이면 사용 안 함). 설정 시 매 에폭 두 버전 모두 평가
 
 FINETUNE_USER_ENCODER = False  # True: 프리트레이닝 모델 로드 후 유저 인코더만 파인튜닝 (뉴스 인코더 고정)
 FINETUNE_NEWS_ENCODER = False  # True: 프리트레이닝 모델 로드 후 뉴스 인코더만 파인튜닝 (유저 쪽 attention 등 고정)
@@ -2533,7 +2534,14 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
     expected_bodies_test_t20 = None
     if os.path.isdir(test_exp_dir_t20):
         expected_bodies_test_t20 = load_expected_bodies_from_train_dir(test_exp_dir_t20)
-        print(f"매 에폭 테스트셋 기대본문 평가: {TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR} ({len(expected_bodies_test_t20)}개)\n")
+        print(f"매 에폭 테스트셋 기대본문 평가: {TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR} ({len(expected_bodies_test_t20)}개)")
+    expected_bodies_test_t20_2 = None
+    if TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR_2:
+        test_exp_dir_t20_2 = os.path.join(body_gen_output_main, TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR_2)
+        if os.path.isdir(test_exp_dir_t20_2):
+            expected_bodies_test_t20_2 = load_expected_bodies_from_train_dir(test_exp_dir_t20_2)
+            print(f"매 에폭 테스트셋 기대본문(2) 평가: {TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR_2} ({len(expected_bodies_test_t20_2)}개)")
+    print()
     for ep in range(TRAIN_ON_TRAIN20_EPOCHS):
         np.random.seed(SEED + ep)
         random.seed(SEED + ep)
@@ -2576,6 +2584,27 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
                 print(f"[기대본문({TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR})] MRR: {np.mean(all_mrr_e):.6f}  NDCG@5: {np.mean(all_ndcg_e):.6f}  Hit@1: {np.mean(all_hit1_e):.6f}")
         else:
             print(f"[기대본문] 폴더 없음 ({test_exp_dir_t20}), 평가 생략")
+        # 매 에폭 테스트셋 기대본문(2) 평가
+        if expected_bodies_test_t20_2 is not None:
+            testgen_exp_t20_2 = generate_batch_data_test(
+                all_test_pn, all_test_label, all_test_id, 30,
+                candidate_news_body=None,
+                expected_bodies=expected_bodies_test_t20_2,
+                all_userid_str=all_test_userid_str,
+                all_newsid_str=all_test_newsid_str,
+                news_index_reverse=news_index_reverse
+            )
+            click_exp_t20_2 = model_test.predict(testgen_exp_t20_2, steps=test_steps_t20, verbose=0)
+            all_mrr_e2, all_ndcg_e2, all_hit1_e2 = [], [], []
+            for m in all_test_index:
+                if m[1] <= len(click_exp_t20_2) and np.sum(all_test_label[m[0]:m[1]]) != 0:
+                    session_scores = click_exp_t20_2[m[0]:m[1], 0]
+                    session_labels = all_test_label[m[0]:m[1]]
+                    all_mrr_e2.append(mrr_score(session_labels, session_scores))
+                    all_ndcg_e2.append(ndcg_score(session_labels, session_scores, k=5))
+                    all_hit1_e2.append(hit_at_k(session_labels, session_scores, k=1))
+            if all_mrr_e2:
+                print(f"[기대본문(2)({TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR_2})] MRR: {np.mean(all_mrr_e2):.6f}  NDCG@5: {np.mean(all_ndcg_e2):.6f}  Hit@1: {np.mean(all_hit1_e2):.6f}")
         print(f"{'='*60}\n")
 
 else:
