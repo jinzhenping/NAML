@@ -44,6 +44,13 @@ EVAL_TESTSET_EXPECTED_BODY_DIR_2 = None  # 두 번째 기대본문 폴더 (None�
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
 MAIN_TRAINING_EPOCHS = 20  # 메인 학습 루프 에폭 수
 
+# 트레이닝 후반 20%만 사용해 처음부터 학습 후 테스트셋 실제/기대본문 각각 평가 (메인 학습 루프 대신 실행)
+TRAIN_ON_TRAIN20_FROM_SCRATCH = False  # True: 트레이닝 후반 20%만 사용, 처음부터 학습
+TRAIN_ON_TRAIN20_USE_EXPECTED_BODY = False  # True: 학습 시 기대본문 사용, False: 실제본문 사용
+TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR = 'train_last20'  # 기대본문 사용 시 폴더 (body_generation/output 아래)
+TRAIN_ON_TRAIN20_EPOCHS = 20  # 학습 에폭 수
+TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 학습 종료 후 테스트셋 기대본문 평가용 폴더
+
 FINETUNE_USER_ENCODER = False  # True: 프리트레이닝 모델 로드 후 유저 인코더만 파인튜닝 (뉴스 인코더 고정)
 FINETUNE_NEWS_ENCODER = False  # True: 프리트레이닝 모델 로드 후 뉴스 인코더만 파인튜닝 (유저 쪽 attention 등 고정)
 FINETUNE_FULL_MODEL = False  # True: 프리트레이닝 모델 로드 후 모델 전체 파인튜닝 (유저+뉴스 인코더 모두 학습)
@@ -2488,203 +2495,287 @@ if EVAL_TESTSET_EXPECTED_BODY_DIR_2:
     else:
         print(f"경고: 두 번째 기대본문 폴더 없음 ({test_body_dir_main_2}), 기대본문(2) 평가 생략\n")
 
-for ep in range(MAIN_TRAINING_EPOCHS):
-    np.random.seed(SEED + ep)
-    random.seed(SEED + ep)
-    
-    if USE_EXPECTED_BODY:
-        # 유저별 기대본문 사용
-        traingen=generate_batch_data_train(
-            all_train_pn, all_label, all_train_id, 30, 
-            candidate_news_body=None,
-            expected_bodies=expected_bodies_train,
-            all_userid_str=all_train_userid_str,
-            all_newsid_str=all_train_newsid_str,
-            news_index_reverse=news_index_reverse
-        )
-    else:
-        # 원본 본문 사용
-        traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30, candidate_news_body=None)
-
-    actual_train_samples = len(all_train_id)
-    steps_per_epoch = (actual_train_samples + 29) // 30
-    model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch)
-    
-    actual_test_samples = len(all_test_id)
-    test_steps = actual_test_samples
-
-    # [1] 테스트셋 실제본문으로 평가
-    testgen_actual = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, 30, candidate_news_body=None)
-    click_score = model_test.predict(testgen_actual, steps=test_steps, verbose=1)
-    # print(f"[디버깅] 실제 생성된 click_score 수: {len(click_score)}")
-    
-    # click_score가 실제 샘플 수와 일치하는지 확인 (디버깅용, 필요 시 주석 해제)
-    # if len(click_score) != actual_test_samples:
-    #     print(f"[경고] click_score({len(click_score)})가 실제 샘플 수({actual_test_samples})와 일치하지 않습니다!")
-    #     print(f"[경고] 차이: {actual_test_samples - len(click_score)}개 샘플이 누락되었습니다.")
-
-    all_mrr=[]
-    all_ndcg=[]
-    all_hit1=[]
-    
-    # # click_score 디버깅 출력
-    # print(f"\n[디버깅] click_score 형태: {click_score.shape}")
-    # print(f"[디버깅] 전체 click_score 통계:")
-    # print(f"  - 최소값: {np.min(click_score):.6f}")
-    # print(f"  - 최대값: {np.max(click_score):.6f}")
-    # print(f"  - 평균값: {np.mean(click_score):.6f}")
-    # print(f"  - 표준편차: {np.std(click_score):.6f}")
-    # print(f"[디버깅] 실제 샘플 수: {len(all_test_id)}")
-    # print(f"[디버깅] all_test_index에 저장된 세션 수: {len(all_test_index)}")
-    
-    session_count = 0
-    excluded_no_label = 0  # 정답이 없는 세션
-    excluded_out_of_range = 0  # click_score 범위를 벗어난 세션
-    total_sessions = len(all_test_index)
-
-    # 범위를 벗어난 세션의 예시 출력
-    out_of_range_examples = []
-    
-    for m in all_test_index:
-        # 제외 이유 확인
-        has_label = np.sum(all_test_label[m[0]:m[1]]) != 0
-        in_range = m[1] <= len(click_score)
-        
-        if not has_label:
-            excluded_no_label += 1
-        if not in_range:
-            excluded_out_of_range += 1
-            if len(out_of_range_examples) < 3:
-                out_of_range_examples.append((m[0], m[1], len(click_score)))
-        
-        if has_label and in_range:
-            session_scores = click_score[m[0]:m[1],0]
-            session_labels = all_test_label[m[0]:m[1]]
-            
-            # # 처음 5개 세션만 상세 출력
-            # if session_count < 5:
-            #     print(f"\n[디버깅] 세션 {session_count + 1}:")
-            #     print(f"  - 인덱스 범위: [{m[0]}, {m[1]})")
-            #     print(f"  - 점수: {session_scores}")
-            #     print(f"  - 레이블: {session_labels}")
-            #     print(f"  - 정답 위치: {np.where(session_labels == 1)[0]}")
-            #     sorted_indices = np.argsort(session_scores)[::-1]
-            #     print(f"  - 정렬된 인덱스 (내림차순): {sorted_indices}")
-            #     print(f"  - 1위 인덱스: {sorted_indices[0]}, 점수: {session_scores[sorted_indices[0]]:.6f}")
-            #     hit1_val = hit_at_k(session_labels, session_scores, k=1)
-            #     print(f"  - Hit@1: {hit1_val}")
-            
-            all_mrr.append(mrr_score(session_labels, session_scores))
-            all_ndcg.append(ndcg_score(session_labels, session_scores, k=5))
-            all_hit1.append(hit_at_k(session_labels, session_scores, k=1))
-            session_count += 1
-    
-    # # 디버깅용 세션 통계 출력
-    # print(f"\n[디버깅] 세션 통계:")
-    # print(f"  - all_test_index에 저장된 총 세션 수: {total_sessions}")
-    # print(f"  - 실제 샘플 수 (all_test_id): {len(all_test_id)}")
-    # print(f"  - click_score 샘플 수: {len(click_score)}")
-    # print(f"  - 평가된 세션 수: {session_count}")
-    # print(f"  - 제외된 세션 수: {total_sessions - session_count}")
-    # print(f"    * 정답 없음: {excluded_no_label}개")
-    # print(f"    * click_score 범위 벗어남: {excluded_out_of_range}개")
-    # if out_of_range_examples:
-    #     print(f"\n[디버깅] 범위 벗어난 세션 예시:")
-    #     for start, end, max_idx in out_of_range_examples:
-    #         print(f"    - 인덱스 [{start}, {end}), click_score 길이: {max_idx}, 초과: {end - max_idx}")
-    # print(f"  - Hit@1 값 분포: 0={sum(1 for x in all_hit1 if x == 0)}, 1={sum(1 for x in all_hit1 if x == 1)}")
-    
-    # 결과 저장
-    epoch_results = {
-        'MRR': np.mean(all_mrr),
-        'NDCG@5': np.mean(all_ndcg),
-        'Hit@1': np.mean(all_hit1)
-    }
-    results.append([epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['Hit@1']])
-    
-    # [2] 테스트셋 기대본문(EVAL_TESTSET_EXPECTED_BODY_DIR)으로 평가
-    epoch_results_expected = None
-    if expected_bodies_main_test is not None:
-        testgen_expected = generate_batch_data_test(
-            all_test_pn, all_test_label, all_test_id, 30,
-            candidate_news_body=None,
-            expected_bodies=expected_bodies_main_test,
-            all_userid_str=all_test_userid_str,
-            all_newsid_str=all_test_newsid_str,
-            news_index_reverse=news_index_reverse
-        )
-        click_score_exp = model_test.predict(testgen_expected, steps=test_steps, verbose=0)
-        all_mrr_exp, all_ndcg_exp, all_hit1_exp = [], [], []
-        for i in range(len(all_test_index)):
-            start, end = all_test_index[i]
-            session_scores = click_score_exp[start:end].flatten()
-            session_labels = all_test_label[start:end]
-            if np.sum(session_labels) == 0:
-                continue
-            all_mrr_exp.append(mrr_score(session_labels, session_scores))
-            all_ndcg_exp.append(ndcg_score(session_labels, session_scores, k=5))
-            all_hit1_exp.append(hit_at_k(session_labels, session_scores, k=1))
-        if all_mrr_exp:
-            epoch_results_expected = {
-                'MRR': np.mean(all_mrr_exp),
-                'NDCG@5': np.mean(all_ndcg_exp),
-                'Hit@1': np.mean(all_hit1_exp)
-            }
-    # [3] 테스트셋 기대본문(2)(EVAL_TESTSET_EXPECTED_BODY_DIR_2)으로 평가
-    epoch_results_expected_2 = None
-    if expected_bodies_main_test_2 is not None:
-        testgen_expected_2 = generate_batch_data_test(
-            all_test_pn, all_test_label, all_test_id, 30,
-            candidate_news_body=None,
-            expected_bodies=expected_bodies_main_test_2,
-            all_userid_str=all_test_userid_str,
-            all_newsid_str=all_test_newsid_str,
-            news_index_reverse=news_index_reverse
-        )
-        click_score_exp_2 = model_test.predict(testgen_expected_2, steps=test_steps, verbose=0)
-        all_mrr_exp_2, all_ndcg_exp_2, all_hit1_exp_2 = [], [], []
-        for i in range(len(all_test_index)):
-            start, end = all_test_index[i]
-            session_scores = click_score_exp_2[start:end].flatten()
-            session_labels = all_test_label[start:end]
-            if np.sum(session_labels) == 0:
-                continue
-            all_mrr_exp_2.append(mrr_score(session_labels, session_scores))
-            all_ndcg_exp_2.append(ndcg_score(session_labels, session_scores, k=5))
-            all_hit1_exp_2.append(hit_at_k(session_labels, session_scores, k=1))
-        if all_mrr_exp_2:
-            epoch_results_expected_2 = {
-                'MRR': np.mean(all_mrr_exp_2),
-                'NDCG@5': np.mean(all_ndcg_exp_2),
-                'Hit@1': np.mean(all_hit1_exp_2)
-            }
-    current_lr = model.optimizer.learning_rate.numpy() if hasattr(model.optimizer.learning_rate, 'numpy') else model.optimizer.learning_rate
+# ========== 트레이닝 후반 20%만 사용해 처음부터 학습 (실제본문 또는 기대본문) 후 테스트셋 실제/기대본문 각각 평가 ==========
+if TRAIN_ON_TRAIN20_FROM_SCRATCH:
     print(f"\n{'='*60}")
-    print(f"Epoch {ep+1}/{MAIN_TRAINING_EPOCHS} - Test Results (LR: {current_lr:.6f})")
+    print("트레이닝 후반 20%만 사용, 처음부터 학습 (실제본문 또는 기대본문)")
     print(f"{'='*60}")
-    print(f"[실제본문] MRR: {epoch_results['MRR']:.6f}  NDCG@5: {epoch_results['NDCG@5']:.6f}  Hit@1: {epoch_results['Hit@1']:.6f}")
-    if epoch_results_expected is not None:
-        print(f"[기대본문({EVAL_TESTSET_EXPECTED_BODY_DIR})] MRR: {epoch_results_expected['MRR']:.6f}  NDCG@5: {epoch_results_expected['NDCG@5']:.6f}  Hit@1: {epoch_results_expected['Hit@1']:.6f}")
-    if epoch_results_expected_2 is not None:
-        print(f"[기대본문(2)({EVAL_TESTSET_EXPECTED_BODY_DIR_2})] MRR: {epoch_results_expected_2['MRR']:.6f}  NDCG@5: {epoch_results_expected_2['NDCG@5']:.6f}  Hit@1: {epoch_results_expected_2['Hit@1']:.6f}")
+    pretrain_size = int(len(all_train_id) * 0.8)
+    last20_size = len(all_train_id) - pretrain_size
+    train20_pn = all_train_pn[pretrain_size:]
+    train20_label = all_label[pretrain_size:]
+    train20_id = all_train_id[pretrain_size:]
+    train20_user_pos = all_user_pos[pretrain_size:]
+    train20_userid_str = all_train_userid_str[pretrain_size:] if all_train_userid_str is not None else None
+    train20_newsid_str = all_train_newsid_str[pretrain_size:] if all_train_newsid_str is not None else None
+    print(f"학습 데이터: 트레이닝 후반 20% 샘플 수 {last20_size}개")
+    expected_bodies_train20 = None
+    if TRAIN_ON_TRAIN20_USE_EXPECTED_BODY and TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR:
+        train20_body_dir = os.path.join(body_gen_output_main, TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR)
+        if os.path.isdir(train20_body_dir):
+            expected_bodies_train20 = load_expected_bodies_from_train_dir(train20_body_dir)
+            print(f"학습 본문: 기대본문 사용 ({TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR}, {len(expected_bodies_train20)}개)")
+        else:
+            print(f"경고: 기대본문 폴더 없음 ({train20_body_dir}), 실제본문으로 학습합니다.")
+    if expected_bodies_train20 is None:
+        print("학습 본문: 실제본문 사용")
+    traingen_t20 = generate_batch_data_train(
+        train20_pn, train20_label, train20_id, 30,
+        candidate_news_body=None,
+        expected_bodies=expected_bodies_train20,
+        all_userid_str=train20_userid_str,
+        all_newsid_str=train20_newsid_str,
+        news_index_reverse=news_index_reverse
+    )
+    steps_t20 = (last20_size + 29) // 30
+    test_steps_t20 = len(all_test_id)
+    test_exp_dir_t20 = os.path.join(body_gen_output_main, TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR)
+    expected_bodies_test_t20 = None
+    if os.path.isdir(test_exp_dir_t20):
+        expected_bodies_test_t20 = load_expected_bodies_from_train_dir(test_exp_dir_t20)
+        print(f"매 에폭 테스트셋 기대본문 평가: {TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR} ({len(expected_bodies_test_t20)}개)\n")
+    for ep in range(TRAIN_ON_TRAIN20_EPOCHS):
+        np.random.seed(SEED + ep)
+        random.seed(SEED + ep)
+        model.fit(traingen_t20, epochs=1, steps_per_epoch=steps_t20, verbose=1)
+        # 매 에폭 테스트셋 실제본문 평가
+        testgen_actual_t20 = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, 30, candidate_news_body=None)
+        click_actual_t20 = model_test.predict(testgen_actual_t20, steps=test_steps_t20, verbose=0)
+        all_mrr_a, all_ndcg_a, all_hit1_a = [], [], []
+        for m in all_test_index:
+            if m[1] <= len(click_actual_t20) and np.sum(all_test_label[m[0]:m[1]]) != 0:
+                session_scores = click_actual_t20[m[0]:m[1], 0]
+                session_labels = all_test_label[m[0]:m[1]]
+                all_mrr_a.append(mrr_score(session_labels, session_scores))
+                all_ndcg_a.append(ndcg_score(session_labels, session_scores, k=5))
+                all_hit1_a.append(hit_at_k(session_labels, session_scores, k=1))
+        print(f"\n{'='*60}")
+        print(f"Epoch {ep+1}/{TRAIN_ON_TRAIN20_EPOCHS} - 테스트셋 평가")
+        print(f"{'='*60}")
+        print(f"[실제본문] MRR: {np.mean(all_mrr_a):.6f}  NDCG@5: {np.mean(all_ndcg_a):.6f}  Hit@1: {np.mean(all_hit1_a):.6f}")
+        # 매 에폭 테스트셋 기대본문 평가
+        if expected_bodies_test_t20 is not None:
+            testgen_exp_t20 = generate_batch_data_test(
+                all_test_pn, all_test_label, all_test_id, 30,
+                candidate_news_body=None,
+                expected_bodies=expected_bodies_test_t20,
+                all_userid_str=all_test_userid_str,
+                all_newsid_str=all_test_newsid_str,
+                news_index_reverse=news_index_reverse
+            )
+            click_exp_t20 = model_test.predict(testgen_exp_t20, steps=test_steps_t20, verbose=0)
+            all_mrr_e, all_ndcg_e, all_hit1_e = [], [], []
+            for m in all_test_index:
+                if m[1] <= len(click_exp_t20) and np.sum(all_test_label[m[0]:m[1]]) != 0:
+                    session_scores = click_exp_t20[m[0]:m[1], 0]
+                    session_labels = all_test_label[m[0]:m[1]]
+                    all_mrr_e.append(mrr_score(session_labels, session_scores))
+                    all_ndcg_e.append(ndcg_score(session_labels, session_scores, k=5))
+                    all_hit1_e.append(hit_at_k(session_labels, session_scores, k=1))
+            if all_mrr_e:
+                print(f"[기대본문({TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR})] MRR: {np.mean(all_mrr_e):.6f}  NDCG@5: {np.mean(all_ndcg_e):.6f}  Hit@1: {np.mean(all_hit1_e):.6f}")
+        else:
+            print(f"[기대본문] 폴더 없음 ({test_exp_dir_t20}), 평가 생략")
+        print(f"{'='*60}\n")
+
+else:
+    for ep in range(MAIN_TRAINING_EPOCHS):
+        np.random.seed(SEED + ep)
+        random.seed(SEED + ep)
+        
+        if USE_EXPECTED_BODY:
+            # 유저별 기대본문 사용
+            traingen=generate_batch_data_train(
+                all_train_pn, all_label, all_train_id, 30, 
+                candidate_news_body=None,
+                expected_bodies=expected_bodies_train,
+                all_userid_str=all_train_userid_str,
+                all_newsid_str=all_train_newsid_str,
+                news_index_reverse=news_index_reverse
+            )
+        else:
+            # 원본 본문 사용
+            traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30, candidate_news_body=None)
+
+        actual_train_samples = len(all_train_id)
+        steps_per_epoch = (actual_train_samples + 29) // 30
+        model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch)
+        
+        actual_test_samples = len(all_test_id)
+        test_steps = actual_test_samples
+
+        # [1] 테스트셋 실제본문으로 평가
+        testgen_actual = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, 30, candidate_news_body=None)
+        click_score = model_test.predict(testgen_actual, steps=test_steps, verbose=1)
+        # print(f"[디버깅] 실제 생성된 click_score 수: {len(click_score)}")
+        
+        # click_score가 실제 샘플 수와 일치하는지 확인 (디버깅용, 필요 시 주석 해제)
+        # if len(click_score) != actual_test_samples:
+        #     print(f"[경고] click_score({len(click_score)})가 실제 샘플 수({actual_test_samples})와 일치하지 않습니다!")
+        #     print(f"[경고] 차이: {actual_test_samples - len(click_score)}개 샘플이 누락되었습니다.")
+
+        all_mrr=[]
+        all_ndcg=[]
+        all_hit1=[]
+        
+        # # click_score 디버깅 출력
+        # print(f"\n[디버깅] click_score 형태: {click_score.shape}")
+        # print(f"[디버깅] 전체 click_score 통계:")
+        # print(f"  - 최소값: {np.min(click_score):.6f}")
+        # print(f"  - 최대값: {np.max(click_score):.6f}")
+        # print(f"  - 평균값: {np.mean(click_score):.6f}")
+        # print(f"  - 표준편차: {np.std(click_score):.6f}")
+        # print(f"[디버깅] 실제 샘플 수: {len(all_test_id)}")
+        # print(f"[디버깅] all_test_index에 저장된 세션 수: {len(all_test_index)}")
+        
+        session_count = 0
+        excluded_no_label = 0  # 정답이 없는 세션
+        excluded_out_of_range = 0  # click_score 범위를 벗어난 세션
+        total_sessions = len(all_test_index)
+
+        # 범위를 벗어난 세션의 예시 출력
+        out_of_range_examples = []
+        
+        for m in all_test_index:
+            # 제외 이유 확인
+            has_label = np.sum(all_test_label[m[0]:m[1]]) != 0
+            in_range = m[1] <= len(click_score)
+            
+            if not has_label:
+                excluded_no_label += 1
+            if not in_range:
+                excluded_out_of_range += 1
+                if len(out_of_range_examples) < 3:
+                    out_of_range_examples.append((m[0], m[1], len(click_score)))
+            
+            if has_label and in_range:
+                session_scores = click_score[m[0]:m[1],0]
+                session_labels = all_test_label[m[0]:m[1]]
+                
+                # # 처음 5개 세션만 상세 출력
+                # if session_count < 5:
+                #     print(f"\n[디버깅] 세션 {session_count + 1}:")
+                #     print(f"  - 인덱스 범위: [{m[0]}, {m[1]})")
+                #     print(f"  - 점수: {session_scores}")
+                #     print(f"  - 레이블: {session_labels}")
+                #     print(f"  - 정답 위치: {np.where(session_labels == 1)[0]}")
+                #     sorted_indices = np.argsort(session_scores)[::-1]
+                #     print(f"  - 정렬된 인덱스 (내림차순): {sorted_indices}")
+                #     print(f"  - 1위 인덱스: {sorted_indices[0]}, 점수: {session_scores[sorted_indices[0]]:.6f}")
+                #     hit1_val = hit_at_k(session_labels, session_scores, k=1)
+                #     print(f"  - Hit@1: {hit1_val}")
+                
+                all_mrr.append(mrr_score(session_labels, session_scores))
+                all_ndcg.append(ndcg_score(session_labels, session_scores, k=5))
+                all_hit1.append(hit_at_k(session_labels, session_scores, k=1))
+                session_count += 1
+        
+        # # 디버깅용 세션 통계 출력
+        # print(f"\n[디버깅] 세션 통계:")
+        # print(f"  - all_test_index에 저장된 총 세션 수: {total_sessions}")
+        # print(f"  - 실제 샘플 수 (all_test_id): {len(all_test_id)}")
+        # print(f"  - click_score 샘플 수: {len(click_score)}")
+        # print(f"  - 평가된 세션 수: {session_count}")
+        # print(f"  - 제외된 세션 수: {total_sessions - session_count}")
+        # print(f"    * 정답 없음: {excluded_no_label}개")
+        # print(f"    * click_score 범위 벗어남: {excluded_out_of_range}개")
+        # if out_of_range_examples:
+        #     print(f"\n[디버깅] 범위 벗어난 세션 예시:")
+        #     for start, end, max_idx in out_of_range_examples:
+        #         print(f"    - 인덱스 [{start}, {end}), click_score 길이: {max_idx}, 초과: {end - max_idx}")
+        # print(f"  - Hit@1 값 분포: 0={sum(1 for x in all_hit1 if x == 0)}, 1={sum(1 for x in all_hit1 if x == 1)}")
+        
+        # 결과 저장
+        epoch_results = {
+            'MRR': np.mean(all_mrr),
+            'NDCG@5': np.mean(all_ndcg),
+            'Hit@1': np.mean(all_hit1)
+        }
+        results.append([epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['Hit@1']])
+        
+        # [2] 테스트셋 기대본문(EVAL_TESTSET_EXPECTED_BODY_DIR)으로 평가
+        epoch_results_expected = None
+        if expected_bodies_main_test is not None:
+            testgen_expected = generate_batch_data_test(
+                all_test_pn, all_test_label, all_test_id, 30,
+                candidate_news_body=None,
+                expected_bodies=expected_bodies_main_test,
+                all_userid_str=all_test_userid_str,
+                all_newsid_str=all_test_newsid_str,
+                news_index_reverse=news_index_reverse
+            )
+            click_score_exp = model_test.predict(testgen_expected, steps=test_steps, verbose=0)
+            all_mrr_exp, all_ndcg_exp, all_hit1_exp = [], [], []
+            for i in range(len(all_test_index)):
+                start, end = all_test_index[i]
+                session_scores = click_score_exp[start:end].flatten()
+                session_labels = all_test_label[start:end]
+                if np.sum(session_labels) == 0:
+                    continue
+                all_mrr_exp.append(mrr_score(session_labels, session_scores))
+                all_ndcg_exp.append(ndcg_score(session_labels, session_scores, k=5))
+                all_hit1_exp.append(hit_at_k(session_labels, session_scores, k=1))
+            if all_mrr_exp:
+                epoch_results_expected = {
+                    'MRR': np.mean(all_mrr_exp),
+                    'NDCG@5': np.mean(all_ndcg_exp),
+                    'Hit@1': np.mean(all_hit1_exp)
+                }
+        # [3] 테스트셋 기대본문(2)(EVAL_TESTSET_EXPECTED_BODY_DIR_2)으로 평가
+        epoch_results_expected_2 = None
+        if expected_bodies_main_test_2 is not None:
+            testgen_expected_2 = generate_batch_data_test(
+                all_test_pn, all_test_label, all_test_id, 30,
+                candidate_news_body=None,
+                expected_bodies=expected_bodies_main_test_2,
+                all_userid_str=all_test_userid_str,
+                all_newsid_str=all_test_newsid_str,
+                news_index_reverse=news_index_reverse
+            )
+            click_score_exp_2 = model_test.predict(testgen_expected_2, steps=test_steps, verbose=0)
+            all_mrr_exp_2, all_ndcg_exp_2, all_hit1_exp_2 = [], [], []
+            for i in range(len(all_test_index)):
+                start, end = all_test_index[i]
+                session_scores = click_score_exp_2[start:end].flatten()
+                session_labels = all_test_label[start:end]
+                if np.sum(session_labels) == 0:
+                    continue
+                all_mrr_exp_2.append(mrr_score(session_labels, session_scores))
+                all_ndcg_exp_2.append(ndcg_score(session_labels, session_scores, k=5))
+                all_hit1_exp_2.append(hit_at_k(session_labels, session_scores, k=1))
+            if all_mrr_exp_2:
+                epoch_results_expected_2 = {
+                    'MRR': np.mean(all_mrr_exp_2),
+                    'NDCG@5': np.mean(all_ndcg_exp_2),
+                    'Hit@1': np.mean(all_hit1_exp_2)
+                }
+        current_lr = model.optimizer.learning_rate.numpy() if hasattr(model.optimizer.learning_rate, 'numpy') else model.optimizer.learning_rate
+        print(f"\n{'='*60}")
+        print(f"Epoch {ep+1}/{MAIN_TRAINING_EPOCHS} - Test Results (LR: {current_lr:.6f})")
+        print(f"{'='*60}")
+        print(f"[실제본문] MRR: {epoch_results['MRR']:.6f}  NDCG@5: {epoch_results['NDCG@5']:.6f}  Hit@1: {epoch_results['Hit@1']:.6f}")
+        if epoch_results_expected is not None:
+            print(f"[기대본문({EVAL_TESTSET_EXPECTED_BODY_DIR})] MRR: {epoch_results_expected['MRR']:.6f}  NDCG@5: {epoch_results_expected['NDCG@5']:.6f}  Hit@1: {epoch_results_expected['Hit@1']:.6f}")
+        if epoch_results_expected_2 is not None:
+            print(f"[기대본문(2)({EVAL_TESTSET_EXPECTED_BODY_DIR_2})] MRR: {epoch_results_expected_2['MRR']:.6f}  NDCG@5: {epoch_results_expected_2['NDCG@5']:.6f}  Hit@1: {epoch_results_expected_2['Hit@1']:.6f}")
+        print(f"{'='*60}\n")
+
+    # 전체 결과 요약
+    print(f"\n{'='*60}")
+    print("Final Results Summary (All Epochs)")
+    print(f"{'='*60}")
+    print(f"{'Epoch':<10} {'MRR':<12} {'NDCG@5':<12} {'Hit@1':<12}")
+    print(f"{'-'*60}")
+    for i, result in enumerate(results, 1):
+        mrr, ndcg5, hit1 = result
+        print(f"{i:<10} {mrr:<12.6f} {ndcg5:<12.6f} {hit1:<12.6f}")
+    print(f"{'='*72}")
+
+    # 최고 성능 찾기
+    best_mrr_idx = np.argmax([r[0] for r in results])
+    best_mrr_epoch = best_mrr_idx + 1
+    best_hit1_idx = np.argmax([r[2] for r in results])
+    best_hit1_epoch = best_hit1_idx + 1
+    print(f"\nBest MRR  : Epoch {best_mrr_epoch} - {results[best_mrr_idx][0]:.6f}")
+    print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][2]:.6f}")
     print(f"{'='*60}\n")
-
-# 전체 결과 요약
-print(f"\n{'='*60}")
-print("Final Results Summary (All Epochs)")
-print(f"{'='*60}")
-print(f"{'Epoch':<10} {'MRR':<12} {'NDCG@5':<12} {'Hit@1':<12}")
-print(f"{'-'*60}")
-for i, result in enumerate(results, 1):
-    mrr, ndcg5, hit1 = result
-    print(f"{i:<10} {mrr:<12.6f} {ndcg5:<12.6f} {hit1:<12.6f}")
-print(f"{'='*72}")
-
-# 최고 성능 찾기
-best_mrr_idx = np.argmax([r[0] for r in results])
-best_mrr_epoch = best_mrr_idx + 1
-best_hit1_idx = np.argmax([r[2] for r in results])
-best_hit1_epoch = best_hit1_idx + 1
-print(f"\nBest MRR  : Epoch {best_mrr_epoch} - {results[best_mrr_idx][0]:.6f}")
-print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][2]:.6f}")
-print(f"{'='*60}\n")
