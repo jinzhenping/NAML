@@ -9,6 +9,8 @@ import pickle
 from numpy.linalg import cholesky
 import json
 import os
+import subprocess
+import sys
 import keras
 import tensorflow as tf
 from keras.layers import *
@@ -47,6 +49,7 @@ MAIN_TRAINING_EPOCHS = 20  # 메인 학습 루프 에폭 수
 # 트레이닝 후반 20%만 사용해 처음부터 학습 후 테스트셋 실제/기대본문 각각 평가 (메인 학습 루프 대신 실행)
 TRAIN_ON_TRAIN20_FROM_SCRATCH = False  # True: 트레이닝 후반 20%만 사용, 처음부터 학습
 TRAIN_ON_TRAIN20_USE_EXPECTED_BODY = False  # True: 학습 시 기대본문 사용, False: 실제본문 사용
+TRAIN_ON_TRAIN20_GENERATE_EXPECTED_BODY = False  # True: 기대본문 폴더 없을 때 body_generation으로 유저별 후반 20% 기대본문 자동 생성 후 학습
 TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR = 'train_last20'  # 기대본문으로 학습 시 폴더 (body_generation/output 아래)
 TRAIN_ON_TRAIN20_EPOCHS = 20  # 학습 에폭 수
 TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 매 에폭 테스트셋 기대본문 평가용 폴더
@@ -2501,22 +2504,49 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
     print(f"\n{'='*60}")
     print("트레이닝 후반 20%만 사용, 처음부터 학습 (실제본문 또는 기대본문)")
     print(f"{'='*60}")
-    pretrain_size = int(len(all_train_id) * 0.8)
-    last20_size = len(all_train_id) - pretrain_size
-    train20_pn = all_train_pn[pretrain_size:]
-    train20_label = all_label[pretrain_size:]
-    train20_id = all_train_id[pretrain_size:]
-    train20_user_pos = all_user_pos[pretrain_size:]
-    train20_userid_str = all_train_userid_str[pretrain_size:] if all_train_userid_str is not None else None
-    train20_newsid_str = all_train_newsid_str[pretrain_size:] if all_train_newsid_str is not None else None
-    print(f"학습 데이터: 트레이닝 후반 20% 샘플 수 {last20_size}개")
+    # 유저별로 후반 20% 세션 선택 (유저당 최소 1세션 포함되도록)
+    from collections import defaultdict
+    user_to_indices = defaultdict(list)
+    for i in range(len(all_train_id)):
+        uid = all_train_userid_str[i] if all_train_userid_str is not None else i
+        user_to_indices[uid].append(i)
+    train20_indices = []
+    for uid, indices in user_to_indices.items():
+        n = len(indices)
+        take_count = max(1, int(np.ceil(0.2 * n)))
+        train20_indices.extend(indices[-take_count:])
+    train20_indices = sorted(train20_indices)
+    last20_size = len(train20_indices)
+    train20_pn = [all_train_pn[i] for i in train20_indices]
+    train20_label = [all_label[i] for i in train20_indices]
+    train20_id = [all_train_id[i] for i in train20_indices]
+    train20_user_pos = [all_user_pos[i] for i in train20_indices]
+    train20_userid_str = [all_train_userid_str[i] for i in train20_indices] if all_train_userid_str is not None else None
+    train20_newsid_str = [all_train_newsid_str[i] for i in train20_indices] if all_train_newsid_str is not None else None
+    print(f"학습 데이터: 유저별 후반 20%% (유저당 최소 1세션) 샘플 수 {last20_size}개, 유저 수 {len(user_to_indices)}명")
     expected_bodies_train20 = None
     if TRAIN_ON_TRAIN20_USE_EXPECTED_BODY and TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR:
         train20_body_dir = os.path.join(body_gen_output_main, TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR)
+        need_generate = TRAIN_ON_TRAIN20_GENERATE_EXPECTED_BODY and (
+            not os.path.isdir(train20_body_dir) or not os.listdir(train20_body_dir)
+        )
+        if need_generate:
+            project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            script_path = os.path.join(project_root, 'body_generation', 'generate_body.py')
+            out_dir = os.path.join(project_root, 'body_generation', 'output')
+            print(f"기대본문 자동 생성: 유저별 후반 20%% (body_generation) 실행 중... 출력: {TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR}")
+            ret = subprocess.run(
+                [sys.executable, script_path, '--train20_only', '--train20_per_user',
+                 '--output_subdir', TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR, '--output', out_dir],
+                cwd=project_root,
+                capture_output=False
+            )
+            if ret.returncode != 0:
+                print(f"경고: 기대본문 생성 종료 코드 {ret.returncode}, 실제본문으로 학습합니다.")
         if os.path.isdir(train20_body_dir):
             expected_bodies_train20 = load_expected_bodies_from_train_dir(train20_body_dir)
             print(f"학습 본문: 기대본문 사용 ({TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR}, {len(expected_bodies_train20)}개)")
-        else:
+        elif not need_generate:
             print(f"경고: 기대본문 폴더 없음 ({train20_body_dir}), 실제본문으로 학습합니다.")
     if expected_bodies_train20 is None:
         print("학습 본문: 실제본문 사용")
