@@ -27,6 +27,7 @@ class BodyGenerator:
                  train80_only: bool = False,
                  train20_only: bool = False,
                  train20_per_user: bool = False,
+                 train20_positive_only: bool = False,
                  train80_first_k: Optional[int] = None,
                  train80_batch_index: int = 0,
                  coordinator_policy_n: Optional[int] = None):
@@ -44,6 +45,7 @@ class BodyGenerator:
             train80_only: True면 트레이닝셋 앞 80%에 등장하는 (유저, 후보뉴스)에 대해서만 생성 (use_test=False일 때만 적용)
             train20_only: True면 트레이닝셋 뒤 20%에 등장하는 (유저, 후보뉴스)에 대해서만 생성 (use_test=False일 때만 적용)
             train20_per_user: train20_only일 때 True면 유저별 후반 20% 세션(유저당 최소 1세션)만 사용. False면 전체 행 기준 후반 20%.
+            train20_positive_only: train20_only일 때 True면 세션당 positive(클릭된) 후보 1개에만 기대본문 생성. False면 5개 후보 모두.
             train80_first_k: train80_only일 때 배치당 세션 수 (예: 500). None이면 전체 80% 사용.
             train80_batch_index: train80_first_k 사용 시 배치 번호 (0=첫 500세션, 1=다음 500세션). 출력 train80_batch{N}.
             coordinator_policy_n: 사용할 정책 파일 번호 (N.txt). None이면 가장 큰 N 사용.
@@ -59,6 +61,7 @@ class BodyGenerator:
         self.train80_only = train80_only
         self.train20_only = train20_only
         self.train20_per_user = train20_per_user
+        self.train20_positive_only = train20_positive_only
         self.train80_first_k = train80_first_k
         self.train80_batch_index = train80_batch_index
         self.coordinator_policy_n = coordinator_policy_n
@@ -139,6 +142,19 @@ class BodyGenerator:
         # train20_only: 트레이닝셋 뒤 20%에 등장하는 (user_id, candidate_news_id)만 허용 (학습 데이터일 때만)
         self.allowed_train20_pairs = None
         if self.train20_only and not self.use_test and len(self.train_df) > 0:
+            def _add_row_pairs(allowed: set, row, uid: int) -> None:
+                cand_ids = [c.strip() for c in str(row['candidate_news']).split() if c.strip()]
+                clicked_str = str(row.get('clicked', ''))
+                clicked_list = clicked_str.split() if clicked_str else []
+                if self.train20_positive_only and clicked_list:
+                    # 세션당 positive(클릭된) 후보 1개만 추가
+                    for i, cid in enumerate(cand_ids):
+                        if i < len(clicked_list) and clicked_list[i].strip() == '1':
+                            allowed.add((uid, cid))
+                            break
+                else:
+                    for cid in cand_ids:
+                        allowed.add((uid, cid))
             if self.train20_per_user:
                 # 유저별 후반 20% 세션 (유저당 최소 1세션)
                 allowed = set()
@@ -150,11 +166,10 @@ class BodyGenerator:
                     take_count = max(1, int(math.ceil(0.2 * n)))
                     last_rows = grp.tail(take_count)
                     for _, row in last_rows.iterrows():
-                        for cand_id in str(row['candidate_news']).split():
-                            if cand_id.strip():
-                                allowed.add((uid, cand_id.strip()))
+                        _add_row_pairs(allowed, row, uid)
                 self.allowed_train20_pairs = allowed
-                print(f"트레이닝셋 유저별 뒤 20% 후보만 생성: 허용 (user, candidate_news) 쌍 {len(self.allowed_train20_pairs)}개, 유저 수 {self.train_df['user'].nunique()}명")
+                pos_only = " (positive만)" if self.train20_positive_only else ""
+                print(f"트레이닝셋 유저별 뒤 20% 후보만 생성{pos_only}: 허용 (user, candidate_news) 쌍 {len(self.allowed_train20_pairs)}개, 유저 수 {self.train_df['user'].nunique()}명")
             else:
                 n80 = max(1, int(0.8 * len(self.train_df)))
                 last20 = self.train_df.iloc[n80:]
@@ -164,11 +179,10 @@ class BodyGenerator:
                     if pd.isna(uid):
                         continue
                     uid = int(uid)
-                    for cand_id in str(row['candidate_news']).split():
-                        if cand_id.strip():
-                            allowed.add((uid, cand_id.strip()))
+                    _add_row_pairs(allowed, row, uid)
                 self.allowed_train20_pairs = allowed
-                print(f"트레이닝셋 뒤 20% 후보만 생성: 허용 (user, candidate_news) 쌍 {len(self.allowed_train20_pairs)}개")
+                pos_only = " (positive만)" if self.train20_positive_only else ""
+                print(f"트레이닝셋 뒤 20% 후보만 생성{pos_only}: 허용 (user, candidate_news) 쌍 {len(self.allowed_train20_pairs)}개")
         
         print(f"뉴스 데이터: {len(self.news_df)}개")
         print(f"{data_type} 데이터: {len(self.train_df)}개")
@@ -632,6 +646,7 @@ def main():
     policy_group.add_argument('--train20_only', action='store_true', help='트레이닝셋 뒤 20%% 후보만 생성')
     policy_group.add_argument('--use_test', action='store_true', help='테스트셋 후보로 생성')
     parser.add_argument('--train20_per_user', action='store_true', help='--train20_only일 때 유저별 후반 20%% 세션(유저당 최소 1)만 사용. NAML 트레이닝 후반 20%%와 동일 정의.')
+    parser.add_argument('--train20_positive_only', action='store_true', help='--train20_only일 때 세션당 positive(클릭된) 후보 1개에만 기대본문 생성.')
     parser.add_argument('--output_subdir', type=str, default=None, metavar='DIR', help='출력 폴더 이름 (예: train_last20). 지정 시 output/DIR에 저장, 미지정 시 train20_N 등 자동 번호')
     parser.add_argument('--train80_first_k', type=int, default=None, metavar='K', help='--train80_only일 때 배치당 K세션 (예: 500). --train80_batch_index와 함께 사용')
     parser.add_argument('--train80_batch_index', type=int, default=0, metavar='N', help='배치 번호 (0=첫 500세션→train80_batch0, 1=다음 500세션→train80_batch1). --train80_first_k와 함께 사용')
@@ -673,6 +688,7 @@ def main():
         train80_only=args.train80_only,
         train20_only=args.train20_only,
         train20_per_user=args.train20_per_user,
+        train20_positive_only=args.train20_positive_only,
         train80_first_k=args.train80_first_k,
         train80_batch_index=args.train80_batch_index,
         coordinator_policy_n=args.policy_file

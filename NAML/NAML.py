@@ -51,6 +51,7 @@ TRAIN_ON_TRAIN20_FROM_SCRATCH = False  # True: 트레이닝 후반 20%만 사용
 TRAIN_ON_TRAIN20_USE_EXPECTED_BODY = False  # True: 학습 시 기대본문 사용, False: 실제본문 사용
 TRAIN_ON_TRAIN20_GENERATE_EXPECTED_BODY = False  # True: 기대본문 폴더 없을 때 body_generation으로 유저별 후반 20% 기대본문 자동 생성 후 학습
 TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR = 'train_last20'  # 기대본문으로 학습 시 폴더 (body_generation/output 아래)
+TRAIN_ON_TRAIN20_EXPECTED_BODY_POSITIVE_ONLY = True  # True: 세션당 positive 1개만 기대본문 생성/사용, False: 5개 후보 모두
 TRAIN_ON_TRAIN20_EPOCHS = 20  # 학습 에폭 수
 TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 매 에폭 테스트셋 기대본문 평가용 폴더
 TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR_2 = None  # 두 번째 기대본문 폴더 (None이면 사용 안 함). 설정 시 매 에폭 두 버전 모두 평가
@@ -2535,12 +2536,11 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
             script_path = os.path.join(project_root, 'body_generation', 'generate_body.py')
             out_dir = os.path.join(project_root, 'body_generation', 'output')
             print(f"기대본문 자동 생성: 유저별 후반 20%% (body_generation) 실행 중... 출력: {TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR}")
-            ret = subprocess.run(
-                [sys.executable, script_path, '--train20_only', '--train20_per_user',
-                 '--output_subdir', TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR, '--output', out_dir],
-                cwd=project_root,
-                capture_output=False
-            )
+            cmd = [sys.executable, script_path, '--train20_only', '--train20_per_user',
+                   '--output_subdir', TRAIN_ON_TRAIN20_EXPECTED_BODY_DIR, '--output', out_dir]
+            if TRAIN_ON_TRAIN20_EXPECTED_BODY_POSITIVE_ONLY:
+                cmd.insert(cmd.index('--output_subdir'), '--train20_positive_only')
+            ret = subprocess.run(cmd, cwd=project_root, capture_output=False)
             if ret.returncode != 0:
                 print(f"경고: 기대본문 생성 종료 코드 {ret.returncode}, 실제본문으로 학습합니다.")
         if os.path.isdir(train20_body_dir):
@@ -2556,7 +2556,8 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
         expected_bodies=expected_bodies_train20,
         all_userid_str=train20_userid_str,
         all_newsid_str=train20_newsid_str,
-        news_index_reverse=news_index_reverse
+        news_index_reverse=news_index_reverse,
+        use_expected_body_positive_only=TRAIN_ON_TRAIN20_EXPECTED_BODY_POSITIVE_ONLY
     )
     steps_t20 = (last20_size + 29) // 30
     test_steps_t20 = len(all_test_id)
