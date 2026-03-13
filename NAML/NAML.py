@@ -31,22 +31,32 @@ MAX_SENT_LENGTH = 30     # 제목 최대 단어 수
 MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
 USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사용
+
 DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, False: pretraining 건너뛰기
 PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
+
 DO_PRETRAINING_ON_TRAIN20 = False  # True: 트레이닝셋 유저별 후반 20%로 pretraining (구조는 DO_PRETRAINING과 동일, 원본 본문 사용)
 PRETRAINING_ON_TRAIN20_EPOCHS = 20  # 유저별 후반 20% 프리트레이닝 에폭 수
 PRETRAINING_ON_TRAIN20_SAVE_PATH = 'saved_models/pretrained_naml_model_train20.h5'  # 저장 경로
+
 EVAL_PRETRAINED_ON_TRAIN80 = False  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
+
 EVAL_PRETRAINED_ON_TRAIN80_FIRST_BATCH = False  # True: 트레이닝 80% 지정 배치만 평가, 기대본문은 train80_batch{N} 로드, result{N}.txt 저장
 EVAL_TRAIN80_BATCH_SIZE = 500  # 배치당 세션 수
 EVAL_TRAIN80_BATCH_INDEX = 0   # 배치 번호 (0=첫 500세션→result0.txt, 1=다음 500세션→result1.txt, ...)
+
+EVAL_PRETRAINED_ON_TRAIN20_FIRST_BATCH = False  # True: 유저별 후반 20% 지정 배치만 평가, 기대본문은 train20_batch{N} 로드, result{N}.txt 저장
+EVAL_TRAIN20_BATCH_SIZE = 500  # 유저별 후반 20% 배치당 세션 수 (body_generation --train20_first_k와 동일하게 맞출 것)
+EVAL_TRAIN20_BATCH_INDEX = 0   # 배치 번호 (0=첫 K세션→result0.txt, 1=다음 K세션→result1.txt, ...)
+
 EVAL_PRETRAINED_ON_TRAIN20 = False  # True: 프리트레이닝 모델 로드 후 트레이닝 후반 20%에 대해 실제/기대 본문 각각 평가
 EVAL_TRAIN20_EXPECTED_BODY_DIR = 'train_20'  # 트레이닝 후반 20% 평가 시 기대본문 폴더 (예: 'train20_0'). None이면 train20_N 중 가장 큰 N 사용
+
 EVAL_PRETRAINED_ON_TESTSET = False  # True: 저장된 프리트레이닝 모델 로드 후 테스트셋에 대해 실제/기대 본문 각각 테스트 (NDCG@5, MRR, Hit@1, Loss)
 EVAL_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 테스트셋 기대본문 폴더 (body_generation/output 아래). 예: 'test', 'test_0', 'test_1'
 EVAL_TESTSET_EXPECTED_BODY_DIR_2 = None  # 두 번째 기대본문 폴더 (None이면 사용 안 함). 설정 시 매 에폭 두 버전 모두 평가
-PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model.h5'  # 위 두 평가 모드에서 로드할 모델 경로
+PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model_train20.h5'  # 위 두 평가 모드에서 로드할 모델 경로
 MAIN_TRAINING_EPOCHS = 20  # 메인 학습 루프 에폭 수
 
 # 트레이닝 후반 20%만 사용해 처음부터 학습 후 테스트셋 실제/기대본문 각각 평가 (메인 학습 루프 대신 실행)
@@ -1971,6 +1981,232 @@ if EVAL_PRETRAINED_ON_TRAIN80_FIRST_BATCH:
         json.dump(payload, f, ensure_ascii=False, indent=2)
     print(f"결과 저장: {out_path}")
     add(f"\n프리트레이닝 모델 - 트레이닝 80% 배치 {EVAL_TRAIN80_BATCH_INDEX} 평가 완료. 프로그램을 종료합니다.")
+    sys.exit(0)
+
+# ========== 프리트레이닝 모델 로드 후 유저별 후반 20% 지정 배치만 평가 → result{N}.txt ==========
+if EVAL_PRETRAINED_ON_TRAIN20_FIRST_BATCH:
+    import sys
+    from collections import defaultdict
+    if not os.path.exists(PRETRAINED_MODEL_PATH):
+        print(f"오류: 프리트레이닝 모델을 찾을 수 없습니다: {PRETRAINED_MODEL_PATH}")
+        sys.exit(1)
+    body_gen_output_t20 = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
+    batch_dir_name_t20 = f"train20_batch{EVAL_TRAIN20_BATCH_INDEX}"
+    batch_dir_t20 = os.path.join(body_gen_output_t20, batch_dir_name_t20)
+    if not os.path.isdir(batch_dir_t20):
+        print(f"오류: 배치 기대본문 폴더가 없습니다: {batch_dir_t20}")
+        print(f"  body_generation으로 --train20_only --train20_per_user --train20_first_k {EVAL_TRAIN20_BATCH_SIZE} --train20_batch_index {EVAL_TRAIN20_BATCH_INDEX} 실행 후 다시 시도하세요.")
+        sys.exit(1)
+    print(f"\n{'='*60}")
+    print(f"프리트레이닝 모델 로드: {PRETRAINED_MODEL_PATH}")
+    print(f"{'='*60}")
+    model.load_weights(PRETRAINED_MODEL_PATH, by_name=True, skip_mismatch=True)
+    print("모델 로드 완료.")
+    # 유저별 후반 20% 세션 인덱스 (NAML/body_generation과 동일)
+    user_to_indices_t20 = defaultdict(list)
+    for i in range(len(all_train_id)):
+        uid = all_train_userid_str[i] if all_train_userid_str is not None else i
+        user_to_indices_t20[uid].append(i)
+    train20_indices_eval = []
+    for uid, indices in user_to_indices_t20.items():
+        n = len(indices)
+        take_count = max(1, int(np.ceil(0.2 * n)))
+        train20_indices_eval.extend(indices[-take_count:])
+    train20_indices_eval = sorted(train20_indices_eval)
+    total_t20 = len(train20_indices_eval)
+    batch_start_t20 = EVAL_TRAIN20_BATCH_INDEX * EVAL_TRAIN20_BATCH_SIZE
+    if batch_start_t20 >= total_t20:
+        print(f"오류: 배치 인덱스 {EVAL_TRAIN20_BATCH_INDEX}가 범위 초과 (유저별 후반 20%% 세션 수: {total_t20})")
+        sys.exit(1)
+    n_sessions_t20 = min(EVAL_TRAIN20_BATCH_SIZE, total_t20 - batch_start_t20)
+    batch_indices_t20 = train20_indices_eval[batch_start_t20:batch_start_t20 + n_sessions_t20]
+    print(f"유저별 후반 20%% 배치 {EVAL_TRAIN20_BATCH_INDEX}: 세션 {batch_start_t20}~{batch_start_t20 + n_sessions_t20 - 1} ({n_sessions_t20}개), 기대본문: {batch_dir_name_t20}")
+    train20_test_pn = []
+    train20_test_label = []
+    train20_test_id = []
+    train20_test_user_pos = []
+    train20_test_index = []
+    train20_test_userid_str = []
+    train20_test_newsid_str = []
+    for idx in batch_indices_t20:
+        start = len(train20_test_pn)
+        pn_row = all_train_pn[idx]
+        label_row = all_label[idx]
+        n_cand = len(pn_row) if hasattr(pn_row, '__len__') else 5
+        for j in range(n_cand):
+            train20_test_pn.append(int(pn_row[j]) if hasattr(pn_row[j], '__int__') else pn_row[j])
+            train20_test_label.append(int(label_row[j]) if hasattr(label_row[j], '__int__') else label_row[j])
+            train20_test_id.append(all_train_id[idx])
+            train20_test_user_pos.append(all_user_pos[idx])
+        if all_train_userid_str is not None and all_train_newsid_str is not None:
+            for j in range(n_cand):
+                train20_test_userid_str.append(all_train_userid_str[idx])
+                train20_test_newsid_str.append(all_train_newsid_str[idx][j] if j < len(all_train_newsid_str[idx]) else '')
+        train20_test_index.append([start, len(train20_test_pn)])
+    train20_test_pn = np.array(train20_test_pn, dtype='int32')
+    train20_test_label = np.array(train20_test_label, dtype='int32')
+    train20_test_id = np.array(train20_test_id, dtype='int32')
+    train20_test_user_pos = np.array(train20_test_user_pos, dtype='int32')
+    expected_bodies_batch_t20 = load_expected_bodies_from_train_dir(batch_dir_t20)
+    print(f"로드된 기대 본문: {len(expected_bodies_batch_t20)}개")
+
+    def eval_train20_batch_run(use_expected_body, expected_bodies=None, all_userid_str=None, all_newsid_str=None):
+        if use_expected_body and (expected_bodies is None or all_userid_str is None or all_newsid_str is None):
+            return None, None, None
+        testgen = generate_batch_data_test(
+            train20_test_pn, train20_test_label, train20_test_id, 30,
+            candidate_news_body=None,
+            expected_bodies=expected_bodies,
+            all_userid_str=all_userid_str,
+            all_newsid_str=all_newsid_str,
+            news_index_reverse=news_index_reverse,
+            all_test_user_pos_override=train20_test_user_pos
+        )
+        steps = len(train20_test_id)
+        click_score = model_test.predict(testgen, steps=steps, verbose=0)
+        eps = 1e-7
+        all_session_loss = []
+        all_session_ndcg = []
+        for m in train20_test_index:
+            s, e = m[0], m[1]
+            if e > len(click_score):
+                all_session_loss.append(None)
+                all_session_ndcg.append(None)
+                continue
+            labels = train20_test_label[s:e].astype(np.float32)
+            if np.sum(labels) == 0:
+                all_session_loss.append(None)
+                all_session_ndcg.append(None)
+                continue
+            scores = np.clip(click_score[s:e, 0], eps, 1 - eps)
+            session_bce = -np.mean(labels * np.log(scores) + (1 - labels) * np.log(1 - scores))
+            all_session_loss.append(float(session_bce))
+            all_session_ndcg.append(ndcg_score(train20_test_label[s:e], click_score[s:e, 0], k=5))
+        valid_loss = [x for x in all_session_loss if x is not None]
+        if not valid_loss:
+            return None, None, None
+        return all_session_loss, all_session_ndcg, click_score
+
+    lines_t20 = []
+    def add_t20(s=""):
+        lines_t20.append(s)
+        print(s)
+    add_t20(f"\n트레이닝셋 유저별 후반 20% 배치 {EVAL_TRAIN20_BATCH_INDEX} 평가 (샘플 수: {n_sessions_t20}, 테스트 행: {len(train20_test_id)})")
+    add_t20(f"모델 경로: {PRETRAINED_MODEL_PATH}, 기대본문: {batch_dir_name_t20}")
+    add_t20("\n[1] 실제 본문 사용:")
+    loss_actual_t20, ndcg_actual_t20, click_actual_t20 = eval_train20_batch_run(use_expected_body=False)
+    if loss_actual_t20 is not None:
+        valid = [x for x in loss_actual_t20 if x is not None]
+        add_t20(f"  Loss     : {np.mean(valid):.6f}")
+        add_t20(f"  NDCG@5   : {np.mean([x for x in ndcg_actual_t20 if x is not None]):.6f}")
+    else:
+        add_t20("  평가 가능한 세션 없음")
+    add_t20("\n[2] 기대 본문 사용:")
+    loss_expected_t20, ndcg_expected_t20, click_expected_t20 = eval_train20_batch_run(
+        use_expected_body=True,
+        expected_bodies=expected_bodies_batch_t20,
+        all_userid_str=train20_test_userid_str,
+        all_newsid_str=train20_test_newsid_str
+    )
+    if loss_expected_t20 is not None:
+        valid = [x for x in loss_expected_t20 if x is not None]
+        add_t20(f"  Loss     : {np.mean(valid):.6f}")
+        add_t20(f"  NDCG@5   : {np.mean([x for x in ndcg_expected_t20 if x is not None]):.6f}")
+    else:
+        add_t20("  [건너뜀] 기대본문 데이터 없음")
+
+    best_sess_idx_t20 = None
+    success_sess_idx_t20 = None
+    max_diff_t20 = -np.inf
+    min_diff_t20 = np.inf
+    if loss_actual_t20 is not None and loss_expected_t20 is not None:
+        candidates_max_t20 = []
+        candidates_min_t20 = []
+        for i in range(len(train20_test_index)):
+            la, le = loss_actual_t20[i], loss_expected_t20[i]
+            if la is None or le is None:
+                continue
+            diff = le - la
+            if diff > max_diff_t20:
+                max_diff_t20 = diff
+                candidates_max_t20 = [(diff, i)]
+            elif diff == max_diff_t20:
+                candidates_max_t20.append((diff, i))
+            if diff < min_diff_t20:
+                min_diff_t20 = diff
+                candidates_min_t20 = [(diff, i)]
+            elif diff == min_diff_t20:
+                candidates_min_t20.append((diff, i))
+        if candidates_max_t20:
+            best_sess_idx_t20 = random.choice([c[1] for c in candidates_max_t20])
+            add_t20(f"\n최대 diff 세션 수: {len(candidates_max_t20)}개 (failure 1개 선택)")
+        if candidates_min_t20:
+            success_sess_idx_t20 = random.choice([c[1] for c in candidates_min_t20])
+            add_t20(f"최소 diff 세션 수: {len(candidates_min_t20)}개 (success 1개 선택)")
+
+    loss_real_t20 = np.mean([x for x in loss_actual_t20 if x is not None]) if loss_actual_t20 else None
+    loss_expected_t20 = np.mean([x for x in loss_expected_t20 if x is not None]) if loss_expected_t20 else None
+    ndcg5_real_t20 = np.mean([x for x in ndcg_actual_t20 if x is not None]) if ndcg_actual_t20 else None
+    ndcg5_expected_t20 = np.mean([x for x in ndcg_expected_t20 if x is not None]) if ndcg_expected_t20 else None
+
+    diagnostic_samples_t20 = []
+    if loss_actual_t20 is not None and loss_expected_t20 is not None and (best_sess_idx_t20 is not None or success_sess_idx_t20 is not None):
+        news_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'dataset', 'MIND', 'MIND_news.tsv')
+        news_titles = {}
+        if os.path.exists(news_file):
+            with open(news_file, 'r', encoding='utf-8') as nf:
+                for nline in nf:
+                    parts = nline.strip().split('\t')
+                    if len(parts) >= 4:
+                        news_titles[parts[0]] = parts[3]
+        for sess_idx, type_str in [(best_sess_idx_t20, "failure"), (success_sess_idx_t20, "success")]:
+            if sess_idx is None:
+                continue
+            global_idx = batch_indices_t20[sess_idx]
+            sess_news_ids = all_train_newsid_str[global_idx] if global_idx < len(all_train_newsid_str) else ['?'] * 5
+            sess_user_id_str = all_train_userid_str[global_idx] if all_train_userid_str and global_idx < len(all_train_userid_str) else '?'
+            s, e = train20_test_index[sess_idx][0], train20_test_index[sess_idx][1]
+            sess_labels = train20_test_label[s:e]
+            pos_pos = int(np.where(sess_labels == 1)[0][0])
+            positive_news_id = sess_news_ids[pos_pos] if pos_pos < len(sess_news_ids) else '?'
+            user_pos_indices = all_user_pos[global_idx]
+            fallback_click_titles = [news_titles.get(news_index_reverse.get(int(i), ''), '') for i in user_pos_indices if int(i) != 0]
+            fallback_click_titles = fallback_click_titles[-10:]
+            candidate_news_title = news_titles.get(positive_news_id, '')
+            generated_expected_body, json_user_history = load_expected_body_from_train_dir(batch_dir_t20, sess_user_id_str, positive_news_id)
+            user_click_history_titles = json_user_history if json_user_history is not None else fallback_click_titles
+            if generated_expected_body == '' and expected_bodies_batch_t20:
+                generated_expected_body = expected_bodies_batch_t20.get(_norm_expected_body_key(sess_user_id_str, positive_news_id), '') or ''
+            diagnostic_samples_t20.append({
+                "type": type_str,
+                "user_click_history_titles": user_click_history_titles,
+                "candidate_news_title": candidate_news_title,
+                "generated_expected_body": generated_expected_body
+            })
+
+    results_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
+    os.makedirs(results_dir, exist_ok=True)
+    import re
+    max_n = -1
+    for f in os.listdir(results_dir):
+        m = re.match(r'result(\d+)\.txt$', f)
+        if m:
+            max_n = max(max_n, int(m.group(1)))
+    next_n = max_n + 1
+    out_path_t20 = os.path.join(results_dir, f'result{next_n}.txt')
+    payload_t20 = {
+        "performance_feedback": {
+            "loss_expected": float(loss_expected_t20) if loss_expected_t20 is not None else None,
+            "loss_real": float(loss_real_t20) if loss_real_t20 is not None else None,
+            "ndcg5_expected": float(ndcg5_expected_t20) if ndcg5_expected_t20 is not None else None,
+            "ndcg5_real": float(ndcg5_real_t20) if ndcg5_real_t20 is not None else None
+        },
+        "diagnostic_samples": diagnostic_samples_t20
+    }
+    with open(out_path_t20, 'w', encoding='utf-8') as f:
+        json.dump(payload_t20, f, ensure_ascii=False, indent=2)
+    print(f"결과 저장: {out_path_t20}")
+    add_t20(f"\n프리트레이닝 모델 - 유저별 후반 20% 배치 {EVAL_TRAIN20_BATCH_INDEX} 평가 완료. 프로그램을 종료합니다.")
     sys.exit(0)
 
 # ========== 프리트레이닝 모델 로드 후 트레이닝 80% 평가 (실제본문 / 기대본문 각각) ==========
