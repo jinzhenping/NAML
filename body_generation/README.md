@@ -70,3 +70,6 @@ python body_generation/generate_body.py --user_id 1 --train80_only
 python body_generation/generate_body.py --train20_only --policy_file 2
 
 python body_generation/generate_body.py --use_test --policy_file 2
+
+# 트레이닝셋 유저별 후반 20% 후보 기대본문 생성
+python body_generation/generate_body.py --train20_only --train20_per_user --train20_first_k 500 --train20_batch_index 0 --policy_file 1
