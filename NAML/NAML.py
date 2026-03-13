@@ -34,6 +34,9 @@ USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사
 DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, False: pretraining 건너뛰기
 PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
 PRETRAINING_SAVE_PATH = 'saved_models/pretrained_naml_model.h5'  # Pretraining 모델 저장 경로
+DO_PRETRAINING_ON_TRAIN20 = False  # True: 트레이닝셋 유저별 후반 20%로 pretraining (구조는 DO_PRETRAINING과 동일, 원본 본문 사용)
+PRETRAINING_ON_TRAIN20_EPOCHS = 20  # 유저별 후반 20% 프리트레이닝 에폭 수
+PRETRAINING_ON_TRAIN20_SAVE_PATH = 'saved_models/pretrained_naml_model_train20.h5'  # 저장 경로
 EVAL_PRETRAINED_ON_TRAIN80 = False  # True: 저장된 프리트레이닝 모델 로드 후 트레이닝 80%에 대해 실제/기대 본문 각각 테스트
 EVAL_PRETRAINED_ON_TRAIN80_FIRST_BATCH = False  # True: 트레이닝 80% 지정 배치만 평가, 기대본문은 train80_batch{N} 로드, result{N}.txt 저장
 EVAL_TRAIN80_BATCH_SIZE = 500  # 배치당 세션 수
@@ -1284,6 +1287,103 @@ if DO_PRETRAINING:
     print(f"{'='*60}")
     print("Pretraining 완료 후 프로그램을 종료합니다.")
     print(f"{'='*60}")
+    import sys
+    sys.exit(0)
+
+# ========== Pretraining on 트레이닝셋 유저별 후반 20% (DO_PRETRAINING과 동일 구조, 원본 본문 사용) ==========
+elif DO_PRETRAINING_ON_TRAIN20:
+    print(f"\n{'='*60}")
+    print("Pretraining (유저별 후반 20%): 트레이닝셋 유저별 후반 20% 데이터로 원본 본문 사용")
+    print(f"{'='*60}")
+    from collections import defaultdict
+    user_to_indices = defaultdict(list)
+    for i in range(len(all_train_id)):
+        uid = all_train_userid_str[i] if all_train_userid_str is not None else i
+        user_to_indices[uid].append(i)
+    train20_indices = []
+    for uid, indices in user_to_indices.items():
+        n = len(indices)
+        take_count = max(1, int(np.ceil(0.2 * n)))
+        train20_indices.extend(indices[-take_count:])
+    train20_indices = sorted(train20_indices)
+    last20_size = len(train20_indices)
+    pretrain20_pn = [all_train_pn[i] for i in train20_indices]
+    pretrain20_label = [all_label[i] for i in train20_indices]
+    pretrain20_id = [all_train_id[i] for i in train20_indices]
+    print(f"전체 학습 샘플 수: {len(all_train_id)}개")
+    print(f"Pretraining(유저별 후반 20%%)에 사용할 샘플 수: {last20_size}개, 유저 수: {len(user_to_indices)}명")
+    print(f"Pretraining 에폭 수: {PRETRAINING_ON_TRAIN20_EPOCHS}")
+    print(f"{'='*60}\n")
+    pretrain20_results = []
+    best_mrr_t20 = -1.0
+    best_mrr_epoch_t20 = -1
+    for pretrain_ep in range(PRETRAINING_ON_TRAIN20_EPOCHS):
+        np.random.seed(SEED + pretrain_ep)
+        random.seed(SEED + pretrain_ep)
+        pretrain20_gen = generate_batch_data_train(
+            pretrain20_pn, pretrain20_label, pretrain20_id, 30,
+            candidate_news_body=None
+        )
+        steps_per_epoch_t20 = (last20_size + 29) // 30
+        print(f"\nPretraining(유저별 후반 20%%) Epoch {pretrain_ep+1}/{PRETRAINING_ON_TRAIN20_EPOCHS} - 샘플 수: {last20_size}개, Steps: {steps_per_epoch_t20}")
+        model.fit(pretrain20_gen, epochs=1, steps_per_epoch=steps_per_epoch_t20, verbose=1)
+        print(f"\n[Pretraining(유저별 후반 20%%) Epoch {pretrain_ep+1}] 테스트셋 평가 중... (원본 본문 사용)")
+        pretrain20_testgen = generate_batch_data_test(
+            all_test_pn, all_test_label, all_test_id, 30,
+            candidate_news_body=None
+        )
+        test_steps_t20 = len(all_test_id)
+        click_score_t20 = model_test.predict(pretrain20_testgen, steps=test_steps_t20, verbose=0)
+        pretrain20_all_mrr, pretrain20_all_ndcg, pretrain20_all_hit1 = [], [], []
+        session_count_t20 = 0
+        for m in all_test_index:
+            has_label = np.sum(all_test_label[m[0]:m[1]]) != 0
+            in_range = m[1] <= len(click_score_t20)
+            if has_label and in_range:
+                session_scores = click_score_t20[m[0]:m[1], 0]
+                session_labels = all_test_label[m[0]:m[1]]
+                pretrain20_all_mrr.append(mrr_score(session_labels, session_scores))
+                pretrain20_all_ndcg.append(ndcg_score(session_labels, session_scores, k=5))
+                pretrain20_all_hit1.append(hit_at_k(session_labels, session_scores, k=1))
+                session_count_t20 += 1
+        if len(pretrain20_all_mrr) > 0:
+            epoch_res = {
+                'MRR': np.mean(pretrain20_all_mrr),
+                'NDCG@5': np.mean(pretrain20_all_ndcg),
+                'Hit@1': np.mean(pretrain20_all_hit1)
+            }
+            pretrain20_results.append(epoch_res)
+            current_mrr = epoch_res['MRR']
+            print(f"[Pretraining(유저별 후반 20%%) Epoch {pretrain_ep+1}] 테스트 결과:")
+            print(f"  평가된 세션 수: {session_count_t20}개")
+            print(f"  MRR      : {current_mrr:.6f}")
+            print(f"  NDCG@5   : {epoch_res['NDCG@5']:.6f}")
+            print(f"  Hit@1    : {epoch_res['Hit@1']:.6f}")
+            if current_mrr > best_mrr_t20:
+                best_mrr_t20 = current_mrr
+                best_mrr_epoch_t20 = pretrain_ep + 1
+                save_dir_t20 = os.path.dirname(PRETRAINING_ON_TRAIN20_SAVE_PATH)
+                if save_dir_t20 and not os.path.exists(save_dir_t20):
+                    os.makedirs(save_dir_t20, exist_ok=True)
+                model.save_weights(PRETRAINING_ON_TRAIN20_SAVE_PATH)
+                print(f"  → 최고 MRR 갱신! 모델 저장: {PRETRAINING_ON_TRAIN20_SAVE_PATH} (MRR: {best_mrr_t20:.6f})")
+        else:
+            print(f"[Pretraining(유저별 후반 20%%) Epoch {pretrain_ep+1}] 평가 가능한 세션이 없습니다.")
+    print(f"\n{'='*60}")
+    print("Pretraining(유저별 후반 20%%) 완료! 결과 요약")
+    print(f"{'='*60}")
+    if len(pretrain20_results) > 0:
+        print(f"{'Epoch':<10} {'MRR':<12} {'NDCG@5':<12} {'Hit@1':<12}")
+        print(f"{'-'*60}")
+        for i, r in enumerate(pretrain20_results, 1):
+            print(f"{i:<10} {r['MRR']:<12.6f} {r['NDCG@5']:<12.6f} {r['Hit@1']:<12.6f}")
+        best_hit1_idx_t20 = np.argmax([r['Hit@1'] for r in pretrain20_results])
+        print(f"{'='*60}")
+        print(f"Best MRR  : Epoch {best_mrr_epoch_t20} - {best_mrr_t20:.6f} (모델 저장됨)")
+        print(f"Best Hit@1: Epoch {best_hit1_idx_t20 + 1} - {pretrain20_results[best_hit1_idx_t20]['Hit@1']:.6f}")
+    print(f"\n최고 성능 모델 저장 완료: {PRETRAINING_ON_TRAIN20_SAVE_PATH}")
+    print(f"{'='*60}\n")
+    print("Pretraining(유저별 후반 20%%) 완료 후 프로그램을 종료합니다.")
     import sys
     sys.exit(0)
 
