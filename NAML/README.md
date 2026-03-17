@@ -11,5 +11,5 @@ conda activate tf28
 
 pip install -r requirements.txt
 
-CUDA_VISIBLE_DEVICES=1 python NAML/NAML.py
+CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/NAML.py
 python NAML/NAML.py
