@@ -1196,12 +1196,12 @@ if DO_PRETRAINING:
         
         # 원본 본문 사용 (USE_EXPECTED_BODY=False)
         pretrain_gen = generate_batch_data_train(
-            pretrain_pn, pretrain_label, pretrain_id, 30, 
+            pretrain_pn, pretrain_label, pretrain_id, 16, 
             candidate_news_body=None
         )
         
         actual_pretrain_samples = len(pretrain_id)
-        pretrain_steps_per_epoch = (actual_pretrain_samples + 29) // 30
+        pretrain_steps_per_epoch = (actual_pretrain_samples + 15) // 16
         
         print(f"\nPretraining Epoch {pretrain_ep+1}/{PRETRAINING_EPOCHS} - 샘플 수: {actual_pretrain_samples}개, Steps: {pretrain_steps_per_epoch}")
         model.fit(pretrain_gen, epochs=1, steps_per_epoch=pretrain_steps_per_epoch, verbose=1)
@@ -1211,7 +1211,7 @@ if DO_PRETRAINING:
         
         # 테스트 데이터 생성 (원본 본문 사용)
         pretrain_testgen = generate_batch_data_test(
-            all_test_pn, all_test_label, all_test_id, 30, 
+            all_test_pn, all_test_label, all_test_id, 16, 
             candidate_news_body=None
         )
         
@@ -1331,15 +1331,15 @@ elif DO_PRETRAINING_ON_TRAIN20:
         np.random.seed(SEED + pretrain_ep)
         random.seed(SEED + pretrain_ep)
         pretrain20_gen = generate_batch_data_train(
-            pretrain20_pn, pretrain20_label, pretrain20_id, 30,
+            pretrain20_pn, pretrain20_label, pretrain20_id, 16,
             candidate_news_body=None
         )
-        steps_per_epoch_t20 = (last20_size + 29) // 30
+        steps_per_epoch_t20 = (last20_size + 15) // 16
         print(f"\nPretraining(유저별 후반 20%%) Epoch {pretrain_ep+1}/{PRETRAINING_ON_TRAIN20_EPOCHS} - 샘플 수: {last20_size}개, Steps: {steps_per_epoch_t20}")
         model.fit(pretrain20_gen, epochs=1, steps_per_epoch=steps_per_epoch_t20, verbose=1)
         print(f"\n[Pretraining(유저별 후반 20%%) Epoch {pretrain_ep+1}] 테스트셋 평가 중... (원본 본문 사용)")
         pretrain20_testgen = generate_batch_data_test(
-            all_test_pn, all_test_label, all_test_id, 30,
+            all_test_pn, all_test_label, all_test_id, 16,
             candidate_news_body=None
         )
         test_steps_t20 = len(all_test_id)
@@ -1445,7 +1445,7 @@ if FINETUNE_USER_ENCODER:
         matched = sum(1 for k in need_keys if k in expected_bodies_finetune)
         print(f"파인튜닝 매칭: 필요 (user,news) 키 {len(need_keys)}개 중 기대본문 존재 {matched}개 ({100.0*matched/len(need_keys):.1f}%)" if need_keys else "파인튜닝 매칭: 필요 키 없음")
     finetune_gen = generate_batch_data_train(
-        train20_pn, train20_label, train20_id, 30,
+        train20_pn, train20_label, train20_id, 16,
         candidate_news_body=None,
         expected_bodies=expected_bodies_finetune,
         all_userid_str=train20_userid_str,
@@ -1453,7 +1453,7 @@ if FINETUNE_USER_ENCODER:
         news_index_reverse=news_index_reverse,
         use_expected_body_positive_only=True  # 유저 인코더 파인튜닝: 정답 후보만 기대본문 사용
     )
-    steps_per_epoch = (last20_size + 29) // 30
+    steps_per_epoch = (last20_size + 15) // 16
     # 테스트셋 기대본문 로드 (매 에폭 기대본문 NDCG 평가용)
     test_body_dir = os.path.join(body_gen_output, FINETUNE_TESTSET_EXPECTED_BODY_DIR)
     expected_bodies_test_finetune = None
@@ -1467,7 +1467,7 @@ if FINETUNE_USER_ENCODER:
         if use_expected_body and (expected_bodies is None or all_test_userid_str is None or all_test_newsid_str is None):
             return None
         testgen = generate_batch_data_test(
-            all_test_pn, all_test_label, all_test_id, 30,
+            all_test_pn, all_test_label, all_test_id, 16,
             candidate_news_body=None,
             expected_bodies=expected_bodies,
             all_userid_str=all_test_userid_str,
@@ -1576,14 +1576,14 @@ if FINETUNE_NEWS_ENCODER:
         matched = sum(1 for k in need_keys if k in expected_bodies_finetune)
         print(f"파인튜닝 매칭: 필요 (user,news) 키 {len(need_keys)}개 중 기대본문 존재 {matched}개 ({100.0*matched/len(need_keys):.1f}%)" if need_keys else "파인튜닝 매칭: 필요 키 없음")
     finetune_gen = generate_batch_data_train(
-        train20_pn, train20_label, train20_id, 30,
+        train20_pn, train20_label, train20_id, 16,
         candidate_news_body=None,
         expected_bodies=expected_bodies_finetune,
         all_userid_str=train20_userid_str,
         all_newsid_str=train20_newsid_str,
         news_index_reverse=news_index_reverse
     )
-    steps_per_epoch = (last20_size + 29) // 30
+    steps_per_epoch = (last20_size + 15) // 16
     test_body_dir = os.path.join(body_gen_output, FINETUNE_TESTSET_EXPECTED_BODY_DIR)
     expected_bodies_test_finetune = None
     if os.path.isdir(test_body_dir):
@@ -1596,7 +1596,7 @@ if FINETUNE_NEWS_ENCODER:
         if use_expected_body and (expected_bodies is None or all_test_userid_str is None or all_test_newsid_str is None):
             return None
         testgen = generate_batch_data_test(
-            all_test_pn, all_test_label, all_test_id, 30,
+            all_test_pn, all_test_label, all_test_id, 16,
             candidate_news_body=None,
             expected_bodies=expected_bodies,
             all_userid_str=all_test_userid_str,
@@ -1699,14 +1699,14 @@ if FINETUNE_FULL_MODEL:
         matched = sum(1 for k in need_keys if k in expected_bodies_finetune)
         print(f"파인튜닝 매칭: 필요 (user,news) 키 {len(need_keys)}개 중 기대본문 존재 {matched}개 ({100.0*matched/len(need_keys):.1f}%)" if need_keys else "파인튜닝 매칭: 필요 키 없음")
     finetune_gen = generate_batch_data_train(
-        train20_pn, train20_label, train20_id, 30,
+        train20_pn, train20_label, train20_id, 16,
         candidate_news_body=None,
         expected_bodies=expected_bodies_finetune,
         all_userid_str=train20_userid_str,
         all_newsid_str=train20_newsid_str,
         news_index_reverse=news_index_reverse
     )
-    steps_per_epoch = (last20_size + 29) // 30
+    steps_per_epoch = (last20_size + 15) // 16
     test_body_dir = os.path.join(body_gen_output, FINETUNE_TESTSET_EXPECTED_BODY_DIR)
     expected_bodies_test_finetune = None
     if os.path.isdir(test_body_dir):
@@ -1719,7 +1719,7 @@ if FINETUNE_FULL_MODEL:
         if use_expected_body and (expected_bodies is None or all_test_userid_str is None or all_test_newsid_str is None):
             return None
         testgen = generate_batch_data_test(
-            all_test_pn, all_test_label, all_test_id, 30,
+            all_test_pn, all_test_label, all_test_id, 16,
             candidate_news_body=None,
             expected_bodies=expected_bodies,
             all_userid_str=all_test_userid_str,
@@ -1835,7 +1835,7 @@ if EVAL_PRETRAINED_ON_TRAIN80_FIRST_BATCH:
         if use_expected_body and (expected_bodies is None or all_userid_str is None or all_newsid_str is None):
             return None, None, None
         testgen = generate_batch_data_test(
-            train80_test_pn, train80_test_label, train80_test_id, 30,
+            train80_test_pn, train80_test_label, train80_test_id, 16,
             candidate_news_body=None,
             expected_bodies=expected_bodies,
             all_userid_str=all_userid_str,
@@ -2054,7 +2054,7 @@ if EVAL_PRETRAINED_ON_TRAIN20_FIRST_BATCH:
         if use_expected_body and (expected_bodies is None or all_userid_str is None or all_newsid_str is None):
             return None, None, None
         testgen = generate_batch_data_test(
-            train20_test_pn, train20_test_label, train20_test_id, 30,
+            train20_test_pn, train20_test_label, train20_test_id, 16,
             candidate_news_body=None,
             expected_bodies=expected_bodies,
             all_userid_str=all_userid_str,
@@ -2263,7 +2263,7 @@ if EVAL_PRETRAINED_ON_TRAIN80:
         if use_expected_body and (expected_bodies is None or all_userid_str is None or all_newsid_str is None):
             return None, None, None
         testgen = generate_batch_data_test(
-            train80_test_pn, train80_test_label, train80_test_id, 30,
+            train80_test_pn, train80_test_label, train80_test_id, 16,
             candidate_news_body=None,
             expected_bodies=expected_bodies,
             all_userid_str=all_userid_str,
@@ -2592,7 +2592,7 @@ if EVAL_PRETRAINED_ON_TRAIN20:
         if use_expected_body and (expected_bodies is None or all_userid_str is None or all_newsid_str is None):
             return None, None, None, None, None
         testgen = generate_batch_data_test(
-            train20_test_pn, train20_test_label, train20_test_id, 30,
+            train20_test_pn, train20_test_label, train20_test_id, 16,
             candidate_news_body=None,
             expected_bodies=expected_bodies,
             all_userid_str=all_userid_str,
@@ -2723,7 +2723,7 @@ if EVAL_PRETRAINED_ON_TESTSET:
         if use_expected_body and (expected_bodies is None or all_userid_str is None or all_newsid_str is None):
             return None
         testgen = generate_batch_data_test(
-            all_test_pn, all_test_label, all_test_id, 30,
+            all_test_pn, all_test_label, all_test_id, 16,
             candidate_news_body=None,
             expected_bodies=expected_bodies,
             all_userid_str=all_userid_str,
@@ -2887,7 +2887,7 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
     if expected_bodies_train20 is None:
         print("학습 본문: 실제본문 사용")
     traingen_t20 = generate_batch_data_train(
-        train20_pn, train20_label, train20_id, 30,
+        train20_pn, train20_label, train20_id, 16,
         candidate_news_body=None,
         expected_bodies=expected_bodies_train20,
         all_userid_str=train20_userid_str,
@@ -2895,7 +2895,7 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
         news_index_reverse=news_index_reverse,
         use_expected_body_positive_only=TRAIN_ON_TRAIN20_EXPECTED_BODY_POSITIVE_ONLY
     )
-    steps_t20 = (last20_size + 29) // 30
+    steps_t20 = (last20_size + 15) // 16
     test_steps_t20 = len(all_test_id)
     test_exp_dir_t20 = os.path.join(body_gen_output_main, TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR)
     expected_bodies_test_t20 = None
@@ -2914,7 +2914,7 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
         random.seed(SEED + ep)
         model.fit(traingen_t20, epochs=1, steps_per_epoch=steps_t20, verbose=1)
         # 매 에폭 테스트셋 실제본문 평가
-        testgen_actual_t20 = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, 30, candidate_news_body=None)
+        testgen_actual_t20 = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, 16, candidate_news_body=None)
         click_actual_t20 = model_test.predict(testgen_actual_t20, steps=test_steps_t20, verbose=0)
         all_mrr_a, all_ndcg_a, all_hit1_a = [], [], []
         for m in all_test_index:
@@ -2931,7 +2931,7 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
         # 매 에폭 테스트셋 기대본문 평가
         if expected_bodies_test_t20 is not None:
             testgen_exp_t20 = generate_batch_data_test(
-                all_test_pn, all_test_label, all_test_id, 30,
+                all_test_pn, all_test_label, all_test_id, 16,
                 candidate_news_body=None,
                 expected_bodies=expected_bodies_test_t20,
                 all_userid_str=all_test_userid_str,
@@ -2954,7 +2954,7 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
         # 매 에폭 테스트셋 기대본문(2) 평가
         if expected_bodies_test_t20_2 is not None:
             testgen_exp_t20_2 = generate_batch_data_test(
-                all_test_pn, all_test_label, all_test_id, 30,
+                all_test_pn, all_test_label, all_test_id, 16,
                 candidate_news_body=None,
                 expected_bodies=expected_bodies_test_t20_2,
                 all_userid_str=all_test_userid_str,
@@ -2982,7 +2982,7 @@ else:
         if USE_EXPECTED_BODY:
             # 유저별 기대본문 사용
             traingen=generate_batch_data_train(
-                all_train_pn, all_label, all_train_id, 30, 
+                all_train_pn, all_label, all_train_id, 16, 
                 candidate_news_body=None,
                 expected_bodies=expected_bodies_train,
                 all_userid_str=all_train_userid_str,
@@ -2991,17 +2991,17 @@ else:
             )
         else:
             # 원본 본문 사용
-            traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 30, candidate_news_body=None)
+            traingen=generate_batch_data_train(all_train_pn,all_label,all_train_id, 16, candidate_news_body=None)
 
         actual_train_samples = len(all_train_id)
-        steps_per_epoch = (actual_train_samples + 29) // 30
+        steps_per_epoch = (actual_train_samples + 15) // 16
         model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch)
         
         actual_test_samples = len(all_test_id)
         test_steps = actual_test_samples
 
         # [1] 테스트셋 실제본문으로 평가
-        testgen_actual = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, 30, candidate_news_body=None)
+        testgen_actual = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, 16, candidate_news_body=None)
         click_score = model_test.predict(testgen_actual, steps=test_steps, verbose=1)
         # print(f"[디버깅] 실제 생성된 click_score 수: {len(click_score)}")
         
@@ -3093,7 +3093,7 @@ else:
         epoch_results_expected = None
         if expected_bodies_main_test is not None:
             testgen_expected = generate_batch_data_test(
-                all_test_pn, all_test_label, all_test_id, 30,
+                all_test_pn, all_test_label, all_test_id, 16,
                 candidate_news_body=None,
                 expected_bodies=expected_bodies_main_test,
                 all_userid_str=all_test_userid_str,
@@ -3121,7 +3121,7 @@ else:
         epoch_results_expected_2 = None
         if expected_bodies_main_test_2 is not None:
             testgen_expected_2 = generate_batch_data_test(
-                all_test_pn, all_test_label, all_test_id, 30,
+                all_test_pn, all_test_label, all_test_id, 16,
                 candidate_news_body=None,
                 expected_bodies=expected_bodies_main_test_2,
                 all_userid_str=all_test_userid_str,
