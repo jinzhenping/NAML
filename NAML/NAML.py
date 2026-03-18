@@ -1001,29 +1001,30 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                for i in range(len(y)//batch_size+1)
                if batch_size*i < len(y)]  # 빈 배치 제외
 
+    MAX_SENTS = MAX_HISTORY_CLICKS
     while (True):
         for batch_indices in batches:
-            # batch_indices는 배치 내 샘플 인덱스 배열
-            # 각 샘플에 대해 개별적으로 yield (원래 구조 유지)
+            batch_candidates = []
+            batch_browsed_news = [[] for _ in range(MAX_SENTS)]
+            batch_candidate_body = []
+            batch_browsed_news_body = [[] for _ in range(MAX_SENTS)]
+            batch_candidate_vertical = []
+            batch_browsed_news_vertical = [[] for _ in range(MAX_SENTS)]
+            batch_candidate_subvertical = []
+            batch_browsed_news_subvertical = [[] for _ in range(MAX_SENTS)]
+            batch_labels = []
             for idx in batch_indices:
-                # all_test_pn[idx]는 단일 정수 (각 후보 뉴스가 개별 샘플)
                 news_idx = int(all_test_pn[idx])
-                candidate = news_words[news_idx]  # shape: (30,)
-                candidate = np.expand_dims(candidate, axis=0)  # shape: (1, 30)
-                
-                # 후보 뉴스는 유저별 기대 본문 사용
+                candidate = news_words[news_idx]
+                candidate = np.expand_dims(candidate, axis=0)
                 if expected_bodies is not None and all_userid_str is not None and all_newsid_str is not None:
-                    # 해당 유저의 기대본문 찾기
-                    user_id_str = all_userid_str[idx]  # 리스트 인덱싱
-                    news_id_str = all_newsid_str[idx]  # 리스트 인덱싱, 단일 후보 뉴스 ID
-                    
-                    if news_idx == 0:  # 패딩
+                    user_id_str = all_userid_str[idx]
+                    news_id_str = all_newsid_str[idx]
+                    if news_idx == 0:
                         candidate_body = news_body[0]
                     else:
-                        # 유저별 기대본문 찾기 (키 정규화로 758 vs 758.0 등 통일)
                         key = _norm_expected_body_key(user_id_str, news_id_str)
                         if key in expected_bodies:
-                            # 기대본문 토큰화 및 인덱스 변환
                             expected_body = expected_bodies[key]
                             body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
                             word_id = []
@@ -1034,33 +1035,51 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                             word_id = word_id + [0] * (300 - len(word_id))
                             candidate_body = np.array(word_id, dtype='int32')
                         else:
-                            # 기대본문이 없으면 원본 본문 사용
                             candidate_body = news_body[news_idx]
                 elif candidate_news_body is not None:
-                    # candidate_news_body 사용 (현재 사용되지 않음)
                     candidate_body = candidate_news_body[news_idx]
                 else:
-                    # 원본 본문 사용 (USE_EXPECTED_BODY=False일 때 이 경로 사용)
                     candidate_body = news_body[news_idx]
-                
-                candidate_body = np.expand_dims(candidate_body, axis=0)  # shape: (1, 300)
-                candidate_vertical = np.expand_dims(news_v[news_idx], axis=0)  # shape: (1, 1)
-                candidate_subvertical = np.expand_dims(news_sv[news_idx], axis=0)  # shape: (1, 1)
-
+                candidate_body = np.expand_dims(candidate_body, axis=0)
+                candidate_vertical = np.expand_dims(news_v[news_idx], axis=0)
+                candidate_subvertical = np.expand_dims(news_sv[news_idx], axis=0)
                 user_pos = all_test_user_pos_override if all_test_user_pos_override is not None else all_test_user_pos
                 user_pos_indices = np.array(user_pos[idx], dtype='int32')
-                browsed_news = news_words[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 30)
+                browsed_news = news_words[user_pos_indices]
                 browsed_news_split = [np.expand_dims(browsed_news[k], axis=0) for k in range(browsed_news.shape[0])]
-                browsed_news_body = news_body[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 300)
+                browsed_news_body = news_body[user_pos_indices]
                 browsed_news_body_split = [np.expand_dims(browsed_news_body[k], axis=0) for k in range(browsed_news_body.shape[0])]
-                browsed_news_vertical = news_v[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 1)
+                browsed_news_vertical = news_v[user_pos_indices]
                 browsed_news_vertical_split = [np.expand_dims(browsed_news_vertical[k], axis=0) for k in range(browsed_news_vertical.shape[0])]
-                browsed_news_subvertical = news_sv[user_pos_indices]  # shape: (MAX_HISTORY_CLICKS, 1)
+                browsed_news_subvertical = news_sv[user_pos_indices]
                 browsed_news_subvertical_split = [np.expand_dims(browsed_news_subvertical[k], axis=0) for k in range(browsed_news_subvertical.shape[0])]
-                
-                label = all_label[idx]
-                yield ([candidate] + browsed_news_split + [candidate_body] + browsed_news_body_split + [candidate_vertical]
-                       + browsed_news_vertical_split + [candidate_subvertical] + browsed_news_subvertical_split, [label])
+                batch_candidates.append(candidate)
+                for k in range(MAX_SENTS):
+                    batch_browsed_news[k].append(browsed_news_split[k])
+                batch_candidate_body.append(candidate_body)
+                for k in range(MAX_SENTS):
+                    batch_browsed_news_body[k].append(browsed_news_body_split[k])
+                batch_candidate_vertical.append(candidate_vertical)
+                for k in range(MAX_SENTS):
+                    batch_browsed_news_vertical[k].append(browsed_news_vertical_split[k])
+                batch_candidate_subvertical.append(candidate_subvertical)
+                for k in range(MAX_SENTS):
+                    batch_browsed_news_subvertical[k].append(browsed_news_subvertical_split[k])
+                batch_labels.append(all_label[idx])
+            batch_inputs = [np.concatenate(batch_candidates, axis=0)]
+            for k in range(MAX_SENTS):
+                batch_inputs.append(np.concatenate(batch_browsed_news[k], axis=0))
+            batch_inputs.append(np.concatenate(batch_candidate_body, axis=0))
+            for k in range(MAX_SENTS):
+                batch_inputs.append(np.concatenate(batch_browsed_news_body[k], axis=0))
+            batch_inputs.append(np.concatenate(batch_candidate_vertical, axis=0))
+            for k in range(MAX_SENTS):
+                batch_inputs.append(np.concatenate(batch_browsed_news_vertical[k], axis=0))
+            batch_inputs.append(np.concatenate(batch_candidate_subvertical, axis=0))
+            for k in range(MAX_SENTS):
+                batch_inputs.append(np.concatenate(batch_browsed_news_subvertical[k], axis=0))
+            batch_labels_array = np.array(batch_labels, dtype='float32')
+            yield (batch_inputs, batch_labels_array)
 
 results=[]
 keras.backend.clear_session()
@@ -1216,7 +1235,7 @@ if DO_PRETRAINING:
         )
         
         actual_test_samples = len(all_test_id)
-        test_steps = actual_test_samples
+        test_steps = (actual_test_samples + 15) // 16
         click_score = model_test.predict(pretrain_testgen, steps=test_steps, verbose=0)
         
         # 평가 지표 계산
@@ -1342,7 +1361,7 @@ elif DO_PRETRAINING_ON_TRAIN20:
             all_test_pn, all_test_label, all_test_id, 16,
             candidate_news_body=None
         )
-        test_steps_t20 = len(all_test_id)
+        test_steps_t20 = (len(all_test_id) + 15) // 16
         click_score_t20 = model_test.predict(pretrain20_testgen, steps=test_steps_t20, verbose=0)
         pretrain20_all_mrr, pretrain20_all_ndcg, pretrain20_all_hit1 = [], [], []
         session_count_t20 = 0
@@ -1474,7 +1493,7 @@ if FINETUNE_USER_ENCODER:
             all_newsid_str=all_test_newsid_str,
             news_index_reverse=news_index_reverse
         )
-        click_score = model_test.predict(testgen, steps=len(all_test_id), verbose=0)
+        click_score = model_test.predict(testgen, steps=(len(all_test_id) + 15) // 16, verbose=0)
         eps = 1e-7
         all_ndcg, all_mrr, all_hit1, all_loss = [], [], [], []
         for m in all_test_index:
@@ -1603,7 +1622,7 @@ if FINETUNE_NEWS_ENCODER:
             all_newsid_str=all_test_newsid_str,
             news_index_reverse=news_index_reverse
         )
-        click_score = model_test.predict(testgen, steps=len(all_test_id), verbose=0)
+        click_score = model_test.predict(testgen, steps=(len(all_test_id) + 15) // 16, verbose=0)
         eps = 1e-7
         all_ndcg, all_mrr, all_hit1, all_loss = [], [], [], []
         for m in all_test_index:
@@ -1726,7 +1745,7 @@ if FINETUNE_FULL_MODEL:
             all_newsid_str=all_test_newsid_str,
             news_index_reverse=news_index_reverse
         )
-        click_score = model_test.predict(testgen, steps=len(all_test_id), verbose=0)
+        click_score = model_test.predict(testgen, steps=(len(all_test_id) + 15) // 16, verbose=0)
         eps = 1e-7
         all_ndcg, all_mrr, all_hit1, all_loss = [], [], [], []
         for m in all_test_index:
@@ -1843,7 +1862,7 @@ if EVAL_PRETRAINED_ON_TRAIN80_FIRST_BATCH:
             news_index_reverse=news_index_reverse,
             all_test_user_pos_override=train80_test_user_pos
         )
-        steps = len(train80_test_id)
+        steps = (len(train80_test_id) + 15) // 16
         click_score = model_test.predict(testgen, steps=steps, verbose=0)
         eps = 1e-7
         all_session_loss = []
@@ -2062,7 +2081,7 @@ if EVAL_PRETRAINED_ON_TRAIN20_FIRST_BATCH:
             news_index_reverse=news_index_reverse,
             all_test_user_pos_override=train20_test_user_pos
         )
-        steps = len(train20_test_id)
+        steps = (len(train20_test_id) + 15) // 16
         click_score = model_test.predict(testgen, steps=steps, verbose=0)
         eps = 1e-7
         all_session_loss = []
@@ -2271,7 +2290,7 @@ if EVAL_PRETRAINED_ON_TRAIN80:
             news_index_reverse=news_index_reverse,
             all_test_user_pos_override=train80_test_user_pos
         )
-        steps = len(train80_test_id)
+        steps = (len(train80_test_id) + 15) // 16
         click_score = model_test.predict(testgen, steps=steps, verbose=0)
         
         eps = 1e-7
@@ -2600,7 +2619,7 @@ if EVAL_PRETRAINED_ON_TRAIN20:
             news_index_reverse=news_index_reverse,
             all_test_user_pos_override=train20_test_user_pos
         )
-        steps = len(train20_test_id)
+        steps = (len(train20_test_id) + 15) // 16
         click_score = model_test.predict(testgen, steps=steps, verbose=0)
         eps = 1e-7
         all_session_loss = []
@@ -2730,7 +2749,7 @@ if EVAL_PRETRAINED_ON_TESTSET:
             all_newsid_str=all_newsid_str,
             news_index_reverse=news_index_reverse
         )
-        test_steps = len(all_test_id)
+        test_steps = (len(all_test_id) + 15) // 16
         click_score = model_test.predict(testgen, steps=test_steps, verbose=0)
         
         eps = 1e-7
@@ -2896,7 +2915,7 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
         use_expected_body_positive_only=TRAIN_ON_TRAIN20_EXPECTED_BODY_POSITIVE_ONLY
     )
     steps_t20 = (last20_size + 15) // 16
-    test_steps_t20 = len(all_test_id)
+    test_steps_t20 = (len(all_test_id) + 15) // 16
     test_exp_dir_t20 = os.path.join(body_gen_output_main, TRAIN_ON_TRAIN20_TESTSET_EXPECTED_BODY_DIR)
     expected_bodies_test_t20 = None
     if os.path.isdir(test_exp_dir_t20):
@@ -2998,7 +3017,7 @@ else:
         model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch)
         
         actual_test_samples = len(all_test_id)
-        test_steps = actual_test_samples
+        test_steps = (actual_test_samples + 15) // 16
 
         # [1] 테스트셋 실제본문으로 평가
         testgen_actual = generate_batch_data_test(all_test_pn, all_test_label, all_test_id, 16, candidate_news_body=None)
