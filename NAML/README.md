@@ -5,8 +5,7 @@ MIND 데이터셋을 사용한 뉴스 추천 모델 학습 및 테스트
 ## 설치
 
 ```bash
-cd ~
-conda activate tf28
+conda activate tf28gpu
 
 # 프로젝트 루트에서
 pip install -r requirements.txt
