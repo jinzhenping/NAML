@@ -32,6 +32,7 @@ MAX_SENT_LENGTH = 30     # 제목 최대 단어 수
 MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
 USE_EXPECTED_BODY = False  # True: 기대 본문 사용, False: 원본 본문 사용
+MAIN_TRAINING_LEARNING_RATE = 0.0005  # 메인 학습 루프(및 동일 model.compile) Adam 학습률
 
 # MIND 데이터셋 (프로젝트 루트 기준 dataset/<MIND_DATASET_SUBDIR>/)
 # MIND_DATASET_SUBDIR 만 바꿔도 됨: MIND_1000 / MIND_2000 은 폴더 안 파일을 자동 탐색(glob)하거나 아래 프리셋 사용
@@ -1255,7 +1256,7 @@ model_test = keras.Model([candidate_one_title]+browsed_news_input+[candidate_one
                          +[candidate_one_v]+browsed_v_input+[candidate_one_sv]+browsed_sv_input, score)
 
 
-model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=0.0005), metrics=['acc'])
+model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=MAIN_TRAINING_LEARNING_RATE), metrics=['acc'])
 
 # news_index 역매핑 생성 (인덱스 -> 뉴스 ID)
 news_index_reverse = {v: k for k, v in news_index.items()}
