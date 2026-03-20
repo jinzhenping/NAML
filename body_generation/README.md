@@ -16,6 +16,12 @@
 pip install -r requirements.txt
 ```
 
+## 데이터 경로
+
+- `dataset/<폴더>/` 안에 `MIND_news.tsv` + `MIND_train_*.tsv` 1개 + `MIND_test_*.tsv` 1개면 **자동 인식** (`MIND_1000` 등).
+- `MIND_2000` 은 코드에 프리셋으로 `(2000)` 파일명이 박혀 있음.
+- 그 외는 환경변수 `MIND_*_FILENAME` 또는 NAML의 `MIND_DATASET_PRESETS` 에 폴더 추가.
+
 ## 환경 설정
 
 OpenAI API 키를 환경변수로 설정하세요:

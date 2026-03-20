@@ -12,14 +12,62 @@ from typing import List, Dict, Optional
 import json
 from pathlib import Path
 
+_BODY_GEN_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+MIND_DATASET_PRESETS_BG = {
+    "MIND_2000": ("MIND_news.tsv", "MIND_train_(2000).tsv", "MIND_test_(2000).tsv"),
+}
+
+
+def _discover_mind_tsv_bg(subdir: str):
+    base = _BODY_GEN_PROJECT_ROOT / "dataset" / subdir
+    if not base.is_dir():
+        return None
+    news_p = base / "MIND_news.tsv"
+    if news_p.is_file():
+        news_name = "MIND_news.tsv"
+    else:
+        cand = sorted(base.glob("*news*.tsv"))
+        if len(cand) == 1:
+            news_name = cand[0].name
+        else:
+            return None
+    trains = sorted(base.glob("MIND_train_*.tsv"))
+    tests = sorted(base.glob("MIND_test_*.tsv"))
+    if len(trains) != 1 or len(tests) != 1:
+        return None
+    return news_name, trains[0].name, tests[0].name
+
+
+def _resolve_mind_filenames_bg(subdir: str):
+    if subdir in MIND_DATASET_PRESETS_BG:
+        n, tr, te = MIND_DATASET_PRESETS_BG[subdir]
+    else:
+        disc = _discover_mind_tsv_bg(subdir)
+        if disc:
+            n, tr, te = disc
+        else:
+            n, tr, te = "MIND_news.tsv", "MIND_train_(1000).tsv", "MIND_test_(1000).tsv"
+    if "MIND_NEWS_FILENAME" in os.environ:
+        n = os.environ["MIND_NEWS_FILENAME"]
+    if "MIND_TRAIN_FILENAME" in os.environ:
+        tr = os.environ["MIND_TRAIN_FILENAME"]
+    if "MIND_TEST_FILENAME" in os.environ:
+        te = os.environ["MIND_TEST_FILENAME"]
+    return n, tr, te
+
+
+def _default_mind_tsv(filename: str, subdir: Optional[str] = None) -> str:
+    s = subdir or os.environ.get("MIND_DATASET_SUBDIR", "MIND")
+    return str(_BODY_GEN_PROJECT_ROOT / "dataset" / s / filename)
+
 
 class BodyGenerator:
     def __init__(self, 
                  prompt_path: str = "body_generation/prompt.yaml",
                  settings_path: str = "body_generation/generation_settings.yaml",
-                 news_data_path: str = "dataset/MIND/MIND_news.tsv",
-                 train_data_path: str = "dataset/MIND/MIND_train_(1000).tsv",
-                 test_data_path: str = "dataset/MIND/MIND_test_(1000).tsv",
+                 news_data_path: Optional[str] = None,
+                 train_data_path: Optional[str] = None,
+                 test_data_path: Optional[str] = None,
                  use_test: bool = False,
                  api_key: Optional[str] = None,
                  model: str = "gpt-4o-mini",
@@ -32,14 +80,16 @@ class BodyGenerator:
                  train20_batch_index: int = 0,
                  train80_first_k: Optional[int] = None,
                  train80_batch_index: int = 0,
-                 coordinator_policy_n: Optional[int] = None):
+                 coordinator_policy_n: Optional[int] = None,
+                 mind_dataset_subdir: Optional[str] = None):
         """
         Args:
             prompt_path: 프롬프트 YAML 파일 경로
             settings_path: 생성 설정 YAML 파일 경로
-            news_data_path: 뉴스 데이터 TSV 파일 경로
-            train_data_path: 학습 데이터 TSV 파일 경로 (유저 클릭 히스토리)
-            test_data_path: 테스트 데이터 TSV 파일 경로 (유저 클릭 히스토리)
+            news_data_path: 뉴스 데이터 TSV (None이면 dataset/<mind_dataset_subdir>/MIND_news.tsv)
+            train_data_path: 학습 TSV (None이면 .../MIND_train_(1000).tsv)
+            test_data_path: 테스트 TSV (None이면 .../MIND_test_(1000).tsv)
+            mind_dataset_subdir: dataset 하위 폴더명 (예: MIND, MIND_1000). None이면 env MIND_DATASET_SUBDIR 또는 MIND
             use_test: True면 test 데이터 사용, False면 train 데이터 사용
             api_key: OpenAI API 키 (없으면 환경변수 OPENAI_API_KEY 사용)
             model: 사용할 모델명
@@ -54,6 +104,14 @@ class BodyGenerator:
             train80_batch_index: train80_first_k 사용 시 배치 번호 (0=첫 500세션, 1=다음 500세션). 출력 train80_batch{N}.
             coordinator_policy_n: 사용할 정책 파일 번호 (N.txt). None이면 가장 큰 N 사용.
         """
+        sub = mind_dataset_subdir or os.environ.get("MIND_DATASET_SUBDIR", "MIND")
+        n_fn, tr_fn, te_fn = _resolve_mind_filenames_bg(sub)
+        if news_data_path is None:
+            news_data_path = _default_mind_tsv(n_fn, sub)
+        if train_data_path is None:
+            train_data_path = _default_mind_tsv(tr_fn, sub)
+        if test_data_path is None:
+            test_data_path = _default_mind_tsv(te_fn, sub)
         self.prompt_path = prompt_path
         self.settings_path = settings_path
         self.news_data_path = news_data_path
@@ -689,6 +747,8 @@ def main():
     parser.add_argument('--policy_file', type=int, default=None, metavar='N', help='정책으로 사용할 coordinator 출력 파일 번호 (N이면 N.txt). 생략 시 가장 큰 번호 사용')
     parser.add_argument('--api_key', type=str, default=None, help='OpenAI API 키 (선택, 환경변수 사용 가능)')
     parser.add_argument('--model', type=str, default='gpt-4o-mini', help='사용할 모델명')
+    parser.add_argument('--mind_dataset_subdir', type=str, default=None,
+                        help='dataset 하위 폴더 (예: MIND, MIND_1000, MIND_2000). 미지정 시 env MIND_DATASET_SUBDIR 또는 MIND')
     
     args = parser.parse_args()
     
@@ -733,7 +793,8 @@ def main():
         train20_batch_index=args.train20_batch_index,
         train80_first_k=args.train80_first_k,
         train80_batch_index=args.train80_batch_index,
-        coordinator_policy_n=args.policy_file
+        coordinator_policy_n=args.policy_file,
+        mind_dataset_subdir=args.mind_dataset_subdir
     )
     
     if args.candidate_news_id:

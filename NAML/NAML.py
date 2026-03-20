@@ -9,6 +9,7 @@ import pickle
 from numpy.linalg import cholesky
 import json
 import os
+import glob
 import subprocess
 import sys
 import keras
@@ -30,7 +31,73 @@ MAX_HISTORY_CLICKS = 50  # 클릭 히스토리 개수
 MAX_SENT_LENGTH = 30     # 제목 최대 단어 수
 MAX_BODY_LENGTH = 300    # 본문 최대 단어 수
 npratio = 4              # negative sampling 비율
-USE_EXPECTED_BODY = True  # True: 기대 본문 사용, False: 원본 본문 사용
+USE_EXPECTED_BODY = False  # True: 기대 본문 사용, False: 원본 본문 사용
+
+# MIND 데이터셋 (프로젝트 루트 기준 dataset/<MIND_DATASET_SUBDIR>/)
+# MIND_DATASET_SUBDIR 만 바꿔도 됨: MIND_1000 / MIND_2000 은 폴더 안 파일을 자동 탐색(glob)하거나 아래 프리셋 사용
+MIND_DATASET_SUBDIR = os.environ.get('MIND_DATASET_SUBDIR', 'MIND_2000')
+_PROJECT_ROOT_NAML = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# 서브폴더별 (news, train, test) 파일명. None 이면 자동 탐색 → 실패 시 FALLBACK_* 사용
+MIND_DATASET_PRESETS = {
+    'MIND_2000': ('MIND_news.tsv', 'MIND_train_(2000).tsv', 'MIND_test_(2000).tsv'),
+}
+_FALLBACK_NEWS = 'MIND_news.tsv'
+_FALLBACK_TRAIN = 'MIND_train_(1000).tsv'
+_FALLBACK_TEST = 'MIND_test_(1000).tsv'
+
+
+def _discover_mind_tsv_in_folder(subdir: str):
+    """dataset/<subdir>/ 안에서 MIND_news.tsv + MIND_train_*.tsv 1개 + MIND_test_*.tsv 1개 자동 선택."""
+    base = os.path.join(_PROJECT_ROOT_NAML, 'dataset', subdir)
+    if not os.path.isdir(base):
+        return None
+    news_path = os.path.join(base, 'MIND_news.tsv')
+    if os.path.isfile(news_path):
+        news_name = 'MIND_news.tsv'
+    else:
+        cand = sorted(glob.glob(os.path.join(base, '*news*.tsv')))
+        if len(cand) == 1:
+            news_name = os.path.basename(cand[0])
+        else:
+            return None
+    trains = sorted(glob.glob(os.path.join(base, 'MIND_train_*.tsv')))
+    tests = sorted(glob.glob(os.path.join(base, 'MIND_test_*.tsv')))
+    if len(trains) != 1 or len(tests) != 1:
+        return None
+    return news_name, os.path.basename(trains[0]), os.path.basename(tests[0])
+
+
+def _resolve_mind_filenames():
+    """환경변수 > 프리셋 > 자동탐색 > FALLBACK 순."""
+    sub = MIND_DATASET_SUBDIR
+    if sub in MIND_DATASET_PRESETS:
+        n, tr, te = MIND_DATASET_PRESETS[sub]
+    else:
+        disc = _discover_mind_tsv_in_folder(sub)
+        if disc:
+            n, tr, te = disc
+        else:
+            n, tr, te = _FALLBACK_NEWS, _FALLBACK_TRAIN, _FALLBACK_TEST
+    if 'MIND_NEWS_FILENAME' in os.environ:
+        n = os.environ['MIND_NEWS_FILENAME']
+    if 'MIND_TRAIN_FILENAME' in os.environ:
+        tr = os.environ['MIND_TRAIN_FILENAME']
+    if 'MIND_TEST_FILENAME' in os.environ:
+        te = os.environ['MIND_TEST_FILENAME']
+    return n, tr, te
+
+
+MIND_NEWS_FILENAME, MIND_TRAIN_FILENAME, MIND_TEST_FILENAME = _resolve_mind_filenames()
+
+
+def mind_data_path(filename: str) -> str:
+    """프로젝트 루트 기준 dataset/<MIND_DATASET_SUBDIR>/<filename>"""
+    return os.path.join(_PROJECT_ROOT_NAML, 'dataset', MIND_DATASET_SUBDIR, filename)
+
+
+# 데이터 경로 안내 (한 번만)
+print(f"[데이터셋] dataset/{MIND_DATASET_SUBDIR}/ → news={MIND_NEWS_FILENAME}, train={MIND_TRAIN_FILENAME}, test={MIND_TEST_FILENAME}")
 
 DO_PRETRAINING = False   # True: 트레이닝셋 80%로 pretraining 수행, False: pretraining 건너뛰기
 PRETRAINING_EPOCHS = 20    # Pretraining 에폭 수
@@ -58,6 +125,9 @@ EVAL_TESTSET_EXPECTED_BODY_DIR = 'test_0'  # 테스트셋 기대본문 폴더 (b
 EVAL_TESTSET_EXPECTED_BODY_DIR_2 = None  # 두 번째 기대본문 폴더 (None이면 사용 안 함). 설정 시 매 에폭 두 버전 모두 평가
 PRETRAINED_MODEL_PATH = 'saved_models/pretrained_naml_model_train20.h5'  # 위 두 평가 모드에서 로드할 모델 경로
 MAIN_TRAINING_EPOCHS = 20  # 메인 학습 루프 에폭 수
+# USE_EXPECTED_BODY=False 메인 루프: 매 에폭 테스트셋(실제본문) MRR이 갱신될 때 모델 가중치 저장
+SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR = True
+MAIN_TRAINING_BEST_MODEL_PATH = 'saved_models/full_training_NAML.h5'
 
 # 트레이닝 후반 20%만 사용해 처음부터 학습 후 테스트셋 실제/기대본문 각각 평가 (메인 학습 루프 대신 실행)
 TRAIN_ON_TRAIN20_FROM_SCRATCH = False  # True: 트레이닝 후반 20%만 사용, 처음부터 학습
@@ -244,19 +314,23 @@ def load_expected_body_from_train_dir(train_dir, user_id_str, news_id_str):
         return '', None
 
 
-def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv', 
-                         test_file='dataset/MIND/MIND_test_(1000).tsv',
+def preprocess_user_file(train_file=None,
+                         test_file=None,
                          news_index=None, npratio=4,
                          expected_bodies_train=None, expected_bodies_test=None,
                          word_dict=None):
     """
     MIND 데이터셋 형식에 맞게 전처리
-    train_file: user, clicked_news, candidate_news, clicked
+    train_file: user, clicked_news, candidate_news, clicked (None이면 MIND_DATASET_SUBDIR 기준 기본 경로)
     test_file: user, clicked_news, candidate_news (clicked 없음)
     
     expected_bodies_train/test: 후보 뉴스의 기대 본문 딕셔너리 {news_id: generated_body}
     word_dict: 단어 사전 (기대 본문 토큰화에 필요)
     """
+    if train_file is None:
+        train_file = mind_data_path(MIND_TRAIN_FILENAME)
+    if test_file is None:
+        test_file = mind_data_path(MIND_TEST_FILENAME)
     userid_dict = {}
     
     # 학습 데이터 로드
@@ -491,12 +565,15 @@ def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv',
 
 
 
-def preprocess_news_file(file='dataset/MIND/MIND_news.tsv', expected_bodies_train=None, expected_bodies_test=None):
+def preprocess_news_file(file=None, expected_bodies_train=None, expected_bodies_test=None):
     """
     MIND 뉴스 데이터 전처리
     형식: news_id, category, subcategory, title, body
+    file: None이면 MIND_DATASET_SUBDIR 기준 MIND_news.tsv
     expected_bodies_train, expected_bodies_test: 기대본문 딕셔너리 (word_dict 생성에 포함)
     """
+    if file is None:
+        file = mind_data_path(MIND_NEWS_FILENAME)
     with open(file, 'r', encoding='utf-8') as f:
         newsdata = f.readlines()
     
@@ -1951,7 +2028,7 @@ if EVAL_PRETRAINED_ON_TRAIN80_FIRST_BATCH:
 
     diagnostic_samples = []
     if loss_actual_list is not None and loss_expected_list is not None and (best_sess_idx is not None or success_sess_idx is not None):
-        news_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'dataset', 'MIND', 'MIND_news.tsv')
+        news_file = mind_data_path(MIND_NEWS_FILENAME)
         news_titles = {}
         if os.path.exists(news_file):
             with open(news_file, 'r', encoding='utf-8') as nf:
@@ -2170,7 +2247,7 @@ if EVAL_PRETRAINED_ON_TRAIN20_FIRST_BATCH:
 
     diagnostic_samples_t20 = []
     if loss_actual_t20 is not None and loss_expected_t20 is not None and (best_sess_idx_t20 is not None or success_sess_idx_t20 is not None):
-        news_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'dataset', 'MIND', 'MIND_news.tsv')
+        news_file = mind_data_path(MIND_NEWS_FILENAME)
         news_titles = {}
         if os.path.exists(news_file):
             with open(news_file, 'r', encoding='utf-8') as nf:
@@ -2502,7 +2579,7 @@ if EVAL_PRETRAINED_ON_TRAIN80:
     # diagnostic_samples: 성능 차이 최대(failure) / 최소(success) 세션 정보 (뉴스 제목·기대본문 로드)
     diagnostic_samples = []
     if loss_actual_list is not None and loss_expected_list is not None and (best_sess_idx is not None or success_sess_idx is not None):
-        news_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'dataset', 'MIND', 'MIND_news.tsv')
+        news_file = mind_data_path(MIND_NEWS_FILENAME)
         news_titles = {}
         if os.path.exists(news_file):
             with open(news_file, 'r', encoding='utf-8') as nf:
@@ -2994,6 +3071,8 @@ if TRAIN_ON_TRAIN20_FROM_SCRATCH:
         print(f"{'='*60}\n")
 
 else:
+    best_main_test_mrr = -1.0
+    best_main_test_epoch = -1
     for ep in range(MAIN_TRAINING_EPOCHS):
         np.random.seed(SEED + ep)
         random.seed(SEED + ep)
@@ -3107,6 +3186,18 @@ else:
             'Hit@1': np.mean(all_hit1)
         }
         results.append([epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['Hit@1']])
+
+        # USE_EXPECTED_BODY=False: 테스트셋 실제본문 MRR 최고 에폭 가중치 저장
+        if (not USE_EXPECTED_BODY) and SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR and len(all_mrr) > 0:
+            mrr_cur = float(epoch_results['MRR'])
+            if mrr_cur > best_main_test_mrr:
+                best_main_test_mrr = mrr_cur
+                best_main_test_epoch = ep + 1
+                _best_dir = os.path.dirname(MAIN_TRAINING_BEST_MODEL_PATH)
+                if _best_dir and not os.path.exists(_best_dir):
+                    os.makedirs(_best_dir, exist_ok=True)
+                model.save_weights(MAIN_TRAINING_BEST_MODEL_PATH)
+                print(f"  [저장] 테스트셋(실제본문) MRR 최고 갱신 Epoch {ep+1}: MRR={mrr_cur:.6f} → {MAIN_TRAINING_BEST_MODEL_PATH}")
         
         # [2] 테스트셋 기대본문(EVAL_TESTSET_EXPECTED_BODY_DIR)으로 평가
         epoch_results_expected = None
@@ -3193,4 +3284,6 @@ else:
     best_hit1_epoch = best_hit1_idx + 1
     print(f"\nBest MRR  : Epoch {best_mrr_epoch} - {results[best_mrr_idx][0]:.6f}")
     print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][2]:.6f}")
+    if (not USE_EXPECTED_BODY) and SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR and best_main_test_epoch > 0:
+        print(f"저장된 최고(테스트 실제본문 MRR): Epoch {best_main_test_epoch} - {best_main_test_mrr:.6f} → {MAIN_TRAINING_BEST_MODEL_PATH}")
     print(f"{'='*60}\n")

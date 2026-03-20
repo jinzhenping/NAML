@@ -16,6 +16,7 @@ import numpy as np
 import pickle
 from numpy.linalg import cholesky
 import os
+import glob
 import argparse
 import tensorflow as tf
 
@@ -27,6 +28,58 @@ from keras.models import Model
 from keras import backend as K
 from keras.optimizers import *
 from sklearn.metrics import roc_auc_score
+
+# dataset/<이름>/ (NAML.py와 동일한 규칙)
+MIND_DATASET_SUBDIR = os.environ.get("MIND_DATASET_SUBDIR", "MIND")
+_TRAIN_NAML_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MIND_DATASET_PRESETS_TN = {
+    "MIND_2000": ("MIND_news.tsv", "MIND_train_(2000).tsv", "MIND_test_(2000).tsv"),
+}
+
+
+def _discover_mind_tsv_tn(subdir):
+    base = os.path.join(_TRAIN_NAML_ROOT, "dataset", subdir)
+    if not os.path.isdir(base):
+        return None
+    if os.path.isfile(os.path.join(base, "MIND_news.tsv")):
+        news_name = "MIND_news.tsv"
+    else:
+        cand = sorted(glob.glob(os.path.join(base, "*news*.tsv")))
+        if len(cand) == 1:
+            news_name = os.path.basename(cand[0])
+        else:
+            return None
+    trains = sorted(glob.glob(os.path.join(base, "MIND_train_*.tsv")))
+    tests = sorted(glob.glob(os.path.join(base, "MIND_test_*.tsv")))
+    if len(trains) != 1 or len(tests) != 1:
+        return None
+    return news_name, os.path.basename(trains[0]), os.path.basename(tests[0])
+
+
+def _resolve_mind_filenames_tn():
+    sub = MIND_DATASET_SUBDIR
+    if sub in MIND_DATASET_PRESETS_TN:
+        n, tr, te = MIND_DATASET_PRESETS_TN[sub]
+    else:
+        disc = _discover_mind_tsv_tn(sub)
+        if disc:
+            n, tr, te = disc
+        else:
+            n, tr, te = "MIND_news.tsv", "MIND_train_(1000).tsv", "MIND_test_(1000).tsv"
+    if "MIND_NEWS_FILENAME" in os.environ:
+        n = os.environ["MIND_NEWS_FILENAME"]
+    if "MIND_TRAIN_FILENAME" in os.environ:
+        tr = os.environ["MIND_TRAIN_FILENAME"]
+    if "MIND_TEST_FILENAME" in os.environ:
+        te = os.environ["MIND_TEST_FILENAME"]
+    return n, tr, te
+
+
+MIND_NEWS_FILENAME, MIND_TRAIN_FILENAME, MIND_TEST_FILENAME = _resolve_mind_filenames_tn()
+
+
+def mind_data_path(filename: str) -> str:
+    return os.path.join(_TRAIN_NAML_ROOT, "dataset", MIND_DATASET_SUBDIR, filename)
 
 # NLTK 데이터 다운로드 (처음 실행 시)
 try:
@@ -43,11 +96,14 @@ def newsample(nnn, ratio):
         return random.sample(nnn, ratio)
 
 
-def preprocess_news_file(file='dataset/MIND/MIND_news.tsv'):
+def preprocess_news_file(file=None):
     """
     MIND 뉴스 데이터 전처리
     형식: news_id, category, subcategory, title, body
+    file: None이면 dataset/<MIND_DATASET_SUBDIR>/MIND_news.tsv
     """
+    if file is None:
+        file = mind_data_path(MIND_NEWS_FILENAME)
     print("뉴스 데이터 전처리 중...")
     with open(file, 'r', encoding='utf-8') as f:
         newsdata = f.readlines()
@@ -141,14 +197,18 @@ def preprocess_news_file(file='dataset/MIND/MIND_news.tsv'):
     return word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index
 
 
-def preprocess_user_file(train_file='dataset/MIND/MIND_train_(1000).tsv', 
-                         test_file='dataset/MIND/MIND_test_(1000).tsv',
+def preprocess_user_file(train_file=None,
+                         test_file=None,
                          news_index=None, npratio=4):
     """
     MIND 데이터셋 형식에 맞게 전처리
-    train_file: user, clicked_news, candidate_news, clicked
+    train_file: user, clicked_news, candidate_news, clicked (None이면 기본 경로)
     test_file: user, clicked_news, candidate_news (clicked 없음)
     """
+    if train_file is None:
+        train_file = mind_data_path(MIND_TRAIN_FILENAME)
+    if test_file is None:
+        test_file = mind_data_path(MIND_TEST_FILENAME)
     print("유저 데이터 전처리 중...")
     userid_dict = {}
     
@@ -582,12 +642,12 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size,
 
 def main():
     parser = argparse.ArgumentParser(description='NAML 모델 학습 및 테스트')
-    parser.add_argument('--train_file', type=str, default='dataset/MIND/MIND_train_(1000).tsv',
-                        help='학습 데이터 파일 경로')
-    parser.add_argument('--test_file', type=str, default='dataset/MIND/MIND_test_(1000).tsv',
-                        help='테스트 데이터 파일 경로')
-    parser.add_argument('--news_file', type=str, default='dataset/MIND/MIND_news.tsv',
-                        help='뉴스 데이터 파일 경로')
+    parser.add_argument('--train_file', type=str, default=None,
+                        help='학습 데이터 파일 (미지정 시 dataset/<MIND_DATASET_SUBDIR>/MIND_train_(1000).tsv)')
+    parser.add_argument('--test_file', type=str, default=None,
+                        help='테스트 데이터 파일 (미지정 시 .../MIND_test_(1000).tsv)')
+    parser.add_argument('--news_file', type=str, default=None,
+                        help='뉴스 데이터 파일 (미지정 시 .../MIND_news.tsv)')
     parser.add_argument('--glove_path', type=str, default=None,
                         help='GloVe 임베딩 파일 경로 (없으면 랜덤 초기화)')
     parser.add_argument('--gpu', type=str, default='0',
@@ -610,6 +670,12 @@ def main():
                         help='전처리된 데이터 로드 경로 (pickle 형식)')
     
     args = parser.parse_args()
+    if args.train_file is None:
+        args.train_file = mind_data_path(MIND_TRAIN_FILENAME)
+    if args.test_file is None:
+        args.test_file = mind_data_path(MIND_TEST_FILENAME)
+    if args.news_file is None:
+        args.news_file = mind_data_path(MIND_NEWS_FILENAME)
     
     # GPU 설정
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
