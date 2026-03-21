@@ -4,15 +4,24 @@ LLM_E: 실행기 LLM
 """
 
 import os
-import math
-import yaml
-import pandas as pd
-from openai import OpenAI
-from typing import List, Dict, Optional
 import json
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+from typing import Dict, List, Optional, Tuple
+
+import pandas as pd
+import yaml
+from openai import OpenAI
 
 _BODY_GEN_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# 유저당 여러 후보 시 동시 API 요청 수 (RPM 한도 초과 시 이 값을 코드에서만 줄이면 됨)
+DEFAULT_API_CONCURRENCY = 8
+
+# 기본 데이터셋 폴더: dataset/<이 이름>/ 아래 TSV를 읽고, output/<이 이름>/trainN 에 저장
+# 우선순위: --mind_dataset_subdir / BodyGenerator 인자 > 환경변수 MIND_DATASET_SUBDIR > 아래 값
+DEFAULT_MIND_DATASET_SUBDIR = "MIND_2000"
+
 MIND_DATASET_PRESETS_BG = {
     "MIND_2000": ("MIND_news.tsv", "MIND_train_(2000).tsv", "MIND_test_(2000).tsv"),
 }
@@ -56,8 +65,17 @@ def _resolve_mind_filenames_bg(subdir: str):
     return n, tr, te
 
 
+def _resolve_mind_dataset_subdir(mind_dataset_subdir: Optional[str] = None) -> str:
+    """dataset 하위 폴더명 (예: MIND, MIND_2000).
+    우선순위: 인자 > env MIND_DATASET_SUBDIR > DEFAULT_MIND_DATASET_SUBDIR(파일 상단).
+    """
+    if mind_dataset_subdir:
+        return mind_dataset_subdir
+    return os.environ.get("MIND_DATASET_SUBDIR") or DEFAULT_MIND_DATASET_SUBDIR
+
+
 def _default_mind_tsv(filename: str, subdir: Optional[str] = None) -> str:
-    s = subdir or os.environ.get("MIND_DATASET_SUBDIR", "MIND")
+    s = subdir or _resolve_mind_dataset_subdir()
     return str(_BODY_GEN_PROJECT_ROOT / "dataset" / s / filename)
 
 
@@ -72,14 +90,6 @@ class BodyGenerator:
                  api_key: Optional[str] = None,
                  model: str = "gpt-4o-mini",
                  coordinator_output_dir: str = "coordinator_LLM/output",
-                 train80_only: bool = False,
-                 train20_only: bool = False,
-                 train20_per_user: bool = False,
-                 train20_positive_only: bool = False,
-                 train20_first_k: Optional[int] = None,
-                 train20_batch_index: int = 0,
-                 train80_first_k: Optional[int] = None,
-                 train80_batch_index: int = 0,
                  coordinator_policy_n: Optional[int] = None,
                  mind_dataset_subdir: Optional[str] = None):
         """
@@ -89,22 +99,15 @@ class BodyGenerator:
             news_data_path: 뉴스 데이터 TSV (None이면 dataset/<mind_dataset_subdir>/MIND_news.tsv)
             train_data_path: 학습 TSV (None이면 .../MIND_train_(1000).tsv)
             test_data_path: 테스트 TSV (None이면 .../MIND_test_(1000).tsv)
-            mind_dataset_subdir: dataset 하위 폴더명 (예: MIND, MIND_1000). None이면 env MIND_DATASET_SUBDIR 또는 MIND
+            mind_dataset_subdir: dataset 하위 폴더명 (예: MIND, MIND_1000). None이면 env 또는 DEFAULT_MIND_DATASET_SUBDIR (저장: self.mind_dataset_subdir)
             use_test: True면 test 데이터 사용, False면 train 데이터 사용
             api_key: OpenAI API 키 (없으면 환경변수 OPENAI_API_KEY 사용)
             model: 사용할 모델명
             coordinator_output_dir: coordinator_LLM 출력 디렉토리 (Tone 등 설정을 N.txt에서 로드)
-            train80_only: True면 트레이닝셋 앞 80%에 등장하는 (유저, 후보뉴스)에 대해서만 생성 (use_test=False일 때만 적용)
-            train20_only: True면 트레이닝셋 뒤 20%에 등장하는 (유저, 후보뉴스)에 대해서만 생성 (use_test=False일 때만 적용)
-            train20_per_user: train20_only일 때 True면 유저별 후반 20% 세션(유저당 최소 1세션)만 사용. False면 전체 행 기준 후반 20%.
-            train20_positive_only: train20_only일 때 True면 세션당 positive(클릭된) 후보 1개에만 기대본문 생성. False면 5개 후보 모두.
-            train20_first_k: train20_only(유저별 후반 20%)일 때 배치당 세션 수 (예: 500). None이면 전체 사용.
-            train20_batch_index: train20_first_k 사용 시 배치 번호 (0=첫 K세션, 1=다음 K세션). 출력 train20_batch{N}.
-            train80_first_k: train80_only일 때 배치당 세션 수 (예: 500). None이면 전체 80% 사용.
-            train80_batch_index: train80_first_k 사용 시 배치 번호 (0=첫 500세션, 1=다음 500세션). 출력 train80_batch{N}.
             coordinator_policy_n: 사용할 정책 파일 번호 (N.txt). None이면 가장 큰 N 사용.
         """
-        sub = mind_dataset_subdir or os.environ.get("MIND_DATASET_SUBDIR", "MIND")
+        sub = _resolve_mind_dataset_subdir(mind_dataset_subdir)
+        self.mind_dataset_subdir = sub
         n_fn, tr_fn, te_fn = _resolve_mind_filenames_bg(sub)
         if news_data_path is None:
             news_data_path = _default_mind_tsv(n_fn, sub)
@@ -120,15 +123,8 @@ class BodyGenerator:
         self.use_test = use_test
         self.model = model
         self.coordinator_output_dir = coordinator_output_dir
-        self.train80_only = train80_only
-        self.train20_only = train20_only
-        self.train20_per_user = train20_per_user
-        self.train20_positive_only = train20_positive_only
-        self.train20_first_k = train20_first_k
-        self.train20_batch_index = train20_batch_index
-        self.train80_first_k = train80_first_k
-        self.train80_batch_index = train80_batch_index
         self.coordinator_policy_n = coordinator_policy_n
+        self._print_lock = threading.Lock()
         
         # API 키 설정
         api_key = api_key or os.getenv("OPENAI_API_KEY")
@@ -179,102 +175,6 @@ class BodyGenerator:
         self.train_df['user'] = pd.to_numeric(self.train_df['user'], errors='coerce').astype('Int64')
         # NaN 값 제거
         self.train_df = self.train_df.dropna(subset=['user', 'clicked_news'])
-        
-        # train80_only: 트레이닝셋 앞 80%에 등장하는 (user_id, candidate_news_id)만 허용 (학습 데이터일 때만)
-        self.allowed_train80_pairs = None
-        if self.train80_only and not self.use_test and len(self.train_df) > 0:
-            n80 = max(1, int(0.8 * len(self.train_df)))
-            if self.train80_first_k is not None:
-                start = self.train80_batch_index * self.train80_first_k
-                end = min(start + self.train80_first_k, n80)
-                first80 = self.train_df.iloc[start:end]
-                print(f"트레이닝셋 앞 80% 중 배치 {self.train80_batch_index}: 세션 {start}~{end-1} ({end-start}개, train80_first_k={self.train80_first_k})")
-            else:
-                first80 = self.train_df.iloc[:n80]
-            allowed = set()
-            for _, row in first80.iterrows():
-                uid = row['user']
-                if pd.isna(uid):
-                    continue
-                uid = int(uid)
-                for cand_id in str(row['candidate_news']).split():
-                    if cand_id.strip():
-                        allowed.add((uid, cand_id.strip()))
-            self.allowed_train80_pairs = allowed
-            print(f"트레이닝셋 앞 80% 후보만 생성: 허용 (user, candidate_news) 쌍 {len(self.allowed_train80_pairs)}개")
-        
-        # train20_only: 트레이닝셋 뒤 20%에 등장하는 (user_id, candidate_news_id)만 허용 (학습 데이터일 때만)
-        self.allowed_train20_pairs = None
-        if self.train20_only and not self.use_test and len(self.train_df) > 0:
-            def _add_row_pairs(allowed: set, row, uid: int) -> None:
-                cand_ids = [c.strip() for c in str(row['candidate_news']).split() if c.strip()]
-                clicked_str = str(row.get('clicked', ''))
-                clicked_list = clicked_str.split() if clicked_str else []
-                if self.train20_positive_only and clicked_list:
-                    # 세션당 positive(클릭된) 후보 1개만 추가
-                    for i, cid in enumerate(cand_ids):
-                        if i < len(clicked_list) and clicked_list[i].strip() == '1':
-                            allowed.add((uid, cid))
-                            break
-                else:
-                    for cid in cand_ids:
-                        allowed.add((uid, cid))
-            if self.train20_per_user:
-                # 유저별 후반 20% 세션 (유저당 최소 1세션) → 순서 있는 세션 인덱스 리스트
-                train20_row_indices = []
-                for uid, grp in self.train_df.groupby('user', dropna=False):
-                    if pd.isna(uid):
-                        continue
-                    n = len(grp)
-                    take_count = max(1, int(math.ceil(0.2 * n)))
-                    last_rows = grp.tail(take_count)
-                    for idx in last_rows.index:
-                        train20_row_indices.append(idx)
-                train20_row_indices.sort()
-                total_t20 = len(train20_row_indices)
-                # 배치 슬라이스 (train20_first_k 사용 시)
-                if self.train20_first_k is not None:
-                    start = self.train20_batch_index * self.train20_first_k
-                    end = min(start + self.train20_first_k, total_t20)
-                    batch_indices = train20_row_indices[start:end]
-                    print(f"트레이닝셋 유저별 뒤 20% 중 배치 {self.train20_batch_index}: 세션 {start}~{end-1} ({len(batch_indices)}개, train20_first_k={self.train20_first_k})")
-                else:
-                    batch_indices = train20_row_indices
-                allowed = set()
-                for idx in batch_indices:
-                    row = self.train_df.loc[idx]
-                    uid = row['user']
-                    if pd.isna(uid):
-                        continue
-                    uid = int(uid)
-                    _add_row_pairs(allowed, row, uid)
-                self.allowed_train20_pairs = allowed
-                pos_only = " (positive만)" if self.train20_positive_only else ""
-                batch_info = f", 배치 {self.train20_batch_index}" if self.train20_first_k is not None else ""
-                print(f"트레이닝셋 유저별 뒤 20% 후보만 생성{pos_only}{batch_info}: 허용 (user, candidate_news) 쌍 {len(self.allowed_train20_pairs)}개")
-            else:
-                n80 = max(1, int(0.8 * len(self.train_df)))
-                last20_indices = list(self.train_df.iloc[n80:].index)
-                total_t20 = len(last20_indices)
-                if self.train20_first_k is not None:
-                    start = self.train20_batch_index * self.train20_first_k
-                    end = min(start + self.train20_first_k, total_t20)
-                    batch_indices = last20_indices[start:end]
-                    print(f"트레이닝셋 뒤 20%(행 기준) 중 배치 {self.train20_batch_index}: 세션 {start}~{end-1} ({len(batch_indices)}개)")
-                else:
-                    batch_indices = last20_indices
-                allowed = set()
-                for idx in batch_indices:
-                    row = self.train_df.loc[idx]
-                    uid = row['user']
-                    if pd.isna(uid):
-                        continue
-                    uid = int(uid)
-                    _add_row_pairs(allowed, row, uid)
-                self.allowed_train20_pairs = allowed
-                pos_only = " (positive만)" if self.train20_positive_only else ""
-                batch_info = f", 배치 {self.train20_batch_index}" if self.train20_first_k is not None else ""
-                print(f"트레이닝셋 뒤 20% 후보만 생성{pos_only}{batch_info}: 허용 (user, candidate_news) 쌍 {len(self.allowed_train20_pairs)}개")
         
         print(f"뉴스 데이터: {len(self.news_df)}개")
         print(f"{data_type} 데이터: {len(self.train_df)}개")
@@ -475,11 +375,6 @@ class BodyGenerator:
         if candidate_news_id not in self.news_dict:
             raise ValueError(f"뉴스 ID {candidate_news_id}를 찾을 수 없습니다.")
         
-        if self.allowed_train80_pairs is not None and (user_id, candidate_news_id) not in self.allowed_train80_pairs:
-            raise ValueError(f"(user_id={user_id}, candidate_news_id={candidate_news_id})는 트레이닝셋 앞 80%에 포함되지 않아 생성하지 않습니다.")
-        if self.allowed_train20_pairs is not None and (user_id, candidate_news_id) not in self.allowed_train20_pairs:
-            raise ValueError(f"(user_id={user_id}, candidate_news_id={candidate_news_id})는 트레이닝셋 뒤 20%에 포함되지 않아 생성하지 않습니다.")
-        
         candidate_news = self.news_dict[candidate_news_id]
         candidate_title = candidate_news['title']
         
@@ -534,6 +429,57 @@ class BodyGenerator:
         except Exception as e:
             print(f"API 호출 중 오류 발생: {e}")
             raise
+
+    def _generate_one_candidate_parallel(
+        self,
+        position: int,
+        total: int,
+        user_id: int,
+        candidate_news_id: str,
+        user_history: list,
+        output_dir: Optional[str],
+        verbose_save: bool = True,
+    ) -> Tuple[int, Optional[Dict]]:
+        """후보 1건 생성. (원본 순서 position, 결과) 반환. 실패 시 (position, None)."""
+        candidate_title = self.news_dict[candidate_news_id]["title"]
+        prompt = self._build_prompt(
+            user_history=user_history,
+            candidate_title=candidate_title,
+        )
+        with self._print_lock:
+            print(
+                f"\n[{position + 1}/{total}] 후보 뉴스 '{candidate_title}' 처리 중... (user={user_id}, id={candidate_news_id})"
+            )
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.7,
+                max_tokens=500,
+            )
+            generated_body = response.choices[0].message.content.strip()
+            result = {
+                "user_id": user_id,
+                "candidate_news_id": candidate_news_id,
+                "candidate_title": candidate_title,
+                "user_history_count": len(user_history),
+                "user_history": user_history,
+                "prompt": prompt,
+                "generated_body": generated_body,
+                "model": self.model,
+            }
+            if output_dir:
+                user_dir = os.path.join(output_dir, f"user_{user_id}")
+                os.makedirs(user_dir, exist_ok=True)
+                save_path = os.path.join(user_dir, f"news_{candidate_news_id}.json")
+                self._save_result(result, save_path, verbose=verbose_save)
+            with self._print_lock:
+                print(f"[{position + 1}/{total}] 완료: {candidate_news_id}")
+            return (position, result)
+        except Exception as e:
+            with self._print_lock:
+                print(f"[{position + 1}/{total}] 오류 ({candidate_news_id}): {e}")
+            return (position, None)
     
     def generate_bodies_for_user(self,
                                  user_id: int,
@@ -546,7 +492,7 @@ class BodyGenerator:
             output_dir: 결과 저장 디렉토리 (선택, 없으면 저장하지 않음)
         
         Returns:
-            생성 결과 리스트
+            생성 결과 리스트 (후보 순서 유지, 성공한 항목만)
         """
         # 해당 유저의 데이터 필터링
         user_data = self.train_df[self.train_df['user'] == user_id]
@@ -570,79 +516,59 @@ class BodyGenerator:
         # 중복 제거
         unique_candidate_news_ids = list(dict.fromkeys(all_candidate_news_ids))  # 순서 유지하면서 중복 제거
         
-        # train80_only / train20_only이면 해당 구간에 등장하는 (user_id, 후보)만 남김
-        if self.allowed_train80_pairs is not None:
-            unique_candidate_news_ids = [c for c in unique_candidate_news_ids if (user_id, c) in self.allowed_train80_pairs]
-            print(f"트레이닝셋 앞 80% 필터 적용: {len(unique_candidate_news_ids)}개의 후보 뉴스에 대해 본문을 생성합니다...")
-        if self.allowed_train20_pairs is not None:
-            unique_candidate_news_ids = [c for c in unique_candidate_news_ids if (user_id, c) in self.allowed_train20_pairs]
-            print(f"트레이닝셋 뒤 20% 필터 적용: {len(unique_candidate_news_ids)}개의 후보 뉴스에 대해 본문을 생성합니다...")
-        
         if not unique_candidate_news_ids:
-            if self.allowed_train80_pairs is not None:
-                print(f"유저 {user_id}: 트레이닝셋 앞 80%에 해당하는 후보 뉴스가 없습니다. 건너뜁니다.")
-            elif self.allowed_train20_pairs is not None:
-                print(f"유저 {user_id}: 트레이닝셋 뒤 20%에 해당하는 후보 뉴스가 없습니다. 건너뜁니다.")
-            else:
-                print(f"유저 {user_id}: 생성할 후보 뉴스가 없습니다. 건너뜁니다.")
+            print(f"유저 {user_id}: 생성할 후보 뉴스가 없습니다. 건너뜁니다.")
             return []
         
-        print(f"\n유저 {user_id}에 대해 {len(unique_candidate_news_ids)}개의 후보 뉴스에 대한 본문을 생성합니다...")
+        n_cand = len(unique_candidate_news_ids)
         
-        results = []
-        for idx, candidate_news_id in enumerate(unique_candidate_news_ids, 1):
+        work_positions: List[int] = []
+        work_ids: List[str] = []
+        for position, candidate_news_id in enumerate(unique_candidate_news_ids):
             if candidate_news_id not in self.news_dict:
                 print(f"경고: 뉴스 ID {candidate_news_id}를 찾을 수 없습니다. 건너뜁니다.")
                 continue
-            
-            candidate_title = self.news_dict[candidate_news_id]['title']
-            
-            # 프롬프트 생성
-            prompt = self._build_prompt(
-                user_history=user_history,
-                candidate_title=candidate_title
-            )
-            
-            # ChatGPT API 호출
-            print(f"\n[{idx}/{len(unique_candidate_news_ids)}] 후보 뉴스 '{candidate_title}' 처리 중...")
-            
-            try:
-                response = self.client.chat.completions.create(
-                    model=self.model,
-                    messages=[
-                        {"role": "user", "content": prompt}
-                    ],
-                    temperature=0.7,
-                    max_tokens=500
+            work_positions.append(position)
+            work_ids.append(candidate_news_id)
+        
+        if not work_ids:
+            print(f"유저 {user_id}: 유효한 후보 뉴스가 없습니다.")
+            return []
+        
+        print(
+            f"\n유저 {user_id}에 대해 {len(work_ids)}개의 후보 뉴스에 대한 본문을 생성합니다..."
+            f" (병렬, 최대 동시 {min(DEFAULT_API_CONCURRENCY, len(work_ids))}요청)"
+        )
+        
+        max_workers = max(1, min(DEFAULT_API_CONCURRENCY, len(work_ids)))
+        verbose_save = max_workers <= 1
+        pairs: List[Tuple[int, Optional[Dict]]] = []
+        if max_workers == 1:
+            for pos, cid in zip(work_positions, work_ids):
+                _, res = self._generate_one_candidate_parallel(
+                    pos, n_cand, user_id, cid, user_history, output_dir, verbose_save
                 )
-                
-                generated_body = response.choices[0].message.content.strip()
-                
-                result = {
-                    'user_id': user_id,
-                    'candidate_news_id': candidate_news_id,
-                    'candidate_title': candidate_title,
-                    'user_history_count': len(user_history),
-                    'user_history': user_history,
-                    'prompt': prompt,
-                    'generated_body': generated_body,
-                    'model': self.model
-                }
-                
-                results.append(result)
-                
-                # 개별 파일로 저장 (output_dir = run 폴더 trainN, 그 아래 user_X)
-                if output_dir:
-                    user_dir = os.path.join(output_dir, f"user_{user_id}")
-                    os.makedirs(user_dir, exist_ok=True)
-                    save_path = os.path.join(user_dir, f"news_{candidate_news_id}.json")
-                    self._save_result(result, save_path)
-                
-                print("완료!")
-                
-            except Exception as e:
-                print(f"오류 발생: {e}")
-                continue
+                pairs.append((pos, res))
+        else:
+            with ThreadPoolExecutor(max_workers=max_workers) as ex:
+                futs = [
+                    ex.submit(
+                        self._generate_one_candidate_parallel,
+                        pos,
+                        n_cand,
+                        user_id,
+                        cid,
+                        user_history,
+                        output_dir,
+                        False,
+                    )
+                    for pos, cid in zip(work_positions, work_ids)
+                ]
+                for fut in as_completed(futs):
+                    pairs.append(fut.result())
+        
+        pairs.sort(key=lambda x: x[0])
+        results = [r for _, r in pairs if r is not None]
         
         # 전체 결과를 하나의 파일로도 저장
         if output_dir and results:
@@ -656,21 +582,22 @@ class BodyGenerator:
         print(f"\n총 {len(results)}개의 본문이 생성되었습니다.")
         return results
     
-    def _save_result(self, result: Dict, save_path: str):
+    def _save_result(self, result: Dict, save_path: str, verbose: bool = True):
         """결과를 JSON 파일로 저장"""
         os.makedirs(os.path.dirname(save_path) if os.path.dirname(save_path) else '.', exist_ok=True)
         
         with open(save_path, 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
         
-        print(f"결과가 {save_path}에 저장되었습니다.")
+        if verbose:
+            with self._print_lock:
+                print(f"결과가 {save_path}에 저장되었습니다.")
 
 
 def get_next_run_folder(base_output_dir: str, mode: str) -> str:
     """
     생성 정책(대상)에 따라 출력 폴더 경로 반환.
-    mode: "train" -> train0, train1, ... (트레이닝 앞 80%)
-          "train20" -> train20_0, train20_1, ... (트레이닝 뒤 20%)
+    mode: "train" -> train0, train1, ... (학습 TSV 후보)
           "test" -> test_0, test_1, ... (테스트셋)
     """
     os.makedirs(base_output_dir, exist_ok=True)
@@ -688,21 +615,6 @@ def get_next_run_folder(base_output_dir: str, mode: str) -> str:
                     continue
         next_num = max_num + 1
         run_dir = os.path.join(base_output_dir, f"train{next_num}")
-    elif mode == "train20":
-        prefix = "train20_"
-        max_num = -1
-        for name in os.listdir(base_output_dir):
-            if not os.path.isdir(os.path.join(base_output_dir, name)):
-                continue
-            if name.startswith(prefix):
-                try:
-                    n = int(name[len(prefix):])
-                    if n > max_num:
-                        max_num = n
-                except ValueError:
-                    continue
-        next_num = max_num + 1
-        run_dir = os.path.join(base_output_dir, f"train20_{next_num}")
     elif mode == "test":
         prefix = "test_"
         max_num = -1
@@ -719,7 +631,7 @@ def get_next_run_folder(base_output_dir: str, mode: str) -> str:
         next_num = max_num + 1
         run_dir = os.path.join(base_output_dir, f"test_{next_num}")
     else:
-        raise ValueError(f"mode must be 'train', 'train20', or 'test', got '{mode}'")
+        raise ValueError(f"mode must be 'train' or 'test', got '{mode}'")
     os.makedirs(run_dir, exist_ok=True)
     return run_dir
 
@@ -732,52 +644,31 @@ def main():
     parser.add_argument('--user_id', type=int, default=None, help='유저 ID (지정하지 않으면 모든 유저 처리)')
     parser.add_argument('--start_user_id', type=int, default=None, help='시작 유저 ID (지정하면 해당 ID부터 이후 모든 유저 처리)')
     parser.add_argument('--candidate_news_id', type=str, default=None, help='후보 뉴스 ID (단일 뉴스 처리용, 없으면 모든 candidate_news 처리)')
-    parser.add_argument('--output', type=str, default='body_generation/output', help='출력 디렉토리 경로')
-    policy_group = parser.add_mutually_exclusive_group(required=True)
-    policy_group.add_argument('--train80_only', action='store_true', help='트레이닝셋 앞 80%% 후보만 생성')
-    policy_group.add_argument('--train20_only', action='store_true', help='트레이닝셋 뒤 20%% 후보만 생성')
-    policy_group.add_argument('--use_test', action='store_true', help='테스트셋 후보로 생성')
-    parser.add_argument('--train20_per_user', action='store_true', help='--train20_only일 때 유저별 후반 20%% 세션(유저당 최소 1)만 사용. NAML 트레이닝 후반 20%%와 동일 정의.')
-    parser.add_argument('--train20_positive_only', action='store_true', help='--train20_only일 때 세션당 positive(클릭된) 후보 1개에만 기대본문 생성.')
-    parser.add_argument('--train20_first_k', type=int, default=None, metavar='K', help='--train20_only일 때 배치당 K세션 (예: 500). 유저별 후반 20%%와 동일 세션 순서. --train20_batch_index와 함께 사용')
-    parser.add_argument('--train20_batch_index', type=int, default=0, metavar='N', help='배치 번호 (0=첫 K세션→train20_batch0, 1=다음 K세션→train20_batch1). --train20_first_k와 함께 사용')
-    parser.add_argument('--output_subdir', type=str, default=None, metavar='DIR', help='출력 폴더 이름 (예: train_last20). train20_first_k 미사용 시에만 적용. 지정 시 output/DIR에 저장')
-    parser.add_argument('--train80_first_k', type=int, default=None, metavar='K', help='--train80_only일 때 배치당 K세션 (예: 500). --train80_batch_index와 함께 사용')
-    parser.add_argument('--train80_batch_index', type=int, default=0, metavar='N', help='배치 번호 (0=첫 500세션→train80_batch0, 1=다음 500세션→train80_batch1). --train80_first_k와 함께 사용')
+    parser.add_argument('--output', type=str, default='body_generation/output',
+                        help='출력 루트 (실제 저장은 <루트>/<데이터셋 폴더>/trainN 등, 예: output/MIND_2000/train0)')
+    parser.add_argument('--use_test', action='store_true', help='테스트셋 후보로 생성 (미지정 시 학습 TSV 사용)')
     parser.add_argument('--policy_file', type=int, default=None, metavar='N', help='정책으로 사용할 coordinator 출력 파일 번호 (N이면 N.txt). 생략 시 가장 큰 번호 사용')
     parser.add_argument('--api_key', type=str, default=None, help='OpenAI API 키 (선택, 환경변수 사용 가능)')
     parser.add_argument('--model', type=str, default='gpt-4o-mini', help='사용할 모델명')
     parser.add_argument('--mind_dataset_subdir', type=str, default=None,
                         help='dataset 하위 폴더 (예: MIND, MIND_1000, MIND_2000). 미지정 시 env MIND_DATASET_SUBDIR 또는 MIND')
-    
     args = parser.parse_args()
     
+    # 데이터셋별로 출력 분리: body_generation/output/MIND_2000/train0 형태
+    dataset_subdir = _resolve_mind_dataset_subdir(args.mind_dataset_subdir)
+    base_output_dir = os.path.join(os.path.normpath(args.output), dataset_subdir)
+    os.makedirs(base_output_dir, exist_ok=True)
+    
     # 생성 정책에 따라 출력 폴더 결정
-    if args.train80_only:
-        mode = "train"
-        if args.train80_first_k is not None:
-            run_dir = os.path.join(args.output, f"train80_batch{args.train80_batch_index}")
-            os.makedirs(run_dir, exist_ok=True)
-            print(f"생성 정책: train80 배치 {args.train80_batch_index} ({args.train80_first_k}세션), 저장 경로: {run_dir}")
-        else:
-            run_dir = get_next_run_folder(args.output, mode)
-            print(f"생성 정책: {mode}, 저장 경로: {run_dir}")
-    elif args.train20_only:
-        mode = "train20"
-        if args.train20_first_k is not None:
-            run_dir = os.path.join(args.output, f"train20_batch{args.train20_batch_index}")
-            os.makedirs(run_dir, exist_ok=True)
-            print(f"생성 정책: {mode} 배치 {args.train20_batch_index} ({args.train20_first_k}세션), 저장 경로: {run_dir}")
-        elif args.output_subdir:
-            run_dir = os.path.join(args.output, args.output_subdir)
-            os.makedirs(run_dir, exist_ok=True)
-            print(f"생성 정책: {mode} (output_subdir={args.output_subdir}), 저장 경로: {run_dir}")
-        else:
-            run_dir = get_next_run_folder(args.output, mode)
-            print(f"생성 정책: {mode}, 저장 경로: {run_dir}")
-    else:
+    if args.use_test:
         mode = "test"
-        run_dir = get_next_run_folder(args.output, mode)
+        run_dir = get_next_run_folder(base_output_dir, mode)
+        print(f"데이터셋: {dataset_subdir}")
+        print(f"생성 정책: {mode}, 저장 경로: {run_dir}")
+    else:
+        mode = "train"
+        run_dir = get_next_run_folder(base_output_dir, mode)
+        print(f"데이터셋: {dataset_subdir}")
         print(f"생성 정책: {mode}, 저장 경로: {run_dir}")
     
     # 생성기 초기화
@@ -785,16 +676,8 @@ def main():
         api_key=args.api_key,
         model=args.model,
         use_test=args.use_test,
-        train80_only=args.train80_only,
-        train20_only=args.train20_only,
-        train20_per_user=args.train20_per_user,
-        train20_positive_only=args.train20_positive_only,
-        train20_first_k=args.train20_first_k,
-        train20_batch_index=args.train20_batch_index,
-        train80_first_k=args.train80_first_k,
-        train80_batch_index=args.train80_batch_index,
         coordinator_policy_n=args.policy_file,
-        mind_dataset_subdir=args.mind_dataset_subdir
+        mind_dataset_subdir=args.mind_dataset_subdir,
     )
     
     if args.candidate_news_id:

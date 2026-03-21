@@ -4,12 +4,10 @@
     "abstraction_level": "mixed",
     "speculation_count": 1,
     "length_bucket": "medium",
-    "format": "narrative"
+    "format": "bullet"
   },
   "running_policy_summary": [
     "When expected-body performance lags real-body, reducing specificity improves stability.",
-    "Speculation_count=2 frequently increases noise; prefer 0–1 unless history-match is weak.",
-    "Very short expected bodies under-inform personalization; medium length is a safe default.",
-    "Bullet format helps coverage but can introduce fragmented semantics in some batches."
+    "Speculation_count=2 frequently increases noise; prefer 0–1 unless history-match is weak."
   ]
 }
