@@ -8,7 +8,7 @@ import json
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 
 import pandas as pd
 import yaml
@@ -250,6 +250,11 @@ class BodyGenerator:
                 print(f"Coordinator 설정 로드: {best_path} (tone={self.coordinator_policy.get('tone', '?')}, ...)")
         except Exception as e:
             print(f"경고: Coordinator 설정 로드 실패 ({best_path}): {e}")
+
+    def set_coordinator_policy_n(self, n: Optional[int]) -> None:
+        """coordinator 출력 N.txt 정책을 바꿔 다시 로드 (배치마다 다른 번호를 쓸 때)."""
+        self.coordinator_policy_n = n
+        self._load_coordinator_policy()
     
     def _get_user_click_history(self, user_id: int, max_items: int = 10) -> List[str]:
         """
@@ -579,6 +584,89 @@ class BodyGenerator:
                 json.dump(results, f, ensure_ascii=False, indent=2)
             print(f"\n전체 결과가 {all_results_path}에 저장되었습니다.")
         
+        print(f"\n총 {len(results)}개의 본문이 생성되었습니다.")
+        return results
+
+    def generate_bodies_for_pairs(
+        self,
+        pairs: List[Tuple[int, str]],
+        output_dir: Optional[str] = None,
+    ) -> List[Dict]:
+        """
+        (user_id, candidate_news_id) 목록에 대해 기대 본문 생성 (병렬).
+        train_df에 없는 user는 건너뜀.
+        """
+        if not pairs:
+            print("생성할 (user, candidate) 쌍이 없습니다.")
+            return []
+
+        # 유효 후보만, 순서 유지하며 중복 제거
+        seen: Set[Tuple[int, str]] = set()
+        work: List[Tuple[int, str]] = []
+        for uid, cid in pairs:
+            cid = str(cid).strip()
+            if not cid or cid not in self.news_dict:
+                if cid and cid not in self.news_dict:
+                    print(f"경고: 뉴스 ID {cid} 없음 — 건너뜀 (user={uid})")
+                continue
+            key = (int(uid), cid)
+            if key in seen:
+                continue
+            seen.add(key)
+            work.append((int(uid), cid))
+
+        if not work:
+            print("유효한 후보가 없습니다.")
+            return []
+
+        hist_cache: Dict[int, List[str]] = {}
+
+        def _hist(uid: int) -> List[str]:
+            if uid not in hist_cache:
+                hist_cache[uid] = self._get_user_click_history(uid, max_items=10)
+            return hist_cache[uid]
+
+        n_total = len(work)
+        print(
+            f"\n총 {n_total}개 (user, 후보) 쌍에 대해 본문 생성..."
+            f" (병렬, 최대 동시 {min(DEFAULT_API_CONCURRENCY, n_total)}요청)"
+        )
+
+        max_workers = max(1, min(DEFAULT_API_CONCURRENCY, n_total))
+        verbose_save = max_workers <= 1
+        out_pairs: List[Tuple[int, Optional[Dict]]] = []
+
+        def _one(pos: int, uid: int, cid: str) -> Tuple[int, Optional[Dict]]:
+            uh = _hist(uid)
+            if len(uh) == 0:
+                with self._print_lock:
+                    print(f"[{pos + 1}/{n_total}] 유저 {uid}: 클릭 히스토리 없음 — 건너뜀")
+                return (pos, None)
+            return self._generate_one_candidate_parallel(
+                pos, n_total, uid, cid, uh, output_dir, verbose_save
+            )
+
+        if max_workers == 1:
+            for pos, (uid, cid) in enumerate(work):
+                out_pairs.append(_one(pos, uid, cid))
+        else:
+            with ThreadPoolExecutor(max_workers=max_workers) as ex:
+                futs = [
+                    ex.submit(_one, pos, uid, cid)
+                    for pos, (uid, cid) in enumerate(work)
+                ]
+                for fut in as_completed(futs):
+                    out_pairs.append(fut.result())
+
+        out_pairs.sort(key=lambda x: x[0])
+        results = [r for _, r in out_pairs if r is not None]
+
+        if output_dir and results:
+            all_path = os.path.join(output_dir, "all_results_pairs.json")
+            with open(all_path, "w", encoding="utf-8") as f:
+                json.dump(results, f, ensure_ascii=False, indent=2)
+            print(f"\n전체 결과 요약: {all_path}")
+
         print(f"\n총 {len(results)}개의 본문이 생성되었습니다.")
         return results
     

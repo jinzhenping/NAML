@@ -42,26 +42,6 @@ DEFAULT_WEIGHTS_RELATIVE = os.path.join("saved_models", "NAML_mind_2000.h5")
 # ---------------------------------------------------------------------------
 
 
-def _stats_raw_train_tsv(train_path: str) -> tuple:
-    """
-    원본 트레이닝 TSV 통계 (preprocess_user_file과 동일하게 헤더 1행 스킵).
-    반환: (행 수, 고유 user 수, 4컬럼 이상 행 수, 4컬럼 이상 행의 고유 user, user 집합)
-    """
-    with open(train_path, "r", encoding="utf-8") as f:
-        lines = f.readlines()[1:]
-    users_any = set()
-    users_ge4 = set()
-    n_ge4 = 0
-    for line in lines:
-        parts = line.strip().split("\t")
-        if len(parts) >= 1:
-            users_any.add(parts[0])
-        if len(parts) >= 4:
-            n_ge4 += 1
-            users_ge4.add(parts[0])
-    return len(lines), len(users_any), n_ge4, len(users_ge4), users_any
-
-
 def _apply_dataset_env(mind_subdir_cli: Optional[str]) -> None:
     """naml_common import 전에 호출. dataset 경로 관련 환경변수 설정."""
     if USE_SCRIPT_DATASET_CONFIG:
@@ -128,9 +108,7 @@ def main() -> None:
         MAX_SENT_LENGTH,
         SEED,
         MIND_DATASET_SUBDIR,
-        MIND_TRAIN_FILENAME,
         get_embedding,
-        mind_data_path,
         preprocess_news_file,
         preprocess_user_file,
     )
@@ -186,27 +164,6 @@ def main() -> None:
         word_dict=word_dict,
     )
 
-    train_tsv_path = mind_data_path(MIND_TRAIN_FILENAME)
-    n_lines, n_users_raw, n_rows_ge4, n_users_ge4, users_raw = _stats_raw_train_tsv(train_tsv_path)
-    users_after = set(all_train_userid_str)
-    dropped = users_raw - users_after
-
-    print("[유저 수 확인] 원본 트레이닝 TSV vs 전처리 후 (NAML preprocess_user_file 기준)")
-    print(f"  파일: {train_tsv_path}")
-    print(f"  원본 행 수 (헤더 제외): {n_lines}")
-    print(f"  원본 고유 user (첫 컬럼, 유효한 첫 필드가 있는 행): {n_users_raw}")
-    print(f"  원본 4컬럼 이상 행 수: {n_rows_ge4}, 그 행들의 고유 user: {n_users_ge4}")
-    print(f"  전처리 후 트레이닝 세션 수: {len(all_label)}")
-    print(f"  전처리 후 고유 user (세션 ≥1): {len(users_after)}  ← 클러스터 CSV 유저 수와 동일")
-    n_sess_drop = n_lines - len(all_label)
-    print(f"  드롭된 트레이닝 행(세션) 수: {n_sess_drop} (원본 행 {n_lines} − 유지 세션 {len(all_label)}; 나머지 유저는 일부 행만 드롭)")
-    if dropped:
-        print(f"  전처리에서 세션이 하나도 남지 않은 user 수: {len(dropped)} (원본 고유 {n_users_raw} − 유지 {len(users_after)})")
-        try:
-            dropped_sorted = sorted(dropped, key=lambda x: int(x))
-        except (ValueError, TypeError):
-            dropped_sorted = sorted(dropped, key=str)
-        print(f"  위 완전 드롭 user id: {', '.join(str(u) for u in dropped_sorted)}")
     print(f"트레이닝 세션 수: {len(all_train_id)}")
     print(f"테스트 세션 수: {len(all_test_index)}")
 

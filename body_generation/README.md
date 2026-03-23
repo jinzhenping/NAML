@@ -67,3 +67,27 @@ python body_generation/generate_body.py --use_test
 
 python body_generation/generate_body.py --policy_file 2   # 정책만 지정
 ```
+
+### 클러스터별 트레이닝 세션 배치 → coordinator `N.txt` 정책
+
+`NAML/user_kmeans_k*.csv`(컬럼 `user_id`, `cluster`)와 **NAML `preprocess_user_file`과 동일한** 트레이닝 세션 순서를 씁니다.  
+지정한 클러스터에 속한 유저의 세션만 모은 뒤, **세션을 300개씩** 나누고, **배치 0 → `coordinator_LLM/output/0.txt`**, 배치 1 → `1.txt` … 로 기대본문을 생성합니다.
+
+```bash
+# PYTHONPATH에 NAML 필요 (프로젝트 루트에서)
+set PYTHONPATH=NAML
+python body_generation/generate_body_cluster_train_batches.py --cluster-id 0 --batch-index 0 --mind-dataset-subdir MIND_2000
+
+# 배치 1 → 1.txt, CSV 경로 지정
+python body_generation/generate_body_cluster_train_batches.py ^
+  --cluster-csv NAML/user_kmeans_k3_MIND_2000.csv --cluster-id 0 --batch-index 1 --mind-dataset-subdir MIND_2000
+
+# 세션 수·쌍 수만 확인 (API 호출 없음)
+python body_generation/generate_body_cluster_train_batches.py --cluster-id 0 --batch-index 0 --dry-run --mind-dataset-subdir MIND_2000
+
+# 해당 클러스터를 몇 개 배치로 나눌 수 있는지(세션 수·batch-index 범위)만 출력
+python body_generation/generate_body_cluster_train_batches.py --cluster-id 0 --batch-count-only --mind-dataset-subdir MIND_2000
+```
+
+- 출력: `body_generation/output/<데이터셋>/cluster0_batch0/` 등 (`user_<id>/news_<뉴스ID>.json`, `all_results_pairs.json`)
+- 정책 번호를 배치 번호와 다르게 쓰려면 `--policy-file N`
