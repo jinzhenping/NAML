@@ -11,15 +11,22 @@ NAML.py를 실행하지 않으며, naml_common + naml_model_builder만 사용.
 가중치 기본: 프로젝트 루트/saved_models/NAML_mind_2000.h5
 클러스터 CSV 기본: 이 스크립트와 같은 폴더 (NAML/user_kmeans_k{K}_{SUBDIR}.csv)
 
-GPU: 기본 물리 GPU 1번 (아래 CUDA_VISIBLE_DEVICES). TensorFlow import 전에 설정됨.
+GPU: USE_SCRIPT_GPU_CONFIG / DEFAULT_CUDA_VISIBLE_DEVICES (TensorFlow import 전 설정).
+  TF 로그의 device:GPU:0 은 "프로세스에 보이는 첫 GPU"이며, CUDA_VISIBLE_DEVICES=1 이면 물리 1번이 0으로 보일 수 있음.
 """
 import argparse
 import os
 import sys
 
-# 기본 GPU (물리 번호). TensorFlow import 전에 적용. 셸에서 CUDA_VISIBLE_DEVICES를 이미 주면 덮어쓰지 않음.
+# --- GPU: TensorFlow import 전에만 적용됨 ---
+# True면 아래 DEFAULT_CUDA_VISIBLE_DEVICES가 셸의 CUDA_VISIBLE_DEVICES보다 우선 (권장).
+USE_SCRIPT_GPU_CONFIG = True
+# 물리 GPU 번호(들). 예: "1" 또는 "0,1"
 DEFAULT_CUDA_VISIBLE_DEVICES = "1"
-os.environ.setdefault("CUDA_VISIBLE_DEVICES", DEFAULT_CUDA_VISIBLE_DEVICES)
+if USE_SCRIPT_GPU_CONFIG:
+    os.environ["CUDA_VISIBLE_DEVICES"] = DEFAULT_CUDA_VISIBLE_DEVICES
+else:
+    os.environ.setdefault("CUDA_VISIBLE_DEVICES", DEFAULT_CUDA_VISIBLE_DEVICES)
 from collections import defaultdict
 from typing import Optional
 
@@ -128,6 +135,8 @@ def main() -> None:
 
     print(f"\n{'='*60}")
     print(f"cluster_train_users_kmeans: k={args.k}, weights={weights_path}")
+    print(f"CUDA_VISIBLE_DEVICES={os.environ.get('CUDA_VISIBLE_DEVICES', '')}")
+    print("  → TF 로그의 GPU:0 은 '이 프로세스에 보이는 첫 GPU'이며, 위 값이 1이면 보통 물리 GPU 1번 사용 중입니다.")
     print(f"데이터셋: dataset/{MIND_DATASET_SUBDIR}/")
     print("(user_rep는 유저 임베딩 테이블이 아니라 히스토리로부터 계산됩니다.)")
     print(f"{'='*60}\n")
