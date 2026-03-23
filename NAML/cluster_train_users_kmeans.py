@@ -10,10 +10,16 @@ NAML.py를 실행하지 않으며, naml_common + naml_model_builder만 사용.
 데이터셋 폴더는 아래 「사용자 설정」에서 지정 (PowerShell $env: 불필요).
 가중치 기본: 프로젝트 루트/saved_models/NAML_mind_2000.h5
 클러스터 CSV 기본: 이 스크립트와 같은 폴더 (NAML/user_kmeans_k{K}_{SUBDIR}.csv)
+
+GPU: 기본 물리 GPU 1번 (아래 CUDA_VISIBLE_DEVICES). TensorFlow import 전에 설정됨.
 """
 import argparse
 import os
 import sys
+
+# 기본 GPU (물리 번호). TensorFlow import 전에 적용. 셸에서 CUDA_VISIBLE_DEVICES를 이미 주면 덮어쓰지 않음.
+DEFAULT_CUDA_VISIBLE_DEVICES = "1"
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", DEFAULT_CUDA_VISIBLE_DEVICES)
 from collections import defaultdict
 from typing import Optional
 
