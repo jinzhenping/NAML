@@ -28,3 +28,16 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_cluster_bat
 - `performance_feedback`: `loss_*`는 학습용 `model`의 categorical crossentropy(배치 평균), `ndcg5_*`는 `model_test` 점수로 세션별 NDCG@5 평균입니다.
 - `expected_body_coverage`: 로드된 JSON 항목 수, 배치 내 패딩 제외 후보 슬롯 수, 그중 `_norm_expected_body_key`로 매칭된 슬롯 수·비율(`batch_match_rate`), 뉴스 ID가 빈 슬롯 수. 실행 시 콘솔에도 같은 요약이 출력됩니다.
 - `diagnostic_samples`: `failure` = |NDCG_real−NDCG_expected|가 가장 큰 세션, `success` = 가장 작은 세션. 정답 후보에 대응하는 `user_<id>/news_<id>.json`이 있으면 그 안의 `candidate_title`, `user_history`, `generated_body`를 우선 사용하고, 없으면 `MIND_news.tsv`·NAML 전처리 히스토리로 보완합니다.
+
+## 클러스터 배치 자동 파이프라인 (생성 → 평가 → 조율기)
+
+`N = start..end`마다 `generate_body_cluster_train_batches` → `eval_cluster_batch`(`--result-index N`) → `coordinator.py`(`--n N`)를 순서대로 실행합니다.
+
+```bash
+# 프로젝트 루트에서 (예: 배치 0,1,2)
+CUDA_VISIBLE_DEVICES=1 python scripts/run_cluster_batch_pipeline.py --start 0 --end 2
+```
+
+- 시작 배치 `N`에 대해 **`coordinator_LLM/output/N.txt`가 이미 있어야** 합니다(예: `0.txt` 시드).
+- 조율기는 `N.txt`·`resultN.txt`를 읽고 `(N+1).txt`를 쓰므로, 다음 배치 `N+1` 생성 시 정책 `N+1.txt`를 사용하게 됩니다.
+- GPU 환경 변수를 쓰지 않으려면 `--no-cuda-env` 를 붙입니다.
