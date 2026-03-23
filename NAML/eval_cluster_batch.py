@@ -166,6 +166,46 @@ def flatten_train_sessions_for_test_gen(
     )
 
 
+def compute_expected_body_coverage_for_batch(
+    batch_sessions: List[int],
+    all_train_userid_str,
+    all_train_newsid_str,
+    all_train_pn: np.ndarray,
+    expected_bodies: Dict[Tuple[str, str], str],
+) -> Dict[str, Any]:
+    """
+    기대본문 평가 시 실제로 매칭되는 비율 (NAML 제너레이터와 동일 규칙).
+    - 후보 슬롯: 세션당 5칸 중 news 인덱스 != 0 인 것만 집계 (패딩 제외).
+    - 키: _norm_expected_body_key(user_id, news_id_str).
+    """
+    non_padding = 0
+    matched = 0
+    empty_news_id = 0
+    for s in batch_sessions:
+        uid = all_train_userid_str[s]
+        news_ids_row = all_train_newsid_str[s]
+        for j in range(5):
+            news_idx = int(all_train_pn[s][j])
+            if news_idx == 0:
+                continue
+            non_padding += 1
+            nid = str(news_ids_row[j]).strip() if j < len(news_ids_row) and news_ids_row[j] is not None else ""
+            if not nid:
+                empty_news_id += 1
+                continue
+            key = _norm_expected_body_key(uid, nid)
+            if key in expected_bodies:
+                matched += 1
+    rate = (matched / non_padding) if non_padding else 0.0
+    return {
+        "json_entries_loaded": len(expected_bodies),
+        "batch_candidate_slots_non_padding": non_padding,
+        "batch_slots_with_empty_news_id": empty_news_id,
+        "batch_slots_matched_expected_body": matched,
+        "batch_match_rate": round(rate, 6),
+    }
+
+
 def next_free_result_index(results_dir: Path) -> int:
     existing: List[int] = []
     for p in glob.glob(str(results_dir / "result*.txt")):
@@ -367,6 +407,22 @@ def main() -> None:
     batch_sessions = session_indices[start:end]
     print(f"클러스터 {args.cluster_id}, 배치 {args.batch_index}: 세션 {len(batch_sessions)}개 (전체 클러스터 세션 {total_sess} 중 [{start},{end}))")
 
+    coverage = compute_expected_body_coverage_for_batch(
+        batch_sessions,
+        all_train_userid_str,
+        all_train_newsid_str,
+        all_train_pn,
+        expected_bodies,
+    )
+    _mr = float(coverage["batch_match_rate"])
+    print(
+        f"[기대본문 매칭] JSON 항목 수: {coverage['json_entries_loaded']} | "
+        f"배치 후보 슬롯(패딩 제외): {coverage['batch_candidate_slots_non_padding']} | "
+        f"매칭됨: {coverage['batch_slots_matched_expected_body']} | "
+        f"비율: {_mr:.2%} | "
+        f"뉴스ID 빈 슬롯: {coverage['batch_slots_with_empty_news_id']}"
+    )
+
     # --- 서브셋 배열 (손실용)
     sub_pn = all_train_pn[batch_sessions]
     sub_label = all_label[batch_sessions]
@@ -558,6 +614,7 @@ def main() -> None:
             "ndcg5_expected": round(ndcg5_expected, 6),
             "ndcg5_real": round(ndcg5_real, 6),
         },
+        "expected_body_coverage": coverage,
         "diagnostic_samples": diagnostic_samples,
     }
 
