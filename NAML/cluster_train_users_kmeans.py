@@ -8,7 +8,8 @@ NAML.py를 실행하지 않으며, naml_common + naml_model_builder만 사용.
   python NAML/cluster_train_users_kmeans.py --k 3
 
 데이터셋 폴더는 아래 「사용자 설정」에서 지정 (PowerShell $env: 불필요).
-가중치 기본: NAML/saved_models/NAML_mind_2000.h5
+가중치 기본: 프로젝트 루트/saved_models/NAML_mind_2000.h5
+클러스터 CSV 기본: 이 스크립트와 같은 폴더 (NAML/user_kmeans_k{K}_{SUBDIR}.csv)
 """
 import argparse
 import os
@@ -36,6 +37,9 @@ SCRIPT_MIND_TEST_FILENAME: Optional[str] = None
 
 # NAML.py와 동일 학습률 (모델 compile에만 사용)
 MAIN_LR = 0.0005
+
+# 기본 가중치 (프로젝트 루트 기준 → <루트>/saved_models/NAML_mind_2000.h5)
+DEFAULT_WEIGHTS_RELATIVE = os.path.join("saved_models", "NAML_mind_2000.h5")
 # ---------------------------------------------------------------------------
 
 
@@ -64,14 +68,14 @@ def main() -> None:
         "--weights",
         type=str,
         default=None,
-        help="학습된 가중치 .h5 (기본: NAML/saved_models/NAML_mind_2000.h5)",
+        help="학습된 가중치 .h5 (기본: 프로젝트 루트/saved_models/NAML_mind_2000.h5)",
     )
     parser.add_argument("--batch", type=int, default=64, help="user_rep 추론 배치 크기")
     parser.add_argument(
         "--out",
         type=str,
         default=None,
-        help="출력 CSV 경로 (기본: NAML/saved_models/user_kmeans_k{K}_{SUBDIR}.csv)",
+        help="출력 CSV 경로 (기본: cluster_train_users_kmeans.py와 같은 폴더/user_kmeans_k{K}_{SUBDIR}.csv)",
     )
     parser.add_argument(
         "--mind-subdir",
@@ -107,7 +111,8 @@ def main() -> None:
         sys.exit(1)
 
     _naml_dir = os.path.dirname(os.path.abspath(__file__))
-    weights_path = args.weights or os.path.join(_naml_dir, "saved_models", "NAML_mind_2000.h5")
+    _project_root = os.path.dirname(_naml_dir)
+    weights_path = args.weights or os.path.join(_project_root, DEFAULT_WEIGHTS_RELATIVE)
     if not os.path.isfile(weights_path):
         print(f"오류: 가중치 파일 없음: {weights_path}")
         sys.exit(1)
@@ -198,9 +203,11 @@ def main() -> None:
     km = KMeans(n_clusters=args.k, random_state=SEED, n_init=10)
     labels = km.fit_predict(X)
 
-    out_dir = os.path.join(_naml_dir, "saved_models")
-    os.makedirs(out_dir, exist_ok=True)
-    out_csv = args.out or os.path.join(out_dir, f"user_kmeans_k{args.k}_{MIND_DATASET_SUBDIR}.csv")
+    # 스크립트(NAML/)와 동일 폴더에 저장 (기본)
+    out_csv = args.out or os.path.join(_naml_dir, f"user_kmeans_k{args.k}_{MIND_DATASET_SUBDIR}.csv")
+    _out_parent = os.path.dirname(os.path.abspath(out_csv))
+    if _out_parent:
+        os.makedirs(_out_parent, exist_ok=True)
     with open(out_csv, "w", encoding="utf-8") as f:
         f.write("user_id,cluster\n")
         for u, lab in zip(user_ids_sorted, labels):
