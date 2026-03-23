@@ -20,8 +20,8 @@ python NAML/NAML.py
 
 ```bash
 # 프로젝트 루트에서 (train-body-dir 은 실제 cluster<C>_batch<B> 경로로 맞출 것)
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_cluster_batch.py ^
-  --cluster-csv NAML/user_kmeans_k3_MIND_2000.csv --cluster-id 0 --batch-index 0 ^
+CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_cluster_batch.py \
+  --cluster-csv NAML/user_kmeans_k3_MIND_2000.csv --cluster-id 0 --batch-index 0 \
   --train-body-dir body_generation/output/MIND_2000/cluster0_batch0
 ```
 
