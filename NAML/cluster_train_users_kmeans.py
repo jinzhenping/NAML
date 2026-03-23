@@ -198,8 +198,15 @@ def main() -> None:
     print(f"  원본 4컬럼 이상 행 수: {n_rows_ge4}, 그 행들의 고유 user: {n_users_ge4}")
     print(f"  전처리 후 트레이닝 세션 수: {len(all_label)}")
     print(f"  전처리 후 고유 user (세션 ≥1): {len(users_after)}  ← 클러스터 CSV 유저 수와 동일")
+    n_sess_drop = n_lines - len(all_label)
+    print(f"  드롭된 트레이닝 행(세션) 수: {n_sess_drop} (원본 행 {n_lines} − 유지 세션 {len(all_label)}; 나머지 유저는 일부 행만 드롭)")
     if dropped:
         print(f"  전처리에서 세션이 하나도 남지 않은 user 수: {len(dropped)} (원본 고유 {n_users_raw} − 유지 {len(users_after)})")
+        try:
+            dropped_sorted = sorted(dropped, key=lambda x: int(x))
+        except (ValueError, TypeError):
+            dropped_sorted = sorted(dropped, key=str)
+        print(f"  위 완전 드롭 user id: {', '.join(str(u) for u in dropped_sorted)}")
     print(f"트레이닝 세션 수: {len(all_train_id)}")
     print(f"테스트 세션 수: {len(all_test_index)}")
 
