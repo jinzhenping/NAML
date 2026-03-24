@@ -4,6 +4,7 @@ NAML.py를 실행하지 않으며, naml_common + naml_model_builder만 사용.
 
 실행 예 (프로젝트 루트):
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/cluster_train_users_kmeans.py --k 3
+CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/cluster_train_users_kmeans.py --k 3 --assign-test
 
 데이터셋 폴더는 아래 「사용자 설정」에서 지정 (PowerShell $env: 불필요).
 가중치 기본: 프로젝트 루트/saved_models/NAML_mind_2000.h5
