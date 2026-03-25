@@ -40,6 +40,22 @@ export OPENAI_API_KEY="your-api-key-here"
 
 또는 코드에서 직접 API 키를 전달할 수 있습니다.
 
+## 테스트 유저 클러스터별 정책 (단일 출력 폴더)
+
+`NAML/user_kmeans_k*_..._test.csv` 처럼 **테스트 유저 → 클러스터** 매핑이 있을 때, 클러스터 0/1/2마다 **서로 다른 정책 JSON**을 쓰고 싶으면 `generate_body_test_cluster_policies.py`를 씁니다. 생성물은 `--output`으로 지정한 **한 폴더** 아래에만 쌓입니다 (`user_<id>/news_<id>.json`).
+
+```bash
+python body_generation/generate_body_test_cluster_policies.py \
+  --cluster-csv NAML/user_kmeans_k3_MIND_2000_test.csv \
+  --policy-files coordinator_LLM/output_cluster0/11.txt coordinator_LLM/output_cluster1/13.txt coordinator_LLM/output_cluster2/8.txt \
+  --output body_generation/output/MIND_2000/test_3cluster_11_13_8 \
+  --mind-dataset-subdir MIND_2000
+```
+
+- 정책 파일 형식은 `coordinator_LLM/output/N.txt`와 동일하게 `updated_policy` 또는 `policy` 필드를 가진 JSON이면 됩니다.
+- `--policy-files`는 **클러스터 id 0, 1, 2, … 순서**와 맞춥니다. CSV에 나온 최대 클러스터 번호가 `len(policy-files)-1`을 넘으면 안 됩니다.
+- `--dry-run`으로 클러스터별 쌍 개수만 확인할 수 있습니다.
+
 ## 출력 경로
 
 - `--output` 기본값은 `body_generation/output`이며, **사용 중인 데이터셋 폴더명** 아래에 실행별 폴더가 생깁니다.

@@ -91,6 +91,7 @@ class BodyGenerator:
                  model: str = "gpt-4o-mini",
                  coordinator_output_dir: str = "coordinator_LLM/output",
                  coordinator_policy_n: Optional[int] = None,
+                 coordinator_policy_path: Optional[str] = None,
                  mind_dataset_subdir: Optional[str] = None):
         """
         Args:
@@ -105,6 +106,7 @@ class BodyGenerator:
             model: 사용할 모델명
             coordinator_output_dir: coordinator_LLM 출력 디렉토리 (Tone 등 설정을 N.txt에서 로드)
             coordinator_policy_n: 사용할 정책 파일 번호 (N.txt). None이면 가장 큰 N 사용.
+            coordinator_policy_path: JSON 정책 파일 경로 (지정 시 N.txt보다 우선). coordinator 출력과 동일 형식(updated_policy/policy).
         """
         sub = _resolve_mind_dataset_subdir(mind_dataset_subdir)
         self.mind_dataset_subdir = sub
@@ -124,6 +126,7 @@ class BodyGenerator:
         self.model = model
         self.coordinator_output_dir = coordinator_output_dir
         self.coordinator_policy_n = coordinator_policy_n
+        self.coordinator_policy_path = coordinator_policy_path
         self._print_lock = threading.Lock()
         
         # API 키 설정
@@ -218,8 +221,28 @@ class BodyGenerator:
             self.prompt_template = f.read()
     
     def _load_coordinator_policy(self) -> None:
-        """coordinator_LLM/output 폴더에서 N.txt를 찾아 정책 로드. coordinator_policy_n이 있으면 해당 번호, 없으면 가장 큰 N."""
+        """coordinator JSON(N.txt 또는 임의 경로)에서 정책 로드. coordinator_policy_path가 있으면 최우선."""
         self.coordinator_policy = None
+        if self.coordinator_policy_path:
+            best_path = os.path.abspath(self.coordinator_policy_path)
+            if os.path.isfile(best_path):
+                try:
+                    with open(best_path, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                    self.coordinator_policy = (
+                        data.get("updated_policy") or data.get("current_policy") or data.get("policy")
+                    )
+                    if self.coordinator_policy:
+                        print(
+                            f"Coordinator 설정 로드(파일): {best_path} "
+                            f"(tone={self.coordinator_policy.get('tone', '?')}, ...)"
+                        )
+                except Exception as e:
+                    print(f"경고: Coordinator 정책 파일 로드 실패 ({best_path}): {e}")
+            else:
+                print(f"경고: Coordinator 정책 파일 없음: {best_path}")
+            return
+
         if not os.path.isdir(self.coordinator_output_dir):
             return
         best_path = None
@@ -253,7 +276,14 @@ class BodyGenerator:
 
     def set_coordinator_policy_n(self, n: Optional[int]) -> None:
         """coordinator 출력 N.txt 정책을 바꿔 다시 로드 (배치마다 다른 번호를 쓸 때)."""
+        self.coordinator_policy_path = None
         self.coordinator_policy_n = n
+        self._load_coordinator_policy()
+
+    def set_coordinator_policy_file(self, path: Optional[str]) -> None:
+        """임의 경로의 JSON 정책 파일로 전환 (클러스터별 정책 등). path가 None이면 파일 모드를 끄고 coordinator_policy_n도 None이라 정책이 비게 될 수 있음."""
+        self.coordinator_policy_path = path
+        self.coordinator_policy_n = None
         self._load_coordinator_policy()
     
     def _get_user_click_history(self, user_id: int, max_items: int = 10) -> List[str]:

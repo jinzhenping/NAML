@@ -29,6 +29,22 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_cluster_bat
 - `expected_body_coverage`: 로드된 JSON 항목 수, 배치 내 패딩 제외 후보 슬롯 수, 그중 `_norm_expected_body_key`로 매칭된 슬롯 수·비율(`batch_match_rate`), 뉴스 ID가 빈 슬롯 수. 실행 시 콘솔에도 같은 요약이 출력됩니다.
 - `diagnostic_samples`: `failure` = |NDCG_real−NDCG_expected|가 가장 큰 세션, `success` = 가장 작은 세션. 정답 후보에 대응하는 `user_<id>/news_<id>.json`이 있으면 그 안의 `candidate_title`, `user_history`, `generated_body`를 우선 사용하고, 없으면 `MIND_news.tsv`·NAML 전처리 히스토리로 보완합니다.
 
+## 테스트셋 평가 (실제본문 vs 기대본문, 3개 지표)
+
+프리트레인 가중치(예: `saved_models/NAML_mind_2000.h5`)를 로드해 테스트셋에서
+실제본문/기대본문을 각각 평가하고, NAML 기본 지표 3개(MRR, NDCG@5, Hit@1)를 비교합니다.
+
+```bash
+CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_expected.py \
+  --expected-dir body_generation/output/MIND_2000/test_cluster_mixed_run1 \
+  --weights saved_models/NAML_mind_2000.h5 \
+  --mind-dataset-subdir MIND_2000 \
+  --out NAML/results/test_eval_expected_run1.json
+```
+
+- `--expected-dir`: 기대본문 폴더 (`user_*/news_*.json`)
+- `--out`은 선택입니다. 생략하면 콘솔만 출력됩니다.
+
 ## 클러스터 배치 자동 파이프라인 (생성 → 평가 → 조율기)
 
 `N = start..end`마다 `generate_body_cluster_train_batches` → `eval_cluster_batch`(`--result-index N`) → `coordinator.py`(`--n N`)를 순서대로 실행합니다.
