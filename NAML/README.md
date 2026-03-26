@@ -46,16 +46,6 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_expect
 - `word_dict`는 **뉴스 TSV만**으로 만들어 사전학습 가중치와 임베딩 크기를 맞춥니다. 기대본문에만 있는 단어는 토큰화 시 제외됩니다(OOV).
 - **OOV 토큰** (모두 `lower` + `word_tokenize`, `word_dict` 기준): 기대본문 2줄(JSON 1회 합산 / 기대본문 매칭 슬롯 반복 합산), 실제본문 2줄(`MIND_news.tsv` 원문 — 테스트 후보에 등장하는 **고유 뉴스** 1회 합산 / **모든 후보 슬롯** 반복 합산).
 
-## 테스트셋 본문 미사용 ablation
-
-후보 본문·히스토리 뉴스 본문을 모두 패딩(`news_body[0]`)으로 넣고, 제목·카테고리·히스토리 제목은 유지한 채 MRR / NDCG@5 / Hit@1만 출력합니다.
-
-```bash
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_no_body.py \
-  --weights saved_models/NAML_mind_2000.h5 \
-  --mind-dataset-subdir MIND_2000
-```
-
 ## 클러스터 배치 자동 파이프라인 (생성 → 평가 → 조율기)
 
 `N = start..end`마다 `generate_body_cluster_train_batches` → `eval_cluster_batch`(`--result-index N`) → `coordinator.py`(`--n N`)를 순서대로 실행합니다.

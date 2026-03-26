@@ -191,11 +191,7 @@ def generate_batch_data_test(
     all_newsid_str=None,
     news_index_reverse=None,
     all_test_user_pos_override=None,
-    omit_body: bool = False,
 ):
-    """
-    omit_body=True: 후보 본문·클릭 히스토리 뉴스 본문을 모두 패딩(news_body[0])으로 둠(본문 신호 제거 ablation).
-    """
     if news_index_reverse is None:
         news_index_reverse = {v: k for k, v in news_index.items()}
 
@@ -223,9 +219,7 @@ def generate_batch_data_test(
                 news_idx = int(all_test_pn[idx])
                 candidate = news_words[news_idx]
                 candidate = np.expand_dims(candidate, axis=0)
-                if omit_body:
-                    candidate_body = news_body[0]
-                elif expected_bodies is not None and all_userid_str is not None and all_newsid_str is not None:
+                if expected_bodies is not None and all_userid_str is not None and all_newsid_str is not None:
                     user_id_str = all_userid_str[idx]
                     news_id_str = all_newsid_str[idx]
                     if news_idx == 0:
@@ -255,15 +249,10 @@ def generate_batch_data_test(
                 user_pos_indices = np.array(user_pos[idx], dtype="int32")
                 browsed_news = news_words[user_pos_indices]
                 browsed_news_split = [np.expand_dims(browsed_news[k], axis=0) for k in range(browsed_news.shape[0])]
-                if omit_body:
-                    browsed_news_body_split = [
-                        np.expand_dims(news_body[0], axis=0) for _ in range(browsed_news.shape[0])
-                    ]
-                else:
-                    browsed_news_body = news_body[user_pos_indices]
-                    browsed_news_body_split = [
-                        np.expand_dims(browsed_news_body[k], axis=0) for k in range(browsed_news_body.shape[0])
-                    ]
+                browsed_news_body = news_body[user_pos_indices]
+                browsed_news_body_split = [
+                    np.expand_dims(browsed_news_body[k], axis=0) for k in range(browsed_news_body.shape[0])
+                ]
                 browsed_news_vertical = news_v[user_pos_indices]
                 browsed_news_vertical_split = [np.expand_dims(browsed_news_vertical[k], axis=0) for k in range(browsed_news_vertical.shape[0])]
                 browsed_news_subvertical = news_sv[user_pos_indices]
