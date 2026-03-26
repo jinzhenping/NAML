@@ -44,7 +44,7 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_expect
 - `--expected-dir`: 기대본문 폴더 (`user_*/news_*.json`)
 - 결과는 **콘솔만** 출력합니다 (성능·매칭율·OOV).
 - `word_dict`는 **뉴스 TSV만**으로 만들어 사전학습 가중치와 임베딩 크기를 맞춥니다. 기대본문에만 있는 단어는 토큰화 시 제외됩니다(OOV).
-- 출력되는 **OOV 토큰** 두 줄: 첫 줄은 로드된 JSON 각 본문 1회 합산, 둘째 줄은 테스트에서 기대본문이 쓰인 후보 슬롯마다 합산(동일 본문이 여러 슬롯에 쓰이면 토큰도 반복 합산).
+- **OOV 토큰** (모두 `lower` + `word_tokenize`, `word_dict` 기준): 기대본문 2줄(JSON 1회 합산 / 기대본문 매칭 슬롯 반복 합산), 실제본문 2줄(`MIND_news.tsv` 원문 — 테스트 후보에 등장하는 **고유 뉴스** 1회 합산 / **모든 후보 슬롯** 반복 합산).
 
 ## 클러스터 배치 자동 파이프라인 (생성 → 평가 → 조율기)
 

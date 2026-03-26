@@ -129,6 +129,20 @@ def aggregate_oov_from_texts(word_dict: dict, texts: List[str]) -> Dict[str, flo
     }
 
 
+def load_news_id_to_body_from_tsv(news_tsv: str) -> Dict[str, str]:
+    """MIND_news.tsv: news_id -> 원문 body (5번째 칼럼)."""
+    out: Dict[str, str] = {}
+    if not news_tsv or not os.path.isfile(news_tsv):
+        return out
+    with open(news_tsv, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+    for line in lines[1:]:
+        parts = line.strip().split("\t")
+        if len(parts) >= 5:
+            out[parts[0]] = parts[4]
+    return out
+
+
 def calc_metrics_from_scores(click_score, all_test_label, all_test_index):
     all_mrr: List[float] = []
     all_ndcg: List[float] = []
@@ -164,7 +178,14 @@ def main() -> None:
     if args.mind_dataset_subdir:
         os.environ["MIND_DATASET_SUBDIR"] = args.mind_dataset_subdir
 
-    from naml_common import SEED, get_embedding, preprocess_news_file, preprocess_user_file
+    from naml_common import (
+        MIND_NEWS_FILENAME,
+        SEED,
+        get_embedding,
+        mind_data_path,
+        preprocess_news_file,
+        preprocess_user_file,
+    )
     from naml_model_builder import build_naml_models
 
     weights_path = _ROOT / args.weights
@@ -219,6 +240,26 @@ def main() -> None:
     model.load_weights(str(weights_path))
 
     news_index_reverse = {v: k for k, v in news_index.items()}
+    news_tsv_path = mind_data_path(MIND_NEWS_FILENAME)
+    raw_bodies_by_news_id = load_news_id_to_body_from_tsv(news_tsv_path)
+
+    # 실제본문 OOV: MIND_news.tsv 원문을 기대본문과 동일 규칙으로 토큰화
+    actual_bodies_unique: List[str] = []
+    seen_nids = set()
+    actual_bodies_per_slot: List[str] = []
+    for i in range(len(all_test_pn)):
+        idx = int(all_test_pn[i])
+        if idx == 0:
+            continue
+        nid = news_index_reverse.get(idx, "") or ""
+        body = raw_bodies_by_news_id.get(str(nid).strip(), "") if nid else ""
+        actual_bodies_per_slot.append(body)
+        if nid and str(nid).strip() not in seen_nids:
+            seen_nids.add(str(nid).strip())
+            actual_bodies_unique.append(body)
+    oov_actual_unique = aggregate_oov_from_texts(word_dict, actual_bodies_unique)
+    oov_actual_slots = aggregate_oov_from_texts(word_dict, actual_bodies_per_slot)
+
     bs = args.batch_size
     test_steps = (len(all_test_id) + bs - 1) // bs
 
@@ -286,13 +327,23 @@ def main() -> None:
     )
     oa = oov_all_json
     ot = oov_test_slots
+    aru = oov_actual_unique
+    ars = oov_actual_slots
     print(
-        f"[OOV 토큰] JSON 항목 각 1회: {oa['oov_tokens']}/{oa['total_tokens']} "
+        f"[OOV 기대본문] JSON 항목 각 1회: {oa['oov_tokens']}/{oa['total_tokens']} "
         f"({oa['oov_token_rate']:.2%})"
     )
     print(
-        f"[OOV 토큰] 테스트 매칭 슬롯(평가 시 본문당 반복): {ot['oov_tokens']}/{ot['total_tokens']} "
-        f"({ot['oov_token_rate']:.2%})"
+        f"[OOV 기대본문] 테스트에서 기대본문 쓴 슬롯만(반복 합산): "
+        f"{ot['oov_tokens']}/{ot['total_tokens']} ({ot['oov_token_rate']:.2%})"
+    )
+    print(
+        f"[OOV 실제본문] MIND TSV 테스트 후보 고유 뉴스 각 1회: "
+        f"{aru['oov_tokens']}/{aru['total_tokens']} ({aru['oov_token_rate']:.2%})"
+    )
+    print(
+        f"[OOV 실제본문] 테스트 슬롯(행마다 반복): "
+        f"{ars['oov_tokens']}/{ars['total_tokens']} ({ars['oov_token_rate']:.2%})"
     )
 
 
