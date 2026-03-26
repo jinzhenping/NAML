@@ -41,11 +41,11 @@ from naml_model_builder import build_naml_models
 USE_EXPECTED_BODY = False  # True: 기대 본문 사용, False: 원본 본문 사용
 MAIN_TRAINING_LEARNING_RATE = 0.0005  # 메인 학습 루프(및 동일 model.compile) Adam 학습률
 # 메인 학습 루프: 매 에폭 테스트셋 기대본문 평가용 (body_generation/output/<폴더>/)
-MAIN_TESTSET_EXPECTED_BODY_DIR = 'test_0'
+MAIN_TESTSET_EXPECTED_BODY_DIR = 'MIND_2000/test_3cluster_11_13_8'
 MAIN_TESTSET_EXPECTED_BODY_DIR_2 = None  # 두 번째 기대본문 폴더 (None이면 사용 안 함)
 MAIN_TRAINING_EPOCHS = 20  # 메인 학습 루프 에폭 수
-# USE_EXPECTED_BODY=False 메인 루프: 매 에폭 테스트셋(실제본문) MRR이 갱신될 때 모델 가중치 저장
-SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR = True
+# USE_EXPECTED_BODY=False이고 True일 때: 테스트셋 실제본문 MRR 최고 에폭에 가중치 저장
+SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR = False
 MAIN_TRAINING_BEST_MODEL_PATH = 'saved_models/NAML_mind_2000.h5'
 
 
@@ -548,7 +548,9 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
             batch_labels_array = np.array(batch_labels, dtype='float32')
             yield (batch_inputs, batch_labels_array)
 
-results=[]
+results_actual = []
+results_expected = []
+results_expected_2 = []
 _built = build_naml_models(
     word_dict, embedding_mat, category, subcategory, MAIN_TRAINING_LEARNING_RATE
 )
@@ -575,15 +577,27 @@ if all_test_userid_str is not None and all_test_newsid_str is not None:
         n = all_test_newsid_str[i] if i < len(all_test_newsid_str) else ''
         need_keys_test.add(_norm_expected_body_key(u, n))
     need_keys_test.discard(('', ''))
-test_body_dir_main = os.path.join(body_gen_output_main, MAIN_TESTSET_EXPECTED_BODY_DIR)
-expected_bodies_main_test = load_expected_bodies_from_train_dir(test_body_dir_main) if os.path.isdir(test_body_dir_main) else None
-if expected_bodies_main_test is not None:
-    print(f"메인 학습: 매 에폭 테스트셋 기대본문 평가 시 {MAIN_TESTSET_EXPECTED_BODY_DIR} 사용 ({len(expected_bodies_main_test)}개)")
-    if need_keys_test:
-        matched_test = sum(1 for k in need_keys_test if k in expected_bodies_main_test)
-        pct = 100.0 * matched_test / len(need_keys_test)
-        print(f"테스트셋 기대본문 매칭: 필요 키 {len(need_keys_test)}개 중 기대본문 존재 {matched_test}개 ({pct:.1f}%)")
-    print()
+test_body_dir_main = None
+expected_bodies_main_test = None
+if MAIN_TESTSET_EXPECTED_BODY_DIR is not None:
+    # MAIN_TESTSET_EXPECTED_BODY_DIR가 None이면 기대본문 평가는 스킵(실제본문만 평가)
+    test_body_dir_main = os.path.join(body_gen_output_main, MAIN_TESTSET_EXPECTED_BODY_DIR)
+    expected_bodies_main_test = (
+        load_expected_bodies_from_train_dir(test_body_dir_main)
+        if os.path.isdir(test_body_dir_main)
+        else None
+    )
+    if expected_bodies_main_test is not None:
+        print(
+            f"메인 학습: 매 에폭 테스트셋 기대본문 평가 시 {MAIN_TESTSET_EXPECTED_BODY_DIR} 사용 ({len(expected_bodies_main_test)}개)"
+        )
+        if need_keys_test:
+            matched_test = sum(1 for k in need_keys_test if k in expected_bodies_main_test)
+            pct = 100.0 * matched_test / len(need_keys_test)
+            print(
+                f"테스트셋 기대본문 매칭: 필요 키 {len(need_keys_test)}개 중 기대본문 존재 {matched_test}개 ({pct:.1f}%)"
+            )
+        print()
 # 두 번째 기대본문 폴더 (MAIN_TESTSET_EXPECTED_BODY_DIR_2)
 expected_bodies_main_test_2 = None
 if MAIN_TESTSET_EXPECTED_BODY_DIR_2:
@@ -599,8 +613,8 @@ if MAIN_TESTSET_EXPECTED_BODY_DIR_2:
     else:
         print(f"경고: 두 번째 기대본문 폴더 없음 ({test_body_dir_main_2}), 기대본문(2) 평가 생략\n")
 
-best_main_test_mrr = -1.0
-best_main_test_epoch = -1
+best_main_test_mrr_actual = -1.0
+best_main_test_epoch_actual = -1
 for ep in range(MAIN_TRAINING_EPOCHS):
     np.random.seed(SEED + ep)
     random.seed(SEED + ep)
@@ -708,25 +722,12 @@ for ep in range(MAIN_TRAINING_EPOCHS):
     # print(f"  - Hit@1 값 분포: 0={sum(1 for x in all_hit1 if x == 0)}, 1={sum(1 for x in all_hit1 if x == 1)}")
     
     # 결과 저장
-    epoch_results = {
+    epoch_results_actual = {
         'MRR': np.mean(all_mrr),
         'NDCG@5': np.mean(all_ndcg),
         'Hit@1': np.mean(all_hit1)
     }
-    results.append([epoch_results['MRR'], epoch_results['NDCG@5'], epoch_results['Hit@1']])
 
-    # USE_EXPECTED_BODY=False: 테스트셋 실제본문 MRR 최고 에폭 가중치 저장
-    if (not USE_EXPECTED_BODY) and SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR and len(all_mrr) > 0:
-        mrr_cur = float(epoch_results['MRR'])
-        if mrr_cur > best_main_test_mrr:
-            best_main_test_mrr = mrr_cur
-            best_main_test_epoch = ep + 1
-            _best_dir = os.path.dirname(MAIN_TRAINING_BEST_MODEL_PATH)
-            if _best_dir and not os.path.exists(_best_dir):
-                os.makedirs(_best_dir, exist_ok=True)
-            model.save_weights(MAIN_TRAINING_BEST_MODEL_PATH)
-            print(f"  [저장] 테스트셋(실제본문) MRR 최고 갱신 Epoch {ep+1}: MRR={mrr_cur:.6f} → {MAIN_TRAINING_BEST_MODEL_PATH}")
-    
     # [2] 테스트셋 기대본문(MAIN_TESTSET_EXPECTED_BODY_DIR)으로 평가
     epoch_results_expected = None
     if expected_bodies_main_test is not None:
@@ -783,35 +784,119 @@ for ep in range(MAIN_TRAINING_EPOCHS):
                 'NDCG@5': np.mean(all_ndcg_exp_2),
                 'Hit@1': np.mean(all_hit1_exp_2)
             }
+
+    results_actual.append([
+        float(epoch_results_actual["MRR"]),
+        float(epoch_results_actual["NDCG@5"]),
+        float(epoch_results_actual["Hit@1"]),
+    ])
+    results_expected.append(
+        None
+        if epoch_results_expected is None
+        else [
+            float(epoch_results_expected["MRR"]),
+            float(epoch_results_expected["NDCG@5"]),
+            float(epoch_results_expected["Hit@1"]),
+        ]
+    )
+    results_expected_2.append(
+        None
+        if epoch_results_expected_2 is None
+        else [
+            float(epoch_results_expected_2["MRR"]),
+            float(epoch_results_expected_2["NDCG@5"]),
+            float(epoch_results_expected_2["Hit@1"]),
+        ]
+    )
+
+    # 테스트셋 실제본문 MRR 최고 에폭 가중치 저장
+    if not USE_EXPECTED_BODY:
+        if SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR and len(all_mrr) > 0:
+            mrr_a = float(epoch_results_actual["MRR"])
+            if mrr_a > best_main_test_mrr_actual:
+                best_main_test_mrr_actual = mrr_a
+                best_main_test_epoch_actual = ep + 1
+                _best_dir = os.path.dirname(MAIN_TRAINING_BEST_MODEL_PATH)
+                if _best_dir and not os.path.exists(_best_dir):
+                    os.makedirs(_best_dir, exist_ok=True)
+                model.save_weights(MAIN_TRAINING_BEST_MODEL_PATH)
+                print(
+                    f"  [저장] 테스트셋(실제본문) MRR 최고 갱신 Epoch {ep+1}: "
+                    f"MRR={mrr_a:.6f} → {MAIN_TRAINING_BEST_MODEL_PATH}"
+                )
     current_lr = model.optimizer.learning_rate.numpy() if hasattr(model.optimizer.learning_rate, 'numpy') else model.optimizer.learning_rate
     print(f"\n{'='*60}")
     print(f"Epoch {ep+1}/{MAIN_TRAINING_EPOCHS} - Test Results (LR: {current_lr:.6f})")
     print(f"{'='*60}")
-    print(f"[실제본문] MRR: {epoch_results['MRR']:.6f}  NDCG@5: {epoch_results['NDCG@5']:.6f}  Hit@1: {epoch_results['Hit@1']:.6f}")
+    print(f"[실제본문] MRR: {epoch_results_actual['MRR']:.6f}  NDCG@5: {epoch_results_actual['NDCG@5']:.6f}  Hit@1: {epoch_results_actual['Hit@1']:.6f}")
     if epoch_results_expected is not None:
         print(f"[기대본문({MAIN_TESTSET_EXPECTED_BODY_DIR})] MRR: {epoch_results_expected['MRR']:.6f}  NDCG@5: {epoch_results_expected['NDCG@5']:.6f}  Hit@1: {epoch_results_expected['Hit@1']:.6f}")
     if epoch_results_expected_2 is not None:
         print(f"[기대본문(2)({MAIN_TESTSET_EXPECTED_BODY_DIR_2})] MRR: {epoch_results_expected_2['MRR']:.6f}  NDCG@5: {epoch_results_expected_2['NDCG@5']:.6f}  Hit@1: {epoch_results_expected_2['Hit@1']:.6f}")
     print(f"{'='*60}\n")
 
-# 전체 결과 요약
+# 전체 결과 요약 (실제본문 / 기대본문 각각)
 print(f"\n{'='*60}")
-print("Final Results Summary (All Epochs)")
+print("Final Results Summary — 실제본문 (테스트셋)")
 print(f"{'='*60}")
 print(f"{'Epoch':<10} {'MRR':<12} {'NDCG@5':<12} {'Hit@1':<12}")
 print(f"{'-'*60}")
-for i, result in enumerate(results, 1):
+for i, result in enumerate(results_actual, 1):
     mrr, ndcg5, hit1 = result
     print(f"{i:<10} {mrr:<12.6f} {ndcg5:<12.6f} {hit1:<12.6f}")
 print(f"{'='*72}")
 
-# 최고 성능 찾기
-best_mrr_idx = np.argmax([r[0] for r in results])
+if any(r is not None for r in results_expected):
+    print(f"\n{'='*60}")
+    print(f"Final Results Summary — 기대본문 ({MAIN_TESTSET_EXPECTED_BODY_DIR})")
+    print(f"{'='*60}")
+    print(f"{'Epoch':<10} {'MRR':<12} {'NDCG@5':<12} {'Hit@1':<12}")
+    print(f"{'-'*60}")
+    for i, result in enumerate(results_expected, 1):
+        if result is None:
+            print(f"{i:<10} {'N/A':<12} {'N/A':<12} {'N/A':<12}")
+        else:
+            mrr, ndcg5, hit1 = result
+            print(f"{i:<10} {mrr:<12.6f} {ndcg5:<12.6f} {hit1:<12.6f}")
+    print(f"{'='*72}")
+
+if any(r is not None for r in results_expected_2):
+    print(f"\n{'='*60}")
+    print(f"Final Results Summary — 기대본문(2) ({MAIN_TESTSET_EXPECTED_BODY_DIR_2})")
+    print(f"{'='*60}")
+    print(f"{'Epoch':<10} {'MRR':<12} {'NDCG@5':<12} {'Hit@1':<12}")
+    print(f"{'-'*60}")
+    for i, result in enumerate(results_expected_2, 1):
+        if result is None:
+            print(f"{i:<10} {'N/A':<12} {'N/A':<12} {'N/A':<12}")
+        else:
+            mrr, ndcg5, hit1 = result
+            print(f"{i:<10} {mrr:<12.6f} {ndcg5:<12.6f} {hit1:<12.6f}")
+    print(f"{'='*72}")
+
+# 최고 성능 (실제본문 기준)
+best_mrr_idx = int(np.argmax([r[0] for r in results_actual]))
 best_mrr_epoch = best_mrr_idx + 1
-best_hit1_idx = np.argmax([r[2] for r in results])
+best_hit1_idx = int(np.argmax([r[2] for r in results_actual]))
 best_hit1_epoch = best_hit1_idx + 1
-print(f"\nBest MRR  : Epoch {best_mrr_epoch} - {results[best_mrr_idx][0]:.6f}")
-print(f"Best Hit@1: Epoch {best_hit1_epoch} - {results[best_hit1_idx][2]:.6f}")
-if (not USE_EXPECTED_BODY) and SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR and best_main_test_epoch > 0:
-    print(f"저장된 최고(테스트 실제본문 MRR): Epoch {best_main_test_epoch} - {best_main_test_mrr:.6f} → {MAIN_TRAINING_BEST_MODEL_PATH}")
+print(f"\n[실제본문] Best MRR  : Epoch {best_mrr_epoch} - {results_actual[best_mrr_idx][0]:.6f}")
+print(f"[실제본문] Best Hit@1: Epoch {best_hit1_epoch} - {results_actual[best_hit1_idx][2]:.6f}")
+
+if any(r is not None for r in results_expected):
+    _exp_valid = [(i, r) for i, r in enumerate(results_expected) if r is not None]
+    if _exp_valid:
+        _best_i, _best_r = max(_exp_valid, key=lambda t: t[1][0])
+        print(f"[기대본문] Best MRR  : Epoch {_best_i + 1} - {_best_r[0]:.6f}")
+
+if any(r is not None for r in results_expected_2):
+    _exp2_valid = [(i, r) for i, r in enumerate(results_expected_2) if r is not None]
+    if _exp2_valid:
+        _best_i2, _best_r2 = max(_exp2_valid, key=lambda t: t[1][0])
+        print(f"[기대본문(2)] Best MRR  : Epoch {_best_i2 + 1} - {_best_r2[0]:.6f}")
+
+if (not USE_EXPECTED_BODY) and best_main_test_epoch_actual > 0 and SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR:
+    print(
+        f"저장된 최고(테스트 실제본문 MRR): Epoch {best_main_test_epoch_actual} - "
+        f"{best_main_test_mrr_actual:.6f} → {MAIN_TRAINING_BEST_MODEL_PATH}"
+    )
 print(f"{'='*60}\n")
