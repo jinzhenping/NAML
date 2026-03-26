@@ -22,6 +22,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 
 import numpy as np
+from nltk.tokenize import word_tokenize
 
 _ROOT = Path(__file__).resolve().parent.parent
 if str(_ROOT) not in sys.path:
@@ -101,6 +102,33 @@ def hit_at_k(y_true, y_score, k=1):
     return 1.0 if np.any(y_true[top_k_indices] == 1) else 0.0
 
 
+def _token_oov_counts(word_dict: dict, text: str) -> Tuple[int, int, int]:
+    """NAML 제너레이터와 동일: lower + word_tokenize, word in word_dict 이면 in-vocab."""
+    if not text or not str(text).strip():
+        return 0, 0, 0
+    tokens = word_tokenize(str(text).lower())
+    total = len(tokens)
+    in_vocab = sum(1 for w in tokens if w in word_dict)
+    oov = total - in_vocab
+    return total, in_vocab, oov
+
+
+def aggregate_oov_from_texts(word_dict: dict, texts: List[str]) -> Dict[str, float]:
+    tot = inv = oov = 0
+    for t in texts:
+        a, b, c = _token_oov_counts(word_dict, t)
+        tot += a
+        inv += b
+        oov += c
+    rate = (oov / tot) if tot else 0.0
+    return {
+        "total_tokens": tot,
+        "in_vocab_tokens": inv,
+        "oov_tokens": oov,
+        "oov_token_rate": round(rate, 6),
+    }
+
+
 def calc_metrics_from_scores(click_score, all_test_label, all_test_index):
     all_mrr: List[float] = []
     all_ndcg: List[float] = []
@@ -131,7 +159,6 @@ def main() -> None:
     parser.add_argument("--mind-dataset-subdir", type=str, default=None)
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--learning-rate", type=float, default=0.0005)
-    parser.add_argument("--out", type=str, default=None, help="결과 JSON 저장 경로(선택)")
     args = parser.parse_args()
 
     if args.mind_dataset_subdir:
@@ -232,54 +259,41 @@ def main() -> None:
             matched_slots += 1
     match_rate = (matched_slots / total_slots) if total_slots else 0.0
 
-    out_obj = {
-        "weights": str(weights_path),
-        "expected_dir": expected_dir_abs,
-        "coverage": {
-            "json_entries_loaded": len(expected_bodies),
-            "test_candidate_slots_non_padding": total_slots,
-            "test_slots_matched_expected_body": matched_slots,
-            "test_match_rate": round(match_rate, 6),
-        },
-        "metrics_real_body": {
-            "MRR": round(metrics_real["MRR"], 6),
-            "NDCG@5": round(metrics_real["NDCG@5"], 6),
-            "Hit@1": round(metrics_real["Hit@1"], 6),
-            "evaluated_sessions": metrics_real["evaluated_sessions"],
-        },
-        "metrics_expected_body": {
-            "MRR": round(metrics_exp["MRR"], 6),
-            "NDCG@5": round(metrics_exp["NDCG@5"], 6),
-            "Hit@1": round(metrics_exp["Hit@1"], 6),
-            "evaluated_sessions": metrics_exp["evaluated_sessions"],
-        },
-    }
+    # OOV: 기대본문 문자열을 NAML과 동일 토큰화 후 word_dict 미포함 비율
+    oov_all_json = aggregate_oov_from_texts(word_dict, list(expected_bodies.values()))
+    texts_test_matched: List[str] = []
+    for i in range(len(all_test_pn)):
+        if int(all_test_pn[i]) == 0:
+            continue
+        k = _norm_expected_body_key(all_test_userid_str[i], all_test_newsid_str[i])
+        if k in expected_bodies:
+            texts_test_matched.append(expected_bodies[k])
+    oov_test_slots = aggregate_oov_from_texts(word_dict, texts_test_matched)
 
     print("\n=== 테스트셋 성능 비교 ===")
     print(
-        f"[실제본문]   MRR={out_obj['metrics_real_body']['MRR']:.6f}  "
-        f"NDCG@5={out_obj['metrics_real_body']['NDCG@5']:.6f}  "
-        f"Hit@1={out_obj['metrics_real_body']['Hit@1']:.6f}"
+        f"[실제본문]   MRR={metrics_real['MRR']:.6f}  "
+        f"NDCG@5={metrics_real['NDCG@5']:.6f}  "
+        f"Hit@1={metrics_real['Hit@1']:.6f}"
     )
     print(
-        f"[기대본문]   MRR={out_obj['metrics_expected_body']['MRR']:.6f}  "
-        f"NDCG@5={out_obj['metrics_expected_body']['NDCG@5']:.6f}  "
-        f"Hit@1={out_obj['metrics_expected_body']['Hit@1']:.6f}"
+        f"[기대본문]   MRR={metrics_exp['MRR']:.6f}  "
+        f"NDCG@5={metrics_exp['NDCG@5']:.6f}  "
+        f"Hit@1={metrics_exp['Hit@1']:.6f}"
     )
     print(
-        f"[매칭율]     {out_obj['coverage']['test_slots_matched_expected_body']}/"
-        f"{out_obj['coverage']['test_candidate_slots_non_padding']} "
-        f"({out_obj['coverage']['test_match_rate']:.2%})"
+        f"[매칭율]     {matched_slots}/{total_slots} ({match_rate:.2%})"
     )
-
-    if args.out:
-        out_path = Path(args.out)
-        if not out_path.is_absolute():
-            out_path = _ROOT / out_path
-        out_path.parent.mkdir(parents=True, exist_ok=True)
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(out_obj, f, ensure_ascii=False, indent=2)
-        print(f"결과 저장: {out_path}")
+    oa = oov_all_json
+    ot = oov_test_slots
+    print(
+        f"[OOV 토큰] JSON 항목 각 1회: {oa['oov_tokens']}/{oa['total_tokens']} "
+        f"({oa['oov_token_rate']:.2%})"
+    )
+    print(
+        f"[OOV 토큰] 테스트 매칭 슬롯(평가 시 본문당 반복): {ot['oov_tokens']}/{ot['total_tokens']} "
+        f"({ot['oov_token_rate']:.2%})"
+    )
 
 
 if __name__ == "__main__":

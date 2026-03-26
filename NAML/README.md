@@ -38,13 +38,13 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_cluster_bat
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_expected.py \
   --expected-dir body_generation/output/MIND_2000/test_cluster_mixed_run1 \
   --weights saved_models/NAML_mind_2000.h5 \
-  --mind-dataset-subdir MIND_2000 \
-  --out NAML/results/test_eval_expected_run1.json
+  --mind-dataset-subdir MIND_2000
 ```
 
 - `--expected-dir`: 기대본문 폴더 (`user_*/news_*.json`)
-- `--out`은 선택입니다. 생략하면 콘솔만 출력됩니다.
+- 결과는 **콘솔만** 출력합니다 (성능·매칭율·OOV).
 - `word_dict`는 **뉴스 TSV만**으로 만들어 사전학습 가중치와 임베딩 크기를 맞춥니다. 기대본문에만 있는 단어는 토큰화 시 제외됩니다(OOV).
+- 출력되는 **OOV 토큰** 두 줄: 첫 줄은 로드된 JSON 각 본문 1회 합산, 둘째 줄은 테스트에서 기대본문이 쓰인 후보 슬롯마다 합산(동일 본문이 여러 슬롯에 쓰이면 토큰도 반복 합산).
 
 ## 클러스터 배치 자동 파이프라인 (생성 → 평가 → 조율기)
 
