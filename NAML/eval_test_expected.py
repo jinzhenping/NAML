@@ -154,9 +154,12 @@ def main() -> None:
     expected_bodies = load_expected_bodies_from_dir(expected_dir_abs)
     print(f"기대본문 로드: {len(expected_bodies)}개 ({expected_dir_abs})")
 
+    # 사전학습 가중치의 embedding 행 수 = len(word_dict)와 일치해야 함.
+    # 기대본문을 word_dict에 넣으면 어휘 크기가 달라져 load_weights가 실패하므로,
+    # 전처리는 뉴스 TSV만 사용하고, 기대본문 토큰은 기존 word_dict에 있는 단어만 반영(OOV는 제외).
     word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(
         expected_bodies_train=None,
-        expected_bodies_test=expected_bodies,
+        expected_bodies_test=None,
     )
     (
         _userid_dict,
@@ -178,7 +181,7 @@ def main() -> None:
     ) = preprocess_user_file(
         news_index=news_index,
         expected_bodies_train=None,
-        expected_bodies_test=expected_bodies,
+        expected_bodies_test=None,
         word_dict=word_dict,
     )
 

@@ -44,6 +44,7 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_expect
 
 - `--expected-dir`: 기대본문 폴더 (`user_*/news_*.json`)
 - `--out`은 선택입니다. 생략하면 콘솔만 출력됩니다.
+- `word_dict`는 **뉴스 TSV만**으로 만들어 사전학습 가중치와 임베딩 크기를 맞춥니다. 기대본문에만 있는 단어는 토큰화 시 제외됩니다(OOV).
 
 ## 클러스터 배치 자동 파이프라인 (생성 → 평가 → 조율기)
 
