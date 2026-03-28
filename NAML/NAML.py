@@ -39,6 +39,13 @@ from naml_common import (
 from naml_model_builder import build_naml_models
 
 USE_EXPECTED_BODY = False  # True: 기대 본문 사용, False: 원본 본문 사용
+# USE_EXPECTED_BODY=True일 때 기대본문 JSON 위치 (프로젝트 루트 기준 상대 경로 권장)
+# 기본: <EXPECTED_BODY_OUTPUT_DIR>/train/, <EXPECTED_BODY_OUTPUT_DIR>/test/ 아래 user_*/news_*.json
+EXPECTED_BODY_OUTPUT_DIR = 'body_generation/output'
+# None이면 위 규칙. 지정 시 해당 폴더를 직접 사용 (train/test를 서로 다른 루트에 둘 때)
+EXPECTED_BODY_TRAIN_DIR = 'body_generation/output/MIND_2000/train_3cluster_11_13_8'
+EXPECTED_BODY_TEST_DIR = 'body_generation/output/MIND_2000/test_3cluster_11_13_8'
+
 MAIN_TRAINING_LEARNING_RATE = 0.0005  # 메인 학습 루프(및 동일 model.compile) Adam 학습률
 # 메인 학습 루프: 매 에폭 테스트셋 기대본문 평가용 (body_generation/output/<폴더>/)
 MAIN_TESTSET_EXPECTED_BODY_DIR = 'MIND_2000/test_3cluster_11_13_8'
@@ -49,13 +56,15 @@ SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR = False
 MAIN_TRAINING_BEST_MODEL_PATH = 'saved_models/NAML_mind_2000.h5'
 
 
-def load_expected_bodies(output_dir='body_generation/output', dataset_type='train'):
+def load_expected_bodies(output_dir=None, dataset_type='train'):
     """
     기대 본문 로드 (유저별로 다른 기대본문 지원)
-    output_dir/{dataset_type}/user_{user_id}/news_{news_id}.json에서 기대 본문 로드
+    output_dir가 None이면 상단 EXPECTED_BODY_OUTPUT_DIR 사용.
+    <output_dir>/<dataset_type>/user_{user_id}/news_{news_id}.json에서 기대 본문 로드
     반환: {(user_id, news_id): generated_body} 형태의 딕셔너리
     """
-    
+    if output_dir is None:
+        output_dir = EXPECTED_BODY_OUTPUT_DIR
     expected_bodies = {}  # {(user_id, news_id): generated_body}
     base_path = os.path.join(output_dir, dataset_type)
     
@@ -138,17 +147,29 @@ def load_expected_bodies_from_train_dir(train_dir):
     return expected_bodies
 
 
+def _expected_body_dir_for_train_or_test(dataset_type: str) -> str:
+    """train 또는 test용 기대본문 폴더 경로 (user_*/news_*.json 상위 디렉터리)."""
+    if dataset_type == 'train' and EXPECTED_BODY_TRAIN_DIR:
+        return os.path.normpath(EXPECTED_BODY_TRAIN_DIR)
+    if dataset_type == 'test' and EXPECTED_BODY_TEST_DIR:
+        return os.path.normpath(EXPECTED_BODY_TEST_DIR)
+    return os.path.normpath(os.path.join(EXPECTED_BODY_OUTPUT_DIR, dataset_type))
+
+
 # 기대 본문 사용 여부는 상단에서 설정 (USE_EXPECTED_BODY)
 # word_dict 생성에 기대본문을 포함하기 위해 먼저 기대본문을 로드
 expected_bodies_train = None
 expected_bodies_test = None
 
 if USE_EXPECTED_BODY:
-    # 기대 본문 로드
+    # 기대 본문 로드 (경로는 상단 EXPECTED_BODY_*)
     print("\n기대 본문 로드 중...")
-    expected_bodies_train = load_expected_bodies(output_dir='body_generation/output', dataset_type='train')
-    expected_bodies_test = load_expected_bodies(output_dir='body_generation/output', dataset_type='test')
-    
+    _train_dir = _expected_body_dir_for_train_or_test('train')
+    _test_dir = _expected_body_dir_for_train_or_test('test')
+    print(f"  train 폴더: {_train_dir}")
+    print(f"  test 폴더: {_test_dir}")
+    expected_bodies_train = load_expected_bodies_from_train_dir(_train_dir)
+    expected_bodies_test = load_expected_bodies_from_train_dir(_test_dir)
     print(f"로드된 기대 본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
 
 # 뉴스 데이터를 전처리 (기대본문도 word_dict 생성에 포함)

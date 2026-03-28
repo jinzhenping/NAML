@@ -11,6 +11,8 @@
 
 배치 0 → 0.txt, 배치 1 → 1.txt (기본). --policy-file 로 N 덮어쓰기, --policy-path 로 JSON 파일 직접 지정(우선).
 배치 없이 클러스터 전체: --all-sessions (출력은 cluster<C>_batch0, 정책 기본 0.txt).
+
+클러스터 없이 전체 트레이닝: --full-train --batch-index N (출력 .../fulltrain_batch<N>/, CSV 불필요).
 """
 from __future__ import annotations
 
@@ -65,9 +67,20 @@ def main() -> None:
         "--cluster-csv",
         type=str,
         default="NAML/user_kmeans_k3_MIND_2000.csv",
-        help="user_id,cluster CSV (프로젝트 루트 기준 상대 경로)",
+        help="user_id,cluster CSV (프로젝트 루트 기준 상대 경로). --full-train 이면 사용 안 함",
     )
-    parser.add_argument("--cluster-id", type=int, required=True, help="대상 클러스터 번호 (예: 0)")
+    parser.add_argument(
+        "--cluster-id",
+        type=int,
+        default=None,
+        metavar="C",
+        help="대상 클러스터 번호 (예: 0). --full-train 이면 생략",
+    )
+    parser.add_argument(
+        "--full-train",
+        action="store_true",
+        help="클러스터 CSV 없이 전체 트레이닝 세션을 배치로 나눔. 출력: .../fulltrain_batch<B>/",
+    )
     parser.add_argument(
         "--batch-index",
         type=int,
@@ -129,6 +142,11 @@ def main() -> None:
     )
     args = parser.parse_args()
 
+    if not args.full_train and args.cluster_id is None:
+        parser.error("--cluster-id 는 필수입니다. (전체 트레이닝: --full-train)")
+    if args.full_train and args.cluster_id is not None:
+        print("경고: --full-train 이므로 --cluster-id 는 무시됩니다.", flush=True)
+
     if not args.batch_count_only and args.batch_index is None and not args.all_sessions:
         parser.error("--batch-index 는 필수입니다. (전체 한 번에: --all-sessions, 배치 개수만: --batch-count-only)")
 
@@ -140,14 +158,16 @@ def main() -> None:
             sys.exit(1)
 
     csv_path = _ROOT / args.cluster_csv
-    if not csv_path.is_file():
-        print(f"오류: 클러스터 CSV 없음: {csv_path}")
-        sys.exit(1)
-
-    cluster_users = _load_cluster_users(csv_path, args.cluster_id)
-    if not cluster_users:
-        print(f"오류: 클러스터 {args.cluster_id}에 해당하는 user가 CSV에 없습니다.")
-        sys.exit(1)
+    cluster_users: Optional[Set[str]] = None
+    if not args.full_train:
+        if not csv_path.is_file():
+            print(f"오류: 클러스터 CSV 없음: {csv_path}")
+            sys.exit(1)
+        assert args.cluster_id is not None
+        cluster_users = _load_cluster_users(csv_path, args.cluster_id)
+        if not cluster_users:
+            print(f"오류: 클러스터 {args.cluster_id}에 해당하는 user가 CSV에 없습니다.")
+            sys.exit(1)
 
     sub = gb._resolve_mind_dataset_subdir(args.mind_dataset_subdir)
     os.environ["MIND_DATASET_SUBDIR"] = sub
@@ -155,8 +175,11 @@ def main() -> None:
     from naml_common import preprocess_news_file, preprocess_user_file
 
     print(f"데이터셋: dataset/{sub}/ (MIND_DATASET_SUBDIR)")
-    print(f"클러스터 CSV: {csv_path}")
-    print(f"클러스터 {args.cluster_id} 유저 수 (CSV): {len(cluster_users)}")
+    if args.full_train:
+        print("모드: --full-train (전체 트레이닝 세션, 클러스터 미사용)")
+    else:
+        print(f"클러스터 CSV: {csv_path}")
+        print(f"클러스터 {args.cluster_id} 유저 수 (CSV): {len(cluster_users)}")
 
     word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = (
         preprocess_news_file(expected_bodies_train=None, expected_bodies_test=None)
@@ -187,13 +210,20 @@ def main() -> None:
 
     n_train = len(all_label)
     session_indices: List[int] = []
-    for i in range(n_train):
-        u = str(all_train_userid_str[i]).strip()
-        if u in cluster_users:
-            session_indices.append(i)
+    if args.full_train:
+        session_indices = list(range(n_train))
+    else:
+        assert cluster_users is not None
+        for i in range(n_train):
+            u = str(all_train_userid_str[i]).strip()
+            if u in cluster_users:
+                session_indices.append(i)
 
     total_sess = len(session_indices)
-    print(f"해당 클러스터 트레이닝 세션 수 (전처리 후): {total_sess}")
+    if args.full_train:
+        print(f"전체 트레이닝 세션 수 (전처리 후): {total_sess}")
+    else:
+        print(f"해당 클러스터 트레이닝 세션 수 (전처리 후): {total_sess}")
 
     if args.all_sessions and not args.batch_count_only:
         args.sessions_per_batch = max(1, total_sess)
@@ -263,7 +293,10 @@ def main() -> None:
     else:
         base_out = os.path.join(os.path.normpath(args.output), sub)
         os.makedirs(base_out, exist_ok=True)
-        run_dir = os.path.join(base_out, f"cluster{args.cluster_id}_batch{args.batch_index}")
+        if args.full_train:
+            run_dir = os.path.join(base_out, f"fulltrain_batch{args.batch_index}")
+        else:
+            run_dir = os.path.join(base_out, f"cluster{args.cluster_id}_batch{args.batch_index}")
         os.makedirs(run_dir, exist_ok=True)
         print(f"저장 폴더: {run_dir}")
 

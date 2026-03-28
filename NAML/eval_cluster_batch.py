@@ -300,8 +300,18 @@ def build_diagnostic(
 def main() -> None:
     # naml_common 은 import 시 MIND_DATASET_SUBDIR 로 경로를 고정하므로, 먼저 환경 설정 후 import
     parser = argparse.ArgumentParser(description="클러스터 배치 NAML 실제본문 vs 기대본문 평가 → results/resultN.txt")
-    parser.add_argument("--cluster-csv", type=str, default="NAML/user_kmeans_k3_MIND_2000.csv")
-    parser.add_argument("--cluster-id", type=int, required=True)
+    parser.add_argument(
+        "--cluster-csv",
+        type=str,
+        default="NAML/user_kmeans_k3_MIND_2000.csv",
+        help="--full-train 이면 사용 안 함",
+    )
+    parser.add_argument("--cluster-id", type=int, default=None, help="--full-train 이면 생략")
+    parser.add_argument(
+        "--full-train",
+        action="store_true",
+        help="클러스터 없이 전체 트레이닝 세션을 배치로 평가 (generate_body_cluster_train_batches --full-train 과 짝)",
+    )
     parser.add_argument("--batch-index", type=int, required=True)
     parser.add_argument("--sessions-per-batch", type=int, default=300)
     parser.add_argument("--mind-dataset-subdir", type=str, default=None)
@@ -323,6 +333,10 @@ def main() -> None:
     parser.add_argument("--no-extend-word-dict", action="store_true", help="기대본문을 word_dict에 넣지 않음 (기본은 포함)")
     args = parser.parse_args()
 
+    if not args.full_train and args.cluster_id is None:
+        print("오류: --cluster-id 는 필수입니다 (--full-train 사용 시 생략).", file=sys.stderr)
+        sys.exit(2)
+
     sub = _resolve_mind_dataset_subdir(args.mind_dataset_subdir)
     os.environ["MIND_DATASET_SUBDIR"] = sub
 
@@ -331,9 +345,10 @@ def main() -> None:
     from naml_model_builder import build_naml_models
 
     csv_path = _ROOT / args.cluster_csv
-    if not csv_path.is_file():
-        print(f"오류: CSV 없음: {csv_path}")
-        sys.exit(1)
+    if not args.full_train:
+        if not csv_path.is_file():
+            print(f"오류: CSV 없음: {csv_path}")
+            sys.exit(1)
 
     train_body_dir = os.path.normpath(str(_ROOT / args.train_body_dir))
     if not os.path.isdir(train_body_dir):
@@ -350,10 +365,13 @@ def main() -> None:
     if not expected_bodies:
         print(f"경고: 기대본문이 0개입니다. ({train_body_dir})")
 
-    cluster_users = _load_cluster_users(csv_path, args.cluster_id)
-    if not cluster_users:
-        print(f"오류: 클러스터 {args.cluster_id}에 해당하는 유저가 없습니다.")
-        sys.exit(1)
+    cluster_users: Optional[Set[str]] = None
+    if not args.full_train:
+        assert args.cluster_id is not None
+        cluster_users = _load_cluster_users(csv_path, args.cluster_id)
+        if not cluster_users:
+            print(f"오류: 클러스터 {args.cluster_id}에 해당하는 유저가 없습니다.")
+            sys.exit(1)
 
     if args.no_extend_word_dict:
         word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(
@@ -391,10 +409,14 @@ def main() -> None:
 
     n_train = len(all_label)
     session_indices: List[int] = []
-    for i in range(n_train):
-        u = _norm_cluster_uid(str(all_train_userid_str[i]))
-        if u in cluster_users:
-            session_indices.append(i)
+    if args.full_train:
+        session_indices = list(range(n_train))
+    else:
+        assert cluster_users is not None
+        for i in range(n_train):
+            u = _norm_cluster_uid(str(all_train_userid_str[i]))
+            if u in cluster_users:
+                session_indices.append(i)
 
     total_sess = len(session_indices)
     spb = max(1, int(args.sessions_per_batch))
@@ -405,7 +427,16 @@ def main() -> None:
         sys.exit(1)
 
     batch_sessions = session_indices[start:end]
-    print(f"클러스터 {args.cluster_id}, 배치 {args.batch_index}: 세션 {len(batch_sessions)}개 (전체 클러스터 세션 {total_sess} 중 [{start},{end}))")
+    if args.full_train:
+        print(
+            f"전체 트레이닝, 배치 {args.batch_index}: 세션 {len(batch_sessions)}개 "
+            f"(전체 {total_sess} 중 [{start},{end}))"
+        )
+    else:
+        print(
+            f"클러스터 {args.cluster_id}, 배치 {args.batch_index}: 세션 {len(batch_sessions)}개 "
+            f"(전체 클러스터 세션 {total_sess} 중 [{start},{end}))"
+        )
 
     coverage = compute_expected_body_coverage_for_batch(
         batch_sessions,

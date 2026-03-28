@@ -104,6 +104,9 @@ python body_generation/generate_body_cluster_train_batches.py --cluster-id 0 --b
 # 해당 클러스터를 몇 개 배치로 나눌 수 있는지(세션 수·batch-index 범위)만 출력
 python body_generation/generate_body_cluster_train_batches.py --cluster-id 0 --batch-count-only --mind-dataset-subdir MIND_2000
 
+# 트레이닝셋 전체체를 몇개 배치로 나눌 수 있는지
+python body_generation/generate_body_cluster_train_batches.py --full-train --batch-count-only --sessions-per-batch 500 --mind-dataset-subdir MIND_2000
+
 # 트레이닝셋 전체 한 번에 + 저장 폴더 직접 지정 (프로젝트 루트 기준 상대 경로)
 set PYTHONPATH=NAML
 python body_generation/generate_body_train_cluster_policies.py \

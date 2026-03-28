@@ -15,6 +15,9 @@ coordinator 는 응답을 (N+1).txt 로 저장 (기존 coordinator 동작).
 프로젝트 루트에서:
   python scripts/run_cluster_batch_pipeline.py --start 0 --end 2
   CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --cluster-id 0
+
+  # 클러스터 없이 전체 트레이닝 세션 (출력 .../fulltrain_batch<N>/)
+  python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --full-train --sessions-per-batch 500
 """
 from __future__ import annotations
 
@@ -41,7 +44,17 @@ def main() -> None:
     p = argparse.ArgumentParser(description="클러스터 배치 생성 → NAML 평가 → 조율기 LLM 을 N 범위로 순차 실행")
     p.add_argument("--start", type=int, required=True, help="배치 인덱스 시작 (포함)")
     p.add_argument("--end", type=int, required=True, help="배치 인덱스 끝 (포함)")
-    p.add_argument("--cluster-id", type=int, default=0)
+    p.add_argument(
+        "--cluster-id",
+        type=int,
+        default=0,
+        help="클러스터 번호 (기본 0). --full-train 이면 사용하지 않음",
+    )
+    p.add_argument(
+        "--full-train",
+        action="store_true",
+        help="클러스터 없이 전체 트레이닝 세션 (출력 fulltrain_batch<N>, generate/eval 에 --full-train 전달)",
+    )
     p.add_argument("--cluster-csv", type=str, default="NAML/user_kmeans_k3_MIND_2000.csv")
     p.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
     p.add_argument(
@@ -68,10 +81,30 @@ def main() -> None:
         default="saved_models/NAML_mind_2000.h5",
         help="eval_cluster_batch --weights (프로젝트 루트 기준)",
     )
+    p.add_argument(
+        "--sessions-per-batch",
+        type=int,
+        default=300,
+        metavar="S",
+        help="배치 인덱스 하나당 포함할 트레이닝 세션 수 (generate·eval 공통, 기본 300)",
+    )
+    p.add_argument(
+        "--batch-size",
+        type=int,
+        default=16,
+        metavar="B",
+        help="eval_cluster_batch NAML forward 미니배치 크기 (기본 16)",
+    )
     args = p.parse_args()
 
     if args.end < args.start:
         print("오류: --end 는 --start 보다 작을 수 없습니다.", file=sys.stderr)
+        sys.exit(2)
+    if args.sessions_per_batch < 1:
+        print("오류: --sessions-per-batch 는 1 이상이어야 합니다.", file=sys.stderr)
+        sys.exit(2)
+    if args.batch_size < 1:
+        print("오류: --batch-size 는 1 이상이어야 합니다.", file=sys.stderr)
         sys.exit(2)
 
     py = sys.executable
@@ -79,32 +112,38 @@ def main() -> None:
     cid = args.cluster_id
 
     for n in range(args.start, args.end + 1):
-        train_body = f"body_generation/output/{sub}/cluster{cid}_batch{n}"
+        if args.full_train:
+            train_body = f"body_generation/output/{sub}/fulltrain_batch{n}"
+        else:
+            train_body = f"body_generation/output/{sub}/cluster{cid}_batch{n}"
 
         if not args.skip_generate:
-            _run(
-                [
-                    py,
-                    str(_ROOT / "body_generation" / "generate_body_cluster_train_batches.py"),
-                    "--cluster-csv",
-                    args.cluster_csv,
-                    "--cluster-id",
-                    str(cid),
-                    "--batch-index",
-                    str(n),
-                    "--mind-dataset-subdir",
-                    sub,
-                ]
-            )
+            gen_cmd = [
+                py,
+                str(_ROOT / "body_generation" / "generate_body_cluster_train_batches.py"),
+                "--batch-index",
+                str(n),
+                "--mind-dataset-subdir",
+                sub,
+            ]
+            if args.full_train:
+                gen_cmd.append("--full-train")
+            else:
+                gen_cmd.extend(
+                    [
+                        "--cluster-csv",
+                        args.cluster_csv,
+                        "--cluster-id",
+                        str(cid),
+                    ]
+                )
+            gen_cmd.extend(["--sessions-per-batch", str(args.sessions_per_batch)])
+            _run(gen_cmd)
 
         if not args.skip_eval:
             eval_cmd = [
                 py,
                 str(_ROOT / "NAML" / "eval_cluster_batch.py"),
-                "--cluster-csv",
-                args.cluster_csv,
-                "--cluster-id",
-                str(cid),
                 "--batch-index",
                 str(n),
                 "--train-body-dir",
@@ -116,6 +155,25 @@ def main() -> None:
                 "--mind-dataset-subdir",
                 sub,
             ]
+            if args.full_train:
+                eval_cmd.append("--full-train")
+            else:
+                eval_cmd.extend(
+                    [
+                        "--cluster-csv",
+                        args.cluster_csv,
+                        "--cluster-id",
+                        str(cid),
+                    ]
+                )
+            eval_cmd.extend(
+                [
+                    "--sessions-per-batch",
+                    str(args.sessions_per_batch),
+                    "--batch-size",
+                    str(args.batch_size),
+                ]
+            )
             env = os.environ.copy()
             if not args.no_cuda_env:
                 env["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
