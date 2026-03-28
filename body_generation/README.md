@@ -103,7 +103,16 @@ python body_generation/generate_body_cluster_train_batches.py --cluster-id 0 --b
 
 # 해당 클러스터를 몇 개 배치로 나눌 수 있는지(세션 수·batch-index 범위)만 출력
 python body_generation/generate_body_cluster_train_batches.py --cluster-id 0 --batch-count-only --mind-dataset-subdir MIND_2000
+
+# 트레이닝셋 전체 한 번에 + 저장 폴더 직접 지정 (프로젝트 루트 기준 상대 경로)
+set PYTHONPATH=NAML
+python body_generation/generate_body_train_cluster_policies.py \
+  --cluster-csv NAML/user_kmeans_k3_MIND_2000.csv \
+  --policy-files coordinator_LLM/output_cluster0/11.txt coordinator_LLM/output_cluster1/13.txt coordinator_LLM/output_cluster2/8.txt \
+  --output body_generation/output/MIND_2000/train_3cluster_11_13_8 \
+  --mind-dataset-subdir MIND_2000
 ```
 
-- 출력: `body_generation/output/<데이터셋>/cluster0_batch0/` 등 (`user_<id>/news_<뉴스ID>.json`, `all_results_pairs.json`)
-- 정책 번호를 배치 번호와 다르게 쓰려면 `--policy-file N`
+- 출력(기본): `body_generation/output/<데이터셋>/cluster<C>_batch<B>/` (`user_<id>/news_<뉴스ID>.json`, `all_results_pairs.json`)
+- `--output-dir DIR`: 위 경로 대신 **DIR에 바로** 저장 (상대 경로는 프로젝트 루트 기준)
+- 정책: `coordinator_LLM/output/N.txt` 는 기본적으로 배치 번호와 동일한 `N`(다르면 `--policy-file N`). **임의 JSON 파일**은 `--policy-path path/to/policy.txt`(coordinator 출력과 동일 형식) — 지정 시 `N.txt`·`--policy-file`보다 우선
