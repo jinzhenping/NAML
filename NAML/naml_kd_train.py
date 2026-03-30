@@ -12,13 +12,15 @@ NAML 지식 증류 학습: L_KD = L_rec + lambda * L_distill
 --output-weights 저장: 에폭마다 테스트셋 기대본문 MRR을 잰 경우, 그중 MRR이 가장 높은 에폭의 가중치를 저장.
 (기대본문 평가가 없으면 마지막 에폭 가중치)
 
+어휘(word_dict): 뉴스 TSV만으로 구성 (교사 save_weights와 임베딩 행 수 일치). 기대본문은 기존 단어로만 토큰화(eval_test_expected와 동일).
+
 프로젝트 루트에서:
   set PYTHONPATH=NAML
   CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train.py --teacher-weights saved_models/NAML_mind_2000.h5 \
     --expected-body-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
     --expected-body-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
     --mind-dataset-subdir MIND_2000 --epochs 5 --lambda-distill 0.5 \
-    --output-weights saved_models/NAML_mind_2000_kd.h5
+    --output-weights saved_models/NAML_mind_2000_kd_5.h5
 
   # 에폭마다 테스트 평가 끄기: --no-epoch-eval
 """
@@ -478,10 +480,13 @@ def main() -> None:
 
     print(f"기대본문 로드: {len(expected_bodies_train)}개 ({train_dir})")
 
+    # word_dict는 뉴스 TSV만 사용해야 len(word_dict)가 교사 체크포인트 임베딩 행 수와 일치함.
+    # 기대본문은 generate_batch_data_train_kd에서 word_dict에 있는 토큰만 인덱싱 (OOV 제외).
     word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(
-        expected_bodies_train=expected_bodies_train,
+        expected_bodies_train=None,
         expected_bodies_test=None,
     )
+    print(f"word_dict 크기 (뉴스만): {len(word_dict)} — 교사 가중치와 임베딩 행 수를 맞춥니다.", flush=True)
     embedding_mat = get_embedding(word_dict)
 
     (
@@ -503,7 +508,7 @@ def main() -> None:
         all_test_newsid_str,
     ) = preprocess_user_file(
         news_index=news_index,
-        expected_bodies_train=expected_bodies_train,
+        expected_bodies_train=None,
         expected_bodies_test=None,
         word_dict=word_dict,
     )
