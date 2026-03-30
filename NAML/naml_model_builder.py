@@ -9,11 +9,13 @@ from tensorflow.keras.optimizers import Adam
 from naml_common import MAX_BODY_LENGTH, MAX_HISTORY_CLICKS, MAX_SENT_LENGTH, npratio
 
 
-def build_naml_models(word_dict, embedding_mat, category, subcategory, learning_rate):
+def build_naml_models(word_dict, embedding_mat, category, subcategory, learning_rate, clear_session=True):
     """
     NAML 학습용 model, 평가용 model_test 및 user_rep 서브그래프 구성요소 반환.
+    clear_session: False이면 이전 그래프 유지 (동일 프로세스에서 교사+학생 이중 빌드 등).
     """
-    keras.backend.clear_session()
+    if clear_session:
+        keras.backend.clear_session()
 
     MAX_SENTS = MAX_HISTORY_CLICKS
     title_input = Input(shape=(MAX_SENT_LENGTH,), dtype='int32')
