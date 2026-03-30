@@ -9,6 +9,9 @@ NAML 지식 증류 학습: L_KD = L_rec + lambda * L_distill
 
 교사 가중치: 사전학습된 saved_models/NAML_mind_2000.h5 등 (model.save_weights 형식, build_naml_models 와 동일 구조).
 
+--output-weights 저장: 에폭마다 테스트셋 기대본문 MRR을 잰 경우, 그중 MRR이 가장 높은 에폭의 가중치를 저장.
+(기대본문 평가가 없으면 마지막 에폭 가중치)
+
 프로젝트 루트에서:
   set PYTHONPATH=NAML
   CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train.py --teacher-weights saved_models/NAML_mind_2000.h5 \
@@ -320,8 +323,16 @@ def train_kd(
     H: int,
     epochs: int,
     eval_after_epoch: Optional[Callable[[], Tuple[Dict[str, Any], Optional[Dict[str, Any]]]]] = None,
-):
+) -> Tuple[Optional[List[np.ndarray]], int, float]:
+    """
+    반환: (기대본문 테스트 MRR 최고일 때 가중치 스냅샷, 해당 에폭(1-based), 그때 MRR).
+    기대본문 지표를 한 번도 갱신하지 못하면 (None, -1, -1.0).
+    """
     cand_title_idx, cand_body_idx, cand_v_idx, cand_sv_idx = _input_indices(H)
+
+    best_weights: Optional[List[np.ndarray]] = None
+    best_epoch_1based = -1
+    best_mrr_expected = -1.0
 
     for ep in range(epochs):
         print(f"\n=== KD epoch {ep + 1}/{epochs} ===", flush=True)
@@ -394,6 +405,15 @@ def train_kd(
                     flush=True,
                 )
 
+            if me is not None:
+                mrr_e = float(me["MRR"])
+                if mrr_e > best_mrr_expected:
+                    best_mrr_expected = mrr_e
+                    best_epoch_1based = ep + 1
+                    best_weights = [np.array(w) for w in student_model.get_weights()]
+
+    return best_weights, best_epoch_1based, best_mrr_expected
+
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="NAML KD: L_rec + lambda * L_distill (기대본문 학생, 실제본문 교사)")
@@ -419,7 +439,7 @@ def main() -> None:
         "--output-weights",
         type=str,
         default="saved_models/NAML_kd_student.h5",
-        help="학생 가중치 저장 경로 (save_weights)",
+        help="학생 가중치 저장 (save_weights). 기대본문 테스트가 있으면 MRR 최고 에폭, 없으면 마지막 에폭",
     )
     ap.add_argument(
         "--expected-body-test-dir",
@@ -572,7 +592,7 @@ def main() -> None:
             shuffle=True,
         )
 
-    train_kd(
+    best_w, best_ep, best_mrr = train_kd(
         student_model,
         teacher_news,
         student_news,
@@ -587,8 +607,22 @@ def main() -> None:
 
     out_w = str(_ROOT / args.output_weights) if not os.path.isabs(args.output_weights) else args.output_weights
     os.makedirs(os.path.dirname(out_w) or ".", exist_ok=True)
+
+    if best_w is not None:
+        student_model.set_weights(best_w)
+        print(
+            f"\n저장: 테스트셋 기대본문 MRR 최고 에폭 {best_ep}/{args.epochs} "
+            f"(MRR={best_mrr:.6f}) 가중치 → {out_w}",
+            flush=True,
+        )
+    else:
+        print(
+            "\n저장: 기대본문 테스트 지표가 없거나 에폭 평가가 꺼져 있어 마지막 에폭 가중치를 저장합니다.",
+            flush=True,
+        )
+
     student_model.save_weights(out_w)
-    print(f"\n학생 가중치 저장: {out_w}")
+    print(f"학생 가중치 저장 완료: {out_w}")
 
 
 if __name__ == "__main__":
