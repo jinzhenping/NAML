@@ -11,7 +11,7 @@ NAML 지식 증류 학습: L_KD = L_rec + lambda * L_distill
 
 프로젝트 루트에서:
   set PYTHONPATH=NAML
-  python NAML/naml_kd_train.py --teacher-weights saved_models/NAML_mind_2000.h5 \
+  CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train.py --teacher-weights saved_models/NAML_mind_2000.h5 \
     --expected-body-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
     --expected-body-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
     --mind-dataset-subdir MIND_2000 --epochs 5 --lambda-distill 0.5 \
