@@ -17,7 +17,7 @@ coordinator 는 응답을 (N+1).txt 로 저장 (기존 coordinator 동작).
   CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --cluster-id 0
 
   # 클러스터 없이 전체 트레이닝 세션 (출력 .../fulltrain_batch<N>/)
-  python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --full-train --sessions-per-batch 500
+  CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --full-train --sessions-per-batch 500
 """
 from __future__ import annotations
 
