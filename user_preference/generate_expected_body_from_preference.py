@@ -123,6 +123,29 @@ def save_abstract_cache(path: Path, cache: Dict[str, Dict[str, str]]) -> None:
         json.dump(cache, f, ensure_ascii=False, indent=2)
 
 
+def clean_abstracted_title(text: str) -> str:
+    """Normalize model3 output to a plain one-line title-like string."""
+    t = (text or "").strip()
+    if not t:
+        return t
+    # Remove fenced code block wrappers if model outputs them.
+    if t.startswith("```") and t.endswith("```"):
+        lines = [ln for ln in t.splitlines() if not ln.strip().startswith("```")]
+        t = "\n".join(lines).strip()
+    # Remove surrounding quote pairs repeatedly.
+    quote_pairs = [('"', '"'), ("'", "'"), ("“", "”"), ("‘", "’")]
+    changed = True
+    while changed and len(t) >= 2:
+        changed = False
+        for ql, qr in quote_pairs:
+            if t.startswith(ql) and t.endswith(qr):
+                t = t[1:-1].strip()
+                changed = True
+    # Collapse multiline to one line.
+    t = " ".join(t.split())
+    return t
+
+
 def build_prompt(
     template: str,
     model1_output: str,
@@ -310,7 +333,7 @@ def main() -> None:
             temperature=0.3,
             max_tokens=120,
         )
-        abstracted_title = (model3_response.choices[0].message.content or "").strip()
+        abstracted_title = clean_abstracted_title(model3_response.choices[0].message.content or "")
         if not abstracted_title:
             abstracted_title = candidate_title
         abstract_cache[news_key] = {
