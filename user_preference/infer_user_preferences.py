@@ -117,8 +117,8 @@ def main() -> None:
     parser.add_argument(
         "--prompt_path",
         type=str,
-        default=str(PROJECT_ROOT / "user_preference" / "model1.yaml"),
-        help="prompt template path",
+        default=str(PROJECT_ROOT / "user_preference" / "preference_extraction.yaml"),
+        help="preference-extraction prompt template path",
     )
     parser.add_argument(
         "--output_dir",

@@ -7,6 +7,11 @@ Generate expected body using:
 
 python user_preference/generate_expected_body_from_preference.py --user_id 1291 --candidate_news_id N76665 \
 --policy_file_path "coordinator_LLM/output_cluster0/11.txt"
+
+python user_preference/generate_expected_body_from_preference.py \
+  --user_id 1291 --candidate_news_id N76665 \
+  --policy_file_path "coordinator_LLM/output_cluster0/11.txt" \
+  --title_abstraction_prompt_path "user_preference/keyword_extraction.yaml"
 """
 
 from __future__ import annotations
@@ -196,13 +201,14 @@ def main() -> None:
     parser.add_argument(
         "--model2_prompt_path",
         type=str,
-        default=str(PROJECT_ROOT / "user_preference" / "model2.yaml"),
+        default=str(PROJECT_ROOT / "user_preference" / "body_generation.yaml"),
     )
     parser.add_argument(
-        "--model3_prompt_path",
+        "--title_abstraction_prompt_path",
         type=str,
-        default=str(PROJECT_ROOT / "user_preference" / "model3.yaml"),
-        help="prompt to abstract candidate title before passing as {candidate_news}",
+        default=str(PROJECT_ROOT / "user_preference" / "title_abstraction.yaml"),
+        help="prompt to transform candidate title before passing as {candidate_news} "
+             "(default: title_abstraction.yaml; use keyword_extraction.yaml explicitly for keyword mode)",
     )
     parser.add_argument(
         "--settings_path",
@@ -241,10 +247,10 @@ def main() -> None:
     parser.add_argument("--train_tsv", type=str, default=None)
     parser.add_argument("--model", type=str, default=DEFAULT_MODEL)
     parser.add_argument(
-        "--model3_model",
+        "--title_abstraction_model",
         type=str,
         default=DEFAULT_MODEL,
-        help="LLM model for model3 title abstraction (defaults to --model)",
+        help="LLM model for title/keyword transformation (defaults to --model)",
     )
     parser.add_argument("--api_key", type=str, default=None)
     parser.add_argument(
@@ -255,8 +261,9 @@ def main() -> None:
     parser.add_argument(
         "--abstract_cache_path",
         type=str,
-        default=str(PROJECT_ROOT / "user_preference" / "abstracted_titles.json"),
-        help="JSON cache file to store/reuse abstracted titles per news_id",
+        default=None,
+        help="JSON cache file to store/reuse transformed titles per news_id "
+             "(if omitted, chosen automatically based on prompt path)",
     )
     args = parser.parse_args()
 
@@ -264,7 +271,7 @@ def main() -> None:
     news_tsv = Path(args.news_tsv) if args.news_tsv else dataset_dir / "MIND_news.tsv"
     train_tsv = Path(args.train_tsv) if args.train_tsv else resolve_train_tsv(args.dataset_subdir)
     prompt_path = Path(args.model2_prompt_path)
-    model3_prompt_path = Path(args.model3_prompt_path)
+    title_abstraction_prompt_path = Path(args.title_abstraction_prompt_path)
     settings_path = Path(args.settings_path)
 
     preference_path = (
@@ -278,7 +285,7 @@ def main() -> None:
     else:
         policy_path = policy_file_from_num(Path(args.coordinator_output_dir), args.policy_file_num)
 
-    for p in [news_tsv, train_tsv, prompt_path, settings_path, preference_path, policy_path, model3_prompt_path]:
+    for p in [news_tsv, train_tsv, prompt_path, settings_path, preference_path, policy_path, title_abstraction_prompt_path]:
         if not p.is_file():
             raise FileNotFoundError(f"Required file not found: {p}")
 
@@ -317,18 +324,32 @@ def main() -> None:
     client = OpenAI(api_key=api_key)
 
     # step1: abstract candidate title via model3, with caching per news_id
-    abstract_cache_path = Path(args.abstract_cache_path)
+    # 자동 캐시 경로 결정:
+    # - title_abstraction.yaml 사용 시: abstracted_titles.json
+    # - keyword_extraction.yaml 사용 시: keyword_titles.json
+    # - 그 외: transformed_titles.json
+    if args.abstract_cache_path:
+        abstract_cache_path = Path(args.abstract_cache_path)
+    else:
+        prompt_name = title_abstraction_prompt_path.name.lower()
+        if "title_abstraction" in prompt_name:
+            cache_name = "abstracted_titles.json"
+        elif "keyword_extraction" in prompt_name:
+            cache_name = "keyword_titles.json"
+        else:
+            cache_name = "transformed_titles.json"
+        abstract_cache_path = PROJECT_ROOT / "user_preference" / cache_name
     abstract_cache = load_abstract_cache(abstract_cache_path)
     news_key = str(args.candidate_news_id)
 
     if news_key in abstract_cache and abstract_cache[news_key].get("abstracted_title"):
         abstracted_title = abstract_cache[news_key]["abstracted_title"]
     else:
-        with open(model3_prompt_path, "r", encoding="utf-8") as f:
+        with open(title_abstraction_prompt_path, "r", encoding="utf-8") as f:
             model3_template = f.read()
         model3_prompt = model3_template.replace("{title}", candidate_title)
         model3_response = client.chat.completions.create(
-            model=args.model3_model or args.model,
+            model=args.title_abstraction_model or args.model,
             messages=[{"role": "user", "content": model3_prompt}],
             temperature=0.3,
             max_tokens=120,
