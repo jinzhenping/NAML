@@ -7,6 +7,7 @@ Infer per-user preference profiles from click history titles.
 - Saves one JSON file per user under `user_preference/preference`.
 
 python user_preference/infer_user_preferences.py --dataset_subdir MIND_2000 --history_k 50 --user_id 1291
+python user_preference/infer_user_preferences.py --dataset_subdir MIND_2000 --use_test --history_k 50
 """
 
 from __future__ import annotations
@@ -38,6 +39,21 @@ def resolve_train_tsv(dataset_subdir: str) -> Path:
         raise FileNotFoundError(f"No train TSV found in {base}")
     raise RuntimeError(
         f"Multiple train TSV files found in {base}. Please pass --train_tsv explicitly."
+    )
+
+
+def resolve_test_tsv(dataset_subdir: str) -> Path:
+    base = PROJECT_ROOT / "dataset" / dataset_subdir
+    if not base.is_dir():
+        raise FileNotFoundError(f"Dataset directory not found: {base}")
+
+    candidates = sorted(base.glob("MIND_test_*.tsv"))
+    if len(candidates) == 1:
+        return candidates[0]
+    if len(candidates) == 0:
+        raise FileNotFoundError(f"No test TSV found in {base}")
+    raise RuntimeError(
+        f"Multiple test TSV files found in {base}. Please pass --test_tsv explicitly."
     )
 
 
@@ -109,6 +125,17 @@ def main() -> None:
         help="explicit train tsv path (optional)",
     )
     parser.add_argument(
+        "--test_tsv",
+        type=str,
+        default=None,
+        help="explicit test tsv path (optional)",
+    )
+    parser.add_argument(
+        "--use_test",
+        action="store_true",
+        help="use test TSV users/history instead of train TSV",
+    )
+    parser.add_argument(
         "--news_tsv",
         type=str,
         default=None,
@@ -123,8 +150,10 @@ def main() -> None:
     parser.add_argument(
         "--output_dir",
         type=str,
-        default=str(PROJECT_ROOT / "user_preference" / "preference"),
-        help="output directory for user preference files",
+        default=None,
+        help="output directory for user preference files "
+             "(default: train->user_preference/preference/<dataset>/train, "
+             "test->user_preference/preference/<dataset>/test)",
     )
     parser.add_argument(
         "--history_k",
@@ -164,15 +193,23 @@ def main() -> None:
     args = parser.parse_args()
 
     dataset_dir = PROJECT_ROOT / "dataset" / args.dataset_subdir
-    train_tsv = Path(args.train_tsv) if args.train_tsv else resolve_train_tsv(args.dataset_subdir)
+    if args.use_test:
+        data_tsv = Path(args.test_tsv) if args.test_tsv else resolve_test_tsv(args.dataset_subdir)
+        split_name = "test"
+    else:
+        data_tsv = Path(args.train_tsv) if args.train_tsv else resolve_train_tsv(args.dataset_subdir)
+        split_name = "train"
     news_tsv = Path(args.news_tsv) if args.news_tsv else dataset_dir / "MIND_news.tsv"
     prompt_path = Path(args.prompt_path)
-    output_dir = Path(args.output_dir)
+    if args.output_dir:
+        output_dir = Path(args.output_dir)
+    else:
+        output_dir = PROJECT_ROOT / "user_preference" / "preference" / args.dataset_subdir / split_name
 
     if not news_tsv.is_file():
         raise FileNotFoundError(f"news TSV not found: {news_tsv}")
-    if not train_tsv.is_file():
-        raise FileNotFoundError(f"train TSV not found: {train_tsv}")
+    if not data_tsv.is_file():
+        raise FileNotFoundError(f"{split_name} TSV not found: {data_tsv}")
     if not prompt_path.is_file():
         raise FileNotFoundError(f"prompt file not found: {prompt_path}")
 
@@ -183,7 +220,7 @@ def main() -> None:
     print("Loading data...")
     news_title_map = load_news_title_map(news_tsv)
     train_df = pd.read_csv(
-        train_tsv,
+        data_tsv,
         sep="\t",
         names=["user", "clicked_news", "candidate_news", "clicked"],
         dtype=str,
@@ -194,7 +231,7 @@ def main() -> None:
     if args.user_id is not None:
         unique_users_df = unique_users_df[unique_users_df["user"].astype(str) == str(args.user_id)]
         if unique_users_df.empty:
-            raise ValueError(f"user_id {args.user_id} not found in train data.")
+            raise ValueError(f"user_id {args.user_id} not found in {split_name} data.")
     if args.max_users is not None and args.max_users > 0:
         unique_users_df = unique_users_df.head(args.max_users)
 
@@ -208,7 +245,7 @@ def main() -> None:
     skipped = 0
     failed = 0
 
-    print(f"Start inference for {total} unique users (history_k={args.history_k})")
+    print(f"Start inference for {total} unique users ({split_name}, history_k={args.history_k})")
     for idx, row in enumerate(unique_users_df.itertuples(index=False), start=1):
         user_id = str(row.user).strip()
         clicked_news = str(row.clicked_news)
