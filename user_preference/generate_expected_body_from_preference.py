@@ -103,6 +103,26 @@ def get_description(settings: Dict[str, Dict[str, str]], category: str, value: s
     return settings.get(category, {}).get(value, "")
 
 
+def load_abstract_cache(path: Path) -> Dict[str, Dict[str, str]]:
+    if not path.is_file():
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, dict):
+            # 기대 형태: {news_id: {"original_title": ..., "abstracted_title": ...}}
+            return data
+        return {}
+    except Exception:
+        return {}
+
+
+def save_abstract_cache(path: Path, cache: Dict[str, Dict[str, str]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=2)
+
+
 def build_prompt(
     template: str,
     model1_output: str,
@@ -209,6 +229,12 @@ def main() -> None:
         type=str,
         default=str(PROJECT_ROOT / "user_preference" / "expected_body"),
     )
+    parser.add_argument(
+        "--abstract_cache_path",
+        type=str,
+        default=str(PROJECT_ROOT / "user_preference" / "abstracted_titles.json"),
+        help="JSON cache file to store/reuse abstracted titles per news_id",
+    )
     args = parser.parse_args()
 
     dataset_dir = PROJECT_ROOT / "dataset" / args.dataset_subdir
@@ -267,19 +293,31 @@ def main() -> None:
     # prepare OpenAI client
     client = OpenAI(api_key=api_key)
 
-    # step1: abstract candidate title via model3
-    with open(model3_prompt_path, "r", encoding="utf-8") as f:
-        model3_template = f.read()
-    model3_prompt = model3_template.replace("{title}", candidate_title)
-    model3_response = client.chat.completions.create(
-        model=args.model3_model or args.model,
-        messages=[{"role": "user", "content": model3_prompt}],
-        temperature=0.3,
-        max_tokens=120,
-    )
-    abstracted_title = (model3_response.choices[0].message.content or "").strip()
-    if not abstracted_title:
-        abstracted_title = candidate_title
+    # step1: abstract candidate title via model3, with caching per news_id
+    abstract_cache_path = Path(args.abstract_cache_path)
+    abstract_cache = load_abstract_cache(abstract_cache_path)
+    news_key = str(args.candidate_news_id)
+
+    if news_key in abstract_cache and abstract_cache[news_key].get("abstracted_title"):
+        abstracted_title = abstract_cache[news_key]["abstracted_title"]
+    else:
+        with open(model3_prompt_path, "r", encoding="utf-8") as f:
+            model3_template = f.read()
+        model3_prompt = model3_template.replace("{title}", candidate_title)
+        model3_response = client.chat.completions.create(
+            model=args.model3_model or args.model,
+            messages=[{"role": "user", "content": model3_prompt}],
+            temperature=0.3,
+            max_tokens=120,
+        )
+        abstracted_title = (model3_response.choices[0].message.content or "").strip()
+        if not abstracted_title:
+            abstracted_title = candidate_title
+        abstract_cache[news_key] = {
+            "original_title": candidate_title,
+            "abstracted_title": abstracted_title,
+        }
+        save_abstract_cache(abstract_cache_path, abstract_cache)
 
     prompt = build_prompt(
         template=prompt_template,
