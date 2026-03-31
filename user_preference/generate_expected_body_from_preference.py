@@ -304,7 +304,10 @@ def main() -> None:
     result = {
         "user_id": str(args.user_id),
         "candidate_news_id": str(args.candidate_news_id),
+        # 원본 제목
         "candidate_title": candidate_title,
+        # model3로 추상화된 제목
+        "candidate_title_abstracted": abstracted_title,
         "history_k": args.history_k,
         "history_count_used": len(history_titles),
         "history_titles": history_titles,
