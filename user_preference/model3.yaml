@@ -1,0 +1,22 @@
+Given a news title, remove specific details that would allow 
+someone to predict the article's content. Keep only:
+The broad domain (politics, tech, sports, etc.)
+The general action type (announcement, discovery, conflict, etc.)
+Enough context to distinguish this from other news stories
+
+Remove:
+Specific outcomes, conclusions, or revelations
+Proper nouns that strongly constrain what the article is about
+Emotional/evaluative framing
+
+Examples:
+Input: "Bill Taylor Reveals New Trump Call on Ukraine: Impeachment Takeaways"
+Output: "Government official presents new evidence in ongoing political investigation"
+
+Input: "'One in a million' deer captured on camera in Michigan woods"
+Output: "Extremely rare wildlife spotted and photographed in US forest"
+
+Input: "Apple Reports Record Q4 Revenue Beating Wall Street Expectations"
+Output: "Major tech company releases latest quarterly financial results"
+
+Title to abstract: {title}

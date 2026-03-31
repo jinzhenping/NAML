@@ -156,6 +156,12 @@ def main() -> None:
         default=str(PROJECT_ROOT / "user_preference" / "model2.yaml"),
     )
     parser.add_argument(
+        "--model3_prompt_path",
+        type=str,
+        default=str(PROJECT_ROOT / "user_preference" / "model3.yaml"),
+        help="prompt to abstract candidate title before passing as {candidate_news}",
+    )
+    parser.add_argument(
         "--settings_path",
         type=str,
         default=str(PROJECT_ROOT / "user_preference" / "generation_settings.yaml"),
@@ -191,6 +197,12 @@ def main() -> None:
     parser.add_argument("--news_tsv", type=str, default=None)
     parser.add_argument("--train_tsv", type=str, default=None)
     parser.add_argument("--model", type=str, default=DEFAULT_MODEL)
+    parser.add_argument(
+        "--model3_model",
+        type=str,
+        default=DEFAULT_MODEL,
+        help="LLM model for model3 title abstraction (defaults to --model)",
+    )
     parser.add_argument("--api_key", type=str, default=None)
     parser.add_argument(
         "--output_dir",
@@ -203,6 +215,7 @@ def main() -> None:
     news_tsv = Path(args.news_tsv) if args.news_tsv else dataset_dir / "MIND_news.tsv"
     train_tsv = Path(args.train_tsv) if args.train_tsv else resolve_train_tsv(args.dataset_subdir)
     prompt_path = Path(args.model2_prompt_path)
+    model3_prompt_path = Path(args.model3_prompt_path)
     settings_path = Path(args.settings_path)
 
     preference_path = (
@@ -216,7 +229,7 @@ def main() -> None:
     else:
         policy_path = policy_file_from_num(Path(args.coordinator_output_dir), args.policy_file_num)
 
-    for p in [news_tsv, train_tsv, prompt_path, settings_path, preference_path, policy_path]:
+    for p in [news_tsv, train_tsv, prompt_path, settings_path, preference_path, policy_path, model3_prompt_path]:
         if not p.is_file():
             raise FileNotFoundError(f"Required file not found: {p}")
 
@@ -251,16 +264,32 @@ def main() -> None:
     if not history_titles:
         raise ValueError(f"No valid history titles for user {args.user_id}")
 
+    # prepare OpenAI client
+    client = OpenAI(api_key=api_key)
+
+    # step1: abstract candidate title via model3
+    with open(model3_prompt_path, "r", encoding="utf-8") as f:
+        model3_template = f.read()
+    model3_prompt = model3_template.replace("{title}", candidate_title)
+    model3_response = client.chat.completions.create(
+        model=args.model3_model or args.model,
+        messages=[{"role": "user", "content": model3_prompt}],
+        temperature=0.3,
+        max_tokens=120,
+    )
+    abstracted_title = (model3_response.choices[0].message.content or "").strip()
+    if not abstracted_title:
+        abstracted_title = candidate_title
+
     prompt = build_prompt(
         template=prompt_template,
         model1_output=model1_output,
         history_titles=history_titles,
-        candidate_news=candidate_title,
+        candidate_news=abstracted_title,
         policy=policy,
         settings=settings,
     )
 
-    client = OpenAI(api_key=api_key)
     response = client.chat.completions.create(
         model=args.model,
         messages=[{"role": "user", "content": prompt}],
