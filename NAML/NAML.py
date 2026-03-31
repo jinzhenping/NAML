@@ -97,8 +97,8 @@ def load_expected_bodies(output_dir=None, dataset_type='train'):
                             key = _norm_expected_body_key(user_id, news_id)
                             expected_bodies[key] = data['generated_body']
                 except Exception as e:
-                    continue
-    
+            continue
+        
     print(f"기대 본문 로드 완료: {len(expected_bodies)}개 ({dataset_type})")
     return expected_bodies
 
@@ -238,7 +238,7 @@ if USE_EXPECTED_BODY:
         if missing_expected_bodies_test > 0:
             print(f"  - 테스트 데이터 기대본문 누락: {missing_expected_bodies_test}개 (원본 본문 사용)")
 
-else:
+        else:
     # 원본 본문 사용
     print("\n원본 본문 사용 모드")
     userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test, all_train_userid_str, all_train_newsid_str, all_test_userid_str, all_test_newsid_str = preprocess_user_file(

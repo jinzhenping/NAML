@@ -1,0 +1,13 @@
+Given the following news titles that a user has clicked,
+infer the user's primary interests, information-seeking patterns,
+and likely perspective when reading news.
+
+Output format:
+Primary interests: (2-3 specific domains)
+Information-seeking pattern: (e.g., "focuses on financial impact", 
+  "interested in technical details", "follows political implications")
+Likely perspective: (e.g., "reads news as an investor", 
+  "reads news as a tech enthusiast")
+
+[User Click History]
+{history_titles}

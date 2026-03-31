@@ -1,0 +1,37 @@
+[Tone]
+{very_neutral}
+Write in a strictly neutral and analytical tone.Avoid evaluative adjectives, emphasis, or subjective expressions.The text should read like an objective analytical note, focusing on factual expectations without highlighting importance or impact.
+{neutral}
+Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.
+{mildly_expressive}
+Write in a mildly expressive tone while remaining informative.Limited expressions of interest or anticipation are allowed, but sensational or emotionally charged language must be avoided.
+
+[Abstraction Level]
+{high_level}
+Describe the expected content at a high level, focusing on overall themes or general directions rather than specific details.Avoid mentioning concrete numbers, technical specifications, or fine-grained facts.
+{mixed}
+Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.
+{specific}
+Describe the expected content with relatively concrete details.The text may mention specific product categories, features, metrics, or scenarios, while still using speculative language.
+
+[Speculation Count]
+{0}
+Do not include speculative hypotheses.Describe only what the user broadly expects to read, without proposing alternative possibilities or uncertain outcomes.
+{1}
+Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).
+{2}
+Include two distinct speculative hypotheses.Each hypothesis should represent a plausible but alternative expectation of the article's content, without asserting either as fact.
+
+[Length Bucket]
+{short}
+Generate a concise expected body of approximately 40-60 words.Focus on the core expectation only, without elaboration.
+{medium}
+Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.
+{long}
+Generate a more detailed expected body of approximately 110-140 words.Elaborate on the expected content with additional context or implications, while maintaining speculative phrasing.
+
+[Format]
+{narrative}
+Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.
+{bullet}
+Write the expected body as a list of bullet points.Each bullet should describe a distinct aspect of what the user expects to read.
