@@ -60,6 +60,7 @@ load_policy = _geb.load_policy
 parse_settings = _geb.parse_settings
 resolve_test_tsv = _geb.resolve_test_tsv
 save_abstract_cache = _geb.save_abstract_cache
+safe_api_text = _geb.safe_api_text
 
 
 def _norm_uid(u) -> str:
@@ -287,10 +288,15 @@ def main() -> None:
 
     def get_abstract_title(news_id: str, original: str) -> str:
         """뉴스 ID당 추상 제목 1회만 LLM 호출(캐시 있으면 스킵). 캐시 갱신은 lock으로 보호."""
+        original = safe_api_text(original)
+        if not original:
+            original = "[untitled]"
         with cache_lock:
             if news_id in abstract_cache and abstract_cache[news_id].get("abstracted_title"):
                 return abstract_cache[news_id]["abstracted_title"]
-        model3_prompt = title_transform_template.replace("{title}", original)
+        model3_prompt = safe_api_text(
+            title_transform_template.replace("{title}", original)
+        )
         resp = client.chat.completions.create(
             model=title_model,
             messages=[{"role": "user", "content": model3_prompt}],
@@ -392,7 +398,7 @@ def main() -> None:
         )
         resp = client.chat.completions.create(
             model=args.model,
-            messages=[{"role": "user", "content": prompt}],
+            messages=[{"role": "user", "content": safe_api_text(prompt)}],
             temperature=0.7,
             max_tokens=500,
         )

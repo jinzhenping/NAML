@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -29,6 +30,19 @@ from openai import OpenAI
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_DATASET_SUBDIR = "MIND_2000"
 DEFAULT_MODEL = "gpt-4o-mini"
+
+
+def safe_api_text(value: object) -> str:
+    """Ensure OpenAI request `content` is a strict JSON-safe string (no NaN, no NUL)."""
+    if value is None:
+        return ""
+    if isinstance(value, float) and (math.isnan(value) or math.isinf(value)):
+        return ""
+    s = str(value).strip()
+    if s.lower() == "nan":
+        return ""
+    # NUL breaks some JSON serializers / gateways
+    return s.replace("\x00", "")
 
 
 def resolve_train_tsv(dataset_subdir: str) -> Path:
@@ -58,7 +72,9 @@ def load_news_map(news_tsv: Path) -> Dict[str, str]:
         names=["news_id", "category", "subcategory", "title", "body"],
         dtype=str,
     )
-    news_df = news_df.dropna(subset=["news_id", "title"])
+    news_df["news_id"] = news_df["news_id"].map(safe_api_text)
+    news_df["title"] = news_df["title"].map(safe_api_text)
+    news_df = news_df[(news_df["news_id"] != "") & (news_df["title"] != "")]
     return dict(zip(news_df["news_id"], news_df["title"]))
 
 
@@ -307,7 +323,7 @@ def main() -> None:
         prompt_template = f.read()
     with open(preference_path, "r", encoding="utf-8") as f:
         pref_json = json.load(f)
-    model1_output = str(pref_json.get("preference_profile", "")).strip()
+    model1_output = safe_api_text(pref_json.get("preference_profile", ""))
     if not model1_output:
         raise ValueError(f"preference_profile is empty in {preference_path}")
 
@@ -317,7 +333,7 @@ def main() -> None:
 
     if args.candidate_news_id not in news_map:
         raise ValueError(f"candidate_news_id not found in news TSV: {args.candidate_news_id}")
-    candidate_title = news_map[args.candidate_news_id]
+    candidate_title = safe_api_text(news_map[args.candidate_news_id]) or "[untitled]"
 
     train_df = pd.read_csv(
         train_tsv,
@@ -357,7 +373,7 @@ def main() -> None:
     else:
         with open(title_abstraction_prompt_path, "r", encoding="utf-8") as f:
             model3_template = f.read()
-        model3_prompt = model3_template.replace("{title}", candidate_title)
+        model3_prompt = safe_api_text(model3_template.replace("{title}", candidate_title))
         model3_response = client.chat.completions.create(
             model=args.title_abstraction_model or args.model,
             messages=[{"role": "user", "content": model3_prompt}],
@@ -384,7 +400,7 @@ def main() -> None:
 
     response = client.chat.completions.create(
         model=args.model,
-        messages=[{"role": "user", "content": prompt}],
+        messages=[{"role": "user", "content": safe_api_text(prompt)}],
         temperature=0.7,
         max_tokens=500,
     )
