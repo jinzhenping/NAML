@@ -63,6 +63,22 @@ save_abstract_cache = _geb.save_abstract_cache
 safe_api_text = _geb.safe_api_text
 
 
+def _validate_chat_json_payload(
+    model: str,
+    messages: List[dict],
+    temperature: float,
+    max_tokens: int,
+) -> None:
+    """클라이언트가 보내는 JSON이 RFC에 맞는지 선검증 (NaN 등으로 서버 400 방지)."""
+    payload = {
+        "model": str(model),
+        "messages": messages,
+        "temperature": float(temperature),
+        "max_tokens": int(max_tokens),
+    }
+    json.dumps(payload, ensure_ascii=False, allow_nan=False)
+
+
 def _norm_uid(u) -> str:
     try:
         return str(int(float(str(u).strip())))
@@ -297,8 +313,14 @@ def main() -> None:
         model3_prompt = safe_api_text(
             title_transform_template.replace("{title}", original)
         )
+        _validate_chat_json_payload(
+            str(title_model),
+            [{"role": "user", "content": model3_prompt}],
+            0.3,
+            120,
+        )
         resp = client.chat.completions.create(
-            model=title_model,
+            model=str(title_model),
             messages=[{"role": "user", "content": model3_prompt}],
             temperature=0.3,
             max_tokens=120,
@@ -368,7 +390,7 @@ def main() -> None:
 
         with open(pref_path, "r", encoding="utf-8") as f:
             pref_json = json.load(f)
-        model1_out = str(pref_json.get("preference_profile", "")).strip()
+        model1_out = safe_api_text(pref_json.get("preference_profile", ""))
         if not model1_out:
             with print_lock:
                 print(f"skip empty preference_profile: {pref_path}")
@@ -385,9 +407,10 @@ def main() -> None:
             return ("no_hist", None)
 
         ent = abstract_cache.get(cid) or {}
-        abstracted = (ent.get("abstracted_title") or "").strip()
+        abstracted = safe_api_text(ent.get("abstracted_title") or "")
         if not abstracted:
             abstracted = get_abstract_title(cid, candidate_title)
+        abstracted = safe_api_text(abstracted)
         prompt = build_prompt(
             template=prompt_template,
             model1_output=model1_out,
@@ -396,9 +419,16 @@ def main() -> None:
             policy=policy,
             settings=settings,
         )
+        msg_content = safe_api_text(prompt)
+        _validate_chat_json_payload(
+            str(args.model),
+            [{"role": "user", "content": msg_content}],
+            0.7,
+            500,
+        )
         resp = client.chat.completions.create(
-            model=args.model,
-            messages=[{"role": "user", "content": safe_api_text(prompt)}],
+            model=str(args.model),
+            messages=[{"role": "user", "content": msg_content}],
             temperature=0.7,
             max_tokens=500,
         )

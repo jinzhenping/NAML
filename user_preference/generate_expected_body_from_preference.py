@@ -41,8 +41,12 @@ def safe_api_text(value: object) -> str:
     s = str(value).strip()
     if s.lower() == "nan":
         return ""
-    # NUL breaks some JSON serializers / gateways
-    return s.replace("\x00", "")
+    s = s.replace("\x00", "")
+    # C0 controls (except TAB/LF/CR) break some gateways / strict JSON
+    s = "".join(ch for ch in s if ord(ch) >= 32 or ch in "\t\n\r")
+    # lone surrogates 등 비정상 코드포인트 정리
+    s = s.encode("utf-8", errors="replace").decode("utf-8")
+    return s
 
 
 def resolve_train_tsv(dataset_subdir: str) -> Path:
@@ -117,7 +121,9 @@ def load_policy(policy_path: Path) -> Dict[str, str]:
 
 
 def to_history_text(titles: List[str]) -> str:
-    return "\n".join(f"{i + 1}. {title}" for i, title in enumerate(titles))
+    return "\n".join(
+        f"{i + 1}. {safe_api_text(title)}" for i, title in enumerate(titles)
+    )
 
 
 def get_recent_titles(train_df: pd.DataFrame, news_map: Dict[str, str], user_id: str, k: int) -> List[str]:
@@ -131,7 +137,7 @@ def get_recent_titles(train_df: pd.DataFrame, news_map: Dict[str, str], user_id:
 
 
 def get_description(settings: Dict[str, Dict[str, str]], category: str, value: str) -> str:
-    return settings.get(category, {}).get(value, "")
+    return safe_api_text(settings.get(category, {}).get(value, ""))
 
 
 def load_abstract_cache(path: Path) -> Dict[str, Dict[str, str]]:
@@ -185,16 +191,16 @@ def build_prompt(
     policy: Dict[str, str],
     settings: Dict[str, Dict[str, str]],
 ) -> str:
-    tone = str(policy.get("tone", "neutral"))
-    abstraction = str(policy.get("abstraction_level", "mixed"))
-    speculation = str(policy.get("speculation_count", 1))
-    length_bucket = str(policy.get("length_bucket", "medium"))
-    fmt = str(policy.get("format", "narrative"))
+    tone = safe_api_text(str(policy.get("tone", "neutral")))
+    abstraction = safe_api_text(str(policy.get("abstraction_level", "mixed")))
+    speculation = safe_api_text(str(policy.get("speculation_count", 1)))
+    length_bucket = safe_api_text(str(policy.get("length_bucket", "medium")))
+    fmt = safe_api_text(str(policy.get("format", "narrative")))
 
     prompt = template
-    prompt = prompt.replace("{model1_output}", model1_output)
+    prompt = prompt.replace("{model1_output}", safe_api_text(model1_output))
     prompt = prompt.replace("{history_titles}", to_history_text(history_titles))
-    prompt = prompt.replace("{candidate_news}", candidate_news)
+    prompt = prompt.replace("{candidate_news}", safe_api_text(candidate_news))
 
     prompt = prompt.replace("{Tone}", tone)
     prompt = prompt.replace("{Tone_description}", get_description(settings, "Tone", tone))
@@ -215,7 +221,7 @@ def build_prompt(
     )
     prompt = prompt.replace("{Format}", fmt)
     prompt = prompt.replace("{Format_description}", get_description(settings, "Format", fmt))
-    return prompt
+    return safe_api_text(prompt)
 
 
 def main() -> None:
