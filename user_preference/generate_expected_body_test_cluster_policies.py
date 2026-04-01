@@ -68,10 +68,9 @@ def _thread_local_openai_factory(api_key: str):
     local = threading.local()
 
     def get_client() -> OpenAI:
-        c = getattr(local, "client", None)
-        if c is None:
+        if getattr(local, "client", None) is None:
             local.client = OpenAI(api_key=api_key)
-        return c  # type: ignore[return-value]
+        return local.client  # type: ignore[return-value]
 
     return get_client
 
