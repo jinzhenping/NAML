@@ -63,6 +63,19 @@ save_abstract_cache = _geb.save_abstract_cache
 safe_api_text = _geb.safe_api_text
 
 
+def _thread_local_openai_factory(api_key: str):
+    """스레드마다 별도 OpenAI 클라이언트 (공유 클라이언트 동시 호출 시 HTTP 본문 깨짐/400 방지)."""
+    local = threading.local()
+
+    def get_client() -> OpenAI:
+        c = getattr(local, "client", None)
+        if c is None:
+            local.client = OpenAI(api_key=api_key)
+        return c  # type: ignore[return-value]
+
+    return get_client
+
+
 def _validate_chat_json_payload(
     model: str,
     messages: List[dict],
@@ -297,7 +310,7 @@ def main() -> None:
         title_transform_template = f.read()
 
     title_model = args.title_abstraction_model or args.model
-    client = OpenAI(api_key=api_key)
+    get_openai_client = _thread_local_openai_factory(api_key)
     abstract_cache: Dict[str, Dict[str, str]] = load_abstract_cache(abstract_cache_path)
     cache_lock = threading.Lock()
     print_lock = threading.Lock()
@@ -319,7 +332,7 @@ def main() -> None:
             0.3,
             120,
         )
-        resp = client.chat.completions.create(
+        resp = get_openai_client().chat.completions.create(
             model=str(title_model),
             messages=[{"role": "user", "content": model3_prompt}],
             temperature=0.3,
@@ -426,7 +439,7 @@ def main() -> None:
             0.7,
             500,
         )
-        resp = client.chat.completions.create(
+        resp = get_openai_client().chat.completions.create(
             model=str(args.model),
             messages=[{"role": "user", "content": msg_content}],
             temperature=0.7,
