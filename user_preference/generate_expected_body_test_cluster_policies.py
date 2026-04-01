@@ -14,12 +14,12 @@
 
 프로젝트 루트에서:
 
-  python user_preference/generate_expected_body_test_cluster_policies.py \\
-    --cluster-csv NAML/user_kmeans_k3_MIND_2000_test.csv \\
-    --policy-files coordinator_LLM/output_cluster0/11.txt \\
-                 coordinator_LLM/output_cluster1/13.txt \\
-                 coordinator_LLM/output_cluster2/8.txt \\
-    --output user_preference/expected_body/MIND_2000/test_3cluster_11_13_8 \\
+  python user_preference/generate_expected_body_test_cluster_policies.py \
+    --cluster-csv NAML/user_kmeans_k3_MIND_2000_test.csv \
+    --policy-files coordinator_LLM/output_cluster0/11.txt \
+                 coordinator_LLM/output_cluster1/13.txt \
+                 coordinator_LLM/output_cluster2/8.txt \
+    --output user_preference/expected_body/MIND_2000/test_3cluster_11_13_8 \
     --mind-dataset-subdir MIND_2000
 """
 from __future__ import annotations
