@@ -1,25 +1,27 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-테스트셋 유저 클러스터 CSV에 따라 클러스터마다 서로 다른 정책 파일로
+트레이닝셋 유저 클러스터 CSV에 따라 클러스터마다 서로 다른 정책 파일로
 `generate_expected_body_from_preference.py`와 동일한 방식으로 기대본문을 생성합니다.
 
-실행 순서: (1) 배치에 등장하는 고유 후보뉴스 ID마다 추상 제목만 먼저 생성·캐시
-→ (2) (유저, 후보) 쌍별로 기대본문만 생성. 동일 후보가 여러 쌍에 있어도 추상 제목 LLM은 뉴스당 1회.
+실행 순서: (1) 이번 실행에 포함된 고유 후보뉴스 ID마다 추상 제목 생성·캐시
+→ (2) (유저, 후보) 쌍별로 기대본문 생성.
 
-- 히스토리: 테스트 TSV의 clicked_news에서 최근 history_k개 제목
-- 취향: user_preference/preference/<dataset>/test/user_<id>.json (기본)
+- 히스토리: train TSV의 clicked_news에서 최근 history_k개 제목
+- 취향: user_preference/preference/<dataset>/train/user_<id>.json (기본)
 - 후보 제목: title_abstraction.yaml(기본)으로 추상화 → {candidate_news}
 - 정책: --policy-files 를 클러스터 0,1,2,... 순으로 매핑
+- 배치: --num-batches N --batch-index i 로 전체 (유저,후보) 쌍을 N등분한 i번째만 처리
+  (출력 폴더는 배치마다 다르게 주는 것을 권장: .../train_batch0 등)
 
 프로젝트 루트에서:
 
-  python user_preference/generate_expected_body_test_cluster_policies.py \
-    --cluster-csv NAML/user_kmeans_k3_MIND_2000_test.csv \
+  python user_preference/generate_expected_body_train_cluster_policies.py \
+    --cluster-csv NAML/user_kmeans_k3_MIND_2000_train.csv \
     --policy-files coordinator_LLM/output_cluster0/11.txt \
                  coordinator_LLM/output_cluster1/13.txt \
                  coordinator_LLM/output_cluster2/8.txt \
-    --output user_preference/expected_body/MIND_2000/test_3cluster_11_13_8 \
+    --output user_preference/expected_body/MIND_2000/train_3cluster_11_13_8 \
     --mind-dataset-subdir MIND_2000
 """
 from __future__ import annotations
@@ -58,7 +60,7 @@ load_abstract_cache = _geb.load_abstract_cache
 load_news_map = _geb.load_news_map
 load_policy = _geb.load_policy
 parse_settings = _geb.parse_settings
-resolve_test_tsv = _geb.resolve_test_tsv
+resolve_train_tsv = _geb.resolve_train_tsv
 save_abstract_cache = _geb.save_abstract_cache
 safe_api_text = _geb.safe_api_text
 
@@ -140,8 +142,45 @@ def collect_pairs_by_cluster(
     return {c: list(s) for c, s in buckets.items()}
 
 
-def default_preference_dir(dataset_subdir: str) -> Path:
-    return PROJECT_ROOT / "user_preference" / "preference" / dataset_subdir / "test"
+def default_preference_dir_train(dataset_subdir: str) -> Path:
+    return PROJECT_ROOT / "user_preference" / "preference" / dataset_subdir / "train"
+
+
+def flatten_bucket_pairs(
+    buckets: Dict[int, List[Tuple[int, str]]],
+) -> List[Tuple[int, int, str]]:
+    """(cluster, user_id, candidate_id) 정렬 리스트 (배치 샤딩용)."""
+    items: List[Tuple[int, int, str]] = []
+    for cl in sorted(buckets.keys()):
+        for uid, cid in sorted(buckets[cl], key=lambda x: (x[0], x[1])):
+            items.append((cl, uid, cid))
+    items.sort()
+    return items
+
+
+def slice_batch_items(
+    items: List[Tuple[int, int, str]], num_batches: int, batch_index: int
+) -> List[Tuple[int, int, str]]:
+    n = len(items)
+    if num_batches < 1:
+        raise ValueError("num_batches must be >= 1")
+    if batch_index < 0 or batch_index >= num_batches:
+        raise ValueError(f"batch_index must be in [0, {num_batches - 1}]")
+    if n == 0:
+        return []
+    chunk = (n + num_batches - 1) // num_batches
+    start = batch_index * chunk
+    end = min(start + chunk, n)
+    return items[start:end]
+
+
+def pairs_by_cluster_from_items(
+    items: List[Tuple[int, int, str]],
+) -> Dict[int, List[Tuple[int, str]]]:
+    out: Dict[int, List[Tuple[int, str]]] = defaultdict(list)
+    for cl, uid, cid in items:
+        out[cl].append((uid, cid))
+    return dict(out)
 
 
 def abstract_cache_path_for_prompt(title_abstraction_prompt_path: Path) -> Path:
@@ -157,7 +196,7 @@ def abstract_cache_path_for_prompt(title_abstraction_prompt_path: Path) -> Path:
 
 def main() -> None:
     ap = argparse.ArgumentParser(
-        description="테스트셋 클러스터별 정책 + preference + 제목 추상화로 기대본문 배치 생성"
+        description="트레이닝셋 클러스터별 정책 + preference + 제목 추상화로 기대본문 배치 생성"
     )
     ap.add_argument(
         "--cluster-csv",
@@ -173,14 +212,26 @@ def main() -> None:
         metavar="PATH",
         help="클러스터 0,1,2,... 순 정책 JSON 경로",
     )
-    ap.add_argument("--output", type=str, required=True, help="결과 루트 폴더")
+    ap.add_argument("--output", type=str, required=True, help="결과 루트 폴더 (배치마다 다른 경로 권장)")
     ap.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
-    ap.add_argument("--test-tsv", type=str, default=None, help="테스트 TSV 직접 지정")
+    ap.add_argument("--train-tsv", type=str, default=None, help="학습 TSV 직접 지정")
+    ap.add_argument(
+        "--num-batches",
+        type=int,
+        default=1,
+        help="전체 (유저,후보) 쌍을 몇 개의 배치로 나눌지 (기본 1=전체)",
+    )
+    ap.add_argument(
+        "--batch-index",
+        type=int,
+        default=0,
+        help="처리할 배치 인덱스 0 .. num-batches-1",
+    )
     ap.add_argument(
         "--preference-base",
         type=str,
         default=None,
-        help="테스트 split preference 디렉토리 (기본: user_preference/preference/<dataset>/test)",
+        help="train split preference 디렉토리 (기본: user_preference/preference/<dataset>/train)",
     )
     ap.add_argument("--history-k", type=int, default=10)
     ap.add_argument(
@@ -221,6 +272,9 @@ def main() -> None:
         help="이미 존재하는 user_*/news_*.json 이 있어도 다시 생성",
     )
     args = ap.parse_args()
+    if args.num_batches < 1:
+        print("오류: --num-batches 는 1 이상이어야 합니다.")
+        sys.exit(1)
 
     csv_path = _ROOT / args.cluster_csv
     if not csv_path.is_file():
@@ -250,11 +304,11 @@ def main() -> None:
     ds = args.mind_dataset_subdir
     dataset_dir = PROJECT_ROOT / "dataset" / ds
     news_tsv = dataset_dir / "MIND_news.tsv"
-    test_tsv = Path(args.test_tsv) if args.test_tsv else resolve_test_tsv(ds)
+    train_tsv = Path(args.train_tsv) if args.train_tsv else resolve_train_tsv(ds)
     pref_base = (
         Path(args.preference_base)
         if args.preference_base
-        else default_preference_dir(ds)
+        else default_preference_dir_train(ds)
     )
 
     body_yaml = Path(args.body_generation_yaml)
@@ -266,7 +320,7 @@ def main() -> None:
     else:
         abstract_cache_path = abstract_cache_path_for_prompt(title_yaml)
 
-    for p in [news_tsv, test_tsv, body_yaml, title_yaml, settings_path]:
+    for p in [news_tsv, train_tsv, body_yaml, title_yaml, settings_path]:
         if not p.is_file():
             print(f"오류: 파일 없음: {p}")
             sys.exit(1)
@@ -278,23 +332,39 @@ def main() -> None:
 
     news_map = load_news_map(news_tsv)
 
-    test_df = pd.read_csv(
-        test_tsv,
+    train_df = pd.read_csv(
+        train_tsv,
         sep="\t",
         names=["user", "clicked_news", "candidate_news", "clicked"],
         dtype=str,
     )
-    test_df = test_df.dropna(subset=["user", "clicked_news"])
+    train_df = train_df.dropna(subset=["user", "clicked_news"])
 
-    buckets = collect_pairs_by_cluster(test_df, user_cluster, news_map)
+    buckets_full = collect_pairs_by_cluster(train_df, user_cluster, news_map)
+    flat_all = flatten_bucket_pairs(buckets_full)
+    total_pairs = len(flat_all)
+    try:
+        flat_batch = slice_batch_items(flat_all, args.num_batches, args.batch_index)
+    except ValueError as e:
+        print(f"오류: {e}")
+        sys.exit(1)
+    buckets = pairs_by_cluster_from_items(flat_batch)
+
     print(
-        f"클러스터별 (user,후보) 쌍 수: {{{', '.join(f'{k}: {len(v)}' for k, v in sorted(buckets.items()))}}}"
+        f"클러스터별 (user,후보) 쌍 수 (필터 전): {{{', '.join(f'{k}: {len(v)}' for k, v in sorted(buckets_full.items()))}}}"
+    )
+    print(
+        f"배치: --num-batches {args.num_batches} --batch-index {args.batch_index} "
+        f"→ 이번 실행 쌍 수 {len(flat_batch)} / 전체 {total_pairs}"
+    )
+    print(
+        f"클러스터별 (user,후보) 쌍 수 (이번 배치): {{{', '.join(f'{k}: {len(v)}' for k, v in sorted(buckets.items()))}}}"
     )
 
     out_root = Path(_ROOT / args.output)
     out_root.mkdir(parents=True, exist_ok=True)
     print(f"출력: {out_root}")
-    print(f"테스트 TSV: {test_tsv}")
+    print(f"학습 TSV: {train_tsv}")
     print(f"preference 디렉토리: {pref_base}")
     print(f"제목 변환 캐시: {abstract_cache_path}")
 
@@ -412,7 +482,7 @@ def main() -> None:
             return ("bad_news", None)
         candidate_title = news_map[cid]
 
-        hist = get_recent_titles(test_df, news_map, uid_s, args.history_k)
+        hist = get_recent_titles(train_df, news_map, uid_s, args.history_k)
         if not hist:
             with print_lock:
                 print(f"skip no history: user={uid_s}")
@@ -447,6 +517,9 @@ def main() -> None:
         body = (resp.choices[0].message.content or "").strip()
         user_dir.mkdir(parents=True, exist_ok=True)
         result = {
+            "split": "train",
+            "num_batches": args.num_batches,
+            "batch_index": args.batch_index,
             "user_id": uid_s,
             "cluster": cl,
             "candidate_news_id": cid,
@@ -494,7 +567,10 @@ def main() -> None:
                     if res:
                         all_results.append(res)
 
-    summary_path = out_root / "all_results.json"
+    if args.num_batches > 1:
+        summary_path = out_root / f"all_results_batch{args.batch_index}.json"
+    else:
+        summary_path = out_root / "all_results.json"
     with open(summary_path, "w", encoding="utf-8") as f:
         json.dump(all_results, f, ensure_ascii=False, indent=2)
     print(f"\n통계: {dict(stats)}")

@@ -6,7 +6,10 @@ Infer per-user preference profiles from click history titles.
 - Uses the most recent N clicked news titles (default: 10).
 - Saves one JSON file per user under `user_preference/preference`.
 
-python user_preference/infer_user_preferences.py --dataset_subdir MIND_2000 --history_k 50 --user_id 1291
+# 트레이닝셋 유저 취향
+python user_preference/infer_user_preferences.py --dataset_subdir MIND_2000 --history_k 50
+
+# 테스트셋 유저 취향
 python user_preference/infer_user_preferences.py --dataset_subdir MIND_2000 --use_test --history_k 50
 """
 
