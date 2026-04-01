@@ -41,6 +41,16 @@ def resolve_train_tsv(dataset_subdir: str) -> Path:
     raise RuntimeError(f"Multiple train TSV files found in {base}; pass --train_tsv")
 
 
+def resolve_test_tsv(dataset_subdir: str) -> Path:
+    base = PROJECT_ROOT / "dataset" / dataset_subdir
+    candidates = sorted(base.glob("MIND_test_*.tsv"))
+    if len(candidates) == 1:
+        return candidates[0]
+    if len(candidates) == 0:
+        raise FileNotFoundError(f"No test TSV found in {base}")
+    raise RuntimeError(f"Multiple test TSV files found in {base}; pass --test_tsv")
+
+
 def load_news_map(news_tsv: Path) -> Dict[str, str]:
     news_df = pd.read_csv(
         news_tsv,

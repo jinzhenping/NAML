@@ -1,0 +1,458 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+테스트셋 유저 클러스터 CSV에 따라 클러스터마다 서로 다른 정책 파일로
+`generate_expected_body_from_preference.py`와 동일한 방식으로 기대본문을 생성합니다.
+
+실행 순서: (1) 배치에 등장하는 고유 후보뉴스 ID마다 추상 제목만 먼저 생성·캐시
+→ (2) (유저, 후보) 쌍별로 기대본문만 생성. 동일 후보가 여러 쌍에 있어도 추상 제목 LLM은 뉴스당 1회.
+
+- 히스토리: 테스트 TSV의 clicked_news에서 최근 history_k개 제목
+- 취향: user_preference/preference/<dataset>/test/user_<id>.json (기본)
+- 후보 제목: title_abstraction.yaml(기본)으로 추상화 → {candidate_news}
+- 정책: --policy-files 를 클러스터 0,1,2,... 순으로 매핑
+
+프로젝트 루트에서:
+
+  python user_preference/generate_expected_body_test_cluster_policies.py \\
+    --cluster-csv NAML/user_kmeans_k3_MIND_2000_test.csv \\
+    --policy-files coordinator_LLM/output_cluster0/11.txt \\
+                 coordinator_LLM/output_cluster1/13.txt \\
+                 coordinator_LLM/output_cluster2/8.txt \\
+    --output user_preference/expected_body/MIND_2000/test_3cluster_11_13_8 \\
+    --mind-dataset-subdir MIND_2000
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import importlib.util
+import json
+import os
+import sys
+import threading
+from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
+from typing import Dict, List, Optional, Set, Tuple
+
+_ROOT = Path(__file__).resolve().parent.parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
+import pandas as pd
+from openai import OpenAI
+
+_GEB_PATH = _ROOT / "user_preference" / "generate_expected_body_from_preference.py"
+_spec = importlib.util.spec_from_file_location("_geb_pref", _GEB_PATH)
+_geb = importlib.util.module_from_spec(_spec)
+assert _spec.loader is not None
+_spec.loader.exec_module(_geb)
+
+DEFAULT_MODEL = _geb.DEFAULT_MODEL
+PROJECT_ROOT = _geb.PROJECT_ROOT
+build_prompt = _geb.build_prompt
+clean_abstracted_title = _geb.clean_abstracted_title
+get_recent_titles = _geb.get_recent_titles
+load_abstract_cache = _geb.load_abstract_cache
+load_news_map = _geb.load_news_map
+load_policy = _geb.load_policy
+parse_settings = _geb.parse_settings
+resolve_test_tsv = _geb.resolve_test_tsv
+save_abstract_cache = _geb.save_abstract_cache
+
+
+def _norm_uid(u) -> str:
+    try:
+        return str(int(float(str(u).strip())))
+    except (ValueError, TypeError):
+        return str(u).strip()
+
+
+def load_user_cluster_map(csv_path: Path) -> Dict[str, int]:
+    m: Dict[str, int] = {}
+    with open(csv_path, "r", encoding="utf-8") as f:
+        r = csv.DictReader(f)
+        for row in r:
+            uid = str(row.get("user_id", row.get("user", ""))).strip()
+            cl = row.get("cluster", row.get("Cluster", ""))
+            if not uid or cl == "":
+                continue
+            try:
+                c = int(float(cl))
+            except ValueError:
+                continue
+            m[_norm_uid(uid)] = c
+    return m
+
+
+def collect_pairs_by_cluster(
+    test_df, user_cluster: Dict[str, int], news_dict: dict
+) -> Dict[int, List[Tuple[int, str]]]:
+    buckets: Dict[int, Set[Tuple[int, str]]] = defaultdict(set)
+    for _, row in test_df.iterrows():
+        uid_raw = row["user"]
+        if uid_raw is None or (isinstance(uid_raw, float) and str(uid_raw) == "nan"):
+            continue
+        uid_norm = _norm_uid(uid_raw)
+        if uid_norm not in user_cluster:
+            continue
+        cl = user_cluster[uid_norm]
+        cand_str = str(row.get("candidate_news", "") or "")
+        for cid in cand_str.split():
+            ns = str(cid).strip()
+            if not ns or ns not in news_dict:
+                continue
+            try:
+                uid_int = int(uid_norm)
+            except ValueError:
+                continue
+            buckets[cl].add((uid_int, ns))
+    return {c: list(s) for c, s in buckets.items()}
+
+
+def default_preference_dir(dataset_subdir: str) -> Path:
+    return PROJECT_ROOT / "user_preference" / "preference" / dataset_subdir / "test"
+
+
+def abstract_cache_path_for_prompt(title_abstraction_prompt_path: Path) -> Path:
+    prompt_name = title_abstraction_prompt_path.name.lower()
+    if "title_abstraction" in prompt_name:
+        cache_name = "abstracted_titles.json"
+    elif "keyword_extraction" in prompt_name:
+        cache_name = "keyword_titles.json"
+    else:
+        cache_name = "transformed_titles.json"
+    return PROJECT_ROOT / "user_preference" / cache_name
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(
+        description="테스트셋 클러스터별 정책 + preference + 제목 추상화로 기대본문 배치 생성"
+    )
+    ap.add_argument(
+        "--cluster-csv",
+        type=str,
+        required=True,
+        help="user_id,cluster 형식 CSV",
+    )
+    ap.add_argument(
+        "--policy-files",
+        type=str,
+        nargs="+",
+        required=True,
+        metavar="PATH",
+        help="클러스터 0,1,2,... 순 정책 JSON 경로",
+    )
+    ap.add_argument("--output", type=str, required=True, help="결과 루트 폴더")
+    ap.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
+    ap.add_argument("--test-tsv", type=str, default=None, help="테스트 TSV 직접 지정")
+    ap.add_argument(
+        "--preference-base",
+        type=str,
+        default=None,
+        help="테스트 split preference 디렉토리 (기본: user_preference/preference/<dataset>/test)",
+    )
+    ap.add_argument("--history-k", type=int, default=10)
+    ap.add_argument(
+        "--body-generation-yaml",
+        type=str,
+        default=str(PROJECT_ROOT / "user_preference" / "body_generation.yaml"),
+    )
+    ap.add_argument(
+        "--title-abstraction-yaml",
+        type=str,
+        default=str(PROJECT_ROOT / "user_preference" / "title_abstraction.yaml"),
+    )
+    ap.add_argument(
+        "--generation-settings",
+        type=str,
+        default=str(PROJECT_ROOT / "user_preference" / "generation_settings.yaml"),
+    )
+    ap.add_argument(
+        "--abstract-cache-path",
+        type=str,
+        default=None,
+        help="제목 변환 캐시 JSON (미지정 시 title_abstraction/keyword에 따라 자동)",
+    )
+    ap.add_argument("--api-key", type=str, default=None)
+    ap.add_argument("--model", type=str, default=DEFAULT_MODEL)
+    ap.add_argument("--title-abstraction-model", type=str, default=None)
+    ap.add_argument("--concurrency", type=int, default=4, help="동시 API 요청 수(본문 생성 단계)")
+    ap.add_argument(
+        "--title-prefetch-concurrency",
+        type=int,
+        default=1,
+        help="추상 제목 사전 생성 시 동시 요청 수 (기본 1=고유 뉴스당 1회만, 중복 호출 없음)",
+    )
+    ap.add_argument("--dry-run", action="store_true", help="쌍 집계만 하고 API 호출 없음")
+    ap.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="이미 존재하는 user_*/news_*.json 이 있어도 다시 생성",
+    )
+    args = ap.parse_args()
+
+    csv_path = _ROOT / args.cluster_csv
+    if not csv_path.is_file():
+        print(f"오류: cluster CSV 없음: {csv_path}")
+        sys.exit(1)
+
+    policy_paths: List[Path] = []
+    for p in args.policy_files:
+        abs_p = Path(p) if os.path.isabs(p) else _ROOT / p
+        if not abs_p.is_file():
+            print(f"오류: 정책 파일 없음: {abs_p}")
+            sys.exit(1)
+        policy_paths.append(abs_p.resolve())
+
+    user_cluster = load_user_cluster_map(csv_path)
+    if not user_cluster:
+        print("오류: CSV에서 유효한 (user, cluster) 행이 없습니다.")
+        sys.exit(1)
+
+    max_c = max(user_cluster.values())
+    if max_c >= len(policy_paths):
+        print(
+            f"오류: CSV 최대 클러스터 id={max_c} 인데 --policy-files 가 {len(policy_paths)}개뿐입니다."
+        )
+        sys.exit(1)
+
+    ds = args.mind_dataset_subdir
+    dataset_dir = PROJECT_ROOT / "dataset" / ds
+    news_tsv = dataset_dir / "MIND_news.tsv"
+    test_tsv = Path(args.test_tsv) if args.test_tsv else resolve_test_tsv(ds)
+    pref_base = (
+        Path(args.preference_base)
+        if args.preference_base
+        else default_preference_dir(ds)
+    )
+
+    body_yaml = Path(args.body_generation_yaml)
+    title_yaml = Path(args.title_abstraction_yaml)
+    settings_path = Path(args.generation_settings)
+
+    if args.abstract_cache_path:
+        abstract_cache_path = Path(args.abstract_cache_path)
+    else:
+        abstract_cache_path = abstract_cache_path_for_prompt(title_yaml)
+
+    for p in [news_tsv, test_tsv, body_yaml, title_yaml, settings_path]:
+        if not p.is_file():
+            print(f"오류: 파일 없음: {p}")
+            sys.exit(1)
+
+    api_key = args.api_key or os.getenv("OPENAI_API_KEY")
+    if not api_key and not args.dry_run:
+        print("오류: OPENAI_API_KEY 또는 --api-key 필요")
+        sys.exit(1)
+
+    news_map = load_news_map(news_tsv)
+
+    test_df = pd.read_csv(
+        test_tsv,
+        sep="\t",
+        names=["user", "clicked_news", "candidate_news", "clicked"],
+        dtype=str,
+    )
+    test_df = test_df.dropna(subset=["user", "clicked_news"])
+
+    buckets = collect_pairs_by_cluster(test_df, user_cluster, news_map)
+    print(
+        f"클러스터별 (user,후보) 쌍 수: {{{', '.join(f'{k}: {len(v)}' for k, v in sorted(buckets.items()))}}}"
+    )
+
+    out_root = Path(_ROOT / args.output)
+    out_root.mkdir(parents=True, exist_ok=True)
+    print(f"출력: {out_root}")
+    print(f"테스트 TSV: {test_tsv}")
+    print(f"preference 디렉토리: {pref_base}")
+    print(f"제목 변환 캐시: {abstract_cache_path}")
+
+    if args.dry_run:
+        print("--dry-run 이므로 생성하지 않습니다.")
+        return
+
+    with open(body_yaml, "r", encoding="utf-8") as f:
+        prompt_template = f.read()
+    settings = parse_settings(settings_path)
+    with open(title_yaml, "r", encoding="utf-8") as f:
+        title_transform_template = f.read()
+
+    title_model = args.title_abstraction_model or args.model
+    client = OpenAI(api_key=api_key)
+    abstract_cache: Dict[str, Dict[str, str]] = load_abstract_cache(abstract_cache_path)
+    cache_lock = threading.Lock()
+    print_lock = threading.Lock()
+
+    def get_abstract_title(news_id: str, original: str) -> str:
+        """뉴스 ID당 추상 제목 1회만 LLM 호출(캐시 있으면 스킵). 캐시 갱신은 lock으로 보호."""
+        with cache_lock:
+            if news_id in abstract_cache and abstract_cache[news_id].get("abstracted_title"):
+                return abstract_cache[news_id]["abstracted_title"]
+        model3_prompt = title_transform_template.replace("{title}", original)
+        resp = client.chat.completions.create(
+            model=title_model,
+            messages=[{"role": "user", "content": model3_prompt}],
+            temperature=0.3,
+            max_tokens=120,
+        )
+        ab = clean_abstracted_title(resp.choices[0].message.content or "")
+        if not ab:
+            ab = original
+        with cache_lock:
+            if news_id in abstract_cache and abstract_cache[news_id].get("abstracted_title"):
+                return abstract_cache[news_id]["abstracted_title"]
+            abstract_cache[news_id] = {
+                "original_title": original,
+                "abstracted_title": ab,
+            }
+            save_abstract_cache(abstract_cache_path, abstract_cache)
+            return ab
+
+    # --- Phase 1: 고유 후보뉴스마다 추상 제목만 미리 생성 (쌍 단위 중복 호출 방지) ---
+    unique_cids: Set[str] = set()
+    for _cl, pairs in buckets.items():
+        for _uid, cid in pairs:
+            unique_cids.add(cid)
+    unique_cids = {c for c in unique_cids if c in news_map}
+    print(f"\n>>> [1/2] 추상 제목 사전 생성: 고유 후보 뉴스 {len(unique_cids)}개 (캐시 제외 시 LLM 호출)\n")
+    title_workers = max(1, args.title_prefetch_concurrency)
+
+    def _prefetch_one(cid: str) -> None:
+        get_abstract_title(cid, news_map[cid])
+
+    if title_workers == 1:
+        for i, cid in enumerate(sorted(unique_cids), 1):
+            _prefetch_one(cid)
+            if i % 200 == 0 or i == len(unique_cids):
+                print(f"  추상 제목 진행: {i}/{len(unique_cids)}")
+    else:
+        with ThreadPoolExecutor(max_workers=title_workers) as ex:
+            futs = [ex.submit(_prefetch_one, cid) for cid in sorted(unique_cids)]
+            for i, fut in enumerate(as_completed(futs), 1):
+                fut.result()
+                if i % 200 == 0 or i == len(futs):
+                    print(f"  추상 제목 진행: {i}/{len(futs)}")
+
+    policies: Dict[int, Dict[str, str]] = {}
+    for cl, pp in enumerate(policy_paths):
+        policies[cl] = load_policy(pp)
+
+    def run_one(
+        cl: int,
+        uid: int,
+        cid: str,
+    ) -> Tuple[str, Optional[dict]]:
+        policy = policies[cl]
+        pf = policy_paths[cl]
+        uid_s = str(uid)
+        user_dir = out_root / f"user_{uid_s}"
+        out_path = user_dir / f"news_{cid}.json"
+        if out_path.is_file() and not args.overwrite:
+            with print_lock:
+                print(f"skip exists: {out_path.relative_to(out_root)}")
+            return ("skipped", None)
+
+        pref_path = pref_base / f"user_{uid_s}.json"
+        if not pref_path.is_file():
+            with print_lock:
+                print(f"skip no preference: user={uid_s} ({pref_path})")
+            return ("no_pref", None)
+
+        with open(pref_path, "r", encoding="utf-8") as f:
+            pref_json = json.load(f)
+        model1_out = str(pref_json.get("preference_profile", "")).strip()
+        if not model1_out:
+            with print_lock:
+                print(f"skip empty preference_profile: {pref_path}")
+            return ("empty_pref", None)
+
+        if cid not in news_map:
+            return ("bad_news", None)
+        candidate_title = news_map[cid]
+
+        hist = get_recent_titles(test_df, news_map, uid_s, args.history_k)
+        if not hist:
+            with print_lock:
+                print(f"skip no history: user={uid_s}")
+            return ("no_hist", None)
+
+        ent = abstract_cache.get(cid) or {}
+        abstracted = (ent.get("abstracted_title") or "").strip()
+        if not abstracted:
+            abstracted = get_abstract_title(cid, candidate_title)
+        prompt = build_prompt(
+            template=prompt_template,
+            model1_output=model1_out,
+            history_titles=hist,
+            candidate_news=abstracted,
+            policy=policy,
+            settings=settings,
+        )
+        resp = client.chat.completions.create(
+            model=args.model,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.7,
+            max_tokens=500,
+        )
+        body = (resp.choices[0].message.content or "").strip()
+        user_dir.mkdir(parents=True, exist_ok=True)
+        result = {
+            "user_id": uid_s,
+            "cluster": cl,
+            "candidate_news_id": cid,
+            "candidate_title": candidate_title,
+            "candidate_title_abstracted": abstracted,
+            "history_k": args.history_k,
+            "history_count_used": len(hist),
+            "history_titles": hist,
+            "preference_path": str(pref_path),
+            "policy_path": str(pf),
+            "policy": policy,
+            "model": args.model,
+            "prompt": prompt,
+            "generated_body": body,
+        }
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+        with print_lock:
+            print(f"saved {out_path.relative_to(out_root)}")
+        return ("ok", result)
+
+    all_results: List[dict] = []
+    stats = defaultdict(int)
+    max_workers = max(1, args.concurrency)
+
+    print(f"\n>>> [2/2] 기대본문 생성 (클러스터별 정책)\n")
+
+    for cl in sorted(buckets.keys()):
+        pairs = buckets[cl]
+        if not pairs:
+            continue
+        print(f"\n>>> 클러스터 {cl}: 정책 {policy_paths[cl]} — {len(pairs)}쌍\n")
+        if max_workers == 1:
+            for uid, cid in pairs:
+                st, res = run_one(cl, uid, cid)
+                stats[st] += 1
+                if res:
+                    all_results.append(res)
+        else:
+            with ThreadPoolExecutor(max_workers=max_workers) as ex:
+                futs = [ex.submit(run_one, cl, uid, cid) for uid, cid in pairs]
+                for fut in as_completed(futs):
+                    st, res = fut.result()
+                    stats[st] += 1
+                    if res:
+                        all_results.append(res)
+
+    summary_path = out_root / "all_results.json"
+    with open(summary_path, "w", encoding="utf-8") as f:
+        json.dump(all_results, f, ensure_ascii=False, indent=2)
+    print(f"\n통계: {dict(stats)}")
+    print(f"요약 저장: {summary_path}")
+    print("전체 완료.")
+
+
+if __name__ == "__main__":
+    main()
