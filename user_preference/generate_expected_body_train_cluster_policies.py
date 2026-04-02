@@ -22,7 +22,8 @@
                  coordinator_LLM/output_cluster1/13.txt \
                  coordinator_LLM/output_cluster2/8.txt \
     --output user_preference/expected_body/MIND_2000/train_3cluster_11_13_8 \
-    --mind-dataset-subdir MIND_2000
+    --mind-dataset-subdir MIND_2000 \
+    --max-run-attempts 5
 """
 from __future__ import annotations
 
