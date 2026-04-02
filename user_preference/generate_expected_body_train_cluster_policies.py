@@ -508,13 +508,40 @@ def main() -> None:
             0.7,
             500,
         )
-        resp = get_openai_client().chat.completions.create(
-            model=str(args.model),
-            messages=[{"role": "user", "content": msg_content}],
-            temperature=0.7,
-            max_tokens=500,
-        )
-        body = (resp.choices[0].message.content or "").strip()
+        try:
+            resp = get_openai_client().chat.completions.create(
+                model=str(args.model),
+                messages=[{"role": "user", "content": msg_content}],
+                temperature=0.7,
+                max_tokens=500,
+            )
+            body = (resp.choices[0].message.content or "").strip()
+        except Exception as e:
+            # 디버깅: 어떤 (cluster, user, candidate)가 깨지는지 저장
+            err_dir = out_root / "_bad_request_logs"
+            err_dir.mkdir(parents=True, exist_ok=True)
+            err_path = err_dir / f"cl{cl}_u{uid_s}_cid{cid}.json"
+            with open(err_path, "w", encoding="utf-8") as f:
+                json.dump(
+                    {
+                        "error": str(e),
+                        "cluster": cl,
+                        "user_id": uid_s,
+                        "candidate_news_id": cid,
+                        "candidate_title": candidate_title,
+                        "history_k": args.history_k,
+                        "history_titles": hist,
+                        "policy_path": str(pf),
+                        "policy": policy,
+                        "model": args.model,
+                        "prompt_preview": (prompt or "")[:2000],
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            with print_lock:
+                print(f"[BAD_REQUEST] saved: {err_path.relative_to(out_root)} / err={e}")
+            return ("bad_request", None)
         user_dir.mkdir(parents=True, exist_ok=True)
         result = {
             "split": "train",
