@@ -17,7 +17,7 @@
 프로젝트 루트에서:
 
   python user_preference/generate_expected_body_train_cluster_policies.py \
-    --cluster-csv NAML/user_kmeans_k3_MIND_2000_train.csv \
+    --cluster-csv NAML/user_kmeans_k3_MIND_2000.csv \
     --policy-files coordinator_LLM/output_cluster0/11.txt \
                  coordinator_LLM/output_cluster1/13.txt \
                  coordinator_LLM/output_cluster2/8.txt \
