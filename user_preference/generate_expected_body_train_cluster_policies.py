@@ -33,6 +33,7 @@ import json
 import os
 import sys
 import threading
+import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -271,11 +272,41 @@ def main() -> None:
         action="store_true",
         help="이미 존재하는 user_*/news_*.json 이 있어도 다시 생성",
     )
+    ap.add_argument(
+        "--max-run-attempts",
+        type=int,
+        default=1,
+        help="실패 시 같은 옵션으로 전체 파이프라인을 최대 몇 번 실행할지 (기본 1=재시도 없음)",
+    )
+    ap.add_argument(
+        "--retry-delay-sec",
+        type=int,
+        default=5,
+        help="재시도 전 대기 초",
+    )
     args = ap.parse_args()
     if args.num_batches < 1:
         print("오류: --num-batches 는 1 이상이어야 합니다.")
         sys.exit(1)
+    if args.max_run_attempts < 1:
+        print("오류: --max-run-attempts 는 1 이상이어야 합니다.")
+        sys.exit(1)
 
+    for attempt in range(1, args.max_run_attempts + 1):
+        try:
+            if attempt > 1:
+                print(f"\n=== 재시도 {attempt}/{args.max_run_attempts} ===\n")
+            run_pipeline(args)
+            return
+        except Exception as e:
+            if attempt >= args.max_run_attempts:
+                print(f"실패 ({attempt}/{args.max_run_attempts}): {e}")
+                raise
+            print(f"[재시도] ({attempt}/{args.max_run_attempts}) {e}")
+            time.sleep(args.retry_delay_sec)
+
+
+def run_pipeline(args: argparse.Namespace) -> None:
     csv_path = _ROOT / args.cluster_csv
     if not csv_path.is_file():
         print(f"오류: cluster CSV 없음: {csv_path}")
