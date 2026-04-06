@@ -1,3 +1,5 @@
+from typing import Optional
+
 import random
 import nltk 
 from nltk.tokenize import word_tokenize
@@ -38,7 +40,7 @@ from naml_common import (
 )
 from naml_model_builder import build_naml_models
 
-USE_EXPECTED_BODY = False  # True: 기대 본문 사용, False: 원본 본문 사용
+USE_EXPECTED_BODY = False  # True: 학습·전처리에서 기대 본문 사용, False: 학습은 MIND 실제 본문
 # USE_EXPECTED_BODY=True일 때 기대본문 JSON 위치 (프로젝트 루트 기준 상대 경로 권장)
 # 기본: <EXPECTED_BODY_OUTPUT_DIR>/train/, <EXPECTED_BODY_OUTPUT_DIR>/test/ 아래 user_*/news_*.json
 EXPECTED_BODY_OUTPUT_DIR = 'body_generation/output'
@@ -47,13 +49,44 @@ EXPECTED_BODY_TRAIN_DIR = 'body_generation/output/MIND_2000/train_3cluster_11_13
 EXPECTED_BODY_TEST_DIR = 'body_generation/output/MIND_2000/test_3cluster_11_13_8'
 
 MAIN_TRAINING_LEARNING_RATE = 0.0005  # 메인 학습 루프(및 동일 model.compile) Adam 학습률
-# 메인 학습 루프: 매 에폭 테스트셋 기대본문 평가용 (body_generation/output/<폴더>/)
-MAIN_TESTSET_EXPECTED_BODY_DIR = 'MIND_2000/test_3cluster_11_13_8'
+# 매 에폭 테스트셋 "기대본문" MRR/NDCG용 JSON 루트 (user_*/news_*.json).
+# 해석 순서: (1) 절대 경로이면 그대로 (2) 프로젝트 루트 상대 (3) body_generation/output/<이 값>
+# 예: user_preference/expected_body/MIND_2000/test_3cluster_11_13_8
+MAIN_TESTSET_EXPECTED_BODY_DIR = 'user_preference/expected_body/MIND_2000/test_3cluster_11_13_8'
 MAIN_TESTSET_EXPECTED_BODY_DIR_2 = None  # 두 번째 기대본문 폴더 (None이면 사용 안 함)
+# USE_EXPECTED_BODY=False일 때, 위 MAIN_TESTSET 기대본문 단어를 word_dict에 넣을지 (기대본문 지표에 권장)
+INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT = True
 MAIN_TRAINING_EPOCHS = 20  # 메인 학습 루프 에폭 수
 # USE_EXPECTED_BODY=False이고 True일 때: 테스트셋 실제본문 MRR 최고 에폭에 가중치 저장
 SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR = False
 MAIN_TRAINING_BEST_MODEL_PATH = 'saved_models/NAML_mind_2000.h5'
+
+
+def _naml_project_root() -> str:
+    """NAML/NAML.py 기준 프로젝트(저장소) 루트."""
+    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def resolve_expected_body_dir(path_option: Optional[str]) -> Optional[str]:
+    """
+    기대본문 상위 폴더(user_*/news_*.json 직계 부모)를 실제 경로로 해석.
+    None/빈 문자열 → None. 그 외: 절대 경로 → 프로젝트 루트 상대 → body_generation/output/상대 순으로 탐색.
+    """
+    if path_option is None:
+        return None
+    p = str(path_option).strip()
+    if not p:
+        return None
+    if os.path.isabs(p) and os.path.isdir(p):
+        return os.path.normpath(p)
+    root = _naml_project_root()
+    cand = os.path.normpath(os.path.join(root, p))
+    if os.path.isdir(cand):
+        return cand
+    legacy = os.path.normpath(os.path.join(root, 'body_generation', 'output', p))
+    if os.path.isdir(legacy):
+        return legacy
+    return None
 
 
 def load_expected_bodies(output_dir=None, dataset_type='train'):
@@ -96,8 +129,8 @@ def load_expected_bodies(output_dir=None, dataset_type='train'):
                         if 'generated_body' in data:
                             key = _norm_expected_body_key(user_id, news_id)
                             expected_bodies[key] = data['generated_body']
-                except Exception as e:
-            continue
+                except Exception:
+                    continue
         
     print(f"기대 본문 로드 완료: {len(expected_bodies)}개 ({dataset_type})")
     return expected_bodies
@@ -160,6 +193,7 @@ def _expected_body_dir_for_train_or_test(dataset_type: str) -> str:
 # word_dict 생성에 기대본문을 포함하기 위해 먼저 기대본문을 로드
 expected_bodies_train = None
 expected_bodies_test = None
+expected_bodies_word_dict_test_only = None
 
 if USE_EXPECTED_BODY:
     # 기대 본문 로드 (경로는 상단 EXPECTED_BODY_*)
@@ -171,11 +205,26 @@ if USE_EXPECTED_BODY:
     expected_bodies_train = load_expected_bodies_from_train_dir(_train_dir)
     expected_bodies_test = load_expected_bodies_from_train_dir(_test_dir)
     print(f"로드된 기대 본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
+elif INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT and MAIN_TESTSET_EXPECTED_BODY_DIR:
+    # 학습은 실제 본문이지만, 매 에폭 기대본문 테스트 지표에 쓰일 토큰을 word_dict에 포함
+    _wd = resolve_expected_body_dir(MAIN_TESTSET_EXPECTED_BODY_DIR)
+    if _wd:
+        expected_bodies_word_dict_test_only = load_expected_bodies_from_train_dir(_wd)
+        print(
+            f"\nword_dict용 테스트 기대본문 토큰 로드: {len(expected_bodies_word_dict_test_only)}개 ({_wd})"
+        )
+    else:
+        print(
+            f"\n경고: MAIN_TESTSET_EXPECTED_BODY_DIR 을 찾을 수 없어 word_dict에 기대본문 토큰을 넣지 않습니다: "
+            f"{MAIN_TESTSET_EXPECTED_BODY_DIR!r}"
+        )
 
 # 뉴스 데이터를 전처리 (기대본문도 word_dict 생성에 포함)
 word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(
     expected_bodies_train=expected_bodies_train,
     expected_bodies_test=expected_bodies_test
+    if USE_EXPECTED_BODY
+    else expected_bodies_word_dict_test_only,
 )
 
 # 뉴스 인덱스를 사용하여 유저 데이터 전처리
@@ -237,10 +286,9 @@ if USE_EXPECTED_BODY:
         print(f"  - 테스트 데이터 기대본문 커버리지: {test_coverage:.2f}% ({available_expected_bodies_test}/{total_candidates_test})")
         if missing_expected_bodies_test > 0:
             print(f"  - 테스트 데이터 기대본문 누락: {missing_expected_bodies_test}개 (원본 본문 사용)")
-
-        else:
-    # 원본 본문 사용
-    print("\n원본 본문 사용 모드")
+else:
+    # 학습·전처리에서 원본 본문 사용 (매 에폭 테스트 기대본문 지표는 아래 MAIN_TESTSET_* 로 별도)
+    print("\n원본 본문 사용 모드 (학습 후보 본문 = MIND 실제 본문)")
     userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test, all_train_userid_str, all_train_newsid_str, all_test_userid_str, all_test_newsid_str = preprocess_user_file(
         news_index=news_index,
         expected_bodies_train=None,
@@ -589,8 +637,7 @@ MAX_SENTS = _built['MAX_SENTS']
 news_index_reverse = {v: k for k, v in news_index.items()}
 
 # ========== 메인 학습 루프 ==========
-# 매 에폭 테스트셋 기대본문 평가용 (MAIN_TESTSET_EXPECTED_BODY_DIR 폴더)
-body_gen_output_main = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'body_generation', 'output')
+# 매 에폭 테스트셋 기대본문 평가용 (resolve_expected_body_dir 로 프로젝트 루트 또는 body_generation/output)
 need_keys_test = set()
 if all_test_userid_str is not None and all_test_newsid_str is not None:
     for i in range(len(all_test_userid_str)):
@@ -601,16 +648,16 @@ if all_test_userid_str is not None and all_test_newsid_str is not None:
 test_body_dir_main = None
 expected_bodies_main_test = None
 if MAIN_TESTSET_EXPECTED_BODY_DIR is not None:
-    # MAIN_TESTSET_EXPECTED_BODY_DIR가 None이면 기대본문 평가는 스킵(실제본문만 평가)
-    test_body_dir_main = os.path.join(body_gen_output_main, MAIN_TESTSET_EXPECTED_BODY_DIR)
+    # None이면 기대본문 평가는 스킵(실제본문만 평가)
+    test_body_dir_main = resolve_expected_body_dir(MAIN_TESTSET_EXPECTED_BODY_DIR)
     expected_bodies_main_test = (
         load_expected_bodies_from_train_dir(test_body_dir_main)
-        if os.path.isdir(test_body_dir_main)
+        if test_body_dir_main
         else None
     )
     if expected_bodies_main_test is not None:
         print(
-            f"메인 학습: 매 에폭 테스트셋 기대본문 평가 시 {MAIN_TESTSET_EXPECTED_BODY_DIR} 사용 ({len(expected_bodies_main_test)}개)"
+            f"메인 학습: 매 에폭 테스트셋 기대본문 평가 시 {test_body_dir_main} ({len(expected_bodies_main_test)}개)"
         )
         if need_keys_test:
             matched_test = sum(1 for k in need_keys_test if k in expected_bodies_main_test)
@@ -619,20 +666,29 @@ if MAIN_TESTSET_EXPECTED_BODY_DIR is not None:
                 f"테스트셋 기대본문 매칭: 필요 키 {len(need_keys_test)}개 중 기대본문 존재 {matched_test}개 ({pct:.1f}%)"
             )
         print()
+    elif str(MAIN_TESTSET_EXPECTED_BODY_DIR).strip():
+        print(
+            f"경고: 기대본문 평가 폴더를 찾을 수 없습니다: {MAIN_TESTSET_EXPECTED_BODY_DIR!r} "
+            f"(프로젝트 루트 상대 또는 body_generation/output 하위)\n"
+        )
 # 두 번째 기대본문 폴더 (MAIN_TESTSET_EXPECTED_BODY_DIR_2)
 expected_bodies_main_test_2 = None
 if MAIN_TESTSET_EXPECTED_BODY_DIR_2:
-    test_body_dir_main_2 = os.path.join(body_gen_output_main, MAIN_TESTSET_EXPECTED_BODY_DIR_2)
-    if os.path.isdir(test_body_dir_main_2):
+    test_body_dir_main_2 = resolve_expected_body_dir(MAIN_TESTSET_EXPECTED_BODY_DIR_2)
+    if test_body_dir_main_2:
         expected_bodies_main_test_2 = load_expected_bodies_from_train_dir(test_body_dir_main_2)
-        print(f"메인 학습: 매 에폭 테스트셋 기대본문(2) 평가 시 {MAIN_TESTSET_EXPECTED_BODY_DIR_2} 사용 ({len(expected_bodies_main_test_2)}개)")
+        print(
+            f"메인 학습: 매 에폭 테스트셋 기대본문(2) 평가 시 {test_body_dir_main_2} 사용 ({len(expected_bodies_main_test_2)}개)"
+        )
         if need_keys_test:
             matched_test_2 = sum(1 for k in need_keys_test if k in expected_bodies_main_test_2)
             pct_2 = 100.0 * matched_test_2 / len(need_keys_test)
             print(f"테스트셋 기대본문(2) 매칭: 필요 키 {len(need_keys_test)}개 중 기대본문 존재 {matched_test_2}개 ({pct_2:.1f}%)")
         print()
     else:
-        print(f"경고: 두 번째 기대본문 폴더 없음 ({test_body_dir_main_2}), 기대본문(2) 평가 생략\n")
+        print(
+            f"경고: 두 번째 기대본문 폴더 없음 ({MAIN_TESTSET_EXPECTED_BODY_DIR_2!r}), 기대본문(2) 평가 생략\n"
+        )
 
 best_main_test_mrr_actual = -1.0
 best_main_test_epoch_actual = -1
