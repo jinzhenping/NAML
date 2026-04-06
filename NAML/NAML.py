@@ -45,8 +45,8 @@ USE_EXPECTED_BODY = False  # True: 학습·전처리에서 기대 본문 사용,
 # 기본: <EXPECTED_BODY_OUTPUT_DIR>/train/, <EXPECTED_BODY_OUTPUT_DIR>/test/ 아래 user_*/news_*.json
 EXPECTED_BODY_OUTPUT_DIR = 'body_generation/output'
 # None이면 위 규칙. 지정 시 해당 폴더를 직접 사용 (train/test를 서로 다른 루트에 둘 때)
-EXPECTED_BODY_TRAIN_DIR = 'body_generation/output/MIND_2000/train_3cluster_11_13_8'
-EXPECTED_BODY_TEST_DIR = 'body_generation/output/MIND_2000/test_3cluster_11_13_8'
+EXPECTED_BODY_TRAIN_DIR = 'user_preference/expected_body/MIND_2000/train_3cluster_11_13_8'
+EXPECTED_BODY_TEST_DIR = 'user_preference/expected_body/MIND_2000/test_3cluster_11_13_8'
 
 MAIN_TRAINING_LEARNING_RATE = 0.0005  # 메인 학습 루프(및 동일 model.compile) Adam 학습률
 # 매 에폭 테스트셋 "기대본문" MRR/NDCG용 JSON 루트 (user_*/news_*.json).
@@ -54,7 +54,9 @@ MAIN_TRAINING_LEARNING_RATE = 0.0005  # 메인 학습 루프(및 동일 model.co
 # 예: user_preference/expected_body/MIND_2000/test_3cluster_11_13_8
 MAIN_TESTSET_EXPECTED_BODY_DIR = 'user_preference/expected_body/MIND_2000/test_3cluster_11_13_8'
 MAIN_TESTSET_EXPECTED_BODY_DIR_2 = None  # 두 번째 기대본문 폴더 (None이면 사용 안 함)
-# USE_EXPECTED_BODY=False일 때, 위 MAIN_TESTSET 기대본문 단어를 word_dict에 넣을지 (기대본문 지표에 권장)
+# MAIN_TESTSET_EXPECTED_BODY_DIR 기대본문 단어를 word_dict에 추가할지.
+# - USE_EXPECTED_BODY=False: 테스트 기대본문만 단어사전에 넣을 때(실제 본문 학습 + 기대본문 평가).
+# - USE_EXPECTED_BODY=True: EXPECTED_BODY_TEST_DIR 외에 MAIN_TESTSET 경로 본문도 어휘에 합칠 때(경로가 다를 때).
 INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT = True
 MAIN_TRAINING_EPOCHS = 10  # 메인 학습 루프 에폭 수
 # USE_EXPECTED_BODY=False이고 True일 때: 테스트셋 실제본문 MRR 최고 에폭에 가중치 저장
@@ -194,6 +196,7 @@ def _expected_body_dir_for_train_or_test(dataset_type: str) -> str:
 expected_bodies_train = None
 expected_bodies_test = None
 expected_bodies_word_dict_test_only = None
+expected_bodies_vocab_extra = None
 
 if USE_EXPECTED_BODY:
     # 기대 본문 로드 (경로는 상단 EXPECTED_BODY_*)
@@ -205,6 +208,18 @@ if USE_EXPECTED_BODY:
     expected_bodies_train = load_expected_bodies_from_train_dir(_train_dir)
     expected_bodies_test = load_expected_bodies_from_train_dir(_test_dir)
     print(f"로드된 기대 본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
+    if INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT and MAIN_TESTSET_EXPECTED_BODY_DIR:
+        _m = resolve_expected_body_dir(MAIN_TESTSET_EXPECTED_BODY_DIR)
+        if _m:
+            expected_bodies_vocab_extra = load_expected_bodies_from_train_dir(_m)
+            print(
+                f"  word_dict 추가: MAIN_TESTSET_EXPECTED_BODY_DIR → {len(expected_bodies_vocab_extra)}개 ({_m})"
+            )
+        else:
+            print(
+                f"  경고: MAIN_TESTSET_EXPECTED_BODY_DIR 을 찾지 못해 word_dict 추가 생략: "
+                f"{MAIN_TESTSET_EXPECTED_BODY_DIR!r}"
+            )
 elif INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT and MAIN_TESTSET_EXPECTED_BODY_DIR:
     # 학습은 실제 본문이지만, 매 에폭 기대본문 테스트 지표에 쓰일 토큰을 word_dict에 포함
     _wd = resolve_expected_body_dir(MAIN_TESTSET_EXPECTED_BODY_DIR)
@@ -225,6 +240,7 @@ word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_i
     expected_bodies_test=expected_bodies_test
     if USE_EXPECTED_BODY
     else expected_bodies_word_dict_test_only,
+    expected_bodies_vocab_extra=expected_bodies_vocab_extra,
 )
 
 # 뉴스 인덱스를 사용하여 유저 데이터 전처리

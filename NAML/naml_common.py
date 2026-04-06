@@ -306,8 +306,17 @@ def preprocess_user_file(
     )
 
 
-def preprocess_news_file(file=None, expected_bodies_train=None, expected_bodies_test=None):
-    """MIND 뉴스 데이터 전처리"""
+def preprocess_news_file(
+    file=None,
+    expected_bodies_train=None,
+    expected_bodies_test=None,
+    expected_bodies_vocab_extra=None,
+):
+    """MIND 뉴스 데이터 전처리.
+
+    expected_bodies_vocab_extra: train/test와 별도로 word_dict에만 토큰을 넣을 기대본문 dict
+    (예: USE_EXPECTED_BODY=True인데 MAIN_TESTSET_EXPECTED_BODY_DIR 본문도 어휘에 포함).
+    """
     if file is None:
         file = mind_data_path(MIND_NEWS_FILENAME)
     with open(file, 'r', encoding='utf-8') as f:
@@ -351,9 +360,17 @@ def preprocess_news_file(file=None, expected_bodies_train=None, expected_bodies_
             else:
                 word_dict_raw[word] = [len(word_dict_raw), 1]
 
-    if expected_bodies_train is not None or expected_bodies_test is not None:
+    if (
+        expected_bodies_train is not None
+        or expected_bodies_test is not None
+        or expected_bodies_vocab_extra is not None
+    ):
         expected_body_count = 0
-        for expected_bodies in [expected_bodies_train, expected_bodies_test]:
+        for expected_bodies in [
+            expected_bodies_train,
+            expected_bodies_test,
+            expected_bodies_vocab_extra,
+        ]:
             if expected_bodies is None:
                 continue
             for (user_id, news_id), generated_body in expected_bodies.items():
