@@ -4,12 +4,13 @@
 테스트셋 유저 클러스터 CSV에 따라 클러스터마다 서로 다른 정책 파일로
 `generate_expected_body_from_preference.py`와 동일한 방식으로 기대본문을 생성합니다.
 
-실행 순서: (1) 배치에 등장하는 고유 후보뉴스 ID마다 추상 제목만 먼저 생성·캐시
-→ (2) (유저, 후보) 쌍별로 기대본문만 생성. 동일 후보가 여러 쌍에 있어도 추상 제목 LLM은 뉴스당 1회.
+실행 순서: (1) 기본은 배치의 고유 후보뉴스마다 추상 제목 생성·캐시 → (2) 쌍별 기대본문.
+  `--no-title-abstraction` 이면 (1) 생략, 후보는 MIND 원본 제목만 사용.
 
 - 히스토리: 테스트 TSV의 clicked_news에서 최근 history_k개 제목
 - 취향: user_preference/preference/<dataset>/test/user_<id>.json (기본)
-- 후보 제목: title_abstraction.yaml(기본)으로 추상화 → {candidate_news}
+- 후보 제목: 기본은 title_abstraction.yaml으로 추상화 → {candidate_news}
+  `--no-title-abstraction` 이면 추상화 없이 원본 제목만 사용 (취향·히스토리·정책만 반영)
 - 정책: --policy-files 를 클러스터 0,1,2,... 순으로 매핑
 
 프로젝트 루트에서:
@@ -21,6 +22,10 @@
                  coordinator_LLM/output_cluster2/8.txt \
     --output user_preference/expected_body/MIND_2000/test_3cluster_11_13_8 \
     --mind-dataset-subdir MIND_2000
+
+  후보 제목 추상화 없이 (취향·히스토리·정책만):
+
+  ... 동일 옵션 ... --no-title-abstraction
 """
 from __future__ import annotations
 
@@ -157,7 +162,7 @@ def abstract_cache_path_for_prompt(title_abstraction_prompt_path: Path) -> Path:
 
 def main() -> None:
     ap = argparse.ArgumentParser(
-        description="테스트셋 클러스터별 정책 + preference + 제목 추상화로 기대본문 배치 생성"
+        description="테스트셋 클러스터별 정책 + preference로 기대본문 배치 생성 (선택: 제목 추상화)"
     )
     ap.add_argument(
         "--cluster-csv",
@@ -202,7 +207,12 @@ def main() -> None:
         "--abstract-cache-path",
         type=str,
         default=None,
-        help="제목 변환 캐시 JSON (미지정 시 title_abstraction/keyword에 따라 자동)",
+        help="제목 변환 캐시 JSON (미지정 시 title_abstraction/keyword에 따라 자동; --no-title-abstraction 시 미사용)",
+    )
+    ap.add_argument(
+        "--no-title-abstraction",
+        action="store_true",
+        help="후보 제목 추상화(LLM·캐시) 생략, MIND 원본 제목을 {candidate_news}로 사용",
     )
     ap.add_argument("--api-key", type=str, default=None)
     ap.add_argument("--model", type=str, default=DEFAULT_MODEL)
@@ -261,12 +271,17 @@ def main() -> None:
     title_yaml = Path(args.title_abstraction_yaml)
     settings_path = Path(args.generation_settings)
 
-    if args.abstract_cache_path:
+    if args.no_title_abstraction:
+        abstract_cache_path = None
+    elif args.abstract_cache_path:
         abstract_cache_path = Path(args.abstract_cache_path)
     else:
         abstract_cache_path = abstract_cache_path_for_prompt(title_yaml)
 
-    for p in [news_tsv, test_tsv, body_yaml, title_yaml, settings_path]:
+    required_files = [news_tsv, test_tsv, body_yaml, settings_path]
+    if not args.no_title_abstraction:
+        required_files.append(title_yaml)
+    for p in required_files:
         if not p.is_file():
             print(f"오류: 파일 없음: {p}")
             sys.exit(1)
@@ -296,7 +311,10 @@ def main() -> None:
     print(f"출력: {out_root}")
     print(f"테스트 TSV: {test_tsv}")
     print(f"preference 디렉토리: {pref_base}")
-    print(f"제목 변환 캐시: {abstract_cache_path}")
+    if args.no_title_abstraction:
+        print("후보 제목: 원본만 사용 (--no-title-abstraction)")
+    else:
+        print(f"제목 변환 캐시: {abstract_cache_path}")
 
     if args.dry_run:
         print("--dry-run 이므로 생성하지 않습니다.")
@@ -305,75 +323,89 @@ def main() -> None:
     with open(body_yaml, "r", encoding="utf-8") as f:
         prompt_template = f.read()
     settings = parse_settings(settings_path)
-    with open(title_yaml, "r", encoding="utf-8") as f:
-        title_transform_template = f.read()
 
-    title_model = args.title_abstraction_model or args.model
     get_openai_client = _thread_local_openai_factory(api_key)
-    abstract_cache: Dict[str, Dict[str, str]] = load_abstract_cache(abstract_cache_path)
-    cache_lock = threading.Lock()
     print_lock = threading.Lock()
 
-    def get_abstract_title(news_id: str, original: str) -> str:
-        """뉴스 ID당 추상 제목 1회만 LLM 호출(캐시 있으면 스킵). 캐시 갱신은 lock으로 보호."""
-        original = safe_api_text(original)
-        if not original:
-            original = "[untitled]"
-        with cache_lock:
-            if news_id in abstract_cache and abstract_cache[news_id].get("abstracted_title"):
-                return abstract_cache[news_id]["abstracted_title"]
-        model3_prompt = safe_api_text(
-            title_transform_template.replace("{title}", original)
-        )
-        _validate_chat_json_payload(
-            str(title_model),
-            [{"role": "user", "content": model3_prompt}],
-            0.3,
-            120,
-        )
-        resp = get_openai_client().chat.completions.create(
-            model=str(title_model),
-            messages=[{"role": "user", "content": model3_prompt}],
-            temperature=0.3,
-            max_tokens=120,
-        )
-        ab = clean_abstracted_title(resp.choices[0].message.content or "")
-        if not ab:
-            ab = original
-        with cache_lock:
-            if news_id in abstract_cache and abstract_cache[news_id].get("abstracted_title"):
-                return abstract_cache[news_id]["abstracted_title"]
-            abstract_cache[news_id] = {
-                "original_title": original,
-                "abstracted_title": ab,
-            }
-            save_abstract_cache(abstract_cache_path, abstract_cache)
-            return ab
+    abstract_cache: Dict[str, Dict[str, str]] = {}
+    cache_lock = threading.Lock()
 
-    # --- Phase 1: 고유 후보뉴스마다 추상 제목만 미리 생성 (쌍 단위 중복 호출 방지) ---
-    unique_cids: Set[str] = set()
-    for _cl, pairs in buckets.items():
-        for _uid, cid in pairs:
-            unique_cids.add(cid)
-    unique_cids = {c for c in unique_cids if c in news_map}
-    print(f"\n>>> [1/2] 추상 제목 사전 생성: 고유 후보 뉴스 {len(unique_cids)}개 (캐시 제외 시 LLM 호출)\n")
-    title_workers = max(1, args.title_prefetch_concurrency)
+    if not args.no_title_abstraction:
+        assert abstract_cache_path is not None
+        with open(title_yaml, "r", encoding="utf-8") as f:
+            title_transform_template = f.read()
 
-    def _prefetch_one(cid: str) -> None:
-        get_abstract_title(cid, news_map[cid])
+        title_model = args.title_abstraction_model or args.model
+        abstract_cache = load_abstract_cache(abstract_cache_path)
 
-    if title_workers == 1:
-        for i, cid in enumerate(sorted(unique_cids), 1):
-            _prefetch_one(cid)
-            if i % 200 == 0 or i == len(unique_cids):
-                print(f"  추상 제목 진행: {i}/{len(unique_cids)}")
+        def get_abstract_title(news_id: str, original: str) -> str:
+            """뉴스 ID당 추상 제목 1회만 LLM 호출(캐시 있으면 스킵). 캐시 갱신은 lock으로 보호."""
+            original = safe_api_text(original)
+            if not original:
+                original = "[untitled]"
+            with cache_lock:
+                if news_id in abstract_cache and abstract_cache[news_id].get(
+                    "abstracted_title"
+                ):
+                    return abstract_cache[news_id]["abstracted_title"]
+            model3_prompt = safe_api_text(
+                title_transform_template.replace("{title}", original)
+            )
+            _validate_chat_json_payload(
+                str(title_model),
+                [{"role": "user", "content": model3_prompt}],
+                0.3,
+                120,
+            )
+            resp = get_openai_client().chat.completions.create(
+                model=str(title_model),
+                messages=[{"role": "user", "content": model3_prompt}],
+                temperature=0.3,
+                max_tokens=120,
+            )
+            ab = clean_abstracted_title(resp.choices[0].message.content or "")
+            if not ab:
+                ab = original
+            with cache_lock:
+                if news_id in abstract_cache and abstract_cache[news_id].get(
+                    "abstracted_title"
+                ):
+                    return abstract_cache[news_id]["abstracted_title"]
+                abstract_cache[news_id] = {
+                    "original_title": original,
+                    "abstracted_title": ab,
+                }
+                save_abstract_cache(abstract_cache_path, abstract_cache)
+                return ab
+
+        # --- Phase 1: 고유 후보뉴스마다 추상 제목만 미리 생성 (쌍 단위 중복 호출 방지) ---
+        unique_cids: Set[str] = set()
+        for _cl, pairs in buckets.items():
+            for _uid, cid in pairs:
+                unique_cids.add(cid)
+        unique_cids = {c for c in unique_cids if c in news_map}
+        print(
+            f"\n>>> [1/2] 추상 제목 사전 생성: 고유 후보 뉴스 {len(unique_cids)}개 (캐시 제외 시 LLM 호출)\n"
+        )
+        title_workers = max(1, args.title_prefetch_concurrency)
+
+        def _prefetch_one(cid: str) -> None:
+            get_abstract_title(cid, news_map[cid])
+
+        if title_workers == 1:
+            for i, cid in enumerate(sorted(unique_cids), 1):
+                _prefetch_one(cid)
+                if i % 200 == 0 or i == len(unique_cids):
+                    print(f"  추상 제목 진행: {i}/{len(unique_cids)}")
+        else:
+            with ThreadPoolExecutor(max_workers=title_workers) as ex:
+                futs = [ex.submit(_prefetch_one, cid) for cid in sorted(unique_cids)]
+                for i, fut in enumerate(as_completed(futs), 1):
+                    fut.result()
+                    if i % 200 == 0 or i == len(futs):
+                        print(f"  추상 제목 진행: {i}/{len(futs)}")
     else:
-        with ThreadPoolExecutor(max_workers=title_workers) as ex:
-            futs = [ex.submit(_prefetch_one, cid) for cid in sorted(unique_cids)]
-            for i, fut in enumerate(as_completed(futs), 1):
-                fut.result()
-                if i % 200 == 0 or i == len(futs):
-                    print(f"  추상 제목 진행: {i}/{len(futs)}")
+        print("\n>>> [1/2] 추상 제목 단계 생략 (--no-title-abstraction)\n")
 
     policies: Dict[int, Dict[str, str]] = {}
     for cl, pp in enumerate(policy_paths):
@@ -418,11 +450,14 @@ def main() -> None:
                 print(f"skip no history: user={uid_s}")
             return ("no_hist", None)
 
-        ent = abstract_cache.get(cid) or {}
-        abstracted = safe_api_text(ent.get("abstracted_title") or "")
-        if not abstracted:
-            abstracted = get_abstract_title(cid, candidate_title)
-        abstracted = safe_api_text(abstracted)
+        if args.no_title_abstraction:
+            abstracted = safe_api_text(candidate_title)
+        else:
+            ent = abstract_cache.get(cid) or {}
+            abstracted = safe_api_text(ent.get("abstracted_title") or "")
+            if not abstracted:
+                abstracted = get_abstract_title(cid, candidate_title)
+            abstracted = safe_api_text(abstracted)
         prompt = build_prompt(
             template=prompt_template,
             model1_output=model1_out,
@@ -477,7 +512,10 @@ def main() -> None:
             "cluster": cl,
             "candidate_news_id": cid,
             "candidate_title": candidate_title,
-            "candidate_title_abstracted": abstracted,
+            "candidate_title_abstracted": None
+            if args.no_title_abstraction
+            else abstracted,
+            "no_title_abstraction": bool(args.no_title_abstraction),
             "history_k": args.history_k,
             "history_count_used": len(hist),
             "history_titles": hist,
