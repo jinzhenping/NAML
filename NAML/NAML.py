@@ -41,22 +41,15 @@ from naml_common import (
 from naml_model_builder import build_naml_models
 
 USE_EXPECTED_BODY = False  # True: 학습·전처리에서 기대 본문 사용, False: 학습은 MIND 실제 본문
-# USE_EXPECTED_BODY=True일 때 기대본문 JSON 위치 (프로젝트 루트 기준 상대 경로 권장)
-# 기본: <EXPECTED_BODY_OUTPUT_DIR>/train/, <EXPECTED_BODY_OUTPUT_DIR>/test/ 아래 user_*/news_*.json
-EXPECTED_BODY_OUTPUT_DIR = 'body_generation/output'
-# None이면 위 규칙. 지정 시 해당 폴더를 직접 사용 (train/test를 서로 다른 루트에 둘 때)
+# USE_EXPECTED_BODY=True일 때 기대본문 JSON (프로젝트 루트 상대 또는 절대; resolve_expected_body_dir)
+# 학습용 train 기대본문 (필수). 빈 값이면 USE_EXPECTED_BODY 시 오류 종료
 EXPECTED_BODY_TRAIN_DIR = 'user_preference/expected_body/MIND_2000/train_3cluster_11_13_8'
-EXPECTED_BODY_TEST_DIR = 'user_preference/expected_body/MIND_2000/test_3cluster_11_13_8'
 
 MAIN_TRAINING_LEARNING_RATE = 0.0005  # 메인 학습 루프(및 동일 model.compile) Adam 학습률
-# 매 에폭 테스트셋 "기대본문" MRR/NDCG용 JSON 루트 (user_*/news_*.json).
-# 해석 순서: (1) 절대 경로이면 그대로 (2) 프로젝트 루트 상대 (3) body_generation/output/<이 값>
-# 예: user_preference/expected_body/MIND_2000/test_3cluster_11_13_8
+
 MAIN_TESTSET_EXPECTED_BODY_DIR = 'user_preference/expected_body/MIND_2000/test_3cluster_11_13_8'
 MAIN_TESTSET_EXPECTED_BODY_DIR_2 = None  # 두 번째 기대본문 폴더 (None이면 사용 안 함)
 # MAIN_TESTSET_EXPECTED_BODY_DIR 기대본문 단어를 word_dict에 추가할지.
-# - USE_EXPECTED_BODY=False: 테스트 기대본문만 단어사전에 넣을 때(실제 본문 학습 + 기대본문 평가).
-# - USE_EXPECTED_BODY=True: EXPECTED_BODY_TEST_DIR 외에 MAIN_TESTSET 경로 본문도 어휘에 합칠 때(경로가 다를 때).
 INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT = True
 MAIN_TRAINING_EPOCHS = 10  # 메인 학습 루프 에폭 수
 # USE_EXPECTED_BODY=False이고 True일 때: 테스트셋 실제본문 MRR 최고 에폭에 가중치 저장
@@ -89,53 +82,6 @@ def resolve_expected_body_dir(path_option: Optional[str]) -> Optional[str]:
     if os.path.isdir(legacy):
         return legacy
     return None
-
-
-def load_expected_bodies(output_dir=None, dataset_type='train'):
-    """
-    기대 본문 로드 (유저별로 다른 기대본문 지원)
-    output_dir가 None이면 상단 EXPECTED_BODY_OUTPUT_DIR 사용.
-    <output_dir>/<dataset_type>/user_{user_id}/news_{news_id}.json에서 기대 본문 로드
-    반환: {(user_id, news_id): generated_body} 형태의 딕셔너리
-    """
-    if output_dir is None:
-        output_dir = EXPECTED_BODY_OUTPUT_DIR
-    expected_bodies = {}  # {(user_id, news_id): generated_body}
-    base_path = os.path.join(output_dir, dataset_type)
-    
-    if not os.path.exists(base_path):
-        print(f"경고: 기대 본문 폴더를 찾을 수 없습니다: {base_path}")
-        return expected_bodies
-    
-    # 각 유저 폴더 탐색
-    for user_folder in os.listdir(base_path):
-        user_path = os.path.join(base_path, user_folder)
-        if not os.path.isdir(user_path):
-            continue
-        
-        # user_folder에서 user_id 추출 (예: "user_1" -> "1")
-        if user_folder.startswith('user_'):
-            user_id = user_folder.replace('user_', '')
-        else:
-            continue
-        
-        # 각 뉴스 JSON 파일 읽기
-        for filename in os.listdir(user_path):
-            if filename.startswith('news_') and filename.endswith('.json'):
-                news_id = filename.replace('news_', '').replace('.json', '')
-                file_path = os.path.join(user_path, filename)
-                
-                try:
-                    with open(file_path, 'r', encoding='utf-8') as f:
-                        data = json.load(f)
-                        if 'generated_body' in data:
-                            key = _norm_expected_body_key(user_id, news_id)
-                            expected_bodies[key] = data['generated_body']
-                except Exception:
-                    continue
-        
-    print(f"기대 본문 로드 완료: {len(expected_bodies)}개 ({dataset_type})")
-    return expected_bodies
 
 
 def _norm_expected_body_key(uid, nid):
@@ -182,13 +128,11 @@ def load_expected_bodies_from_train_dir(train_dir):
     return expected_bodies
 
 
-def _expected_body_dir_for_train_or_test(dataset_type: str) -> str:
-    """train 또는 test용 기대본문 폴더 경로 (user_*/news_*.json 상위 디렉터리)."""
-    if dataset_type == 'train' and EXPECTED_BODY_TRAIN_DIR:
-        return os.path.normpath(EXPECTED_BODY_TRAIN_DIR)
-    if dataset_type == 'test' and EXPECTED_BODY_TEST_DIR:
-        return os.path.normpath(EXPECTED_BODY_TEST_DIR)
-    return os.path.normpath(os.path.join(EXPECTED_BODY_OUTPUT_DIR, dataset_type))
+def _resolve_train_expected_body_dir() -> Optional[str]:
+    """학습 기대본문 상위 폴더. 미설정/미존재 시 None."""
+    if not EXPECTED_BODY_TRAIN_DIR or not str(EXPECTED_BODY_TRAIN_DIR).strip():
+        return None
+    return resolve_expected_body_dir(str(EXPECTED_BODY_TRAIN_DIR).strip())
 
 
 # 기대 본문 사용 여부는 상단에서 설정 (USE_EXPECTED_BODY)
@@ -199,22 +143,48 @@ expected_bodies_word_dict_test_only = None
 expected_bodies_vocab_extra = None
 
 if USE_EXPECTED_BODY:
-    # 기대 본문 로드 (경로는 상단 EXPECTED_BODY_*)
+    # train=EXPECTED_BODY_TRAIN_DIR, test=MAIN_TESTSET_EXPECTED_BODY_DIR (필수, 해석 실패 시 종료)
     print("\n기대 본문 로드 중...")
-    _train_dir = _expected_body_dir_for_train_or_test('train')
-    _test_dir = _expected_body_dir_for_train_or_test('test')
+    _train_dir = _resolve_train_expected_body_dir()
+    if not _train_dir:
+        print(
+            "오류: USE_EXPECTED_BODY=True 인데 학습 기대본문 폴더를 찾을 수 없습니다. "
+            "EXPECTED_BODY_TRAIN_DIR 을 프로젝트 루트 기준 올바른 경로로 설정하세요."
+        )
+        sys.exit(1)
+    _main_for_test = (
+        resolve_expected_body_dir(MAIN_TESTSET_EXPECTED_BODY_DIR)
+        if MAIN_TESTSET_EXPECTED_BODY_DIR and str(MAIN_TESTSET_EXPECTED_BODY_DIR).strip()
+        else None
+    )
+    if not _main_for_test:
+        print(
+            "오류: 테스트 기대본문 폴더를 찾을 수 없습니다. "
+            "MAIN_TESTSET_EXPECTED_BODY_DIR 을 존재하는 폴더(프로젝트 루트 상대 또는 절대)로 설정하세요."
+        )
+        if MAIN_TESTSET_EXPECTED_BODY_DIR:
+            print(f"  (MAIN_TESTSET_EXPECTED_BODY_DIR={MAIN_TESTSET_EXPECTED_BODY_DIR!r} 은 경로 해석 실패)")
+        sys.exit(1)
+    _test_dir = _main_for_test
     print(f"  train 폴더: {_train_dir}")
-    print(f"  test 폴더: {_test_dir}")
+    print(f"  test 폴더: {_test_dir} (MAIN_TESTSET_EXPECTED_BODY_DIR)")
     expected_bodies_train = load_expected_bodies_from_train_dir(_train_dir)
     expected_bodies_test = load_expected_bodies_from_train_dir(_test_dir)
     print(f"로드된 기대 본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
+    if not INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT:
+        print(
+            "  word_dict: 테스트 기대본문 토큰 제외 (INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT=False)"
+        )
+    # 테스트를 이미 MAIN_TESTSET에서 읽었으면 같은 경로를 vocab_extra로 다시 넣지 않음
     if INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT and MAIN_TESTSET_EXPECTED_BODY_DIR:
         _m = resolve_expected_body_dir(MAIN_TESTSET_EXPECTED_BODY_DIR)
-        if _m:
+        if _m and _m != _test_dir:
             expected_bodies_vocab_extra = load_expected_bodies_from_train_dir(_m)
             print(
                 f"  word_dict 추가: MAIN_TESTSET_EXPECTED_BODY_DIR → {len(expected_bodies_vocab_extra)}개 ({_m})"
             )
+        elif _m and _m == _test_dir:
+            pass
         else:
             print(
                 f"  경고: MAIN_TESTSET_EXPECTED_BODY_DIR 을 찾지 못해 word_dict 추가 생략: "
@@ -235,11 +205,14 @@ elif INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT and MAIN_TESTSET_EXPECTED_BO
         )
 
 # 뉴스 데이터를 전처리 (기대본문도 word_dict 생성에 포함)
+_expected_bodies_test_for_vocab = (
+    (expected_bodies_test if INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT else None)
+    if USE_EXPECTED_BODY
+    else expected_bodies_word_dict_test_only
+)
 word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(
     expected_bodies_train=expected_bodies_train,
-    expected_bodies_test=expected_bodies_test
-    if USE_EXPECTED_BODY
-    else expected_bodies_word_dict_test_only,
+    expected_bodies_test=_expected_bodies_test_for_vocab,
     expected_bodies_vocab_extra=expected_bodies_vocab_extra,
 )
 
