@@ -500,6 +500,7 @@ def main() -> None:
                         "model": args.model,
                         "prompt_preview": (prompt or "")[:2000],
                     },
+                    f,
                     ensure_ascii=False,
                     indent=2,
                 )
