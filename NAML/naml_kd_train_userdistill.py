@@ -13,6 +13,8 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train_us
   --expected-body-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
   --expected-body-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
   --mind-dataset-subdir MIND_2000 \
+  --batch-size 8 \
+  --eval-batch-size 8 \
   --lambda-distill-user 0.15 \
   --lambda-distill-exp 0.1 \
   --epochs 5 \
@@ -309,10 +311,9 @@ def _cosine_1minus(a: tf.Tensor, b: tf.Tensor) -> tf.Tensor:
     return tf.reduce_mean(1.0 - cos)
 
 
-def _distill_news_term(student_enc, teacher_enc, title_k, body_exp_k, body_act_k, v_k, sv_k):
+def _distill_news_term(student_enc, title_k, body_exp_k, v_k, sv_k, teacher_emb_t):
     emb_s = student_enc([title_k, body_exp_k, v_k, sv_k])
-    emb_t = tf.stop_gradient(teacher_enc([title_k, body_act_k, v_k, sv_k]))
-    return _cosine_1minus(emb_s, emb_t)
+    return _cosine_1minus(emb_s, teacher_emb_t)
 
 
 def train_kd_userdistill(
@@ -351,6 +352,27 @@ def train_kd_userdistill(
             y_t = tf.convert_to_tensor(y, dtype=tf.float32)
             cand_act_t = tf.convert_to_tensor(cand_act, dtype=tf.int32)
 
+            # Teacher forward는 gradient가 필요 없으므로 tape 바깥에서 계산해
+            # 그래프/activation 메모리 점유를 낮춘다.
+            teacher_news_targets: List[tf.Tensor] = []
+            for k in range(5):
+                t_k = x_list[cand_title_idx[k]]
+                ba_k = cand_act_t[:, k, :]
+                vk = x_list[cand_v_idx[k]]
+                svk = x_list[cand_sv_idx[k]]
+                teacher_news_targets.append(
+                    tf.stop_gradient(teacher_news_encoder([t_k, ba_k, vk, svk], training=False))
+                )
+            t_user = tf.stop_gradient(
+                teacher_user_encoder(
+                    [x_list[i] for i in hist_title_idx]
+                    + [x_list[i] for i in hist_body_idx]
+                    + [x_list[i] for i in hist_v_idx]
+                    + [x_list[i] for i in hist_sv_idx],
+                    training=False,
+                )
+            )
+
             with tf.GradientTape() as tape:
                 logits = student_model(x_list, training=True)
                 loss_rec = tf.reduce_mean(tf.keras.losses.categorical_crossentropy(y_t, logits))
@@ -359,11 +381,10 @@ def train_kd_userdistill(
                 for k in range(5):
                     t_k = x_list[cand_title_idx[k]]
                     be_k = x_list[cand_body_idx[k]]
-                    ba_k = cand_act_t[:, k, :]
                     vk = x_list[cand_v_idx[k]]
                     svk = x_list[cand_sv_idx[k]]
                     loss_d_exp_parts.append(
-                        _distill_news_term(student_news_encoder, teacher_news_encoder, t_k, be_k, ba_k, vk, svk)
+                        _distill_news_term(student_news_encoder, t_k, be_k, vk, svk, teacher_news_targets[k])
                     )
                 loss_d_exp = tf.add_n(loss_d_exp_parts) / 5.0
 
@@ -371,15 +392,8 @@ def train_kd_userdistill(
                     [x_list[i] for i in hist_title_idx]
                     + [x_list[i] for i in hist_body_idx]
                     + [x_list[i] for i in hist_v_idx]
-                    + [x_list[i] for i in hist_sv_idx]
-                )
-                t_user = tf.stop_gradient(
-                    teacher_user_encoder(
-                        [x_list[i] for i in hist_title_idx]
-                        + [x_list[i] for i in hist_body_idx]
-                        + [x_list[i] for i in hist_v_idx]
-                        + [x_list[i] for i in hist_sv_idx]
-                    )
+                    + [x_list[i] for i in hist_sv_idx],
+                    training=True,
                 )
                 loss_d_user = _cosine_1minus(s_user, t_user)
 
