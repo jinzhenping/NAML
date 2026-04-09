@@ -9,13 +9,35 @@ from tensorflow.keras.optimizers import Adam
 from naml_common import MAX_BODY_LENGTH, MAX_HISTORY_CLICKS, MAX_SENT_LENGTH, npratio
 
 
-def build_naml_models(word_dict, embedding_mat, category, subcategory, learning_rate, clear_session=True):
+def build_naml_models(
+    word_dict,
+    embedding_mat,
+    category,
+    subcategory,
+    learning_rate,
+    clear_session=True,
+    *,
+    dropout_rate=0.3,
+    cnn_filters=400,
+    cnn_kernel_size=3,
+    attention_dense_dim=200,
+    category_emb_dim=50,
+):
     """
     NAML 학습용 model, 평가용 model_test 및 user_rep 서브그래프 구성요소 반환.
     clear_session: False이면 이전 그래프 유지 (동일 프로세스에서 교사+학생 이중 빌드 등).
+
+    튜닝용(선택): dropout_rate, cnn_filters, cnn_kernel_size, attention_dense_dim, category_emb_dim.
+    CNN 출력 차원과 카테고리 투영 차원은 cnn_filters로 통일한다.
     """
     if clear_session:
         keras.backend.clear_session()
+
+    d = float(dropout_rate)
+    nf = int(cnn_filters)
+    nk = int(cnn_kernel_size)
+    ad = int(attention_dense_dim)
+    cem = int(category_emb_dim)
 
     MAX_SENTS = MAX_HISTORY_CLICKS
     title_input = Input(shape=(MAX_SENT_LENGTH,), dtype='int32')
@@ -24,43 +46,43 @@ def build_naml_models(word_dict, embedding_mat, category, subcategory, learning_
     embedding_layer = Embedding(len(word_dict), 300, weights=[embedding_mat], trainable=True)
 
     embedded_sequences_title = embedding_layer(title_input)
-    embedded_sequences_title = Dropout(0.3)(embedded_sequences_title)
+    embedded_sequences_title = Dropout(d)(embedded_sequences_title)
 
     embedded_sequences_body = embedding_layer(body_input)
-    embedded_sequences_body = Dropout(0.3)(embedded_sequences_body)
+    embedded_sequences_body = Dropout(d)(embedded_sequences_body)
 
     title_cnn = Conv1D(
-        filters=400, kernel_size=3, padding='same', activation='relu', strides=1
+        filters=nf, kernel_size=nk, padding='same', activation='relu', strides=1
     )(embedded_sequences_title)
-    title_cnn = Dropout(0.3)(title_cnn)
+    title_cnn = Dropout(d)(title_cnn)
 
-    attention = Dense(200, activation='tanh')(title_cnn)
+    attention = Dense(ad, activation='tanh')(title_cnn)
     attention = Flatten()(Dense(1)(attention))
     attention_weight = Activation('softmax')(attention)
     title_rep = keras.layers.Dot((1, 1))([title_cnn, attention_weight])
 
     body_cnn = Conv1D(
-        filters=400, kernel_size=3, padding='same', activation='relu', strides=1
+        filters=nf, kernel_size=nk, padding='same', activation='relu', strides=1
     )(embedded_sequences_body)
-    body_cnn = Dropout(0.3)(body_cnn)
+    body_cnn = Dropout(d)(body_cnn)
 
-    attention_body = Dense(200, activation='tanh')(body_cnn)
+    attention_body = Dense(ad, activation='tanh')(body_cnn)
     attention_body = Flatten()(Dense(1)(attention_body))
     attention_weight_body = Activation('softmax')(attention_body)
     body_rep = keras.layers.Dot((1, 1))([body_cnn, attention_weight_body])
 
     vinput = Input((1,), dtype='int32')
     svinput = Input((1,), dtype='int32')
-    v_embedding_layer = Embedding(len(category) + 1, 50, trainable=True)
-    sv_embedding_layer = Embedding(len(subcategory) + 1, 50, trainable=True)
-    v_embedding = Dense(400, activation='relu')(Flatten()(v_embedding_layer(vinput)))
-    sv_embedding = Dense(400, activation='relu')(Flatten()(sv_embedding_layer(svinput)))
+    v_embedding_layer = Embedding(len(category) + 1, cem, trainable=True)
+    sv_embedding_layer = Embedding(len(subcategory) + 1, cem, trainable=True)
+    v_embedding = Dense(nf, activation='relu')(Flatten()(v_embedding_layer(vinput)))
+    sv_embedding = Dense(nf, activation='relu')(Flatten()(sv_embedding_layer(svinput)))
 
     all_channel = [title_rep, body_rep, v_embedding, sv_embedding]
 
     views = concatenate([Reshape((1, -1))(channel) for channel in all_channel], axis=1)
 
-    attentionv = Dense(200, activation='tanh')(views)
+    attentionv = Dense(ad, activation='tanh')(views)
 
     attention_weightv = Reshape((-1,))(Dense(1)(attentionv))
     attention_weightv = Activation('softmax')(attention_weightv)
@@ -88,7 +110,7 @@ def build_naml_models(word_dict, embedding_mat, category, subcategory, learning_
     ]
     browsednewsrep = concatenate([Reshape((1, -1))(news) for news in browsednews], axis=1)
 
-    attentionn = Dense(200, activation='tanh')(browsednewsrep)
+    attentionn = Dense(ad, activation='tanh')(browsednewsrep)
     attentionn = Flatten()(Dense(1)(attentionn))
     attention_weightn = Activation('softmax')(attentionn)
     user_rep = keras.layers.Dot((1, 1))([browsednewsrep, attention_weightn])
