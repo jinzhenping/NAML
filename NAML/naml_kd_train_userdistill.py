@@ -6,7 +6,7 @@ NAML 지식 증류 학습 (user+news distill):
 
 - L_rec: 기존 CE (학생 후보 본문=기대본문)
 - L_distill_user: student user_rep(히스토리 기반) vs teacher user_rep 코사인 (1-cos)
-- L_distill_exp: 후보마다 student newsEncoder(기대본문) vs teacher newsEncoder(실제본문) 코사인 (1-cos)
+- L_distill_exp: 후보마다 student newsEncoder(기대본문) vs teacher newsEncoder(실제/기대 본문 선택) 코사인 (1-cos)
 
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train_userdistill.py \
   --teacher-weights saved_models/NAML_mind_2000.h5 \
@@ -18,7 +18,7 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train_us
   --lambda-distill-user 0.15 \
   --lambda-distill-exp 0.1 \
   --epochs 5 \
-  --output-weights saved_models/NAML_kd_student_userdistill.h5
+  --output-weights saved_models/NAML_kd_student_userdistill.h5 --teacher-exp-use-expected-body
 """
 from __future__ import annotations
 
@@ -329,6 +329,7 @@ def train_kd_userdistill(
     lambda_exp: float,
     H: int,
     epochs: int,
+    teacher_exp_use_expected_body: bool = False,
     eval_after_epoch: Optional[Callable[[], Tuple[Dict[str, Any], Optional[Dict[str, Any]]]]] = None,
 ) -> Tuple[Optional[List[np.ndarray]], int, float]:
     cand_title_idx, cand_body_idx, cand_v_idx, cand_sv_idx = _input_indices(H)
@@ -357,11 +358,15 @@ def train_kd_userdistill(
             teacher_news_targets: List[tf.Tensor] = []
             for k in range(5):
                 t_k = x_list[cand_title_idx[k]]
-                ba_k = cand_act_t[:, k, :]
+                # 기본은 교사에 실제본문을 넣고, 옵션으로 기대본문 입력도 허용.
+                if teacher_exp_use_expected_body:
+                    b_t_k = x_list[cand_body_idx[k]]
+                else:
+                    b_t_k = cand_act_t[:, k, :]
                 vk = x_list[cand_v_idx[k]]
                 svk = x_list[cand_sv_idx[k]]
                 teacher_news_targets.append(
-                    tf.stop_gradient(teacher_news_encoder([t_k, ba_k, vk, svk], training=False))
+                    tf.stop_gradient(teacher_news_encoder([t_k, b_t_k, vk, svk], training=False))
                 )
             t_user = tf.stop_gradient(
                 teacher_user_encoder(
@@ -507,6 +512,11 @@ def main() -> None:
         default=None,
         help="테스트 predict 배치 크기 (기본: --batch-size 와 동일)",
     )
+    ap.add_argument(
+        "--teacher-exp-use-expected-body",
+        action="store_true",
+        help="L_distill_exp에서 teacher newsEncoder 입력 본문을 실제본문 대신 기대본문으로 사용",
+    )
     ap.add_argument("--seed", type=int, default=SEED)
     args = ap.parse_args()
 
@@ -593,7 +603,8 @@ def main() -> None:
     steps_per_epoch = max(1, (n_train + args.batch_size - 1) // args.batch_size)
     print(
         f"샘플 수: {n_train}, batch_size={args.batch_size}, steps/epoch={steps_per_epoch}, "
-        f"lambda_user={args.lambda_distill_user}, lambda_exp={args.lambda_distill_exp}"
+        f"lambda_user={args.lambda_distill_user}, lambda_exp={args.lambda_distill_exp}, "
+        f"teacher_exp_body={'expected' if args.teacher_exp_use_expected_body else 'actual'}"
     )
 
     expected_bodies_test: Optional[Dict[Tuple[str, str], str]] = None
@@ -666,6 +677,7 @@ def main() -> None:
         float(args.lambda_distill_exp),
         H,
         args.epochs,
+        teacher_exp_use_expected_body=bool(args.teacher_exp_use_expected_body),
         eval_after_epoch=eval_cb,
     )
 

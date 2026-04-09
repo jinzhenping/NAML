@@ -6,7 +6,8 @@ NAML 실제 본문만 사용: 하이퍼파라미터 탐색 후 테스트 MRR이 
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_actual.py
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_actual.py --trials 24 --epochs-per-trial 10 --seed 42
 # 예산 절약: 24조합을 2에폭으로 걸러서 상위 5개만 10에폭 재학습
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_actual.py --two-phase --trials 24 --screening-epochs 2 --refine-top-k 5 --epochs-per-trial 10
+CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_actual.py --two-phase --trials 72 --screening-epochs 3 \
+    --refine-top-k 10 --epochs-per-trial 10  --resume-log saved_models/naml_tune_actual_log.json
 
 저장: saved_models/NAML_mind_2000.h5 (model.save_weights, build_naml_models 와 동일 구조)
 
@@ -363,6 +364,77 @@ def plan_hparam_trials(rng: random.Random, n_trials: int) -> list[dict]:
     return out
 
 
+def _hp_key(hp: dict) -> tuple:
+    return tuple((k, hp[k]) for k in _HP_KEYS)
+
+
+def _load_seen_hparam_keys_from_log(log_path: str) -> set[tuple]:
+    """이전 로그 JSON에서 이미 시도한 hparams 키를 읽는다."""
+    seen: set[tuple] = set()
+    try:
+        with open(log_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        rows = data.get("trials", [])
+        if not isinstance(rows, list):
+            return seen
+        for r in rows:
+            if not isinstance(r, dict):
+                continue
+            hp = r.get("hparams")
+            if not isinstance(hp, dict):
+                continue
+            if all(k in hp for k in _HP_KEYS):
+                seen.add(_hp_key(hp))
+    except Exception as e:
+        print(f"경고: resume log를 읽지 못해 skip-seen을 적용하지 않습니다: {e}")
+    return seen
+
+
+def _load_previous_best_from_log(log_path: str) -> tuple[float, dict | None]:
+    """이전 로그 JSON에서 최고 MRR 및 해당 hparams를 읽는다."""
+    best_mrr = -1.0
+    best_hp: dict | None = None
+    try:
+        with open(log_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        gb = data.get("global_best_mrr", None)
+        gh = data.get("global_best_hparams", None)
+        if gb is not None:
+            try:
+                best_mrr = float(gb)
+                if isinstance(gh, dict):
+                    best_hp = gh
+            except Exception:
+                pass
+
+        rows = data.get("trials", [])
+        if isinstance(rows, list):
+            for r in rows:
+                if not isinstance(r, dict):
+                    continue
+                m = r.get("best_mrr_in_trial", None)
+                hp = r.get("hparams", None)
+                try:
+                    mv = float(m)
+                except Exception:
+                    continue
+                if mv > best_mrr:
+                    best_mrr = mv
+                    best_hp = hp if isinstance(hp, dict) else best_hp
+    except Exception as e:
+        print(f"경고: 이전 최고 성능 로드 실패: {e}")
+    return best_mrr, best_hp
+
+
+def _load_json_or_none(path: str) -> dict | None:
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data if isinstance(data, dict) else None
+    except Exception:
+        return None
+
+
 def run_trial(
     hp: dict,
     epochs: int,
@@ -487,6 +559,17 @@ def main():
         default=5,
         help="--two-phase 일 때 1차 이후 2차로 넘길 상위 조합 개수 (기본 5)",
     )
+    ap.add_argument(
+        "--resume-log",
+        type=str,
+        default=None,
+        help="기존 튜닝 로그 JSON 경로. 지정하면 해당 로그의 hparams를 읽어 이미 시도한 조합은 제외",
+    )
+    ap.add_argument(
+        "--append-log",
+        action="store_true",
+        help="out-log가 이미 있으면 기존 trials 뒤에 이번 run trials를 이어붙여 저장",
+    )
     args = ap.parse_args()
 
     os.environ["PYTHONHASHSEED"] = str(args.seed)
@@ -537,15 +620,59 @@ def main():
     log_trials = []
 
     grid_n = _hparam_grid_size()
+    seen_hparam_keys: set[tuple] = set()
+    resume_log_path: str | None = None
+    if args.resume_log:
+        resume_log_path = str(_ROOT / args.resume_log) if not os.path.isabs(args.resume_log) else args.resume_log
+        if os.path.isfile(resume_log_path):
+            seen_hparam_keys = _load_seen_hparam_keys_from_log(resume_log_path)
+            print(f"resume-log 로드: {resume_log_path} (이미 시도한 조합 {len(seen_hparam_keys)}개)")
+            prev_best_mrr, prev_best_hp = _load_previous_best_from_log(resume_log_path)
+            if prev_best_mrr > global_best_mrr:
+                global_best_mrr = prev_best_mrr
+                global_best_hp = prev_best_hp
+            print(
+                f"resume-log 기준 이전 최고 MRR={global_best_mrr:.6f} "
+                f"(이 값을 초과할 때만 {args.out_weights} 저장)"
+            )
+        else:
+            print(f"경고: --resume-log 파일이 없어 skip-seen 생략: {resume_log_path}")
+
     if args.allow_duplicate_hparams:
-        trial_hparams = [sample_hparams(rng) for _ in range(args.trials)]
+        trial_hparams = []
+        local_keys: set[tuple] = set()
+        max_attempts = max(args.trials * 300, 3000)
+        attempts = 0
+        while len(trial_hparams) < args.trials and attempts < max_attempts:
+            attempts += 1
+            hp = sample_hparams(rng)
+            k = _hp_key(hp)
+            if k in seen_hparam_keys or k in local_keys:
+                continue
+            trial_hparams.append(hp)
+            local_keys.add(k)
+        if len(trial_hparams) < args.trials:
+            print(
+                f"경고: unseen 조합 부족으로 {args.trials}개 중 {len(trial_hparams)}개만 생성 "
+                f"(allow-duplicate-hparams + skip-seen)"
+            )
     else:
-        trial_hparams = plan_hparam_trials(rng, args.trials)
+        # 전체 고유 조합 순서를 만든 뒤, 이미 시도한 조합을 제외하고 앞에서부터 사용
+        all_planned = plan_hparam_trials(rng, grid_n)
+        trial_hparams = [hp for hp in all_planned if _hp_key(hp) not in seen_hparam_keys][: args.trials]
+        if len(trial_hparams) < args.trials:
+            print(
+                f"경고: unseen 고유 조합이 부족하여 요청 {args.trials}개 중 {len(trial_hparams)}개만 실행합니다."
+            )
         if args.trials > grid_n:
             print(
                 f"경고: 고유 그리드 조합은 {grid_n}개인데 trials={args.trials} → "
                 f"처음 {grid_n}개는 중복 없음, 이후는 무작위 보충(중복 가능)."
             )
+    run_trials = len(trial_hparams)
+    if run_trials == 0:
+        print("실행할 새 조합이 없습니다. --resume-log 를 바꾸거나 --seed/--trials 설정을 조정하세요.")
+        return
 
     def _one_trial(
         trial_idx: int,
@@ -601,16 +728,16 @@ def main():
         K.clear_session()
 
     if args.two_phase:
-        k = min(args.refine_top_k, args.trials)
+        k = min(args.refine_top_k, run_trials)
         print(
-            f"\n[2-phase] 1차: trials={args.trials}, epochs={args.screening_epochs} → "
+            f"\n[2-phase] 1차: trials={run_trials}, epochs={args.screening_epochs} → "
             f"상위 {k}개를 2차에서 epochs={args.epochs_per_trial} 로 재학습\n"
         )
         screening_rows: list[tuple[float, dict, dict]] = []
-        for t in range(args.trials):
+        for t in range(run_trials):
             hp = trial_hparams[t]
             trial_seed = args.seed + t * 9973
-            print(f"\n--- [screening] {t + 1}/{args.trials}  hparams={hp} ---")
+            print(f"\n--- [screening] {t + 1}/{run_trials}  hparams={hp} ---")
             best_mrr, last_metrics, model = run_trial(
                 hp,
                 args.screening_epochs,
@@ -672,10 +799,10 @@ def main():
             trial_seed = args.seed + 884422 + j * 9973
             _one_trial(j, len(top_hps), hp, args.epochs_per_trial, trial_seed, "refine")
     else:
-        for t in range(args.trials):
+        for t in range(run_trials):
             hp = trial_hparams[t]
             trial_seed = args.seed + t * 9973
-            _one_trial(t, args.trials, hp, args.epochs_per_trial, trial_seed, "single")
+            _one_trial(t, run_trials, hp, args.epochs_per_trial, trial_seed, "single")
 
     summary = {
         "global_best_mrr": global_best_mrr,
@@ -686,10 +813,37 @@ def main():
         "seed": args.seed,
         "hparam_grid_size": grid_n,
         "allow_duplicate_hparams": bool(args.allow_duplicate_hparams),
+        "resume_log": resume_log_path,
+        "num_seen_hparams_loaded": len(seen_hparam_keys),
+        "num_trials_requested": int(args.trials),
+        "num_trials_executed": int(run_trials),
         "two_phase": bool(args.two_phase),
         "screening_epochs": args.screening_epochs if args.two_phase else None,
         "refine_top_k": args.refine_top_k if args.two_phase else None,
     }
+    append_mode = bool(args.append_log or args.resume_log)
+    if append_mode and os.path.isfile(args.out_log):
+        old = _load_json_or_none(args.out_log)
+        if old is not None:
+            old_trials = old.get("trials", [])
+            if not isinstance(old_trials, list):
+                old_trials = []
+            merged_trials = old_trials + summary["trials"]
+            old_best = old.get("global_best_mrr", -1.0)
+            try:
+                old_best = float(old_best)
+            except Exception:
+                old_best = -1.0
+            if old_best > summary["global_best_mrr"]:
+                summary["global_best_mrr"] = old_best
+                old_hp = old.get("global_best_hparams", None)
+                if isinstance(old_hp, dict):
+                    summary["global_best_hparams"] = old_hp
+            summary["trials"] = merged_trials
+            summary["append_log"] = True
+            summary["append_log_auto_by_resume"] = bool(args.resume_log and not args.append_log)
+            summary["appended_from"] = args.out_log
+            summary["num_trials_total_after_append"] = len(merged_trials)
     with open(args.out_log, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
     print(f"\n완료. 전역 최고 MRR={global_best_mrr:.6f}, 로그: {args.out_log}")
