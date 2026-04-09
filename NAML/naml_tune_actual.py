@@ -623,7 +623,9 @@ def main():
     seen_hparam_keys: set[tuple] = set()
     resume_log_path: str | None = None
     if args.resume_log:
-        resume_log_path = str(_ROOT / args.resume_log) if not os.path.isabs(args.resume_log) else args.resume_log
+        resume_log_path = (
+            os.path.join(_ROOT, args.resume_log) if not os.path.isabs(args.resume_log) else args.resume_log
+        )
         if os.path.isfile(resume_log_path):
             seen_hparam_keys = _load_seen_hparam_keys_from_log(resume_log_path)
             print(f"resume-log 로드: {resume_log_path} (이미 시도한 조합 {len(seen_hparam_keys)}개)")
