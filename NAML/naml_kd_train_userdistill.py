@@ -10,15 +10,19 @@ NAML 지식 증류 학습 (user+news distill):
 
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train_userdistill.py \
   --teacher-weights saved_models/NAML_mind_2000.h5 \
+  --tune-log saved_models/naml_tune_actual_log.json \
   --expected-body-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
   --expected-body-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
   --mind-dataset-subdir MIND_2000 \
   --batch-size 8 \
-  --eval-batch-size 8 \
+  --eval-batch-size 16 \
   --lambda-distill-user 0.15 \
-  --lambda-distill-exp 0.1 \
+  --lambda-distill-exp 0.2 \
   --epochs 5 \
   --output-weights saved_models/NAML_kd_student_userdistill.h5 --teacher-exp-use-expected-body
+
+교사 가중치가 naml_tune_actual 로 튜닝된 경우 CNN 폭 등이 다르므로 eval_test_expected 와 동일하게:
+  --tune-log saved_models/naml_tune_actual_log.json
 """
 from __future__ import annotations
 
@@ -40,7 +44,12 @@ if str(_ROOT / "NAML") not in sys.path:
     sys.path.insert(0, str(_ROOT / "NAML"))
 
 from eval_cluster_batch import load_expected_bodies_from_train_dir
-from eval_test_expected import calc_metrics_from_scores, load_expected_bodies_from_dir
+from eval_test_expected import (
+    _DEFAULT_ARCH,
+    _arch_from_tune_log,
+    calc_metrics_from_scores,
+    load_expected_bodies_from_dir,
+)
 from naml_batch_generators import generate_batch_data_test
 from naml_common import (
     MAX_BODY_LENGTH,
@@ -466,6 +475,17 @@ def main() -> None:
     )
     ap.add_argument("--teacher-weights", type=str, required=True, help="교사 model.save_weights 경로 (프로젝트 루트 기준)")
     ap.add_argument(
+        "--tune-log",
+        type=str,
+        default=None,
+        help="naml_tune_actual_log.json. global_best_hparams 로 학생·교사 그래프를 맞춤 (튜닝 교사 가중치 시 권장)",
+    )
+    ap.add_argument("--dropout-rate", type=float, default=None)
+    ap.add_argument("--cnn-filters", type=int, default=None)
+    ap.add_argument("--cnn-kernel-size", type=int, default=None)
+    ap.add_argument("--attention-dense-dim", type=int, default=None)
+    ap.add_argument("--category-emb-dim", type=int, default=None)
+    ap.add_argument(
         "--expected-body-train-dir",
         type=str,
         required=True,
@@ -570,7 +590,38 @@ def main() -> None:
     news_index_reverse = {v: k for k, v in news_index.items()}
     H = MAX_HISTORY_CLICKS
 
-    built_s = build_naml_models(word_dict, embedding_mat, category, subcategory, args.learning_rate, clear_session=True)
+    arch: Dict[str, float | int] = dict(_DEFAULT_ARCH)
+    if args.tune_log:
+        tl = os.path.normpath(str(_ROOT / args.tune_log)) if not os.path.isabs(args.tune_log) else args.tune_log
+        if os.path.isfile(tl):
+            loaded = _arch_from_tune_log(tl)
+            arch.update(loaded)
+            print(f"튜닝 로그 아키텍처: {tl} → {loaded or '(global_best_hparams 없음, 기본값)'}", flush=True)
+        else:
+            print(f"경고: --tune-log 파일 없음: {tl}", flush=True)
+    if args.dropout_rate is not None:
+        arch["dropout_rate"] = args.dropout_rate
+    if args.cnn_filters is not None:
+        arch["cnn_filters"] = args.cnn_filters
+    if args.cnn_kernel_size is not None:
+        arch["cnn_kernel_size"] = args.cnn_kernel_size
+    if args.attention_dense_dim is not None:
+        arch["attention_dense_dim"] = args.attention_dense_dim
+    if args.category_emb_dim is not None:
+        arch["category_emb_dim"] = args.category_emb_dim
+    print(f"build_naml_models 아키텍처: {arch}", flush=True)
+
+    _kw = dict(
+        dropout_rate=float(arch["dropout_rate"]),
+        cnn_filters=int(arch["cnn_filters"]),
+        cnn_kernel_size=int(arch["cnn_kernel_size"]),
+        attention_dense_dim=int(arch["attention_dense_dim"]),
+        category_emb_dim=int(arch["category_emb_dim"]),
+    )
+
+    built_s = build_naml_models(
+        word_dict, embedding_mat, category, subcategory, args.learning_rate, clear_session=True, **_kw
+    )
     student_model = built_s["model"]
     student_news = built_s["newsEncoder"]
     model_test = built_s["model_test"]
@@ -579,7 +630,9 @@ def main() -> None:
         built_s["user_rep"],
     )
 
-    built_t = build_naml_models(word_dict, embedding_mat, category, subcategory, args.learning_rate, clear_session=False)
+    built_t = build_naml_models(
+        word_dict, embedding_mat, category, subcategory, args.learning_rate, clear_session=False, **_kw
+    )
     teacher_full = built_t["model"]
     teacher_news = built_t["newsEncoder"]
     teacher_user = tf.keras.Model(
@@ -591,7 +644,16 @@ def main() -> None:
     if not os.path.isfile(tw):
         print(f"오류: 교사 가중치 없음: {tw}", file=sys.stderr)
         sys.exit(1)
-    teacher_full.load_weights(tw)
+    try:
+        teacher_full.load_weights(tw)
+    except Exception as e:
+        print(
+            "\n오류: 교사 가중치 로드 실패. 튜닝된 NAML_mind_2000.h5 라면 그때의 global_best_hparams와 "
+            "동일한 그래프가 필요합니다.\n"
+            "  예: --tune-log saved_models/naml_tune_actual_log.json\n",
+            flush=True,
+        )
+        raise e
     teacher_full.trainable = False
     teacher_news.trainable = False
     teacher_user.trainable = False
