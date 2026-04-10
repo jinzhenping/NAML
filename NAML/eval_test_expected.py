@@ -11,6 +11,9 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_expect
   --expected-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
   --weights saved_models/NAML_mind_2000.h5 \
   --mind-dataset-subdir MIND_2000
+
+# naml_tune_actual.py 로 튜닝·저장한 가중치는 CNN 폭 등 구조가 다를 수 있음 → 같은 로그를 넘겨야 함:
+#   --tune-log saved_models/naml_tune_actual_log.json
 """
 from __future__ import annotations
 
@@ -143,6 +146,34 @@ def load_news_id_to_body_from_tsv(news_tsv: str) -> Dict[str, str]:
     return out
 
 
+# build_naml_models 튜닝 인자와 동일 키 (기본값 = naml_model_builder 기본)
+_DEFAULT_ARCH: Dict[str, float | int] = {
+    "dropout_rate": 0.3,
+    "cnn_filters": 400,
+    "cnn_kernel_size": 3,
+    "attention_dense_dim": 200,
+    "category_emb_dim": 50,
+}
+_ARCH_KEYS = tuple(_DEFAULT_ARCH.keys())
+
+
+def _arch_from_tune_log(log_path: str) -> Dict[str, float | int]:
+    """naml_tune_actual_log.json 의 global_best_hparams 에서 아키텍처만 추출."""
+    out: Dict[str, float | int] = {}
+    try:
+        with open(log_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception:
+        return out
+    gb = data.get("global_best_hparams")
+    if not isinstance(gb, dict):
+        return out
+    for k in _ARCH_KEYS:
+        if k in gb:
+            out[k] = gb[k]
+    return out
+
+
 def calc_metrics_from_scores(click_score, all_test_label, all_test_index):
     all_mrr: List[float] = []
     all_ndcg: List[float] = []
@@ -170,6 +201,17 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="프리트레인 NAML 테스트셋 실제본문 vs 기대본문 평가")
     parser.add_argument("--expected-dir", type=str, required=True, help="기대본문 폴더 (user_*/news_*.json)")
     parser.add_argument("--weights", type=str, default="saved_models/NAML_mind_2000.h5")
+    parser.add_argument(
+        "--tune-log",
+        type=str,
+        default=None,
+        help="naml_tune_actual_log.json 경로. global_best_hparams 로 CNN/드롭아웃 등 그래프를 맞춤 (튜닝 가중치 로드 시 권장)",
+    )
+    parser.add_argument("--dropout-rate", type=float, default=None)
+    parser.add_argument("--cnn-filters", type=int, default=None)
+    parser.add_argument("--cnn-kernel-size", type=int, default=None)
+    parser.add_argument("--attention-dense-dim", type=int, default=None)
+    parser.add_argument("--category-emb-dim", type=int, default=None)
     parser.add_argument("--mind-dataset-subdir", type=str, default=None)
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--learning-rate", type=float, default=0.0005)
@@ -234,10 +276,53 @@ def main() -> None:
     )
 
     embedding_mat = get_embedding(word_dict)
-    built = build_naml_models(word_dict, embedding_mat, category, subcategory, args.learning_rate)
+
+    arch: Dict[str, float | int] = dict(_DEFAULT_ARCH)
+    if args.tune_log:
+        tl = os.path.normpath(str(_ROOT / args.tune_log)) if not os.path.isabs(args.tune_log) else args.tune_log
+        if os.path.isfile(tl):
+            loaded = _arch_from_tune_log(tl)
+            arch.update(loaded)
+            print(f"튜닝 로그에서 아키텍처: {tl} → {loaded or '(global_best_hparams 없음, 기본값)'}")
+        else:
+            print(f"경고: --tune-log 파일 없음: {tl}", flush=True)
+    if args.dropout_rate is not None:
+        arch["dropout_rate"] = args.dropout_rate
+    if args.cnn_filters is not None:
+        arch["cnn_filters"] = args.cnn_filters
+    if args.cnn_kernel_size is not None:
+        arch["cnn_kernel_size"] = args.cnn_kernel_size
+    if args.attention_dense_dim is not None:
+        arch["attention_dense_dim"] = args.attention_dense_dim
+    if args.category_emb_dim is not None:
+        arch["category_emb_dim"] = args.category_emb_dim
+    print(f"build_naml_models 아키텍처: {arch}", flush=True)
+
+    built = build_naml_models(
+        word_dict,
+        embedding_mat,
+        category,
+        subcategory,
+        args.learning_rate,
+        dropout_rate=float(arch["dropout_rate"]),
+        cnn_filters=int(arch["cnn_filters"]),
+        cnn_kernel_size=int(arch["cnn_kernel_size"]),
+        attention_dense_dim=int(arch["attention_dense_dim"]),
+        category_emb_dim=int(arch["category_emb_dim"]),
+    )
     model = built["model"]
     model_test = built["model_test"]
-    model.load_weights(str(weights_path))
+    try:
+        model.load_weights(str(weights_path))
+    except Exception as e:
+        print(
+            "\n오류: 가중치 로드 실패. 가중치가 naml_tune_actual 등으로 튜닝된 모델이라면 "
+            "그때의 global_best_hparams와 동일하게 그래프를 맞춰야 합니다.\n"
+            "  예: --tune-log saved_models/naml_tune_actual_log.json\n"
+            "또는 --cnn-filters 등으로 수동 지정.\n",
+            flush=True,
+        )
+        raise e
 
     news_index_reverse = {v: k for k, v in news_index.items()}
     news_tsv_path = mind_data_path(MIND_NEWS_FILENAME)
