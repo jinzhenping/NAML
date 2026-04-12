@@ -1,7 +1,7 @@
 """
 Generate expected body using:
 - model2 prompt template
-- model1 preference output (per user file)
+- model1 preference output (per user file; default path user_preference/preference/<dataset_subdir>/<train|test>/user_<id>.json)
 - coordinator policy file (selectable)
 - generation settings descriptions
 
@@ -35,6 +35,18 @@ from openai import OpenAI
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_DATASET_SUBDIR = "MIND_2000"
 DEFAULT_MODEL = "gpt-4o-mini"
+
+
+def default_preference_user_path(dataset_subdir: str, preference_split: str, user_id: str) -> Path:
+    """Same layout as infer_user_preferences / generate_expected_body_*_cluster_policies: preference/<dataset>/<train|test>/user_*.json"""
+    return (
+        PROJECT_ROOT
+        / "user_preference"
+        / "preference"
+        / dataset_subdir
+        / preference_split
+        / f"user_{user_id}.json"
+    )
 
 
 def safe_api_text(value: object) -> str:
@@ -317,15 +329,23 @@ def main() -> None:
         default=str(PROJECT_ROOT / "user_preference" / "generation_settings.yaml"),
     )
     parser.add_argument(
+        "--preference_split",
+        type=str,
+        default="train",
+        choices=["train", "test"],
+        help="with default layout: user_preference/preference/<dataset_subdir>/<split>/user_<id>.json",
+    )
+    parser.add_argument(
         "--preference_dir",
         type=str,
-        default=str(PROJECT_ROOT / "user_preference" / "preference"),
+        default=None,
+        help="folder containing user_<id>.json (overrides default layout; omit to use .../preference/<dataset_subdir>/<preference_split>/)",
     )
     parser.add_argument(
         "--preference_path",
         type=str,
         default=None,
-        help="optional direct preference json path (overrides preference_dir/user_{id}.json)",
+        help="direct path to one preference json (overrides preference_dir and default layout)",
     )
     parser.add_argument(
         "--coordinator_output_dir",
@@ -375,11 +395,14 @@ def main() -> None:
     title_abstraction_prompt_path = Path(args.title_abstraction_prompt_path)
     settings_path = Path(args.settings_path)
 
-    preference_path = (
-        Path(args.preference_path)
-        if args.preference_path
-        else Path(args.preference_dir) / f"user_{args.user_id}.json"
-    )
+    if args.preference_path:
+        preference_path = Path(args.preference_path)
+    elif args.preference_dir is not None:
+        preference_path = Path(args.preference_dir) / f"user_{args.user_id}.json"
+    else:
+        preference_path = default_preference_user_path(
+            args.dataset_subdir, args.preference_split, str(args.user_id)
+        )
 
     if args.policy_file_path:
         policy_path = Path(args.policy_file_path)
@@ -507,6 +530,8 @@ def main() -> None:
         "history_include_bodies": bool(args.history_include_bodies),
         "history_body_max_chars": args.history_body_max_chars if args.history_include_bodies else None,
         "preference_path": str(preference_path),
+        "preference_split": args.preference_split,
+        "dataset_subdir": args.dataset_subdir,
         "policy_path": str(policy_path),
         "policy": policy,
         "model": args.model,
