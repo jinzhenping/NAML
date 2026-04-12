@@ -9,6 +9,11 @@ python user_preference/generate_expected_body_from_preference.py --user_id 1291 
 --policy_file_path "coordinator_LLM/output_cluster0/11.txt"
 
 python user_preference/generate_expected_body_from_preference.py \
+  --user_id 138 --candidate_news_id N129416 \
+  --policy_file_path "coordinator_LLM/output_cluster0/11.txt" \
+  --history_k 5 --history_include_bodies
+
+python user_preference/generate_expected_body_from_preference.py \
   --user_id 1291 --candidate_news_id N76665 \
   --policy_file_path "coordinator_LLM/output_cluster0/11.txt" \
   --title_abstraction_prompt_path "user_preference/keyword_extraction.yaml"
@@ -69,7 +74,8 @@ def resolve_test_tsv(dataset_subdir: str) -> Path:
     raise RuntimeError(f"Multiple test TSV files found in {base}; pass --test_tsv")
 
 
-def load_news_map(news_tsv: Path) -> Dict[str, str]:
+def load_news_records(news_tsv: Path) -> Dict[str, Dict[str, str]]:
+    """news_id -> {title, body} (body may be empty)."""
     news_df = pd.read_csv(
         news_tsv,
         sep="\t",
@@ -78,8 +84,20 @@ def load_news_map(news_tsv: Path) -> Dict[str, str]:
     )
     news_df["news_id"] = news_df["news_id"].map(safe_api_text)
     news_df["title"] = news_df["title"].map(safe_api_text)
+    news_df["body"] = news_df["body"].map(lambda x: safe_api_text(x) if pd.notna(x) else "")
     news_df = news_df[(news_df["news_id"] != "") & (news_df["title"] != "")]
-    return dict(zip(news_df["news_id"], news_df["title"]))
+    out: Dict[str, Dict[str, str]] = {}
+    for _, row in news_df.iterrows():
+        out[str(row["news_id"])] = {
+            "title": str(row["title"]),
+            "body": str(row["body"]),
+        }
+    return out
+
+
+def load_news_map(news_tsv: Path) -> Dict[str, str]:
+    """Backward compatible: news_id -> title only."""
+    return {k: v["title"] for k, v in load_news_records(news_tsv).items()}
 
 
 def parse_settings(settings_path: Path) -> Dict[str, Dict[str, str]]:
@@ -126,14 +144,43 @@ def to_history_text(titles: List[str]) -> str:
     )
 
 
-def get_recent_titles(train_df: pd.DataFrame, news_map: Dict[str, str], user_id: str, k: int) -> List[str]:
+def get_recent_clicked_news_ids(train_df: pd.DataFrame, user_id: str, k: int) -> List[str]:
     user_df = train_df[train_df["user"].astype(str) == str(user_id)]
     if user_df.empty:
         return []
     clicked = str(user_df.iloc[0]["clicked_news"])
     ids = [x.strip() for x in clicked.split() if x.strip()]
-    ids = ids[-k:] if len(ids) > k else ids
+    return ids[-k:] if len(ids) > k else ids
+
+
+def get_recent_titles(train_df: pd.DataFrame, news_map: Dict[str, str], user_id: str, k: int) -> List[str]:
+    ids = get_recent_clicked_news_ids(train_df, user_id, k)
     return [news_map[nid] for nid in ids if nid in news_map]
+
+
+def format_history_block(
+    news_ids: List[str],
+    records: Dict[str, Dict[str, str]],
+    *,
+    include_bodies: bool,
+    body_max_chars: int,
+) -> str:
+    """Numbered block for the prompt: titles only, or title + truncated actual body per item."""
+    lines: List[str] = []
+    for i, nid in enumerate(news_ids, 1):
+        rec = records.get(nid)
+        if not rec:
+            continue
+        title = safe_api_text(rec.get("title", ""))
+        if include_bodies:
+            body = safe_api_text(rec.get("body", ""))
+            if body_max_chars > 0 and len(body) > body_max_chars:
+                body = body[:body_max_chars].rstrip() + " …"
+            lines.append(f"{i}. Title: {title}")
+            lines.append(f"   Body: {body}")
+        else:
+            lines.append(f"{i}. {title}")
+    return "\n".join(lines)
 
 
 def get_description(settings: Dict[str, Dict[str, str]], category: str, value: str) -> str:
@@ -186,11 +233,20 @@ def clean_abstracted_title(text: str) -> str:
 def build_prompt(
     template: str,
     model1_output: str,
-    history_titles: List[str],
-    candidate_news: str,
-    policy: Dict[str, str],
-    settings: Dict[str, Dict[str, str]],
+    history_block: Optional[str] = None,
+    history_titles: Optional[List[str]] = None,
+    candidate_news: str = "",
+    policy: Optional[Dict[str, str]] = None,
+    settings: Optional[Dict[str, Dict[str, str]]] = None,
 ) -> str:
+    if history_block is None:
+        if history_titles is None:
+            raise ValueError("build_prompt requires history_block or history_titles")
+        history_block = to_history_text(history_titles)
+    if policy is None:
+        policy = {}
+    if settings is None:
+        settings = {}
     tone = safe_api_text(str(policy.get("tone", "neutral")))
     abstraction = safe_api_text(str(policy.get("abstraction_level", "mixed")))
     speculation = safe_api_text(str(policy.get("speculation_count", 1)))
@@ -199,7 +255,9 @@ def build_prompt(
 
     prompt = template
     prompt = prompt.replace("{model1_output}", safe_api_text(model1_output))
-    prompt = prompt.replace("{history_titles}", to_history_text(history_titles))
+    hb = safe_api_text(history_block)
+    prompt = prompt.replace("{history_block}", hb)
+    prompt = prompt.replace("{history_titles}", hb)
     prompt = prompt.replace("{candidate_news}", safe_api_text(candidate_news))
 
     prompt = prompt.replace("{Tone}", tone)
@@ -229,7 +287,18 @@ def main() -> None:
     parser.add_argument("--user_id", type=str, required=True, help="target user id")
     parser.add_argument("--candidate_news_id", type=str, required=True, help="candidate news id")
     parser.add_argument("--dataset_subdir", type=str, default=DEFAULT_DATASET_SUBDIR)
-    parser.add_argument("--history_k", type=int, default=10, help="recent history title count")
+    parser.add_argument("--history_k", type=int, default=10, help="recent clicked news count (use 5 with --history_include_bodies)")
+    parser.add_argument(
+        "--history_include_bodies",
+        action="store_true",
+        help="include each history item's actual body (from MIND_news.tsv) in the prompt, not only titles",
+    )
+    parser.add_argument(
+        "--history_body_max_chars",
+        type=int,
+        default=500,
+        help="per-history-article body truncation when --history_include_bodies (0 = no truncation)",
+    )
     parser.add_argument(
         "--model2_prompt_path",
         type=str,
@@ -335,11 +404,12 @@ def main() -> None:
 
     settings = parse_settings(settings_path)
     policy = load_policy(policy_path)
-    news_map = load_news_map(news_tsv)
+    news_records = load_news_records(news_tsv)
+    news_map = {k: v["title"] for k, v in news_records.items()}
 
-    if args.candidate_news_id not in news_map:
+    if args.candidate_news_id not in news_records:
         raise ValueError(f"candidate_news_id not found in news TSV: {args.candidate_news_id}")
-    candidate_title = safe_api_text(news_map[args.candidate_news_id]) or "[untitled]"
+    candidate_title = safe_api_text(news_records[args.candidate_news_id]["title"]) or "[untitled]"
 
     train_df = pd.read_csv(
         train_tsv,
@@ -348,9 +418,17 @@ def main() -> None:
         dtype=str,
     )
     train_df = train_df.dropna(subset=["user", "clicked_news"])
-    history_titles = get_recent_titles(train_df, news_map, args.user_id, args.history_k)
-    if not history_titles:
-        raise ValueError(f"No valid history titles for user {args.user_id}")
+    history_ids = get_recent_clicked_news_ids(train_df, args.user_id, args.history_k)
+    history_ids = [nid for nid in history_ids if nid in news_records]
+    if not history_ids:
+        raise ValueError(f"No valid history news ids for user {args.user_id}")
+    history_block = format_history_block(
+        history_ids,
+        news_records,
+        include_bodies=args.history_include_bodies,
+        body_max_chars=max(0, int(args.history_body_max_chars)),
+    )
+    history_titles = [news_map[nid] for nid in history_ids if nid in news_map]
 
     # prepare OpenAI client
     client = OpenAI(api_key=api_key)
@@ -398,7 +476,7 @@ def main() -> None:
     prompt = build_prompt(
         template=prompt_template,
         model1_output=model1_output,
-        history_titles=history_titles,
+        history_block=history_block,
         candidate_news=abstracted_title,
         policy=policy,
         settings=settings,
@@ -423,8 +501,11 @@ def main() -> None:
         # model3로 추상화된 제목
         "candidate_title_abstracted": abstracted_title,
         "history_k": args.history_k,
-        "history_count_used": len(history_titles),
+        "history_count_used": len(history_ids),
+        "history_news_ids": history_ids,
         "history_titles": history_titles,
+        "history_include_bodies": bool(args.history_include_bodies),
+        "history_body_max_chars": args.history_body_max_chars if args.history_include_bodies else None,
         "preference_path": str(preference_path),
         "policy_path": str(policy_path),
         "policy": policy,

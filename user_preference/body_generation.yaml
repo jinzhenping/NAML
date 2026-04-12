@@ -20,8 +20,9 @@ Expected Body (news-style, user-conditioned):
 [User Preference Profile]
 {model1_output}
 
-[User Click History - Titles Only]
-{history_titles}
+[User Click History]
+{history_block}
+When entries include "Title:" and "Body:" lines, the Body text is the actual article body (possibly truncated) from the user's recent clicks—use it only to infer what kinds of content and detail the user tends to read; do not copy phrasing. If only numbered titles appear, use those as before.
 
 [Candidate News Title]
 {candidate_news}
