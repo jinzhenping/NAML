@@ -37,13 +37,19 @@ from naml_common import (
     preprocess_user_file,
     preprocess_news_file,
     get_embedding,
+    clip_expected_body_to_first_sentences,
 )
+import naml_common as _naml_common
 from naml_model_builder import build_naml_models
 
 USE_EXPECTED_BODY = True  # True: 학습·전처리에서 기대 본문 사용, False: 학습은 MIND 실제 본문
 # USE_EXPECTED_BODY=True일 때 기대본문 JSON (프로젝트 루트 상대 또는 절대; resolve_expected_body_dir)
 # 학습용 train 기대본문 (필수). 빈 값이면 USE_EXPECTED_BODY 시 오류 종료
 EXPECTED_BODY_TRAIN_DIR = 'body_generation/output/MIND_2000/train_3cluster_11_13_8'
+# 기대본문을 word_tokenize 하기 전 앞 N문장만 사용 (0=전체). naml_common 에 동기화 → naml_batch_generators 등과 공유
+EXPECTED_BODY_FIRST_N_SENTENCES = 3
+
+_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES = EXPECTED_BODY_FIRST_N_SENTENCES
 
 MAIN_TRAINING_LEARNING_RATE = 0.0005  # 메인 학습 루프(및 동일 model.compile) Adam 학습률
 
@@ -59,7 +65,7 @@ MAIN_TRAINING_BEST_MODEL_PATH = 'saved_models/NAML_mind_2000.h5'
 # naml_tune_actual_log.json 의 global_best_hparams 로 Adam 학습률·CNN·드롭아웃 등을 맞출 때 설정.
 # None 이면 MAIN_TRAINING_LEARNING_RATE 및 build_naml_models 기본 아키텍처(아래 _DEFAULT_TUNE_BUILD 와 동일).
 # 기대본문으로 처음부터 학습할 때도 실제본문 튜닝과 동일 그래프를 쓰려면 경로 지정.
-TUNE_LOG_FOR_BUILD = 'saved_models/naml_tune_actual_log.json'  # 예: 'saved_models/naml_tune_actual_log.json'
+TUNE_LOG_FOR_BUILD = None  # 예: 'saved_models/naml_tune_actual_log.json'
 
 _DEFAULT_TUNE_BUILD = {
     "dropout_rate": 0.3,
@@ -229,6 +235,11 @@ if USE_EXPECTED_BODY:
     expected_bodies_train = load_expected_bodies_from_train_dir(_train_dir)
     expected_bodies_test = load_expected_bodies_from_train_dir(_test_dir)
     print(f"로드된 기대 본문: train={len(expected_bodies_train)}개, test={len(expected_bodies_test)}개")
+    if EXPECTED_BODY_FIRST_N_SENTENCES > 0:
+        print(
+            f"  기대본문 배치 입력: 앞 {EXPECTED_BODY_FIRST_N_SENTENCES}문장만 사용 "
+            f"(NAML.py EXPECTED_BODY_FIRST_N_SENTENCES)"
+        )
     if not INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT:
         print(
             "  word_dict: 테스트 기대본문 토큰 제외 (INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT=False)"
@@ -461,7 +472,10 @@ def generate_batch_data_train(all_train_pn,all_label,all_train_id,batch_size, ca
                             if key in expected_bodies:
                                 # 기대본문 토큰화 및 인덱스 변환
                                 expected_body = expected_bodies[key]
-                                body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
+                                _eb = clip_expected_body_to_first_sentences(
+                                    expected_body, EXPECTED_BODY_FIRST_N_SENTENCES
+                                )
+                                body_tokens = word_tokenize(_eb.lower()) if _eb else []
                                 word_id = []
                                 for word in body_tokens:
                                     if word in word_dict:
@@ -609,7 +623,10 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
                         key = _norm_expected_body_key(user_id_str, news_id_str)
                         if key in expected_bodies:
                             expected_body = expected_bodies[key]
-                            body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
+                            _eb = clip_expected_body_to_first_sentences(
+                                expected_body, EXPECTED_BODY_FIRST_N_SENTENCES
+                            )
+                            body_tokens = word_tokenize(_eb.lower()) if _eb else []
                             word_id = []
                             for word in body_tokens:
                                 if word in word_dict:

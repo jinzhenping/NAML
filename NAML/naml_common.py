@@ -2,9 +2,13 @@
 NAML과 공유하는 MIND 경로·전처리·GloVe 임베딩.
 cluster_train_users_kmeans.py 등에서 NAML.py 전체를 import하지 않고 사용.
 """
+from __future__ import annotations
+
 import glob
 import os
 import random
+import re
+from typing import Optional
 
 import numpy as np
 from nltk.tokenize import word_tokenize
@@ -18,6 +22,33 @@ MAX_HISTORY_CLICKS = 50
 MAX_SENT_LENGTH = 30
 MAX_BODY_LENGTH = 300
 npratio = 4
+
+# 기대본문 문장 수 제한의 런타임 저장소(기본 0). 사용자 설정은 NAML.py 의 EXPECTED_BODY_FIRST_N_SENTENCES 에서 하고 import 시 동기화됨.
+# naml_batch_generators 등은 이 값을 참조(naml_common만 단독 실행 시 0).
+EXPECTED_BODY_FIRST_N_SENTENCES = 0
+
+
+def clip_expected_body_to_first_sentences(raw: str, n_sentences: Optional[int] = None) -> str:
+    """
+    NLTK sent_tokenize 로 문장을 나눈 뒤 앞 n개만 공백으로 이어붙인다.
+    n_sentences 가 None이면 EXPECTED_BODY_FIRST_N_SENTENCES 사용.
+    n_sentences <= 0 이면 원문 그대로 반환.
+    """
+    if n_sentences is None:
+        n_sentences = EXPECTED_BODY_FIRST_N_SENTENCES
+    if n_sentences <= 0 or not (raw or "").strip():
+        return raw or ""
+    text = raw.strip()
+    try:
+        from nltk.tokenize import sent_tokenize
+
+        sents = sent_tokenize(text)
+    except Exception:
+        sents = [p.strip() for p in re.split(r"(?<=[.!?])\s+", text) if p.strip()]
+    if not sents:
+        return text
+    return " ".join(sents[: int(n_sentences)])
+
 
 MIND_DATASET_SUBDIR = os.environ.get('MIND_DATASET_SUBDIR', 'MIND_2000')
 _PROJECT_ROOT_NAML = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
