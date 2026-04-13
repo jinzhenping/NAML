@@ -175,6 +175,51 @@ def _arch_from_tune_log(log_path: str) -> Dict[str, float | int]:
     return out
 
 
+def _expected_prep_from_tune_log(log_path: str) -> Dict[str, object]:
+    """
+    naml_tune_expected.py 로그에서 기대본문 전처리 재현용 설정 추출.
+    반환 예:
+      {
+        "use_expected_body": True/False,
+        "expected_train_dir": "...",
+        "expected_test_dir": "...",
+        "expected_body_first_n_sentences": 3,
+      }
+    """
+    out: Dict[str, object] = {"use_expected_body": False}
+    try:
+        with open(log_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception:
+        return out
+    if not isinstance(data, dict):
+        return out
+    out["use_expected_body"] = bool(data.get("use_expected_body", False))
+    out["expected_train_dir"] = data.get("expected_train_dir")
+    out["expected_test_dir"] = data.get("expected_test_dir")
+    out["expected_body_first_n_sentences"] = data.get("expected_body_first_n_sentences")
+    return out
+
+
+def _resolve_dir_like_training(path_option: str | None) -> str | None:
+    """
+    NAML 학습 스크립트들과 동일 규칙:
+    절대경로 -> _ROOT 상대 -> _ROOT/body_generation/output 상대 순으로 해석.
+    """
+    if not path_option or not str(path_option).strip():
+        return None
+    p = str(path_option).strip()
+    if os.path.isabs(p) and os.path.isdir(p):
+        return os.path.normpath(p)
+    cand = os.path.normpath(str(_ROOT / p))
+    if os.path.isdir(cand):
+        return cand
+    legacy = os.path.normpath(str(_ROOT / "body_generation" / "output" / p))
+    if os.path.isdir(legacy):
+        return legacy
+    return None
+
+
 def calc_metrics_from_scores(click_score, all_test_label, all_test_index):
     all_mrr: List[float] = []
     all_ndcg: List[float] = []
@@ -216,11 +261,17 @@ def main() -> None:
     parser.add_argument("--mind-dataset-subdir", type=str, default=None)
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--learning-rate", type=float, default=0.0005)
+    parser.add_argument(
+        "--disable-auto-expected-preprocess-from-tune-log",
+        action="store_true",
+        help="기본 자동 동작(튜닝 로그의 expected-body 전처리 설정 재사용)을 비활성화",
+    )
     args = parser.parse_args()
 
     if args.mind_dataset_subdir:
         os.environ["MIND_DATASET_SUBDIR"] = args.mind_dataset_subdir
 
+    import naml_common as _naml_common
     from naml_common import (
         MIND_NEWS_FILENAME,
         SEED,
@@ -245,12 +296,42 @@ def main() -> None:
     expected_bodies = load_expected_bodies_from_dir(expected_dir_abs)
     print(f"기대본문 로드: {len(expected_bodies)}개 ({expected_dir_abs})")
 
-    # 사전학습 가중치의 embedding 행 수 = len(word_dict)와 일치해야 함.
-    # 기대본문을 word_dict에 넣으면 어휘 크기가 달라져 load_weights가 실패하므로,
-    # 전처리는 뉴스 TSV만 사용하고, 기대본문 토큰은 기존 word_dict에 있는 단어만 반영(OOV는 제외).
+    # tune-log 기반 자동 전처리 복원 (기대본문 튜닝 가중치의 embedding 크기 불일치 방지)
+    prep_expected_train = None
+    prep_expected_test = None
+    if args.tune_log and not args.disable_auto_expected_preprocess_from_tune_log:
+        tl = os.path.normpath(str(_ROOT / args.tune_log)) if not os.path.isabs(args.tune_log) else args.tune_log
+        if os.path.isfile(tl):
+            prep_cfg = _expected_prep_from_tune_log(tl)
+            if bool(prep_cfg.get("use_expected_body", False)):
+                tr = _resolve_dir_like_training(str(prep_cfg.get("expected_train_dir") or ""))
+                te = _resolve_dir_like_training(str(prep_cfg.get("expected_test_dir") or ""))
+                n_sent = prep_cfg.get("expected_body_first_n_sentences", None)
+                if tr and te:
+                    prep_expected_train = load_expected_bodies_from_dir(tr)
+                    prep_expected_test = load_expected_bodies_from_dir(te)
+                    if n_sent is not None:
+                        try:
+                            _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES = max(0, int(n_sent))
+                        except Exception:
+                            pass
+                    print(
+                        "튜닝 로그 기반 자동 전처리 적용: "
+                        f"use_expected_body=True, first_n={_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}, "
+                        f"train={len(prep_expected_train)} ({tr}), test={len(prep_expected_test)} ({te})"
+                    )
+                else:
+                    print(
+                        "경고: tune-log 에 use_expected_body=True 이지만 expected_train/test_dir 해석 실패. "
+                        "전처리는 실제본문 기준으로 진행됩니다.",
+                        flush=True,
+                    )
+
+    # 가중치의 embedding 행 수 = len(word_dict)와 일치해야 함.
+    # 기대본문 튜닝 가중치면 위 자동 전처리로 same word_dict 재현을 시도한다.
     word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(
-        expected_bodies_train=None,
-        expected_bodies_test=None,
+        expected_bodies_train=prep_expected_train,
+        expected_bodies_test=prep_expected_test,
     )
     (
         _userid_dict,
@@ -271,8 +352,8 @@ def main() -> None:
         all_test_newsid_str,
     ) = preprocess_user_file(
         news_index=news_index,
-        expected_bodies_train=None,
-        expected_bodies_test=None,
+        expected_bodies_train=prep_expected_train,
+        expected_bodies_test=prep_expected_test,
         word_dict=word_dict,
     )
 
