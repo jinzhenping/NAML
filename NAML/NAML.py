@@ -40,14 +40,14 @@ from naml_common import (
 )
 from naml_model_builder import build_naml_models
 
-USE_EXPECTED_BODY = False  # True: 학습·전처리에서 기대 본문 사용, False: 학습은 MIND 실제 본문
+USE_EXPECTED_BODY = True  # True: 학습·전처리에서 기대 본문 사용, False: 학습은 MIND 실제 본문
 # USE_EXPECTED_BODY=True일 때 기대본문 JSON (프로젝트 루트 상대 또는 절대; resolve_expected_body_dir)
 # 학습용 train 기대본문 (필수). 빈 값이면 USE_EXPECTED_BODY 시 오류 종료
-EXPECTED_BODY_TRAIN_DIR = 'user_preference/expected_body/MIND_2000/train_3cluster_11_13_8'
+EXPECTED_BODY_TRAIN_DIR = 'body_generation/output/MIND_2000/train_3cluster_11_13_8'
 
 MAIN_TRAINING_LEARNING_RATE = 0.0005  # 메인 학습 루프(및 동일 model.compile) Adam 학습률
 
-MAIN_TESTSET_EXPECTED_BODY_DIR = 'user_preference/expected_body/MIND_2000/test_3cluster_11_13_8'
+MAIN_TESTSET_EXPECTED_BODY_DIR = 'body_generation/output/MIND_2000/test_3cluster_11_13_8'
 MAIN_TESTSET_EXPECTED_BODY_DIR_2 = None  # 두 번째 기대본문 폴더 (None이면 사용 안 함)
 # MAIN_TESTSET_EXPECTED_BODY_DIR 기대본문 단어를 word_dict에 추가할지.
 INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT = True
@@ -56,10 +56,68 @@ MAIN_TRAINING_EPOCHS = 10  # 메인 학습 루프 에폭 수
 SAVE_MAIN_BEST_BY_TEST_ACTUAL_MRR = False
 MAIN_TRAINING_BEST_MODEL_PATH = 'saved_models/NAML_mind_2000.h5'
 
+# naml_tune_actual_log.json 의 global_best_hparams 로 Adam 학습률·CNN·드롭아웃 등을 맞출 때 설정.
+# None 이면 MAIN_TRAINING_LEARNING_RATE 및 build_naml_models 기본 아키텍처(아래 _DEFAULT_TUNE_BUILD 와 동일).
+# 기대본문으로 처음부터 학습할 때도 실제본문 튜닝과 동일 그래프를 쓰려면 경로 지정.
+TUNE_LOG_FOR_BUILD = 'saved_models/naml_tune_actual_log.json'  # 예: 'saved_models/naml_tune_actual_log.json'
+
+_DEFAULT_TUNE_BUILD = {
+    "dropout_rate": 0.3,
+    "cnn_filters": 400,
+    "cnn_kernel_size": 3,
+    "attention_dense_dim": 200,
+    "category_emb_dim": 50,
+}
+
 
 def _naml_project_root() -> str:
     """NAML/NAML.py 기준 프로젝트(저장소) 루트."""
     return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _resolve_tune_log_path(path_option: Optional[str]) -> Optional[str]:
+    if not path_option or not str(path_option).strip():
+        return None
+    p = str(path_option).strip()
+    if os.path.isabs(p):
+        return p if os.path.isfile(p) else None
+    cand = os.path.join(_naml_project_root(), p)
+    return cand if os.path.isfile(cand) else None
+
+
+def _load_tune_build_config():
+    """
+    TUNE_LOG_FOR_BUILD 가 가리키는 JSON의 global_best_hparams 에서
+    learning_rate 및 아키텍처 키를 읽는다. 없으면 MAIN_TRAINING_LEARNING_RATE / 기본 아키텍처.
+    Returns: (learning_rate: float, arch_kw: dict, resolved_log_or_none)
+    """
+    lr = float(MAIN_TRAINING_LEARNING_RATE)
+    arch = dict(_DEFAULT_TUNE_BUILD)
+    log_path = _resolve_tune_log_path(TUNE_LOG_FOR_BUILD)
+    if not log_path:
+        if TUNE_LOG_FOR_BUILD:
+            print(
+                f"[NAML] 경고: TUNE_LOG_FOR_BUILD 파일 없음: {TUNE_LOG_FOR_BUILD} → 기본 LR/아키텍처 사용",
+                flush=True,
+            )
+        return lr, arch, None
+    try:
+        with open(log_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception as e:
+        print(f"[NAML] 경고: tune log 읽기 실패 {log_path}: {e} → 기본 LR/아키텍처", flush=True)
+        return lr, arch, None
+    gb = data.get("global_best_hparams")
+    if not isinstance(gb, dict):
+        print(f"[NAML] 경고: global_best_hparams 없음 ({log_path}) → 기본 LR/아키텍처", flush=True)
+        return lr, arch, log_path
+    if "learning_rate" in gb:
+        lr = float(gb["learning_rate"])
+    for k in arch:
+        if k in gb:
+            arch[k] = float(gb[k]) if k == "dropout_rate" else int(gb[k])
+    print(f"[NAML] tune log 적용: {log_path} → lr={lr}, arch={arch}", flush=True)
+    return lr, arch, log_path
 
 
 def resolve_expected_body_dir(path_option: Optional[str]) -> Optional[str]:
@@ -609,8 +667,18 @@ def generate_batch_data_test(all_test_pn, all_label, all_test_id, batch_size, ca
 results_actual = []
 results_expected = []
 results_expected_2 = []
+_main_lr, _arch_kw, _tune_log_used = _load_tune_build_config()
 _built = build_naml_models(
-    word_dict, embedding_mat, category, subcategory, MAIN_TRAINING_LEARNING_RATE
+    word_dict,
+    embedding_mat,
+    category,
+    subcategory,
+    _main_lr,
+    dropout_rate=float(_arch_kw["dropout_rate"]),
+    cnn_filters=int(_arch_kw["cnn_filters"]),
+    cnn_kernel_size=int(_arch_kw["cnn_kernel_size"]),
+    attention_dense_dim=int(_arch_kw["attention_dense_dim"]),
+    category_emb_dim=int(_arch_kw["category_emb_dim"]),
 )
 model = _built['model']
 model_test = _built['model_test']
