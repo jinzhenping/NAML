@@ -11,14 +11,15 @@ NAML 지식 증류 학습 (user+news distill):
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train_userdistill.py \
   --teacher-weights saved_models/NAML_mind_2000.h5 \
   --tune-log saved_models/naml_tune_actual_log.json \
-  --expected-body-train-dir user_preference/expected_body/MIND_2000/train_3cluster_11_13_8_rawtitle \
-  --expected-body-test-dir user_preference/expected_body/MIND_2000/test_3cluster_11_13_8_rawtitle \
+  --expected-body-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
+  --expected-body-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
+  --expected-body-first-n-sentences 3 \
   --mind-dataset-subdir MIND_2000 \
   --batch-size 8 \
   --eval-batch-size 16 \
-  --lambda-distill-user 0.15 \
+  --lambda-distill-user 0.2 \
   --lambda-distill-exp 0.2 \
-  --epochs 5 \
+  --epochs 10 \
   --output-weights saved_models/NAML_kd_student_userdistill.h5 --teacher-exp-use-expected-body
 
 교사 가중치가 naml_tune_actual 로 튜닝된 경우 CNN 폭 등이 다르므로 eval_test_expected 와 동일하게:
@@ -55,10 +56,12 @@ from naml_common import (
     MAX_BODY_LENGTH,
     MAX_HISTORY_CLICKS,
     SEED,
+    clip_expected_body_to_first_sentences,
     get_embedding,
     preprocess_news_file,
     preprocess_user_file,
 )
+import naml_common as _naml_common
 from naml_model_builder import build_naml_models
 
 
@@ -151,7 +154,10 @@ def generate_batch_data_train_kd(
                     key = _norm_expected_body_key(user_id_str, news_id_str)
                     if key in expected_bodies:
                         expected_body = expected_bodies[key]
-                        body_tokens = word_tokenize(expected_body.lower()) if expected_body else []
+                        _eb = clip_expected_body_to_first_sentences(
+                            expected_body, _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES
+                        )
+                        body_tokens = word_tokenize(_eb.lower()) if _eb else []
                         word_id: List[int] = []
                         for w in body_tokens:
                             if w in word_dict:
@@ -537,11 +543,24 @@ def main() -> None:
         action="store_true",
         help="L_distill_exp에서 teacher newsEncoder 입력 본문을 실제본문 대신 기대본문으로 사용",
     )
+    ap.add_argument(
+        "--expected-body-first-n-sentences",
+        type=int,
+        default=3,
+        help="기대본문 사용 시 앞 N문장만 사용 (0 이하면 전체 사용)",
+    )
     ap.add_argument("--seed", type=int, default=SEED)
     args = ap.parse_args()
 
     np.random.seed(args.seed)
     tf.random.set_seed(args.seed)
+    _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES = max(0, int(args.expected_body_first_n_sentences))
+    print(
+        f"기대본문 문장 컷: 앞 {_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}문장 사용"
+        if _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES > 0
+        else "기대본문 문장 컷: 전체 문장 사용",
+        flush=True,
+    )
 
     sub = args.mind_dataset_subdir or os.environ.get("MIND_DATASET_SUBDIR", "MIND_2000")
     os.environ["MIND_DATASET_SUBDIR"] = sub
