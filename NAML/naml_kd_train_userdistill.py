@@ -11,8 +11,8 @@ NAML 지식 증류 학습 (user+news distill):
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train_userdistill.py \
   --teacher-weights saved_models/NAML_mind_2000.h5 \
   --tune-log saved_models/naml_tune_actual_log.json \
-  --expected-body-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
-  --expected-body-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
+  --expected-body-train-dir user_preference/expected_body/MIND_2000/train_3cluster_11_13_8_rawtitle \
+  --expected-body-test-dir user_preference/expected_body/MIND_2000/test_3cluster_11_13_8_rawtitle \
   --mind-dataset-subdir MIND_2000 \
   --batch-size 8 \
   --eval-batch-size 16 \
