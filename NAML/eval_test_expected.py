@@ -9,9 +9,10 @@
 
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_expected.py \
   --expected-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
-  --weights saved_models/NAML_mind_2000.h5 \
+  --weights saved_models/NAML_mind_2000_expected.h5 \
   --tune-log saved_models/naml_tune_actual_log.json \
-  --mind-dataset-subdir MIND_2000
+  --mind-dataset-subdir MIND_2000 \
+  --expected-body-first-n-sentences 3
 
 # naml_tune_actual.py 로 튜닝·저장한 가중치는 CNN 폭 등 구조가 다를 수 있음 → 같은 로그를 넘겨야 함:
 #   --tune-log saved_models/naml_tune_actual_log.json
@@ -266,6 +267,13 @@ def main() -> None:
         action="store_true",
         help="기본 자동 동작(튜닝 로그의 expected-body 전처리 설정 재사용)을 비활성화",
     )
+    parser.add_argument(
+        "--expected-body-first-n-sentences",
+        type=int,
+        default=None,
+        metavar="N",
+        help="기대본문 평가·OOV 집계 시 앞 N문장만 사용 (0=전체). 미지정이면 --tune-log 자동값만 적용, 그것도 없으면 0",
+    )
     args = parser.parse_args()
 
     if args.mind_dataset_subdir:
@@ -275,6 +283,7 @@ def main() -> None:
     from naml_common import (
         MIND_NEWS_FILENAME,
         SEED,
+        clip_expected_body_to_first_sentences,
         get_embedding,
         mind_data_path,
         preprocess_news_file,
@@ -326,6 +335,26 @@ def main() -> None:
                         "전처리는 실제본문 기준으로 진행됩니다.",
                         flush=True,
                     )
+
+    if args.expected_body_first_n_sentences is not None:
+        _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES = max(0, int(args.expected_body_first_n_sentences))
+        print(
+            (
+                f"기대본문 문장 컷(CLI): 앞 {_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}문장만 사용"
+                if _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES > 0
+                else "기대본문 문장 컷(CLI): 전체 문장 사용"
+            ),
+            flush=True,
+        )
+    else:
+        print(
+            (
+                f"기대본문 문장 컷: 앞 {_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}문장 (튜닝 로그/기본값)"
+                if _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES > 0
+                else "기대본문 문장 컷: 전체 문장 (튜닝 로그에 값 없음 또는 0)"
+            ),
+            flush=True,
+        )
 
     # 가중치의 embedding 행 수 = len(word_dict)와 일치해야 함.
     # 기대본문 튜닝 가중치면 위 자동 전처리로 same word_dict 재현을 시도한다.
@@ -467,15 +496,22 @@ def main() -> None:
             matched_slots += 1
     match_rate = (matched_slots / total_slots) if total_slots else 0.0
 
-    # OOV: 기대본문 문자열을 NAML과 동일 토큰화 후 word_dict 미포함 비율
-    oov_all_json = aggregate_oov_from_texts(word_dict, list(expected_bodies.values()))
+    # OOV: 기대본문을 평가와 동일하게 문장 컷 후 NAML과 동일 토큰화
+    n_sent_oov = int(_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES)
+    exp_for_oov = [
+        clip_expected_body_to_first_sentences(t, n_sent_oov) or ""
+        for t in expected_bodies.values()
+    ]
+    oov_all_json = aggregate_oov_from_texts(word_dict, exp_for_oov)
     texts_test_matched: List[str] = []
     for i in range(len(all_test_pn)):
         if int(all_test_pn[i]) == 0:
             continue
         k = _norm_expected_body_key(all_test_userid_str[i], all_test_newsid_str[i])
         if k in expected_bodies:
-            texts_test_matched.append(expected_bodies[k])
+            texts_test_matched.append(
+                clip_expected_body_to_first_sentences(expected_bodies[k], n_sent_oov) or ""
+            )
     oov_test_slots = aggregate_oov_from_texts(word_dict, texts_test_matched)
 
     print("\n=== 테스트셋 성능 비교 ===")
