@@ -10,7 +10,7 @@
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_expected.py \
   --expected-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
   --weights saved_models/NAML_mind_2000_expected.h5 \
-  --tune-log saved_models/naml_tune_actual_log.json \
+  --tune-log saved_models/naml_tune_expected_log.json \
   --mind-dataset-subdir MIND_2000 \
   --expected-body-first-n-sentences 3
 
