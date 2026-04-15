@@ -14,6 +14,9 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_expect
   --mind-dataset-subdir MIND_2000 \
   --expected-body-first-n-sentences 3
 
+# 학습(튜닝)과 동일하게 평가에서도 앞 N문장만 쓰려면 명시: --expected-body-first-n-sentences 3
+# 미지정이면 평가·OOV는 전체 기대본문 문자열 사용(튜닝 로그의 N은 자동 반영하지 않음).
+
 # naml_tune_actual.py 로 튜닝·저장한 가중치는 CNN 폭 등 구조가 다를 수 있음 → 같은 로그를 넘겨야 함:
 #   --tune-log saved_models/naml_tune_actual_log.json
 """
@@ -179,12 +182,14 @@ def _arch_from_tune_log(log_path: str) -> Dict[str, float | int]:
 def _expected_prep_from_tune_log(log_path: str) -> Dict[str, object]:
     """
     naml_tune_expected.py 로그에서 기대본문 전처리 재현용 설정 추출.
+    (어휘·임베딩 행 수 맞추기용 train/test 디렉터리)
+    평가 시 앞 N문장 컷은 이 로그 값을 쓰지 않고 --expected-body-first-n-sentences 로만 적용한다.
     반환 예:
       {
         "use_expected_body": True/False,
         "expected_train_dir": "...",
         "expected_test_dir": "...",
-        "expected_body_first_n_sentences": 3,
+        "expected_body_first_n_sentences": 3,  # 기록용; eval_test_expected 는 자동 미적용
       }
     """
     out: Dict[str, object] = {"use_expected_body": False}
@@ -272,7 +277,8 @@ def main() -> None:
         type=int,
         default=None,
         metavar="N",
-        help="기대본문 평가·OOV 집계 시 앞 N문장만 사용 (0=전체). 미지정이면 --tune-log 자동값만 적용, 그것도 없으면 0",
+        help="기대본문 평가·OOV 집계 시 앞 N문장만 사용 (0=전체). "
+        "미지정이면 문장 컷 없음(전체 본문). --tune-log의 값은 자동 적용하지 않음",
     )
     args = parser.parse_args()
 
@@ -315,19 +321,15 @@ def main() -> None:
             if bool(prep_cfg.get("use_expected_body", False)):
                 tr = _resolve_dir_like_training(str(prep_cfg.get("expected_train_dir") or ""))
                 te = _resolve_dir_like_training(str(prep_cfg.get("expected_test_dir") or ""))
-                n_sent = prep_cfg.get("expected_body_first_n_sentences", None)
                 if tr and te:
                     prep_expected_train = load_expected_bodies_from_dir(tr)
                     prep_expected_test = load_expected_bodies_from_dir(te)
-                    if n_sent is not None:
-                        try:
-                            _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES = max(0, int(n_sent))
-                        except Exception:
-                            pass
                     print(
                         "튜닝 로그 기반 자동 전처리 적용: "
-                        f"use_expected_body=True, first_n={_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}, "
-                        f"train={len(prep_expected_train)} ({tr}), test={len(prep_expected_test)} ({te})"
+                        f"use_expected_body=True, train={len(prep_expected_train)} ({tr}), "
+                        f"test={len(prep_expected_test)} ({te}) "
+                        "(평가 시 앞 N문장 컷은 --expected-body-first-n-sentences 로만 지정)",
+                        flush=True,
                     )
                 else:
                     print(
@@ -340,19 +342,16 @@ def main() -> None:
         _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES = max(0, int(args.expected_body_first_n_sentences))
         print(
             (
-                f"기대본문 문장 컷(CLI): 앞 {_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}문장만 사용"
+                f"기대본문 문장 컷: 앞 {_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}문장만 사용 (CLI)"
                 if _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES > 0
-                else "기대본문 문장 컷(CLI): 전체 문장 사용"
+                else "기대본문 문장 컷: 전체 문장 (CLI에서 0 지정)"
             ),
             flush=True,
         )
     else:
+        _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES = 0
         print(
-            (
-                f"기대본문 문장 컷: 앞 {_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}문장 (튜닝 로그/기본값)"
-                if _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES > 0
-                else "기대본문 문장 컷: 전체 문장 (튜닝 로그에 값 없음 또는 0)"
-            ),
+            "기대본문 문장 컷: 미지정 → 평가·OOV는 전체 본문 (튜닝 로그의 N은 자동 반영하지 않음)",
             flush=True,
         )
 
