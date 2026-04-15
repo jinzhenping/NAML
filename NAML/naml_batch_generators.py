@@ -8,11 +8,8 @@ from __future__ import annotations
 import numpy as np
 from nltk.tokenize import word_tokenize
 
-from naml_common import (
-    MAX_HISTORY_CLICKS,
-    EXPECTED_BODY_FIRST_N_SENTENCES,
-    clip_expected_body_to_first_sentences,
-)
+import naml_common as _naml_common_runtime
+from naml_common import MAX_HISTORY_CLICKS, clip_expected_body_to_first_sentences
 
 
 def _norm_expected_body_key(uid, nid):
@@ -94,7 +91,7 @@ def generate_batch_data_train(
                             if key in expected_bodies:
                                 expected_body = expected_bodies[key]
                                 _eb = clip_expected_body_to_first_sentences(
-                                    expected_body, EXPECTED_BODY_FIRST_N_SENTENCES
+                                    expected_body, _naml_common_runtime.EXPECTED_BODY_FIRST_N_SENTENCES
                                 )
                                 body_tokens = word_tokenize(_eb.lower()) if _eb else []
                                 word_id = []
@@ -236,7 +233,7 @@ def generate_batch_data_test(
                         if key in expected_bodies:
                             expected_body = expected_bodies[key]
                             _eb = clip_expected_body_to_first_sentences(
-                                expected_body, EXPECTED_BODY_FIRST_N_SENTENCES
+                                expected_body, _naml_common_runtime.EXPECTED_BODY_FIRST_N_SENTENCES
                             )
                             body_tokens = word_tokenize(_eb.lower()) if _eb else []
                             word_id = []
