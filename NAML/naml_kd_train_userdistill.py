@@ -13,7 +13,6 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train_us
   --tune-log saved_models/naml_tune_actual_log.json \
   --expected-body-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
   --expected-body-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
-  --expected-body-first-n-sentences 3 \
   --mind-dataset-subdir MIND_2000 \
   --batch-size 8 \
   --eval-batch-size 16 \
@@ -21,6 +20,8 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train_us
   --lambda-distill-exp 0.2 \
   --epochs 10 \
   --output-weights saved_models/NAML_kd_student_userdistill.h5 --teacher-exp-use-expected-body
+
+# 기본: 학습 기대본문=앞 3문장, 에폭 평가 기대본문=전체(0). 평가도 3문장이면 --eval-expected-body-first-n-sentences 3
 
 교사 가중치가 naml_tune_actual 로 튜닝된 경우 CNN 폭 등이 다르므로 eval_test_expected 와 동일하게:
   --tune-log saved_models/naml_tune_actual_log.json
@@ -262,6 +263,8 @@ def run_test_set_eval(
     news_index_reverse: Dict[int, str],
     expected_bodies_test: Optional[Dict[Tuple[str, str], str]],
     eval_batch_size: int,
+    *,
+    eval_expected_body_clip_n_sentences: Optional[int] = None,
 ) -> Tuple[Dict[str, Any], Optional[Dict[str, Any]]]:
     n_test = len(all_test_id)
     if n_test == 0:
@@ -295,6 +298,9 @@ def run_test_set_eval(
 
     metrics_exp: Optional[Dict[str, Any]] = None
     if expected_bodies_test:
+        _exp_kw: Dict[str, Any] = {}
+        if eval_expected_body_clip_n_sentences is not None:
+            _exp_kw["expected_body_clip_n_sentences"] = eval_expected_body_clip_n_sentences
         testgen_exp = generate_batch_data_test(
             word_dict,
             news_words,
@@ -312,6 +318,7 @@ def run_test_set_eval(
             all_userid_str=all_test_userid_str,
             all_newsid_str=all_test_newsid_str,
             news_index_reverse=news_index_reverse,
+            **_exp_kw,
         )
         score_exp = model_test.predict(testgen_exp, steps=test_steps, verbose=0)
         metrics_exp = calc_metrics_from_scores(score_exp, all_test_label, all_test_index)
@@ -547,7 +554,14 @@ def main() -> None:
         "--expected-body-first-n-sentences",
         type=int,
         default=3,
-        help="기대본문 사용 시 앞 N문장만 사용 (0 이하면 전체 사용)",
+        help="학습 배치·교사/학생 forward에서 기대본문 앞 N문장만 사용 (0 이하면 전체)",
+    )
+    ap.add_argument(
+        "--eval-expected-body-first-n-sentences",
+        type=int,
+        default=0,
+        metavar="N",
+        help="에폭마다 테스트셋 [기대본문] 지표 계산 시 앞 N문장만 사용 (0=전체, 기본 0). 학습과 독립",
     )
     ap.add_argument("--seed", type=int, default=SEED)
     args = ap.parse_args()
@@ -555,10 +569,21 @@ def main() -> None:
     np.random.seed(args.seed)
     tf.random.set_seed(args.seed)
     _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES = max(0, int(args.expected_body_first_n_sentences))
+    _eval_exp_n = max(0, int(args.eval_expected_body_first_n_sentences))
     print(
-        f"기대본문 문장 컷: 앞 {_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}문장 사용"
-        if _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES > 0
-        else "기대본문 문장 컷: 전체 문장 사용",
+        (
+            f"학습 기대본문: 앞 {_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}문장"
+            if _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES > 0
+            else "학습 기대본문: 전체 문장"
+        ),
+        flush=True,
+    )
+    print(
+        (
+            f"평가 기대본문([기대본문] 지표): 앞 {_eval_exp_n}문장"
+            if _eval_exp_n > 0
+            else "평가 기대본문([기대본문] 지표): 전체 문장 (기본)"
+        ),
         flush=True,
     )
 
@@ -718,6 +743,7 @@ def main() -> None:
             news_index_reverse,
             expected_bodies_test,
             eval_bs,
+            eval_expected_body_clip_n_sentences=_eval_exp_n,
         )
 
     eval_cb: Optional[Callable[[], Tuple[Dict[str, Any], Optional[Dict[str, Any]]]]] = None

@@ -195,6 +195,8 @@ def generate_batch_data_test(
     all_newsid_str=None,
     news_index_reverse=None,
     all_test_user_pos_override=None,
+    *,
+    expected_body_clip_n_sentences=None,
 ):
     if news_index_reverse is None:
         news_index_reverse = {v: k for k, v in news_index.items()}
@@ -232,9 +234,12 @@ def generate_batch_data_test(
                         key = _norm_expected_body_key(user_id_str, news_id_str)
                         if key in expected_bodies:
                             expected_body = expected_bodies[key]
-                            _eb = clip_expected_body_to_first_sentences(
-                                expected_body, _naml_common_runtime.EXPECTED_BODY_FIRST_N_SENTENCES
+                            _n = (
+                                expected_body_clip_n_sentences
+                                if expected_body_clip_n_sentences is not None
+                                else _naml_common_runtime.EXPECTED_BODY_FIRST_N_SENTENCES
                             )
+                            _eb = clip_expected_body_to_first_sentences(expected_body, _n)
                             body_tokens = word_tokenize(_eb.lower()) if _eb else []
                             word_id = []
                             for word in body_tokens:
