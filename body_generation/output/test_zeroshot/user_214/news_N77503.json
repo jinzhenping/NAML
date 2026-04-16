@@ -1,0 +1,21 @@
+{
+  "user_id": 214,
+  "candidate_news_id": "N77503",
+  "candidate_title": "What Happens When Your Cruise Has to Rescue Another Ship",
+  "user_history_count": 10,
+  "user_history": [
+    "Mother of missing Florida girl charged; human remains found",
+    "Celebrity plastic surgery transformations",
+    "Family Reunited With Dog Who Had Been Missing Since August While Waiting in Line to Adopt Cat",
+    "Dad took 11-month-old to drug deal as 'human shield'. The baby was shot.",
+    "'It's the biggest gift I've ever gotten:' Iraq War veteran who lost leg and suffered significant trauma will come home to a hero's house in Glastonbury",
+    "They bought a 1 euro house in Italy -- here's what happened next",
+    "Kelsey Grammer shreds 'Housewives' ex Camille, dubs her 'pathetic'",
+    "Funny celeb pics for November 2019",
+    "Georgia executes man convicted of killing convenience store clerk",
+    "Mother-in-law poses as teenage boy to catch man in child porn case"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Mother of missing Florida girl charged; human remains found\"\n\"Celebrity plastic surgery transformations\"\n\"Family Reunited With Dog Who Had Been Missing Since August While Waiting in Line to Adopt Cat\"\n\"Dad took 11-month-old to drug deal as 'human shield'. The baby was shot.\"\n\"'It's the biggest gift I've ever gotten:' Iraq War veteran who lost leg and suffered significant trauma will come home to a hero's house in Glastonbury\"\n\"They bought a 1 euro house in Italy -- here's what happened next\"\n\"Kelsey Grammer shreds 'Housewives' ex Camille, dubs her 'pathetic'\"\n\"Funny celeb pics for November 2019\"\n\"Georgia executes man convicted of killing convenience store clerk\"\n\"Mother-in-law poses as teenage boy to catch man in child porn case\"\n\n[Candidate News Title]\n\"What Happens When Your Cruise Has to Rescue Another Ship\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"What Happens When Your Cruise Has to Rescue Another Ship,\" you might expect a detailed exploration of the procedures and protocols involved when a cruise liner assists another vessel in distress. The article is likely to cover the logistical challenges of coordinating a rescue operation at sea, the responsibilities of the crew, and the safety measures taken to protect both passengers and crew members during such incidents. Additionally, it may include insights into past rescue operations, illustrating how cruise ships have responded to emergencies, and the impact these situations have on travelers’ experiences.",
+  "model": "gpt-4o-mini"
+}

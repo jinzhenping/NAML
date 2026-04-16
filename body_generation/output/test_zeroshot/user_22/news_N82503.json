@@ -1,0 +1,21 @@
+{
+  "user_id": 22,
+  "candidate_news_id": "N82503",
+  "candidate_title": "FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'",
+  "user_history_count": 10,
+  "user_history": [
+    "Police Surprise Woman Who Anonymously Baked Pizzelle Cookies for Years in Heartwarming Video",
+    "Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Celebrity mug shots",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "17 restaurants that will be open on Thanksgiving",
+    "9 Amazing Transgender Women Who Changed History",
+    "This is Chick-fil-A's most-ordered menu item",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Police Surprise Woman Who Anonymously Baked Pizzelle Cookies for Years in Heartwarming Video\"\n\"Millennials, Gen Xers to baby boomers: Can you retire so I can get a job promotion?\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Celebrity mug shots\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"17 restaurants that will be open on Thanksgiving\"\n\"9 Amazing Transgender Women Who Changed History\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"WWE Wrestler Jordan Myles Quits in Expletive-Filled Rant as He Brands the Company Racist\"\n\n[Candidate News Title]\n\"FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a warning issued by the FDA to Dollar Tree regarding the sale of potentially unsafe medications. Readers may expect to learn about the specific drugs in question, the reasons behind the FDA's concerns, and any potential health risks associated with these products. Additionally, the article may outline the regulatory implications for Dollar Tree and what steps the company might take in response. It is possible that the article could also provide context about the broader issue of safety in discount retail environments.",
+  "model": "gpt-4o-mini"
+}

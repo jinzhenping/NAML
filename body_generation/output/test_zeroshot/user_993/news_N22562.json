@@ -1,0 +1,21 @@
+{
+  "user_id": 993,
+  "candidate_news_id": "N22562",
+  "candidate_title": "Celebrity PDA of 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "11 Expenses to Cut Now If You Want to Retire Early",
+    "Accused killer's girlfriend reveals Colorado mom's last words",
+    "45 Amazing Facts About Airplanes That Will Make Your Mind Soar",
+    "Migrants Find Different Fates at Texas, Arizona Borders",
+    "College gymnast dies following training accident in Connecticut",
+    "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+    "Hyatt is eliminating travel-sized plastic toiletries",
+    "How to Make Sure You Have a Seat Next to Your Family on Your Next Flight"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"11 Expenses to Cut Now If You Want to Retire Early\"\n\"Accused killer's girlfriend reveals Colorado mom's last words\"\n\"45 Amazing Facts About Airplanes That Will Make Your Mind Soar\"\n\"Migrants Find Different Fates at Texas, Arizona Borders\"\n\"College gymnast dies following training accident in Connecticut\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"Hyatt is eliminating travel-sized plastic toiletries\"\n\"How to Make Sure You Have a Seat Next to Your Family on Your Next Flight\"\n\n[Candidate News Title]\n\"Celebrity PDA of 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Celebrity PDA of 2019,\" you may expect to find an overview of notable public displays of affection among celebrities throughout the year. The piece is likely to highlight various high-profile couples, detailing specific instances of their affectionate moments at events or social gatherings. Additionally, it could discuss the public's reactions to these displays and how they may reflect broader trends in celebrity culture. Overall, the article may aim to provide a light-hearted look at affection in the spotlight.",
+  "model": "gpt-4o-mini"
+}

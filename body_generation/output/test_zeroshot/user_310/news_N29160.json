@@ -1,0 +1,21 @@
+{
+  "user_id": 310,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 10,
+  "user_history": [
+    "U.S. troops abandoned their Syrian base. Video appears to show Russians have moved in.",
+    "Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence",
+    "James Mattis mocks Trump's bone spurs",
+    "Report: Adidas working on buyout of $25 million John Wall deal amid injuries",
+    "An engineer has devised a way to stop Arctic ice from melting by scattering millions of tiny glass beads to reflect sunlight away",
+    "Blueberry Dump Cake Satisfies Every Sweet Tooth",
+    "The Warriors' fall from glory, explained",
+    "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"U.S. troops abandoned their Syrian base. Video appears to show Russians have moved in.\"\n\"Woman, suspect dead at 'Tarzan' actor Ron Ely's California residence\"\n\"James Mattis mocks Trump's bone spurs\"\n\"Report: Adidas working on buyout of $25 million John Wall deal amid injuries\"\n\"An engineer has devised a way to stop Arctic ice from melting by scattering millions of tiny glass beads to reflect sunlight away\"\n\"Blueberry Dump Cake Satisfies Every Sweet Tooth\"\n\"The Warriors' fall from glory, explained\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Opinion: Colin Kaepernick is about to get what he deserves: a chance,\" they may expect a discussion surrounding Kaepernick's potential return to professional football after his controversial exit from the NFL. The article is likely to explore his past activism, the ongoing debates about his impact on the sport, and the changing landscape of the NFL regarding player protests. Additionally, it could include insights into how recent developments in the league may open opportunities for Kaepernick, though this is speculative and not guaranteed.",
+  "model": "gpt-4o-mini"
+}

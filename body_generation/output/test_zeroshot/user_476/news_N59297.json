@@ -1,0 +1,21 @@
+{
+  "user_id": 476,
+  "candidate_news_id": "N59297",
+  "candidate_title": "The Coolest Car Lamborghini Never Made Is Up For Sale",
+  "user_history_count": 10,
+  "user_history": [
+    "Antonio Brown is exposing Roger Goodell's unchecked power to shut players out of the NFL",
+    "Meghan McCain GOES IN on Donald Trump Jr. on 'The View'",
+    "Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Widow Sues Truth Aquatics Owner In Conception Boat Fire That Killed 34",
+    "Pro Russian hockey team tweets it wants fired Don Cherry as TV analyst to 'talk whatever he thinks'",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Bucs release former first-round pick Vernon Hargreaves",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\""
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Antonio Brown is exposing Roger Goodell's unchecked power to shut players out of the NFL\"\n\"Meghan McCain GOES IN on Donald Trump Jr. on 'The View'\"\n\"Star Ohio State DE Chase Young will miss Maryland game 'due to possible NCAA issue'\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Widow Sues Truth Aquatics Owner In Conception Boat Fire That Killed 34\"\n\"Pro Russian hockey team tweets it wants fired Don Cherry as TV analyst to 'talk whatever he thinks'\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Bucs release former first-round pick Vernon Hargreaves\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Bannon calls Pelosi's impeachment strategy \"actually quite brilliant\"\"\n\n[Candidate News Title]\n\"The Coolest Car Lamborghini Never Made Is Up For Sale\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to learn about a unique Lamborghini model that was never put into production but is now available for purchase. The piece is likely to detail the car's design features, specifications, and the reasons behind its limited release. Additionally, it could explore the significance of this model within the context of Lamborghini's history and automotive innovation. The article may also include insights into the current market value and potential interest from collectors, highlighting its rarity and appeal.",
+  "model": "gpt-4o-mini"
+}

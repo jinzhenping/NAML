@@ -1,0 +1,21 @@
+{
+  "user_id": 647,
+  "candidate_news_id": "N44493",
+  "candidate_title": "How Google Interferes With Its Search Algorithms and Changes Your Results",
+  "user_history_count": 10,
+  "user_history": [
+    "Pink on Why She Didn't Headline the 2019 Super Bowl Halftime Show After Offer",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Chris Brown is having a yard sale at his house",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "They bought a 1 euro house in Italy -- here's what happened next",
+    "Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom",
+    "Camila Cabello and boyfriend Shawn Mendes get tattoos together: Photos"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Pink on Why She Didn't Headline the 2019 Super Bowl Halftime Show After Offer\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Chris Brown is having a yard sale at his house\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"They bought a 1 euro house in Italy -- here's what happened next\"\n\"Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom\"\n\"Camila Cabello and boyfriend Shawn Mendes get tattoos together: Photos\"\n\n[Candidate News Title]\n\"How Google Interferes With Its Search Algorithms and Changes Your Results\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"How Google Interferes With Its Search Algorithms and Changes Your Results,\" you may expect a detailed examination of the mechanisms behind Google’s search algorithms and how they impact the information users receive. The article is likely to explore various aspects of algorithm adjustments, including potential biases and the implications for search result accuracy. It may also touch on user experiences and concerns regarding the transparency of these changes, as well as the broader consequences for access to information in the digital age.",
+  "model": "gpt-4o-mini"
+}

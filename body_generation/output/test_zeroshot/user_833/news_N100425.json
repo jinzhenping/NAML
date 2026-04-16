@@ -1,0 +1,21 @@
+{
+  "user_id": 833,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 10,
+  "user_history": [
+    "12 easy ways to refresh your home, according to the Fords from HGTV",
+    "Woman's Halloween 'devil teeth' turn into dental emergency",
+    "200 Shocking Home Photos You Have to See",
+    "1 Family's Adoption Photo Shoot Is on Point, but the Touching Story Behind It Is Everything",
+    "See what your favorite country music stars looked like at the beginning of their careers",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2",
+    "Beshear vs. Bevin: Kentucky governor's race could be decided by state legislature",
+    "Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019",
+    "Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"12 easy ways to refresh your home, according to the Fords from HGTV\"\n\"Woman's Halloween 'devil teeth' turn into dental emergency\"\n\"200 Shocking Home Photos You Have to See\"\n\"1 Family's Adoption Photo Shoot Is on Point, but the Touching Story Behind It Is Everything\"\n\"See what your favorite country music stars looked like at the beginning of their careers\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"Richard Gere, 70, and Wife Alejandra Silva, 36, Expecting Baby No. 2\"\n\"Beshear vs. Bevin: Kentucky governor's race could be decided by state legislature\"\n\"Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019\"\n\"Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In reading \"The most talked about movie moments of the 2010s,\" the user may expect an overview of significant cinematic scenes and events that captivated audiences over the past decade. The article is likely to highlight notable performances, memorable quotes, and pivotal plot twists that generated extensive discussion and analysis among film enthusiasts. Additionally, it may reference popular films and actors from the era, providing context for why these moments became particularly influential. Overall, the content could serve as a reflection on the impact of these moments in shaping contemporary film culture.",
+  "model": "gpt-4o-mini"
+}

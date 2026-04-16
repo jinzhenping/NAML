@@ -1,0 +1,21 @@
+{
+  "user_id": 568,
+  "candidate_news_id": "N29160",
+  "candidate_title": "Opinion: Colin Kaepernick is about to get what he deserves: a chance",
+  "user_history_count": 10,
+  "user_history": [
+    "Meghan Markle Says That Archie Has Two Teeth and Is Crawling",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Jordyn Woods debuts shocking new look: Pic",
+    "Megyn Kelly Is Back to Work! Details on Her New Job",
+    "South Euclid man shot in the leg because of the way he flicked ashes off his cigar, police say",
+    "Lamar Odom is Engaged to Girlfriend Sabrina Parr -- See Her Stunning Ring!",
+    "Mother of missing Florida girl charged; human remains found",
+    "John Legend named PEOPLE's 'Sexiest Man Alive'",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Meghan Markle Says That Archie Has Two Teeth and Is Crawling\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Jordyn Woods debuts shocking new look: Pic\"\n\"Megyn Kelly Is Back to Work! Details on Her New Job\"\n\"South Euclid man shot in the leg because of the way he flicked ashes off his cigar, police say\"\n\"Lamar Odom is Engaged to Girlfriend Sabrina Parr -- See Her Stunning Ring!\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"John Legend named PEOPLE's 'Sexiest Man Alive'\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\n[Candidate News Title]\n\"Opinion: Colin Kaepernick is about to get what he deserves: a chance\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect a discussion on Colin Kaepernick's potential return to professional football, exploring the implications of his upcoming opportunities. It may detail recent developments surrounding Kaepernick, including his training efforts and public support, while examining the broader context of his career and activism. The article could also analyze the reactions from fans and critics alike, shedding light on how his return might impact the sport and its culture. Overall, it is likely to provide an informative overview of Kaepernick's situation and its significance in today's sports landscape.",
+  "model": "gpt-4o-mini"
+}

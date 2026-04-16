@@ -1,0 +1,21 @@
+{
+  "user_id": 561,
+  "candidate_news_id": "N54368",
+  "candidate_title": "South Carolina teen gets life in prison for deadly elementary school shooting",
+  "user_history_count": 10,
+  "user_history": [
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "Man cuffed for eating sandwich on train platform gets an apology",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "I've had it with this former friend",
+    "Why I'm Done Celebrating The Accomplishments Of Couples",
+    "See the most expensive watch ever sold at auction",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "Cherry disappointed with MacLean's apology: 'He buried me'",
+    "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"I've had it with this former friend\"\n\"Why I'm Done Celebrating The Accomplishments Of Couples\"\n\"See the most expensive watch ever sold at auction\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"Cherry disappointed with MacLean's apology: 'He buried me'\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\n[Candidate News Title]\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to report on the sentencing of a South Carolina teenager who has been convicted for a deadly shooting at an elementary school. Readers can expect details about the circumstances surrounding the incident, including the events leading up to the shooting, the legal proceedings, and the impact on the community. The piece may also discuss the broader implications of school safety and gun violence, providing context on similar incidents and how they have been addressed in the past. Additionally, it could include statements from officials or affected families, though this remains uncertain.",
+  "model": "gpt-4o-mini"
+}

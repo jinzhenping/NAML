@@ -1,0 +1,21 @@
+{
+  "user_id": 687,
+  "candidate_news_id": "N87192",
+  "candidate_title": "Bill Gates tops Jeff Bezos as world's richest person with Amazon slide",
+  "user_history_count": 10,
+  "user_history": [
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "Stars Who Served in the Military",
+    "11-year-old boy dies after being shot in chest",
+    "Mother of missing 5-year-old Taylor Williams now person of interest in child's disappearance",
+    "You Must Never Vote for Bloomberg",
+    "Mother of missing Florida girl charged; human remains found",
+    "Insiders predict: NFL Week 11 winners",
+    "Missouri high school football coach, team under fire for 'illegal' prayer after complaint from atheist group",
+    "South Carolina teen gets life in prison for deadly elementary school shooting",
+    "Popeyes stabbing: Suspect arrested in fatal attack after waiting in line for sandwich"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Stars Who Served in the Military\"\n\"11-year-old boy dies after being shot in chest\"\n\"Mother of missing 5-year-old Taylor Williams now person of interest in child's disappearance\"\n\"You Must Never Vote for Bloomberg\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"Insiders predict: NFL Week 11 winners\"\n\"Missouri high school football coach, team under fire for 'illegal' prayer after complaint from atheist group\"\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\"Popeyes stabbing: Suspect arrested in fatal attack after waiting in line for sandwich\"\n\n[Candidate News Title]\n\"Bill Gates tops Jeff Bezos as world's richest person with Amazon slide\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Bill Gates tops Jeff Bezos as world's richest person with Amazon slide,\" you can expect a detailed analysis of the recent fluctuations in wealth among the world's richest individuals, particularly focusing on Bill Gates and Jeff Bezos. The article may discuss the factors contributing to Gates' rise to the top position, including recent investments or philanthropic activities, while also examining the decline of Amazon’s stock and its impact on Bezos’ net worth. Additionally, it could provide insights into the broader economic trends affecting wealth distribution among billionaires.",
+  "model": "gpt-4o-mini"
+}

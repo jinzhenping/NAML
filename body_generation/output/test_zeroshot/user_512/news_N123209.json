@@ -1,0 +1,21 @@
+{
+  "user_id": 512,
+  "candidate_news_id": "N123209",
+  "candidate_title": "Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions",
+  "user_history_count": 10,
+  "user_history": [
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Christina Anstead shares new pic of son Hudson at 2 months old",
+    "40 Fun Facts About Jennifer Aniston",
+    "This Is How Long Wine Lasts After You've Opened The Bottle",
+    "Australian tourist killed by elephant in Namibia",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "College gymnast dies following training accident in Connecticut",
+    "Utah death-row inmate featured in best-selling book dies",
+    "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+    "18 Quiet Dogs That Don't Bark (Too Much)"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"40 Fun Facts About Jennifer Aniston\"\n\"This Is How Long Wine Lasts After You've Opened The Bottle\"\n\"Australian tourist killed by elephant in Namibia\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"18 Quiet Dogs That Don't Bark (Too Much)\"\n\n[Candidate News Title]\n\"Survivor Contestants Missy Byrd and Elizabeth Beisel Apologize For Their Actions\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may encounter an overview of the recent apology issued by Survivor contestants Missy Byrd and Elizabeth Beisel regarding their actions during the show. The piece is likely to provide context surrounding the incident that prompted the apologies, possibly including reactions from fellow contestants or fans. Additionally, it may explore themes of accountability and public perception within reality television, highlighting how contestants navigate the consequences of their behavior on and off the screen. Overall, readers can expect a straightforward account of the situation, along with insights into its broader implications.",
+  "model": "gpt-4o-mini"
+}

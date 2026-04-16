@@ -1,0 +1,18 @@
+{
+  "user_id": 286,
+  "candidate_news_id": "N99744",
+  "candidate_title": "How to Get Rid of Skin Tags, According to a Dermatologist",
+  "user_history_count": 7,
+  "user_history": [
+    "25 things to sell when you're ready to retire",
+    "The Latest: Famous figures pay tribute to Jessye Norman",
+    "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+    "Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight",
+    "Man's trip to a cheese shop helps unravel missing persons case",
+    "A White Woman Searches for Her Black Family",
+    "How often should I start my car and let it idle in cold weather? Answer: Don't."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"25 things to sell when you're ready to retire\"\n\"The Latest: Famous figures pay tribute to Jessye Norman\"\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"Boxer Patrick Day dies after suffering traumatic brain injury in super welterweight fight\"\n\"Man's trip to a cheese shop helps unravel missing persons case\"\n\"A White Woman Searches for Her Black Family\"\n\"How often should I start my car and let it idle in cold weather? Answer: Don't.\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"How to Get Rid of Skin Tags, According to a Dermatologist\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find practical advice on skin tags, including what they are and common reasons for their occurrence. The piece may discuss various methods for removing skin tags, potentially covering both at-home remedies and professional treatments offered by dermatologists. Additionally, it could include tips for preventing the formation of new skin tags and when to seek medical advice. Overall, the content is expected to provide informative guidance on managing this common skin concern.",
+  "model": "gpt-4o-mini"
+}

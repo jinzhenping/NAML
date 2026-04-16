@@ -1,0 +1,21 @@
+{
+  "user_id": 559,
+  "candidate_news_id": "N23721",
+  "candidate_title": "Kate Middleton Took Public Transit to Her Royal Engagement Today",
+  "user_history_count": 10,
+  "user_history": [
+    "Philadelphia shooting: 10-year-old boy shot in head while walking home from school",
+    "Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019",
+    "The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Victoria Justice Reveals the Last Time She Talked to Ariana Grande (Exclusive)",
+    "Ashley Graham Says She Has a Major Case of Pregnancy Brain But What Is That?",
+    "Jordyn Woods debuts shocking new look: Pic",
+    "Mom named person of interest in 5-year-old girl's disappearance",
+    "When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon",
+    "Celebrity plastic surgery transformations"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Philadelphia shooting: 10-year-old boy shot in head while walking home from school\"\n\"Kristen Stewart is planning to propose to her girlfriend, plus more celeb love life news for early November 2019\"\n\"The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Victoria Justice Reveals the Last Time She Talked to Ariana Grande (Exclusive)\"\n\"Ashley Graham Says She Has a Major Case of Pregnancy Brain But What Is That?\"\n\"Jordyn Woods debuts shocking new look: Pic\"\n\"Mom named person of interest in 5-year-old girl's disappearance\"\n\"When You See Paris Jackson's Wheat-Blond Hair, You'll Run to the Salon\"\n\"Celebrity plastic surgery transformations\"\n\n[Candidate News Title]\n\"Kate Middleton Took Public Transit to Her Royal Engagement Today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers may expect to learn about Kate Middleton's recent decision to use public transportation for a royal engagement, highlighting her efforts to connect with the public and present a more approachable image. The piece could include details about the event she attended, the reactions from onlookers, and any commentary on the significance of this choice in relation to her royal duties. Additionally, the article might explore the potential implications of this act on public perception of the royal family, particularly in terms of modernizing their image.",
+  "model": "gpt-4o-mini"
+}

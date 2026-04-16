@@ -1,0 +1,21 @@
+{
+  "user_id": 997,
+  "candidate_news_id": "N122640",
+  "candidate_title": "This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.",
+  "user_history_count": 10,
+  "user_history": [
+    "'Go back to work': Outcry over deaths on Amazon's warehouse floor",
+    "Kevin Hart Shares Emotional Video About Appreciating Life Following Near-Fatal Car Accident",
+    "Meghan Markle Smudged Makeup on a Fan's Coat & He Reacted Perfectly",
+    "I tried to eat like Kate Middleton for a week, but I couldn't get through it without cheating",
+    "New findings parents need to know about screen time and kids",
+    "I Donated Blood for the First Time at 27, and It Ended in Signs of Cardiac Arrest",
+    "Dean Foods files for bankruptcy",
+    "Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out",
+    "Red and Blue Economies Are Heading in Sharply Different Directions",
+    "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Go back to work': Outcry over deaths on Amazon's warehouse floor\"\n\"Kevin Hart Shares Emotional Video About Appreciating Life Following Near-Fatal Car Accident\"\n\"Meghan Markle Smudged Makeup on a Fan's Coat & He Reacted Perfectly\"\n\"I tried to eat like Kate Middleton for a week, but I couldn't get through it without cheating\"\n\"New findings parents need to know about screen time and kids\"\n\"I Donated Blood for the First Time at 27, and It Ended in Signs of Cardiac Arrest\"\n\"Dean Foods files for bankruptcy\"\n\"Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out\"\n\"Red and Blue Economies Are Heading in Sharply Different Directions\"\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\n[Candidate News Title]\n\"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article regarding Myles Garrett and his helmet attack, they are likely to find an analysis of the incident involving Garrett and the implications it may have on his career and the NFL. The piece could discuss the context of the confrontation, including any penalties or disciplinary actions Garrett might face, as well as reactions from fans and analysts. Additionally, it may explore broader themes of player conduct and safety in professional sports. This article is likely to provide insights into the league's stance on such incidents and potential repercussions for Garrett moving forward.",
+  "model": "gpt-4o-mini"
+}

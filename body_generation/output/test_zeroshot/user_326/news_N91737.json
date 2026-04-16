@@ -1,0 +1,21 @@
+{
+  "user_id": 326,
+  "candidate_news_id": "N91737",
+  "candidate_title": "13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid",
+  "user_history_count": 10,
+  "user_history": [
+    "Thanksgiving side dishes: 11 unique recipes to try this season",
+    "Three school workers charged in death of special needs student",
+    "Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded",
+    "We made a 3-course feast using Chrissy Teigen's recipes, and had the best homemade pizza we've ever tasted",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "It's National Pickle Day So Here Are All The Ways To Celebrate The Momentous Occasion",
+    "Abandoned 'unicorn' puppy has a tail on its head",
+    "Parents, students 'shaking and crying' after California school shooting"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Thanksgiving side dishes: 11 unique recipes to try this season\"\n\"Three school workers charged in death of special needs student\"\n\"Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded\"\n\"We made a 3-course feast using Chrissy Teigen's recipes, and had the best homemade pizza we've ever tasted\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"It's National Pickle Day So Here Are All The Ways To Celebrate The Momentous Occasion\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Parents, students 'shaking and crying' after California school shooting\"\n\n[Candidate News Title]\n\"13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid,\" the user might expect an examination of Christian Navarro's criticisms regarding Disney's casting choices for the film. It is likely to delve into the implications of racial representation in media, discussing Navarro's views on diversity and inclusion within the entertainment industry. The article may also explore reactions from fans and other industry figures, potentially highlighting the broader conversation about race and representation in Hollywood.",
+  "model": "gpt-4o-mini"
+}

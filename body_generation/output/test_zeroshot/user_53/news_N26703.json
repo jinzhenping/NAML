@@ -1,0 +1,21 @@
+{
+  "user_id": 53,
+  "candidate_news_id": "N26703",
+  "candidate_title": "Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame",
+  "user_history_count": 10,
+  "user_history": [
+    "The most haunted roads in the US and the chilling stories behind them",
+    "Report: Adidas working on buyout of $25 million John Wall deal amid injuries",
+    "5 charged in alcohol poisoning death of UC Irvine fraternity brother",
+    "Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Holocaust survivor under guard amid death threats",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The most haunted roads in the US and the chilling stories behind them\"\n\"Report: Adidas working on buyout of $25 million John Wall deal amid injuries\"\n\"5 charged in alcohol poisoning death of UC Irvine fraternity brother\"\n\"Chick-fil-A Apologizes to Customers for Promoting National Sandwich Day   Which Is on a Sunday\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Holocaust survivor under guard amid death threats\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\n[Candidate News Title]\n\"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the controversy surrounding Mason Rudolph, particularly focusing on his involvement in a recent incident where he was struck in the head with his own helmet. Readers may expect an analysis of the incident, examining the broader implications for Rudolph's performance and reputation in the NFL. The piece could explore differing opinions on whether he is being unfairly criticized or if he deserves blame for the circumstances leading to the altercation. Additionally, it may provide insights from sports analysts or commentary on the impact of such incidents on player safety and accountability.",
+  "model": "gpt-4o-mini"
+}

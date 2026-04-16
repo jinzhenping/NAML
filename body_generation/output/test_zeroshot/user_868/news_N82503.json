@@ -1,0 +1,18 @@
+{
+  "user_id": 868,
+  "candidate_news_id": "N82503",
+  "candidate_title": "FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'",
+  "user_history_count": 7,
+  "user_history": [
+    "5 Changes I Made in My Life to Lose Face Fat and Get Healthy",
+    "Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves",
+    "12 Surprising Things You Should Never Clean with Water",
+    "50 Awful Foods That Should Never Be in Your Kitchen",
+    "Katy Perry sued for $150k by photo agency for 3-year-old pic",
+    "Christina Anstead's Anniversary to Ant Proves Life \"Has a Funny Way\" of Working Out",
+    "This Is How Much It Really Takes to Lose One Pound"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"5 Changes I Made in My Life to Lose Face Fat and Get Healthy\"\n\"Bed, Bath and Beyond Pulls 'Blackface Pumpkins From the Shelves\"\n\"12 Surprising Things You Should Never Clean with Water\"\n\"50 Awful Foods That Should Never Be in Your Kitchen\"\n\"Katy Perry sued for $150k by photo agency for 3-year-old pic\"\n\"Christina Anstead's Anniversary to Ant Proves Life \"Has a Funny Way\" of Working Out\"\n\"This Is How Much It Really Takes to Lose One Pound\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent warning issued by the FDA to Dollar Tree regarding the sale of potentially unsafe drugs. Readers can expect to learn about the specific products involved and the reasons for the FDA's concerns, which may include issues related to safety standards or labeling discrepancies. Additionally, the article could provide context about the implications of such warnings for consumers and the retailer, as well as any steps Dollar Tree may need to take in response to the FDA's findings. This information may help users better understand the risks associated with purchasing certain items from discount stores.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 796,
+  "candidate_news_id": "N55801",
+  "candidate_title": "High tides surge through Venice, locals rush to protect art",
+  "user_history_count": 10,
+  "user_history": [
+    "3-year-old's priceless response after mom \"ate all his candy\"",
+    "The Sexiest Photos Ever of Our 29 Sexiest Men Alive",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "'A big fan': Trump welcomes Turkey's Erdogan despite bipartisan concern over Syria attack",
+    "Senate confirms Chad Wolf to DHS post",
+    "Instructions Came From Trump, Schiff Says: Impeachment Update",
+    "Answers remain elusive in Virginia Beach shooting rampage",
+    "DeKalb school board, superintendent agree to cut ties effective immediately",
+    "Sessions vows to 'work for' Trump endorsement",
+    "Celebrity beach cruising for 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"3-year-old's priceless response after mom \"ate all his candy\"\"\n\"The Sexiest Photos Ever of Our 29 Sexiest Men Alive\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"'A big fan': Trump welcomes Turkey's Erdogan despite bipartisan concern over Syria attack\"\n\"Senate confirms Chad Wolf to DHS post\"\n\"Instructions Came From Trump, Schiff Says: Impeachment Update\"\n\"Answers remain elusive in Virginia Beach shooting rampage\"\n\"DeKalb school board, superintendent agree to cut ties effective immediately\"\n\"Sessions vows to 'work for' Trump endorsement\"\n\"Celebrity beach cruising for 2019\"\n\n[Candidate News Title]\n\"High tides surge through Venice, locals rush to protect art\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"High tides surge through Venice, locals rush to protect art\" is likely to discuss the recent phenomenon of rising tides in Venice, focusing on the impact this has on the city's cultural heritage and artworks. Readers may expect to learn about the specific measures locals are taking to safeguard important sites and artifacts from potential water damage. The article could also provide insights into how climate change is contributing to these high tides, possibly including quotes from residents or officials on their experiences and concerns regarding the preservation of Venice's artistic legacy.",
+  "model": "gpt-4o-mini"
+}

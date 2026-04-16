@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 985,
+    "candidate_news_id": "N120089",
+    "candidate_title": "The Hottest Tech Gifts This Holiday Season",
+    "user_history_count": 10,
+    "user_history": [
+      "Broadway Actress Laurel Griggs Dies at Age 13",
+      "Fast food cashier and manager fired for refusing to serve police officer",
+      "56 Hottest Holiday Gifts from Amazon",
+      "Three school workers charged in death of special needs student",
+      "Abandoned 'unicorn' puppy has a tail on its head",
+      "Family told to take down Christmas display because it's too soon to decorate",
+      "Small Canadian island irate that Americans keep opening their mail",
+      "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+      "How Amazon's quest for more, cheaper products has resulted in a flea market of fakes",
+      "Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"56 Hottest Holiday Gifts from Amazon\"\n\"Three school workers charged in death of special needs student\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"How Amazon's quest for more, cheaper products has resulted in a flea market of fakes\"\n\"Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'\"\n\n[Candidate News Title]\n\"The Hottest Tech Gifts This Holiday Season\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"The Hottest Tech Gifts This Holiday Season,\" the user can expect an overview of trending technology-related gifts that are popular for the current holiday season. This may include a variety of gadgets such as smart home devices, wearables, and innovative electronics that are likely to appeal to tech enthusiasts and casual users alike. The article could provide insights into features, pricing, and availability of these products, helping readers make informed decisions about their holiday shopping. Additionally, it may highlight notable brands or emerging technologies that are gaining traction this year.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 985,
+    "candidate_news_id": "N35304",
+    "candidate_title": "Raise Billions From Billionaires? Tax Experts Say It's Not That Simple",
+    "user_history_count": 10,
+    "user_history": [
+      "Broadway Actress Laurel Griggs Dies at Age 13",
+      "Fast food cashier and manager fired for refusing to serve police officer",
+      "56 Hottest Holiday Gifts from Amazon",
+      "Three school workers charged in death of special needs student",
+      "Abandoned 'unicorn' puppy has a tail on its head",
+      "Family told to take down Christmas display because it's too soon to decorate",
+      "Small Canadian island irate that Americans keep opening their mail",
+      "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+      "How Amazon's quest for more, cheaper products has resulted in a flea market of fakes",
+      "Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"56 Hottest Holiday Gifts from Amazon\"\n\"Three school workers charged in death of special needs student\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"How Amazon's quest for more, cheaper products has resulted in a flea market of fakes\"\n\"Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'\"\n\n[Candidate News Title]\n\"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\" is likely to explore the complexities and challenges associated with taxing wealthy individuals to generate significant revenue. Readers can expect an examination of various tax strategies and their potential implications, including differing opinions from tax experts on feasibility and fairness. The piece may also delve into the economic impact of such taxation and how it could influence wealth distribution. Overall, it could provide a nuanced view of the ongoing debate surrounding wealth taxation in the context of public finance.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 985,
+    "candidate_news_id": "N2110",
+    "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+    "user_history_count": 10,
+    "user_history": [
+      "Broadway Actress Laurel Griggs Dies at Age 13",
+      "Fast food cashier and manager fired for refusing to serve police officer",
+      "56 Hottest Holiday Gifts from Amazon",
+      "Three school workers charged in death of special needs student",
+      "Abandoned 'unicorn' puppy has a tail on its head",
+      "Family told to take down Christmas display because it's too soon to decorate",
+      "Small Canadian island irate that Americans keep opening their mail",
+      "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+      "How Amazon's quest for more, cheaper products has resulted in a flea market of fakes",
+      "Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"56 Hottest Holiday Gifts from Amazon\"\n\"Three school workers charged in death of special needs student\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"How Amazon's quest for more, cheaper products has resulted in a flea market of fakes\"\n\"Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\" is likely to present a curated selection of innovative and appealing technology-related gift ideas that cater to a wide range of interests and age groups. Readers can expect to find descriptions of items such as gadgets, smart home devices, and accessories that are currently popular in the market. The article may also provide insights into the features and functionalities of these tech gifts, helping readers make informed choices for their holiday shopping or special occasions. Overall, it aims to serve as a practical guide for those looking to purchase gifts that incorporate the latest technology trends.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 985,
+    "candidate_news_id": "N40742",
+    "candidate_title": "THEN AND NOW: What all your favorite '90s stars are doing today",
+    "user_history_count": 10,
+    "user_history": [
+      "Broadway Actress Laurel Griggs Dies at Age 13",
+      "Fast food cashier and manager fired for refusing to serve police officer",
+      "56 Hottest Holiday Gifts from Amazon",
+      "Three school workers charged in death of special needs student",
+      "Abandoned 'unicorn' puppy has a tail on its head",
+      "Family told to take down Christmas display because it's too soon to decorate",
+      "Small Canadian island irate that Americans keep opening their mail",
+      "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+      "How Amazon's quest for more, cheaper products has resulted in a flea market of fakes",
+      "Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"56 Hottest Holiday Gifts from Amazon\"\n\"Three school workers charged in death of special needs student\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"How Amazon's quest for more, cheaper products has resulted in a flea market of fakes\"\n\"Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'\"\n\n[Candidate News Title]\n\"THEN AND NOW: What all your favorite '90s stars are doing today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article, the user can expect to explore the current status of popular stars from the 1990s, detailing their careers and personal lives since their peak fame. The piece is likely to highlight how these celebrities have evolved over the years, possibly discussing their various roles in film, television, or other ventures. Additionally, it may include insights into any notable comebacks or shifts in public perception regarding these figures. The article could also reflect on the broader cultural impact these stars had during the '90s and how they are perceived today.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 985,
+    "candidate_news_id": "N91737",
+    "candidate_title": "13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid",
+    "user_history_count": 10,
+    "user_history": [
+      "Broadway Actress Laurel Griggs Dies at Age 13",
+      "Fast food cashier and manager fired for refusing to serve police officer",
+      "56 Hottest Holiday Gifts from Amazon",
+      "Three school workers charged in death of special needs student",
+      "Abandoned 'unicorn' puppy has a tail on its head",
+      "Family told to take down Christmas display because it's too soon to decorate",
+      "Small Canadian island irate that Americans keep opening their mail",
+      "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+      "How Amazon's quest for more, cheaper products has resulted in a flea market of fakes",
+      "Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Fast food cashier and manager fired for refusing to serve police officer\"\n\"56 Hottest Holiday Gifts from Amazon\"\n\"Three school workers charged in death of special needs student\"\n\"Abandoned 'unicorn' puppy has a tail on its head\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"Small Canadian island irate that Americans keep opening their mail\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"How Amazon's quest for more, cheaper products has resulted in a flea market of fakes\"\n\"Australian fires burn through koala colonies, killing hundreds: 'It's a national tragedy'\"\n\n[Candidate News Title]\n\"13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In the article titled \"13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid,\" the user is likely to read about Navarro's criticism concerning Disney's casting decisions for the upcoming film adaptation. The piece may outline Navarro's perspective on representation in Hollywood, particularly in relation to race and ethnicity, and could provide specific examples or reasons he presents to support his viewpoint. Additionally, the article may explore broader implications of casting choices in the entertainment industry and how they reflect societal values.",
+    "model": "gpt-4o-mini"
+  }
+]

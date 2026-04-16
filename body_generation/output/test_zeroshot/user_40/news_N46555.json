@@ -1,0 +1,21 @@
+{
+  "user_id": 40,
+  "candidate_news_id": "N46555",
+  "candidate_title": "Federal Prosecutors Probe Giuliani's Links to Ukrainian Energy Projects",
+  "user_history_count": 10,
+  "user_history": [
+    "Donald Trump: 'We're building a wall in Colorado'",
+    "17 photos that show the ugly truth of living in a tiny house",
+    "Six photographers share their favorite Audrey Hepburn images in a new book celebrating the Hollywood actress 26 years after her death",
+    "'Extreme haunted' house is 'torture chamber' in disguise, says petition to close it",
+    "Celebrities dressed as other stars for Halloween",
+    "Inside the Sheikh of Dubai's 800-acre Kentucky horse farm",
+    "Here's another alarming video reminding us Tesla's Smart Summon isn't great",
+    "6 Perfect Holiday Party Dress Ideas to Copy Through New Year's",
+    "'A week I will not forget': Sounders take down Toronto FC for 2nd MLS title",
+    "Week in celebrity photos for Nov. 11-15, 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Donald Trump: 'We're building a wall in Colorado'\"\n\"17 photos that show the ugly truth of living in a tiny house\"\n\"Six photographers share their favorite Audrey Hepburn images in a new book celebrating the Hollywood actress 26 years after her death\"\n\"'Extreme haunted' house is 'torture chamber' in disguise, says petition to close it\"\n\"Celebrities dressed as other stars for Halloween\"\n\"Inside the Sheikh of Dubai's 800-acre Kentucky horse farm\"\n\"Here's another alarming video reminding us Tesla's Smart Summon isn't great\"\n\"6 Perfect Holiday Party Dress Ideas to Copy Through New Year's\"\n\"'A week I will not forget': Sounders take down Toronto FC for 2nd MLS title\"\n\"Week in celebrity photos for Nov. 11-15, 2019\"\n\n[Candidate News Title]\n\"Federal Prosecutors Probe Giuliani's Links to Ukrainian Energy Projects\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely delves into the ongoing investigation by federal prosecutors into Rudy Giuliani's connections with various Ukrainian energy projects. It may outline the nature of these projects, the specific allegations being examined, and how they relate to Giuliani's broader political activities. Additionally, the piece could provide context on the implications of this probe for Giuliani and the political landscape, including any potential legal consequences he may face. Overall, readers can expect a detailed analysis of the situation, though specific outcomes remain uncertain.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 991,
+  "candidate_news_id": "N46555",
+  "candidate_title": "Federal Prosecutors Probe Giuliani's Links to Ukrainian Energy Projects",
+  "user_history_count": 10,
+  "user_history": [
+    "Can You Reverse Type 2 Diabetes?",
+    "Phoenix police investigating body found at Steele Indian School Park",
+    "States with the highest and lowest cancer rates",
+    "Off-duty Winslow prison officer suspected of kidnapping, assaulting teen girlfriend",
+    "Powerful side-by-side portraits show people over 100 years old next to their younger selves",
+    "21-year-old waiter accuses co-workers at Phoenix restaurant of using racial slur",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal",
+    "ASU fraternity brother who died on campus was brilliant student, family says",
+    "Types of cancer on the rise",
+    "'Velvety' Appearance of Woman's Palms Was a Sign of Lung Cancer"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Can You Reverse Type 2 Diabetes?\"\n\"Phoenix police investigating body found at Steele Indian School Park\"\n\"States with the highest and lowest cancer rates\"\n\"Off-duty Winslow prison officer suspected of kidnapping, assaulting teen girlfriend\"\n\"Powerful side-by-side portraits show people over 100 years old next to their younger selves\"\n\"21-year-old waiter accuses co-workers at Phoenix restaurant of using racial slur\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\"ASU fraternity brother who died on campus was brilliant student, family says\"\n\"Types of cancer on the rise\"\n\"'Velvety' Appearance of Woman's Palms Was a Sign of Lung Cancer\"\n\n[Candidate News Title]\n\"Federal Prosecutors Probe Giuliani's Links to Ukrainian Energy Projects\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on federal prosecutors probing Rudy Giuliani's connections to Ukrainian energy projects likely examines the ongoing investigation into Giuliani's business dealings and political activities in Ukraine. Readers may expect to find details about the nature of these links, including any potential legal implications or allegations of misconduct. The piece could also provide context regarding the broader implications of these investigations on Giuliani's reputation and the political landscape. Furthermore, it is likely to discuss how this probe fits into the larger narrative surrounding U.S.-Ukraine relations and the role of foreign influence in American politics.",
+  "model": "gpt-4o-mini"
+}

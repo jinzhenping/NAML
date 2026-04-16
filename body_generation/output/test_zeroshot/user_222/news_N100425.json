@@ -1,0 +1,20 @@
+{
+  "user_id": 222,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 9,
+  "user_history": [
+    "Doing it for the 'gram? Royal Caribbean says no to that, bans guests for life",
+    "How Toys 'R' Us Went Bankrupt",
+    "Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip",
+    "After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Airbnb Loses New Jersey Home-Share War by a Landslide",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos",
+    "Cat \"repeatedly\" breaks his friends out of animal shelter",
+    "Family Reunited With Dog Who Had Been Missing Since August While Waiting in Line to Adopt Cat"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Doing it for the 'gram? Royal Caribbean says no to that, bans guests for life\"\n\"How Toys 'R' Us Went Bankrupt\"\n\"Prince Harry Has the Sweetest Response When Young Student Calls Him Handsome During Japan Trip\"\n\"After seeing a FedEx worker walk 12 miles home for months, co-workers rally to buy her a car\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Airbnb Loses New Jersey Home-Share War by a Landslide\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\"Cat \"repeatedly\" breaks his friends out of animal shelter\"\n\"Family Reunited With Dog Who Had Been Missing Since August While Waiting in Line to Adopt Cat\"\n\"\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The most talked about movie moments of the 2010s,\" you may expect an overview of significant cinematic scenes and sequences that captured public attention during the decade. The article is likely to highlight key films and their impactful moments, discussing how these scenes resonated with audiences and contributed to cultural conversations. Additionally, it could include commentary on the influence of social media in shaping the discourse around these moments, reflecting on both popular and critical reception. Overall, the piece aims to provide a retrospective look at the decade's most memorable film highlights.",
+  "model": "gpt-4o-mini"
+}

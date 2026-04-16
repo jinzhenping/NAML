@@ -1,0 +1,21 @@
+{
+  "user_id": 273,
+  "candidate_news_id": "N46403",
+  "candidate_title": "What Not to Miss on the Harry Potter Studio Tour",
+  "user_history_count": 10,
+  "user_history": [
+    "We Tried Krispy Kreme's New Pie Donuts This Was the Best One",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "The Best Trader Joe's Desserts for Your Thanksgiving Dinner Table",
+    "Popeyes Has Blessed Us With A Boozy Pie To Pair With Its Returned Chicken Sandwich",
+    "McDonald's launches first seasonal McFlurry in 7 years",
+    "If You're Over 40 And About To Start Weight Lifting For The First Time, Here Are 5 Things You Need To Know",
+    "Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary",
+    "Stromboli vs. Calzone: What's the Real Difference Between These Italian Favorites?",
+    "Memphis declares James Wiseman ineligible while it works toward resolution with NCAA",
+    "Here's What 'Cultural Appropriation' Actually Means   and Why It's Wrong"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"We Tried Krispy Kreme's New Pie Donuts This Was the Best One\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"The Best Trader Joe's Desserts for Your Thanksgiving Dinner Table\"\n\"Popeyes Has Blessed Us With A Boozy Pie To Pair With Its Returned Chicken Sandwich\"\n\"McDonald's launches first seasonal McFlurry in 7 years\"\n\"If You're Over 40 And About To Start Weight Lifting For The First Time, Here Are 5 Things You Need To Know\"\n\"Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary\"\n\"Stromboli vs. Calzone: What's the Real Difference Between These Italian Favorites?\"\n\"Memphis declares James Wiseman ineligible while it works toward resolution with NCAA\"\n\"Here's What 'Cultural Appropriation' Actually Means   and Why It's Wrong\"\n\n[Candidate News Title]\n\"What Not to Miss on the Harry Potter Studio Tour\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"What Not to Miss on the Harry Potter Studio Tour,\" you can expect a detailed overview of the key attractions and experiences that the studio tour offers. The article is likely to highlight iconic sets, props, and special exhibits, providing insights into the immersive world of Harry Potter. Additionally, it may discuss practical tips for planning your visit, including the best times to go and any unique features that enhance the experience. Overall, the content should serve to inform fans and visitors about what to prioritize during their tour.",
+  "model": "gpt-4o-mini"
+}

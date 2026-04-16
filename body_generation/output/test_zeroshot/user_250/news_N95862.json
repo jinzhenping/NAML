@@ -1,0 +1,21 @@
+{
+  "user_id": 250,
+  "candidate_news_id": "N95862",
+  "candidate_title": "Wendy's Is Turning 50 Years Old, And Is Gifting Us With Free Food Through 2020",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump wages coast-to-coast legal battle to keep tax returns hidden",
+    "Toyota Supra vs. Ford Mustang Shelby GT350: Kicking Tail!",
+    "Old tires on your car can have tragic consequences",
+    "States that are falling apart",
+    "Another Palm Beach County juror may be jailed in new contempt case",
+    "People raise thousands for man who allegedly stabbed 'Baby Trump' balloon in Alabama",
+    "America's best inexpensive steakhouses",
+    "Frackers Prepare to Pull Back, Exacerbating a Slowdown in U.S. Oil Growth",
+    "Why you should give up alcohol for one month: From improved sleep to a glowing complexion - this is EXACTLY what happens to your body when you ditch booze for just four weeks",
+    "Support for marijuana legalization is at an all-time high in a new poll"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump wages coast-to-coast legal battle to keep tax returns hidden\"\n\"Toyota Supra vs. Ford Mustang Shelby GT350: Kicking Tail!\"\n\"Old tires on your car can have tragic consequences\"\n\"States that are falling apart\"\n\"Another Palm Beach County juror may be jailed in new contempt case\"\n\"People raise thousands for man who allegedly stabbed 'Baby Trump' balloon in Alabama\"\n\"America's best inexpensive steakhouses\"\n\"Frackers Prepare to Pull Back, Exacerbating a Slowdown in U.S. Oil Growth\"\n\"Why you should give up alcohol for one month: From improved sleep to a glowing complexion - this is EXACTLY what happens to your body when you ditch booze for just four weeks\"\n\"Support for marijuana legalization is at an all-time high in a new poll\"\n\n[Candidate News Title]\n\"Wendy's Is Turning 50 Years Old, And Is Gifting Us With Free Food Through 2020\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Wendy's turning 50 years old may focus on the fast-food chain's history, highlighting its evolution and significant milestones over the decades. Readers could expect to learn about promotional activities planned for the anniversary, including offers of free food or special menu items designed to celebrate the occasion. Additionally, the piece might explore Wendy's impact on the fast-food industry and its efforts to stay relevant in a competitive market. Overall, it is likely to provide an informative overview of both the company's legacy and its current initiatives.",
+  "model": "gpt-4o-mini"
+}

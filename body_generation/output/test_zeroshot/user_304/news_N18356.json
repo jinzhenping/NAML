@@ -1,0 +1,21 @@
+{
+  "user_id": 304,
+  "candidate_news_id": "N18356",
+  "candidate_title": "The world's most profitable company is about to go public",
+  "user_history_count": 10,
+  "user_history": [
+    "Flight shaming is gaining traction and could cost airlines billions",
+    "AP source: Phillies agree to hire Joe Girardi as manager",
+    "Coast Guard searching for man who went overboard from Carnival cruise ship off Texas",
+    "MLB bans women who flashed their chests behind home plate during Game 5 of World Series",
+    "100 Genius Tips that Will Make Your Holidays So Much Better",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "A month ago he was homeless. Then his friends intervened",
+    "30 Thanksgiving Casserole Recipes",
+    "Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Flight shaming is gaining traction and could cost airlines billions\"\n\"AP source: Phillies agree to hire Joe Girardi as manager\"\n\"Coast Guard searching for man who went overboard from Carnival cruise ship off Texas\"\n\"MLB bans women who flashed their chests behind home plate during Game 5 of World Series\"\n\"100 Genius Tips that Will Make Your Holidays So Much Better\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"A month ago he was homeless. Then his friends intervened\"\n\"30 Thanksgiving Casserole Recipes\"\n\"Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\n[Candidate News Title]\n\"The world's most profitable company is about to go public\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"The world's most profitable company is about to go public,\" you can expect an overview of the financial implications surrounding the initial public offering (IPO) of a leading company. The article is likely to detail the company's current valuation, its market position, and potential investor interest. It may also discuss the broader impact of this IPO on the stock market and industry trends. Additionally, it could speculate on how this event might affect the company's operational strategies and what it means for future growth opportunities.",
+  "model": "gpt-4o-mini"
+}

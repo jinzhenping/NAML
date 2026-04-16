@@ -1,0 +1,21 @@
+{
+  "user_id": 752,
+  "candidate_news_id": "N56505",
+  "candidate_title": "Top 5 Craziest Motorcycles From EICMA 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Here are the best cruise lines for families, couples and those on a budget",
+    "China's pork crisis is bigger than you think",
+    "Four-star Louisiana RB Ashaad Clayton commits to Colorado",
+    "Opinion: Consensus at the top of the College Football Playoff rankings, but who's No. 4?",
+    "Mother of missing Florida girl charged; human remains found",
+    "Why the College Football Playoff selection committee can't make a case for Alabama",
+    "12 Photos Show What It's Really Like To Grow Up Trans",
+    "American woman apparently strangled in the Dominican Republic",
+    "Man sets Guinness World Record for highest standing jump",
+    "How To Make Texas Chicken-Fried Steak & Creamed Gravy By Rachael"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here are the best cruise lines for families, couples and those on a budget\"\n\"China's pork crisis is bigger than you think\"\n\"Four-star Louisiana RB Ashaad Clayton commits to Colorado\"\n\"Opinion: Consensus at the top of the College Football Playoff rankings, but who's No. 4?\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"Why the College Football Playoff selection committee can't make a case for Alabama\"\n\"12 Photos Show What It's Really Like To Grow Up Trans\"\n\"American woman apparently strangled in the Dominican Republic\"\n\"Man sets Guinness World Record for highest standing jump\"\n\"How To Make Texas Chicken-Fried Steak & Creamed Gravy By Rachael\"\n\n[Candidate News Title]\n\"Top 5 Craziest Motorcycles From EICMA 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on \"Top 5 Craziest Motorcycles From EICMA 2019,\" they may expect to read an informative overview of some of the most innovative and unconventional motorcycles showcased at the EICMA motorcycle show. The article is likely to highlight unique design elements, cutting-edge technology, and unusual features that set these motorcycles apart from more traditional models. Additionally, it could provide context about the significance of the EICMA event in the motorcycle industry and mention specific manufacturers or models that gained attention for their creativity and performance. Overall, the user might be looking for insights into the latest trends in motorcycle design and engineering.",
+  "model": "gpt-4o-mini"
+}

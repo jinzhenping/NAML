@@ -1,0 +1,21 @@
+{
+  "user_id": 917,
+  "candidate_news_id": "N125045",
+  "candidate_title": "George Conway and Trump Jr. trade personal insults during impeachment hearing",
+  "user_history_count": 10,
+  "user_history": [
+    "If You're Over 40 And About To Start Weight Lifting For The First Time, Here Are 5 Things You Need To Know",
+    "Robyn Crawford Says She Felt Like She Was 'Losing' Whitney Houston When Singer Married Bobby Brown",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out",
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "Three school workers charged in death of special needs student",
+    "Thanksgiving side dishes: 11 unique recipes to try this season",
+    "Officials: At least 13 dead in Slovakia bus crash",
+    "Supreme Court Justices Couldn't Stop Interrupting Each Other During DACA Oral Arguments",
+    "The Latest: Judge denies new claim in Georgia execution case"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"If You're Over 40 And About To Start Weight Lifting For The First Time, Here Are 5 Things You Need To Know\"\n\"Robyn Crawford Says She Felt Like She Was 'Losing' Whitney Houston When Singer Married Bobby Brown\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out\"\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"Three school workers charged in death of special needs student\"\n\"Thanksgiving side dishes: 11 unique recipes to try this season\"\n\"Officials: At least 13 dead in Slovakia bus crash\"\n\"Supreme Court Justices Couldn't Stop Interrupting Each Other During DACA Oral Arguments\"\n\"The Latest: Judge denies new claim in Georgia execution case\"\n\n[Candidate News Title]\n\"George Conway and Trump Jr. trade personal insults during impeachment hearing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the user may expect to find a detailed account of the exchange of insults between George Conway and Donald Trump Jr. during a recent impeachment hearing. The piece is likely to outline the context of the hearing, highlighting the tensions between the two figures, who are known for their contrasting political views. Additionally, it may discuss the implications of their confrontation for broader political discourse, possibly providing insights into how personal disputes intersect with public political debates.",
+  "model": "gpt-4o-mini"
+}

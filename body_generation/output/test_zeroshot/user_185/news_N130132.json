@@ -1,0 +1,21 @@
+{
+  "user_id": 185,
+  "candidate_news_id": "N130132",
+  "candidate_title": "Read: Marie Yovanovitch's testimony at today's impeachment hearings",
+  "user_history_count": 10,
+  "user_history": [
+    "Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'",
+    "Celebrity plastic surgery transformations",
+    "SEMA 2019 Photo Highlights From Las Vegas",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "Massachusetts fire lieutenant dies battling house fire",
+    "Gwen Stefani Reveals New Nickname for Her and Blake Shelton",
+    "Celebrity plastic surgery transformations",
+    "2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "The 22 Wildest Celebrity Hair Transformations of the Last Decade"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'\"\n\"Celebrity plastic surgery transformations\"\n\"SEMA 2019 Photo Highlights From Las Vegas\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"Massachusetts fire lieutenant dies battling house fire\"\n\"Gwen Stefani Reveals New Nickname for Her and Blake Shelton\"\n\"Celebrity plastic surgery transformations\"\n\"2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"The 22 Wildest Celebrity Hair Transformations of the Last Decade\"\n\n[Candidate News Title]\n\"Read: Marie Yovanovitch's testimony at today's impeachment hearings\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Read: Marie Yovanovitch's testimony at today's impeachment hearings,\" they are likely expecting to read a detailed account of Yovanovitch's statements and the context surrounding her testimony. The article may provide insights into her experiences as a former U.S. ambassador and highlight key moments from the hearings that are relevant to the ongoing impeachment process. Additionally, it could explore the implications of her testimony on the political landscape, including reactions from various political figures.",
+  "model": "gpt-4o-mini"
+}

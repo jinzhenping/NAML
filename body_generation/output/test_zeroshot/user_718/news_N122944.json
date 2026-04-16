@@ -1,0 +1,21 @@
+{
+  "user_id": 718,
+  "candidate_news_id": "N122944",
+  "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+  "user_history_count": 10,
+  "user_history": [
+    "California authorities found and destroyed $1 billion worth of marijuana plants",
+    "The Justice Department is fishing for details about the anonymous 'resistance' op-ed writer",
+    "Trump Tax Return Case Confronts Supreme Court With a Momentous Choice",
+    "Here are the 96 Sears and Kmart stores that are closing next",
+    "Jennifer Aniston looks amazing in a makeup-free selfie, plus more news",
+    "Harry Potter's Matthew Lewis Has the Best Response to Tom Felton's Fear of Aging",
+    "Deer-like animal thought lost to science photographed for first time in 30 years",
+    "Analysis: Two Impeachments, but Two Radically Different Accusations",
+    "Trust seeks seizure of Rudy Giuliani associate Lev Parnas's bail to repay $678K judgment",
+    "Marcia Cross' anal cancer may have been linked to HPV. She wants people to know they could have the virus, too."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"California authorities found and destroyed $1 billion worth of marijuana plants\"\n\"The Justice Department is fishing for details about the anonymous 'resistance' op-ed writer\"\n\"Trump Tax Return Case Confronts Supreme Court With a Momentous Choice\"\n\"Here are the 96 Sears and Kmart stores that are closing next\"\n\"Jennifer Aniston looks amazing in a makeup-free selfie, plus more news\"\n\"Harry Potter's Matthew Lewis Has the Best Response to Tom Felton's Fear of Aging\"\n\"Deer-like animal thought lost to science photographed for first time in 30 years\"\n\"Analysis: Two Impeachments, but Two Radically Different Accusations\"\n\"Trust seeks seizure of Rudy Giuliani associate Lev Parnas's bail to repay $678K judgment\"\n\"Marcia Cross' anal cancer may have been linked to HPV. She wants people to know they could have the virus, too.\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu,\" you may expect to read about the strategic reasons behind the longstanding presence of the Filet-O-Fish sandwich on McDonald's menu. The article is likely to explore factors such as consumer demand, seasonal sales trends, and the sandwich's appeal to specific demographics, particularly during Lent when fish consumption typically increases. Additionally, it could delve into marketing strategies and historical context that have contributed to the sandwich's enduring popularity in a competitive fast-food landscape.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 490,
+  "candidate_news_id": "N20223",
+  "candidate_title": "10 reasons it's better to rent rather than buy a home",
+  "user_history_count": 10,
+  "user_history": [
+    "Amelia Bambridge: Body of missing backpacker found in sea",
+    "'People come for the selfies but won't pay $2 for pizza'",
+    "Meet Bobe, the other dog at the Baghdadi raid",
+    "A part of Windsor Castle that's been closed to the public for over 150 years just reopened   and it's been completely revamped. Take a peek inside.",
+    "This Simple Hack Will Keep Spiders Out of Your House",
+    "Holocaust survivor under guard amid death threats",
+    "'I am scared all the time': Chimps and people are clashing in rural Uganda",
+    "Tigers put All-Star P Matthew Boyd on trade block",
+    "Walmart's Website Has a Secret Section Filled With a Ton Old-School Toys and Games",
+    "Four words from dermatologists that'll change your life: Stop showering every day"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Amelia Bambridge: Body of missing backpacker found in sea\"\n\"'People come for the selfies but won't pay $2 for pizza'\"\n\"Meet Bobe, the other dog at the Baghdadi raid\"\n\"A part of Windsor Castle that's been closed to the public for over 150 years just reopened   and it's been completely revamped. Take a peek inside.\"\n\"This Simple Hack Will Keep Spiders Out of Your House\"\n\"Holocaust survivor under guard amid death threats\"\n\"'I am scared all the time': Chimps and people are clashing in rural Uganda\"\n\"Tigers put All-Star P Matthew Boyd on trade block\"\n\"Walmart's Website Has a Secret Section Filled With a Ton Old-School Toys and Games\"\n\"Four words from dermatologists that'll change your life: Stop showering every day\"\n\n[Candidate News Title]\n\"10 reasons it's better to rent rather than buy a home\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In reading \"10 reasons it's better to rent rather than buy a home,\" the user might expect a thorough examination of the advantages of renting over homeownership. The article is likely to discuss financial factors, such as lower upfront costs and the absence of property taxes, while also considering lifestyle flexibility that renting can provide. Additionally, it may explore aspects like maintenance responsibilities and market volatility. The article could also highlight demographic trends influencing rental decisions, though this is uncertain and would depend on the specific context provided. Overall, the content is expected to offer a balanced view of renting as a viable housing option.",
+  "model": "gpt-4o-mini"
+}

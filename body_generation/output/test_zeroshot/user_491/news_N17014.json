@@ -1,0 +1,21 @@
+{
+  "user_id": 491,
+  "candidate_news_id": "N17014",
+  "candidate_title": "Aston Martin has a lot riding on its new $189,000 SUV",
+  "user_history_count": 10,
+  "user_history": [
+    "From cat names to fruit, here are 11 bizarre things celebrities have tried to trademark",
+    "'The Little Mermaid Live!': TV Review",
+    "Top 10 NFL quarterbacks heading into Week 10",
+    "Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52",
+    "17 Movie Soundtracks Every Kid from the '70s Loved",
+    "Kyle Shanahan blasts 49ers WRs over dropped passes",
+    "John Legend Is PEOPLE's Sexiest Man Alive 2019: 'I'm Excited but a Little Scared at the Same Time'",
+    "From Cash to Carrie: All the hosts of the CMA Awards through the years",
+    "From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"From cat names to fruit, here are 11 bizarre things celebrities have tried to trademark\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Top 10 NFL quarterbacks heading into Week 10\"\n\"Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52\"\n\"17 Movie Soundtracks Every Kid from the '70s Loved\"\n\"Kyle Shanahan blasts 49ers WRs over dropped passes\"\n\"John Legend Is PEOPLE's Sexiest Man Alive 2019: 'I'm Excited but a Little Scared at the Same Time'\"\n\"From Cash to Carrie: All the hosts of the CMA Awards through the years\"\n\"From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\n[Candidate News Title]\n\"Aston Martin has a lot riding on its new $189,000 SUV\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers can expect an exploration of Aston Martin's latest venture into the luxury SUV market with its new model priced at $189,000. The piece is likely to cover the vehicle's design features, performance specifications, and how it fits into the brand's overall strategy, particularly in appealing to affluent consumers. Additionally, it may discuss the competitive landscape of luxury SUVs and how Aston Martin aims to differentiate itself from rivals. Overall, the article should provide insights into the brand's ambitions and the significance of this launch in the broader automotive market.",
+  "model": "gpt-4o-mini"
+}

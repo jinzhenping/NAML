@@ -1,0 +1,21 @@
+{
+  "user_id": 112,
+  "candidate_news_id": "N55801",
+  "candidate_title": "High tides surge through Venice, locals rush to protect art",
+  "user_history_count": 10,
+  "user_history": [
+    "'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Adele Lost 20 Pounds with Pilates and Cardio After Splitting From Simon Konecki",
+    "Lori Loughlin's 'Stress Is Only Mounting' Ahead of Pretrial Hearing",
+    "How to Make Cornbread Without a Recipe",
+    "The Latest: Judge denies new claim in Georgia execution case",
+    "Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'The bridge has definitely been burned': Williams says Redskins have smeared him in aftermath of cancer diagnosis\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Adele Lost 20 Pounds with Pilates and Cardio After Splitting From Simon Konecki\"\n\"Lori Loughlin's 'Stress Is Only Mounting' Ahead of Pretrial Hearing\"\n\"How to Make Cornbread Without a Recipe\"\n\"The Latest: Judge denies new claim in Georgia execution case\"\n\"Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\n[Candidate News Title]\n\"High tides surge through Venice, locals rush to protect art\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent high tides experienced in Venice, detailing how local residents are responding to the situation to protect their cultural heritage and art. It may include information on the impact of these tides on the city’s infrastructure and the measures being taken to mitigate potential damage. Additionally, the piece could explore the historical context of flooding in Venice and how climate change is contributing to rising sea levels. Overall, readers can expect a focus on the intersection of environmental challenges and local efforts to preserve the city's unique assets.",
+  "model": "gpt-4o-mini"
+}

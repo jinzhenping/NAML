@@ -1,0 +1,21 @@
+{
+  "user_id": 678,
+  "candidate_news_id": "N45484",
+  "candidate_title": "I used 3 strategies to save more than 50% on furniture for my new home",
+  "user_history_count": 10,
+  "user_history": [
+    "Kate Upton Slams 'Misogynist Comments' After She Weighs in on World Series Game 6 Controversy",
+    "What this week's 5 biggest upsets mean for the NFL playoff picture",
+    "Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'",
+    "Don't be fooled: Costco says $75 coupon is a scam",
+    "105 Black Friday Deals You Can Start Shopping Today",
+    "4 reasons you shouldn't max out your 401(k)",
+    "Divers salvage 100-year-old liquor from WWI shipwreck",
+    "How Cowboys QB Dak Prescott's words have helped WR Amari Cooper's toe-tapping catches",
+    "In Less Than a Decade, You Won't Be Able To Afford a Home in These Cities",
+    "Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kate Upton Slams 'Misogynist Comments' After She Weighs in on World Series Game 6 Controversy\"\n\"What this week's 5 biggest upsets mean for the NFL playoff picture\"\n\"Carrie Underwood Praises Miranda Lambert as 'Super Supportive': 'We Lift Each Other Up'\"\n\"Don't be fooled: Costco says $75 coupon is a scam\"\n\"105 Black Friday Deals You Can Start Shopping Today\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\"Divers salvage 100-year-old liquor from WWI shipwreck\"\n\"How Cowboys QB Dak Prescott's words have helped WR Amari Cooper's toe-tapping catches\"\n\"In Less Than a Decade, You Won't Be Able To Afford a Home in These Cities\"\n\"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\"\n\n[Candidate News Title]\n\"I used 3 strategies to save more than 50% on furniture for my new home\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find practical strategies for saving significantly on furniture purchases, especially relevant for those moving into new homes or looking to redecorate. It may outline three specific methods that could include tips on sourcing affordable furniture, leveraging sales and discounts, or utilizing secondhand options. The content is expected to provide actionable advice that aligns with the user’s interest in money-saving strategies and home-related topics, while also potentially highlighting the importance of budgeting and planning for larger purchases.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 797,
+  "candidate_news_id": "N40742",
+  "candidate_title": "THEN AND NOW: What all your favorite '90s stars are doing today",
+  "user_history_count": 10,
+  "user_history": [
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Holocaust survivor under guard amid death threats",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Mom named person of interest in 5-year-old girl's disappearance",
+    "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+    "11-year-old boy dies after being shot in chest",
+    "Man cuffed for eating sandwich on train platform gets an apology",
+    "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Holocaust survivor under guard amid death threats\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Mom named person of interest in 5-year-old girl's disappearance\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"11-year-old boy dies after being shot in chest\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\n[Candidate News Title]\n\"THEN AND NOW: What all your favorite '90s stars are doing today\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article \"THEN AND NOW: What all your favorite '90s stars are doing today,\" you can expect a retrospective look at various celebrities who rose to fame during the 1990s. The piece is likely to provide updates on their current careers, personal lives, and any notable projects they may be involved in today. It may also explore how their public personas have evolved over the years, including changes in their appearances and professional pursuits. This article could offer a nostalgic overview while highlighting the enduring impact of these stars in popular culture.",
+  "model": "gpt-4o-mini"
+}

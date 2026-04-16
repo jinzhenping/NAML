@@ -1,0 +1,21 @@
+{
+  "user_id": 102,
+  "candidate_news_id": "N12384",
+  "candidate_title": "Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day",
+  "user_history_count": 10,
+  "user_history": [
+    "Third time's (not always) the charm: From silver screen icons to a world heavyweight boxer - celebs who've been married more than three times",
+    "Las Vegas adopts ban on sleeping, camping on streets, sidewalks",
+    "Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come",
+    "Friendly deer plays with dog",
+    "Watch: Maggert wins Champions finale with walk-off eagle holeout",
+    "Top-50 ranked golfer puts with wedge, disqualified from tournament for running out of balls",
+    "MLB awards week: Our picks for MVP, Cy Young, Rookie of the Year and more",
+    "College gymnast dies following training accident in Connecticut",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "Browns, Steelers brawl at end of Cleveland's 21-7 win"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Third time's (not always) the charm: From silver screen icons to a world heavyweight boxer - celebs who've been married more than three times\"\n\"Las Vegas adopts ban on sleeping, camping on streets, sidewalks\"\n\"Nick Saban on Donald Trump attending Alabama-LSU: It's an honor he's interested enough to come\"\n\"Friendly deer plays with dog\"\n\"Watch: Maggert wins Champions finale with walk-off eagle holeout\"\n\"Top-50 ranked golfer puts with wedge, disqualified from tournament for running out of balls\"\n\"MLB awards week: Our picks for MVP, Cy Young, Rookie of the Year and more\"\n\"College gymnast dies following training accident in Connecticut\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"Browns, Steelers brawl at end of Cleveland's 21-7 win\"\n\n[Candidate News Title]\n\"Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about newborn babies being dressed up as the beloved TV icon, Mister Rogers, for World Kindness Day is likely to explore the initiative's background and its significance in promoting kindness and compassion. Readers may expect to learn about the hospital's motivations for this creative gesture, perhaps highlighting how it aims to spread joy and positivity among families. The piece could also include details about the specific outfits and any related activities or events held in conjunction with the celebration, illustrating the broader impact of kindness in healthcare settings.",
+  "model": "gpt-4o-mini"
+}

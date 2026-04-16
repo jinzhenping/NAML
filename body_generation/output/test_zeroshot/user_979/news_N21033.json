@@ -1,0 +1,21 @@
+{
+  "user_id": 979,
+  "candidate_news_id": "N21033",
+  "candidate_title": "California and nearly two dozen other states sue Trump administration for the right to set fuel-efficiency standards",
+  "user_history_count": 10,
+  "user_history": [
+    "Tips for Getting a Mammogram",
+    "Eating This One Food Before 8 a.m. Could Flatten Your Belly",
+    "Colorado Mom's Touching Facebook Post Beautifully Explains Why We Shouldn't Suffer in Silence",
+    "Brandon Gonzales Charged With Capital Murder In Greenville Party Shooting",
+    "41 Heartwarming Photos That Will Restore Your Faith in Humanity",
+    "Exactly Why You Keep Waking up in the Middle of the Night, According to Doctors",
+    "This luxurious tiny home on wheels was built for off-road vacations",
+    "4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+    "7 Type 2 Diabetes Symptoms That Are So Subtle, You Might Miss Them"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Tips for Getting a Mammogram\"\n\"Eating This One Food Before 8 a.m. Could Flatten Your Belly\"\n\"Colorado Mom's Touching Facebook Post Beautifully Explains Why We Shouldn't Suffer in Silence\"\n\"Brandon Gonzales Charged With Capital Murder In Greenville Party Shooting\"\n\"41 Heartwarming Photos That Will Restore Your Faith in Humanity\"\n\"Exactly Why You Keep Waking up in the Middle of the Night, According to Doctors\"\n\"This luxurious tiny home on wheels was built for off-road vacations\"\n\"4 High School Students Killed in Texas Car Crash That Also Injured 3: 'We Grieve Together'\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\"7 Type 2 Diabetes Symptoms That Are So Subtle, You Might Miss Them\"\n\n[Candidate News Title]\n\"California and nearly two dozen other states sue Trump administration for the right to set fuel-efficiency standards\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a legal challenge involving the Trump administration's fuel-efficiency standards, with California and other states seeking to assert their rights to establish their own regulations. Readers may expect to find details about the implications of such a lawsuit for environmental policy, the arguments presented by both sides, and the potential impact on automotive industries and consumers. The piece could also provide context on previous regulations and how this move fits into broader climate change initiatives, though specifics may vary.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 322,
+  "candidate_news_id": "N46716",
+  "candidate_title": "Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal",
+  "user_history_count": 10,
+  "user_history": [
+    "Best Dive Bar in Every State",
+    "This little Montana town is full of Power Wagons and Mustangs",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "SEMA 2019 Photo Highlights From Las Vegas",
+    "This 1973 Ford Capri Race Car Makes the Ultimate V-6 Sound",
+    "Charlize Theron Just Ditched Her Bowl Cut for a Bright Blonde Pixie",
+    "These Are America's Favorite Liquor Brands",
+    "Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy",
+    "From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers",
+    "I'd Choose This Rad Ford Edsel Camper Over a Motel Any Day"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Best Dive Bar in Every State\"\n\"This little Montana town is full of Power Wagons and Mustangs\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"SEMA 2019 Photo Highlights From Las Vegas\"\n\"This 1973 Ford Capri Race Car Makes the Ultimate V-6 Sound\"\n\"Charlize Theron Just Ditched Her Bowl Cut for a Bright Blonde Pixie\"\n\"These Are America's Favorite Liquor Brands\"\n\"Jennifer Lopez Debuted the Sleek Seasonal Bob You'll Want to Copy\"\n\"From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers\"\n\"I'd Choose This Rad Ford Edsel Camper Over a Motel Any Day\"\n\n[Candidate News Title]\n\"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\" is likely to explore the increasing prevalence of cannabis use disorder as more states legalize marijuana. Readers can expect an analysis of the implications of legalization on public health, possibly including statistics that highlight trends in substance use. The piece may also discuss the factors contributing to this rise, such as accessibility and societal attitudes towards cannabis. Additionally, it could address the consequences for individuals and communities, although specific details on intervention or treatment options are uncertain.",
+  "model": "gpt-4o-mini"
+}

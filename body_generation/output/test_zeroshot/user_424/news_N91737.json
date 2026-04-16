@@ -1,0 +1,21 @@
+{
+  "user_id": 424,
+  "candidate_news_id": "N91737",
+  "candidate_title": "13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid",
+  "user_history_count": 10,
+  "user_history": [
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Video captures terrifying moment woman slips at Grand Canyon",
+    "Woman found dead in Ohio home was likely killed by her Great Danes, police say",
+    "Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game",
+    "Gigi Hadid Unfollows Tyler Cameron on Instagram 1 Month After Split",
+    "Memphis basketball, Penny Hardaway are taking a big risk with James Wiseman | Giannotto",
+    "Robert Freeman, Beatles Album Cover Photographer, Dies at 82",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Video captures terrifying moment woman slips at Grand Canyon\"\n\"Woman found dead in Ohio home was likely killed by her Great Danes, police say\"\n\"Jimmy Garoppolo addresses Erin Andrews interview by saying he uses 'baby' 500 times a game\"\n\"Gigi Hadid Unfollows Tyler Cameron on Instagram 1 Month After Split\"\n\"Memphis basketball, Penny Hardaway are taking a big risk with James Wiseman | Giannotto\"\n\"Robert Freeman, Beatles Album Cover Photographer, Dies at 82\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\n[Candidate News Title]\n\"13 Reasons Why's Christian Navarro Slams Disney for Casting 'the White Guy' in The Little Mermaid\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, the user can expect to read about Christian Navarro's criticism of Disney's casting choices for \"The Little Mermaid,\" focusing on the decision to cast a white actor in a prominent role. The piece is likely to explore Navarro's perspective on representation in the film industry, discussing broader themes of diversity and inclusion. It may also touch on the implications of such casting decisions for audience reception and the ongoing conversation about racial dynamics in Hollywood.",
+  "model": "gpt-4o-mini"
+}

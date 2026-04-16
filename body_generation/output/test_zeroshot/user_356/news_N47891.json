@@ -1,0 +1,21 @@
+{
+  "user_id": 356,
+  "candidate_news_id": "N47891",
+  "candidate_title": "Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash",
+  "user_history_count": 10,
+  "user_history": [
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "Iran Nuclear Crisis Escalates With New Inspections Report",
+    "Where will Cam Newton play in 2020? Ranking the 7 best fits, from Panthers to Dolphins",
+    "California cops respond to 2 homeless men shot with arrows: report",
+    "Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago",
+    "How to prevent the flu, according to doctors",
+    "Arctic Blast to Hit 240 Million People Across the U.S. With Freezing Temperatures and Weather Warnings",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "5 teams that should seriously consider signing Kaepernick"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"Iran Nuclear Crisis Escalates With New Inspections Report\"\n\"Where will Cam Newton play in 2020? Ranking the 7 best fits, from Panthers to Dolphins\"\n\"California cops respond to 2 homeless men shot with arrows: report\"\n\"Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago\"\n\"How to prevent the flu, according to doctors\"\n\"Arctic Blast to Hit 240 Million People Across the U.S. With Freezing Temperatures and Weather Warnings\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"5 teams that should seriously consider signing Kaepernick\"\n\n[Candidate News Title]\n\"Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash,\" the user is likely to find an exploration of the historical context surrounding the 1966 Le Mans race, particularly focusing on a lesser-known vehicle that played a significant role in the competition. Readers may expect a detailed analysis of the technical specifications and performance of this car, as well as insights into its impact on the race dynamics between Ford and Ferrari. Additionally, the article could provide background on the key figures involved and the strategies employed during this iconic motorsport event, shedding light on how this \"forgotten\" car influenced the outcome.",
+  "model": "gpt-4o-mini"
+}

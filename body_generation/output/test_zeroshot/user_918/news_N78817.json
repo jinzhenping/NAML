@@ -1,0 +1,21 @@
+{
+  "user_id": 918,
+  "candidate_news_id": "N78817",
+  "candidate_title": "Stromboli vs. Calzone: What's the Real Difference Between These Italian Favorites?",
+  "user_history_count": 10,
+  "user_history": [
+    "10 things we learned during college football weekend",
+    "Stop Looking at Restaurant Menus Ahead of Time",
+    "The Cheesecake Factory Is Giving Out FREE Slices Of Reese's And Hershey's Cheesecake For Halloween",
+    "Family wins Halloween with Fyre Festival-themed costumes",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "The most common things we do each day that can throw our body alignment off",
+    "Police: Woman found dead in Warren County home was killed by own dogs",
+    "Pedestrian fatally struck on SB I-75 in Middletown",
+    "The healthiest fast food option at every well-known chain",
+    "4 reasons you shouldn't max out your 401(k)"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"10 things we learned during college football weekend\"\n\"Stop Looking at Restaurant Menus Ahead of Time\"\n\"The Cheesecake Factory Is Giving Out FREE Slices Of Reese's And Hershey's Cheesecake For Halloween\"\n\"Family wins Halloween with Fyre Festival-themed costumes\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"The most common things we do each day that can throw our body alignment off\"\n\"Police: Woman found dead in Warren County home was killed by own dogs\"\n\"Pedestrian fatally struck on SB I-75 in Middletown\"\n\"The healthiest fast food option at every well-known chain\"\n\"4 reasons you shouldn't max out your 401(k)\"\n\n[Candidate News Title]\n\"Stromboli vs. Calzone: What's the Real Difference Between These Italian Favorites?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Stromboli vs. Calzone: What's the Real Difference Between These Italian Favorites?\", the user is likely to find a detailed comparison of these two popular Italian dishes. The article may explain their distinct characteristics, such as the differences in preparation methods and ingredients, as well as their cultural significance in Italian cuisine. Additionally, it could explore variations of each dish and how they are typically served in restaurants. Overall, the user can expect a clear and informative breakdown that helps clarify any confusion between Stromboli and calzones.",
+  "model": "gpt-4o-mini"
+}

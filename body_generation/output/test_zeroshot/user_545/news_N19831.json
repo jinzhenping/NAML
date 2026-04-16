@@ -1,0 +1,21 @@
+{
+  "user_id": 545,
+  "candidate_news_id": "N19831",
+  "candidate_title": "Bill Russell finally accepts Basketball Hall of Fame ring",
+  "user_history_count": 10,
+  "user_history": [
+    "A lawyer reveals a legal nightmare you can face on a cruise ship",
+    "Arkansas man seen walking out of court hearing, running away, as jury deliberated",
+    "Inside the hoodie: What makes Bill Belichick tick?",
+    "Tarek El Moussa Has 'Definitely' Talked About Getting Engaged",
+    "Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post",
+    "Canadian man told his curb, damaged 26 years ago, to be repaired in 2037",
+    "Ranking all 32 NFL teams by record in the 2010s decade",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "Which NFL teams would be a fit for Colin Kaepernick? Ranking all from 32 to 1"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A lawyer reveals a legal nightmare you can face on a cruise ship\"\n\"Arkansas man seen walking out of court hearing, running away, as jury deliberated\"\n\"Inside the hoodie: What makes Bill Belichick tick?\"\n\"Tarek El Moussa Has 'Definitely' Talked About Getting Engaged\"\n\"Kaley Cuoco Shuts Down Divorce Rumors With A Cute Instagram Post\"\n\"Canadian man told his curb, damaged 26 years ago, to be repaired in 2037\"\n\"Ranking all 32 NFL teams by record in the 2010s decade\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"Which NFL teams would be a fit for Colin Kaepernick? Ranking all from 32 to 1\"\n\n[Candidate News Title]\n\"Bill Russell finally accepts Basketball Hall of Fame ring\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about Bill Russell accepting his Basketball Hall of Fame ring is likely to provide insights into the significance of this moment in the context of Russell's storied career and his contributions to the sport. Readers may expect to learn about the ceremony itself, including details on who presented the ring and any notable attendees. Additionally, the piece could explore Russell's legacy as one of basketball's greatest players and how this acknowledgment fits into his overall recognition within the sport. Overall, it may highlight the importance of such honors in commemorating athletes' achievements.",
+  "model": "gpt-4o-mini"
+}

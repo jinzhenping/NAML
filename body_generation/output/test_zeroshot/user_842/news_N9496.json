@@ -1,0 +1,21 @@
+{
+  "user_id": 842,
+  "candidate_news_id": "N9496",
+  "candidate_title": "40 LA restaurants you need to try before you die",
+  "user_history_count": 10,
+  "user_history": [
+    "A Texas mom is going to prison after putting her son through unnecessary medical procedures",
+    "Hong Kong government withdraws bill that sparked protests",
+    "Will Teresa Giudice and Joe Giudice Get Divorced? 'I Don't See It Working,' She Says",
+    "One of FBI's Most Wanted fugitives offers surrender",
+    "Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids",
+    "'You're not a serial killer, right?' victim text messaged man before she died",
+    "Deer-like animal thought lost to science photographed for first time in 30 years",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "How I Got Lung Cancer at 31 Without Ever Smoking a Single Cigarette",
+    "Taliban to release 2 professors in prisoner swap"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"A Texas mom is going to prison after putting her son through unnecessary medical procedures\"\n\"Hong Kong government withdraws bill that sparked protests\"\n\"Will Teresa Giudice and Joe Giudice Get Divorced? 'I Don't See It Working,' She Says\"\n\"One of FBI's Most Wanted fugitives offers surrender\"\n\"Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids\"\n\"'You're not a serial killer, right?' victim text messaged man before she died\"\n\"Deer-like animal thought lost to science photographed for first time in 30 years\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"How I Got Lung Cancer at 31 Without Ever Smoking a Single Cigarette\"\n\"Taliban to release 2 professors in prisoner swap\"\n\n[Candidate News Title]\n\"40 LA restaurants you need to try before you die\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a curated list of 40 popular restaurants in Los Angeles that are highly recommended for their unique offerings and culinary experiences. The piece may provide insights into what makes each restaurant noteworthy, such as signature dishes, ambiance, or historical significance. Additionally, it could include practical information like location, price range, and dining style. Given the diverse food scene in LA, the article might also touch on various cuisines represented, offering a glimpse into the city's gastronomic landscape.",
+  "model": "gpt-4o-mini"
+}

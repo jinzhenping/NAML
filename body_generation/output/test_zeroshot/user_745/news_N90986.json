@@ -1,0 +1,21 @@
+{
+  "user_id": 745,
+  "candidate_news_id": "N90986",
+  "candidate_title": "The Most Popular Potluck Dessert from Every Decade",
+  "user_history_count": 10,
+  "user_history": [
+    "Before You Book! Cruise Scams Every Traveler Should Know!",
+    "You Won't Believe Where These Celebs Worked Before They Were Famous",
+    "It took me 96 hours to ride an Amtrak train from coast to coast. I'd do it again in a heartbeat.",
+    "WhatsApp Protests Erupt in Lebanon as Economic Crisis Deepens",
+    "Would You Like Fries With That? McDonald's Already Knows the Answer",
+    "The Best Throwback Soups from the 1950s",
+    "Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "The most beautiful places to visit in the US",
+    "Muslim woman says Denver arena worker told her to remove hijab, refused to let her enter"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Before You Book! Cruise Scams Every Traveler Should Know!\"\n\"You Won't Believe Where These Celebs Worked Before They Were Famous\"\n\"It took me 96 hours to ride an Amtrak train from coast to coast. I'd do it again in a heartbeat.\"\n\"WhatsApp Protests Erupt in Lebanon as Economic Crisis Deepens\"\n\"Would You Like Fries With That? McDonald's Already Knows the Answer\"\n\"The Best Throwback Soups from the 1950s\"\n\"Family of toddler who fell from cruise ship 'utterly crushed' after grandfather charged\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"The most beautiful places to visit in the US\"\n\"Muslim woman says Denver arena worker told her to remove hijab, refused to let her enter\"\n\n[Candidate News Title]\n\"The Most Popular Potluck Dessert from Every Decade\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The Most Popular Potluck Dessert from Every Decade,\" the user is likely to find an exploration of iconic desserts that have defined potluck gatherings through the years. The piece may detail how certain recipes gained popularity during specific decades, highlighting factors such as cultural trends and social changes that influenced dessert choices. It could also include descriptions of classic dishes, possibly offering insights into their origins and variations. Overall, the article is expected to provide a nostalgic look at communal dining traditions through the lens of dessert.",
+  "model": "gpt-4o-mini"
+}

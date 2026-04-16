@@ -1,0 +1,21 @@
+{
+  "user_id": 196,
+  "candidate_news_id": "N26667",
+  "candidate_title": "Why This Couple Is Getting a 'Sleep Divorce'",
+  "user_history_count": 10,
+  "user_history": [
+    "Celebrity plastic surgery transformations",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Bode Miller delivered his twin boys after midwife didn't make it time for the birth",
+    "The Queen Had This Hilarious Reaction to (Unnecessary) Mouth-to-Mouth Resuscitation",
+    "The Sexiest Photos Ever of Our 29 Sexiest Men Alive",
+    "See the most expensive watch ever sold at auction",
+    "Best royal photos of 2019",
+    "The zombie storefronts of America",
+    "Venice paralyzed by the worst flooding in half a century",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebrity plastic surgery transformations\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Bode Miller delivered his twin boys after midwife didn't make it time for the birth\"\n\"The Queen Had This Hilarious Reaction to (Unnecessary) Mouth-to-Mouth Resuscitation\"\n\"The Sexiest Photos Ever of Our 29 Sexiest Men Alive\"\n\"See the most expensive watch ever sold at auction\"\n\"Best royal photos of 2019\"\n\"The zombie storefronts of America\"\n\"Venice paralyzed by the worst flooding in half a century\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\n[Candidate News Title]\n\"Why This Couple Is Getting a 'Sleep Divorce'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to learn about the concept of a \"sleep divorce,\" where couples choose to sleep in separate beds or rooms to improve their individual sleep quality. The piece is likely to explore the reasons behind this decision, such as differing sleep habits or health concerns, and may include insights from experts on how this arrangement can impact relationships. Additionally, the article could provide examples of couples who have benefited from this approach, highlighting both the challenges and potential advantages of opting for separate sleeping spaces.",
+  "model": "gpt-4o-mini"
+}

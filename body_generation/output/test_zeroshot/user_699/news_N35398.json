@@ -1,0 +1,21 @@
+{
+  "user_id": 699,
+  "candidate_news_id": "N35398",
+  "candidate_title": "Here's what comfort food looks like in 26 countries around the world",
+  "user_history_count": 10,
+  "user_history": [
+    "Are So Many Americans Fat Because They're Getting Terrible Nutrition Advice From 'The Experts'?",
+    "Our 41 Favorite Fall Cakes",
+    "China approves seaweed-based Alzheimer's drug. It's the first new one in 17 years",
+    "If You're a Fan of French Fries, You'll Love This Healthy Italian Alternative Made From Chickpeas",
+    "50 Thanksgiving Appetizer & Dip Recipes That Won't Spoil Your Appetite",
+    "Thanksgiving map shows each state's most-searched recipe",
+    "81 Bean Recipes You'll Be Making All Year Long",
+    "This Man Is Behind Every Single Antique You See In Cracker Barrel Stores",
+    "The 'Blue Zones' diet: Foods that help people live to 100",
+    "Health Benefits of Nutritional Yeast and How to Use It"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Are So Many Americans Fat Because They're Getting Terrible Nutrition Advice From 'The Experts'?\"\n\"Our 41 Favorite Fall Cakes\"\n\"China approves seaweed-based Alzheimer's drug. It's the first new one in 17 years\"\n\"If You're a Fan of French Fries, You'll Love This Healthy Italian Alternative Made From Chickpeas\"\n\"50 Thanksgiving Appetizer & Dip Recipes That Won't Spoil Your Appetite\"\n\"Thanksgiving map shows each state's most-searched recipe\"\n\"81 Bean Recipes You'll Be Making All Year Long\"\n\"This Man Is Behind Every Single Antique You See In Cracker Barrel Stores\"\n\"The 'Blue Zones' diet: Foods that help people live to 100\"\n\"Health Benefits of Nutritional Yeast and How to Use It\"\n\n[Candidate News Title]\n\"Here's what comfort food looks like in 26 countries around the world\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Here's what comfort food looks like in 26 countries around the world\" is likely to explore the diverse interpretations of comfort food across various cultures. Readers can expect to learn about traditional dishes that evoke feelings of warmth and nostalgia, highlighting specific ingredients and cooking methods unique to each country. The article may include insights into how these comfort foods reflect regional tastes and culinary practices, providing a fascinating glimpse into global eating habits. Additionally, it could discuss the role of comfort food in cultural identity and community bonding.",
+  "model": "gpt-4o-mini"
+}

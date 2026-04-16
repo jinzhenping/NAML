@@ -1,0 +1,21 @@
+{
+  "user_id": 402,
+  "candidate_news_id": "N23452",
+  "candidate_title": "Five Great Holiday Cruises Worth Taking",
+  "user_history_count": 10,
+  "user_history": [
+    "Republicans Argue Impeachment Case Falls Short of Proving Trump Misconduct",
+    "2020 Democratic Voters Divided Down Demographic Lines",
+    "9 Vegetables You Shouldn't Eat Raw",
+    "Pompeo's Impeachment Role Draws Outcry From Diplomats, Staffers",
+    "Mixed-race mother reveals strangers question whether she's related to her fair-skinned daughter - including a suspicious church-goer who asked the girl: 'Is this your Mummy?'",
+    "Feud Between Trump Advisers Underscores a White House Torn by Rivalries",
+    "Fox legal analyst Napolitano emerges as Trump critic",
+    "Next up in impeachment hearings: A parade of key witnesses",
+    "Concerns raised about Hartford's homeless population during cold stretch",
+    "Judge agrees Alabama Islamic State recruit is not US citizen"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Republicans Argue Impeachment Case Falls Short of Proving Trump Misconduct\"\n\"2020 Democratic Voters Divided Down Demographic Lines\"\n\"9 Vegetables You Shouldn't Eat Raw\"\n\"Pompeo's Impeachment Role Draws Outcry From Diplomats, Staffers\"\n\"Mixed-race mother reveals strangers question whether she's related to her fair-skinned daughter - including a suspicious church-goer who asked the girl: 'Is this your Mummy?'\"\n\"Feud Between Trump Advisers Underscores a White House Torn by Rivalries\"\n\"Fox legal analyst Napolitano emerges as Trump critic\"\n\"Next up in impeachment hearings: A parade of key witnesses\"\n\"Concerns raised about Hartford's homeless population during cold stretch\"\n\"Judge agrees Alabama Islamic State recruit is not US citizen\"\n\n[Candidate News Title]\n\"Five Great Holiday Cruises Worth Taking\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Five Great Holiday Cruises Worth Taking\" is likely to provide an overview of appealing cruise options for the upcoming holiday season. Readers may expect to find descriptions of various cruise itineraries, highlighting destinations, onboard amenities, and unique experiences that cater to different preferences. The article could also include practical tips such as booking advice, pricing considerations, and recommendations for families, couples, or solo travelers. Overall, it should serve as a guide for those considering a holiday cruise, offering insights that help in making informed travel decisions.",
+  "model": "gpt-4o-mini"
+}

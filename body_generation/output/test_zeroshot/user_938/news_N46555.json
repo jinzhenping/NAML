@@ -1,0 +1,21 @@
+{
+  "user_id": 938,
+  "candidate_news_id": "N46555",
+  "candidate_title": "Federal Prosecutors Probe Giuliani's Links to Ukrainian Energy Projects",
+  "user_history_count": 10,
+  "user_history": [
+    "Man Goes To Adoption Event And Finds His Long-Lost Dog",
+    "Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement",
+    "1 dead, 2 injured, suspect still at large after shooting at Church's Chicken",
+    "Missing college student's parents meet with mother of Natalee Holloway",
+    "Everything to Know About Visiting the Biltmore Estate This Christmas",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "'It's cool to be cold': Confessions of frigid-weather fanatics",
+    "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Man Goes To Adoption Event And Finds His Long-Lost Dog\"\n\"Ian Ziering's Wife Erin Ludwig Files for Divorce Days After Split Announcement\"\n\"1 dead, 2 injured, suspect still at large after shooting at Church's Chicken\"\n\"Missing college student's parents meet with mother of Natalee Holloway\"\n\"Everything to Know About Visiting the Biltmore Estate This Christmas\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"'It's cool to be cold': Confessions of frigid-weather fanatics\"\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'\"\n\n[Candidate News Title]\n\"Federal Prosecutors Probe Giuliani's Links to Ukrainian Energy Projects\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The user may expect this article to delve into the investigation by federal prosecutors into Rudy Giuliani's connections with Ukrainian energy projects. It is likely to cover details about the nature of these links, potential legal implications, and the broader context surrounding Giuliani's involvement in international affairs. The article could also explore how these inquiries relate to ongoing political dynamics and any previous controversies associated with Giuliani. Additionally, there may be insights into the responses from Giuliani or his representatives regarding the allegations.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 983,
+  "candidate_news_id": "N19831",
+  "candidate_title": "Bill Russell finally accepts Basketball Hall of Fame ring",
+  "user_history_count": 10,
+  "user_history": [
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You",
+    "The 11 Biggest Myths About Cellulite You Need to Stop Believing",
+    "Scared Rabbit Abandoned In Box Clings To His Favorite Teddy Bear",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+    "Sweet Cat Walks Extra Slowly To Stay Next To His Best Friend On Crutches",
+    "Celebrity beach cruising for 2019",
+    "Family Brings Snow Inside So Obsessed Indoor Cat Can Play In It"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"The Before-And-After Photos of This Man Who's Three Years Sober Will Amaze You\"\n\"The 11 Biggest Myths About Cellulite You Need to Stop Believing\"\n\"Scared Rabbit Abandoned In Box Clings To His Favorite Teddy Bear\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\"Sweet Cat Walks Extra Slowly To Stay Next To His Best Friend On Crutches\"\n\"Celebrity beach cruising for 2019\"\n\"Family Brings Snow Inside So Obsessed Indoor Cat Can Play In It\"\n\n[Candidate News Title]\n\"Bill Russell finally accepts Basketball Hall of Fame ring\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Bill Russell accepting his Basketball Hall of Fame ring, the user can expect a detailed account of the event, highlighting the significance of this moment in Russell's illustrious basketball career. It may cover his achievements, contributions to the sport, and the context surrounding the ceremony, including any noteworthy attendees or speeches. The article is likely to explore Russell's legacy as an athlete and activist, providing insights into his impact both on and off the court. Overall, it could serve to celebrate his long-awaited recognition in the Hall of Fame.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 23,
+  "candidate_news_id": "N22562",
+  "candidate_title": "Celebrity PDA of 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Kevin Hart Shares Emotional Video About Appreciating Life Following Near-Fatal Car Accident",
+    "James Van Der Beek and Wife Kimberly on Expecting Baby No. 6: It Often Requires an 'Explanation'",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Justin Theroux Reaches Out to Ex Jennifer Aniston on Instagram for a Good Cause",
+    "Christina Anstead shares new pic of son Hudson at 2 months old",
+    "Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52",
+    "Stars who've had more than one wedding with the same spouse",
+    "Celebrity plastic surgery transformations",
+    "Celebrity Engagements of 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kevin Hart Shares Emotional Video About Appreciating Life Following Near-Fatal Car Accident\"\n\"James Van Der Beek and Wife Kimberly on Expecting Baby No. 6: It Often Requires an 'Explanation'\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Justin Theroux Reaches Out to Ex Jennifer Aniston on Instagram for a Good Cause\"\n\"Christina Anstead shares new pic of son Hudson at 2 months old\"\n\"Christopher Dennis Dies: 'Hollywood Superman' And Frequent 'Jimmy Kimmel Live!' Guest Was 52\"\n\"Stars who've had more than one wedding with the same spouse\"\n\"Celebrity plastic surgery transformations\"\n\"Celebrity Engagements of 2019\"\n\n[Candidate News Title]\n\"Celebrity PDA of 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Celebrity PDA of 2019\" is likely to explore various instances of public displays of affection among celebrities throughout the year. Readers can expect a collection of notable moments where famous figures showcased their relationships in the public eye, possibly including red carpet appearances, social media posts, and other events. The piece may highlight trends in celebrity relationships, providing insights into how these public displays reflect their personal lives. Additionally, it could touch on the reactions from fans and the media, offering a broader context for these interactions.",
+  "model": "gpt-4o-mini"
+}

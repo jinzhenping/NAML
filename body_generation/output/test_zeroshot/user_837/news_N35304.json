@@ -1,0 +1,21 @@
+{
+  "user_id": 837,
+  "candidate_news_id": "N35304",
+  "candidate_title": "Raise Billions From Billionaires? Tax Experts Say It's Not That Simple",
+  "user_history_count": 10,
+  "user_history": [
+    "10 Gazans dead as Israel hit on militant chief sparks rocket barrage",
+    "See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet",
+    "Popeyes Has Blessed Us With A Boozy Pie To Pair With Its Returned Chicken Sandwich",
+    "Red and Blue Economies Are Heading in Sharply Different Directions",
+    "'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.",
+    "2 men shot in Dutchtown Wednesday afternoon",
+    "10 reasons it's better to rent rather than buy a home",
+    "WeWork tells investors it lost $1.25 billion in the third quarter",
+    "You can now rent a suite in a real-life royal palace on Airbnb, and it comes with a private butler",
+    "Falling Rents in New York, Boston Hold Back U.S. Core Inflation"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"10 Gazans dead as Israel hit on militant chief sparks rocket barrage\"\n\"See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet\"\n\"Popeyes Has Blessed Us With A Boozy Pie To Pair With Its Returned Chicken Sandwich\"\n\"Red and Blue Economies Are Heading in Sharply Different Directions\"\n\"'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.\"\n\"2 men shot in Dutchtown Wednesday afternoon\"\n\"10 reasons it's better to rent rather than buy a home\"\n\"WeWork tells investors it lost $1.25 billion in the third quarter\"\n\"You can now rent a suite in a real-life royal palace on Airbnb, and it comes with a private butler\"\n\"Falling Rents in New York, Boston Hold Back U.S. Core Inflation\"\n\n[Candidate News Title]\n\"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\" is likely to explore the complexities surrounding the taxation of wealthy individuals and the feasibility of generating significant revenue from such measures. Readers may expect an analysis of different perspectives from tax experts, discussing both the potential benefits and challenges associated with implementing higher taxes on billionaires. The article could also delve into specific case studies or examples that illustrate the varied approaches taken by different countries, and the implications these have for economic policy and wealth distribution.",
+  "model": "gpt-4o-mini"
+}

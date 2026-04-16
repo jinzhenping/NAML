@@ -1,0 +1,21 @@
+{
+  "user_id": 267,
+  "candidate_news_id": "N120089",
+  "candidate_title": "The Hottest Tech Gifts This Holiday Season",
+  "user_history_count": 10,
+  "user_history": [
+    "Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn",
+    "Celebs celebrate Halloween 2019",
+    "Celeb kids' cutest Halloween costumes",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "U.S. baseball team faces must-win Premier12 game after loss to Mexico",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears",
+    "Padres show off new brown uniforms",
+    "Joe Giudice Says It Was 'Painful' Watching Real Housewives of New Jersey from Prison",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kelly Ripa Jokes Son Michael Is Experiencing 'Extreme Poverty' in Brooklyn\"\n\"Celebs celebrate Halloween 2019\"\n\"Celeb kids' cutest Halloween costumes\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"U.S. baseball team faces must-win Premier12 game after loss to Mexico\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Zantac Recall Update: Another Company Recalls Ranitidine Heartburn Drug Over Cancer Fears\"\n\"Padres show off new brown uniforms\"\n\"Joe Giudice Says It Was 'Painful' Watching Real Housewives of New Jersey from Prison\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\n[Candidate News Title]\n\"The Hottest Tech Gifts This Holiday Season\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The Hottest Tech Gifts This Holiday Season,\" the user is likely expecting a curated list of popular technology products that are trending as holiday gifts. It may include a variety of gadgets, such as the latest smartphones, smart home devices, and wearable technology, along with insights into their features and functionalities. The article could also provide information on price ranges and availability, aiding users in making informed purchasing decisions. Additionally, it is likely to highlight what makes these tech gifts appealing for different demographics or interests, although specific brand recommendations may vary.",
+  "model": "gpt-4o-mini"
+}

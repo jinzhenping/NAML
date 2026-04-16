@@ -1,0 +1,21 @@
+{
+  "user_id": 210,
+  "candidate_news_id": "N65446",
+  "candidate_title": "The most exclusive hotel in every state",
+  "user_history_count": 10,
+  "user_history": [
+    "Chicago teachers' strike: 25,000 educators swarmed City Hall with their demands on day 5",
+    "Stocks close higher despite weak earnings from Caterpillar, Boeing",
+    "Rising California gasoline prices highlight growing divide in US",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "Texas attorney convicted of scamming drug traffickers",
+    "As companies flee blue cities, middle class workers are hurt",
+    "There's a dark side to zero-cost investing you can't ignore",
+    "Woman accused of embezzling from Camp Fire victim surrenders",
+    "Dean Foods files for bankruptcy",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chicago teachers' strike: 25,000 educators swarmed City Hall with their demands on day 5\"\n\"Stocks close higher despite weak earnings from Caterpillar, Boeing\"\n\"Rising California gasoline prices highlight growing divide in US\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"Texas attorney convicted of scamming drug traffickers\"\n\"As companies flee blue cities, middle class workers are hurt\"\n\"There's a dark side to zero-cost investing you can't ignore\"\n\"Woman accused of embezzling from Camp Fire victim surrenders\"\n\"Dean Foods files for bankruptcy\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\n[Candidate News Title]\n\"The most exclusive hotel in every state\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The most exclusive hotel in every state\" is likely to provide an overview of luxury accommodations across the United States, highlighting distinctive features that set these hotels apart. Readers may expect insights into the amenities, unique architectural styles, and exclusive services offered by each hotel, along with their geographic locations. The piece could also discuss trends in luxury travel and the appeal of exclusivity in hospitality. Overall, it is expected to serve as a guide for those interested in high-end travel experiences, though the specific criteria for exclusivity may vary across states.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 120,
+  "candidate_news_id": "N89764",
+  "candidate_title": "Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital",
+  "user_history_count": 10,
+  "user_history": [
+    "An Awkward Moment As Meghan Markle Met A Curtsy Attempt With An American Greeting",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "5 Changes I Made in My Life to Lose Face Fat and Get Healthy",
+    "Detroit Metro Airport to Allow Limited Visitors Past Security",
+    "Duchess Meghan Hopes Public Will 'Give Her a Break' After Speaking Out",
+    "20 Things You Should Never Do When Cooking Bacon",
+    "'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "The 1 reason you shouldn't hesitate to claim Social Security early"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"An Awkward Moment As Meghan Markle Met A Curtsy Attempt With An American Greeting\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"5 Changes I Made in My Life to Lose Face Fat and Get Healthy\"\n\"Detroit Metro Airport to Allow Limited Visitors Past Security\"\n\"Duchess Meghan Hopes Public Will 'Give Her a Break' After Speaking Out\"\n\"20 Things You Should Never Do When Cooking Bacon\"\n\"'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\n[Candidate News Title]\n\"Report: Police investigating woman's death after Redskins' player Montae Nicholson took her to hospital\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to read about the ongoing investigation surrounding the death of a woman linked to NFL player Montae Nicholson, who reportedly took her to the hospital. The piece may provide details on the circumstances leading to her hospitalization and any statements from law enforcement regarding the investigation. Additionally, it could explore Nicholson's involvement and any legal implications he might face. Overall, the article is expected to focus on the factual developments of the case while highlighting the broader context of incidents involving athletes and law enforcement.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 608,
+  "candidate_news_id": "N99184",
+  "candidate_title": "Browns, Steelers brawl at end of Cleveland's 21-7 win",
+  "user_history_count": 10,
+  "user_history": [
+    "Caterpillar just flashed the latest warning sign for the global economy",
+    "Where have Cape Town's great whites gone?",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "The world's largest nuclear power producer is melting down",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Cause determined in Jessi Combs' fatal speed record crash",
+    "Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes",
+    "Snow crab sells for record price in Japan",
+    "Opinion: Rams are paying the true price of their $134 million investment in QB Jared Goff",
+    "College gymnast dies following training accident in Connecticut"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Caterpillar just flashed the latest warning sign for the global economy\"\n\"Where have Cape Town's great whites gone?\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"The world's largest nuclear power producer is melting down\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Cause determined in Jessi Combs' fatal speed record crash\"\n\"Why ex-NFL star Kellen Winslow II finally pleaded guilty to sex crimes\"\n\"Snow crab sells for record price in Japan\"\n\"Opinion: Rams are paying the true price of their $134 million investment in QB Jared Goff\"\n\"College gymnast dies following training accident in Connecticut\"\n\n[Candidate News Title]\n\"Browns, Steelers brawl at end of Cleveland's 21-7 win\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the brawl between the Browns and Steelers following Cleveland's 21-7 victory is likely to provide a detailed account of the incident, including key moments during the game that led to the altercation. Readers may expect to learn about the players involved, any penalties or repercussions that followed, and the reactions from coaches and fans. Additionally, the piece could discuss the implications of such behavior on team dynamics and future matchups within the league, shedding light on how rivalries can escalate during high-stakes games.",
+  "model": "gpt-4o-mini"
+}

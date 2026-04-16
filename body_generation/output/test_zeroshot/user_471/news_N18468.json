@@ -1,0 +1,21 @@
+{
+  "user_id": 471,
+  "candidate_news_id": "N18468",
+  "candidate_title": "Belichick mocks social media in comments on Garrett incident",
+  "user_history_count": 10,
+  "user_history": [
+    "Three Bradenton men found guilty of four murders and multiple drug and firearms offenses",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'",
+    "Robert Freeman, Beatles Album Cover Photographer, Dies at 82",
+    "In a shift, Warren responds to Biden's 'angry' comment",
+    "Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage",
+    "Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Three Bradenton men found guilty of four murders and multiple drug and firearms offenses\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Meghan McCain confronts Trump Jr.: 'You and your family have hurt a lot of people'\"\n\"Robert Freeman, Beatles Album Cover Photographer, Dies at 82\"\n\"In a shift, Warren responds to Biden's 'angry' comment\"\n\"Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage\"\n\"Kodak Black Sentenced to Over 3 Years in Prison in Weapons Case\"\n\n[Candidate News Title]\n\"Belichick mocks social media in comments on Garrett incident\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the reader may expect to find comments from Bill Belichick regarding a recent incident involving Garrett, likely referencing social media reactions and public perceptions. The piece could provide insight into Belichick's views on how social media influences narratives around sports figures and events. Additionally, it may explore the context of the incident itself and delve into broader themes about the relationship between athletes and media platforms, highlighting Belichick's perspective on these dynamics.",
+  "model": "gpt-4o-mini"
+}

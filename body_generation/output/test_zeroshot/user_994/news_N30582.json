@@ -1,0 +1,21 @@
+{
+  "user_id": 994,
+  "candidate_news_id": "N30582",
+  "candidate_title": "Opinion: Baylor football back on top four years after sexual assault scandal rocked campus",
+  "user_history_count": 10,
+  "user_history": [
+    "High school sports with highest concussion rates revealed in new study",
+    "Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)",
+    "12 burning questions for Nationals-Astros World Series",
+    "Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview",
+    "Best Photos of the World Series",
+    "Student thrown from vehicle in Moeller High School parking lot in stable condition",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Comics - '9 to 5' by Harley Schwadron",
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "The best independent bakery in every state"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"High school sports with highest concussion rates revealed in new study\"\n\"Tori Spelling Shares What She'd Love to See If 'BH90210' Gets a Season 2! (Exclusive)\"\n\"12 burning questions for Nationals-Astros World Series\"\n\"Watch Jessica Biel Admit She Was NOT a 'Huge' Fan of *NSYNC In HILARIOUS Old Interview\"\n\"Best Photos of the World Series\"\n\"Student thrown from vehicle in Moeller High School parking lot in stable condition\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Comics - '9 to 5' by Harley Schwadron\"\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"The best independent bakery in every state\"\n\n[Candidate News Title]\n\"Opinion: Baylor football back on top four years after sexual assault scandal rocked campus\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Opinion: Baylor football back on top four years after sexual assault scandal rocked campus,\" the user is likely to encounter a discussion on the current state of Baylor University's football program following a significant scandal. The piece may explore how the program has rebuilt its reputation and success since the incidents that occurred four years ago, possibly highlighting key players, coaching changes, and recent performances. It could also analyze public perception of the program and how it has navigated the challenges posed by its past. Overall, the article is expected to provide a reflective view on the intersection of sports, ethics, and institutional recovery.",
+  "model": "gpt-4o-mini"
+}

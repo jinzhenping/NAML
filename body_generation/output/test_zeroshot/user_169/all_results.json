@@ -1,0 +1,107 @@
+[
+  {
+    "user_id": 169,
+    "candidate_news_id": "N18190",
+    "candidate_title": "30 Best Black Friday Deals from Costco",
+    "user_history_count": 10,
+    "user_history": [
+      "10 Unexpected Ways To Bond With A Cat",
+      "Kentucky man dies trying to save sons from Florida rip current during family trip",
+      "Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call",
+      "Every Must-See Photo of Stars Celebrating Halloween 2019",
+      "What Is Brown Butter and Should You Be Using It?",
+      "The Ultimate Guide to Mushrooms",
+      "The seedless lemon revolution has taken root in California",
+      "Lamborghini's long shot mission to take its super fast cars into the electric age",
+      "81 Bean Recipes You'll Be Making All Year Long",
+      "UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"10 Unexpected Ways To Bond With A Cat\"\n\"Kentucky man dies trying to save sons from Florida rip current during family trip\"\n\"Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"What Is Brown Butter and Should You Be Using It?\"\n\"The Ultimate Guide to Mushrooms\"\n\"The seedless lemon revolution has taken root in California\"\n\"Lamborghini's long shot mission to take its super fast cars into the electric age\"\n\"81 Bean Recipes You'll Be Making All Year Long\"\n\"UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push\"\n\n[Candidate News Title]\n\"30 Best Black Friday Deals from Costco\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "In this article about the \"30 Best Black Friday Deals from Costco,\" the user is likely expecting a comprehensive overview of the most significant discounts and promotions available during the Black Friday shopping event at Costco. The content may include a variety of product categories, such as electronics, home goods, and groceries, highlighting specific items that offer substantial savings. Additionally, it is likely to provide insights into the best times to shop and any membership benefits that could enhance the shopping experience. The article could also feature recommendations for maximizing value and making the most of the deals available.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 169,
+    "candidate_news_id": "N3623",
+    "candidate_title": "The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news",
+    "user_history_count": 10,
+    "user_history": [
+      "10 Unexpected Ways To Bond With A Cat",
+      "Kentucky man dies trying to save sons from Florida rip current during family trip",
+      "Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call",
+      "Every Must-See Photo of Stars Celebrating Halloween 2019",
+      "What Is Brown Butter and Should You Be Using It?",
+      "The Ultimate Guide to Mushrooms",
+      "The seedless lemon revolution has taken root in California",
+      "Lamborghini's long shot mission to take its super fast cars into the electric age",
+      "81 Bean Recipes You'll Be Making All Year Long",
+      "UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"10 Unexpected Ways To Bond With A Cat\"\n\"Kentucky man dies trying to save sons from Florida rip current during family trip\"\n\"Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"What Is Brown Butter and Should You Be Using It?\"\n\"The Ultimate Guide to Mushrooms\"\n\"The seedless lemon revolution has taken root in California\"\n\"Lamborghini's long shot mission to take its super fast cars into the electric age\"\n\"81 Bean Recipes You'll Be Making All Year Long\"\n\"UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push\"\n\n[Candidate News Title]\n\"The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news,\" you may expect to find an overview of the ongoing developments in the relationship between the former couple. The article is likely to cover recent statements or actions from both Pitt and Jolie, possibly highlighting their co-parenting dynamics and any public appearances or legal matters related to their separation. Additionally, it could include commentary on how their relationship has evolved since the split, providing context for their current situation.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 169,
+    "candidate_news_id": "N12384",
+    "candidate_title": "Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day",
+    "user_history_count": 10,
+    "user_history": [
+      "10 Unexpected Ways To Bond With A Cat",
+      "Kentucky man dies trying to save sons from Florida rip current during family trip",
+      "Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call",
+      "Every Must-See Photo of Stars Celebrating Halloween 2019",
+      "What Is Brown Butter and Should You Be Using It?",
+      "The Ultimate Guide to Mushrooms",
+      "The seedless lemon revolution has taken root in California",
+      "Lamborghini's long shot mission to take its super fast cars into the electric age",
+      "81 Bean Recipes You'll Be Making All Year Long",
+      "UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"10 Unexpected Ways To Bond With A Cat\"\n\"Kentucky man dies trying to save sons from Florida rip current during family trip\"\n\"Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"What Is Brown Butter and Should You Be Using It?\"\n\"The Ultimate Guide to Mushrooms\"\n\"The seedless lemon revolution has taken root in California\"\n\"Lamborghini's long shot mission to take its super fast cars into the electric age\"\n\"81 Bean Recipes You'll Be Making All Year Long\"\n\"UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push\"\n\n[Candidate News Title]\n\"Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Mini Mister Rogers! Hospital Dresses Up Newborn Babies as Beloved TV Icon for World Kindness Day,\" you can expect a focus on a heartwarming initiative that highlights kindness and community spirit. The piece is likely to describe how a hospital has chosen to dress newborns in costumes inspired by the iconic TV personality Fred Rogers as part of a celebration for World Kindness Day. It may include details about the hospital's motivation for this event, the reactions from parents and staff, and possibly insights into the broader message of kindness that the hospital aims to promote through this unique gesture.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 169,
+    "candidate_news_id": "N95541",
+    "candidate_title": "Opinion: NFL should suspend Browns' Myles Garrett for rest of season   at minimum   for helmet swing",
+    "user_history_count": 10,
+    "user_history": [
+      "10 Unexpected Ways To Bond With A Cat",
+      "Kentucky man dies trying to save sons from Florida rip current during family trip",
+      "Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call",
+      "Every Must-See Photo of Stars Celebrating Halloween 2019",
+      "What Is Brown Butter and Should You Be Using It?",
+      "The Ultimate Guide to Mushrooms",
+      "The seedless lemon revolution has taken root in California",
+      "Lamborghini's long shot mission to take its super fast cars into the electric age",
+      "81 Bean Recipes You'll Be Making All Year Long",
+      "UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"10 Unexpected Ways To Bond With A Cat\"\n\"Kentucky man dies trying to save sons from Florida rip current during family trip\"\n\"Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"What Is Brown Butter and Should You Be Using It?\"\n\"The Ultimate Guide to Mushrooms\"\n\"The seedless lemon revolution has taken root in California\"\n\"Lamborghini's long shot mission to take its super fast cars into the electric age\"\n\"81 Bean Recipes You'll Be Making All Year Long\"\n\"UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push\"\n\n[Candidate News Title]\n\"Opinion: NFL should suspend Browns' Myles Garrett for rest of season   at minimum   for helmet swing\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "If you click on the article titled \"Opinion: NFL should suspend Browns' Myles Garrett for rest of season at minimum for helmet swing,\" you may expect an analysis of the incident involving Myles Garrett and the implications of his actions during a game. The article is likely to discuss the NFL's disciplinary policies and the precedent for suspensions in similar cases. It could also examine the impact of such a suspension on the Cleveland Browns and their season, while considering differing viewpoints on whether the punishment fits the infraction.",
+    "model": "gpt-4o-mini"
+  },
+  {
+    "user_id": 169,
+    "candidate_news_id": "N35304",
+    "candidate_title": "Raise Billions From Billionaires? Tax Experts Say It's Not That Simple",
+    "user_history_count": 10,
+    "user_history": [
+      "10 Unexpected Ways To Bond With A Cat",
+      "Kentucky man dies trying to save sons from Florida rip current during family trip",
+      "Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call",
+      "Every Must-See Photo of Stars Celebrating Halloween 2019",
+      "What Is Brown Butter and Should You Be Using It?",
+      "The Ultimate Guide to Mushrooms",
+      "The seedless lemon revolution has taken root in California",
+      "Lamborghini's long shot mission to take its super fast cars into the electric age",
+      "81 Bean Recipes You'll Be Making All Year Long",
+      "UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push"
+    ],
+    "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"10 Unexpected Ways To Bond With A Cat\"\n\"Kentucky man dies trying to save sons from Florida rip current during family trip\"\n\"Stephanie Grisham says Trump was serious about fireside chat to read Ukraine call\"\n\"Every Must-See Photo of Stars Celebrating Halloween 2019\"\n\"What Is Brown Butter and Should You Be Using It?\"\n\"The Ultimate Guide to Mushrooms\"\n\"The seedless lemon revolution has taken root in California\"\n\"Lamborghini's long shot mission to take its super fast cars into the electric age\"\n\"81 Bean Recipes You'll Be Making All Year Long\"\n\"UK bakery chain suggests switching from jelly doughnuts to ring doughnuts as part of healthy-eating push\"\n\n[Candidate News Title]\n\"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+    "generated_body": "The article titled \"Raise Billions From Billionaires? Tax Experts Say It's Not That Simple\" is likely to explore the complexities surrounding taxation policies targeting wealthy individuals. Readers may expect an analysis of current proposals aimed at increasing tax contributions from billionaires, along with insights from tax experts on the challenges and implications of such measures. The discussion could include specific examples of proposed tax structures, the potential economic impact, and differing opinions on effectiveness. It is possible that the article will also address public sentiment and political considerations influencing these tax strategies.",
+    "model": "gpt-4o-mini"
+  }
+]

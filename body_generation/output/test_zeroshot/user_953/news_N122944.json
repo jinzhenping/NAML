@@ -1,0 +1,21 @@
+{
+  "user_id": 953,
+  "candidate_news_id": "N122944",
+  "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+  "user_history_count": 10,
+  "user_history": [
+    "Trump lawyers to appeal tax return decision to Supreme Court next week",
+    "Here's how Trump could be impeached, removed from office, and still win re-election in 2020",
+    "WATCH: Trump Greeted by Cheers at LSU-Alabama Football Game",
+    "49ers still don't know if Jimmy Garoppolo is Super Bowl-ready",
+    "Roger Stone trial: Former top Trump official details campaign's dealings on WikiLeaks, and suggests Trump was in the know",
+    "Kyle Shanahan blasts 49ers WRs over dropped passes",
+    "Chris Paul feels he got 'stabbed in the back' with trade from Rockets",
+    "What Roger Stone's trial revealed about Donald Trump and WikiLeaks",
+    "Erykah Badu and Common will perform at Indiana Farmers Coliseum",
+    "Cowboys to be among NFL teams in attendance for Colin Kaepernick's workout"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Trump lawyers to appeal tax return decision to Supreme Court next week\"\n\"Here's how Trump could be impeached, removed from office, and still win re-election in 2020\"\n\"WATCH: Trump Greeted by Cheers at LSU-Alabama Football Game\"\n\"49ers still don't know if Jimmy Garoppolo is Super Bowl-ready\"\n\"Roger Stone trial: Former top Trump official details campaign's dealings on WikiLeaks, and suggests Trump was in the know\"\n\"Kyle Shanahan blasts 49ers WRs over dropped passes\"\n\"Chris Paul feels he got 'stabbed in the back' with trade from Rockets\"\n\"What Roger Stone's trial revealed about Donald Trump and WikiLeaks\"\n\"Erykah Badu and Common will perform at Indiana Farmers Coliseum\"\n\"Cowboys to be among NFL teams in attendance for Colin Kaepernick's workout\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu,\" the user can expect an exploration of the strategic decisions behind McDonald's menu offerings, particularly focusing on the Filet-O-Fish sandwich. The piece may discuss factors such as consumer preferences, historical sales data, and the sandwich's role in the fast-food giant's overall marketing strategy. Additionally, it could highlight how seasonal promotions and cultural influences, like Lent, may impact its continued presence. Overall, the article is likely to provide insights into the business rationale for maintaining this specific menu item.",
+  "model": "gpt-4o-mini"
+}

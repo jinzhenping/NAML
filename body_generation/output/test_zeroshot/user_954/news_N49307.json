@@ -1,0 +1,19 @@
+{
+  "user_id": 954,
+  "candidate_news_id": "N49307",
+  "candidate_title": "Texas parole board recommends delaying Rodney Reed execution",
+  "user_history_count": 8,
+  "user_history": [
+    "Foie Gras Is Banned by New York City",
+    "Pelosi wants Americans to see the trial of Donald Trump",
+    "There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween",
+    "Nationals win first World Series title, storming back on Astros in Game 7, 6-2",
+    "How Much Do You Know About the Health Benefits of Turmeric?",
+    "The value of America's natural resources revealed",
+    "Chicken recall: More than 2 million pounds recalled, may be contaminated with metal",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Foie Gras Is Banned by New York City\"\n\"Pelosi wants Americans to see the trial of Donald Trump\"\n\"There's A Black Turtleneck Shortage Because People Are Dressing Up Like Elizabeth Holmes for Halloween\"\n\"Nationals win first World Series title, storming back on Astros in Game 7, 6-2\"\n\"How Much Do You Know About the Health Benefits of Turmeric?\"\n\"The value of America's natural resources revealed\"\n\"Chicken recall: More than 2 million pounds recalled, may be contaminated with metal\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Texas parole board recommends delaying Rodney Reed execution\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on the Texas parole board recommending a delay of Rodney Reed's execution is likely to provide an overview of the board's decision and the reasons behind it. Readers can expect to learn about the details of Reed's case, including the legal arguments that may have influenced the board's recommendation. The piece may also discuss the broader implications of this decision for capital punishment in Texas and the ongoing debates surrounding Reed's guilt or innocence. Additionally, it could highlight reactions from various stakeholders, including legal experts and advocacy groups.",
+  "model": "gpt-4o-mini"
+}

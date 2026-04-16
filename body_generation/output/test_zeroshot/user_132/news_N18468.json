@@ -1,0 +1,21 @@
+{
+  "user_id": 132,
+  "candidate_news_id": "N18468",
+  "candidate_title": "Belichick mocks social media in comments on Garrett incident",
+  "user_history_count": 10,
+  "user_history": [
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump",
+    "Flight Attendants Have a Secret Language You Didn't Know About",
+    "Hey, Millennials, look out below! Gen Z may already be catching up in the salary race",
+    "Kanye West is teaming up with pastor Joel Osteen: Details",
+    "The Sexiest Photos Ever of Our 29 Sexiest Men Alive",
+    "Celebrity property roundup: the winners and losers of 2019",
+    "11 Unique and Quirky Cruise Destinations",
+    "New Report Exposes Dolphin Cruelty in Travel Industry",
+    "Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump\"\n\"Flight Attendants Have a Secret Language You Didn't Know About\"\n\"Hey, Millennials, look out below! Gen Z may already be catching up in the salary race\"\n\"Kanye West is teaming up with pastor Joel Osteen: Details\"\n\"The Sexiest Photos Ever of Our 29 Sexiest Men Alive\"\n\"Celebrity property roundup: the winners and losers of 2019\"\n\"11 Unique and Quirky Cruise Destinations\"\n\"New Report Exposes Dolphin Cruelty in Travel Industry\"\n\"Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom\"\n\n[Candidate News Title]\n\"Belichick mocks social media in comments on Garrett incident\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a discussion surrounding Bill Belichick's recent comments regarding social media and its impact on the NFL, particularly in relation to the Garrett incident. The piece may explore how Belichick has critiqued the role of social media in shaping public perceptions and narratives about players and coaches. It could also provide insights into his views on the evolving nature of communication in sports, as well as how his remarks reflect broader trends in athlete and media interactions. Overall, the article is expected to present a calm analysis of the implications of Belichick's statements.",
+  "model": "gpt-4o-mini"
+}

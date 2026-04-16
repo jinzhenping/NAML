@@ -1,0 +1,20 @@
+{
+  "user_id": 479,
+  "candidate_news_id": "N26553",
+  "candidate_title": "Joshua Jackson and Jodie Turner-Smith spark marriage speculation",
+  "user_history_count": 9,
+  "user_history": [
+    "'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction",
+    "New Ford Bronco Officially Debuts in Spring 2020",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "This girl nails the wave pool   then fails the exit spectacularly",
+    "Eric Bledsoe forgot the rules of basketball on this inbound play",
+    "Far-reaching snowstorm may take shape over US",
+    "NFL coach has theory about why Trubisky is struggling",
+    "State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket",
+    "'One in a million' deer captured on camera in Michigan woods"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Wheel Of Fortune' Guest Delivers Hilarious, Off The Rails Introduction\"\n\"New Ford Bronco Officially Debuts in Spring 2020\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"This girl nails the wave pool   then fails the exit spectacularly\"\n\"Eric Bledsoe forgot the rules of basketball on this inbound play\"\n\"Far-reaching snowstorm may take shape over US\"\n\"NFL coach has theory about why Trubisky is struggling\"\n\"State Trooper Stops Banana Car Driver, Gives Him $20 Instead of a Ticket\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"\"\n\n[Candidate News Title]\n\"Joshua Jackson and Jodie Turner-Smith spark marriage speculation\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent speculation surrounding Joshua Jackson and Jodie Turner-Smith's relationship status, particularly focusing on hints that may suggest they are considering marriage. Readers can expect details about their public appearances, social media interactions, or comments from friends and insiders that could indicate a deeper commitment. Additionally, the piece may explore the couple's history together and any recent events that have fueled this speculation. Overall, it is likely to provide an informative overview of their relationship dynamics without confirming any definitive plans.",
+  "model": "gpt-4o-mini"
+}

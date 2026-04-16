@@ -1,0 +1,21 @@
+{
+  "user_id": 442,
+  "candidate_news_id": "N3623",
+  "candidate_title": "The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news",
+  "user_history_count": 10,
+  "user_history": [
+    "'DACA is everything': Dreamers, families rally as Supreme Court takes up its future",
+    "From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers",
+    "Disney+ Launch Stumbles With Widespread Tech Issues",
+    "The Milky Way's black hole kicked a star out of our galaxy",
+    "John Travolta Shares Rare Photo with Daughter Ella and Son Benjamin",
+    "Missouri high school football coach, team under fire for 'illegal' prayer after complaint from atheist group",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "U.S. Supreme Court weighs Comcast appeal in Byron Allen racial bias lawsuit",
+    "Disney+: All the Original TV Shows and Movies Set for Streaming Platform (Photos)",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'DACA is everything': Dreamers, families rally as Supreme Court takes up its future\"\n\"From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers\"\n\"Disney+ Launch Stumbles With Widespread Tech Issues\"\n\"The Milky Way's black hole kicked a star out of our galaxy\"\n\"John Travolta Shares Rare Photo with Daughter Ella and Son Benjamin\"\n\"Missouri high school football coach, team under fire for 'illegal' prayer after complaint from atheist group\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"U.S. Supreme Court weighs Comcast appeal in Byron Allen racial bias lawsuit\"\n\"Disney+: All the Original TV Shows and Movies Set for Streaming Platform (Photos)\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\n[Candidate News Title]\n\"The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely provides an update on the ongoing dynamics between Brad Pitt and Angelina Jolie following their separation, which has been a topic of public interest. It may cover recent developments regarding their co-parenting situation, legal disputes, or any public appearances they have made. Additionally, the piece could explore how their relationship continues to impact their careers and public images. The article might also include insights from sources close to both actors, which could help clarify their current interactions and intentions.",
+  "model": "gpt-4o-mini"
+}

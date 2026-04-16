@@ -1,0 +1,21 @@
+{
+  "user_id": 414,
+  "candidate_news_id": "N82503",
+  "candidate_title": "FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'",
+  "user_history_count": 10,
+  "user_history": [
+    "17 Arrested In Large Washington Drug Trafficking Bust",
+    "Divers Find Giant Mysterious 'Egg' Floating In Ocean",
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard",
+    "Nearly 7,000 pounds of marijuana seized on the way to NC",
+    "Guns, axes used to destroy illegal moonshine operation in South Carolina, deputies say",
+    "Where have Cape Town's great whites gone?",
+    "New Hampshire Couple's Adventure Ends in Mysterious Death in Texas",
+    "NASA's Curiosity rover took an eerie photo of the Mars horizon",
+    "Utah death-row inmate featured in best-selling book dies"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"17 Arrested In Large Washington Drug Trafficking Bust\"\n\"Divers Find Giant Mysterious 'Egg' Floating In Ocean\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Nearly $400M worth of cocaine and marijuana intercepted by US Coast Guard\"\n\"Nearly 7,000 pounds of marijuana seized on the way to NC\"\n\"Guns, axes used to destroy illegal moonshine operation in South Carolina, deputies say\"\n\"Where have Cape Town's great whites gone?\"\n\"New Hampshire Couple's Adventure Ends in Mysterious Death in Texas\"\n\"NASA's Curiosity rover took an eerie photo of the Mars horizon\"\n\"Utah death-row inmate featured in best-selling book dies\"\n\n[Candidate News Title]\n\"FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss a recent warning issued by the FDA to Dollar Tree regarding the sale of potentially unsafe drugs. It may outline the specific concerns raised by the FDA, including details about the types of products involved and the potential health risks associated with them. The piece could also provide context on the regulatory framework governing drug sales at retail locations, as well as any actions Dollar Tree may be required to take in response to the warning. Additionally, it might explore the implications for consumer safety and what measures shoppers should consider when purchasing over-the-counter medications.",
+  "model": "gpt-4o-mini"
+}

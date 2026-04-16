@@ -1,0 +1,21 @@
+{
+  "user_id": 971,
+  "candidate_news_id": "N59297",
+  "candidate_title": "The Coolest Car Lamborghini Never Made Is Up For Sale",
+  "user_history_count": 10,
+  "user_history": [
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Donald Trump Jr walks out of Triggered book launch after heckling   from supporters",
+    "San Diego State University freshman hurt in fraternity incident dies",
+    "Joanna Gaines' Friensdgiving Casserole Recipe Has Us Ready to Throw a Party Tonight",
+    "College gymnast dies following training accident in Connecticut",
+    "Dean Foods files for bankruptcy",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "Popeyes Has Blessed Us With A Boozy Pie To Pair With Its Returned Chicken Sandwich",
+    "WH plans \"aggressive\" strategy for open impeachment hearings",
+    "Bode Miller delivered his twin boys after midwife didn't make it time for the birth"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Donald Trump Jr walks out of Triggered book launch after heckling   from supporters\"\n\"San Diego State University freshman hurt in fraternity incident dies\"\n\"Joanna Gaines' Friensdgiving Casserole Recipe Has Us Ready to Throw a Party Tonight\"\n\"College gymnast dies following training accident in Connecticut\"\n\"Dean Foods files for bankruptcy\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Popeyes Has Blessed Us With A Boozy Pie To Pair With Its Returned Chicken Sandwich\"\n\"WH plans \"aggressive\" strategy for open impeachment hearings\"\n\"Bode Miller delivered his twin boys after midwife didn't make it time for the birth\"\n\n[Candidate News Title]\n\"The Coolest Car Lamborghini Never Made Is Up For Sale\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"The Coolest Car Lamborghini Never Made Is Up For Sale,\" you can expect a detailed exploration of a unique Lamborghini model that was never officially produced. The article may delve into the design features, specifications, and the story behind this elusive vehicle, including insights into why it was never mass-produced. Additionally, it could discuss the current sale context, highlighting its rarity and potential value to collectors. Overall, the piece is likely to provide a blend of automotive history and market analysis.",
+  "model": "gpt-4o-mini"
+}

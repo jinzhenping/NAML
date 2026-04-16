@@ -1,0 +1,21 @@
+{
+  "user_id": 394,
+  "candidate_news_id": "N61626",
+  "candidate_title": "20 Crazy Cleaning Tips That Actually Work",
+  "user_history_count": 10,
+  "user_history": [
+    "The Key to Mastering Goulash, the World's Most Famous Stew",
+    "These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED",
+    "46 Thanksgiving Wishes, Messages, and Greetings to Share This Year",
+    "Anna Faris and Michael Barrett may have just confirmed their engagement, plus more news",
+    "85 Easy Christmas Appetizers That Will Delight All of Your Holiday Party Guests",
+    "Seahawks knock 49ers from unbeaten ranks with 27-24 OT win",
+    "John Legend Is PEOPLE's Sexiest Man Alive 2019: 'I'm Excited but a Little Scared at the Same Time'",
+    "Deadly Arctic blast breaks records set more than 100 years ago",
+    "Miranda Lambert Is Pretty in Pink at 2019 CMA Awards With Husband Brendan McLoughlin",
+    "Prince Harry and Prince William's Rift Is \"One of the Main Reasons\" the Sussexes Are Skipping Royal Christmas"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The Key to Mastering Goulash, the World's Most Famous Stew\"\n\"These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED\"\n\"46 Thanksgiving Wishes, Messages, and Greetings to Share This Year\"\n\"Anna Faris and Michael Barrett may have just confirmed their engagement, plus more news\"\n\"85 Easy Christmas Appetizers That Will Delight All of Your Holiday Party Guests\"\n\"Seahawks knock 49ers from unbeaten ranks with 27-24 OT win\"\n\"John Legend Is PEOPLE's Sexiest Man Alive 2019: 'I'm Excited but a Little Scared at the Same Time'\"\n\"Deadly Arctic blast breaks records set more than 100 years ago\"\n\"Miranda Lambert Is Pretty in Pink at 2019 CMA Awards With Husband Brendan McLoughlin\"\n\"Prince Harry and Prince William's Rift Is \"One of the Main Reasons\" the Sussexes Are Skipping Royal Christmas\"\n\n[Candidate News Title]\n\"20 Crazy Cleaning Tips That Actually Work\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In reading \"20 Crazy Cleaning Tips That Actually Work,\" the user may expect to discover a variety of unconventional yet effective cleaning strategies that can simplify household chores. The article is likely to include practical advice, possibly emphasizing unique methods or unusual items that can enhance cleaning efficiency. Readers might anticipate tips that address various areas of the home, from kitchens to bathrooms, while also providing insights into how these tips can save time or improve results. Overall, the content could serve as a useful resource for those looking to refresh their cleaning routines.",
+  "model": "gpt-4o-mini"
+}

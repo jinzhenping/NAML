@@ -1,0 +1,21 @@
+{
+  "user_id": 942,
+  "candidate_news_id": "N112536",
+  "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+  "user_history_count": 10,
+  "user_history": [
+    "'Baby Trump' balloon slashed at Alabama appearance",
+    "Greg Hardy loses UFC fight in Moscow",
+    "Trump: Transcript of 2nd call will \"probably\" be released Tuesday",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Duke reports minor violation after Coach K mentions name of unsigned recruit",
+    "'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores",
+    "Burning questions for Seahawks vs 49ers on 'Monday Night Football'",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers",
+    "Why the Bucs released Vernon Hargreaves"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Baby Trump' balloon slashed at Alabama appearance\"\n\"Greg Hardy loses UFC fight in Moscow\"\n\"Trump: Transcript of 2nd call will \"probably\" be released Tuesday\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Duke reports minor violation after Coach K mentions name of unsigned recruit\"\n\"'Dancing with the Stars': Why Sean Spicer survives despite the lowest judge scores\"\n\"Burning questions for Seahawks vs 49ers on 'Monday Night Football'\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"The Geno Smith coin toss conspiracy is the dumbest thing in Seahawks' win over 49ers\"\n\"Why the Bucs released Vernon Hargreaves\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a specific location in the United States that has experienced unusually high temperatures, consistently exceeding 80 degrees since March. It may delve into the implications of such weather patterns, including potential effects on local communities, agriculture, and tourism. The piece could also explore the reasons behind this prolonged warmth, such as climate trends or geographic factors. Additionally, it may include insights from meteorologists or local residents, providing a broader context about how this heatwave compares to historical weather data.",
+  "model": "gpt-4o-mini"
+}

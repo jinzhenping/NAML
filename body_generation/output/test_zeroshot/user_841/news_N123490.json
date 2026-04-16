@@ -1,0 +1,17 @@
+{
+  "user_id": 841,
+  "candidate_news_id": "N123490",
+  "candidate_title": "Kentucky's Bowden gets Wildcats fans intrigued with tweet at Calipari",
+  "user_history_count": 6,
+  "user_history": [
+    "White House: Trump condemns violent parody, hasn't seen it",
+    "Kyle Shanahan had quite the burn for Dan Snyder and the Washington Redskins",
+    "Paula White, Newest White House Aide, Is a Uniquely Trumpian Pastor",
+    "LeBron James finds his Magic touch with third consecutive triple-double",
+    "Trump congratulates Mississippi's Reeves on election night win",
+    "Winners, losers from Seahawks' wild overtime win over 49ers on 'Monday Night Football'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"White House: Trump condemns violent parody, hasn't seen it\"\n\"Kyle Shanahan had quite the burn for Dan Snyder and the Washington Redskins\"\n\"Paula White, Newest White House Aide, Is a Uniquely Trumpian Pastor\"\n\"LeBron James finds his Magic touch with third consecutive triple-double\"\n\"Trump congratulates Mississippi's Reeves on election night win\"\n\"Winners, losers from Seahawks' wild overtime win over 49ers on 'Monday Night Football'\"\n\"\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Kentucky's Bowden gets Wildcats fans intrigued with tweet at Calipari\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Kentucky's Bowden gets Wildcats fans intrigued with tweet at Calipari,\" the user can expect a focus on the recent social media activity of Bowden, a figure associated with Kentucky athletics. The piece is likely to explore the content of Bowden's tweet directed at Coach Calipari, analyzing its implications for fan engagement and team dynamics. Additionally, it may touch on how such interactions reflect the broader relationship between athletes and coaches, as well as the impact on recruitment and fan sentiment towards the Wildcats.",
+  "model": "gpt-4o-mini"
+}

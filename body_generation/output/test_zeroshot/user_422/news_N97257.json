@@ -1,0 +1,21 @@
+{
+  "user_id": 422,
+  "candidate_news_id": "N97257",
+  "candidate_title": "Man stalked teen girl repeatedly on Long Island, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "What Your Fatigue Could Mean",
+    "Watch the Lamborghini Huracán Evo's Crazy Acceleration to 180 MPH",
+    "What $1,000 invested in Snap, Lyft and other unicorn IPOs is worth today",
+    "This 1973 Ford Capri Race Car Makes the Ultimate V-6 Sound",
+    "Meteor streaks through the sky over St. Louis",
+    "An often-missed form of dementia that's treatable",
+    "See the most expensive watch ever sold at auction",
+    "See the most expensive watch ever sold at auction",
+    "6 ways to use CO2 to cut emissions and generate trillions of dollars",
+    "Video: Dirt bikers circle NYPD officer in gas station confrontation"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"What Your Fatigue Could Mean\"\n\"Watch the Lamborghini Huracán Evo's Crazy Acceleration to 180 MPH\"\n\"What $1,000 invested in Snap, Lyft and other unicorn IPOs is worth today\"\n\"This 1973 Ford Capri Race Car Makes the Ultimate V-6 Sound\"\n\"Meteor streaks through the sky over St. Louis\"\n\"An often-missed form of dementia that's treatable\"\n\"See the most expensive watch ever sold at auction\"\n\"See the most expensive watch ever sold at auction\"\n\"6 ways to use CO2 to cut emissions and generate trillions of dollars\"\n\"Video: Dirt bikers circle NYPD officer in gas station confrontation\"\n\n[Candidate News Title]\n\"Man stalked teen girl repeatedly on Long Island, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Man stalked teen girl repeatedly on Long Island, police say\" is likely to provide a factual account of a disturbing incident involving a man who allegedly engaged in repeated stalking behavior towards a teenage girl in Long Island. Readers can expect details regarding the timeline of events, the police response, and any legal actions taken against the suspect. Additionally, the article may explore the broader implications of stalking incidents, including resources available for victims and the importance of reporting such behaviors. It is possible that the article will also touch on community reactions or preventative measures being discussed in response to this case.",
+  "model": "gpt-4o-mini"
+}

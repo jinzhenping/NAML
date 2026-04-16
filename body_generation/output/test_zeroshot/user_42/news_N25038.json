@@ -1,0 +1,18 @@
+{
+  "user_id": 42,
+  "candidate_news_id": "N25038",
+  "candidate_title": "Parole rejected for Charles Manson follower after 50 years",
+  "user_history_count": 7,
+  "user_history": [
+    "Penn State warms up in custom t-shirts denouncing racist letter",
+    "15 Things You're Doing to Your Car That Mechanics Wouldn't",
+    "How Often Should You Change Synthetic Oil?",
+    "Pelosi says Trump notified Russians of Baghdadi raid before telling congressional leaders",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "WPXI-TV Weather Forecaster Charged With DUI",
+    "Where will the Colin Kaepernick story go from here?"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Penn State warms up in custom t-shirts denouncing racist letter\"\n\"15 Things You're Doing to Your Car That Mechanics Wouldn't\"\n\"How Often Should You Change Synthetic Oil?\"\n\"Pelosi says Trump notified Russians of Baghdadi raid before telling congressional leaders\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"WPXI-TV Weather Forecaster Charged With DUI\"\n\"Where will the Colin Kaepernick story go from here?\"\n\"\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Parole rejected for Charles Manson follower after 50 years\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Parole rejected for Charles Manson follower after 50 years,\" the user can expect an informative overview of the recent decision regarding the parole application of a member of the infamous Manson Family. The piece is likely to detail the reasons behind the parole board's rejection, including any statements made by officials or the individual involved. Additionally, it may provide context on the historical significance of this case and insights into the ongoing discussions surrounding criminal justice and rehabilitation. The article could also explore public reactions or implications for similar cases in the future.",
+  "model": "gpt-4o-mini"
+}

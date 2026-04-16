@@ -1,0 +1,21 @@
+{
+  "user_id": 551,
+  "candidate_news_id": "N112536",
+  "candidate_title": "There's a place in the US where its been over 80 degrees since March",
+  "user_history_count": 10,
+  "user_history": [
+    "Celebs Who Have Rocked a Mullet, From Meryl Streep to Kanye West",
+    "The 50 Best One-Hit Wonders of All Time",
+    "Rock band's tour van collides with moose in Canada: Pics",
+    "Man who advocated caning for adultery gets caned for adultery",
+    "Celebrity mug shots",
+    "Buffalo Wild Wings reopens after manager is killed in chemical accident",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "Vanna White hosts 'Wheel of Fortune' after Sajak has surgery",
+    "Arctic blast to arrive TONIGHT bringing four days of bitter winds and freezing temperatures that will break hundreds of cold weather records and could see chilliest Veteran's Day ever",
+    "These are the words your teen applying to college needs to hear from you"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebs Who Have Rocked a Mullet, From Meryl Streep to Kanye West\"\n\"The 50 Best One-Hit Wonders of All Time\"\n\"Rock band's tour van collides with moose in Canada: Pics\"\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"Celebrity mug shots\"\n\"Buffalo Wild Wings reopens after manager is killed in chemical accident\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"Vanna White hosts 'Wheel of Fortune' after Sajak has surgery\"\n\"Arctic blast to arrive TONIGHT bringing four days of bitter winds and freezing temperatures that will break hundreds of cold weather records and could see chilliest Veteran's Day ever\"\n\"These are the words your teen applying to college needs to hear from you\"\n\n[Candidate News Title]\n\"There's a place in the US where its been over 80 degrees since March\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to learn about a location in the United States that has consistently experienced temperatures above 80 degrees since March. It is likely to provide insights into the geographical and climatic conditions that contribute to this unusual warmth, possibly discussing factors such as seasonal weather patterns or local geography. The piece might also include information about how this extreme weather impacts the local community, tourism, or agriculture, offering readers a broader understanding of the implications of sustained high temperatures in that area.",
+  "model": "gpt-4o-mini"
+}

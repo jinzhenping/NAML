@@ -1,0 +1,21 @@
+{
+  "user_id": 890,
+  "candidate_news_id": "N107521",
+  "candidate_title": "Why Teach Your Dog to Sit, When You Can Teach Them to Make a Sandwich Instead?",
+  "user_history_count": 10,
+  "user_history": [
+    "Disney World moves on from Skyliner accident, touts 1 million riders",
+    "Here's Exactly What Kristen Bell Eats in a Day to Make 39 Look Like 29",
+    "Cardio Isn't the Best Way to Burn Belly Fat - Here's What Trainers Want You to Do Instead",
+    "All the Shows Hoping to Be the Next Game of Thrones",
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "Miller Lite offers free beer for unfollowing them, Natural Light joins in",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "This Giant Cookie Cutter Makes Holiday Baking So Much Easier",
+    "Scared Rabbit Abandoned In Box Clings To His Favorite Teddy Bear",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Disney World moves on from Skyliner accident, touts 1 million riders\"\n\"Here's Exactly What Kristen Bell Eats in a Day to Make 39 Look Like 29\"\n\"Cardio Isn't the Best Way to Burn Belly Fat - Here's What Trainers Want You to Do Instead\"\n\"All the Shows Hoping to Be the Next Game of Thrones\"\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"Miller Lite offers free beer for unfollowing them, Natural Light joins in\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"This Giant Cookie Cutter Makes Holiday Baking So Much Easier\"\n\"Scared Rabbit Abandoned In Box Clings To His Favorite Teddy Bear\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\n[Candidate News Title]\n\"Why Teach Your Dog to Sit, When You Can Teach Them to Make a Sandwich Instead?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Why Teach Your Dog to Sit, When You Can Teach Them to Make a Sandwich Instead?\", the user is likely to find an exploration of unconventional dog training techniques that go beyond basic commands. The content may discuss the cognitive abilities of dogs and how engaging them in fun tasks, like sandwich-making, can enhance their learning experience and strengthen the bond between owner and pet. Additionally, the article could provide practical tips or examples of creative training methods, emphasizing the benefits of positive reinforcement in teaching dogs.",
+  "model": "gpt-4o-mini"
+}

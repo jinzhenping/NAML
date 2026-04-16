@@ -1,0 +1,21 @@
+{
+  "user_id": 944,
+  "candidate_news_id": "N52019",
+  "candidate_title": "Trump files to dismiss lawsuit from Bolton aide on impeachment testimony",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "New and upcoming releases",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "Subway gets into bitter battle with store owners",
+    "John Travolta Shares Rare Photo of Son Ben, 8, in Plane Cockpit: He's 'Taking My Place!'",
+    "At Least 3 Injured In Stampede At Travis Scott's Astroworld Music Festival",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+    "17 restaurants that will be open on Thanksgiving",
+    "Lexus just revealed the pricing for its first-ever luxury yacht   and a fully-loaded model will cost $4.85 million. Here's a closer look at LY 650."
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"New and upcoming releases\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Subway gets into bitter battle with store owners\"\n\"John Travolta Shares Rare Photo of Son Ben, 8, in Plane Cockpit: He's 'Taking My Place!'\"\n\"At Least 3 Injured In Stampede At Travis Scott's Astroworld Music Festival\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\"17 restaurants that will be open on Thanksgiving\"\n\"Lexus just revealed the pricing for its first-ever luxury yacht   and a fully-loaded model will cost $4.85 million. Here's a closer look at LY 650.\"\n\n[Candidate News Title]\n\"Trump files to dismiss lawsuit from Bolton aide on impeachment testimony\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Trump files to dismiss lawsuit from Bolton aide on impeachment testimony\" is likely to provide an overview of former President Donald Trump's legal maneuvers regarding a lawsuit filed by a former aide to John Bolton related to impeachment testimony. Readers may expect details on the basis of the lawsuit, including any legal arguments being presented and the implications of Trump's motion to dismiss. Additionally, the piece could discuss the broader context of the impeachment proceedings and how this legal action fits into ongoing political dynamics.",
+  "model": "gpt-4o-mini"
+}

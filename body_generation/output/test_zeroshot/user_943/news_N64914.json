@@ -1,0 +1,21 @@
+{
+  "user_id": 943,
+  "candidate_news_id": "N64914",
+  "candidate_title": "Saugus High shooter turned 16, dressed in black, grabbed a weapon and opened fire on classmates",
+  "user_history_count": 10,
+  "user_history": [
+    "2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway",
+    "Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019",
+    "Just like NFL's deal with Jay-Z, the Colin Kaepernick workout looks like a PR trap",
+    "NFL Playoff Projection: Raiders have a clear path to the playoffs",
+    "Should I tip 20% in a restaurant even if the service is mediocre?",
+    "Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded",
+    "Justice Dept. rolls out new program to combat gun violence",
+    "Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this",
+    "Bands' final albums before they broke up",
+    "Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"2020 Corvette Doesn't Like The Snow, Crashes On Detroit Highway\"\n\"Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019\"\n\"Just like NFL's deal with Jay-Z, the Colin Kaepernick workout looks like a PR trap\"\n\"NFL Playoff Projection: Raiders have a clear path to the playoffs\"\n\"Should I tip 20% in a restaurant even if the service is mediocre?\"\n\"Iowa paid a security firm to break into a courthouse, then arrested employees when they succeeded\"\n\"Justice Dept. rolls out new program to combat gun violence\"\n\"Opinion: Colin Kaepernick's NFL workout is better late than never but shouldn't have come to this\"\n\"Bands' final albums before they broke up\"\n\"Notre Dame sellout streak of 273 games dating to 1973 likely to end this week against Navy\"\n\n[Candidate News Title]\n\"Saugus High shooter turned 16, dressed in black, grabbed a weapon and opened fire on classmates\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the Saugus High shooter is likely to provide a detailed account of the incident, focusing on the events leading up to and during the shooting. It may include information about the shooter, such as their age and behavior, as well as the response from law enforcement and the community. Additionally, the article could explore the implications of school safety and gun violence, possibly referencing broader trends or statistics related to such incidents. Overall, readers might expect an informative overview of the tragic event, although specifics about the motivations behind the attack may remain unclear.",
+  "model": "gpt-4o-mini"
+}

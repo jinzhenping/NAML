@@ -1,0 +1,21 @@
+{
+  "user_id": 59,
+  "candidate_news_id": "N72054",
+  "candidate_title": "Greek donkeys are still being abused as 'tourist taxis,' PETA claims",
+  "user_history_count": 10,
+  "user_history": [
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "Dean Foods files for bankruptcy",
+    "Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out",
+    "Signs of Dementia: 8 Tips For Talking to Your Older Parents",
+    "Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal",
+    "The most exclusive hotel in every state",
+    "Three Classic Cars Stolen From CA Car Show",
+    "Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"Dean Foods files for bankruptcy\"\n\"Stella McCartney Deleted a Meghan Markle Instagram Post After Followers Called Her Out\"\n\"Signs of Dementia: 8 Tips For Talking to Your Older Parents\"\n\"Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\"The most exclusive hotel in every state\"\n\"Three Classic Cars Stolen From CA Car Show\"\n\"Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom\"\n\n[Candidate News Title]\n\"Greek donkeys are still being abused as 'tourist taxis,' PETA claims\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article on Greek donkeys being abused as 'tourist taxis' is likely to examine the ongoing issues surrounding animal welfare in the tourism industry. It may provide details on how these donkeys are used in various tourist hotspots and highlight the concerns raised by PETA regarding their treatment. Readers can expect to learn about specific instances of abuse, the conditions in which the donkeys are kept, and the broader implications for animal rights. Additionally, the article could discuss potential solutions or actions being advocated to improve the situation for these animals.",
+  "model": "gpt-4o-mini"
+}

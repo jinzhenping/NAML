@@ -1,0 +1,21 @@
+{
+  "user_id": 640,
+  "candidate_news_id": "N57701",
+  "candidate_title": "Warren Buffett buys a stake in Restoration Hardware",
+  "user_history_count": 10,
+  "user_history": [
+    "Captives or Defectors? Taliban Fighters Tell Conflicting Tales",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "Captured al-Baghdadi wife revealed plenty about ISIS, source says",
+    "Oklahoma woman in failure-to-protect case to be released",
+    "Why Spy on Twitter? For Saudi Arabia, It's the Town Square",
+    "They Are Racist; Some of Them Have Guns. Inside the White Supremacist Group Hiding in Plain Sight.",
+    "Hundreds arrested ahead of verdict on Indian holy site",
+    "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+    "Chad Wolf confirmed as acting Homeland Security chief",
+    "Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Captives or Defectors? Taliban Fighters Tell Conflicting Tales\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"Captured al-Baghdadi wife revealed plenty about ISIS, source says\"\n\"Oklahoma woman in failure-to-protect case to be released\"\n\"Why Spy on Twitter? For Saudi Arabia, It's the Town Square\"\n\"They Are Racist; Some of Them Have Guns. Inside the White Supremacist Group Hiding in Plain Sight.\"\n\"Hundreds arrested ahead of verdict on Indian holy site\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\"Chad Wolf confirmed as acting Homeland Security chief\"\n\"Cannabis Use Disorder is Rising in U.S. States Where Weed is Legal\"\n\n[Candidate News Title]\n\"Warren Buffett buys a stake in Restoration Hardware\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Warren Buffett buying a stake in Restoration Hardware, the user is likely to encounter an analysis of Buffett's investment strategy and its implications for the home furnishings market. The piece may discuss Restoration Hardware's financial performance and growth potential, as well as how this investment aligns with Buffett's broader portfolio. Additionally, it could explore the significance of this move in the context of current economic conditions and consumer trends. Overall, the article is likely to provide insights into the reasoning behind the investment and its expected impact on both the company and the market.",
+  "model": "gpt-4o-mini"
+}

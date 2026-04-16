@@ -1,0 +1,21 @@
+{
+  "user_id": 961,
+  "candidate_news_id": "N41858",
+  "candidate_title": "35 Christmas Tree Decorating Ideas You Haven't Seen Before",
+  "user_history_count": 10,
+  "user_history": [
+    "Niecy Nash Announces Split From Husband Jay Tucker",
+    "Ex-All-Star slugger Josh Hamilton charged with child injury",
+    "Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding",
+    "Look of the Day",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "Week in celebrity photos for Nov. 4-8, 2019",
+    "Stylish Living Room Ideas, From Floral to Family-Friendly",
+    "Photos of Celebrities at the Airport Are Here to Inspire Your Holiday Travel Style",
+    "15 Themed Christmas Trees That Will Make You Rethink Your Holiday Decor",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Niecy Nash Announces Split From Husband Jay Tucker\"\n\"Ex-All-Star slugger Josh Hamilton charged with child injury\"\n\"Property Brothers' J.D. Scott Marries Annalee Belle in Vintage Theatre-Themed Wedding\"\n\"Look of the Day\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"Week in celebrity photos for Nov. 4-8, 2019\"\n\"Stylish Living Room Ideas, From Floral to Family-Friendly\"\n\"Photos of Celebrities at the Airport Are Here to Inspire Your Holiday Travel Style\"\n\"15 Themed Christmas Trees That Will Make You Rethink Your Holiday Decor\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\n[Candidate News Title]\n\"35 Christmas Tree Decorating Ideas You Haven't Seen Before\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a collection of creative and innovative ideas for decorating Christmas trees, with a focus on unique themes and styles that may not be widely recognized. The piece could offer a variety of decorating techniques, including suggestions for color schemes, ornament choices, and arrangement tips that cater to different tastes and home aesthetics. Additionally, it may include visual inspiration through photographs or illustrations to guide readers in rethinking their holiday decor. Overall, the article is expected to provide fresh perspectives on Christmas tree decoration.",
+  "model": "gpt-4o-mini"
+}

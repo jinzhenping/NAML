@@ -1,0 +1,21 @@
+{
+  "user_id": 38,
+  "candidate_news_id": "N47891",
+  "candidate_title": "Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash",
+  "user_history_count": 10,
+  "user_history": [
+    "Southwest's Spring Travel Sale Includes $39 One-way Tickets",
+    "Highways on Fire. Semesters Cut Short. A Recession. Can Hong Kong Heal?",
+    "School bus driver charged with DUI after crashing with 10 students on board",
+    "Most Americans say they are struggling financially",
+    "The 1 reason you shouldn't hesitate to claim Social Security early",
+    "'Absolutely Terrifying': 3 Students Describe Moments After Shots Rang Out At Saugus High School",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+    "15 Abandoned Places That You Can See Only in Pictures",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+    "Family told to take down Christmas display because it's too soon to decorate"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Southwest's Spring Travel Sale Includes $39 One-way Tickets\"\n\"Highways on Fire. Semesters Cut Short. A Recession. Can Hong Kong Heal?\"\n\"School bus driver charged with DUI after crashing with 10 students on board\"\n\"Most Americans say they are struggling financially\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\"'Absolutely Terrifying': 3 Students Describe Moments After Shots Rang Out At Saugus High School\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\"15 Abandoned Places That You Can See Only in Pictures\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\n[Candidate News Title]\n\"Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Ford v Ferrari: the forgotten car at the heart of the Le Mans '66 clash\" may explore the historical context of the 1966 Le Mans race, focusing on the lesser-known vehicles involved in the competition. Readers could expect a detailed examination of the technical aspects of the cars, particularly the dynamics between Ford and Ferrari during this iconic event. Additionally, the piece might delve into the strategic decisions made by both teams and how these influenced the race outcome, while highlighting the significance of the overlooked car in this automotive rivalry.",
+  "model": "gpt-4o-mini"
+}

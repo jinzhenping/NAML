@@ -1,0 +1,21 @@
+{
+  "user_id": 298,
+  "candidate_news_id": "N30206",
+  "candidate_title": "Cows swept away by Hurricane Dorian found alive   but how?",
+  "user_history_count": 10,
+  "user_history": [
+    "6-year-old Ohio boy brings loaded semi-automatic gun to school in backpack",
+    "25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Marines Now Allowed to Use Umbrellas, Wear Earrings While in Uniform",
+    "A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos",
+    "Sarah Hyland documents painful tattoo removal",
+    "Instagram-famous pilot reveals secrets people don't know about the job",
+    "From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers",
+    "Student's drone footage shows whale swimming around California surfers"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"6-year-old Ohio boy brings loaded semi-automatic gun to school in backpack\"\n\"25 bathrooms? Former Clinton labor secretary says Bezos' mansion helps make case for soaking the rich\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Marines Now Allowed to Use Umbrellas, Wear Earrings While in Uniform\"\n\"A bodybuilder showed how fitness influencers can make their bodies look Instagram-perfect in before-and-after photos\"\n\"Sarah Hyland documents painful tattoo removal\"\n\"Instagram-famous pilot reveals secrets people don't know about the job\"\n\"From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers\"\n\"Student's drone footage shows whale swimming around California surfers\"\n\n[Candidate News Title]\n\"Cows swept away by Hurricane Dorian found alive   but how?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Cows swept away by Hurricane Dorian found alive but how?\", you may expect to read about the remarkable survival of cattle displaced by the hurricane. The article is likely to detail the circumstances surrounding their rescue, including the challenges faced by rescue teams and the conditions in which the cows were found. Additionally, it may explore the broader implications of such events on livestock management and disaster response in agricultural communities, providing insights into how animals can endure extreme weather.",
+  "model": "gpt-4o-mini"
+}

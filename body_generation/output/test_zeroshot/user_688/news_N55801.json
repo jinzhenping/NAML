@@ -1,0 +1,21 @@
+{
+  "user_id": 688,
+  "candidate_news_id": "N55801",
+  "candidate_title": "High tides surge through Venice, locals rush to protect art",
+  "user_history_count": 10,
+  "user_history": [
+    "Five questions the second College Football Playoff rankings will answer",
+    "Why Auburn is the center of the college football universe in November",
+    "Four-star Louisiana RB Ashaad Clayton commits to Colorado",
+    "We tasted this plant-based ice cream and can happily report it's delicious",
+    "Hate crimes remain at heightened levels, FBI report finds",
+    "Auburn coach Gus Malzahn on open Arkansas job: 'Nothing's changed'",
+    "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+    "Kentucky's Bowden gets Wildcats fans intrigued with tweet at Calipari"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Five questions the second College Football Playoff rankings will answer\"\n\"Why Auburn is the center of the college football universe in November\"\n\"Four-star Louisiana RB Ashaad Clayton commits to Colorado\"\n\"We tasted this plant-based ice cream and can happily report it's delicious\"\n\"Hate crimes remain at heightened levels, FBI report finds\"\n\"Auburn coach Gus Malzahn on open Arkansas job: 'Nothing's changed'\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"Kentucky's Bowden gets Wildcats fans intrigued with tweet at Calipari\"\n\n[Candidate News Title]\n\"High tides surge through Venice, locals rush to protect art\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the impact of recent high tides in Venice, focusing on how residents and local authorities are responding to the situation to protect valuable art and historical sites. Readers can expect an overview of the measures being taken, such as barriers or other protective strategies, alongside insights into the challenges posed by climate change and rising sea levels. The piece may also explore the significance of the art at risk and how Venice’s unique cultural heritage is being preserved amid environmental concerns.",
+  "model": "gpt-4o-mini"
+}

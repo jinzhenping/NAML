@@ -1,0 +1,21 @@
+{
+  "user_id": 814,
+  "candidate_news_id": "N62800",
+  "candidate_title": "9 renovation tips to boost resale value",
+  "user_history_count": 10,
+  "user_history": [
+    "2021 Chevy Tahoe, Suburban To Debut On December 10",
+    "LASIK eye surgery should be taken off market, ex-FDA adviser says",
+    "See Princess Sofia of Sweden's Unexpected Green Leopard Print Dress   Complete with Tiara!",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+    "Week in celebrity photos for Nov. 11-15, 2019",
+    "These 7 sports cars crushed their horsepower ratings in our dyno tests",
+    "Celebrity PDA of 2019",
+    "Week in celebrity photos for Nov. 11-15, 2019",
+    "Celebrity beach cruising for 2019",
+    "What Chrissy Teigen Eats in a Day to Stay Fit and Glowing"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"2021 Chevy Tahoe, Suburban To Debut On December 10\"\n\"LASIK eye surgery should be taken off market, ex-FDA adviser says\"\n\"See Princess Sofia of Sweden's Unexpected Green Leopard Print Dress   Complete with Tiara!\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"Week in celebrity photos for Nov. 11-15, 2019\"\n\"These 7 sports cars crushed their horsepower ratings in our dyno tests\"\n\"Celebrity PDA of 2019\"\n\"Week in celebrity photos for Nov. 11-15, 2019\"\n\"Celebrity beach cruising for 2019\"\n\"What Chrissy Teigen Eats in a Day to Stay Fit and Glowing\"\n\n[Candidate News Title]\n\"9 renovation tips to boost resale value\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article \"9 renovation tips to boost resale value\" is likely to provide practical advice on home improvement projects that can enhance the market value of a property. Readers can expect to find insights into which renovations yield the highest returns, such as kitchen upgrades or bathroom remodels, along with budget considerations and timelines for completion. The article may also discuss the importance of curb appeal and staging for potential buyers. Overall, it aims to equip homeowners with strategies to make informed decisions about their renovations to maximize resale value.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 719,
+  "candidate_news_id": "N117802",
+  "candidate_title": "Pete Davidson, Kaia Gerber Are Dating, Trying to Stay 'Low Profile'",
+  "user_history_count": 10,
+  "user_history": [
+    "The best celebrity couple Halloween costumes",
+    "Chasing history: Tiger Woods eyes record win No. 82 at Zozo Championship",
+    "A 2,000-pound great white shark is swimming off the coast of Florida",
+    "UK to hold rare December election with Brexit on table",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "Felicity Huffman Smiles as She Begins Community Service Following Prison Release",
+    "Instagram-famous pilot reveals secrets people don't know about the job",
+    "Rep. Tim Ryan endorses Biden in Democratic primary",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "See Princess Sofia of Sweden's Unexpected Green Leopard Print Dress   Complete with Tiara!"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The best celebrity couple Halloween costumes\"\n\"Chasing history: Tiger Woods eyes record win No. 82 at Zozo Championship\"\n\"A 2,000-pound great white shark is swimming off the coast of Florida\"\n\"UK to hold rare December election with Brexit on table\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"Felicity Huffman Smiles as She Begins Community Service Following Prison Release\"\n\"Instagram-famous pilot reveals secrets people don't know about the job\"\n\"Rep. Tim Ryan endorses Biden in Democratic primary\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"See Princess Sofia of Sweden's Unexpected Green Leopard Print Dress   Complete with Tiara!\"\n\n[Candidate News Title]\n\"Pete Davidson, Kaia Gerber Are Dating, Trying to Stay 'Low Profile'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the budding relationship between Pete Davidson and Kaia Gerber, focusing on their attempts to maintain a low profile amid public interest. It may provide insights into how the couple is navigating their connection while balancing the challenges of fame, perhaps touching on their interactions at public events or social media. Additionally, the piece could explore the dynamics of their relationship, including any shared interests or activities that have drawn them together, though these details might remain speculative given their desire for privacy.",
+  "model": "gpt-4o-mini"
+}

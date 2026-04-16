@@ -1,0 +1,21 @@
+{
+  "user_id": 303,
+  "candidate_news_id": "N59297",
+  "candidate_title": "The Coolest Car Lamborghini Never Made Is Up For Sale",
+  "user_history_count": 10,
+  "user_history": [
+    "The 32 most affordable winter vacation spots in the US",
+    "Unidentified remains found in woods during search for missing 5-year-old",
+    "The most beautiful places to visit in the US",
+    "Atlanta college student Alexis Crawford was choked to death, dumped in park, police say",
+    "Record-breaking arctic blast stretches from Midwest to Northeast to South",
+    "Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'",
+    "Widow claims Carnival Cruise Line hired unlicensed doctor, and now her husband is dead",
+    "Mother of missing Florida girl charged; human remains found",
+    "American woman apparently strangled in the Dominican Republic",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 32 most affordable winter vacation spots in the US\"\n\"Unidentified remains found in woods during search for missing 5-year-old\"\n\"The most beautiful places to visit in the US\"\n\"Atlanta college student Alexis Crawford was choked to death, dumped in park, police say\"\n\"Record-breaking arctic blast stretches from Midwest to Northeast to South\"\n\"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'\"\n\"Widow claims Carnival Cruise Line hired unlicensed doctor, and now her husband is dead\"\n\"Mother of missing Florida girl charged; human remains found\"\n\"American woman apparently strangled in the Dominican Republic\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\n[Candidate News Title]\n\"The Coolest Car Lamborghini Never Made Is Up For Sale\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"The Coolest Car Lamborghini Never Made Is Up For Sale,\" you may expect an exploration of a unique Lamborghini model that never reached production. The piece is likely to detail the car's design, features, and the reasons behind its cancellation, potentially including insights from automotive experts or designers. Additionally, it could discuss its significance within the Lamborghini brand and the impact of such a vehicle on car enthusiasts and collectors. Overall, the article may provide a blend of historical context and current market implications surrounding this rare offering.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 529,
+  "candidate_news_id": "N82503",
+  "candidate_title": "FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'",
+  "user_history_count": 10,
+  "user_history": [
+    "Black cat visits field during Cowboys-Giants game on 'Monday Night Football'",
+    "Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song",
+    "Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "Dez Bryant plans to reach out to NFL teams in two weeks",
+    "Whitney Houston's Best Friend Robyn Crawford Breaks Her Silence on Their Love Affair in New Memoir",
+    "Opinion: NFL owes Colin Kaepernick a fair shot at weekend workout in Atlanta",
+    "Kevin Hart Says He's a ''Different'' Person While Revealing Details From ''Humbling'' Car Crash Recovery",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Bands' final albums before they broke up"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Black cat visits field during Cowboys-Giants game on 'Monday Night Football'\"\n\"Eminem Says He Sides With Chris Brown Over Rihanna Assault on Alleged Leaked Song\"\n\"Man dies after stabbing in Maryland Popeyes; fight over chicken sandwich, sources say\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"Dez Bryant plans to reach out to NFL teams in two weeks\"\n\"Whitney Houston's Best Friend Robyn Crawford Breaks Her Silence on Their Love Affair in New Memoir\"\n\"Opinion: NFL owes Colin Kaepernick a fair shot at weekend workout in Atlanta\"\n\"Kevin Hart Says He's a ''Different'' Person While Revealing Details From ''Humbling'' Car Crash Recovery\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Bands' final albums before they broke up\"\n\n[Candidate News Title]\n\"FDA issues warning to Dollar Tree about selling 'potentially unsafe drugs'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a recent warning issued by the FDA to Dollar Tree regarding the sale of potentially unsafe drugs. Readers may expect to find details about the specific products involved, the reasons for the warning, and any potential health risks associated with these items. It could also provide context on Dollar Tree's response to the FDA's concerns and what regulatory actions might follow. Additionally, the article may touch on broader implications for consumer safety and the responsibilities of retailers in ensuring the safety of their products.",
+  "model": "gpt-4o-mini"
+}

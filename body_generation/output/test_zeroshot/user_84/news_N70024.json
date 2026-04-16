@@ -1,0 +1,21 @@
+{
+  "user_id": 84,
+  "candidate_news_id": "N70024",
+  "candidate_title": "Kristen Bell's Cozy Look Is a Lesson in Winter Airport Fashion",
+  "user_history_count": 10,
+  "user_history": [
+    "Here Are the Biggest Deals We're Anticipating for Black Friday",
+    "Holocaust survivor under guard amid death threats",
+    "Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV",
+    "Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'",
+    "Top 100 country songs of all time",
+    "The 1 reason you shouldn't hesitate to claim Social Security early",
+    "This is Chick-fil-A's most-ordered menu item",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US",
+    "Plumber killed in trench collapse died days after birthday",
+    "65 Best Fall Soups That Will Warm You and Your Family Up All Season Long"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Here Are the Biggest Deals We're Anticipating for Black Friday\"\n\"Holocaust survivor under guard amid death threats\"\n\"Watch: 'The View' Versus Donald Trump Jr.: Loud, Low Blows, Politics, Scandals And Great TV\"\n\"Donald Trump Jr. reflects on explosive 'View' chat: 'I don't think they like me much anymore'\"\n\"Top 100 country songs of all time\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\"Plumber killed in trench collapse died days after birthday\"\n\"65 Best Fall Soups That Will Warm You and Your Family Up All Season Long\"\n\n[Candidate News Title]\n\"Kristen Bell's Cozy Look Is a Lesson in Winter Airport Fashion\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Kristen Bell's winter airport fashion, the user can expect a description of her outfit choices suitable for travel during colder months. It may highlight specific elements of her look, such as layering techniques, fabric choices, and accessories that balance comfort with style. Additionally, the article could provide insights into current fashion trends for winter travel, offering tips on how to maintain warmth while looking fashionable. Overall, the content is likely to appeal to those interested in practical yet stylish clothing options for the winter season.",
+  "model": "gpt-4o-mini"
+}

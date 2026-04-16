@@ -1,0 +1,21 @@
+{
+  "user_id": 19,
+  "candidate_news_id": "N117695",
+  "candidate_title": "Prince Harry and Prince William's Rift Is \"One of the Main Reasons\" the Sussexes Are Skipping Royal Christmas",
+  "user_history_count": 10,
+  "user_history": [
+    "These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED",
+    "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out",
+    "11-year-old boy dies after being shot in chest",
+    "I've had it with this former friend",
+    "Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago",
+    "It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now",
+    "Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter",
+    "New Zealand's euthanasia bill passes, referendum to be held",
+    "Two sisters raise thousands to buy 108 Thanksgiving meals and turkeys for families in need",
+    "Look of the Day"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"These Two New Oreo Flavors Are Coming in 2020 and We're OBSESSED\"\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\"11-year-old boy dies after being shot in chest\"\n\"I've had it with this former friend\"\n\"Dramatic Footage Shows Plane Skidding Off Runway at O'Hare Airport in Chicago\"\n\"It's Not Your Imagination, Brussels Sprouts Really Do Taste Better Now\"\n\"Groom Makes The Most Heartfelt Vows To His 9-Year-Old Stepdaughter\"\n\"New Zealand's euthanasia bill passes, referendum to be held\"\n\"Two sisters raise thousands to buy 108 Thanksgiving meals and turkeys for families in need\"\n\"Look of the Day\"\n\n[Candidate News Title]\n\"Prince Harry and Prince William's Rift Is \"One of the Main Reasons\" the Sussexes Are Skipping Royal Christmas\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the ongoing tension between Prince Harry and Prince William, highlighting how this rift may be a significant factor in the Sussexes' decision to forgo traditional family gatherings over the Christmas period. Readers can expect an exploration of the historical context of their relationship, insights into the royal family's dynamics, and possible implications for future engagements. Additionally, it may touch on public reactions to this decision and how it reflects broader themes of familial relationships within the royal household.",
+  "model": "gpt-4o-mini"
+}

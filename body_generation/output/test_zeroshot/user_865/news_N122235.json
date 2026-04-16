@@ -1,0 +1,21 @@
+{
+  "user_id": 865,
+  "candidate_news_id": "N122235",
+  "candidate_title": "100+ Street Style Shots to Inspire Your Winter Look (Because You Deserve Better Than a Sweater and Jeans)",
+  "user_history_count": 10,
+  "user_history": [
+    "Vanna White hosts 'Wheel of Fortune' after Sajak has surgery",
+    "Actress Accuses Roman Polanski of Raping Her in 1975",
+    "Dolly Parton Is Rocking a Thigh-High Slit at the CMA Awards and She Looks Incredible",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Best royal photos of 2019",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters",
+    "They bought a 1 euro house in Italy -- here's what happened next",
+    "A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina",
+    "Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'",
+    "12 Photos Show What It's Really Like To Grow Up Trans"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Vanna White hosts 'Wheel of Fortune' after Sajak has surgery\"\n\"Actress Accuses Roman Polanski of Raping Her in 1975\"\n\"Dolly Parton Is Rocking a Thigh-High Slit at the CMA Awards and She Looks Incredible\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Best royal photos of 2019\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\"They bought a 1 euro house in Italy -- here's what happened next\"\n\"A Trump Tax Break To Help The Poor Went To a Rich GOP Donor's Superyacht Marina\"\n\"Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'\"\n\"12 Photos Show What It's Really Like To Grow Up Trans\"\n\n[Candidate News Title]\n\"100+ Street Style Shots to Inspire Your Winter Look (Because You Deserve Better Than a Sweater and Jeans)\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect to explore a curated collection of over 100 street style photographs that showcase diverse winter fashion trends. The focus is likely on providing visual inspiration beyond typical winter attire, such as sweaters and jeans, highlighting creative layering, unique accessories, and bold color combinations. Additionally, the article could feature insights into how these looks are styled and tips for incorporating similar elements into one's wardrobe, offering a practical guide for those looking to refresh their winter fashion choices.",
+  "model": "gpt-4o-mini"
+}

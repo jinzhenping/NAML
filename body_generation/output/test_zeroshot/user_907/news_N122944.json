@@ -1,0 +1,21 @@
+{
+  "user_id": 907,
+  "candidate_news_id": "N122944",
+  "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+  "user_history_count": 10,
+  "user_history": [
+    "Cummings' widow responds to Trump's attacks, gets standing ovation",
+    "The states where taxpayers should worry most about pensions",
+    "Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say",
+    "Solange Knowles splits with husband ahead of anniversary",
+    "Tarek El Moussa: I'm 'Looking Forward' to Knowing Christina Anstead's Son",
+    "Salmonella linked to ground beef",
+    "30 Thanksgiving Casserole Recipes",
+    "10 Thanksgiving dishes you should just buy at the store",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage",
+    "One in 5 children live below the poverty line: Here are the states with the highest number of kids dependent on free lunches"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Cummings' widow responds to Trump's attacks, gets standing ovation\"\n\"The states where taxpayers should worry most about pensions\"\n\"Nunes Aide Is Leaking the Ukraine Whistleblower's Name, Sources Say\"\n\"Solange Knowles splits with husband ahead of anniversary\"\n\"Tarek El Moussa: I'm 'Looking Forward' to Knowing Christina Anstead's Son\"\n\"Salmonella linked to ground beef\"\n\"30 Thanksgiving Casserole Recipes\"\n\"10 Thanksgiving dishes you should just buy at the store\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"One in 5 children live below the poverty line: Here are the states with the highest number of kids dependent on free lunches\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu,\" you can expect to read about the factors that influence McDonald's decision to maintain this particular item on their menu. The article may explore aspects such as consumer demand, seasonal promotions during Lent, and the strategic importance of diversifying menu options to cater to various dietary preferences. Additionally, it could discuss the historical context of the Filet-O-Fish and its role in the company's overall branding and marketing strategy.",
+  "model": "gpt-4o-mini"
+}

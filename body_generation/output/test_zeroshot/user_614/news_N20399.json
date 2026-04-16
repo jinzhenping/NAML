@@ -1,0 +1,21 @@
+{
+  "user_id": 614,
+  "candidate_news_id": "N20399",
+  "candidate_title": "Camille Grammer Accuses Ex-Husband Kelsey Grammer of 'Rewriting History'",
+  "user_history_count": 10,
+  "user_history": [
+    "Celebrity plastic surgery transformations",
+    "US Coast Guard is searching for two missing boaters after a storm capsized their vessel",
+    "Scared Rabbit Abandoned In Box Clings To His Favorite Teddy Bear",
+    "Pregnant Maren Morris Shares Sonogram Video of Her Baby Boy: 'I Got a Wave Today'",
+    "The 21 most iconic CMA Awards performances",
+    "Photos of the Day",
+    "Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos",
+    "Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019",
+    "Ruth Bader Ginsburg misses court due to illness",
+    "Three school workers charged in death of special needs student"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebrity plastic surgery transformations\"\n\"US Coast Guard is searching for two missing boaters after a storm capsized their vessel\"\n\"Scared Rabbit Abandoned In Box Clings To His Favorite Teddy Bear\"\n\"Pregnant Maren Morris Shares Sonogram Video of Her Baby Boy: 'I Got a Wave Today'\"\n\"The 21 most iconic CMA Awards performances\"\n\"Photos of the Day\"\n\"Selena Gomez and Julia Michaels Share a Kiss Before Getting Matching Arrow Tattoos\"\n\"Welcome to the World! All of the Celebrity Babies Who've Made Their Debuts in 2019\"\n\"Ruth Bader Ginsburg misses court due to illness\"\n\"Three school workers charged in death of special needs student\"\n\n[Candidate News Title]\n\"Camille Grammer Accuses Ex-Husband Kelsey Grammer of 'Rewriting History'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Camille Grammer Accuses Ex-Husband Kelsey Grammer of 'Rewriting History',\" the user can expect to find a detailed account of Camille Grammer's allegations against her former husband regarding their past. The article may explore the context of their relationship and the specific instances or events that Camille claims Kelsey is misrepresenting. Additionally, it could provide insights into how these accusations have been received by the public and any potential legal or personal implications for both parties. The discussion might also touch upon their history in the entertainment industry and how it influences their current narratives.",
+  "model": "gpt-4o-mini"
+}

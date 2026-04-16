@@ -1,0 +1,21 @@
+{
+  "user_id": 239,
+  "candidate_news_id": "N85420",
+  "candidate_title": "Surviving Santa Clarita school shooting victims on road to recovery: Latest",
+  "user_history_count": 10,
+  "user_history": [
+    "Lindsay Lohan's dad weighs in on her relationship with the Saudi crown prince",
+    "Fall TV Scheduling Hits & Misses (2019)",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "When Costars Clash: 13 Onscreen Pairs Who Were Allegedly Feuding Offscreen",
+    "'The Little Mermaid Live!': TV Review",
+    "Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'",
+    "Mark Ruffalo Wants to Set Up Jennifer Aniston on a Date",
+    "10 Thanksgiving dishes you should just buy at the store",
+    "100 Incredible Christmas Tree Decorating Ideas",
+    "17 Outdated Office Etiquette Rules That Are So Laughable Today"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Lindsay Lohan's dad weighs in on her relationship with the Saudi crown prince\"\n\"Fall TV Scheduling Hits & Misses (2019)\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"When Costars Clash: 13 Onscreen Pairs Who Were Allegedly Feuding Offscreen\"\n\"'The Little Mermaid Live!': TV Review\"\n\"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'\"\n\"Mark Ruffalo Wants to Set Up Jennifer Aniston on a Date\"\n\"10 Thanksgiving dishes you should just buy at the store\"\n\"100 Incredible Christmas Tree Decorating Ideas\"\n\"17 Outdated Office Etiquette Rules That Are So Laughable Today\"\n\n[Candidate News Title]\n\"Surviving Santa Clarita school shooting victims on road to recovery: Latest\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely provides an update on the recovery journey of the victims of the Santa Clarita school shooting, focusing on their physical and emotional healing processes. It may detail the ongoing support they are receiving from family, friends, and community resources, as well as any challenges they face in returning to normalcy. The piece could also touch on the broader implications for school safety and mental health awareness in the aftermath of such incidents, although these themes may be explored more generally rather than in-depth.",
+  "model": "gpt-4o-mini"
+}

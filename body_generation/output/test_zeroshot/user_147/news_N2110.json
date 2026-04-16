@@ -1,0 +1,20 @@
+{
+  "user_id": 147,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 9,
+  "user_history": [
+    "Week 7 winners, losers: Aaron Rodgers now in MVP race; Mitchell Trubisky looks lost",
+    "Lady Gaga, Jim Carrey, Christina Hendricks and Pete Davidson are all single again, plus more celeb love life news for late October 2019",
+    "Bruce Willis brought Demi Moore to tears after reading her book",
+    "Cuba Gooding Jr. pleads not guilty to new sexual misconduct charges",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Pamela Anderson gets backlash after wearing a Native American headdress for Halloween",
+    "What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens",
+    "Jerry Jones hopes loss to Vikings isn't 'terminal'",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Week 7 winners, losers: Aaron Rodgers now in MVP race; Mitchell Trubisky looks lost\"\n\"Lady Gaga, Jim Carrey, Christina Hendricks and Pete Davidson are all single again, plus more celeb love life news for late October 2019\"\n\"Bruce Willis brought Demi Moore to tears after reading her book\"\n\"Cuba Gooding Jr. pleads not guilty to new sexual misconduct charges\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Pamela Anderson gets backlash after wearing a Native American headdress for Halloween\"\n\"What Tom Brady, Lamar Jackson Told Each Other After Patriots-Ravens\"\n\"Jerry Jones hopes loss to Vikings isn't 'terminal'\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\"\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive,\" the user can expect a curated list of innovative and appealing technology-related gifts suitable for various occasions. This may include gadgets, accessories, and devices that cater to different interests, such as gaming, home automation, and personal entertainment. The article is likely to highlight both trending and practical items, offering insights on their features and potential appeal to a wide audience. Readers may also find recommendations that could suit tech enthusiasts as well as casual users looking for unique gift options.",
+  "model": "gpt-4o-mini"
+}

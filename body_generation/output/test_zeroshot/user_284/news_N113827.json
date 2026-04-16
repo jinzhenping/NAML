@@ -1,0 +1,21 @@
+{
+  "user_id": 284,
+  "candidate_news_id": "N113827",
+  "candidate_title": "9 quakes hit Puget Sound region in less than a week",
+  "user_history_count": 10,
+  "user_history": [
+    "No, referee did not get Geno Smith's coin toss call wrong",
+    "What this week's 5 biggest upsets mean for the NFL playoff picture",
+    "Bode Miller delivered his twin boys after midwife didn't make it time for the birth",
+    "If Trump Were Anyone Else …",
+    "Powell's Warning to Congress About the Next Recession",
+    "How To Make Baked Salt & Vinegar Smashed Potatoes By Gail Simmons",
+    "Seahawks' Jadeveon Clowney named NFC Defensive Player of the Week after classic match against 49ers",
+    "Muslim woman says Denver arena worker told her to remove hijab, refused to let her enter",
+    "House Republicans Lash Out Because They Can't Defend Trump's Conduct",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"No, referee did not get Geno Smith's coin toss call wrong\"\n\"What this week's 5 biggest upsets mean for the NFL playoff picture\"\n\"Bode Miller delivered his twin boys after midwife didn't make it time for the birth\"\n\"If Trump Were Anyone Else …\"\n\"Powell's Warning to Congress About the Next Recession\"\n\"How To Make Baked Salt & Vinegar Smashed Potatoes By Gail Simmons\"\n\"Seahawks' Jadeveon Clowney named NFC Defensive Player of the Week after classic match against 49ers\"\n\"Muslim woman says Denver arena worker told her to remove hijab, refused to let her enter\"\n\"House Republicans Lash Out Because They Can't Defend Trump's Conduct\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\n[Candidate News Title]\n\"9 quakes hit Puget Sound region in less than a week\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"9 quakes hit Puget Sound region in less than a week\" is likely to provide a detailed account of recent seismic activity in the Puget Sound area, including specifics about the magnitude and locations of the earthquakes. It may discuss potential implications for local communities, including safety concerns and preparedness measures. The piece could also explore geological factors that contribute to this unusual frequency of quakes and possibly include insights from experts on what residents should know. Overall, readers may expect a factual overview of the events and their significance.",
+  "model": "gpt-4o-mini"
+}

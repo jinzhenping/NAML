@@ -1,0 +1,21 @@
+{
+  "user_id": 711,
+  "candidate_news_id": "N13859",
+  "candidate_title": "What Are the Warning Signs of a Blood Clot?",
+  "user_history_count": 10,
+  "user_history": [
+    "1970 Dodge Charger destroyed by man sick of lowballers   he showed them!",
+    "Trump mocked Beto O'Rourke for dropping out of the presidential race, saying he 'quit like a dog'",
+    "The Rock's Gnarly Palm Is a Testament to Life Without Lifting Gloves",
+    "Man with Autism Asks First His Question Ever & Twitter Responds with Nothing But Love",
+    "Cute and Capable? We Test the Updated 2019 Jeep Renegade and Its New Engine",
+    "Far-reaching snowstorm may take shape over US",
+    "These Are the Top 10 Chicken Chains in America",
+    "What Happens When a Plane Collides with a Flock of Birds?",
+    "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out",
+    "The Full-Size 2022 Jeep Grand Wagoneer SUV Is Finally On Its Way"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"1970 Dodge Charger destroyed by man sick of lowballers   he showed them!\"\n\"Trump mocked Beto O'Rourke for dropping out of the presidential race, saying he 'quit like a dog'\"\n\"The Rock's Gnarly Palm Is a Testament to Life Without Lifting Gloves\"\n\"Man with Autism Asks First His Question Ever & Twitter Responds with Nothing But Love\"\n\"Cute and Capable? We Test the Updated 2019 Jeep Renegade and Its New Engine\"\n\"Far-reaching snowstorm may take shape over US\"\n\"These Are the Top 10 Chicken Chains in America\"\n\"What Happens When a Plane Collides with a Flock of Birds?\"\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\"The Full-Size 2022 Jeep Grand Wagoneer SUV Is Finally On Its Way\"\n\n[Candidate News Title]\n\"What Are the Warning Signs of a Blood Clot?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"What Are the Warning Signs of a Blood Clot?\", the user can expect a detailed overview of the various symptoms and indicators that may suggest the presence of a blood clot. The content is likely to include descriptions of common signs such as swelling, pain, and changes in skin color, along with potential risk factors that can contribute to clot formation. Additionally, the article may provide insights into the importance of recognizing these signs early for effective treatment. It could also explore how certain medical conditions or lifestyle choices might influence the likelihood of developing blood clots.",
+  "model": "gpt-4o-mini"
+}

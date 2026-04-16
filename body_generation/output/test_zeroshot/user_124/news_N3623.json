@@ -1,0 +1,21 @@
+{
+  "user_id": 124,
+  "candidate_news_id": "N3623",
+  "candidate_title": "The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news",
+  "user_history_count": 10,
+  "user_history": [
+    "Barn Find: Large Collection Of Pontiac Firebirds Uncovered",
+    "Chris Paul feels he got 'stabbed in the back' with trade from Rockets",
+    "Cat \"repeatedly\" breaks his friends out of animal shelter",
+    "Chrissy Teigen's weekend was basically a clapback double-header, plus more news",
+    "Ohio State star Chase Young to miss one more game, return vs. Penn State",
+    "Where will the Colin Kaepernick story go from here?",
+    "Ford v Ferrari: the real story",
+    "American Outdoor to split into two firms, separating its gun business",
+    "How to get Halle Berry's 6-pack abs without spending 4 hours a day at the gym",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Barn Find: Large Collection Of Pontiac Firebirds Uncovered\"\n\"Chris Paul feels he got 'stabbed in the back' with trade from Rockets\"\n\"Cat \"repeatedly\" breaks his friends out of animal shelter\"\n\"Chrissy Teigen's weekend was basically a clapback double-header, plus more news\"\n\"Ohio State star Chase Young to miss one more game, return vs. Penn State\"\n\"Where will the Colin Kaepernick story go from here?\"\n\"Ford v Ferrari: the real story\"\n\"American Outdoor to split into two firms, separating its gun business\"\n\"How to get Halle Berry's 6-pack abs without spending 4 hours a day at the gym\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\n[Candidate News Title]\n\"The latest on Brad Pitt and Angelina Jolie's post-split relationship, plus more news\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to provide an update on the current dynamics of Brad Pitt and Angelina Jolie's relationship following their highly publicized split. Readers may expect to find details about their co-parenting situation, any ongoing legal matters, and how their personal lives have evolved since the separation. Additionally, the piece could touch on recent public appearances or statements made by either party, offering insights into their interactions and any potential implications for their children. Overall, the article is expected to present a balanced overview of the latest developments in their relationship.",
+  "model": "gpt-4o-mini"
+}

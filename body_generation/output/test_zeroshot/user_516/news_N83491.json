@@ -1,0 +1,21 @@
+{
+  "user_id": 516,
+  "candidate_news_id": "N83491",
+  "candidate_title": "At NATO summit, Trump to stress US allies' defense spending",
+  "user_history_count": 10,
+  "user_history": [
+    "Pac-12 suspends referee after egregious mistake during Washington State vs. Cal game",
+    "The best independent bakery in every state",
+    "Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Hey, Millennials, look out below! Gen Z may already be catching up in the salary race",
+    "Petition To 'Bring Back' Don Cherry Gains Traction After Hockey Commentator Fired For Comments About Immigrants",
+    "Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "Most Americans say they are struggling financially",
+    "'One in a million' deer captured on camera in Michigan woods"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Pac-12 suspends referee after egregious mistake during Washington State vs. Cal game\"\n\"The best independent bakery in every state\"\n\"Halle Berry Shares Photo of 6-Pack Abs on Instagram and Her Fans are Freaking Out\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Hey, Millennials, look out below! Gen Z may already be catching up in the salary race\"\n\"Petition To 'Bring Back' Don Cherry Gains Traction After Hockey Commentator Fired For Comments About Immigrants\"\n\"Wendy's Is Rolling Out Birthday Cake Frostys for Its 50th Anniversary\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"Most Americans say they are struggling financially\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n[Candidate News Title]\n\"At NATO summit, Trump to stress US allies' defense spending\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, readers can expect to learn about former President Trump's upcoming address at the NATO summit, where he is likely to emphasize the importance of defense spending among U.S. allies. The discussion may center on the current geopolitical climate and how it affects military funding commitments from member countries. Additionally, it could provide insights into Trump's perspectives on NATO's role in global security and his administration's approach to international alliances. Overall, the article will likely highlight the significance of defense collaboration among allies in the context of ongoing global tensions.",
+  "model": "gpt-4o-mini"
+}

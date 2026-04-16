@@ -1,0 +1,20 @@
+{
+  "user_id": 206,
+  "candidate_news_id": "N53018",
+  "candidate_title": "U.S. Troops Will Die If They Remain in Syria, Bashar Al-Assad Warns",
+  "user_history_count": 9,
+  "user_history": [
+    "Panera Bread worker fired after TikTok exposed frozen mac and cheese",
+    "Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion",
+    "The scary anxiety symptom you might be overlooking",
+    "Student barred from reselling Krispy Kreme now teaming up with the doughnut chain",
+    "Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say",
+    "Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead",
+    "15 Work Conversations That Could Cost You Your Job",
+    "Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!",
+    "Donald Trump Jr walks out of Triggered book launch after heckling   from supporters"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Panera Bread worker fired after TikTok exposed frozen mac and cheese\"\n\"Joe Biden reportedly denied Communion at a South Carolina church because of his stance on abortion\"\n\"The scary anxiety symptom you might be overlooking\"\n\"Student barred from reselling Krispy Kreme now teaming up with the doughnut chain\"\n\"Convicted ex-NFL tight end Kellen Winslow II has CTE symptoms, his attorneys say\"\n\"Couple Cancels Wedding, Keeps $30K as \"Donation\" for Honeymoon Instead\"\n\"15 Work Conversations That Could Cost You Your Job\"\n\"Meghan Markle, Prince Harry, Kate Middleton and Prince William Are Set to Reunite This Week!\"\n\"Donald Trump Jr walks out of Triggered book launch after heckling   from supporters\"\n\"\"\n\n[Candidate News Title]\n\"U.S. Troops Will Die If They Remain in Syria, Bashar Al-Assad Warns\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the warning issued by Bashar Al-Assad regarding the potential consequences for U.S. troops remaining in Syria. Readers can expect an overview of the current geopolitical situation, including Assad's perspective on the presence of foreign military forces in the region. It may delve into the implications for U.S. foreign policy and military strategy, as well as the potential risks to American personnel. The article could also provide context on the ongoing conflict in Syria and how it affects international relations, though it is uncertain how deeply these aspects will be explored.",
+  "model": "gpt-4o-mini"
+}

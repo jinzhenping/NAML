@@ -1,0 +1,21 @@
+{
+  "user_id": 577,
+  "candidate_news_id": "N56915",
+  "candidate_title": "The stock market warning that everyone is overlooking",
+  "user_history_count": 10,
+  "user_history": [
+    "Panera Bread worker fired after TikTok exposed frozen mac and cheese",
+    "Proposed Trump Administration Plan Would Require DNA Samples from Detained Migrants",
+    "White House Personnel Director Tells Trump Top DHS Picks Are Ineligible",
+    "Donald Trump: 'We're building a wall in Colorado'",
+    "A California police officer fatally shot a 16-year-old boy in newly released 2017 video. Justified? Unjustified?",
+    "More than 18,000 TSA employees flock to private Facebook group to vent",
+    "A controversial comedian and a former child star are eliminated on 'Masked Singer'",
+    "Vanna White hosts 'Wheel of Fortune' after Sajak has surgery",
+    "Donald Trump Jr walks out of Triggered book launch after heckling   from supporters",
+    "They bought a 1 euro house in Italy -- here's what happened next"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Panera Bread worker fired after TikTok exposed frozen mac and cheese\"\n\"Proposed Trump Administration Plan Would Require DNA Samples from Detained Migrants\"\n\"White House Personnel Director Tells Trump Top DHS Picks Are Ineligible\"\n\"Donald Trump: 'We're building a wall in Colorado'\"\n\"A California police officer fatally shot a 16-year-old boy in newly released 2017 video. Justified? Unjustified?\"\n\"More than 18,000 TSA employees flock to private Facebook group to vent\"\n\"A controversial comedian and a former child star are eliminated on 'Masked Singer'\"\n\"Vanna White hosts 'Wheel of Fortune' after Sajak has surgery\"\n\"Donald Trump Jr walks out of Triggered book launch after heckling   from supporters\"\n\"They bought a 1 euro house in Italy -- here's what happened next\"\n\n[Candidate News Title]\n\"The stock market warning that everyone is overlooking\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"The stock market warning that everyone is overlooking,\" you may expect an analysis of current trends and signals in the stock market that could indicate potential risks or downturns. The piece is likely to discuss various economic indicators, expert opinions, and perhaps highlight overlooked factors that could impact market stability. It could also examine how investor behavior and external events may contribute to this warning, providing insights that could be valuable for making informed financial decisions.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 659,
+  "candidate_news_id": "N122944",
+  "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+  "user_history_count": 10,
+  "user_history": [
+    "40 Fun Facts About Jennifer Aniston",
+    "Officials responding to oil spill from cargo ship in Hawaii",
+    "Meghan McCain GOES IN on Donald Trump Jr. on 'The View'",
+    "Minnesota sentencing commission pushes 5-year probation cap forward despite some objections",
+    "Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping",
+    "49ers' dream season veers off-road in OT loss to Seahawks",
+    "2019 People's Choice Awards fashion hits and misses",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "See Chrissy Teigen's Epic Reaction to Husband John Legend Being Named 2019 Sexiest Man Alive",
+    "'It's not over': Sarah Palin says she is fighting to repair her marriage"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"40 Fun Facts About Jennifer Aniston\"\n\"Officials responding to oil spill from cargo ship in Hawaii\"\n\"Meghan McCain GOES IN on Donald Trump Jr. on 'The View'\"\n\"Minnesota sentencing commission pushes 5-year probation cap forward despite some objections\"\n\"Kendall Jenner Wore the Tiniest Dress to Go Jewelry Shopping\"\n\"49ers' dream season veers off-road in OT loss to Seahawks\"\n\"2019 People's Choice Awards fashion hits and misses\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"See Chrissy Teigen's Epic Reaction to Husband John Legend Being Named 2019 Sexiest Man Alive\"\n\"'It's not over': Sarah Palin says she is fighting to repair her marriage\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu,\" you can expect to learn about the historical and market-driven factors that contribute to the enduring presence of this item on McDonald's menu. The article may delve into the origins of the Filet-O-Fish, its role in appealing to specific consumer demographics, and how it fits into the broader strategy of the fast-food chain. Additionally, it could explore how seasonal promotions or shifts in consumer preferences might influence menu decisions.",
+  "model": "gpt-4o-mini"
+}

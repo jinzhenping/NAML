@@ -1,0 +1,21 @@
+{
+  "user_id": 919,
+  "candidate_news_id": "N49978",
+  "candidate_title": "Myles Garrett on attacking Mason Rudolph: 'I made a mistake, I lost my cool'",
+  "user_history_count": 10,
+  "user_history": [
+    "Is Ellen DeGeneres the ultimate property flipper?",
+    "Man who advocated caning for adultery gets caned for adultery",
+    "Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan",
+    "US Rep. Ilhan Omar divorces husband in Minnesota",
+    "15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier",
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "Actress Accuses Roman Polanski of Raping Her in 1975",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "The biggest wastes of money in 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Is Ellen DeGeneres the ultimate property flipper?\"\n\"Man who advocated caning for adultery gets caned for adultery\"\n\"Maryland man, 46, gets probation after he killed a father and his four daughters when his SUV crossed a median and slammed into their minivan\"\n\"US Rep. Ilhan Omar divorces husband in Minnesota\"\n\"15 Found Alive in Truck in U.K. as Authorities Identify 39 Migrants Found Dead Weeks Earlier\"\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"Actress Accuses Roman Polanski of Raping Her in 1975\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"The biggest wastes of money in 2019\"\n\n[Candidate News Title]\n\"Myles Garrett on attacking Mason Rudolph: 'I made a mistake, I lost my cool'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article, readers may expect to learn about Myles Garrett's reflections on the altercation with Mason Rudolph, which garnered significant media attention. The piece is likely to detail Garrett's admission of making a mistake and losing his composure during the incident, providing insights into his perspective on accountability and the consequences of his actions. Additionally, it may explore the broader implications of such conflicts in professional sports, especially concerning player conduct and sportsmanship. Overall, the article could offer a nuanced look at Garrett's thoughts following the event.",
+  "model": "gpt-4o-mini"
+}

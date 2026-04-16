@@ -1,0 +1,21 @@
+{
+  "user_id": 207,
+  "candidate_news_id": "N80105",
+  "candidate_title": "'Horrifying': California school shooting shatters a safe haven",
+  "user_history_count": 10,
+  "user_history": [
+    "'Anonymous' book makes bombshell Trump claims",
+    "AP FACT CHECK: Trump assails a process he swore to uphold",
+    "Ryan: How NASCAR needs to wave the yellow on intentional cautions",
+    "Jennifer Aniston Steals the Show in Jaw-Dropping Dress at 2019 People's Choice Awards",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "Is the Alabama Football Dynasty Ending?",
+    "Trump Organization ordered to pay $290,000 after losing battle against Scottish wind farm",
+    "Geno Smith trolls over coin flip 'controversy'",
+    "Joey Fatone explains the 'dumb idea' that led to pant-splitting 'DWTS' wardrobe malfunction",
+    "MLB needs to step up on cheating allegations against Astros: 'It's a serious matter'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"'Anonymous' book makes bombshell Trump claims\"\n\"AP FACT CHECK: Trump assails a process he swore to uphold\"\n\"Ryan: How NASCAR needs to wave the yellow on intentional cautions\"\n\"Jennifer Aniston Steals the Show in Jaw-Dropping Dress at 2019 People's Choice Awards\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"Is the Alabama Football Dynasty Ending?\"\n\"Trump Organization ordered to pay $290,000 after losing battle against Scottish wind farm\"\n\"Geno Smith trolls over coin flip 'controversy'\"\n\"Joey Fatone explains the 'dumb idea' that led to pant-splitting 'DWTS' wardrobe malfunction\"\n\"MLB needs to step up on cheating allegations against Astros: 'It's a serious matter'\"\n\n[Candidate News Title]\n\"'Horrifying': California school shooting shatters a safe haven\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"'Horrifying': California school shooting shatters a safe haven\" is likely to provide an overview of a recent school shooting incident in California, detailing the events that transpired and the immediate impact on the affected community. It may cover the responses from local authorities, law enforcement, and possibly reactions from students and parents. Additionally, the article could explore broader themes surrounding school safety and gun violence, raising questions about the measures being taken to prevent such tragedies in the future. Overall, it is likely to present a factual account while reflecting on the implications of the incident.",
+  "model": "gpt-4o-mini"
+}

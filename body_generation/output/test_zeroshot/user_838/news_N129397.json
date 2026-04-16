@@ -1,0 +1,21 @@
+{
+  "user_id": 838,
+  "candidate_news_id": "N129397",
+  "candidate_title": "Yasiel Puig could be target for Marlins, reuniting him with Don Mattingly?",
+  "user_history_count": 10,
+  "user_history": [
+    "13 Ways You're Shortening the Life of Your Car",
+    "Amazon's $1.5 million political gambit backfires in Seattle City Council election",
+    "Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs",
+    "Coast Guard Searches For Missing Boaters; Capsized Vessel Found At Haulover Inlet",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "MLB's most problematic contracts: Robinson Cano's hefty deal, declining production top NL East list",
+    "Man cuffed for eating sandwich on train platform gets an apology",
+    "Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"13 Ways You're Shortening the Life of Your Car\"\n\"Amazon's $1.5 million political gambit backfires in Seattle City Council election\"\n\"Dog Throws A Total Tantrum When She Realizes Mom Wants To Take The Stairs\"\n\"Coast Guard Searches For Missing Boaters; Capsized Vessel Found At Haulover Inlet\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"MLB's most problematic contracts: Robinson Cano's hefty deal, declining production top NL East list\"\n\"Man cuffed for eating sandwich on train platform gets an apology\"\n\"Drake Has Something to Say to the ''Kids'' Who Booed Him Off Stage\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\n[Candidate News Title]\n\"Yasiel Puig could be target for Marlins, reuniting him with Don Mattingly?\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If the user clicks on the article titled \"Yasiel Puig could be target for Marlins, reuniting him with Don Mattingly?\", they may expect to read about the potential for Yasiel Puig to join the Miami Marlins, highlighting his previous relationship with manager Don Mattingly. The article is likely to discuss Puig's performance history, the implications of such a move for the Marlins, and how this reunion could impact both Puig's career and the team's dynamics. Additionally, it may explore the current state of the Marlins' roster and their need for players with Puig's skill set, though this aspect remains uncertain.",
+  "model": "gpt-4o-mini"
+}

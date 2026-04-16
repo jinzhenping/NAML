@@ -1,0 +1,21 @@
+{
+  "user_id": 164,
+  "candidate_news_id": "N34044",
+  "candidate_title": "This is it, this is the luckiest break in the history of golf",
+  "user_history_count": 10,
+  "user_history": [
+    "Kanye West, with debt piling up, thanks God for $68 million tax refund",
+    "Former NBA first-round pick Jim Farmer arrested in sex sting operation",
+    "Two teenage girls missing from Kansas City, Missouri",
+    "Far-reaching snowstorm may take shape over US",
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'",
+    "Vanna White hosts 'Wheel of Fortune' after Sajak has surgery",
+    "Roommate, her boyfriend charged in death of missing Atlanta student",
+    "Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout",
+    "Kevin Hart Says He's a ''Different'' Person While Revealing Details From ''Humbling'' Car Crash Recovery"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kanye West, with debt piling up, thanks God for $68 million tax refund\"\n\"Former NBA first-round pick Jim Farmer arrested in sex sting operation\"\n\"Two teenage girls missing from Kansas City, Missouri\"\n\"Far-reaching snowstorm may take shape over US\"\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"OJ Simpson suing Vegas hotel for defamation over 2017 TMZ story claiming 'belligerence'\"\n\"Vanna White hosts 'Wheel of Fortune' after Sajak has surgery\"\n\"Roommate, her boyfriend charged in death of missing Atlanta student\"\n\"Tamron Hall Talks Leaving the Today Show, Jokes About Megyn Kelly's Reported Multimillion Payout\"\n\"Kevin Hart Says He's a ''Different'' Person While Revealing Details From ''Humbling'' Car Crash Recovery\"\n\n[Candidate News Title]\n\"This is it, this is the luckiest break in the history of golf\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses a significant event in the world of golf, possibly highlighting an extraordinary achievement or a pivotal moment that could reshape aspects of the sport. Readers may expect to find an exploration of the circumstances surrounding this \"luckiest break,\" including details about the player involved, the context of the event, and its implications for the game. It may also touch on reactions from other golfers or sports analysts. Overall, the piece is likely to provide insight into how this moment stands out in golf history and what it might mean for the future of the sport.",
+  "model": "gpt-4o-mini"
+}

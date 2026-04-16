@@ -1,0 +1,21 @@
+{
+  "user_id": 478,
+  "candidate_news_id": "N54368",
+  "candidate_title": "South Carolina teen gets life in prison for deadly elementary school shooting",
+  "user_history_count": 10,
+  "user_history": [
+    "High Lake Michigan Water Level and Strong Winds Lead to Flooding in New Buffalo",
+    "A New Zealand man accidentally bought 1,000 chickens online for $0.96",
+    "Rare deer spotted in Montana",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "A man dies in Hawaii after falling into a lava tube in his yard",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing",
+    "Dean Foods files for bankruptcy",
+    "Here's the Best Small Town in Every State"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"High Lake Michigan Water Level and Strong Winds Lead to Flooding in New Buffalo\"\n\"A New Zealand man accidentally bought 1,000 chickens online for $0.96\"\n\"Rare deer spotted in Montana\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"A man dies in Hawaii after falling into a lava tube in his yard\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"The son of a Chinese billionaire has been banned from flying first class, playing golf, buying property, or going clubbing\"\n\"Dean Foods files for bankruptcy\"\n\"Here's the Best Small Town in Every State\"\n\n[Candidate News Title]\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent sentencing of a South Carolina teenager to life in prison for a tragic elementary school shooting. It may provide details on the events leading up to the shooting, including any motives or circumstances surrounding the incident. The piece could also touch on the broader implications of school violence and community reactions, as well as the legal proceedings that culminated in the sentencing. Readers may expect insights into how this case reflects ongoing concerns about safety in schools and the legal ramifications for those involved.",
+  "model": "gpt-4o-mini"
+}

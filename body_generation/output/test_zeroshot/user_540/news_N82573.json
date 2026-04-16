@@ -1,0 +1,19 @@
+{
+  "user_id": 540,
+  "candidate_news_id": "N82573",
+  "candidate_title": "Treasury yields tick higher amid uncertainty over US-China trade deal",
+  "user_history_count": 8,
+  "user_history": [
+    "Yardbarker's NFL Week 6 game-by-game analysis, grades",
+    "Rosie O'Donnell: Barbara Walters Isn't 'Up to Speaking to People' Right Now",
+    "50 Home Décor Horrors You Can't Look Away From",
+    "30 Funny Dog Photos You Need to See",
+    "Trump says he told Fox to get a new pollster amid network's 'lousy' polls on support for impeachment",
+    "'Baby Trump' balloon slashed at Alabama appearance",
+    "55 Restaurants That Serve an Amazing Thanksgiving Dinner",
+    "Here's the Very Best of Oprah's Favorite Things"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Yardbarker's NFL Week 6 game-by-game analysis, grades\"\n\"Rosie O'Donnell: Barbara Walters Isn't 'Up to Speaking to People' Right Now\"\n\"50 Home Décor Horrors You Can't Look Away From\"\n\"30 Funny Dog Photos You Need to See\"\n\"Trump says he told Fox to get a new pollster amid network's 'lousy' polls on support for impeachment\"\n\"'Baby Trump' balloon slashed at Alabama appearance\"\n\"55 Restaurants That Serve an Amazing Thanksgiving Dinner\"\n\"Here's the Very Best of Oprah's Favorite Things\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"Treasury yields tick higher amid uncertainty over US-China trade deal\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect an analysis of the recent movements in Treasury yields, particularly in the context of ongoing uncertainties surrounding the US-China trade deal. The piece may discuss how fluctuations in these yields reflect broader economic sentiments and investor confidence. Additionally, it could provide insights into how these changes impact various sectors and the overall financial landscape, while also considering potential implications for future economic policy and trade negotiations.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,20 @@
+{
+  "user_id": 32,
+  "candidate_news_id": "N120086",
+  "candidate_title": "This Easy Trick Will Defrost Your Car Window In Seconds",
+  "user_history_count": 9,
+  "user_history": [
+    "Kate Middleton Wears Same Hat Diana Wore as She and Prince William Head to Pakistan Mountains",
+    "Mystery Woman Kissing Singer Usher Identified As Record Exec",
+    "Jennifer Aniston Breaks Meghan Markle and Prince Harry's Instagram Record",
+    "An Awkward Moment As Meghan Markle Met A Curtsy Attempt With An American Greeting",
+    "British police investigating truck deaths arrest 2 more, driver still in custody",
+    "These Are The World's Most Magical Christmas Villages to Visit This Year",
+    "Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!",
+    "Week in celebrity photos for Nov. 11-15, 2019",
+    "John Legend Leads a Pack of Gorgeous Men in the Sexiest Man Alive Issue: From Sterling to Jason, Peek at 10 More Hot Guys"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Kate Middleton Wears Same Hat Diana Wore as She and Prince William Head to Pakistan Mountains\"\n\"Mystery Woman Kissing Singer Usher Identified As Record Exec\"\n\"Jennifer Aniston Breaks Meghan Markle and Prince Harry's Instagram Record\"\n\"An Awkward Moment As Meghan Markle Met A Curtsy Attempt With An American Greeting\"\n\"British police investigating truck deaths arrest 2 more, driver still in custody\"\n\"These Are The World's Most Magical Christmas Villages to Visit This Year\"\n\"Lamar Odom Is Engaged to Sabrina Parr: See Her Ring!\"\n\"Week in celebrity photos for Nov. 11-15, 2019\"\n\"John Legend Leads a Pack of Gorgeous Men in the Sexiest Man Alive Issue: From Sterling to Jason, Peek at 10 More Hot Guys\"\n\"\"\n\n[Candidate News Title]\n\"This Easy Trick Will Defrost Your Car Window In Seconds\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "Upon clicking on the article titled \"This Easy Trick Will Defrost Your Car Window In Seconds,\" the user is likely expecting to find practical advice or tips on quickly and efficiently defrosting car windows during cold weather. The article may outline specific methods or tools that can be used, potentially including household items or techniques that simplify the process. Additionally, it could provide insights into the science behind why certain methods work better than others. Overall, the user may anticipate a straightforward guide that helps them save time and effort during winter mornings.",
+  "model": "gpt-4o-mini"
+}

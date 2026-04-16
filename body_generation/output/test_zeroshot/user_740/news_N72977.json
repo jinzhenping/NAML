@@ -1,0 +1,21 @@
+{
+  "user_id": 740,
+  "candidate_news_id": "N72977",
+  "candidate_title": "Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs",
+  "user_history_count": 10,
+  "user_history": [
+    "Democrats aim to impeach Trump by Christmas",
+    "Bucket-List Food Experiences in Every State",
+    "The Best Trader Joe's Desserts for Your Thanksgiving Dinner Table",
+    "18 Ingredients Nutritionists Say Should Be Banned From Your Kitchen",
+    "20 Places to Go for Thanksgiving in America",
+    "Win Weeknights with These Crazy-Delicious Instant Pot Recipes",
+    "Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families",
+    "Here's the Best Small Town in Every State",
+    "What's the Best Oil for Frying?",
+    "Dean Foods files for bankruptcy"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Democrats aim to impeach Trump by Christmas\"\n\"Bucket-List Food Experiences in Every State\"\n\"The Best Trader Joe's Desserts for Your Thanksgiving Dinner Table\"\n\"18 Ingredients Nutritionists Say Should Be Banned From Your Kitchen\"\n\"20 Places to Go for Thanksgiving in America\"\n\"Win Weeknights with These Crazy-Delicious Instant Pot Recipes\"\n\"Supreme Court refuses to block lawsuit against gun manufacturer brought by Sandy Hook families\"\n\"Here's the Best Small Town in Every State\"\n\"What's the Best Oil for Frying?\"\n\"Dean Foods files for bankruptcy\"\n\n[Candidate News Title]\n\"Taylor Swift Says Scooter Braun, Scott Borchetta Are Blocking Her From Playing Old Hits at AMAs\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article about Taylor Swift's ongoing dispute with Scooter Braun and Scott Borchetta regarding her ability to perform her older hits at the American Music Awards (AMAs), the user can expect an overview of the conflict, including the background of Swift's relationship with her former label and the implications for her music career. The piece may detail the contractual issues at play and the reactions from fans and industry insiders. Additionally, it is likely to explore how this situation reflects larger themes of artist autonomy and ownership in the music industry.",
+  "model": "gpt-4o-mini"
+}

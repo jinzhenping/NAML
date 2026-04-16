@@ -1,0 +1,21 @@
+{
+  "user_id": 447,
+  "candidate_news_id": "N107893",
+  "candidate_title": "Border officials: \"Consequences\" deterring migrant families and kids",
+  "user_history_count": 10,
+  "user_history": [
+    "Texas small plane crash was gender reveal gone wrong, NTSB finds",
+    "Unidentified remains found in woods during search for missing 5-year-old",
+    "PEOPLE's Sexiest Men Alive: Still Sexy After All These Years",
+    "AP FACT CHECK: Trump's wildfire tweets not grounded in facts",
+    "Democrat Mike Espy starts 2020 US Senate bid in Mississippi",
+    "Suspect in Popeyes chicken sandwich stabbing ID'd, charged with murder",
+    "Tourists, Venetians slosh through flooded lagoon city",
+    "Late U.S. Representative Elijah Cummings' wife announces bid for his Baltimore seat",
+    "37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested",
+    "Trailer with nearly 100,000 meals for homeless veterans stolen: Report"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Texas small plane crash was gender reveal gone wrong, NTSB finds\"\n\"Unidentified remains found in woods during search for missing 5-year-old\"\n\"PEOPLE's Sexiest Men Alive: Still Sexy After All These Years\"\n\"AP FACT CHECK: Trump's wildfire tweets not grounded in facts\"\n\"Democrat Mike Espy starts 2020 US Senate bid in Mississippi\"\n\"Suspect in Popeyes chicken sandwich stabbing ID'd, charged with murder\"\n\"Tourists, Venetians slosh through flooded lagoon city\"\n\"Late U.S. Representative Elijah Cummings' wife announces bid for his Baltimore seat\"\n\"37 Years After His Wife Is Found Dead with an Ax in Her Skull, Husband Is Arrested\"\n\"Trailer with nearly 100,000 meals for homeless veterans stolen: Report\"\n\n[Candidate News Title]\n\"Border officials: \"Consequences\" deterring migrant families and kids\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Border officials: 'Consequences' deterring migrant families and kids\" is likely to discuss the measures being implemented by border officials that aim to discourage migrant families and children from attempting to cross the border. Readers may expect an overview of the specific policies or actions taken, along with statistics or data reflecting their impact on migration patterns. Additionally, the article could explore the broader implications of these tactics on humanitarian efforts and the well-being of migrants. It may also touch on various perspectives regarding the effectiveness and ethics of such deterrents.",
+  "model": "gpt-4o-mini"
+}

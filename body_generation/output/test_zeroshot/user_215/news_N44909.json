@@ -1,0 +1,21 @@
+{
+  "user_id": 215,
+  "candidate_news_id": "N44909",
+  "candidate_title": "Debunking the week's tabloid stories: Nov. 15, 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Joanna Gaines reveals her family's favorite recipes in new cookbook",
+    "10 Common Causes of Itchy, Red Bumps and Skin Rashes",
+    "Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage",
+    "16 Classic Italian Soup Recipes That Will Warm You Right Up",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Celebrity plastic surgery transformations",
+    "We made a 3-course feast using Chrissy Teigen's recipes, and had the best homemade pizza we've ever tasted",
+    "The Best Holiday Dessert from Every State",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "'Velvety' Appearance of Woman's Palms Was a Sign of Lung Cancer"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Joanna Gaines reveals her family's favorite recipes in new cookbook\"\n\"10 Common Causes of Itchy, Red Bumps and Skin Rashes\"\n\"Fans are divided after Drake was revealed as a surprise festival headliner, booed off stage\"\n\"16 Classic Italian Soup Recipes That Will Warm You Right Up\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Celebrity plastic surgery transformations\"\n\"We made a 3-course feast using Chrissy Teigen's recipes, and had the best homemade pizza we've ever tasted\"\n\"The Best Holiday Dessert from Every State\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"'Velvety' Appearance of Woman's Palms Was a Sign of Lung Cancer\"\n\n[Candidate News Title]\n\"Debunking the week's tabloid stories: Nov. 15, 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Debunking the week's tabloid stories: Nov. 15, 2019,\" the user may expect a critical examination of various sensational claims made in popular tabloids during that week. The piece is likely to cover topics related to celebrity news, addressing rumors and misinformation surrounding public figures, while providing factual clarifications. Additionally, it may highlight the impact of such stories on public perception and celebrity reputations. Overall, the article could serve as a resource for those looking to differentiate between fact and fiction in the world of celebrity gossip.",
+  "model": "gpt-4o-mini"
+}

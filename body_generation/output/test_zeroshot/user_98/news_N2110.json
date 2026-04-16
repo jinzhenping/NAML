@@ -1,0 +1,21 @@
+{
+  "user_id": 98,
+  "candidate_news_id": "N2110",
+  "candidate_title": "66 Cool Tech Gifts Anyone Would Be Thrilled to Receive",
+  "user_history_count": 10,
+  "user_history": [
+    "Ruth Bader Ginsburg misses court due to illness",
+    "Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'",
+    "A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent",
+    "Stunning photos of 27 places around the world that you should visit before they disappear forever",
+    "Jennifer Lopez Is the Queen of Green, and I'm Ready to Submit Her Teal Outfit as Evidence",
+    "What Happens When a Plane Collides with a Flock of Birds?",
+    "'Cryptic pregnancies' happen more often than you might think",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "The stock market's 10-year run became the best bull market ever this month",
+    "The most exclusive hotel in every state"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Ruth Bader Ginsburg misses court due to illness\"\n\"Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'\"\n\"A master suite with an 'open-concept' bathroom that has no doors   or privacy   is asking for $1,200/month in rent\"\n\"Stunning photos of 27 places around the world that you should visit before they disappear forever\"\n\"Jennifer Lopez Is the Queen of Green, and I'm Ready to Submit Her Teal Outfit as Evidence\"\n\"What Happens When a Plane Collides with a Flock of Birds?\"\n\"'Cryptic pregnancies' happen more often than you might think\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"The stock market's 10-year run became the best bull market ever this month\"\n\"The most exclusive hotel in every state\"\n\n[Candidate News Title]\n\"66 Cool Tech Gifts Anyone Would Be Thrilled to Receive\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a curated list of innovative and unique tech gifts that appeal to a wide range of interests and preferences. The content may detail various gadgets and devices, highlighting their features and potential uses, making it easier for readers to find suitable gifts for different occasions. Additionally, the article could include insights on the latest trends in technology, which may help the user understand why these gifts are particularly appealing right now. Overall, it aims to provide a comprehensive overview of exciting tech options for gift-giving.",
+  "model": "gpt-4o-mini"
+}

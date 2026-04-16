@@ -1,0 +1,21 @@
+{
+  "user_id": 705,
+  "candidate_news_id": "N26703",
+  "candidate_title": "Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame",
+  "user_history_count": 10,
+  "user_history": [
+    "After throwing a punch, Dabo Swinney made CB Andrew Booth ride the manager bus back to Clemson",
+    "Rory McIlroy says he's 'good' with Brooks Koepka after rivalry comments, takes playful shot at himself",
+    "2019 ZOZO Championship tee times, viewer's guide",
+    "'Rich Kids' Stars Morgan Stewart and Brendan Fitzpatrick to Divorce After 3 Years of Marriage",
+    "Multiple Houses on Fire After Plane Crashes in NJ",
+    "Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'",
+    "Report: Potential new USC AD told he cannot pursue Urban Meyer, could back out",
+    "Snow crab sells for record price in Japan",
+    "Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"After throwing a punch, Dabo Swinney made CB Andrew Booth ride the manager bus back to Clemson\"\n\"Rory McIlroy says he's 'good' with Brooks Koepka after rivalry comments, takes playful shot at himself\"\n\"2019 ZOZO Championship tee times, viewer's guide\"\n\"'Rich Kids' Stars Morgan Stewart and Brendan Fitzpatrick to Divorce After 3 Years of Marriage\"\n\"Multiple Houses on Fire After Plane Crashes in NJ\"\n\"Demi Moore Says Her 'Addiction' to Ashton Kutcher Was 'Devastating': 'It Took Me Away Emotionally'\"\n\"Report: Potential new USC AD told he cannot pursue Urban Meyer, could back out\"\n\"Snow crab sells for record price in Japan\"\n\"Trump mocks Bloomberg as 'little Michael,' predicts he won't do well in 2020 race\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\n[Candidate News Title]\n\"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Some believe Mason Rudolph, hit in head with his own helmet, isn't getting enough blame,\" the user can expect a discussion surrounding the circumstances of Mason Rudolph's recent injury during a game. It may analyze the incident where Rudolph was struck with his own helmet and explore varying opinions on accountability in the situation, particularly focusing on whether he is being unfairly criticized or overlooked. The article could also delve into expert commentary on player safety and the implications of such injuries in professional football, providing context on how public perception may shift following these events.",
+  "model": "gpt-4o-mini"
+}

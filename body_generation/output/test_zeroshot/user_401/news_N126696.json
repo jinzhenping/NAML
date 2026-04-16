@@ -1,0 +1,21 @@
+{
+  "user_id": 401,
+  "candidate_news_id": "N126696",
+  "candidate_title": "Maze of tunnels reveals remains of ancient Jerusalem",
+  "user_history_count": 10,
+  "user_history": [
+    "Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom",
+    "Warren's wealth tax could drive billionaires to funds she hates",
+    "How to Make Cornbread Without a Recipe",
+    "Why is American internet access so much more expensive than the rest of the world?",
+    "A look inside Starbucks' newest Reserve Roastery in Chicago",
+    "This is Chick-fil-A's most-ordered menu item",
+    "These are the best times to visit New York City",
+    "Here's How To Score Buy One Get One Free Whoppers From Burger King",
+    "Deval Patrick Will Enter 2020 Presidential Race on Thursday",
+    "17 Outdated Office Etiquette Rules That Are So Laughable Today"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Chrissy Teigen Apologizes for Her 'Tone Deaf' Joke About Her Mom\"\n\"Warren's wealth tax could drive billionaires to funds she hates\"\n\"How to Make Cornbread Without a Recipe\"\n\"Why is American internet access so much more expensive than the rest of the world?\"\n\"A look inside Starbucks' newest Reserve Roastery in Chicago\"\n\"This is Chick-fil-A's most-ordered menu item\"\n\"These are the best times to visit New York City\"\n\"Here's How To Score Buy One Get One Free Whoppers From Burger King\"\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\"17 Outdated Office Etiquette Rules That Are So Laughable Today\"\n\n[Candidate News Title]\n\"Maze of tunnels reveals remains of ancient Jerusalem\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Maze of tunnels reveals remains of ancient Jerusalem\" is likely to explore archaeological findings related to the extensive network of tunnels beneath Jerusalem. Readers may expect detailed descriptions of the tunnels' historical significance, perhaps shedding light on various periods of the city’s past and the artifacts discovered within these structures. The piece could also examine the implications of these findings for our understanding of ancient urban life and governance in Jerusalem. Additionally, it may discuss the techniques used by archaeologists to excavate and analyze these remnants, providing insights into the challenges of such work.",
+  "model": "gpt-4o-mini"
+}

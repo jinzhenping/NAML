@@ -1,0 +1,21 @@
+{
+  "user_id": 324,
+  "candidate_news_id": "N86609",
+  "candidate_title": "Best Cancer-Fighting Drinks You Should Try Now",
+  "user_history_count": 10,
+  "user_history": [
+    "Oliva Newton-John's iconic Grease outfit sells at auction for $405,700",
+    "Meghan McCain GOES IN on Donald Trump Jr. on 'The View'",
+    "Pregnant 'Little People, Big World' star Tori Roloff slams body-shaming trolls",
+    "Cindy McCain: John McCain 'Would Be Disgusted' By The State Of Politics",
+    "Gwen Stefani accepts the 2019 PCAs Fashion Icon Award",
+    "3-year-old's priceless response after mom \"ate all his candy\"",
+    "Gwen Stefani Sets the Record Straight on That Diamond Ring at 2019 People's Choice Awards",
+    "Whoopi Goldberg Addresses 'The View' Tension: 'If We Were Fighting, You'd Actually Know It'",
+    "See Chrissy Teigen's Epic Reaction to Husband John Legend Being Named 2019 Sexiest Man Alive",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Oliva Newton-John's iconic Grease outfit sells at auction for $405,700\"\n\"Meghan McCain GOES IN on Donald Trump Jr. on 'The View'\"\n\"Pregnant 'Little People, Big World' star Tori Roloff slams body-shaming trolls\"\n\"Cindy McCain: John McCain 'Would Be Disgusted' By The State Of Politics\"\n\"Gwen Stefani accepts the 2019 PCAs Fashion Icon Award\"\n\"3-year-old's priceless response after mom \"ate all his candy\"\"\n\"Gwen Stefani Sets the Record Straight on That Diamond Ring at 2019 People's Choice Awards\"\n\"Whoopi Goldberg Addresses 'The View' Tension: 'If We Were Fighting, You'd Actually Know It'\"\n\"See Chrissy Teigen's Epic Reaction to Husband John Legend Being Named 2019 Sexiest Man Alive\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\n[Candidate News Title]\n\"Best Cancer-Fighting Drinks You Should Try Now\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a discussion of various beverages that are believed to have cancer-fighting properties. The content may include details about specific drinks, such as green tea, pomegranate juice, or smoothies rich in antioxidants, along with explanations of the health benefits associated with each. The article could also touch on the importance of a balanced diet in cancer prevention and possibly include insights from health experts or nutritionists. Overall, the user may expect a well-rounded overview of how certain drinks could contribute to cancer-fighting efforts.",
+  "model": "gpt-4o-mini"
+}

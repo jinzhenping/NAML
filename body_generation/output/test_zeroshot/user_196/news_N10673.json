@@ -1,0 +1,21 @@
+{
+  "user_id": 196,
+  "candidate_news_id": "N10673",
+  "candidate_title": "Abandoned mansions of the world's billionaires",
+  "user_history_count": 10,
+  "user_history": [
+    "Celebrity plastic surgery transformations",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "Bode Miller delivered his twin boys after midwife didn't make it time for the birth",
+    "The Queen Had This Hilarious Reaction to (Unnecessary) Mouth-to-Mouth Resuscitation",
+    "The Sexiest Photos Ever of Our 29 Sexiest Men Alive",
+    "See the most expensive watch ever sold at auction",
+    "Best royal photos of 2019",
+    "The zombie storefronts of America",
+    "Venice paralyzed by the worst flooding in half a century",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Celebrity plastic surgery transformations\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"Bode Miller delivered his twin boys after midwife didn't make it time for the birth\"\n\"The Queen Had This Hilarious Reaction to (Unnecessary) Mouth-to-Mouth Resuscitation\"\n\"The Sexiest Photos Ever of Our 29 Sexiest Men Alive\"\n\"See the most expensive watch ever sold at auction\"\n\"Best royal photos of 2019\"\n\"The zombie storefronts of America\"\n\"Venice paralyzed by the worst flooding in half a century\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\n[Candidate News Title]\n\"Abandoned mansions of the world's billionaires\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Abandoned mansions of the world's billionaires\" is likely to explore the intriguing phenomenon of once-luxurious homes that have fallen into disrepair and neglect. Readers can expect to learn about the reasons behind the abandonment of these properties, which may include financial troubles, changing tastes, or the owners' deaths. The piece could also highlight specific mansions, detailing their original grandeur and the stark contrast to their current state, providing insights into the lives of the billionaires who once inhabited them.",
+  "model": "gpt-4o-mini"
+}

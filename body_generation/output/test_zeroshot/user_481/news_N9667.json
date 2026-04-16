@@ -1,0 +1,19 @@
+{
+  "user_id": 481,
+  "candidate_news_id": "N9667",
+  "candidate_title": "13 Popular Foods People Hated Eating 100 Years Ago",
+  "user_history_count": 8,
+  "user_history": [
+    "Exclusive: Jayme Closs feeling 'stronger every day' 1 year after kidnapping",
+    "3 precious puppies ready to adopt now in Denver",
+    "This Dog's Terrifyingly Cute 'Killer' Costume Just Won Halloween",
+    "50 Weird but Wonderful Facts That Will Leave You Totally Amazed",
+    "Far-reaching snowstorm may take shape over US",
+    "3 'health' products that are a waste of money, according to dietitians",
+    "17 Outdated Office Etiquette Rules That Are So Laughable Today",
+    "A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Exclusive: Jayme Closs feeling 'stronger every day' 1 year after kidnapping\"\n\"3 precious puppies ready to adopt now in Denver\"\n\"This Dog's Terrifyingly Cute 'Killer' Costume Just Won Halloween\"\n\"50 Weird but Wonderful Facts That Will Leave You Totally Amazed\"\n\"Far-reaching snowstorm may take shape over US\"\n\"3 'health' products that are a waste of money, according to dietitians\"\n\"17 Outdated Office Etiquette Rules That Are So Laughable Today\"\n\"A teen received a response to a message in a bottle he wrote 9 years ago after it traveled over 3,000 miles\"\n\"\"\n\"\"\n\n[Candidate News Title]\n\"13 Popular Foods People Hated Eating 100 Years Ago\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find a discussion about foods that were commonly disliked a century ago, exploring cultural and societal attitudes toward various dishes. It may provide insights into historical food preferences and the reasons behind their unpopularity, such as taste, texture, or preparation methods. Additionally, the article could include specific examples of these foods, offering a glimpse into how tastes have evolved over time. The content may also touch on how societal changes have influenced what is considered acceptable or desirable to eat today.",
+  "model": "gpt-4o-mini"
+}

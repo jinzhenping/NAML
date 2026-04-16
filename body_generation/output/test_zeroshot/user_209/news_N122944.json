@@ -1,0 +1,21 @@
+{
+  "user_id": 209,
+  "candidate_news_id": "N122944",
+  "candidate_title": "The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu",
+  "user_history_count": 10,
+  "user_history": [
+    "LA firefighter banked $360,010 in overtime pay in one year, city audit finds",
+    "50 Celebrities You Definitely Forgot Busted a Move on 'Dancing With the Stars'",
+    "The 32 most affordable winter vacation spots in the US",
+    "Country music's biggest scandals",
+    "Predicting the winners of the 2019 CMA Awards",
+    "See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet",
+    "My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.",
+    "We tried every single appetizer at Olive Garden and ranked them from worst to best",
+    "'One in a million' deer captured on camera in Michigan woods",
+    "The 1 reason you shouldn't hesitate to claim Social Security early"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"LA firefighter banked $360,010 in overtime pay in one year, city audit finds\"\n\"50 Celebrities You Definitely Forgot Busted a Move on 'Dancing With the Stars'\"\n\"The 32 most affordable winter vacation spots in the US\"\n\"Country music's biggest scandals\"\n\"Predicting the winners of the 2019 CMA Awards\"\n\"See inside a woman's 270-square-foot tiny home complete with 2 bedrooms and a walk-in closet\"\n\"My Third Husband Is 102 Years Old. Here's What Our Marriage Is Like.\"\n\"We tried every single appetizer at Olive Garden and ranked them from worst to best\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\n[Candidate News Title]\n\"The Real Reason McDonald's Keeps the Filet-O-Fish on Their Menu\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user can expect to learn about the strategic reasons behind McDonald's decision to keep the Filet-O-Fish on their menu, despite it being a less popular item compared to other offerings. The piece may explore historical sales data, consumer preferences, and the item's role in appealing to specific customer demographics, such as those observing Lent or seeking non-meat options. Additionally, it could touch on the broader implications for menu diversity and brand identity within the fast-food industry, providing a comprehensive overview of the item’s significance.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 952,
+  "candidate_news_id": "N46641",
+  "candidate_title": "Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say",
+  "user_history_count": 10,
+  "user_history": [
+    "Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family",
+    "Shakira reflects on her career-threatening injury, depression in 2017",
+    "Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood",
+    "See what your favorite stars look like without makeup",
+    "2019 People's Choice Awards fashion hits and misses",
+    "Stephen Curry calls out Michael Jordan for being a 'hater'",
+    "Miranda Lambert gets candid about her public divorce and secret wedding, plus more news",
+    "These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show",
+    "Here's What 'Cultural Appropriation' Actually Means   and Why It's Wrong",
+    "Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why Prince Harry Wore His Remembrance Poppy Differently from the Rest of the Royal Family\"\n\"Shakira reflects on her career-threatening injury, depression in 2017\"\n\"Hannah Brown on Being Surrounded By Exes Tyler Cameron and Colton Underwood\"\n\"See what your favorite stars look like without makeup\"\n\"2019 People's Choice Awards fashion hits and misses\"\n\"Stephen Curry calls out Michael Jordan for being a 'hater'\"\n\"Miranda Lambert gets candid about her public divorce and secret wedding, plus more news\"\n\"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\"\n\"Here's What 'Cultural Appropriation' Actually Means   and Why It's Wrong\"\n\"Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019\"\n\n[Candidate News Title]\n\"Former North Carolina State, NBA player Anthony Grundy dies in stabbing, police say\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about the death of former North Carolina State and NBA player Anthony Grundy, reportedly due to a stabbing, is likely to provide details on the circumstances surrounding the incident, including information from police reports and statements from family or friends. Readers may expect to learn about Grundy's career highlights, his impact on basketball, and any community reactions to his untimely passing. Additionally, the article could address broader themes of violence and safety in sports communities, as well as the legacy of athletes who face tragic ends.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 987,
+  "candidate_news_id": "N32993",
+  "candidate_title": "Nine-year-old child genius to graduate from Dutch university",
+  "user_history_count": 10,
+  "user_history": [
+    "Jaguar Will Sell You An Authentic $1,000 Toolkit No One Will Ever Use",
+    "Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!",
+    "This Is The Moment A Senior Shelter Dog Knew He Was Safe",
+    "This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.",
+    "Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic",
+    "Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker",
+    "Someone Just Paid $51,360 For This Perfect 1983 Jeep Cherokee",
+    "Last known Pearl Harbor survivor in Mass. dies at 98",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Kelsey Grammer shreds 'Housewives' ex Camille, dubs her 'pathetic'"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jaguar Will Sell You An Authentic $1,000 Toolkit No One Will Ever Use\"\n\"Regis Philbin Lists Longtime Connecticut Estate at a Loss for $4.6 Million   See Inside!\"\n\"This Is The Moment A Senior Shelter Dog Knew He Was Safe\"\n\"This $12 million 'mansion yacht' is made entirely of stainless steel   and it's a first for the industry. Take a peek inside.\"\n\"Halle Berry, 53, flaunts chiseled abs on Instagram: See the pic\"\n\"Marlboro Man Bob Norris dies at 90, having reportedly never been a smoker\"\n\"Someone Just Paid $51,360 For This Perfect 1983 Jeep Cherokee\"\n\"Last known Pearl Harbor survivor in Mass. dies at 98\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Kelsey Grammer shreds 'Housewives' ex Camille, dubs her 'pathetic'\"\n\n[Candidate News Title]\n\"Nine-year-old child genius to graduate from Dutch university\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article about a nine-year-old child genius graduating from a Dutch university is likely to explore the remarkable achievements of this young individual, highlighting their academic accomplishments and the unique circumstances that led to such an early graduation. Readers may expect to learn about the child’s field of study, any notable projects or research they have undertaken, and the implications of their success for their future. Additionally, the article could touch on the broader context of child prodigies in education and how this case compares to others.",
+  "model": "gpt-4o-mini"
+}

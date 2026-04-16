@@ -1,0 +1,21 @@
+{
+  "user_id": 72,
+  "candidate_news_id": "N54368",
+  "candidate_title": "South Carolina teen gets life in prison for deadly elementary school shooting",
+  "user_history_count": 10,
+  "user_history": [
+    "One of America's biggest solar panel makers quits manufacturing",
+    "Bolivia's Jeanine Anez declares herself acting president as Evo Morales vows to fight from abroad",
+    "Look of the Day",
+    "Demi Lovato Goes Instagram Official With Boyfriend Austin Wilson: See Their Sweet Synchronized Posts",
+    "Emilia Clarke Stunned in a Cut-Out Dress at the 'Last Christmas' Premiere",
+    "John Legend Leads a Pack of Gorgeous Men in the Sexiest Man Alive Issue: From Sterling to Jason, Peek at 10 More Hot Guys",
+    "Comics - 'Bliss' by Harry Bliss",
+    "These Are America's Favorite Liquor Brands",
+    "Three school workers charged in death of special needs student",
+    "You'll Be Captivated by Ciara's Best Hair and Makeup Looks"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"One of America's biggest solar panel makers quits manufacturing\"\n\"Bolivia's Jeanine Anez declares herself acting president as Evo Morales vows to fight from abroad\"\n\"Look of the Day\"\n\"Demi Lovato Goes Instagram Official With Boyfriend Austin Wilson: See Their Sweet Synchronized Posts\"\n\"Emilia Clarke Stunned in a Cut-Out Dress at the 'Last Christmas' Premiere\"\n\"John Legend Leads a Pack of Gorgeous Men in the Sexiest Man Alive Issue: From Sterling to Jason, Peek at 10 More Hot Guys\"\n\"Comics - 'Bliss' by Harry Bliss\"\n\"These Are America's Favorite Liquor Brands\"\n\"Three school workers charged in death of special needs student\"\n\"You'll Be Captivated by Ciara's Best Hair and Makeup Looks\"\n\n[Candidate News Title]\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the sentencing of a South Carolina teenager who has received a life prison term for their involvement in a deadly shooting at an elementary school. Readers can expect details regarding the circumstances surrounding the shooting, including information about the victims and the judicial process leading to the sentencing. The article may also explore the broader implications of school violence and community responses, as well as any statements made by family members or officials following the verdict.",
+  "model": "gpt-4o-mini"
+}

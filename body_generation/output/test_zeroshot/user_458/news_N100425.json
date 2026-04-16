@@ -1,0 +1,21 @@
+{
+  "user_id": 458,
+  "candidate_news_id": "N100425",
+  "candidate_title": "The most talked about movie moments of the 2010s",
+  "user_history_count": 10,
+  "user_history": [
+    "Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win",
+    "Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019",
+    "Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole",
+    "See Princess Sofia of Sweden's Unexpected Green Leopard Print Dress   Complete with Tiara!",
+    "LSU's Mighty Joe Brady is making Mickey Mouse money in the college football world",
+    "Mo'Nique Files Race and Sex Discrimination Suit Against Netflix",
+    "Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+    "Between 1,000 to 2,000 people get the plague every year -- including about 7 in the US",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Survivor Contestant Accused of 'Inappropriate Touching,' 2 Players Admit to Using Allegations to Win\"\n\"Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019\"\n\"Wynonna Judd's Daughter, 23, Released from Prison 6 Years Early After Being Granted Parole\"\n\"See Princess Sofia of Sweden's Unexpected Green Leopard Print Dress   Complete with Tiara!\"\n\"LSU's Mighty Joe Brady is making Mickey Mouse money in the college football world\"\n\"Mo'Nique Files Race and Sex Discrimination Suit Against Netflix\"\n\"Judge calls USC dad a 'thief,' gives longest prison sentence so far in college admissions scandal\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"Between 1,000 to 2,000 people get the plague every year -- including about 7 in the US\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\n[Candidate News Title]\n\"The most talked about movie moments of the 2010s\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on \"The most talked about movie moments of the 2010s,\" you can expect an overview of significant cinematic scenes that captured audience attention and sparked conversation throughout the decade. The article may highlight iconic performances, groundbreaking visual effects, or memorable plot twists from various films, providing context for why these moments resonated with viewers. Additionally, it could discuss the cultural impact of these scenes, including how they influenced popular trends and discussions in film and entertainment.",
+  "model": "gpt-4o-mini"
+}

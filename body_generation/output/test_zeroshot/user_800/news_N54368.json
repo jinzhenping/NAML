@@ -1,0 +1,21 @@
+{
+  "user_id": 800,
+  "candidate_news_id": "N54368",
+  "candidate_title": "South Carolina teen gets life in prison for deadly elementary school shooting",
+  "user_history_count": 10,
+  "user_history": [
+    "Seahawks have NFL's most difficult remaining schedule",
+    "Andy Cohen Says He Lost 12 Pounds in 3 Months By Simply Cutting Out Booze",
+    "You're better than plain mashed potatoes",
+    "Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math",
+    "Debunking the week's tabloid stories: Nov. 8, 2019",
+    "Oprah Just Revealed Her 2019 Favorite Things Here Are the Best Food Picks",
+    "Four words from dermatologists that'll change your life: Stop showering every day",
+    "Deval Patrick Will Enter 2020 Presidential Race on Thursday",
+    "Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness",
+    "Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Seahawks have NFL's most difficult remaining schedule\"\n\"Andy Cohen Says He Lost 12 Pounds in 3 Months By Simply Cutting Out Booze\"\n\"You're better than plain mashed potatoes\"\n\"Bill Gates: I'm happy to pay $20 billion in taxes, but Warren's plan would make me do a little math\"\n\"Debunking the week's tabloid stories: Nov. 8, 2019\"\n\"Oprah Just Revealed Her 2019 Favorite Things Here Are the Best Food Picks\"\n\"Four words from dermatologists that'll change your life: Stop showering every day\"\n\"Deval Patrick Will Enter 2020 Presidential Race on Thursday\"\n\"Kiss Cancel 'End of the Road' Tour of Australia and New Zealand Due to Illness\"\n\"Demi Lovato debuts new boyfriend, plus more celeb love life news for mid-November 2019\"\n\n[Candidate News Title]\n\"South Carolina teen gets life in prison for deadly elementary school shooting\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely covers the sentencing of a South Carolina teenager who received a life prison term for a tragic shooting at an elementary school. Readers may expect to find details about the incident, including the circumstances surrounding the shooting, the legal proceedings that led to the sentencing, and the implications this event has on community safety and gun control discussions. Additionally, the article might explore the responses from the victims' families, law enforcement officials, and possibly insights into the teen's background that could shed light on the motivations behind the act.",
+  "model": "gpt-4o-mini"
+}

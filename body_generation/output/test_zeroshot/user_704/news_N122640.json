@@ -1,0 +1,21 @@
+{
+  "user_id": 704,
+  "candidate_news_id": "N122640",
+  "candidate_title": "This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.",
+  "user_history_count": 10,
+  "user_history": [
+    "Senate to try to override Trump emergency declaration veto Thursday",
+    "Coast Guard offloads $92 million worth of smuggled cocaine in San Diego",
+    "Ukrainian man arrested in New Hampshire crash that killed 7 bikers is indicted",
+    "Louis Vuitton owner offers $14.5 billion for jeweler Tiffany",
+    "Rare Vixen Motorhome For Sale Is One Of Nicest We've Seen",
+    "Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies",
+    "North Korea launches two projectiles into sea, Japan and South Korea say",
+    "Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?",
+    "Here's the Average Cost of an Engagement Ring in 2019, According to a Survey",
+    "Red tide, the toxic algae bloom that kills wildlife, returns to southwest Florida"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Senate to try to override Trump emergency declaration veto Thursday\"\n\"Coast Guard offloads $92 million worth of smuggled cocaine in San Diego\"\n\"Ukrainian man arrested in New Hampshire crash that killed 7 bikers is indicted\"\n\"Louis Vuitton owner offers $14.5 billion for jeweler Tiffany\"\n\"Rare Vixen Motorhome For Sale Is One Of Nicest We've Seen\"\n\"Kevin Spacey Won't Be Charged in Sexual Assault Case After Accuser Dies\"\n\"North Korea launches two projectiles into sea, Japan and South Korea say\"\n\"Heidi Klum's 2019 Halloween Costume Transformation Is Mind-Blowing   But, Like, What Is It?\"\n\"Here's the Average Cost of an Engagement Ring in 2019, According to a Survey\"\n\"Red tide, the toxic algae bloom that kills wildlife, returns to southwest Florida\"\n\n[Candidate News Title]\n\"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article likely discusses the recent incident involving NFL player Myles Garrett, who faced significant scrutiny following a violent altercation during a game. Readers may expect an analysis of the circumstances surrounding the incident, including details about the brawl, the players involved, and the implications of Garrett's actions. The discussion might also cover the league's response, including potential disciplinary measures, such as a suspension for the remainder of the year. Furthermore, the article could explore broader themes related to player conduct and safety in professional sports.",
+  "model": "gpt-4o-mini"
+}

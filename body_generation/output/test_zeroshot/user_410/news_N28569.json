@@ -1,0 +1,21 @@
+{
+  "user_id": 410,
+  "candidate_news_id": "N28569",
+  "candidate_title": "Whoopi Goldberg Doesn't Stress About The View's Tense Debates",
+  "user_history_count": 10,
+  "user_history": [
+    "Fiancee of victim killed in Hard Rock Hotel accident describes his final moments",
+    "A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too",
+    "100 vintage baby names coming back into style",
+    "Broadway Actress Laurel Griggs Dies at Age 13",
+    "Meghan Markle and Prince Harry Reunite with Kate Middleton and Prince William for Remembrance Service",
+    "Why Kate & Meghan Were on Different Balconies for Remembrance Sunday",
+    "Kate Middleton Wore a Simple Black Dress and Embellished Headband to the Festival of Remembrance",
+    "Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38",
+    "Tourists, Venetians slosh through flooded lagoon city",
+    "The Queen Had This Hilarious Reaction to (Unnecessary) Mouth-to-Mouth Resuscitation"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Fiancee of victim killed in Hard Rock Hotel accident describes his final moments\"\n\"A body-language expert says Meghan Markle is \"politely disconnecting\" from the public, and honestly, we would too\"\n\"100 vintage baby names coming back into style\"\n\"Broadway Actress Laurel Griggs Dies at Age 13\"\n\"Meghan Markle and Prince Harry Reunite with Kate Middleton and Prince William for Remembrance Service\"\n\"Why Kate & Meghan Were on Different Balconies for Remembrance Sunday\"\n\"Kate Middleton Wore a Simple Black Dress and Embellished Headband to the Festival of Remembrance\"\n\"Charles Rogers, former Michigan State football, Detroit Lions star, dead at 38\"\n\"Tourists, Venetians slosh through flooded lagoon city\"\n\"The Queen Had This Hilarious Reaction to (Unnecessary) Mouth-to-Mouth Resuscitation\"\n\n[Candidate News Title]\n\"Whoopi Goldberg Doesn't Stress About The View's Tense Debates\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Whoopi Goldberg Doesn't Stress About The View's Tense Debates,\" the user can expect to read about Goldberg's perspective on the dynamic discussions that often characterize the show. It is likely to explore her approach to handling conflicts and differing opinions among co-hosts, providing insights into her role in maintaining a balance during heated moments. The article may also highlight her views on the importance of open dialogue and how she navigates the pressure that comes with public debates, reflecting her unique contribution to the show's atmosphere.",
+  "model": "gpt-4o-mini"
+}

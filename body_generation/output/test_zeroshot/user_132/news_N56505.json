@@ -1,0 +1,21 @@
+{
+  "user_id": 132,
+  "candidate_news_id": "N56505",
+  "candidate_title": "Top 5 Craziest Motorcycles From EICMA 2019",
+  "user_history_count": 10,
+  "user_history": [
+    "Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.",
+    "Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump",
+    "Flight Attendants Have a Secret Language You Didn't Know About",
+    "Hey, Millennials, look out below! Gen Z may already be catching up in the salary race",
+    "Kanye West is teaming up with pastor Joel Osteen: Details",
+    "The Sexiest Photos Ever of Our 29 Sexiest Men Alive",
+    "Celebrity property roundup: the winners and losers of 2019",
+    "11 Unique and Quirky Cruise Destinations",
+    "New Report Exposes Dolphin Cruelty in Travel Industry",
+    "Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Iowan convicted of murder claims his life-sentence was served once he died, was revived in medical emergency. The court disagrees.\"\n\"Nikki Haley claims top aides tried to recruit her to 'save the country' by undermining Trump\"\n\"Flight Attendants Have a Secret Language You Didn't Know About\"\n\"Hey, Millennials, look out below! Gen Z may already be catching up in the salary race\"\n\"Kanye West is teaming up with pastor Joel Osteen: Details\"\n\"The Sexiest Photos Ever of Our 29 Sexiest Men Alive\"\n\"Celebrity property roundup: the winners and losers of 2019\"\n\"11 Unique and Quirky Cruise Destinations\"\n\"New Report Exposes Dolphin Cruelty in Travel Industry\"\n\"Model, 23, Didn't Know She Was Pregnant Until She Gave Birth to a Full-Term Baby in Her Bathroom\"\n\n[Candidate News Title]\n\"Top 5 Craziest Motorcycles From EICMA 2019\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Top 5 Craziest Motorcycles From EICMA 2019,\" you can expect a detailed overview of some of the most unconventional and innovative motorcycle designs showcased at the EICMA motorcycle show in 2019. The article is likely to highlight unique features, specifications, and the creative concepts behind these bikes, appealing to enthusiasts and those interested in automotive trends. Additionally, it may include insights into the manufacturers' vision and how these designs challenge traditional motorcycle aesthetics and functionality.",
+  "model": "gpt-4o-mini"
+}

@@ -1,0 +1,21 @@
+{
+  "user_id": 189,
+  "candidate_news_id": "N62800",
+  "candidate_title": "9 renovation tips to boost resale value",
+  "user_history_count": 10,
+  "user_history": [
+    "Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids",
+    "Vanna White hosts 'Wheel of Fortune' after Sajak has surgery",
+    "10 more bodies found at mass grave in Rocky Point, bringing total to 58, officials say",
+    "Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'",
+    "Roommate, her boyfriend charged in death of missing Atlanta student",
+    "LSU student from DC, found dead in dorm, died from meningitis",
+    "Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year",
+    "Enjoy Lamar Jackson for the QB he is rather than be a killjoy looking for what he isn't",
+    "LSU student from DC, found dead in dorm, died from meningitis",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Jim Edmonds Calls Police on Meghan King Edmonds Out of ''Concern'' For Their Kids\"\n\"Vanna White hosts 'Wheel of Fortune' after Sajak has surgery\"\n\"10 more bodies found at mass grave in Rocky Point, bringing total to 58, officials say\"\n\"Katie Couric Says Matt Lauer 'Ultimately Turned Out to Be Two Very Different People'\"\n\"Roommate, her boyfriend charged in death of missing Atlanta student\"\n\"LSU student from DC, found dead in dorm, died from meningitis\"\n\"Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year\"\n\"Enjoy Lamar Jackson for the QB he is rather than be a killjoy looking for what he isn't\"\n\"LSU student from DC, found dead in dorm, died from meningitis\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\n[Candidate News Title]\n\"9 renovation tips to boost resale value\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to find practical advice on home renovations that can enhance the resale value of a property. It may cover specific updates, such as kitchen and bathroom improvements, as well as general strategies for increasing appeal to potential buyers. The discussion might include cost-effective upgrades and aesthetic changes that can make a significant impact. Additionally, the article could suggest trends in home design that are currently popular. Overall, it is expected to provide a mix of actionable tips and insights into the real estate market.",
+  "model": "gpt-4o-mini"
+}

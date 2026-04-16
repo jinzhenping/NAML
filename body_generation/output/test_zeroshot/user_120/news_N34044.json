@@ -1,0 +1,21 @@
+{
+  "user_id": 120,
+  "candidate_news_id": "N34044",
+  "candidate_title": "This is it, this is the luckiest break in the history of golf",
+  "user_history_count": 10,
+  "user_history": [
+    "An Awkward Moment As Meghan Markle Met A Curtsy Attempt With An American Greeting",
+    "California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say",
+    "5 Changes I Made in My Life to Lose Face Fat and Get Healthy",
+    "Detroit Metro Airport to Allow Limited Visitors Past Security",
+    "Duchess Meghan Hopes Public Will 'Give Her a Break' After Speaking Out",
+    "20 Things You Should Never Do When Cooking Bacon",
+    "'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.",
+    "Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday",
+    "Family told to take down Christmas display because it's too soon to decorate",
+    "The 1 reason you shouldn't hesitate to claim Social Security early"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"An Awkward Moment As Meghan Markle Met A Curtsy Attempt With An American Greeting\"\n\"California sheriff's deputy shot dead, ride-along injured in 'active shooter incident,' officials say\"\n\"5 Changes I Made in My Life to Lose Face Fat and Get Healthy\"\n\"Detroit Metro Airport to Allow Limited Visitors Past Security\"\n\"Duchess Meghan Hopes Public Will 'Give Her a Break' After Speaking Out\"\n\"20 Things You Should Never Do When Cooking Bacon\"\n\"'Baby Shark' Devoured Your Brain. Your Wallet Is Harder to Swallow.\"\n\"Prince Harry and Meghan Markle just shared a never-before-seen photo of baby Archie with his 'Grandpa' Prince Charles to celebrate his birthday\"\n\"Family told to take down Christmas display because it's too soon to decorate\"\n\"The 1 reason you shouldn't hesitate to claim Social Security early\"\n\n[Candidate News Title]\n\"This is it, this is the luckiest break in the history of golf\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"This is it, this is the luckiest break in the history of golf,\" you may expect to read about a remarkable incident in the world of golf that highlights an extraordinary stroke or moment during a recent tournament or event. The article could provide details about the circumstances surrounding this event, including the players involved and the significance of the moment in the context of the game. Additionally, it is likely to explore the reactions from spectators and experts, offering insights into why this particular break is being characterized as \"the luckiest.\"",
+  "model": "gpt-4o-mini"
+}

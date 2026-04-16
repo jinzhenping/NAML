@@ -1,0 +1,20 @@
+{
+  "user_id": 83,
+  "candidate_news_id": "N4331",
+  "candidate_title": "The week in history: Nov. 18-24",
+  "user_history_count": 9,
+  "user_history": [
+    "Flight shaming is gaining traction and could cost airlines billions",
+    "Dad Lied About 4-Year-Old's Role In Double Shooting: Report",
+    "Ex-SS guard on trial: I saw people led into gas chamber",
+    "OSU hit with radio ad critical of school's handling of Strauss abuse scandal",
+    "Trump greeted with loud boos after being introduced at World Series",
+    "The man who tried to disrupt Wall Street's stranglehold on Silicon Valley is retiring",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "Close Election in Kentucky Was Ripe for Twitter, and an Omen for 2020",
+    "Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Flight shaming is gaining traction and could cost airlines billions\"\n\"Dad Lied About 4-Year-Old's Role In Double Shooting: Report\"\n\"Ex-SS guard on trial: I saw people led into gas chamber\"\n\"OSU hit with radio ad critical of school's handling of Strauss abuse scandal\"\n\"Trump greeted with loud boos after being introduced at World Series\"\n\"The man who tried to disrupt Wall Street's stranglehold on Silicon Valley is retiring\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Close Election in Kentucky Was Ripe for Twitter, and an Omen for 2020\"\n\"Wisconsin bus driver saves children wandering in snow, as deadly Arctic air mass grips US\"\n\"\"\n\n[Candidate News Title]\n\"The week in history: Nov. 18-24\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"The week in history: Nov. 18-24\" is likely to provide an overview of significant historical events that occurred during this week across various years. Readers may expect to learn about pivotal moments in politics, culture, and social movements, possibly including notable anniversaries or milestones. The content could also highlight how these events have shaped current societal issues or trends. Additionally, it may include lesser-known facts or anecdotes that offer insight into the historical context of this specific timeframe.",
+  "model": "gpt-4o-mini"
+}

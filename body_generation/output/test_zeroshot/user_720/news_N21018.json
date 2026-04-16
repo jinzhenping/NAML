@@ -1,0 +1,21 @@
+{
+  "user_id": 720,
+  "candidate_news_id": "N21018",
+  "candidate_title": "3 Indiana judges suspended after a night of drinking turned into a White Castle brawl",
+  "user_history_count": 10,
+  "user_history": [
+    "Joe Girardi is 'leading candidate' to be new Phillies manager, source says",
+    "Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him",
+    "Potential wide receiver free agent options for the Eagles",
+    "25 celebrities who emerged as superstars in the 2010s",
+    "Stars   They're Just Like Us!",
+    "35 musicians you should see live at least once in your life",
+    "Flight Attendants Have a Secret Language You Didn't Know About",
+    "Best country music albums of all time",
+    "Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career",
+    "Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Joe Girardi is 'leading candidate' to be new Phillies manager, source says\"\n\"Bill Murray Applied To Work At An Airport P.F. Chang's And They're Totally Down To Hire Him\"\n\"Potential wide receiver free agent options for the Eagles\"\n\"25 celebrities who emerged as superstars in the 2010s\"\n\"Stars   They're Just Like Us!\"\n\"35 musicians you should see live at least once in your life\"\n\"Flight Attendants Have a Secret Language You Didn't Know About\"\n\"Best country music albums of all time\"\n\"Scarlett Johansson Regrets Being \"Hyper-Sexualized\" Early in Her Career\"\n\"Walmart releases Black Friday ad with $129 Apple Watch, TV deals, electronics doorbusters\"\n\n[Candidate News Title]\n\"3 Indiana judges suspended after a night of drinking turned into a White Castle brawl\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent suspension of three Indiana judges following an incident involving excessive drinking that escalated into a physical altercation at a White Castle restaurant. Readers may expect details about the circumstances leading to the brawl, including any official statements from the judges or the judicial system. It could also explore the implications of such behavior on the judges' careers and the public's perception of the judicial system. Additionally, the piece may examine any disciplinary actions that may follow this incident, providing context about the judges' roles and responsibilities.",
+  "model": "gpt-4o-mini"
+}

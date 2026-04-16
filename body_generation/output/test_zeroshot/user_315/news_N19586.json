@@ -1,0 +1,21 @@
+{
+  "user_id": 315,
+  "candidate_news_id": "N19586",
+  "candidate_title": "Experts Explain Why You Might Want to Stop Sleeping on Your Stomach and How to Do It",
+  "user_history_count": 10,
+  "user_history": [
+    "MLB free-agent predictions: Rankings, rumors for the top players on the market",
+    "Top 20 MLB free-agent position players",
+    "40 Best Belly-Shrinking Foods",
+    "Here's What Kate Hudson Eats in a Day to Stay Sculpted at 40",
+    "The Best Beaches in Hawaii to Visit in Your Lifetime",
+    "Gerrit Cole and Stephen Strasburg will cash in on their postseason dominance",
+    "Loved One Gave You Down Payment Money? You'll Need a Mortgage Gift Letter",
+    "Subtle Signs You're Eating Too Much Sugar",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "Astros can make history if Bregman wins MVP"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"MLB free-agent predictions: Rankings, rumors for the top players on the market\"\n\"Top 20 MLB free-agent position players\"\n\"40 Best Belly-Shrinking Foods\"\n\"Here's What Kate Hudson Eats in a Day to Stay Sculpted at 40\"\n\"The Best Beaches in Hawaii to Visit in Your Lifetime\"\n\"Gerrit Cole and Stephen Strasburg will cash in on their postseason dominance\"\n\"Loved One Gave You Down Payment Money? You'll Need a Mortgage Gift Letter\"\n\"Subtle Signs You're Eating Too Much Sugar\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"Astros can make history if Bregman wins MVP\"\n\n[Candidate News Title]\n\"Experts Explain Why You Might Want to Stop Sleeping on Your Stomach and How to Do It\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Experts Explain Why You Might Want to Stop Sleeping on Your Stomach and How to Do It,\" you can expect an informative discussion about the potential downsides of stomach sleeping, particularly regarding spinal alignment and overall health. The article is likely to outline expert recommendations for alternative sleeping positions, such as side or back sleeping, and may provide practical tips for making this transition easier. Additionally, it could include insights on how changing your sleep posture can contribute to better sleep quality and reduced discomfort.",
+  "model": "gpt-4o-mini"
+}

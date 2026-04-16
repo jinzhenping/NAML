@@ -1,0 +1,21 @@
+{
+  "user_id": 172,
+  "candidate_news_id": "N64109",
+  "candidate_title": "7 possible landing spots for Anthony Rendon",
+  "user_history_count": 10,
+  "user_history": [
+    "I ate the same meal at America's three largest sub chains   here's the one that reigned supreme",
+    "The 35 Most Beautiful Abandoned Places In The World",
+    "How much land the government owns in every state and what it's used for",
+    "Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times",
+    "Celebrity beach cruising for 2019",
+    "The Best Islands in the World: 2019 Readers' Choice Awards",
+    "Florida Space Coast to Emerald Coast: How each coast got its name",
+    "The Best Value Meal Deals at 50 Chains Across the Country",
+    "Foie Gras Is Banned by New York City",
+    "What Joe Biden Actually Did in Ukraine"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"I ate the same meal at America's three largest sub chains   here's the one that reigned supreme\"\n\"The 35 Most Beautiful Abandoned Places In The World\"\n\"How much land the government owns in every state and what it's used for\"\n\"Peter Luger's says its steaks are still 'the best you can eat' after zero-star review from the New York Times\"\n\"Celebrity beach cruising for 2019\"\n\"The Best Islands in the World: 2019 Readers' Choice Awards\"\n\"Florida Space Coast to Emerald Coast: How each coast got its name\"\n\"The Best Value Meal Deals at 50 Chains Across the Country\"\n\"Foie Gras Is Banned by New York City\"\n\"What Joe Biden Actually Did in Ukraine\"\n\n[Candidate News Title]\n\"7 possible landing spots for Anthony Rendon\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"7 possible landing spots for Anthony Rendon,\" the user may expect to explore potential teams or cities where the baseball player might sign or be traded during the offseason. The piece is likely to provide insights into various Major League Baseball franchises, discussing their current rosters, needs, and financial situations. Additionally, it could include analysis of Rendon’s performance and how it aligns with the strategic goals of each potential landing spot. This article may also touch on the implications of such moves for both the player and the teams involved.",
+  "model": "gpt-4o-mini"
+}

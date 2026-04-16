@@ -1,0 +1,21 @@
+{
+  "user_id": 160,
+  "candidate_news_id": "N125192",
+  "candidate_title": "Brady on Kaepernick workout: 'Pretty cool that he's getting that opportunity'",
+  "user_history_count": 10,
+  "user_history": [
+    "Everything You've Always Wanted to Know About Botox (But Were Afraid to Ask)",
+    "Eric Tse, 24, just became a billionaire overnight",
+    "Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'",
+    "Who Is on the Masked Singer Season 2? The Ultimate Guide to the Stars Under Those Masks",
+    "ISIS names successor to slain leader al-Baghdadi",
+    "Miranda Lambert Says She's 'Terrified' Of The Gym, And Tbh, I Can Relate",
+    "Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture",
+    "Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019",
+    "From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers",
+    "These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Everything You've Always Wanted to Know About Botox (But Were Afraid to Ask)\"\n\"Eric Tse, 24, just became a billionaire overnight\"\n\"Miranda Lambert Reveals the Real Reason Behind Her Secret Wedding: 'It's Not for Everybody Else'\"\n\"Who Is on the Masked Singer Season 2? The Ultimate Guide to the Stars Under Those Masks\"\n\"ISIS names successor to slain leader al-Baghdadi\"\n\"Miranda Lambert Says She's 'Terrified' Of The Gym, And Tbh, I Can Relate\"\n\"Jennifer Aniston Just Gave a Rare Look at Her Natural Hair Texture\"\n\"Ben Affleck has a new girlfriend after using the Raya dating app, plus more celeb love life news for late October 2019\"\n\"From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers\"\n\"These 30 Photos From the 2019 CMA Awards Will Make You Feel Like Part of the Show\"\n\n[Candidate News Title]\n\"Brady on Kaepernick workout: 'Pretty cool that he's getting that opportunity'\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Brady on Kaepernick workout: 'Pretty cool that he's getting that opportunity',\" the user is likely expecting to read about Tom Brady's perspective on Colin Kaepernick's recent workout and its significance in the context of professional football. The discussion may touch on Brady's views regarding Kaepernick's chance to showcase his skills and the broader implications for athletes who have faced similar challenges. Additionally, the article could provide background information on Kaepernick's career and the circumstances surrounding his absence from the NFL, offering insights into how this workout might impact his future opportunities in the league.",
+  "model": "gpt-4o-mini"
+}

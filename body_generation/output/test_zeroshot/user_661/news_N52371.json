@@ -1,0 +1,21 @@
+{
+  "user_id": 661,
+  "candidate_news_id": "N52371",
+  "candidate_title": "Intimidation among key takeaways from the Trump impeachment hearing with Marie Yovanovitch",
+  "user_history_count": 10,
+  "user_history": [
+    "Our 50 Best Thanksgiving Recipes",
+    "30 Speedy and Delicious Potato Recipes to Make Tonight",
+    "Deer-like animal thought lost to science photographed for first time in 30 years",
+    "What to Cook This Week (November 11 to November 17)",
+    "The Latest Weight Loss Pills That Work And the Ones That Don't",
+    "'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal",
+    "Here's the Best Small Town in Every State",
+    "China's pork crisis is bigger than you think",
+    "What It Was Like Inside the Homes of the Pilgrims",
+    "'One in a million' deer captured on camera in Michigan woods"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Our 50 Best Thanksgiving Recipes\"\n\"30 Speedy and Delicious Potato Recipes to Make Tonight\"\n\"Deer-like animal thought lost to science photographed for first time in 30 years\"\n\"What to Cook This Week (November 11 to November 17)\"\n\"The Latest Weight Loss Pills That Work And the Ones That Don't\"\n\"'Monday Night Football' commentator under fire after belittling criticism of 49ers kicker for missed field goal\"\n\"Here's the Best Small Town in Every State\"\n\"China's pork crisis is bigger than you think\"\n\"What It Was Like Inside the Homes of the Pilgrims\"\n\"'One in a million' deer captured on camera in Michigan woods\"\n\n[Candidate News Title]\n\"Intimidation among key takeaways from the Trump impeachment hearing with Marie Yovanovitch\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Intimidation among key takeaways from the Trump impeachment hearing with Marie Yovanovitch,\" the user may expect an analysis of the recent impeachment hearing focusing on the concept of intimidation faced by key witnesses, particularly Marie Yovanovitch. The piece is likely to outline significant moments from the hearing, discussing the political implications and reactions surrounding Yovanovitch's testimony. Additionally, it could explore how intimidation tactics might affect future testimonies and the broader context of political discourse. The article may also touch on the implications for accountability in government.",
+  "model": "gpt-4o-mini"
+}

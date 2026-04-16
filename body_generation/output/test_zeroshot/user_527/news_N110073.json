@@ -1,0 +1,21 @@
+{
+  "user_id": 527,
+  "candidate_news_id": "N110073",
+  "candidate_title": "Flooded Venice had tourists taking selfies and residents in tears",
+  "user_history_count": 10,
+  "user_history": [
+    "Photos of the Day",
+    "Hong Kong Protesters Call for U.S. Help. China Sees a Conspiracy.",
+    "Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable",
+    "A woman's stalker used an app that allowed him to stop, start and track her car",
+    "OpenAI has published the text-generating AI it said was too dangerous to share",
+    "Robert Redford: A race against time to undo damage caused by Trump (opinion)",
+    "Facebook, YouTube delete posts claiming to name Ukraine whistleblower",
+    "Biden knocks left-wing of Democratic Party: 'We shouldn't abolish ICE'",
+    "Vaping Illnesses Are Linked to Vitamin E Acetate, C.D.C. Says",
+    "Read George Kent Full Opening Statement at the First Public Hearing in Trump's Impeachment Inquiry"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Photos of the Day\"\n\"Hong Kong Protesters Call for U.S. Help. China Sees a Conspiracy.\"\n\"Markazi: Ex-UCLA gymnast Katelyn Ohashi wonders if her viral moment could have been profitable\"\n\"A woman's stalker used an app that allowed him to stop, start and track her car\"\n\"OpenAI has published the text-generating AI it said was too dangerous to share\"\n\"Robert Redford: A race against time to undo damage caused by Trump (opinion)\"\n\"Facebook, YouTube delete posts claiming to name Ukraine whistleblower\"\n\"Biden knocks left-wing of Democratic Party: 'We shouldn't abolish ICE'\"\n\"Vaping Illnesses Are Linked to Vitamin E Acetate, C.D.C. Says\"\n\"Read George Kent Full Opening Statement at the First Public Hearing in Trump's Impeachment Inquiry\"\n\n[Candidate News Title]\n\"Flooded Venice had tourists taking selfies and residents in tears\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In the article titled \"Flooded Venice had tourists taking selfies and residents in tears,\" the user may expect to read about the recent flooding events in Venice and their impact on both tourists and local residents. The piece is likely to describe how visitors responded to the flooding, possibly highlighting the juxtaposition of tourists capturing the moment for social media while locals grapple with the aftermath of the disaster. Additionally, the article could provide insights into the broader implications of such environmental challenges for the city and its inhabitants.",
+  "model": "gpt-4o-mini"
+}

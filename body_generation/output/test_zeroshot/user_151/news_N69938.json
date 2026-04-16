@@ -1,0 +1,21 @@
+{
+  "user_id": 151,
+  "candidate_news_id": "N69938",
+  "candidate_title": "Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage",
+  "user_history_count": 10,
+  "user_history": [
+    "Why police are concerned over new Google Maps 'speed trap' location feature",
+    "Trump says likely Baghdadi successor killed by U.S. troops",
+    "Amazing motorhomes of the rich and famous",
+    "The richest country music stars",
+    "'Bad on them, bad on the brand': How Dak Prescott, Daniel Jones view MNF microphone",
+    "A 13-year-old Girl Just Invented a Train More Viable Than Elon Musk's Hyperloop",
+    "A Louisiana man decided to steal an electric powered shopping cart from Walmart, police say",
+    "691,145 Californians left last year: What state did they go to?",
+    "Howard Kurtz: Rand Paul wants CIA officer outed, if someone else does it",
+    "The 21 most iconic CMA Awards performances"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Why police are concerned over new Google Maps 'speed trap' location feature\"\n\"Trump says likely Baghdadi successor killed by U.S. troops\"\n\"Amazing motorhomes of the rich and famous\"\n\"The richest country music stars\"\n\"'Bad on them, bad on the brand': How Dak Prescott, Daniel Jones view MNF microphone\"\n\"A 13-year-old Girl Just Invented a Train More Viable Than Elon Musk's Hyperloop\"\n\"A Louisiana man decided to steal an electric powered shopping cart from Walmart, police say\"\n\"691,145 Californians left last year: What state did they go to?\"\n\"Howard Kurtz: Rand Paul wants CIA officer outed, if someone else does it\"\n\"The 21 most iconic CMA Awards performances\"\n\n[Candidate News Title]\n\"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "If you click on the article titled \"Meghan Markle and Hillary Clinton Secretly Spent the Afternoon Together at Frogmore Cottage,\" you may find an exploration of the context and implications of this meeting between two prominent figures. The article is likely to detail the nature of their discussions, possibly touching on shared interests or causes, such as women's empowerment or political engagement. Additionally, it may speculate on how this meeting could influence public perception of both individuals, given their high-profile statuses and past controversies. Overall, the piece is expected to provide insights into their relationship and its potential impact on their respective public images.",
+  "model": "gpt-4o-mini"
+}

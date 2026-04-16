@@ -1,0 +1,21 @@
+{
+  "user_id": 804,
+  "candidate_news_id": "N122640",
+  "candidate_title": "This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.",
+  "user_history_count": 10,
+  "user_history": [
+    "1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef",
+    "She fought for human rights on a tiny island that banned guns. Then she was shot dead.",
+    "Felicity Huffman Smiles as She Begins Community Service Following Prison Release",
+    "News anchor calls out body-shaming comments after being told she looks 'mighty big on TV'",
+    "Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics",
+    "Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft",
+    "Rare deer spotted in Montana",
+    "Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13",
+    "College gymnast dies following training accident in Connecticut",
+    "No. 1 milk company declares bankruptcy amid drop in demand"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"1 dead, 8 others hospitalized in Salmonella outbreak likely tied to ground beef\"\n\"She fought for human rights on a tiny island that banned guns. Then she was shot dead.\"\n\"Felicity Huffman Smiles as She Begins Community Service Following Prison Release\"\n\"News anchor calls out body-shaming comments after being told she looks 'mighty big on TV'\"\n\"Pregnant U.S. women's soccer star Alex Morgan still plans to play in 2020 Summer Olympics\"\n\"Air Force airman missing after fall into Gulf of Mexico from C-130 aircraft\"\n\"Rare deer spotted in Montana\"\n\"Broadway Star Laurel Griggs Suffered Asthma Attack Before She Died at Age 13\"\n\"College gymnast dies following training accident in Connecticut\"\n\"No. 1 milk company declares bankruptcy amid drop in demand\"\n\n[Candidate News Title]\n\"This was uglier than a brawl. And Myles Garrett deserves suspension for rest of year after helmet attack.\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article is likely to discuss the recent incident involving Myles Garrett, focusing on the implications of his actions during a game that resulted in a helmet attack on an opponent. Readers may expect an analysis of the incident, including details about the event, the reactions from sports commentators and fans, and possible consequences for Garrett, such as a suspension for the remainder of the season. The piece may also cover broader themes of player conduct and safety in professional sports, while exploring the potential impact on the teams involved.",
+  "model": "gpt-4o-mini"
+}

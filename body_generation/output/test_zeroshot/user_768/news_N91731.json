@@ -1,0 +1,21 @@
+{
+  "user_id": 768,
+  "candidate_news_id": "N91731",
+  "candidate_title": "Will James Wiseman play for Memphis again? Explaining next steps in NCAA eligibility process",
+  "user_history_count": 10,
+  "user_history": [
+    "Reporter Can't Stop Laughing After Cat Interrupts News Segment",
+    "The Most Beautiful Natural Wonder in Every State",
+    "Rare Mustang! 1968 Shelby GT500 Prototype",
+    "Porsche launches into second story of New Jersey building, killing 2",
+    "Toyota Mega Cruiser: Did You Know Toyota Made a Hummer H1 Lookalike?",
+    "Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month",
+    "What It Was Like Inside the Homes of the Pilgrims",
+    "'Priceless' finds that turned out to be worthless",
+    "Today in History: November 14",
+    "A Man and His Shelby G.T. 350 51 Years On"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"Reporter Can't Stop Laughing After Cat Interrupts News Segment\"\n\"The Most Beautiful Natural Wonder in Every State\"\n\"Rare Mustang! 1968 Shelby GT500 Prototype\"\n\"Porsche launches into second story of New Jersey building, killing 2\"\n\"Toyota Mega Cruiser: Did You Know Toyota Made a Hummer H1 Lookalike?\"\n\"Rip Taylor's Cause of Death Revealed, Memorial Service Scheduled for Later This Month\"\n\"What It Was Like Inside the Homes of the Pilgrims\"\n\"'Priceless' finds that turned out to be worthless\"\n\"Today in History: November 14\"\n\"A Man and His Shelby G.T. 350 51 Years On\"\n\n[Candidate News Title]\n\"Will James Wiseman play for Memphis again? Explaining next steps in NCAA eligibility process\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user may expect a detailed overview of James Wiseman's current status regarding his eligibility to play for Memphis in the NCAA. It is likely to cover the rules and regulations that govern NCAA eligibility, as well as any recent developments or decisions affecting Wiseman's potential return. The piece might also delve into past instances of similar eligibility issues faced by athletes, providing context for how Wiseman's situation compares. Overall, readers can anticipate a clear explanation of the next steps in the process and what they might mean for his future in college basketball.",
+  "model": "gpt-4o-mini"
+}

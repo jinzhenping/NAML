@@ -1,0 +1,21 @@
+{
+  "user_id": 693,
+  "candidate_news_id": "N73295",
+  "candidate_title": "Climate change looms over giant Saudi energy IPO",
+  "user_history_count": 10,
+  "user_history": [
+    "The 10 Best Nonfiction Books of the 2010s",
+    "Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'",
+    "China's Commerce Ministry says trade war should be ended by removing tariffs",
+    "I moved from the US to the UK. Here are the 8 things that surprised me the most.",
+    "Four words from dermatologists that'll change your life: Stop showering every day",
+    "Powell's Warning to Congress About the Next Recession",
+    "Trump juggles statecraft and impeachment on a historic day",
+    "Video shows a Boeing 737 plane carrying 196 people burst into flames just after landing at an Egyptian airport",
+    "Support for marijuana legalization is at an all-time high in a new poll",
+    "University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"The 10 Best Nonfiction Books of the 2010s\"\n\"Surgeon Shocked After Doing Double Lung Transplant on Teen Vaper: 'Evil I Haven't Faced Before'\"\n\"China's Commerce Ministry says trade war should be ended by removing tariffs\"\n\"I moved from the US to the UK. Here are the 8 things that surprised me the most.\"\n\"Four words from dermatologists that'll change your life: Stop showering every day\"\n\"Powell's Warning to Congress About the Next Recession\"\n\"Trump juggles statecraft and impeachment on a historic day\"\n\"Video shows a Boeing 737 plane carrying 196 people burst into flames just after landing at an Egyptian airport\"\n\"Support for marijuana legalization is at an all-time high in a new poll\"\n\"University of Florida student president faces impeachment for Trump Jr.'s $50K campus talk\"\n\n[Candidate News Title]\n\"Climate change looms over giant Saudi energy IPO\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "The article titled \"Climate change looms over giant Saudi energy IPO\" is likely to discuss the intersection of climate change concerns and the implications for a significant initial public offering (IPO) in Saudi Arabia's energy sector. Readers may expect an exploration of how climate policies and global warming trends are influencing investor sentiment and regulatory landscapes in the region. Additionally, the piece could provide insights into the potential challenges and opportunities that the IPO might face in a world increasingly focused on sustainability. It is likely to examine the broader economic and environmental context surrounding this major financial event.",
+  "model": "gpt-4o-mini"
+}

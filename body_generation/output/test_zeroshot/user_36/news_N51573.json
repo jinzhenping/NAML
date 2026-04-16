@@ -1,0 +1,21 @@
+{
+  "user_id": 36,
+  "candidate_news_id": "N51573",
+  "candidate_title": "One New Thing to Check Out on Every Hawaiian Island",
+  "user_history_count": 10,
+  "user_history": [
+    "49 Celebrity Couples Who Make It Work Despite Huge Age Gaps",
+    "Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss",
+    "The Most Amazing Photos of a Young Dolly Parton",
+    "The Sexiest Photos Ever of Our 29 Sexiest Men Alive",
+    "Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'",
+    "From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers",
+    "Celebrity plastic surgery transformations",
+    "Marcia Cross' anal cancer may have been linked to HPV. She wants people to know they could have the virus, too.",
+    "Husband, 106, and wife, 105, are named world's oldest living couple",
+    "Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year"
+  ],
+  "prompt": "\nYou are a user-centric expectation generator for news recommendation.\n\n[User Click History - Titles Only]\n\"49 Celebrity Couples Who Make It Work Despite Huge Age Gaps\"\n\"Ree Drummond Says a Low-Carb Diet Is the Secret to Her Incredible Weight Loss\"\n\"The Most Amazing Photos of a Young Dolly Parton\"\n\"The Sexiest Photos Ever of Our 29 Sexiest Men Alive\"\n\"Lisa Vanderpump Reveals Why She Left RHOBH: 'I Don't Have Room in My Life for Nastiness'\"\n\"From Idris Elba to Richard Gere: All the Sexiest Man Alive Covers\"\n\"Celebrity plastic surgery transformations\"\n\"Marcia Cross' anal cancer may have been linked to HPV. She wants people to know they could have the virus, too.\"\n\"Husband, 106, and wife, 105, are named world's oldest living couple\"\n\"Meghan Markle and Prince Harry Won't Spend Christmas with Queen Elizabeth at Sandringham This Year\"\n\n[Candidate News Title]\n\"One New Thing to Check Out on Every Hawaiian Island\"\n\n---\n\n[Step A: Infer User Preference - INTERNAL]\nInfer the user's main interests and information-seeking intent\nfrom the clicked titles.\nDo not output this step.\n\n---\n\n[Step B: Generate Expected Body - OUTPUT]\n\nUse the following generation settings:\n\nTone: Write in a neutral, information-focused tone.Mild emphasis is allowed to clarify relevance, but avoid emotional language, exaggeration, or persuasive phrasing.The tone should remain calm and descriptive.\nAbstraction Level: Balance high-level themes with a small number of concrete details.The text should outline the general expectation while selectively mentioning specific aspects that the user is likely interested in.\nSpeculation Count: Include exactly one speculative hypothesis about what the article might contain.The hypothesis should be clearly framed as uncertain (e.g., using “may,” “could,” or “is likely to”).\nLength Bucket: Generate an expected body of approximately 70-90 words.Provide sufficient detail to explain the user's expectation while remaining concise.\nFormat: Write the expected body as a coherent paragraph in natural prose.Avoid bullet points or list formatting.\n\nGeneration rules:\nDescribe what this user is likely expecting to read if they click the article.\nUse expectation-based and speculative language.\nDo not assume access to the real article body.\nDo not include emotional or sensational expressions.\n\nNow generate the expected body.",
+  "generated_body": "In this article, the user is likely to discover a curated selection of unique attractions or experiences across the Hawaiian Islands, highlighting one new thing to explore on each island. This may include lesser-known natural wonders, cultural sites, or local cuisines that showcase the diverse offerings of Hawaii. The user might expect informative descriptions that provide context about each location, along with practical tips for visiting. Additionally, the article could touch on how these experiences contribute to the overall charm and allure of the islands.",
+  "model": "gpt-4o-mini"
+}
