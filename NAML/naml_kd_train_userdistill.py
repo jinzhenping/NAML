@@ -8,7 +8,7 @@ NAML 지식 증류 학습 (user+news distill):
 - L_distill_user: student user_rep(히스토리 기반) vs teacher user_rep 코사인 (1-cos)
 - L_distill_exp: 후보마다 student newsEncoder(기대본문) vs teacher newsEncoder(실제/기대 본문 선택) 코사인 (1-cos)
 
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train_userdistill.py \
+python NAML/naml_kd_train_userdistill.py \
   --teacher-weights saved_models/NAML_mind_2000.h5 \
   --tune-log saved_models/naml_tune_actual_log.json \
   --expected-body-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \

@@ -3,10 +3,10 @@
 NAML 실제 본문만 사용: 하이퍼파라미터 탐색 후 테스트 MRR이 가장 좋았던 가중치를 저장한다.
 
 실행 (저장소 루트에서):
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_actual.py
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_actual.py --trials 24 --epochs-per-trial 10 --seed 42
+python NAML/naml_tune_actual.py
+python NAML/naml_tune_actual.py --trials 24 --epochs-per-trial 10 --seed 42
 # 예산 절약: 24조합을 2에폭으로 걸러서 상위 5개만 10에폭 재학습
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_actual.py --two-phase --trials 72 --screening-epochs 3 \
+python NAML/naml_tune_actual.py --two-phase --trials 72 --screening-epochs 3 \
     --refine-top-k 10 --epochs-per-trial 10  --resume-log saved_models/naml_tune_actual_log.json
 
 저장: saved_models/NAML_mind_2000.h5 (model.save_weights, build_naml_models 와 동일 구조)

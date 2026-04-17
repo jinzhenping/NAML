@@ -5,10 +5,10 @@ NAML 하이퍼파라미터 탐색:
 - 옵션: 기대본문(user_*/news_*.json) 사용 + 앞 N문장만 사용
 
 실행 (저장소 루트에서):
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_expected.py
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_expected.py --trials 24 --epochs-per-trial 10 --seed 42
+python NAML/naml_tune_expected.py
+python NAML/naml_tune_expected.py --trials 24 --epochs-per-trial 10 --seed 42
 # 예산 절약: 24조합을 2에폭으로 걸러서 상위 5개만 10에폭 재학습
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_expected.py --two-phase --trials 72 --screening-epochs 3 \
+python NAML/naml_tune_expected.py --two-phase --trials 72 --screening-epochs 3 \
     --refine-top-k 10 --epochs-per-trial 10  --resume-log saved_models/naml_tune_expected_log.json \
     --use-expected-body \
     --expected-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
@@ -20,14 +20,14 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_expect
 저장: saved_models/NAML_mind_2000.h5 (model.save_weights, build_naml_models 와 동일 구조)
 
 기대본문 튜닝(앞 3문장):
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_expected.py \
+python NAML/naml_tune_expected.py \
     --use-expected-body \
     --expected-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
     --expected-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
     --expected-body-first-n-sentences 3
 
 요청 조합 고정 탐색(필터×커널만):
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_tune_expected.py \
+python NAML/naml_tune_expected.py \
     --use-expected-body --expected-body-first-n-sentences 3 \
     --expected-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
     --expected-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \

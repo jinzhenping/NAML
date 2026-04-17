@@ -10,7 +10,6 @@ conda activate tf28gpu
 # 프로젝트 루트에서
 pip install -r requirements.txt
 
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/NAML.py
 python NAML/NAML.py
 ```
 
