@@ -13,6 +13,7 @@ python NAML/naml_kd_train_userdistill.py \
   --tune-log saved_models/naml_tune_actual_log.json \
   --expected-body-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
   --expected-body-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
+  --expected-body-first-n-sentences 3 \
   --mind-dataset-subdir MIND_2000 \
   --batch-size 8 \
   --eval-batch-size 16 \
@@ -21,7 +22,8 @@ python NAML/naml_kd_train_userdistill.py \
   --epochs 10 \
   --output-weights saved_models/NAML_kd_student_userdistill.h5 --teacher-exp-use-expected-body
 
-# 기본: 학습 기대본문=앞 3문장, 에폭 평가 기대본문=전체(0). 평가도 3문장이면 --eval-expected-body-first-n-sentences 3
+# 학습 기대본문 문장 수: --expected-body-first-n-sentences N (= --train-expected-body-first-n-sentences N, 기본 3, 0=전체)
+# 에폭 평가 [기대본문] 지표: --eval-expected-body-first-n-sentences (기본 0=전체)
 
 교사 가중치가 naml_tune_actual 로 튜닝된 경우 CNN 폭 등이 다르므로 eval_test_expected 와 동일하게:
   --tune-log saved_models/naml_tune_actual_log.json
@@ -552,9 +554,13 @@ def main() -> None:
     )
     ap.add_argument(
         "--expected-body-first-n-sentences",
+        "--train-expected-body-first-n-sentences",
         type=int,
         default=3,
-        help="학습 배치·교사/학생 forward에서 기대본문 앞 N문장만 사용 (0 이하면 전체)",
+        metavar="N",
+        dest="expected_body_first_n_sentences",
+        help="학습 시 기대본문 앞 N문장만 사용 (0=전체). 배치 입력·L_rec·L_distill_exp(및 --teacher-exp-use-expected-body 시 교사 입력). "
+        "별칭: --train-expected-body-first-n-sentences (기본 3)",
     )
     ap.add_argument(
         "--eval-expected-body-first-n-sentences",
