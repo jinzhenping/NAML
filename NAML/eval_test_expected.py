@@ -12,13 +12,17 @@ python NAML/eval_test_expected.py \
   --weights saved_models/NAML_mind_2000_expected.h5 \
   --tune-log saved_models/naml_tune_expected_log.json \
   --mind-dataset-subdir MIND_2000 \
-  --expected-body-first-n-sentences 3
+  --expected-body-first-n-sentences 3 \
+  --mind-test-tsv dataset/MIND_2000/MIND_test_(2000)_final.tsv
 
 # 학습(튜닝)과 동일하게 평가에서도 앞 N문장만 쓰려면 명시: --expected-body-first-n-sentences 3
 # 미지정이면 평가·OOV는 전체 기대본문 문자열 사용(튜닝 로그의 N은 자동 반영하지 않음)
 
 # naml_tune_actual.py 로 튜닝·저장한 가중치는 CNN 폭 등 구조가 다를 수 있음 → 같은 로그를 넘겨야 함:
 #   --tune-log saved_models/naml_tune_actual_log.json
+#
+# 다른 테스트 split TSV (예: 후반 절반):
+#   --mind-test-tsv dataset/MIND_2000/MIND_test_(2000)_final.tsv
 """
 from __future__ import annotations
 
@@ -265,7 +269,14 @@ def main() -> None:
     parser.add_argument("--attention-dense-dim", type=int, default=None)
     parser.add_argument("--category-emb-dim", type=int, default=None)
     parser.add_argument("--mind-dataset-subdir", type=str, default=None)
-    parser.add_argument("--batch-size", type=int, default=16)
+    parser.add_argument(
+        "--mind-test-tsv",
+        type=str,
+        default=None,
+        help="테스트 impression TSV (미지정이면 naml_common 기본, 예: MIND_test_(2000).tsv). "
+        "예: dataset/MIND_2000/MIND_test_(2000)_final.tsv 또는 MIND_test_(2000)_final.tsv",
+    )
+    parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--learning-rate", type=float, default=0.0005)
     parser.add_argument(
         "--disable-auto-expected-preprocess-from-tune-log",
@@ -296,6 +307,24 @@ def main() -> None:
         preprocess_user_file,
     )
     from naml_model_builder import build_naml_models
+
+    mind_test_tsv_override: str | None = None
+    if args.mind_test_tsv and str(args.mind_test_tsv).strip():
+        mt = str(args.mind_test_tsv).strip()
+        if os.path.isabs(mt) and os.path.isfile(mt):
+            mind_test_tsv_override = os.path.normpath(mt)
+        else:
+            cand = os.path.normpath(str(_ROOT / mt))
+            if os.path.isfile(cand):
+                mind_test_tsv_override = cand
+            else:
+                cand2 = mind_data_path(os.path.basename(mt))
+                if os.path.isfile(cand2):
+                    mind_test_tsv_override = cand2
+        if mind_test_tsv_override is None:
+            print(f"오류: --mind-test-tsv 파일을 찾을 수 없습니다: {args.mind_test_tsv}", file=sys.stderr)
+            sys.exit(1)
+        print(f"MIND 테스트 TSV (--mind-test-tsv): {mind_test_tsv_override}", flush=True)
 
     weights_path = _ROOT / args.weights
     if not weights_path.is_file():
@@ -383,6 +412,7 @@ def main() -> None:
         expected_bodies_train=prep_expected_train,
         expected_bodies_test=prep_expected_test,
         word_dict=word_dict,
+        test_file=mind_test_tsv_override,
     )
 
     embedding_mat = get_embedding(word_dict)
