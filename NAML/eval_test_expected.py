@@ -299,6 +299,7 @@ def main() -> None:
     import naml_common as _naml_common
     from naml_common import (
         MIND_NEWS_FILENAME,
+        MIND_TEST_FILENAME,
         SEED,
         clip_expected_body_to_first_sentences,
         get_embedding,
@@ -325,6 +326,8 @@ def main() -> None:
             print(f"오류: --mind-test-tsv 파일을 찾을 수 없습니다: {args.mind_test_tsv}", file=sys.stderr)
             sys.exit(1)
         print(f"MIND 테스트 TSV (--mind-test-tsv): {mind_test_tsv_override}", flush=True)
+    effective_test_tsv = mind_test_tsv_override or mind_data_path(MIND_TEST_FILENAME)
+    print(f"실제 평가 test TSV: {effective_test_tsv}", flush=True)
 
     weights_path = _ROOT / args.weights
     if not weights_path.is_file():
