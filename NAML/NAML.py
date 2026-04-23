@@ -1,3 +1,5 @@
+# MIND_2000: MIND_DATASET_SUBDIR=MIND_2000
+# Adressa_2000: MIND_DATASET_SUBDIR=Adressa_2000
 from typing import Optional
 
 import random

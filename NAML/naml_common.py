@@ -1,3 +1,5 @@
+# MIND_2000: MIND_DATASET_SUBDIR=MIND_2000
+# Adressa_2000: MIND_DATASET_SUBDIR=Adressa_2000
 """
 NAML과 공유하는 MIND 경로·전처리·GloVe 임베딩.
 cluster_train_users_kmeans.py 등에서 NAML.py 전체를 import하지 않고 사용.
@@ -53,30 +55,46 @@ def clip_expected_body_to_first_sentences(raw: str, n_sentences: Optional[int] =
 MIND_DATASET_SUBDIR = os.environ.get('MIND_DATASET_SUBDIR', 'MIND_2000')
 _PROJECT_ROOT_NAML = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-MIND_DATASET_PRESETS = {
-    'MIND_2000': ('MIND_news.tsv', 'MIND_train_(2000).tsv', 'MIND_test_(2000).tsv'),
-}
+from naml_dataset_env import DATASET_FILE_PRESETS as MIND_DATASET_PRESETS
 _FALLBACK_NEWS = 'MIND_news.tsv'
 _FALLBACK_TRAIN = 'MIND_train_(1000).tsv'
 _FALLBACK_TEST = 'MIND_test_(1000).tsv'
 
 
 def _discover_mind_tsv_in_folder(subdir: str):
-    """dataset/<subdir>/ 안에서 MIND_news.tsv + MIND_train_*.tsv 1개 + MIND_test_*.tsv 1개 자동 선택."""
+    """dataset/<subdir>/ 안에서 news/train/test TSV 자동 선택 (MIND_* 우선, 실패 시 *_train_* / *_test_*)."""
     base = os.path.join(_PROJECT_ROOT_NAML, 'dataset', subdir)
     if not os.path.isdir(base):
         return None
-    news_path = os.path.join(base, 'MIND_news.tsv')
-    if os.path.isfile(news_path):
-        news_name = 'MIND_news.tsv'
-    else:
+
+    def _pick_news() -> str | None:
+        for fixed in ('MIND_news.tsv', 'Adressa_news.tsv'):
+            p = os.path.join(base, fixed)
+            if os.path.isfile(p):
+                return fixed
         cand = sorted(glob.glob(os.path.join(base, '*news*.tsv')))
         if len(cand) == 1:
-            news_name = os.path.basename(cand[0])
-        else:
-            return None
+            return os.path.basename(cand[0])
+        return None
+
+    def _filter_non_final_test(paths: list[str]) -> list[str]:
+        return [p for p in paths if '_final' not in os.path.basename(p).lower()]
+
+    news_name = _pick_news()
+    if not news_name:
+        return None
+
     trains = sorted(glob.glob(os.path.join(base, 'MIND_train_*.tsv')))
     tests = sorted(glob.glob(os.path.join(base, 'MIND_test_*.tsv')))
+    if len(tests) > 1:
+        tests = _filter_non_final_test(tests)
+
+    if len(trains) != 1 or len(tests) != 1:
+        trains = sorted(glob.glob(os.path.join(base, '*_train_*.tsv')))
+        tests = sorted(glob.glob(os.path.join(base, '*_test_*.tsv')))
+        if len(tests) > 1:
+            tests = _filter_non_final_test(tests)
+
     if len(trains) != 1 or len(tests) != 1:
         return None
     return news_name, os.path.basename(trains[0]), os.path.basename(tests[0])
@@ -362,6 +380,8 @@ def preprocess_news_file(
         if len(line) < 5:
             continue
         news_id = line[0]
+        if str(news_id).strip().lower() in ('news_id', 'clicked_news', 'id'):
+            continue
         cat = line[1] if line[1] else 'None'
         subcat = line[2] if line[2] else 'None'
         title = line[3] if len(line) > 3 else ''

@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# MIND_2000: --mind-dataset-subdir MIND_2000
+# Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
 배치 인덱스 N = start .. end 에 대해 순차 실행:
 

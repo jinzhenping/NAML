@@ -1,9 +1,12 @@
+# MIND_2000: --mind_dataset_subdir MIND_2000
+# Adressa_2000: --mind_dataset_subdir Adressa_2000
 """
 LLM_E: 실행기 LLM
 유저의 취향 파악 후 후보 뉴스의 기대 본문 생성
 """
 
 import os
+import sys
 import json
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -15,6 +18,10 @@ import yaml
 from openai import OpenAI
 
 _BODY_GEN_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_NAML_DIR = _BODY_GEN_PROJECT_ROOT / "NAML"
+if str(_NAML_DIR) not in sys.path:
+    sys.path.insert(0, str(_NAML_DIR))
+from naml_dataset_env import DATASET_FILE_PRESETS as MIND_DATASET_PRESETS_BG
 # 유저당 여러 후보 시 동시 API 요청 수 (RPM 한도 초과 시 이 값을 코드에서만 줄이면 됨)
 DEFAULT_API_CONCURRENCY = 8
 
@@ -22,26 +29,36 @@ DEFAULT_API_CONCURRENCY = 8
 # 우선순위: --mind_dataset_subdir / BodyGenerator 인자 > 환경변수 MIND_DATASET_SUBDIR > 아래 값
 DEFAULT_MIND_DATASET_SUBDIR = "MIND_2000"
 
-MIND_DATASET_PRESETS_BG = {
-    "MIND_2000": ("MIND_news.tsv", "MIND_train_(2000).tsv", "MIND_test_(2000).tsv"),
-}
-
-
 def _discover_mind_tsv_bg(subdir: str):
     base = _BODY_GEN_PROJECT_ROOT / "dataset" / subdir
     if not base.is_dir():
         return None
-    news_p = base / "MIND_news.tsv"
-    if news_p.is_file():
-        news_name = "MIND_news.tsv"
-    else:
+
+    def _pick_news():
+        for fixed in ("MIND_news.tsv", "Adressa_news.tsv"):
+            p = base / fixed
+            if p.is_file():
+                return fixed
         cand = sorted(base.glob("*news*.tsv"))
         if len(cand) == 1:
-            news_name = cand[0].name
-        else:
-            return None
+            return cand[0].name
+        return None
+
+    def _no_final(paths):
+        return [p for p in paths if "_final" not in p.name.lower()]
+
+    news_name = _pick_news()
+    if not news_name:
+        return None
     trains = sorted(base.glob("MIND_train_*.tsv"))
     tests = sorted(base.glob("MIND_test_*.tsv"))
+    if len(tests) > 1:
+        tests = _no_final(tests)
+    if len(trains) != 1 or len(tests) != 1:
+        trains = sorted(base.glob("*_train_*.tsv"))
+        tests = sorted(base.glob("*_test_*.tsv"))
+        if len(tests) > 1:
+            tests = _no_final(tests)
     if len(trains) != 1 or len(tests) != 1:
         return None
     return news_name, trains[0].name, tests[0].name

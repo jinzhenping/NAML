@@ -1,3 +1,5 @@
+# MIND_2000: MIND_DATASET_SUBDIR=MIND_2000
+# Adressa_2000: MIND_DATASET_SUBDIR=Adressa_2000
 """
 NAML 그래프 구축 (NAML.py / cluster_train_users_kmeans.py 공용).
 """

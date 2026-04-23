@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# MIND_2000: --mind-dataset-subdir MIND_2000
+# Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
 NAML 실제 본문만 사용: 하이퍼파라미터 탐색 후 테스트 MRR이 가장 좋았던 가중치를 저장한다.
 
@@ -36,9 +38,9 @@ _ROOT = os.path.dirname(_THIS)
 if _ROOT not in sys.path:
     sys.path.insert(0, _ROOT)
 
-os.environ["MIND_DATASET_SUBDIR"] = "MIND_2000"
-os.environ["MIND_TRAIN_FILENAME"] = "MIND_train_(2000).tsv"
-os.environ["MIND_TEST_FILENAME"] = "MIND_test_(2000).tsv"
+from naml_dataset_env import apply_dataset_env_from_argv
+
+apply_dataset_env_from_argv()
 
 import numpy as np
 import tensorflow as tf
@@ -526,6 +528,12 @@ def main():
     ap.add_argument("--trials", type=int, default=12, help="무작위 시도 횟수")
     ap.add_argument("--epochs-per-trial", type=int, default=8, help="각 시도당 에폭 수")
     ap.add_argument("--batch-size", type=int, default=16)
+    ap.add_argument(
+        "--mind-dataset-subdir",
+        type=str,
+        default=None,
+        help="dataset/ 하위 폴더 (예: MIND_2000, Adressa_2000). import 전 argv에서도 인식; 미지정 시 MIND_2000",
+    )
     ap.add_argument("--seed", type=int, default=SEED)
     ap.add_argument(
         "--out-weights",
@@ -577,7 +585,7 @@ def main():
     random.seed(args.seed)
     tf.random.set_seed(args.seed)
 
-    print("데이터 로드 (실제 본문만, MIND_2000 train/test)...")
+    print(f"데이터 로드 (실제 본문만, {os.environ.get('MIND_DATASET_SUBDIR', 'MIND_2000')} train/test)...")
     word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(
         expected_bodies_train=None,
         expected_bodies_test=None,

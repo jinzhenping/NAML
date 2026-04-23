@@ -1,3 +1,5 @@
+# MIND_2000: --mind-dataset-subdir MIND_2000
+# Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
 트레이닝 세션별 user_rep(히스토리 기반) → 유저 ID별 평균 벡터 → k-means.
 NAML.py를 실행하지 않으며, naml_common + naml_model_builder만 사용.

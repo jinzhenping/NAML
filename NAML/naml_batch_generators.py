@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# MIND_2000: MIND_DATASET_SUBDIR=MIND_2000
+# Adressa_2000: MIND_DATASET_SUBDIR=Adressa_2000
 """
 NAML 학습/테스트용 배치 제너레이터 (NAML.py에서 분리).
 전역 의존 없이 인자로 텐서·딕셔너리를 받습니다.

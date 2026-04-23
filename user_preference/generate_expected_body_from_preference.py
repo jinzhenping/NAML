@@ -1,3 +1,5 @@
+# MIND_2000: --dataset_subdir MIND_2000
+# Adressa_2000: --dataset_subdir Adressa_2000
 """
 Generate expected body using:
 - model2 prompt template
@@ -27,6 +29,7 @@ import argparse
 import json
 import math
 import os
+import sys
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -35,6 +38,17 @@ from openai import OpenAI
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_DEFAULT_UPREF = Path(__file__).resolve().parent
+if str(_DEFAULT_UPREF) not in sys.path:
+    sys.path.insert(0, str(_DEFAULT_UPREF))
+from dataset_tsv_utils import (
+    impression_tsv_header_skiprows,
+    news_tsv_skiprows,
+    resolve_news_tsv,
+    resolve_test_tsv,
+    resolve_train_tsv,
+)
+
 DEFAULT_DATASET_SUBDIR = "MIND_2000"
 DEFAULT_MODEL = "gpt-4o-mini"
 
@@ -68,31 +82,12 @@ def safe_api_text(value: object) -> str:
     return s
 
 
-def resolve_train_tsv(dataset_subdir: str) -> Path:
-    base = PROJECT_ROOT / "dataset" / dataset_subdir
-    candidates = sorted(base.glob("MIND_train_*.tsv"))
-    if len(candidates) == 1:
-        return candidates[0]
-    if len(candidates) == 0:
-        raise FileNotFoundError(f"No train TSV found in {base}")
-    raise RuntimeError(f"Multiple train TSV files found in {base}; pass --train_tsv")
-
-
-def resolve_test_tsv(dataset_subdir: str) -> Path:
-    base = PROJECT_ROOT / "dataset" / dataset_subdir
-    candidates = sorted(base.glob("MIND_test_*.tsv"))
-    if len(candidates) == 1:
-        return candidates[0]
-    if len(candidates) == 0:
-        raise FileNotFoundError(f"No test TSV found in {base}")
-    raise RuntimeError(f"Multiple test TSV files found in {base}; pass --test_tsv")
-
-
 def load_news_records(news_tsv: Path) -> Dict[str, Dict[str, str]]:
     """news_id -> {title, body} (body may be empty)."""
     news_df = pd.read_csv(
         news_tsv,
         sep="\t",
+        skiprows=news_tsv_skiprows(news_tsv),
         names=["news_id", "category", "subcategory", "title", "body"],
         dtype=str,
     )
@@ -395,8 +390,8 @@ def main() -> None:
     args = parser.parse_args()
 
     dataset_dir = PROJECT_ROOT / "dataset" / args.dataset_subdir
-    news_tsv = Path(args.news_tsv) if args.news_tsv else dataset_dir / "MIND_news.tsv"
-    train_tsv = Path(args.train_tsv) if args.train_tsv else resolve_train_tsv(args.dataset_subdir)
+    news_tsv = Path(args.news_tsv) if args.news_tsv else resolve_news_tsv(dataset_dir)
+    train_tsv = Path(args.train_tsv) if args.train_tsv else resolve_train_tsv(dataset_dir)
     prompt_path = Path(args.model2_prompt_path)
     title_abstraction_prompt_path = Path(args.title_abstraction_prompt_path)
     settings_path = Path(args.settings_path)

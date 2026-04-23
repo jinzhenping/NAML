@@ -1,3 +1,5 @@
+# MIND_2000: MIND_DATASET_SUBDIR=MIND_2000
+# Adressa_2000: MIND_DATASET_SUBDIR=Adressa_2000
 """
 조율기 LLM: system_prompt.yaml + (json-payload.yaml에 coordinator_LLM/output, NAML/results 최신 데이터 주입)으로
 프롬프트를 구성하고, LLM 호출 후 updated_policy / updated_running_policy_summary 를 output/(N+1).txt 에 저장.

@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# MIND_2000: MIND_DATASET_SUBDIR=MIND_2000
+# Adressa_2000: MIND_DATASET_SUBDIR=Adressa_2000
 """
 NAML 모델 학습 및 테스트 스크립트
 리눅스 환경에서 실행 가능한 버전
@@ -32,25 +34,39 @@ from sklearn.metrics import roc_auc_score
 # dataset/<이름>/ (NAML.py와 동일한 규칙)
 MIND_DATASET_SUBDIR = os.environ.get("MIND_DATASET_SUBDIR", "MIND")
 _TRAIN_NAML_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MIND_DATASET_PRESETS_TN = {
-    "MIND_2000": ("MIND_news.tsv", "MIND_train_(2000).tsv", "MIND_test_(2000).tsv"),
-}
+from naml_dataset_env import DATASET_FILE_PRESETS as MIND_DATASET_PRESETS_TN
 
 
 def _discover_mind_tsv_tn(subdir):
     base = os.path.join(_TRAIN_NAML_ROOT, "dataset", subdir)
     if not os.path.isdir(base):
         return None
-    if os.path.isfile(os.path.join(base, "MIND_news.tsv")):
-        news_name = "MIND_news.tsv"
-    else:
+
+    def _pick_news():
+        for fixed in ("MIND_news.tsv", "Adressa_news.tsv"):
+            p = os.path.join(base, fixed)
+            if os.path.isfile(p):
+                return fixed
         cand = sorted(glob.glob(os.path.join(base, "*news*.tsv")))
         if len(cand) == 1:
-            news_name = os.path.basename(cand[0])
-        else:
-            return None
+            return os.path.basename(cand[0])
+        return None
+
+    def _no_final(paths):
+        return [p for p in paths if "_final" not in os.path.basename(p).lower()]
+
+    news_name = _pick_news()
+    if not news_name:
+        return None
     trains = sorted(glob.glob(os.path.join(base, "MIND_train_*.tsv")))
     tests = sorted(glob.glob(os.path.join(base, "MIND_test_*.tsv")))
+    if len(tests) > 1:
+        tests = _no_final(tests)
+    if len(trains) != 1 or len(tests) != 1:
+        trains = sorted(glob.glob(os.path.join(base, "*_train_*.tsv")))
+        tests = sorted(glob.glob(os.path.join(base, "*_test_*.tsv")))
+        if len(tests) > 1:
+            tests = _no_final(tests)
     if len(trains) != 1 or len(tests) != 1:
         return None
     return news_name, os.path.basename(trains[0]), os.path.basename(tests[0])
@@ -117,6 +133,8 @@ def preprocess_news_file(file=None):
         if len(line) < 5:
             continue
         news_id = line[0]
+        if str(news_id).strip().lower() in ('news_id', 'clicked_news', 'id'):
+            continue
         cat = line[1] if line[1] else 'None'
         subcat = line[2] if line[2] else 'None'
         title = line[3] if len(line) > 3 else ''

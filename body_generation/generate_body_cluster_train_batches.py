@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# MIND_2000: --mind-dataset-subdir MIND_2000
+# Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
 클러스터 CSV(NAML/user_kmeans_k*.csv) + NAML preprocess_user_file 기준으로
 특정 클러스터에 속한 트레이닝 세션만 골라, 세션을 N개씩 배치로 나눈 뒤

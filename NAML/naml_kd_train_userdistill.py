@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# MIND_2000: --mind-dataset-subdir MIND_2000
+# Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
 NAML 지식 증류 학습 (user+news distill):
   L = L_rec + lambda_user * L_distill_user + lambda_exp * L_distill_exp

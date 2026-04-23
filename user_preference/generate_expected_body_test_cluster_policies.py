@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# MIND_2000: --mind-dataset-subdir MIND_2000
+# Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
 테스트셋 유저 클러스터 CSV에 따라 클러스터마다 서로 다른 정책 파일로
 `generate_expected_body_from_preference.py`와 동일한 방식으로 기대본문을 생성합니다.
@@ -68,7 +70,9 @@ load_abstract_cache = _geb.load_abstract_cache
 load_news_map = _geb.load_news_map
 load_policy = _geb.load_policy
 parse_settings = _geb.parse_settings
+resolve_news_tsv = _geb.resolve_news_tsv
 resolve_test_tsv = _geb.resolve_test_tsv
+impression_tsv_header_skiprows = _geb.impression_tsv_header_skiprows
 save_abstract_cache = _geb.save_abstract_cache
 safe_api_text = _geb.safe_api_text
 
@@ -294,8 +298,8 @@ def run_pipeline(args: argparse.Namespace) -> None:
 
     ds = args.mind_dataset_subdir
     dataset_dir = PROJECT_ROOT / "dataset" / ds
-    news_tsv = dataset_dir / "MIND_news.tsv"
-    test_tsv = Path(args.test_tsv) if args.test_tsv else resolve_test_tsv(ds)
+    news_tsv = resolve_news_tsv(dataset_dir)
+    test_tsv = Path(args.test_tsv) if args.test_tsv else resolve_test_tsv(dataset_dir)
     pref_base = (
         Path(args.preference_base)
         if args.preference_base
@@ -331,6 +335,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
     test_df = pd.read_csv(
         test_tsv,
         sep="\t",
+        skiprows=impression_tsv_header_skiprows(test_tsv),
         names=["user", "clicked_news", "candidate_news", "clicked"],
         dtype=str,
     )

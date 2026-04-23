@@ -1,3 +1,5 @@
+# MIND_2000: --dataset_subdir MIND_2000
+# Adressa_2000: --dataset_subdir Adressa_2000
 """
 Infer per-user preference profiles from click history titles.
 
@@ -18,6 +20,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import sys
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -26,44 +29,26 @@ from openai import OpenAI
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_DEFAULT_UPREF = Path(__file__).resolve().parent
+if str(_DEFAULT_UPREF) not in sys.path:
+    sys.path.insert(0, str(_DEFAULT_UPREF))
+from dataset_tsv_utils import (
+    impression_tsv_header_skiprows,
+    news_tsv_skiprows,
+    resolve_news_tsv,
+    resolve_test_tsv,
+    resolve_train_tsv,
+)
+
 DEFAULT_DATASET_SUBDIR = "MIND_2000"
 DEFAULT_MODEL = "gpt-4o-mini"
-
-
-def resolve_train_tsv(dataset_subdir: str) -> Path:
-    base = PROJECT_ROOT / "dataset" / dataset_subdir
-    if not base.is_dir():
-        raise FileNotFoundError(f"Dataset directory not found: {base}")
-
-    candidates = sorted(base.glob("MIND_train_*.tsv"))
-    if len(candidates) == 1:
-        return candidates[0]
-    if len(candidates) == 0:
-        raise FileNotFoundError(f"No train TSV found in {base}")
-    raise RuntimeError(
-        f"Multiple train TSV files found in {base}. Please pass --train_tsv explicitly."
-    )
-
-
-def resolve_test_tsv(dataset_subdir: str) -> Path:
-    base = PROJECT_ROOT / "dataset" / dataset_subdir
-    if not base.is_dir():
-        raise FileNotFoundError(f"Dataset directory not found: {base}")
-
-    candidates = sorted(base.glob("MIND_test_*.tsv"))
-    if len(candidates) == 1:
-        return candidates[0]
-    if len(candidates) == 0:
-        raise FileNotFoundError(f"No test TSV found in {base}")
-    raise RuntimeError(
-        f"Multiple test TSV files found in {base}. Please pass --test_tsv explicitly."
-    )
 
 
 def load_news_title_map(news_tsv: Path) -> Dict[str, str]:
     news_df = pd.read_csv(
         news_tsv,
         sep="\t",
+        skiprows=news_tsv_skiprows(news_tsv),
         names=["news_id", "category", "subcategory", "title", "body"],
         dtype=str,
     )
@@ -197,12 +182,12 @@ def main() -> None:
 
     dataset_dir = PROJECT_ROOT / "dataset" / args.dataset_subdir
     if args.use_test:
-        data_tsv = Path(args.test_tsv) if args.test_tsv else resolve_test_tsv(args.dataset_subdir)
+        data_tsv = Path(args.test_tsv) if args.test_tsv else resolve_test_tsv(dataset_dir)
         split_name = "test"
     else:
-        data_tsv = Path(args.train_tsv) if args.train_tsv else resolve_train_tsv(args.dataset_subdir)
+        data_tsv = Path(args.train_tsv) if args.train_tsv else resolve_train_tsv(dataset_dir)
         split_name = "train"
-    news_tsv = Path(args.news_tsv) if args.news_tsv else dataset_dir / "MIND_news.tsv"
+    news_tsv = Path(args.news_tsv) if args.news_tsv else resolve_news_tsv(dataset_dir)
     prompt_path = Path(args.prompt_path)
     if args.output_dir:
         output_dir = Path(args.output_dir)
@@ -225,6 +210,7 @@ def main() -> None:
     train_df = pd.read_csv(
         data_tsv,
         sep="\t",
+        skiprows=impression_tsv_header_skiprows(data_tsv),
         names=["user", "clicked_news", "candidate_news", "clicked"],
         dtype=str,
     )

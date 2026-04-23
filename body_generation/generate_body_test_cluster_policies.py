@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# MIND_2000: --mind-dataset-subdir MIND_2000
+# Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
 테스트 유저 클러스터 CSV(user_id,cluster)에 따라 클러스터마다 서로 다른 정책 JSON 파일로
 기대본문을 생성하고, 결과는 하나의 출력 폴더에만 저장 (user_<id>/news_<id>.json 구조 유지).

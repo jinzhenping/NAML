@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# MIND_2000: --mind-dataset-subdir MIND_2000
+# Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
 클러스터 배치(트레인 세션)에 대해 사전학습 NAML 가중치로
 실제본문 vs 기대본문 성능을 비교하고 NAML/results/resultN.txt 에 JSON 저장.
@@ -89,12 +91,15 @@ def ndcg_score(y_true, y_score, k=10):
 
 
 def load_news_titles(news_tsv: str) -> Dict[str, str]:
+    from naml_dataset_env import news_tsv_skiprows
+
     titles: Dict[str, str] = {}
     if not os.path.isfile(news_tsv):
         return titles
     with open(news_tsv, "r", encoding="utf-8") as f:
         lines = f.readlines()
-    for line in lines[1:]:
+    skip = news_tsv_skiprows(news_tsv)
+    for line in lines[skip:]:
         parts = line.strip().split("\t")
         if len(parts) >= 4:
             titles[parts[0]] = parts[3]

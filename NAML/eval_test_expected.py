@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# MIND_2000: --mind-dataset-subdir MIND_2000
+# Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
 프리트레인 NAML 가중치를 로드해 테스트셋 성능을 비교:
 - 실제본문
@@ -142,13 +144,16 @@ def aggregate_oov_from_texts(word_dict: dict, texts: List[str]) -> Dict[str, flo
 
 
 def load_news_id_to_body_from_tsv(news_tsv: str) -> Dict[str, str]:
-    """MIND_news.tsv: news_id -> 원문 body (5번째 칼럼)."""
+    """뉴스 TSV: news_id -> 원문 body (5번째 칼럼). Adressa 등 헤더 행은 건너뜀."""
+    from naml_dataset_env import news_tsv_skiprows
+
     out: Dict[str, str] = {}
     if not news_tsv or not os.path.isfile(news_tsv):
         return out
     with open(news_tsv, "r", encoding="utf-8") as f:
         lines = f.readlines()
-    for line in lines[1:]:
+    skip = news_tsv_skiprows(news_tsv)
+    for line in lines[skip:]:
         parts = line.strip().split("\t")
         if len(parts) >= 5:
             out[parts[0]] = parts[4]
