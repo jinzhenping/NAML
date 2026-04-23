@@ -660,7 +660,7 @@ def main():
     ap = argparse.ArgumentParser(description="NAML 하이퍼파라미터 탐색 (actual by default, expected-body optional)")
     ap.add_argument("--trials", type=int, default=12, help="무작위 시도 횟수")
     ap.add_argument("--epochs-per-trial", type=int, default=8, help="각 시도당 에폭 수")
-    ap.add_argument("--batch-size", type=int, default=16)
+    ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument(
         "--mind-dataset-subdir",
         type=str,
