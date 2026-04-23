@@ -8,19 +8,18 @@ NAML 실제 본문만 사용: 하이퍼파라미터 탐색 후 테스트 MRR이 
 python NAML/naml_tune_actual.py
 python NAML/naml_tune_actual.py --trials 24 --epochs-per-trial 10 --seed 42
 # 예산 절약: 24조합을 2에폭으로 걸러서 상위 5개만 10에폭 재학습
-python NAML/naml_tune_actual.py --two-phase --trials 72 --screening-epochs 3 \
-    --refine-top-k 10 --epochs-per-trial 10  --resume-log saved_models/naml_tune_actual_log.json
+python NAML/naml_tune_actual.py --two-phase --trials 108 --screening-epochs 3 \
+    --refine-top-k 10 --epochs-per-trial 10 \
+    --resume-log saved_models/MIND_2000/naml_tune_actual_log.json \
+    --out-weights saved_models/MIND_2000/NAML_mind_2000_actual.h5 \
+    --mind-dataset-subdir MIND_2000
+# Adressa_2000:
+python NAML/naml_tune_actual.py --two-phase --trials 108 --screening-epochs 3 \
+    --refine-top-k 10 --epochs-per-trial 10 \
+    --resume-log saved_models/Adressa_2000/naml_tune_actual_log.json \
+    --out-weights saved_models/Adressa_2000/NAML_adressa_2000_actual.h5 \
+    --mind-dataset-subdir Adressa_2000
 
-저장: saved_models/NAML_mind_2000.h5 (model.save_weights, build_naml_models 와 동일 구조)
-
-기대본문·MAIN_TESTSET 경로는 사용하지 않는다.
-
-기본적으로 이산 그리드를 한 번 섞은 뒤 순서대로 쓰므로, trials가 그리드 크기(6×5×4×3×4×3=4320) 이하면
-같은 하이퍼파라미터 조합이 두 번 나오지 않는다. 예전 방식(매 trial 독립 무작위, 중복 가능)은
---allow-duplicate-hparams 로 사용한다.
-
-4320조합을 다 돌 필요는 없다. 보통 trials=15~40 정도의 무작위(셔플) 부분집합으로도 충분한 경우가 많고,
-예산을 아끼려면 --two-phase 로 1차 짧은 에폭 스크리닝 후 상위 k개만 길게 재학습한다 (multi-fidelity).
 """
 from __future__ import annotations
 
@@ -539,11 +538,13 @@ def main():
         "--out-weights",
         type=str,
         default=os.path.join(_ROOT, "saved_models", "NAML_mind_2000.h5"),
+        help="전역 최고 테스트 MRR을 갱신할 때 저장할 가중치 파일 경로 (.h5). 상대 경로는 실행 시 작업 디렉터리 기준",
     )
     ap.add_argument(
         "--out-log",
         type=str,
         default=os.path.join(_ROOT, "saved_models", "naml_tune_actual_log.json"),
+        help="튜닝 로그 JSON 경로",
     )
     ap.add_argument(
         "--allow-duplicate-hparams",

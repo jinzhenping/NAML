@@ -16,17 +16,10 @@ python NAML/naml_tune_expected.py --two-phase --trials 108 --screening-epochs 3 
     --expected-train-dir user_preference/expected_body/MIND_2000/train_3cluster_11_13_8_rawtitle \
     --expected-test-dir user_preference/expected_body/MIND_2000/test_3cluster_11_13_8_rawtitle \
     --expected-body-first-n-sentences 3 \
-    --out-log saved_models/naml_tune_expected_preference_log.json \
-    --out-weights saved_models/NAML_mind_2000_expected_preference.h5
+    --out-log saved_models/MIND_2000/naml_tune_expected_preference_log.json \
+    --out-weights saved_models/MIND_2000/NAML_mind_2000_expected_preference.h5 \
+    --mind-dataset-subdir MIND_2000
 
-저장: saved_models/NAML_mind_2000.h5 (model.save_weights, build_naml_models 와 동일 구조)
-
-기대본문 튜닝(앞 3문장):
-python NAML/naml_tune_expected.py \
-    --use-expected-body \
-    --expected-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
-    --expected-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
-    --expected-body-first-n-sentences 3
 
 요청 조합 고정 탐색(필터×커널만):
 python NAML/naml_tune_expected.py \
