@@ -484,7 +484,7 @@ def run_trial(
 
     best_mrr = -1.0
     best_weights = None
-    last_metrics = None
+    best_metrics = None
 
     for ep in range(epochs):
         traingen = generate_batch_data_train_actual(
@@ -499,7 +499,7 @@ def run_trial(
             batch_size,
         )
         model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch, verbose=0)
-        last_metrics = evaluate_session_metrics(
+        current_metrics = evaluate_session_metrics(
             model_test,
             all_test_pn,
             all_test_label,
@@ -512,14 +512,17 @@ def run_trial(
             news_sv,
             batch_size,
         )
-        mrr = last_metrics["MRR"]
+        mrr = current_metrics["MRR"]
         if mrr > best_mrr:
             best_mrr = mrr
             best_weights = model.get_weights()
+            best_metrics = current_metrics
 
     if best_weights is not None:
         model.set_weights(best_weights)
-    return best_mrr, last_metrics, model
+    if best_metrics is None:
+        best_metrics = {"MRR": 0.0, "NDCG@5": 0.0, "Hit@1": 0.0}
+    return best_mrr, best_metrics, model
 
 
 def main():
@@ -695,7 +698,7 @@ def main():
     ) -> None:
         nonlocal global_best_mrr, global_best_hp
         print(f"\n--- [{phase_label}] {trial_idx + 1}/{total_in_phase}  hparams={hp} ---")
-        best_mrr, last_metrics, model = run_trial(
+        best_mrr, best_metrics, model = run_trial(
             hp,
             epochs,
             args.batch_size,
@@ -719,8 +722,8 @@ def main():
             trial_seed,
         )
         print(
-            f"  trial best MRR (best epoch in trial): {best_mrr:.6f}  | last epoch: "
-            f"MRR={last_metrics['MRR']:.6f} NDCG@5={last_metrics['NDCG@5']:.6f} Hit@1={last_metrics['Hit@1']:.6f}"
+            f"  trial best MRR (best epoch in trial): {best_mrr:.6f}  | best epoch metrics: "
+            f"MRR={best_metrics['MRR']:.6f} NDCG@5={best_metrics['NDCG@5']:.6f} Hit@1={best_metrics['Hit@1']:.6f}"
         )
         log_trials.append(
             {
@@ -728,7 +731,7 @@ def main():
                 "hparams": hp,
                 "epochs_in_phase": epochs,
                 "best_mrr_in_trial": best_mrr,
-                "last_epoch": last_metrics,
+                "best_epoch": best_metrics,
             }
         )
         if best_mrr > global_best_mrr:
@@ -749,7 +752,7 @@ def main():
             hp = trial_hparams[t]
             trial_seed = args.seed + t * 9973
             print(f"\n--- [screening] {t + 1}/{run_trials}  hparams={hp} ---")
-            best_mrr, last_metrics, model = run_trial(
+            best_mrr, best_metrics, model = run_trial(
                 hp,
                 args.screening_epochs,
                 args.batch_size,
@@ -773,8 +776,8 @@ def main():
                 trial_seed,
             )
             print(
-                f"  trial best MRR (best epoch in trial): {best_mrr:.6f}  | last epoch: "
-                f"MRR={last_metrics['MRR']:.6f} NDCG@5={last_metrics['NDCG@5']:.6f} Hit@1={last_metrics['Hit@1']:.6f}"
+                f"  trial best MRR (best epoch in trial): {best_mrr:.6f}  | best epoch metrics: "
+                f"MRR={best_metrics['MRR']:.6f} NDCG@5={best_metrics['NDCG@5']:.6f} Hit@1={best_metrics['Hit@1']:.6f}"
             )
             log_trials.append(
                 {
@@ -782,7 +785,7 @@ def main():
                     "hparams": hp,
                     "epochs_in_phase": args.screening_epochs,
                     "best_mrr_in_trial": best_mrr,
-                    "last_epoch": last_metrics,
+                    "best_epoch": best_metrics,
                 }
             )
             if best_mrr > global_best_mrr:
@@ -790,7 +793,7 @@ def main():
                 global_best_hp = dict(hp)
                 model.save_weights(args.out_weights)
                 print(f"  [전역 갱신] 저장 → {args.out_weights}  MRR={global_best_mrr:.6f}")
-            screening_rows.append((best_mrr, dict(hp), last_metrics))
+            screening_rows.append((best_mrr, dict(hp), best_metrics))
             K.clear_session()
 
         screening_rows.sort(key=lambda x: -x[0])

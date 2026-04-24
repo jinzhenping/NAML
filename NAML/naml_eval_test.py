@@ -10,6 +10,12 @@
 지표: MRR, NDCG@5, Hit@1 (NAML 기존 3개 지표)
 
 python NAML/eval_test_expected.py \
+  --weights saved_models/Adressa_2000/NAML_adressa_2000_actual.h5 \
+  --tune-log saved_models/Adressa_2000/naml_tune_actual_log.json \
+  --actual-only \
+  --mind-dataset-subdir Adressa_2000
+
+python NAML/eval_test_expected.py \
   --expected-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
   --weights saved_models/NAML_mind_2000_expected.h5 \
   --tune-log saved_models/naml_tune_expected_log.json \
@@ -260,7 +266,12 @@ def calc_metrics_from_scores(click_score, all_test_label, all_test_index):
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="프리트레인 NAML 테스트셋 실제본문 vs 기대본문 평가")
-    parser.add_argument("--expected-dir", type=str, required=True, help="기대본문 폴더 (user_*/news_*.json)")
+    parser.add_argument("--expected-dir", type=str, default=None, help="기대본문 폴더 (user_*/news_*.json)")
+    parser.add_argument(
+        "--actual-only",
+        action="store_true",
+        help="기대본문 평가는 생략하고 실제본문 성능만 측정",
+    )
     parser.add_argument("--weights", type=str, default="saved_models/NAML_mind_2000.h5")
     parser.add_argument(
         "--tune-log",
@@ -339,14 +350,25 @@ def main() -> None:
         print(f"오류: 가중치 파일 없음: {weights_path}")
         sys.exit(1)
 
-    expected_dir_abs = os.path.normpath(str(_ROOT / args.expected_dir)) if not os.path.isabs(args.expected_dir) else args.expected_dir
-    if not os.path.isdir(expected_dir_abs):
-        print(f"오류: 기대본문 폴더 없음: {expected_dir_abs}")
-        sys.exit(1)
+    expected_dir_abs: str | None = None
+    if not args.actual_only:
+        if not args.expected_dir:
+            print("오류: 기대본문 평가를 하려면 --expected-dir 가 필요합니다. (또는 --actual-only 사용)")
+            sys.exit(1)
+        expected_dir_abs = (
+            os.path.normpath(str(_ROOT / args.expected_dir)) if not os.path.isabs(args.expected_dir) else args.expected_dir
+        )
+        if not os.path.isdir(expected_dir_abs):
+            print(f"오류: 기대본문 폴더 없음: {expected_dir_abs}")
+            sys.exit(1)
 
     np.random.seed(SEED)
-    expected_bodies = load_expected_bodies_from_dir(expected_dir_abs)
-    print(f"기대본문 로드: {len(expected_bodies)}개 ({expected_dir_abs})")
+    expected_bodies: Dict[str, str] = {}
+    if expected_dir_abs is not None:
+        expected_bodies = load_expected_bodies_from_dir(expected_dir_abs)
+        print(f"기대본문 로드: {len(expected_bodies)}개 ({expected_dir_abs})")
+    else:
+        print("기대본문 평가: 비활성화 (--actual-only)")
 
     # tune-log 기반 자동 전처리 복원 (기대본문 튜닝 가중치의 embedding 크기 불일치 방지)
     prep_expected_train = None
@@ -504,52 +526,55 @@ def main() -> None:
         all_newsid_str=all_test_newsid_str,
         news_index_reverse=news_index_reverse,
     )
-    testgen_exp = generate_batch_data_test(
-        word_dict, news_words, news_body, news_v, news_sv, news_index,
-        all_test_pn, all_test_label, all_test_id, all_test_user_pos, bs,
-        expected_bodies=expected_bodies,
-        all_userid_str=all_test_userid_str,
-        all_newsid_str=all_test_newsid_str,
-        news_index_reverse=news_index_reverse,
-    )
-
     print("테스트셋 예측 중... (실제본문)")
     score_real = model_test.predict(testgen_real, steps=test_steps, verbose=0)
-    print("테스트셋 예측 중... (기대본문)")
-    score_exp = model_test.predict(testgen_exp, steps=test_steps, verbose=0)
 
     metrics_real = calc_metrics_from_scores(score_real, all_test_label, all_test_index)
-    metrics_exp = calc_metrics_from_scores(score_exp, all_test_label, all_test_index)
+    metrics_exp = None
+    if not args.actual_only:
+        testgen_exp = generate_batch_data_test(
+            word_dict, news_words, news_body, news_v, news_sv, news_index,
+            all_test_pn, all_test_label, all_test_id, all_test_user_pos, bs,
+            expected_bodies=expected_bodies,
+            all_userid_str=all_test_userid_str,
+            all_newsid_str=all_test_newsid_str,
+            news_index_reverse=news_index_reverse,
+        )
+        print("테스트셋 예측 중... (기대본문)")
+        score_exp = model_test.predict(testgen_exp, steps=test_steps, verbose=0)
+        metrics_exp = calc_metrics_from_scores(score_exp, all_test_label, all_test_index)
 
     # 커버리지
     total_slots = 0
     matched_slots = 0
-    for i in range(len(all_test_pn)):
-        if int(all_test_pn[i]) == 0:
-            continue
-        total_slots += 1
-        k = _norm_expected_body_key(all_test_userid_str[i], all_test_newsid_str[i])
-        if k in expected_bodies:
-            matched_slots += 1
-    match_rate = (matched_slots / total_slots) if total_slots else 0.0
+    oov_all_json = None
+    oov_test_slots = None
+    if not args.actual_only:
+        for i in range(len(all_test_pn)):
+            if int(all_test_pn[i]) == 0:
+                continue
+            total_slots += 1
+            k = _norm_expected_body_key(all_test_userid_str[i], all_test_newsid_str[i])
+            if k in expected_bodies:
+                matched_slots += 1
 
-    # OOV: 기대본문을 평가와 동일하게 문장 컷 후 NAML과 동일 토큰화
-    n_sent_oov = int(_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES)
-    exp_for_oov = [
-        clip_expected_body_to_first_sentences(t, n_sent_oov) or ""
-        for t in expected_bodies.values()
-    ]
-    oov_all_json = aggregate_oov_from_texts(word_dict, exp_for_oov)
-    texts_test_matched: List[str] = []
-    for i in range(len(all_test_pn)):
-        if int(all_test_pn[i]) == 0:
-            continue
-        k = _norm_expected_body_key(all_test_userid_str[i], all_test_newsid_str[i])
-        if k in expected_bodies:
-            texts_test_matched.append(
-                clip_expected_body_to_first_sentences(expected_bodies[k], n_sent_oov) or ""
-            )
-    oov_test_slots = aggregate_oov_from_texts(word_dict, texts_test_matched)
+        # OOV: 기대본문을 평가와 동일하게 문장 컷 후 NAML과 동일 토큰화
+        n_sent_oov = int(_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES)
+        exp_for_oov = [
+            clip_expected_body_to_first_sentences(t, n_sent_oov) or ""
+            for t in expected_bodies.values()
+        ]
+        oov_all_json = aggregate_oov_from_texts(word_dict, exp_for_oov)
+        texts_test_matched: List[str] = []
+        for i in range(len(all_test_pn)):
+            if int(all_test_pn[i]) == 0:
+                continue
+            k = _norm_expected_body_key(all_test_userid_str[i], all_test_newsid_str[i])
+            if k in expected_bodies:
+                texts_test_matched.append(
+                    clip_expected_body_to_first_sentences(expected_bodies[k], n_sent_oov) or ""
+                )
+        oov_test_slots = aggregate_oov_from_texts(word_dict, texts_test_matched)
 
     print("\n=== 테스트셋 성능 비교 ===")
     print(
@@ -557,26 +582,29 @@ def main() -> None:
         f"NDCG@5={metrics_real['NDCG@5']:.6f}  "
         f"Hit@1={metrics_real['Hit@1']:.6f}"
     )
-    print(
-        f"[기대본문]   MRR={metrics_exp['MRR']:.6f}  "
-        f"NDCG@5={metrics_exp['NDCG@5']:.6f}  "
-        f"Hit@1={metrics_exp['Hit@1']:.6f}"
-    )
-    print(
-        f"[매칭율]     {matched_slots}/{total_slots} ({match_rate:.2%})"
-    )
+    if metrics_exp is not None:
+        print(
+            f"[기대본문]   MRR={metrics_exp['MRR']:.6f}  "
+            f"NDCG@5={metrics_exp['NDCG@5']:.6f}  "
+            f"Hit@1={metrics_exp['Hit@1']:.6f}"
+        )
+        match_rate = (matched_slots / total_slots) if total_slots else 0.0
+        print(
+            f"[매칭율]     {matched_slots}/{total_slots} ({match_rate:.2%})"
+        )
     oa = oov_all_json
     ot = oov_test_slots
     aru = oov_actual_unique
     ars = oov_actual_slots
-    print(
-        f"[OOV 기대본문] JSON 항목 각 1회: {oa['oov_tokens']}/{oa['total_tokens']} "
-        f"({oa['oov_token_rate']:.2%})"
-    )
-    print(
-        f"[OOV 기대본문] 테스트에서 기대본문 쓴 슬롯만(반복 합산): "
-        f"{ot['oov_tokens']}/{ot['total_tokens']} ({ot['oov_token_rate']:.2%})"
-    )
+    if oa is not None and ot is not None:
+        print(
+            f"[OOV 기대본문] JSON 항목 각 1회: {oa['oov_tokens']}/{oa['total_tokens']} "
+            f"({oa['oov_token_rate']:.2%})"
+        )
+        print(
+            f"[OOV 기대본문] 테스트에서 기대본문 쓴 슬롯만(반복 합산): "
+            f"{ot['oov_tokens']}/{ot['total_tokens']} ({ot['oov_token_rate']:.2%})"
+        )
     print(
         f"[OOV 실제본문] MIND TSV 테스트 후보 고유 뉴스 각 1회: "
         f"{aru['oov_tokens']}/{aru['total_tokens']} ({aru['oov_token_rate']:.2%})"
