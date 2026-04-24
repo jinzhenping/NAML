@@ -9,13 +9,13 @@
 
 지표: MRR, NDCG@5, Hit@1 (NAML 기존 3개 지표)
 
-python NAML/eval_test_expected.py \
+python NAML/naml_eval_test.py \
   --weights saved_models/Adressa_2000/NAML_adressa_2000_actual.h5 \
   --tune-log saved_models/Adressa_2000/naml_tune_actual_log.json \
   --actual-only \
   --mind-dataset-subdir Adressa_2000
 
-python NAML/eval_test_expected.py \
+python NAML/naml_eval_test.py \
   --expected-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
   --weights saved_models/NAML_mind_2000_expected.h5 \
   --tune-log saved_models/naml_tune_expected_log.json \
