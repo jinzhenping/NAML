@@ -6,13 +6,13 @@
 테스트셋 유저 클러스터 CSV에 따라 클러스터마다 서로 다른 정책 파일로
 `generate_expected_body_from_preference.py`와 동일한 방식으로 기대본문을 생성합니다.
 
-실행 순서: (1) 기본은 배치의 고유 후보뉴스마다 추상 제목 생성·캐시 → (2) 쌍별 기대본문.
-  `--no-title-abstraction` 이면 (1) 생략, 후보는 MIND 원본 제목만 사용.
+실행 순서: (1) `--title-abstraction`일 때만 고유 후보뉴스마다 추상 제목 생성·캐시 → (2) 쌍별 기대본문.
+  기본은 (1) 생략, 후보는 MIND 원본 제목만 {candidate_news}에 사용.
 
 - 히스토리: 테스트 TSV의 clicked_news에서 최근 history_k개 제목
+  (기본: 비-final test + dataset/<subdir>/*test*final*.tsv 병합; 끄기: --use-test-no-merge-final)
 - 취향: user_preference/preference/<dataset>/test/user_<id>.json (기본)
-- 후보 제목: 기본은 title_abstraction.yaml으로 추상화 → {candidate_news}
-  `--no-title-abstraction` 이면 추상화 없이 원본 제목만 사용 (취향·히스토리·정책만 반영)
+- 후보 제목: 기본은 원본 제목만; `--title-abstraction`이면 title-abstraction-yaml로 LLM 추상화 후 {candidate_news}
 - 정책: --policy-files 를 클러스터 0,1,2,... 순으로 매핑
 
 프로젝트 루트에서:
@@ -25,9 +25,9 @@
     --output user_preference/expected_body/MIND_2000/test_3cluster_11_13_8 \
     --mind-dataset-subdir MIND_2000
 
-  후보 제목 추상화 없이 (취향·히스토리·정책만):
+  후보 제목 LLM 추상화를 쓰려면:
 
-  ... 동일 옵션 ... --no-title-abstraction
+  ... 동일 옵션 ... --title-abstraction
 
   API 등으로 전체가 실패하면 같은 명령 재실행:
 
@@ -41,6 +41,7 @@ import importlib.util
 import json
 import os
 import sys
+import tempfile
 import threading
 import time
 from collections import defaultdict
@@ -51,6 +52,9 @@ from typing import Dict, List, Optional, Set, Tuple
 _ROOT = Path(__file__).resolve().parent.parent
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
+_UPREF = _ROOT / "user_preference"
+if str(_UPREF) not in sys.path:
+    sys.path.insert(0, str(_UPREF))
 
 import pandas as pd
 from openai import OpenAI
@@ -75,6 +79,8 @@ resolve_test_tsv = _geb.resolve_test_tsv
 impression_tsv_header_skiprows = _geb.impression_tsv_header_skiprows
 save_abstract_cache = _geb.save_abstract_cache
 safe_api_text = _geb.safe_api_text
+
+from dataset_tsv_utils import collect_test_tsv_merge_paths, merge_impression_tsv_paths
 
 
 def _thread_local_openai_factory(api_key: str):
@@ -189,7 +195,24 @@ def main() -> None:
     )
     ap.add_argument("--output", type=str, required=True, help="결과 루트 폴더")
     ap.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
-    ap.add_argument("--test-tsv", type=str, default=None, help="테스트 TSV 직접 지정")
+    ap.add_argument(
+        "--test-tsv",
+        type=str,
+        default=None,
+        help="테스트 TSV 직접 지정 (지정 시 final 병합·--extra-test-tsv 비적용)",
+    )
+    ap.add_argument(
+        "--use-test-no-merge-final",
+        action="store_true",
+        help="기본 test + dataset/<subdir>/*test*final*.tsv 자동 병합을 끔",
+    )
+    ap.add_argument(
+        "--extra-test-tsv",
+        action="append",
+        default=None,
+        metavar="PATH",
+        help="병합에 추가할 impression TSV (프로젝트 루트 기준 상대 가능). 여러 번 지정 가능",
+    )
     ap.add_argument(
         "--preference-base",
         type=str,
@@ -216,12 +239,12 @@ def main() -> None:
         "--abstract-cache-path",
         type=str,
         default=None,
-        help="제목 변환 캐시 JSON (미지정 시 title_abstraction/keyword에 따라 자동; --no-title-abstraction 시 미사용)",
+        help="제목 변환 캐시 JSON (--title-abstraction 시만 사용; 미지정 시 yaml 종류에 따라 자동)",
     )
     ap.add_argument(
-        "--no-title-abstraction",
+        "--title-abstraction",
         action="store_true",
-        help="후보 제목 추상화(LLM·캐시) 생략, MIND 원본 제목을 {candidate_news}로 사용",
+        help="후보 제목을 title-abstraction-yaml로 LLM 추상화·캐시 (기본: 원본 제목만 사용)",
     )
     ap.add_argument("--api-key", type=str, default=None)
     ap.add_argument("--model", type=str, default=DEFAULT_MODEL)
@@ -299,7 +322,40 @@ def run_pipeline(args: argparse.Namespace) -> None:
     ds = args.mind_dataset_subdir
     dataset_dir = PROJECT_ROOT / "dataset" / ds
     news_tsv = resolve_news_tsv(dataset_dir)
-    test_tsv = Path(args.test_tsv) if args.test_tsv else resolve_test_tsv(dataset_dir)
+    tmp_merged_test: Optional[Path] = None
+    if args.test_tsv:
+        p = Path(args.test_tsv)
+        test_tsv = p if p.is_absolute() else (_ROOT / args.test_tsv)
+        test_tsv_log = str(test_tsv)
+    else:
+        primary = resolve_test_tsv(dataset_dir)
+        merge_final = not bool(args.use_test_no_merge_final)
+        extra_paths: List[Path] = []
+        for s in args.extra_test_tsv or []:
+            e = Path(s)
+            extra_paths.append(e if e.is_absolute() else (_ROOT / s))
+        merged_list = collect_test_tsv_merge_paths(
+            dataset_dir,
+            primary,
+            merge_final=merge_final,
+            extra_paths=extra_paths,
+        )
+        if len(merged_list) > 1:
+            fd, tmp_name = tempfile.mkstemp(prefix="merged_cluster_test_", suffix=".tsv", text=True)
+            os.close(fd)
+            tmp_merged_test = Path(tmp_name)
+            merge_impression_tsv_paths(merged_list, tmp_merged_test)
+            test_tsv = tmp_merged_test
+            test_tsv_log = "병합 " + str(len(merged_list)) + "개: " + " | ".join(str(x.resolve()) for x in merged_list)
+            print(
+                f"[테스트 TSV 병합] {len(merged_list)}개 → 임시 파일 (pandas 로드 후 삭제)",
+                flush=True,
+            )
+            for i, mp in enumerate(merged_list):
+                print(f"  [{i}] {mp.resolve()}", flush=True)
+        else:
+            test_tsv = primary
+            test_tsv_log = str(primary)
     pref_base = (
         Path(args.preference_base)
         if args.preference_base
@@ -310,7 +366,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
     title_yaml = Path(args.title_abstraction_yaml)
     settings_path = Path(args.generation_settings)
 
-    if args.no_title_abstraction:
+    if not args.title_abstraction:
         abstract_cache_path = None
     elif args.abstract_cache_path:
         abstract_cache_path = Path(args.abstract_cache_path)
@@ -318,7 +374,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
         abstract_cache_path = abstract_cache_path_for_prompt(title_yaml)
 
     required_files = [news_tsv, test_tsv, body_yaml, settings_path]
-    if not args.no_title_abstraction:
+    if args.title_abstraction:
         required_files.append(title_yaml)
     for p in required_files:
         if not p.is_file():
@@ -332,13 +388,20 @@ def run_pipeline(args: argparse.Namespace) -> None:
 
     news_map = load_news_map(news_tsv)
 
-    test_df = pd.read_csv(
-        test_tsv,
-        sep="\t",
-        skiprows=impression_tsv_header_skiprows(test_tsv),
-        names=["user", "clicked_news", "candidate_news", "clicked"],
-        dtype=str,
-    )
+    try:
+        test_df = pd.read_csv(
+            test_tsv,
+            sep="\t",
+            skiprows=impression_tsv_header_skiprows(test_tsv),
+            names=["user", "clicked_news", "candidate_news", "clicked"],
+            dtype=str,
+        )
+    finally:
+        if tmp_merged_test is not None and tmp_merged_test.is_file():
+            try:
+                tmp_merged_test.unlink()
+            except OSError:
+                pass
     test_df = test_df.dropna(subset=["user", "clicked_news"])
 
     buckets = collect_pairs_by_cluster(test_df, user_cluster, news_map)
@@ -349,10 +412,10 @@ def run_pipeline(args: argparse.Namespace) -> None:
     out_root = Path(_ROOT / args.output)
     out_root.mkdir(parents=True, exist_ok=True)
     print(f"출력: {out_root}")
-    print(f"테스트 TSV: {test_tsv}")
+    print(f"테스트 TSV: {test_tsv_log}")
     print(f"preference 디렉토리: {pref_base}")
-    if args.no_title_abstraction:
-        print("후보 제목: 원본만 사용 (--no-title-abstraction)")
+    if not args.title_abstraction:
+        print("후보 제목: 원본만 사용 (기본)")
     else:
         print(f"제목 변환 캐시: {abstract_cache_path}")
 
@@ -370,7 +433,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
     abstract_cache: Dict[str, Dict[str, str]] = {}
     cache_lock = threading.Lock()
 
-    if not args.no_title_abstraction:
+    if args.title_abstraction:
         assert abstract_cache_path is not None
         with open(title_yaml, "r", encoding="utf-8") as f:
             title_transform_template = f.read()
@@ -445,7 +508,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
                     if i % 200 == 0 or i == len(futs):
                         print(f"  추상 제목 진행: {i}/{len(futs)}")
     else:
-        print("\n>>> [1/2] 추상 제목 단계 생략 (--no-title-abstraction)\n")
+        print("\n>>> [1/2] 추상 제목 단계 생략 (기본: 원본 제목)\n")
 
     policies: Dict[int, Dict[str, str]] = {}
     for cl, pp in enumerate(policy_paths):
@@ -490,7 +553,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
                 print(f"skip no history: user={uid_s}")
             return ("no_hist", None)
 
-        if args.no_title_abstraction:
+        if not args.title_abstraction:
             abstracted = safe_api_text(candidate_title)
         else:
             ent = abstract_cache.get(cid) or {}
@@ -554,9 +617,9 @@ def run_pipeline(args: argparse.Namespace) -> None:
             "candidate_news_id": cid,
             "candidate_title": candidate_title,
             "candidate_title_abstracted": None
-            if args.no_title_abstraction
+            if not args.title_abstraction
             else abstracted,
-            "no_title_abstraction": bool(args.no_title_abstraction),
+            "no_title_abstraction": not bool(args.title_abstraction),
             "history_k": args.history_k,
             "history_count_used": len(hist),
             "history_titles": hist,

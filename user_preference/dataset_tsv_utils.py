@@ -5,6 +5,53 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Optional, Sequence
+
+
+def _is_impression_header_line(line: str) -> bool:
+    parts = line.strip().split("\t")
+    return bool(parts) and parts[0].strip().lower() == "user"
+
+
+def merge_impression_tsv_paths(paths: Sequence[Path], out_path: Path) -> None:
+    """헤더 행(user로 시작)은 건너뛰고 데이터 행만 순서대로 이어붙인다."""
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as out:
+        for p in paths:
+            with open(p, "r", encoding="utf-8") as f:
+                for line in f:
+                    if _is_impression_header_line(line):
+                        continue
+                    out.write(line if line.endswith("\n") else line + "\n")
+
+
+def collect_test_tsv_merge_paths(
+    dataset_dir: Path,
+    primary: Path,
+    *,
+    merge_final: bool = True,
+    extra_paths: Optional[Sequence[Path]] = None,
+) -> list[Path]:
+    """
+    기본(비-final) test TSV + (옵션) dataset_dir/*test*final*.tsv + extra_paths.
+    존재하는 파일만, resolve 기준 중복 제거.
+    """
+    paths: list[Path] = [primary]
+    seen: set = {primary.resolve()}
+    if merge_final:
+        for p in sorted(dataset_dir.glob("*test*final*.tsv")):
+            if p.is_file():
+                rp = p.resolve()
+                if rp not in seen:
+                    seen.add(rp)
+                    paths.append(p)
+    for e in extra_paths or []:
+        if e.is_file():
+            rp = e.resolve()
+            if rp not in seen:
+                seen.add(rp)
+                paths.append(e)
+    return [p for p in paths if p.is_file()]
 
 
 def resolve_news_tsv(dataset_dir: Path) -> Path:

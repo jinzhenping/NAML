@@ -3,7 +3,8 @@
 """
 Infer per-user preference profiles from click history titles.
 
-- Uses `user_preference/model1.yaml` prompt template.
+- Uses `user_preference/preference_extraction.yaml` prompt template (기본).
+- Adressa_* 데이터셋(`--dataset_subdir`에 adressa 포함)이면 프롬프트 끝에 노르웨이어(bokmål) 출력 지시를 자동 추가.
 - Uses only one row per user (dataset may contain repeated user rows).
 - Uses the most recent N clicked news titles (default: 10).
 - Saves one JSON file per user under `user_preference/preference`.
@@ -11,8 +12,9 @@ Infer per-user preference profiles from click history titles.
 # 트레이닝셋 유저 취향
 python user_preference/infer_user_preferences.py --dataset_subdir MIND_2000 --history_k 50
 
-# 테스트셋 유저 취향
+# 테스트셋 유저 취향 (기본: 비-final test + *test*final*.tsv 병합)
 python user_preference/infer_user_preferences.py --dataset_subdir MIND_2000 --use_test --history_k 50
+# 병합 끄기: ... --use_test --use-test-no-merge-final
 """
 
 from __future__ import annotations
@@ -21,6 +23,7 @@ import argparse
 import json
 import os
 import sys
+import tempfile
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -33,7 +36,9 @@ _DEFAULT_UPREF = Path(__file__).resolve().parent
 if str(_DEFAULT_UPREF) not in sys.path:
     sys.path.insert(0, str(_DEFAULT_UPREF))
 from dataset_tsv_utils import (
+    collect_test_tsv_merge_paths,
     impression_tsv_header_skiprows,
+    merge_impression_tsv_paths,
     news_tsv_skiprows,
     resolve_news_tsv,
     resolve_test_tsv,
@@ -67,6 +72,17 @@ def to_history_text(titles: List[str]) -> str:
 
 def build_prompt(prompt_template: str, history_titles: List[str]) -> str:
     return prompt_template.replace("{history_titles}", to_history_text(history_titles))
+
+
+def extra_instructions_for_dataset(dataset_subdir: str) -> str:
+    """데이터셋별로 프롬프트에 덧붙일 지시(예: Adressa → 노르웨이어 출력)."""
+    if "adressa" in dataset_subdir.strip().lower():
+        return (
+            "\n\nLanguage: Write the entire preference profile in Norwegian (norsk bokmål). "
+            "Keep the same three sections (primary interests, information-seeking pattern, likely perspective); "
+            "section headings may be in Norwegian or English, but all descriptive content must be in Norwegian."
+        )
+    return ""
 
 
 def parse_clicked_news_ids(clicked_news: str) -> List[str]:
@@ -116,7 +132,19 @@ def main() -> None:
         "--test_tsv",
         type=str,
         default=None,
-        help="explicit test tsv path (optional)",
+        help="explicit test tsv path (optional; 지정 시 final 병합·--extra-test-tsv 비적용)",
+    )
+    parser.add_argument(
+        "--use-test-no-merge-final",
+        action="store_true",
+        help="--use_test 시 기본 test + dataset/<subdir>/*test*final*.tsv 자동 병합을 끔",
+    )
+    parser.add_argument(
+        "--extra-test-tsv",
+        action="append",
+        default=None,
+        metavar="PATH",
+        help="--use_test 시 병합에 추가할 impression TSV (프로젝트 루트 기준 상대 가능). 여러 번 지정 가능",
     )
     parser.add_argument(
         "--use_test",
@@ -181,8 +209,37 @@ def main() -> None:
     args = parser.parse_args()
 
     dataset_dir = PROJECT_ROOT / "dataset" / args.dataset_subdir
+    tmp_merged_test: Optional[Path] = None
     if args.use_test:
-        data_tsv = Path(args.test_tsv) if args.test_tsv else resolve_test_tsv(dataset_dir)
+        if args.test_tsv:
+            data_tsv = Path(args.test_tsv)
+        else:
+            primary = resolve_test_tsv(dataset_dir)
+            merge_final = not bool(args.use_test_no_merge_final)
+            extra_paths: List[Path] = []
+            for s in args.extra_test_tsv or []:
+                p = Path(s)
+                extra_paths.append(p if p.is_absolute() else (PROJECT_ROOT / s))
+            merged_list = collect_test_tsv_merge_paths(
+                dataset_dir,
+                primary,
+                merge_final=merge_final,
+                extra_paths=extra_paths,
+            )
+            if len(merged_list) > 1:
+                fd, tmp_name = tempfile.mkstemp(prefix="merged_infer_test_", suffix=".tsv", text=True)
+                os.close(fd)
+                tmp_merged_test = Path(tmp_name)
+                merge_impression_tsv_paths(merged_list, tmp_merged_test)
+                data_tsv = tmp_merged_test
+                print(
+                    f"[테스트 TSV 병합] {len(merged_list)}개 → 임시 파일 (pandas 로드 후 삭제)",
+                    flush=True,
+                )
+                for i, p in enumerate(merged_list):
+                    print(f"  [{i}] {p.resolve()}", flush=True)
+            else:
+                data_tsv = primary
         split_name = "test"
     else:
         data_tsv = Path(args.train_tsv) if args.train_tsv else resolve_train_tsv(dataset_dir)
@@ -207,13 +264,20 @@ def main() -> None:
 
     print("Loading data...")
     news_title_map = load_news_title_map(news_tsv)
-    train_df = pd.read_csv(
-        data_tsv,
-        sep="\t",
-        skiprows=impression_tsv_header_skiprows(data_tsv),
-        names=["user", "clicked_news", "candidate_news", "clicked"],
-        dtype=str,
-    )
+    try:
+        train_df = pd.read_csv(
+            data_tsv,
+            sep="\t",
+            skiprows=impression_tsv_header_skiprows(data_tsv),
+            names=["user", "clicked_news", "candidate_news", "clicked"],
+            dtype=str,
+        )
+    finally:
+        if tmp_merged_test is not None and tmp_merged_test.is_file():
+            try:
+                tmp_merged_test.unlink()
+            except OSError:
+                pass
     train_df = train_df.dropna(subset=["user", "clicked_news"])
     # Dataset can repeat a user across rows; keep first row only per user.
     unique_users_df = train_df.drop_duplicates(subset=["user"], keep="first")
@@ -225,6 +289,9 @@ def main() -> None:
         unique_users_df = unique_users_df.head(args.max_users)
 
     prompt_template = load_prompt_template(prompt_path)
+    extra_prompt = extra_instructions_for_dataset(args.dataset_subdir)
+    if extra_prompt:
+        print(f"[prompt] dataset {args.dataset_subdir}: appending output-language instructions", flush=True)
     client = OpenAI(api_key=api_key)
 
     ensure_dir(output_dir)
@@ -254,6 +321,8 @@ def main() -> None:
             continue
 
         prompt = build_prompt(prompt_template, history_titles)
+        if extra_prompt:
+            prompt = prompt + extra_prompt
         try:
             profile_text = infer_profile(client, args.model, prompt)
             result = {
@@ -264,6 +333,8 @@ def main() -> None:
                 "prompt_path": str(prompt_path),
                 "model": args.model,
                 "preference_profile": profile_text,
+                "dataset_subdir": args.dataset_subdir,
+                "prompt_extra_instructions": extra_prompt.strip() or None,
             }
             with open(out_path, "w", encoding="utf-8") as f:
                 json.dump(result, f, ensure_ascii=False, indent=2)

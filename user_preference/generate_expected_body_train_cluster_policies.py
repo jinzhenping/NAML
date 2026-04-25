@@ -6,12 +6,12 @@
 트레이닝셋 유저 클러스터 CSV에 따라 클러스터마다 서로 다른 정책 파일로
 `generate_expected_body_from_preference.py`와 동일한 방식으로 기대본문을 생성합니다.
 
-실행 순서: (1) 기본은 이번 실행에 포함된 고유 후보뉴스마다 추상 제목 생성·캐시 → (2) 쌍별 기대본문.
-  `--no-title-abstraction` 이면 (1) 생략, 후보는 MIND 원본 제목만 사용.
+실행 순서: (1) `--title-abstraction`일 때만 고유 후보뉴스마다 추상 제목 생성·캐시 → (2) 쌍별 기대본문.
+  기본은 (1) 생략, 후보는 MIND 원본 제목만 {candidate_news}에 사용.
 
 - 히스토리: train TSV의 clicked_news에서 최근 history_k개 제목
 - 취향: user_preference/preference/<dataset>/train/user_<id>.json (기본)
-- 후보 제목: 기본은 title_abstraction.yaml로 추상화 → {candidate_news}; `--no-title-abstraction` 이면 원본만
+- 후보 제목: 기본은 원본만; `--title-abstraction`이면 title-abstraction-yaml로 LLM 추상화 후 {candidate_news}
 - 정책: --policy-files 를 클러스터 0,1,2,... 순으로 매핑
 - 배치: --num-batches N --batch-index i 로 전체 (유저,후보) 쌍을 N등분한 i번째만 처리
   (출력 폴더는 배치마다 다르게 주는 것을 권장: .../train_batch0 등)
@@ -27,9 +27,9 @@
     --mind-dataset-subdir MIND_2000 \
     --max-run-attempts 5
 
-  후보 제목 추상화 없이:
+  후보 제목 LLM 추상화를 쓰려면:
 
-  ... 동일 옵션 ... --no-title-abstraction
+  ... 동일 옵션 ... --title-abstraction
 """
 from __future__ import annotations
 
@@ -263,12 +263,12 @@ def main() -> None:
         "--abstract-cache-path",
         type=str,
         default=None,
-        help="제목 변환 캐시 JSON (미지정 시 title_abstraction/keyword에 따라 자동; --no-title-abstraction 시 미사용)",
+        help="제목 변환 캐시 JSON (--title-abstraction 시만 사용; 미지정 시 yaml 종류에 따라 자동)",
     )
     ap.add_argument(
-        "--no-title-abstraction",
+        "--title-abstraction",
         action="store_true",
-        help="후보 제목 추상화(LLM·캐시) 생략, MIND 원본 제목을 {candidate_news}로 사용",
+        help="후보 제목을 title-abstraction-yaml로 LLM 추상화·캐시 (기본: 원본 제목만 사용)",
     )
     ap.add_argument("--api-key", type=str, default=None)
     ap.add_argument("--model", type=str, default=DEFAULT_MODEL)
@@ -360,7 +360,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
     title_yaml = Path(args.title_abstraction_yaml)
     settings_path = Path(args.generation_settings)
 
-    if args.no_title_abstraction:
+    if not args.title_abstraction:
         abstract_cache_path = None
     elif args.abstract_cache_path:
         abstract_cache_path = Path(args.abstract_cache_path)
@@ -368,7 +368,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
         abstract_cache_path = abstract_cache_path_for_prompt(title_yaml)
 
     required_files = [news_tsv, train_tsv, body_yaml, settings_path]
-    if not args.no_title_abstraction:
+    if args.title_abstraction:
         required_files.append(title_yaml)
     for p in required_files:
         if not p.is_file():
@@ -417,8 +417,8 @@ def run_pipeline(args: argparse.Namespace) -> None:
     print(f"출력: {out_root}")
     print(f"학습 TSV: {train_tsv}")
     print(f"preference 디렉토리: {pref_base}")
-    if args.no_title_abstraction:
-        print("후보 제목: 원본만 사용 (--no-title-abstraction)")
+    if not args.title_abstraction:
+        print("후보 제목: 원본만 사용 (기본)")
     else:
         print(f"제목 변환 캐시: {abstract_cache_path}")
 
@@ -436,7 +436,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
     abstract_cache: Dict[str, Dict[str, str]] = {}
     cache_lock = threading.Lock()
 
-    if not args.no_title_abstraction:
+    if args.title_abstraction:
         assert abstract_cache_path is not None
         with open(title_yaml, "r", encoding="utf-8") as f:
             title_transform_template = f.read()
@@ -511,7 +511,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
                     if i % 200 == 0 or i == len(futs):
                         print(f"  추상 제목 진행: {i}/{len(futs)}")
     else:
-        print("\n>>> [1/2] 추상 제목 단계 생략 (--no-title-abstraction)\n")
+        print("\n>>> [1/2] 추상 제목 단계 생략 (기본: 원본 제목)\n")
 
     policies: Dict[int, Dict[str, str]] = {}
     for cl, pp in enumerate(policy_paths):
@@ -556,7 +556,7 @@ def run_pipeline(args: argparse.Namespace) -> None:
                 print(f"skip no history: user={uid_s}")
             return ("no_hist", None)
 
-        if args.no_title_abstraction:
+        if not args.title_abstraction:
             abstracted = safe_api_text(candidate_title)
         else:
             ent = abstract_cache.get(cid) or {}
@@ -624,9 +624,9 @@ def run_pipeline(args: argparse.Namespace) -> None:
             "candidate_news_id": cid,
             "candidate_title": candidate_title,
             "candidate_title_abstracted": None
-            if args.no_title_abstraction
+            if not args.title_abstraction
             else abstracted,
-            "no_title_abstraction": bool(args.no_title_abstraction),
+            "no_title_abstraction": not bool(args.title_abstraction),
             "history_k": args.history_k,
             "history_count_used": len(hist),
             "history_titles": hist,
