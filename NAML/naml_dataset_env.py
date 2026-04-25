@@ -18,6 +18,31 @@ DATASET_FILE_PRESETS: Dict[str, Tuple[str, str, str]] = {
     "Adressa_2000": ("Adressa_news.tsv", "Adressa_train_(2000).tsv", "Adressa_test_(2000).tsv"),
 }
 
+# k-means / eval 기본 경로 (프로젝트 루트 기준 상대). --mind-dataset-subdir 가 Adressa 이면 Adressa CSV·가중치.
+_DEFAULT_KMEANS_K = 3
+
+
+def default_user_kmeans_csv(subdir: str, k: int = _DEFAULT_KMEANS_K) -> str:
+    """
+    user_kmeans CSV 기본값. subdir 이름에 adressa 가 들어가면 Adressa_2000용 파일명.
+    """
+    s = (subdir or "").strip() or "MIND_2000"
+    if "adressa" in s.lower():
+        return f"NAML/user_kmeans_k{k}_Adressa_2000.csv"
+    return f"NAML/user_kmeans_k{k}_MIND_2000.csv"
+
+
+def default_naml_eval_weights(subdir: str) -> str:
+    """
+    eval_cluster_batch 등에서 쓰는 사전학습 가중치 기본 경로 (프로젝트 루트 기준 상대).
+    Adressa: saved_models/Adressa_2000/NAML_adressa_2000_actual.h5
+    그 외: saved_models/NAML_mind_2000.h5
+    """
+    s = (subdir or "").strip() or "MIND_2000"
+    if "adressa" in s.lower():
+        return "saved_models/Adressa_2000/NAML_adressa_2000_actual.h5"
+    return "saved_models/NAML_mind_2000.h5"
+
 
 def _argv_value(argv: List[str], flag: str) -> Optional[str]:
     for i, a in enumerate(argv):

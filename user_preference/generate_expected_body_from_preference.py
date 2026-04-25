@@ -291,6 +291,19 @@ def build_prompt(
     return safe_api_text(prompt)
 
 
+def extra_body_prompt_suffix_for_dataset(dataset_subdir: str) -> str:
+    """
+    데이터셋별로 기대본문(body) 생성 프롬프트 끝에 덧붙일 지시.
+    Adressa: 모델 출력 본문을 노르웨이어(bokmål)로 쓰도록 요청.
+    """
+    if "adressa" in dataset_subdir.strip().lower():
+        return (
+            "\n\nLanguage: Write the generated news article body entirely in Norwegian (norsk bokmål). "
+            "Follow the policy and settings for tone, length, and format, but all sentences must be in Norwegian."
+        )
+    return ""
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate expected body from user preference + policy.")
     parser.add_argument("--user_id", type=str, required=True, help="target user id")

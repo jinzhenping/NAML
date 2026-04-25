@@ -16,10 +16,13 @@ coordinator 는 응답을 (N+1).txt 로 저장 (기존 coordinator 동작).
 
 프로젝트 루트에서:
   python scripts/run_cluster_batch_pipeline.py --start 0 --end 2
-  CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --cluster-id 0
+  python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --cluster-id 0
+
+  # Adressa (--cluster-csv / --weights 기본값이 데이터셋에 맞게 잡힘)
+  python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --cluster-id 0 --mind-dataset-subdir Adressa_2000
 
   # 클러스터 없이 전체 트레이닝 세션 (출력 .../fulltrain_batch<N>/)
-  CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --full-train --sessions-per-batch 500
+  python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --full-train --sessions-per-batch 500
 """
 from __future__ import annotations
 
@@ -31,6 +34,10 @@ from pathlib import Path
 from typing import List, Optional
 
 _ROOT = Path(__file__).resolve().parent.parent
+if str(_ROOT / "NAML") not in sys.path:
+    sys.path.insert(0, str(_ROOT / "NAML"))
+
+from naml_dataset_env import default_naml_eval_weights, default_user_kmeans_csv
 
 
 def _run(cmd: List[str], env: Optional[dict] = None) -> None:
@@ -57,7 +64,12 @@ def main() -> None:
         action="store_true",
         help="클러스터 없이 전체 트레이닝 세션 (출력 fulltrain_batch<N>, generate/eval 에 --full-train 전달)",
     )
-    p.add_argument("--cluster-csv", type=str, default="NAML/user_kmeans_k3_MIND_2000.csv")
+    p.add_argument(
+        "--cluster-csv",
+        type=str,
+        default=None,
+        help="기본: --mind-dataset-subdir 가 Adressa 이면 NAML/user_kmeans_k3_Adressa_2000.csv, 아니면 MIND CSV",
+    )
     p.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
     p.add_argument(
         "--cuda-visible-devices",
@@ -80,8 +92,9 @@ def main() -> None:
     p.add_argument(
         "--weights",
         type=str,
-        default="saved_models/NAML_mind_2000.h5",
-        help="eval_cluster_batch --weights (프로젝트 루트 기준)",
+        default=None,
+        help="eval_cluster_batch --weights. 기본: Adressa → saved_models/Adressa_2000/NAML_adressa_2000_actual.h5, "
+        "그 외 → saved_models/NAML_mind_2000.h5",
     )
     p.add_argument(
         "--sessions-per-batch",
@@ -111,6 +124,10 @@ def main() -> None:
 
     py = sys.executable
     sub = args.mind_dataset_subdir
+    if args.cluster_csv is None:
+        args.cluster_csv = default_user_kmeans_csv(sub)
+    if args.weights is None:
+        args.weights = default_naml_eval_weights(sub)
     cid = args.cluster_id
 
     for n in range(args.start, args.end + 1):

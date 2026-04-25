@@ -25,6 +25,23 @@ from naml_dataset_env import DATASET_FILE_PRESETS as MIND_DATASET_PRESETS_BG
 # 유저당 여러 후보 시 동시 API 요청 수 (RPM 한도 초과 시 이 값을 코드에서만 줄이면 됨)
 DEFAULT_API_CONCURRENCY = 8
 
+_geb_body_helpers = None
+
+
+def _get_geb_body_helpers():
+    """user_preference/generate_expected_body_from_preference.py (build_prompt, get_recent_titles 등)."""
+    global _geb_body_helpers
+    if _geb_body_helpers is None:
+        import importlib.util
+
+        p = _BODY_GEN_PROJECT_ROOT / "user_preference" / "generate_expected_body_from_preference.py"
+        spec = importlib.util.spec_from_file_location("_geb_body_helpers_mod", p)
+        mod = importlib.util.module_from_spec(spec)
+        assert spec.loader is not None
+        spec.loader.exec_module(mod)
+        _geb_body_helpers = mod
+    return _geb_body_helpers
+
 # 기본 데이터셋 폴더: dataset/<이 이름>/ 아래 TSV를 읽고, output/<이 이름>/trainN 에 저장
 # 우선순위: --mind_dataset_subdir / BodyGenerator 인자 > 환경변수 MIND_DATASET_SUBDIR > 아래 값
 DEFAULT_MIND_DATASET_SUBDIR = "MIND_2000"
@@ -109,7 +126,12 @@ class BodyGenerator:
                  coordinator_output_dir: str = "coordinator_LLM/output",
                  coordinator_policy_n: Optional[int] = None,
                  coordinator_policy_path: Optional[str] = None,
-                 mind_dataset_subdir: Optional[str] = None):
+                 mind_dataset_subdir: Optional[str] = None,
+                 use_preference_prompt: bool = False,
+                 preference_base_dir: Optional[str] = None,
+                 preference_body_prompt_path: Optional[str] = None,
+                 preference_generation_settings_path: Optional[str] = None,
+                 preference_history_k: int = 10):
         """
         Args:
             prompt_path: 프롬프트 YAML 파일 경로
@@ -124,9 +146,47 @@ class BodyGenerator:
             coordinator_output_dir: coordinator_LLM 출력 디렉토리 (Tone 등 설정을 N.txt에서 로드)
             coordinator_policy_n: 사용할 정책 파일 번호 (N.txt). None이면 가장 큰 N 사용.
             coordinator_policy_path: JSON 정책 파일 경로 (지정 시 N.txt보다 우선). coordinator 출력과 동일 형식(updated_policy/policy).
+            use_preference_prompt: True면 user_preference/body_generation.yaml + preference JSON + geb.build_prompt 경로
+                (generate_expected_body_train_cluster_policies.py 와 동일한 프롬프트 구조).
+            preference_base_dir: 선호도 JSON 폴더 (기본: user_preference/preference/<subdir>/train).
+            preference_body_prompt_path: 본문 생성 프롬프트 템플릿 (기본: user_preference/body_generation.yaml).
+            preference_generation_settings_path: geb parse_settings용 YAML (기본: user_preference/generation_settings.yaml).
+            preference_history_k: 선호도 프롬프트에 넣을 클릭 히스토리 제목 개수.
         """
         sub = _resolve_mind_dataset_subdir(mind_dataset_subdir)
         self.mind_dataset_subdir = sub
+        self.use_preference_prompt = bool(use_preference_prompt)
+        self.preference_history_k = int(preference_history_k)
+        if self.use_preference_prompt:
+            self.preference_base_dir = (
+                Path(preference_base_dir)
+                if preference_base_dir
+                else (_BODY_GEN_PROJECT_ROOT / "user_preference" / "preference" / sub / "train")
+            )
+            geb = _get_geb_body_helpers()
+            self._geb = geb
+            p_body = (
+                Path(preference_body_prompt_path)
+                if preference_body_prompt_path
+                else (_BODY_GEN_PROJECT_ROOT / "user_preference" / "body_generation.yaml")
+            )
+            p_set = (
+                Path(preference_generation_settings_path)
+                if preference_generation_settings_path
+                else (_BODY_GEN_PROJECT_ROOT / "user_preference" / "generation_settings.yaml")
+            )
+            if not p_body.is_file():
+                raise FileNotFoundError(f"preference body prompt 없음: {p_body}")
+            if not p_set.is_file():
+                raise FileNotFoundError(f"preference generation settings 없음: {p_set}")
+            with open(p_body, "r", encoding="utf-8") as f:
+                self._preference_prompt_template = f.read()
+            self._preference_settings = geb.parse_settings(p_set)
+        else:
+            self.preference_base_dir = Path(preference_base_dir) if preference_base_dir else None
+            self._geb = None
+            self._preference_prompt_template = ""
+            self._preference_settings = {}
         n_fn, tr_fn, te_fn = _resolve_mind_filenames_bg(sub)
         if news_data_path is None:
             news_data_path = _default_mind_tsv(n_fn, sub)
@@ -154,10 +214,19 @@ class BodyGenerator:
         
         # 데이터 로딩
         self._load_data()
-        
-        # 설정 로딩
-        self._load_settings()
-        
+
+        if self.use_preference_prompt:
+            print(
+                f"프롬프트 모드: 선호도 JSON + {self.preference_base_dir.name} "
+                f"(history_k={self.preference_history_k}, geb/build_prompt)"
+            )
+
+        # 설정 로딩 (레거시 news1.. 프롬프트용; 선호도 모드에서는 geb 설정 파일을 별도 로드함)
+        if not self.use_preference_prompt:
+            self._load_settings()
+        else:
+            self.settings_dict = {}
+
         # 프롬프트 로딩
         self._load_prompt()
         
@@ -199,7 +268,10 @@ class BodyGenerator:
         print(f"뉴스 데이터: {len(self.news_df)}개")
         print(f"{data_type} 데이터: {len(self.train_df)}개")
         print(f"뉴스 딕셔너리: {len(self.news_dict)}개")
-    
+        self._news_title_map: Dict[str, str] = {
+            str(k): str(v.get("title") or "") for k, v in self.news_dict.items()
+        }
+
     def _load_settings(self):
         """생성 설정 YAML 파일 로딩 및 파싱"""
         with open(self.settings_path, 'r', encoding='utf-8') as f:
@@ -233,7 +305,10 @@ class BodyGenerator:
                     self.settings_dict[current_category][current_key] = line
     
     def _load_prompt(self):
-        """프롬프트 YAML 파일 로딩"""
+        """프롬프트 YAML 파일 로딩 (선호도 모드에서는 body_generation.yaml은 __init__에서 이미 로드)."""
+        if self.use_preference_prompt:
+            self.prompt_template = ""
+            return
         with open(self.prompt_path, 'r', encoding='utf-8') as f:
             self.prompt_template = f.read()
     
@@ -353,34 +428,79 @@ class BodyGenerator:
             print(f"  news_dict에 있는 샘플 키: {list(self.news_dict.keys())[:5]}")
         
         return result
-    
-    def _build_prompt(self, 
-                     user_history: List[str], 
-                     candidate_title: str) -> str:
+
+    def _append_dataset_body_language_suffix(self, prompt: str) -> str:
+        geb = _get_geb_body_helpers()
+        sfx = geb.extra_body_prompt_suffix_for_dataset(self.mind_dataset_subdir)
+        return (prompt + sfx) if sfx else prompt
+
+    def _build_prompt_from_preference(self, user_id: int, candidate_title: str) -> Optional[str]:
+        assert self._geb is not None
+        uid = int(user_id)
+        pref_path = self.preference_base_dir / f"user_{uid}.json"
+        if not pref_path.is_file():
+            return None
+        try:
+            with open(pref_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception:
+            return None
+        model1_out = self._geb.safe_api_text(data.get("preference_profile", ""))
+        if not str(model1_out).strip():
+            return None
+        hist = self._geb.get_recent_titles(
+            self.train_df, self._news_title_map, str(uid), self.preference_history_k
+        )
+        if not hist:
+            return None
+        policy = self.coordinator_policy or {}
+        return self._geb.build_prompt(
+            template=self._preference_prompt_template,
+            model1_output=model1_out,
+            history_titles=hist,
+            candidate_news=self._geb.safe_api_text(candidate_title),
+            policy=policy,
+            settings=self._preference_settings,
+        )
+
+    def _build_prompt(
+        self,
+        user_id: int,
+        user_history: List[str],
+        candidate_title: str,
+    ) -> Optional[str]:
         """
-        프롬프트 생성
-        
-        Args:
-            user_history: 유저 클릭 히스토리 (제목 리스트)
-            candidate_title: 후보 뉴스 제목
+        프롬프트 생성. 선호도 모드에서 JSON/히스토리 부족 시 None (호출측에서 스킵).
         """
+        if self.use_preference_prompt:
+            p = self._build_prompt_from_preference(user_id, candidate_title)
+            if p is None:
+                return None
+            return self._append_dataset_body_language_suffix(p)
+
         prompt = self.prompt_template
-        
+
         # 유저 히스토리 채우기 (최대 10개)
         for i in range(1, 11):
             if i <= len(user_history):
-                news_str = user_history[i-1]  # 제목만 사용
+                news_str = user_history[i - 1]  # 제목만 사용
             else:
                 news_str = ""  # 빈 문자열로 채움
             prompt = prompt.replace(f"{{news{i}}}", news_str)
-        
+
         # 후보 뉴스 제목 채우기 (제목만 사용)
         prompt = prompt.replace("{candidate_news}", candidate_title)
-        
+
         # Tone, Abstraction Level 등: coordinator_LLM/output의 가장 큰 N.txt(updated_policy)에서 로드, 없으면 기본값
         # 프롬프트에는 generation_settings.yaml의 구체적 설명을 채움 (설명이 없으면 값만 사용)
         policy = self.coordinator_policy or {}
-        defaults = {"tone": "neutral", "abstraction_level": "mixed", "speculation_count": 1, "length_bucket": "medium", "format": "narrative"}
+        defaults = {
+            "tone": "neutral",
+            "abstraction_level": "mixed",
+            "speculation_count": 1,
+            "length_bucket": "medium",
+            "format": "narrative",
+        }
         category_map = {
             "tone": "Tone",
             "abstraction_level": "Abstraction Level",
@@ -399,8 +519,8 @@ class BodyGenerator:
             if category and self.settings_dict.get(category) and val_str in self.settings_dict[category]:
                 description = (self.settings_dict[category].get(val_str) or "").strip()
             prompt = prompt.replace("{" + key + "}", description if description else val_str)
-        
-        return prompt
+
+        return self._append_dataset_body_language_suffix(prompt)
     
     def generate_body(self, 
                      user_id: int, 
@@ -431,11 +551,13 @@ class BodyGenerator:
         candidate_title = candidate_news['title']
         
         # 프롬프트 생성
-        prompt = self._build_prompt(
-            user_history=user_history,
-            candidate_title=candidate_title
-        )
-        
+        prompt = self._build_prompt(user_id, user_history, candidate_title)
+        if prompt is None:
+            raise ValueError(
+                f"유저 {user_id}: 선호도 프롬프트 실패 (preference_profile 없음 또는 "
+                f"{self.preference_base_dir}/user_{int(user_id)}.json 없음)"
+            )
+
         # ChatGPT API 호출
         print(f"\n유저 {user_id}의 후보 뉴스 '{candidate_title}'에 대한 기대 본문 생성 중...")
         print(f"유저 히스토리: {len(user_history)}개 뉴스 사용")
@@ -461,6 +583,7 @@ class BodyGenerator:
                 'candidate_title': candidate_title,
                 'user_history_count': len(user_history),
                 'user_history': user_history,
+                'use_preference_prompt': self.use_preference_prompt,
                 'prompt': prompt,
                 'generated_body': generated_body,
                 'model': self.model
@@ -494,10 +617,18 @@ class BodyGenerator:
     ) -> Tuple[int, Optional[Dict]]:
         """후보 1건 생성. (원본 순서 position, 결과) 반환. 실패 시 (position, None)."""
         candidate_title = self.news_dict[candidate_news_id]["title"]
-        prompt = self._build_prompt(
-            user_history=user_history,
-            candidate_title=candidate_title,
-        )
+        prompt = self._build_prompt(user_id, user_history, candidate_title)
+        if prompt is None:
+            pref_dbg = (
+                str(self.preference_base_dir / f"user_{int(user_id)}.json")
+                if self.preference_base_dir is not None
+                else "(legacy prompt — unexpected None)"
+            )
+            with self._print_lock:
+                print(
+                    f"[{position + 1}/{total}] 스킵: 선호도 없음 또는 비어 있음 (user={user_id}, path={pref_dbg})"
+                )
+            return (position, None)
         with self._print_lock:
             print(
                 f"\n[{position + 1}/{total}] 후보 뉴스 '{candidate_title}' 처리 중... (user={user_id}, id={candidate_news_id})"
@@ -516,6 +647,7 @@ class BodyGenerator:
                 "candidate_title": candidate_title,
                 "user_history_count": len(user_history),
                 "user_history": user_history,
+                "use_preference_prompt": self.use_preference_prompt,
                 "prompt": prompt,
                 "generated_body": generated_body,
                 "model": self.model,

@@ -7,6 +7,11 @@
 특정 클러스터에 속한 트레이닝 세션만 골라, 세션을 N개씩 배치로 나눈 뒤
 각 배치마다 coordinator_LLM/output/{batch_index}.txt 정책으로 기대본문 생성.
 
+기본 프롬프트는 user_preference/generate_expected_body_train_cluster_policies.py 와 동일하게
+user_preference/body_generation.yaml + user_preference/preference/<데이터셋>/train/user_<id>.json 의
+preference_profile 을 geb.build_prompt 로 주입. 옛 방식은 --legacy-body-prompt.
+Adressa_* 데이터셋이면 기대본문 노르웨이어(bokmål) 지시를 프롬프트 끝에 자동 접미(generate_body.py).
+
 프로젝트 루트에서:
   python body_generation/generate_body_cluster_train_batches.py \\
     --cluster-csv NAML/user_kmeans_k3_MIND_2000.csv --cluster-id 0 --batch-index 0
@@ -36,6 +41,8 @@ if str(_ROOT / "body_generation") not in sys.path:
     sys.path.insert(0, str(_ROOT / "body_generation"))
 
 import generate_body as gb
+
+from naml_dataset_env import default_user_kmeans_csv
 
 
 def _resolve_project_path(p: str) -> str:
@@ -68,8 +75,8 @@ def main() -> None:
     parser.add_argument(
         "--cluster-csv",
         type=str,
-        default="NAML/user_kmeans_k3_MIND_2000.csv",
-        help="user_id,cluster CSV (프로젝트 루트 기준 상대 경로). --full-train 이면 사용 안 함",
+        default=None,
+        help="user_id,cluster CSV. --full-train 이면 사용 안 함. 기본: Adressa → user_kmeans_k3_Adressa_2000.csv",
     )
     parser.add_argument(
         "--cluster-id",
@@ -125,6 +132,36 @@ def main() -> None:
         help="생성 JSON을 넣을 최종 폴더 (프로젝트 루트 기준 상대 경로 가능). 지정 시 --output 및 dataset/cluster*_batch* 하위 경로를 쓰지 않음",
     )
     parser.add_argument("--mind-dataset-subdir", type=str, default=None, help="dataset 하위 폴더 (예: MIND_2000)")
+    parser.add_argument(
+        "--legacy-body-prompt",
+        action="store_true",
+        help="옛 body_generation/prompt.yaml (news1~10만, 선호도 JSON 미사용). 기본은 body_generation.yaml + 선호도",
+    )
+    parser.add_argument(
+        "--history-k",
+        type=int,
+        default=10,
+        metavar="K",
+        help="선호도 프롬프트에 넣을 최근 클릭 제목 개수 (기본 10; --legacy-body-prompt 시 무시)",
+    )
+    parser.add_argument(
+        "--preference-base",
+        type=str,
+        default=None,
+        help="train 선호도 JSON 디렉터리 (기본: user_preference/preference/<mind-dataset-subdir>/train)",
+    )
+    parser.add_argument(
+        "--body-generation-yaml",
+        type=str,
+        default=None,
+        help="geb 본문 프롬프트 템플릿 (기본: user_preference/body_generation.yaml)",
+    )
+    parser.add_argument(
+        "--generation-settings",
+        type=str,
+        default=None,
+        help="geb generation_settings.yaml (기본: user_preference/generation_settings.yaml)",
+    )
     parser.add_argument("--api-key", type=str, default=None)
     parser.add_argument("--model", type=str, default="gpt-4o-mini")
     parser.add_argument(
@@ -143,6 +180,10 @@ def main() -> None:
         help="배치 분할 없이 해당 클러스터 트레이닝 세션 전체를 한 번에 처리 (내부적으로 batch-index=0, sessions-per-batch=세션 전체 수)",
     )
     args = parser.parse_args()
+
+    sub = gb._resolve_mind_dataset_subdir(args.mind_dataset_subdir)
+    if args.cluster_csv is None:
+        args.cluster_csv = default_user_kmeans_csv(sub)
 
     if not args.full_train and args.cluster_id is None:
         parser.error("--cluster-id 는 필수입니다. (전체 트레이닝: --full-train)")
@@ -171,12 +212,21 @@ def main() -> None:
             print(f"오류: 클러스터 {args.cluster_id}에 해당하는 user가 CSV에 없습니다.")
             sys.exit(1)
 
-    sub = gb._resolve_mind_dataset_subdir(args.mind_dataset_subdir)
     os.environ["MIND_DATASET_SUBDIR"] = sub
 
     from naml_common import preprocess_news_file, preprocess_user_file
 
     print(f"데이터셋: dataset/{sub}/ (MIND_DATASET_SUBDIR)")
+    if not args.legacy_body_prompt:
+        print(
+            "본문 프롬프트: 선호도 JSON + user_preference/body_generation.yaml (train_cluster_policies 와 동일 계열)",
+            flush=True,
+        )
+    if "adressa" in sub.lower():
+        print(
+            "[prompt] Adressa: 기대본문 노르웨이어(bokmål) 지시가 각 API 프롬프트 끝에 자동 접미됩니다.",
+            flush=True,
+        )
     if args.full_train:
         print("모드: --full-train (전체 트레이닝 세션, 클러스터 미사용)")
     else:
@@ -311,7 +361,15 @@ def main() -> None:
         model=args.model,
         use_test=False,
         mind_dataset_subdir=args.mind_dataset_subdir,
+        use_preference_prompt=not bool(args.legacy_body_prompt),
+        preference_history_k=int(args.history_k),
     )
+    if args.preference_base:
+        gen_kw["preference_base_dir"] = _resolve_project_path(args.preference_base)
+    if args.body_generation_yaml:
+        gen_kw["preference_body_prompt_path"] = _resolve_project_path(args.body_generation_yaml)
+    if args.generation_settings:
+        gen_kw["preference_generation_settings_path"] = _resolve_project_path(args.generation_settings)
     if policy_path_resolved:
         gen_kw["coordinator_policy_path"] = policy_path_resolved
         gen_kw["coordinator_policy_n"] = None

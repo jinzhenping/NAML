@@ -37,6 +37,8 @@ if str(_ROOT) not in sys.path:
 if str(_ROOT / "NAML") not in sys.path:
     sys.path.insert(0, str(_ROOT / "NAML"))
 
+from naml_dataset_env import default_naml_eval_weights, default_user_kmeans_csv
+
 
 def _norm_expected_body_key(uid, nid):
     try:
@@ -308,8 +310,8 @@ def main() -> None:
     parser.add_argument(
         "--cluster-csv",
         type=str,
-        default="NAML/user_kmeans_k3_MIND_2000.csv",
-        help="--full-train 이면 사용 안 함",
+        default=None,
+        help="--full-train 이면 사용 안 함. 기본: 데이터셋이 Adressa 이면 user_kmeans_k3_Adressa_2000.csv",
     )
     parser.add_argument("--cluster-id", type=int, default=None, help="--full-train 이면 생략")
     parser.add_argument(
@@ -329,8 +331,8 @@ def main() -> None:
     parser.add_argument(
         "--weights",
         type=str,
-        default="saved_models/NAML_mind_2000.h5",
-        help="프로젝트 루트 기준 사전학습 가중치",
+        default=None,
+        help="프로젝트 루트 기준 사전학습 가중치. 기본: Adressa → NAML_adressa_2000_actual.h5, 그 외 → NAML_mind_2000.h5",
     )
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--learning-rate", type=float, default=0.0005)
@@ -343,6 +345,10 @@ def main() -> None:
         sys.exit(2)
 
     sub = _resolve_mind_dataset_subdir(args.mind_dataset_subdir)
+    if args.cluster_csv is None:
+        args.cluster_csv = default_user_kmeans_csv(sub)
+    if args.weights is None:
+        args.weights = default_naml_eval_weights(sub)
     os.environ["MIND_DATASET_SUBDIR"] = sub
 
     from naml_batch_generators import generate_batch_data_test, generate_batch_data_train

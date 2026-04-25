@@ -12,6 +12,7 @@
 - 히스토리: train TSV의 clicked_news에서 최근 history_k개 제목
 - 취향: user_preference/preference/<dataset>/train/user_<id>.json (기본)
 - 후보 제목: 기본은 원본만; `--title-abstraction`이면 title-abstraction-yaml로 LLM 추상화 후 {candidate_news}
+- Adressa_* (`--mind-dataset-subdir`에 adressa 포함): 기대본문 LLM 프롬프트 끝에 노르웨이어(bokmål) 본문 생성 지시 자동 추가
 - 정책: --policy-files 를 클러스터 0,1,2,... 순으로 매핑
 - 배치: --num-batches N --batch-index i 로 전체 (유저,후보) 쌍을 N등분한 i번째만 처리
   (출력 폴더는 배치마다 다르게 주는 것을 권장: .../train_batch0 등)
@@ -62,6 +63,7 @@ _spec.loader.exec_module(_geb)
 DEFAULT_MODEL = _geb.DEFAULT_MODEL
 PROJECT_ROOT = _geb.PROJECT_ROOT
 build_prompt = _geb.build_prompt
+extra_body_prompt_suffix_for_dataset = _geb.extra_body_prompt_suffix_for_dataset
 clean_abstracted_title = _geb.clean_abstracted_title
 get_recent_titles = _geb.get_recent_titles
 load_abstract_cache = _geb.load_abstract_cache
@@ -417,6 +419,12 @@ def run_pipeline(args: argparse.Namespace) -> None:
     print(f"출력: {out_root}")
     print(f"학습 TSV: {train_tsv}")
     print(f"preference 디렉토리: {pref_base}")
+    body_prompt_extra = extra_body_prompt_suffix_for_dataset(ds)
+    if body_prompt_extra:
+        print(
+            f"[prompt] dataset {ds}: 기대본문 생성 프롬프트에 노르웨이어(bokmål) 출력 지시 추가",
+            flush=True,
+        )
     if not args.title_abstraction:
         print("후보 제목: 원본만 사용 (기본)")
     else:
@@ -572,6 +580,8 @@ def run_pipeline(args: argparse.Namespace) -> None:
             policy=policy,
             settings=settings,
         )
+        if body_prompt_extra:
+            prompt = prompt + body_prompt_extra
         msg_content = safe_api_text(prompt)
         _validate_chat_json_payload(
             str(args.model),
@@ -635,6 +645,8 @@ def run_pipeline(args: argparse.Namespace) -> None:
             "policy": policy,
             "model": args.model,
             "prompt": prompt,
+            "mind_dataset_subdir": ds,
+            "prompt_body_language_suffix": body_prompt_extra.strip() or None,
             "generated_body": body,
         }
         with open(out_path, "w", encoding="utf-8") as f:

@@ -39,6 +39,8 @@ if str(_ROOT / "body_generation") not in sys.path:
 
 import generate_body as gb
 
+from naml_dataset_env import default_user_kmeans_csv
+
 
 def _norm_uid(u) -> str:
     try:
@@ -97,8 +99,8 @@ def main() -> None:
     ap.add_argument(
         "--cluster-csv",
         type=str,
-        default="NAML/user_kmeans_k3_MIND_2000.csv",
-        help="user_id, cluster 형식 CSV",
+        default=None,
+        help="user_id, cluster 형식 CSV. 기본: 데이터셋이 Adressa 이면 user_kmeans_k3_Adressa_2000.csv",
     )
     ap.add_argument(
         "--policy-files",
@@ -119,6 +121,10 @@ def main() -> None:
     ap.add_argument("--model", type=str, default="gpt-4o-mini")
     ap.add_argument("--dry-run", action="store_true", help="쌍 집계만 하고 API 호출 없음")
     args = ap.parse_args()
+
+    sub = gb._resolve_mind_dataset_subdir(args.mind_dataset_subdir)
+    if args.cluster_csv is None:
+        args.cluster_csv = default_user_kmeans_csv(sub)
 
     csv_path = _ROOT / args.cluster_csv
     if not csv_path.is_file():
@@ -149,7 +155,6 @@ def main() -> None:
     out_dir = os.path.normpath(str(_ROOT / args.output))
     os.makedirs(out_dir, exist_ok=True)
 
-    sub = gb._resolve_mind_dataset_subdir(args.mind_dataset_subdir)
     os.environ["MIND_DATASET_SUBDIR"] = sub
 
     from naml_common import preprocess_news_file, preprocess_user_file
