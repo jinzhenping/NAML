@@ -25,7 +25,7 @@ import sys
 import tempfile
 from pathlib import Path
 from collections import defaultdict
-from typing import Any, Dict, Optional, Sequence
+from typing import Any, Dict, Optional, Sequence, Union
 
 import numpy as np
 import tensorflow as tf
@@ -53,7 +53,7 @@ DEFAULT_WEIGHTS_RELATIVE = os.path.join("saved_models", "NAML_mind_2000.h5")
 # ---------------------------------------------------------------------------
 
 # naml_tune_actual_log.json → build_naml_models 아키텍처 (naml_eval_test 와 동일 키)
-_DEFAULT_ARCH: Dict[str, float | int] = {
+_DEFAULT_ARCH: Dict[str, Union[float, int]] = {
     "dropout_rate": 0.3,
     "cnn_filters": 400,
     "cnn_kernel_size": 3,
@@ -63,8 +63,8 @@ _DEFAULT_ARCH: Dict[str, float | int] = {
 _ARCH_KEYS = tuple(_DEFAULT_ARCH.keys())
 
 
-def _arch_from_tune_log(log_path: str) -> Dict[str, float | int]:
-    out: Dict[str, float | int] = {}
+def _arch_from_tune_log(log_path: str) -> Dict[str, Union[float, int]]:
+    out: Dict[str, Union[float, int]] = {}
     try:
         with open(log_path, "r", encoding="utf-8") as f:
             data = json.load(f)
