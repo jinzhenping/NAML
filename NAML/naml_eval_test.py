@@ -50,6 +50,12 @@ if str(_ROOT) not in sys.path:
 if str(_ROOT / "NAML") not in sys.path:
     sys.path.insert(0, str(_ROOT / "NAML"))
 
+# naml_common 은 import 시점에 MIND_DATASET_SUBDIR·뉴스/TSV 파일명을 고정한다.
+# main() 이후에 --mind-dataset-subdir 를 넣어도 이미 늦으므로, 배치 제너레이터 import 전에 argv 반영.
+from naml_dataset_env import apply_dataset_env_from_argv
+
+apply_dataset_env_from_argv()
+
 from naml_batch_generators import generate_batch_data_test
 
 

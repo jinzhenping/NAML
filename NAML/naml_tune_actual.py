@@ -11,12 +11,14 @@ python NAML/naml_tune_actual.py --trials 24 --epochs-per-trial 10 --seed 42
 python NAML/naml_tune_actual.py --two-phase --trials 108 --screening-epochs 3 \
     --refine-top-k 10 --epochs-per-trial 10 \
     --resume-log saved_models/MIND_2000/naml_tune_actual_log.json \
+    --out-log saved_models/MIND_2000/naml_tune_actual_log.json \
     --out-weights saved_models/MIND_2000/NAML_mind_2000_actual.h5 \
     --mind-dataset-subdir MIND_2000
 # Adressa_2000:
 python NAML/naml_tune_actual.py --two-phase --trials 108 --screening-epochs 3 \
     --refine-top-k 10 --epochs-per-trial 10 \
     --resume-log saved_models/Adressa_2000/naml_tune_actual_log.json \
+    --out-log saved_models/Adressa_2000/naml_tune_actual_log.json \
     --out-weights saved_models/Adressa_2000/NAML_adressa_2000_actual.h5 \
     --mind-dataset-subdir Adressa_2000
 
@@ -547,7 +549,8 @@ def main():
         "--out-log",
         type=str,
         default=os.path.join(_ROOT, "saved_models", "naml_tune_actual_log.json"),
-        help="튜닝 로그 JSON 경로",
+        help="튜닝 로그 JSON 경로. 미지정 시 항상 프로젝트 루트 기준 saved_models/naml_tune_actual_log.json "
+        "(--resume-log 와 경로가 같지 않음; 이어붙이려면 보통 동일 파일로 --out-log 지정). 상대 경로는 실행 시 CWD 기준",
     )
     ap.add_argument(
         "--allow-duplicate-hparams",
@@ -625,6 +628,11 @@ def main():
     out_dir = os.path.dirname(os.path.abspath(args.out_weights))
     if out_dir and not os.path.isdir(out_dir):
         os.makedirs(out_dir, exist_ok=True)
+    log_dir = os.path.dirname(os.path.abspath(args.out_log))
+    if log_dir and not os.path.isdir(log_dir):
+        os.makedirs(log_dir, exist_ok=True)
+    print(f"로그 저장 경로: {os.path.abspath(args.out_log)}", flush=True)
+    print(f"가중치 저장 경로(전역 최고 MRR 갱신 시): {os.path.abspath(args.out_weights)}", flush=True)
 
     rng = random.Random(args.seed)
     global_best_mrr = -1.0
