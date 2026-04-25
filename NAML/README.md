@@ -19,7 +19,7 @@ python NAML/NAML.py
 
 ```bash
 # 프로젝트 루트에서 (train-body-dir 은 실제 cluster<C>_batch<B> 경로로 맞출 것)
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_cluster_batch.py \
+python NAML/eval_cluster_batch.py \
   --cluster-csv NAML/user_kmeans_k3_MIND_2000.csv --cluster-id 0 --batch-index 0 \
   --train-body-dir body_generation/output/MIND_2000/cluster0_batch0
 ```
@@ -34,7 +34,7 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_cluster_bat
 실제본문/기대본문을 각각 평가하고, NAML 기본 지표 3개(MRR, NDCG@5, Hit@1)를 비교합니다.
 
 ```bash
-CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_expected.py \
+python NAML/eval_test_expected.py \
   --expected-dir body_generation/output/MIND_2000/test_cluster_mixed_run1 \
   --weights saved_models/NAML_mind_2000.h5 \
   --mind-dataset-subdir MIND_2000
@@ -51,7 +51,7 @@ CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/eval_test_expect
 
 ```bash
 # 프로젝트 루트에서 (예: 배치 0,1,2)
-CUDA_VISIBLE_DEVICES=1 python scripts/run_cluster_batch_pipeline.py --start 0 --end 2
+python scripts/run_cluster_batch_pipeline.py --start 0 --end 2
 ```
 
 - 시작 배치 `N`에 대해 **`coordinator_LLM/output/N.txt`가 이미 있어야** 합니다(예: `0.txt` 시드).

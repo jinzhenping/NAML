@@ -106,9 +106,9 @@ def main() -> None:
     p.add_argument(
         "--batch-size",
         type=int,
-        default=16,
+        default=64,
         metavar="B",
-        help="eval_cluster_batch NAML forward 미니배치 크기 (기본 16)",
+        help="eval_cluster_batch NAML forward 미니배치 크기 (기본 64)",
     )
     args = p.parse_args()
 

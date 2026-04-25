@@ -256,7 +256,7 @@ if USE_EXPECTED_BODY:
             )
         elif _m and _m == _test_dir:
             pass
-            else:
+        else:
             print(
                 f"  경고: MAIN_TESTSET_EXPECTED_BODY_DIR 을 찾지 못해 word_dict 추가 생략: "
                 f"{MAIN_TESTSET_EXPECTED_BODY_DIR!r}"
@@ -269,7 +269,7 @@ elif INCLUDE_MAIN_TEST_EXPECTED_TOKENS_IN_WORD_DICT and MAIN_TESTSET_EXPECTED_BO
         print(
             f"\nword_dict용 테스트 기대본문 토큰 로드: {len(expected_bodies_word_dict_test_only)}개 ({_wd})"
         )
-            else:
+    else:
         print(
             f"\n경고: MAIN_TESTSET_EXPECTED_BODY_DIR 을 찾을 수 없어 word_dict에 기대본문 토큰을 넣지 않습니다: "
             f"{MAIN_TESTSET_EXPECTED_BODY_DIR!r}"
@@ -346,7 +346,6 @@ if USE_EXPECTED_BODY:
         print(f"  - 테스트 데이터 기대본문 커버리지: {test_coverage:.2f}% ({available_expected_bodies_test}/{total_candidates_test})")
         if missing_expected_bodies_test > 0:
             print(f"  - 테스트 데이터 기대본문 누락: {missing_expected_bodies_test}개 (원본 본문 사용)")
-        else:
     # 학습·전처리에서 원본 본문 사용 (매 에폭 테스트 기대본문 지표는 아래 MAIN_TESTSET_* 로 별도)
     print("\n원본 본문 사용 모드 (학습 후보 본문 = MIND 실제 본문)")
     userid_dict, all_train_pn, all_label, all_train_id, all_test_pn, all_test_label, all_test_id, all_user_pos, all_test_user_pos, all_test_index, candidate_news_ids_train, candidate_news_ids_test, all_train_userid_str, all_train_newsid_str, all_test_userid_str, all_test_newsid_str = preprocess_user_file(

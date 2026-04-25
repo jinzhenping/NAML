@@ -334,7 +334,7 @@ def main() -> None:
         default=None,
         help="프로젝트 루트 기준 사전학습 가중치. 기본: Adressa → NAML_adressa_2000_actual.h5, 그 외 → NAML_mind_2000.h5",
     )
-    parser.add_argument("--batch-size", type=int, default=16)
+    parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--learning-rate", type=float, default=0.0005)
     parser.add_argument("--result-index", type=int, default=None, help="N in NAML/results/resultN.txt (기본: 자동 증가)")
     parser.add_argument("--no-extend-word-dict", action="store_true", help="기대본문을 word_dict에 넣지 않음 (기본은 포함)")
