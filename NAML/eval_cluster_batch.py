@@ -26,7 +26,7 @@ import os
 import re
 import sys
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple, Union
 
 import numpy as np
 
@@ -38,6 +38,31 @@ if str(_ROOT / "NAML") not in sys.path:
     sys.path.insert(0, str(_ROOT / "NAML"))
 
 from naml_dataset_env import default_naml_eval_weights, default_user_kmeans_csv
+
+_DEFAULT_ARCH: Dict[str, Union[float, int]] = {
+    "dropout_rate": 0.3,
+    "cnn_filters": 400,
+    "cnn_kernel_size": 3,
+    "attention_dense_dim": 200,
+    "category_emb_dim": 50,
+}
+_ARCH_KEYS = tuple(_DEFAULT_ARCH.keys())
+
+
+def _arch_from_tune_log(log_path: str) -> Dict[str, Union[float, int]]:
+    out: Dict[str, Union[float, int]] = {}
+    try:
+        with open(log_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception:
+        return out
+    gb = data.get("global_best_hparams")
+    if not isinstance(gb, dict):
+        return out
+    for k in _ARCH_KEYS:
+        if k in gb:
+            out[k] = gb[k]
+    return out
 
 
 def _norm_expected_body_key(uid, nid):
@@ -334,6 +359,12 @@ def main() -> None:
         default=None,
         help="프로젝트 루트 기준 사전학습 가중치. 기본: Adressa → NAML_adressa_2000_actual.h5, 그 외 → NAML_mind_2000.h5",
     )
+    parser.add_argument(
+        "--tune-log",
+        type=str,
+        default=None,
+        help="naml_tune_actual_log.json. 기본: saved_models/<SUBDIR>/naml_tune_actual_log.json (있으면 모델 아키텍처 반영)",
+    )
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--learning-rate", type=float, default=0.0005)
     parser.add_argument("--result-index", type=int, default=None, help="N in NAML/results/resultN.txt (기본: 자동 증가)")
@@ -349,11 +380,22 @@ def main() -> None:
         args.cluster_csv = default_user_kmeans_csv(sub)
     if args.weights is None:
         args.weights = default_naml_eval_weights(sub)
+    if args.tune_log is None:
+        args.tune_log = os.path.join("saved_models", sub, "naml_tune_actual_log.json")
     os.environ["MIND_DATASET_SUBDIR"] = sub
 
     from naml_batch_generators import generate_batch_data_test, generate_batch_data_train
     from naml_common import MIND_NEWS_FILENAME, SEED, get_embedding, mind_data_path, preprocess_news_file, preprocess_user_file
     from naml_model_builder import build_naml_models
+
+    arch: Dict[str, Union[float, int]] = dict(_DEFAULT_ARCH)
+    tune_log_path = args.tune_log if os.path.isabs(args.tune_log) else str(_ROOT / args.tune_log)
+    if os.path.isfile(tune_log_path):
+        loaded = _arch_from_tune_log(tune_log_path)
+        arch.update(loaded)
+        print(f"[튜닝 로그] {tune_log_path} → 아키텍처 {loaded or '(global_best_hparams 없음, 기본값)'}")
+    else:
+        print(f"[튜닝 로그] 파일 없음 → 기본 아키텍처 사용: {tune_log_path}")
 
     csv_path = _ROOT / args.cluster_csv
     if not args.full_train:
@@ -477,7 +519,18 @@ def main() -> None:
     news_tsv = mind_data_path(MIND_NEWS_FILENAME)
     news_titles = load_news_titles(news_tsv)
 
-    _built = build_naml_models(word_dict, embedding_mat, category, subcategory, args.learning_rate)
+    _built = build_naml_models(
+        word_dict,
+        embedding_mat,
+        category,
+        subcategory,
+        args.learning_rate,
+        dropout_rate=float(arch["dropout_rate"]),
+        cnn_filters=int(arch["cnn_filters"]),
+        cnn_kernel_size=int(arch["cnn_kernel_size"]),
+        attention_dense_dim=int(arch["attention_dense_dim"]),
+        category_emb_dim=int(arch["category_emb_dim"]),
+    )
     model = _built["model"]
     model_test = _built["model_test"]
 
@@ -485,7 +538,14 @@ def main() -> None:
         model.load_weights(str(weights_path))
     except Exception as e:
         print(f"가중치 로드 실패, by_name 시도: {e}")
-        model.load_weights(str(weights_path), by_name=True, skip_mismatch=True)
+        try:
+            model.load_weights(str(weights_path), by_name=True, skip_mismatch=True)
+        except Exception as e2:
+            raise RuntimeError(
+                "가중치 로드 실패: 모델 아키텍처/케라스 포맷 불일치 가능성이 큽니다. "
+                f"--tune-log({tune_log_path}) 또는 --weights 파일을 확인하세요. "
+                f"original={e}; by_name={e2}"
+            )
 
     bs = args.batch_size
     steps_train = (len(batch_sessions) + bs - 1) // bs
