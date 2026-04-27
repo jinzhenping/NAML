@@ -51,7 +51,7 @@ if str(_ROOT / "NAML") not in sys.path:
     sys.path.insert(0, str(_ROOT / "NAML"))
 
 from eval_cluster_batch import load_expected_bodies_from_train_dir
-from eval_test_expected import (
+from naml_eval_test import (
     _DEFAULT_ARCH,
     _arch_from_tune_log,
     calc_metrics_from_scores,
