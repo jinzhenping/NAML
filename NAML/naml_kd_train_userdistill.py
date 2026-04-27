@@ -22,7 +22,8 @@ python NAML/naml_kd_train_userdistill.py \
   --lambda-distill-user 0.2 \
   --lambda-distill-exp 0.2 \
   --epochs 10 \
-  --output-weights saved_models/NAML_kd_student_userdistill.h5 --teacher-exp-use-expected-body
+  --output-weights saved_models/NAML_kd_student_userdistill.h5 --teacher-exp-use-expected-body \
+  --num-runs 3
 
 # 학습 기대본문 문장 수: --expected-body-first-n-sentences N (= --train-expected-body-first-n-sentences N, 기본 3, 0=전체)
 # 에폭 평가 [기대본문] 지표: --eval-expected-body-first-n-sentences (기본 0=전체)
@@ -572,6 +573,18 @@ def main() -> None:
         help="에폭마다 테스트셋 [기대본문] 지표 계산 시 앞 N문장만 사용 (0=전체, 기본 0). 학습과 독립",
     )
     ap.add_argument("--seed", type=int, default=SEED)
+    ap.add_argument(
+        "--num-runs",
+        type=int,
+        default=1,
+        help="동일 설정으로 학습을 몇 번 반복할지 (기본 1). 기대본문 MRR 최고 run/epoch 가중치를 저장",
+    )
+    ap.add_argument(
+        "--run-seed-step",
+        type=int,
+        default=1,
+        help="반복 실행 시 run마다 seed 증가 폭 (run_seed = seed + i*step, 기본 1)",
+    )
     args = ap.parse_args()
 
     np.random.seed(args.seed)
@@ -671,47 +684,10 @@ def main() -> None:
         category_emb_dim=int(arch["category_emb_dim"]),
     )
 
-    built_s = build_naml_models(
-        word_dict, embedding_mat, category, subcategory, args.learning_rate, clear_session=True, **_kw
-    )
-    student_model = built_s["model"]
-    student_news = built_s["newsEncoder"]
-    model_test = built_s["model_test"]
-    student_user = tf.keras.Model(
-        built_s["browsed_news_input"] + built_s["browsed_body_input"] + built_s["browsed_v_input"] + built_s["browsed_sv_input"],
-        built_s["user_rep"],
-    )
-
-    built_t = build_naml_models(
-        word_dict, embedding_mat, category, subcategory, args.learning_rate, clear_session=False, **_kw
-    )
-    teacher_full = built_t["model"]
-    teacher_news = built_t["newsEncoder"]
-    teacher_user = tf.keras.Model(
-        built_t["browsed_news_input"] + built_t["browsed_body_input"] + built_t["browsed_v_input"] + built_t["browsed_sv_input"],
-        built_t["user_rep"],
-    )
-
     tw = str(_ROOT / args.teacher_weights) if not os.path.isabs(args.teacher_weights) else args.teacher_weights
     if not os.path.isfile(tw):
         print(f"오류: 교사 가중치 없음: {tw}", file=sys.stderr)
         sys.exit(1)
-    try:
-        teacher_full.load_weights(tw)
-    except Exception as e:
-        print(
-            "\n오류: 교사 가중치 로드 실패. 튜닝된 NAML_mind_2000.h5 라면 그때의 global_best_hparams와 "
-            "동일한 그래프가 필요합니다.\n"
-            "  예: --tune-log saved_models/naml_tune_actual_log.json\n",
-            flush=True,
-        )
-        raise e
-    teacher_full.trainable = False
-    teacher_news.trainable = False
-    teacher_user.trainable = False
-    print(f"교사 가중치 로드 (동결): {tw}")
-
-    optimizer = Adam(learning_rate=args.learning_rate)
 
     n_train = len(all_train_id)
     steps_per_epoch = max(1, (n_train + args.batch_size - 1) // args.batch_size)
@@ -779,40 +755,114 @@ def main() -> None:
             shuffle=True,
         )
 
-    best_w, best_ep, best_mrr = train_kd_userdistill(
-        student_model,
-        teacher_news,
-        student_news,
-        teacher_user,
-        student_user,
-        make_train_gen,
-        steps_per_epoch,
-        optimizer,
-        float(args.lambda_distill_user),
-        float(args.lambda_distill_exp),
-        H,
-        args.epochs,
-        teacher_exp_use_expected_body=bool(args.teacher_exp_use_expected_body),
-        eval_after_epoch=eval_cb,
-    )
-
     out_w = str(_ROOT / args.output_weights) if not os.path.isabs(args.output_weights) else args.output_weights
     os.makedirs(os.path.dirname(out_w) or ".", exist_ok=True)
+    if args.num_runs < 1:
+        print("오류: --num-runs 는 1 이상이어야 합니다.", file=sys.stderr)
+        sys.exit(2)
 
-    if best_w is not None:
-        student_model.set_weights(best_w)
+    best_overall_mrr = float("-inf")
+    best_overall_run = 1
+    best_overall_epoch = args.epochs
+    best_overall_weights = None
+    fallback_last_weights = None
+    fallback_last_model = None
+
+    for run_idx in range(args.num_runs):
+        run_no = run_idx + 1
+        run_seed = int(args.seed) + run_idx * int(args.run_seed_step)
+        np.random.seed(run_seed)
+        tf.random.set_seed(run_seed)
+        print(f"\n=== KD run {run_no}/{args.num_runs} (seed={run_seed}) ===", flush=True)
+
+        built_s = build_naml_models(
+            word_dict, embedding_mat, category, subcategory, args.learning_rate, clear_session=True, **_kw
+        )
+        student_model = built_s["model"]
+        student_news = built_s["newsEncoder"]
+        model_test = built_s["model_test"]
+        student_user = tf.keras.Model(
+            built_s["browsed_news_input"] + built_s["browsed_body_input"] + built_s["browsed_v_input"] + built_s["browsed_sv_input"],
+            built_s["user_rep"],
+        )
+
+        built_t = build_naml_models(
+            word_dict, embedding_mat, category, subcategory, args.learning_rate, clear_session=False, **_kw
+        )
+        teacher_full = built_t["model"]
+        teacher_news = built_t["newsEncoder"]
+        teacher_user = tf.keras.Model(
+            built_t["browsed_news_input"] + built_t["browsed_body_input"] + built_t["browsed_v_input"] + built_t["browsed_sv_input"],
+            built_t["user_rep"],
+        )
+        try:
+            teacher_full.load_weights(tw)
+        except Exception as e:
+            print(
+                "\n오류: 교사 가중치 로드 실패. 튜닝된 NAML_mind_2000.h5 라면 그때의 global_best_hparams와 "
+                "동일한 그래프가 필요합니다.\n"
+                "  예: --tune-log saved_models/naml_tune_actual_log.json\n",
+                flush=True,
+            )
+            raise e
+        teacher_full.trainable = False
+        teacher_news.trainable = False
+        teacher_user.trainable = False
+        print(f"교사 가중치 로드 (동결): {tw}")
+
+        optimizer = Adam(learning_rate=args.learning_rate)
+        best_w, best_ep, best_mrr = train_kd_userdistill(
+            student_model,
+            teacher_news,
+            student_news,
+            teacher_user,
+            student_user,
+            make_train_gen,
+            steps_per_epoch,
+            optimizer,
+            float(args.lambda_distill_user),
+            float(args.lambda_distill_exp),
+            H,
+            args.epochs,
+            teacher_exp_use_expected_body=bool(args.teacher_exp_use_expected_body),
+            eval_after_epoch=eval_cb,
+        )
+        fallback_last_weights = [np.array(w) for w in student_model.get_weights()]
+        fallback_last_model = student_model
+
+        if best_w is not None:
+            print(
+                f"[run {run_no}] 기대본문 MRR 최고 에폭 {best_ep}/{args.epochs} (MRR={best_mrr:.6f})",
+                flush=True,
+            )
+            if best_mrr > best_overall_mrr:
+                best_overall_mrr = float(best_mrr)
+                best_overall_run = run_no
+                best_overall_epoch = int(best_ep)
+                best_overall_weights = [np.array(w) for w in best_w]
+        else:
+            print(f"[run {run_no}] 에폭 평가 없음/지표 없음 → run 마지막 에폭 가중치 보관", flush=True)
+
+    if best_overall_weights is not None and fallback_last_model is not None:
+        fallback_last_model.set_weights(best_overall_weights)
         print(
-            f"\n저장: 테스트셋 기대본문 MRR 최고 에폭 {best_ep}/{args.epochs} "
-            f"(MRR={best_mrr:.6f}) 가중치 → {out_w}",
+            f"\n저장: 전체 {args.num_runs}회 중 최고 run={best_overall_run}, epoch={best_overall_epoch}/{args.epochs} "
+            f"(MRR={best_overall_mrr:.6f}) 가중치 → {out_w}",
             flush=True,
         )
+        fallback_last_model.save_weights(out_w)
     else:
+        if fallback_last_model is None or fallback_last_weights is None:
+            print("오류: 저장할 학생 가중치가 없습니다.", file=sys.stderr)
+            sys.exit(1)
+        fallback_last_model.set_weights(fallback_last_weights)
         print(
-            "\n저장: 기대본문 테스트 지표가 없거나 에폭 평가가 꺼져 있어 마지막 에폭 가중치를 저장합니다.",
+            "\n저장: 기대본문 테스트 지표가 없거나 에폭 평가가 꺼져 있어 "
+            "마지막 run의 마지막 에폭 가중치를 저장합니다.",
             flush=True,
         )
+        fallback_last_model.save_weights(out_w)
 
-    student_model.save_weights(out_w)
     print(f"학생 가중치 저장 완료: {out_w}")
 
 
