@@ -358,13 +358,14 @@ def train_kd_userdistill(
     epochs: int,
     teacher_exp_use_expected_body: bool = False,
     eval_after_epoch: Optional[Callable[[], Tuple[Dict[str, Any], Optional[Dict[str, Any]]]]] = None,
-) -> Tuple[Optional[List[np.ndarray]], int, float]:
+) -> Tuple[Optional[List[np.ndarray]], int, float, Optional[Dict[str, Any]]]:
     cand_title_idx, cand_body_idx, cand_v_idx, cand_sv_idx = _input_indices(H)
     hist_title_idx, hist_body_idx, hist_v_idx, hist_sv_idx = _history_input_indices(H)
 
     best_weights: Optional[List[np.ndarray]] = None
     best_epoch_1based = -1
     best_mrr_expected = -1.0
+    best_metrics_expected: Optional[Dict[str, Any]] = None
 
     for ep in range(epochs):
         print(f"\n=== KD(User+News) epoch {ep + 1}/{epochs} ===", flush=True)
@@ -483,8 +484,9 @@ def train_kd_userdistill(
                     best_mrr_expected = mrr_e
                     best_epoch_1based = ep + 1
                     best_weights = [np.array(w) for w in student_model.get_weights()]
+                    best_metrics_expected = dict(me)
 
-    return best_weights, best_epoch_1based, best_mrr_expected
+    return best_weights, best_epoch_1based, best_mrr_expected, best_metrics_expected
 
 
 def main() -> None:
@@ -765,6 +767,7 @@ def main() -> None:
     best_overall_run = 1
     best_overall_epoch = args.epochs
     best_overall_weights = None
+    best_overall_metrics: Optional[Dict[str, Any]] = None
     fallback_last_weights = None
     fallback_last_model = None
 
@@ -811,7 +814,7 @@ def main() -> None:
         print(f"교사 가중치 로드 (동결): {tw}")
 
         optimizer = Adam(learning_rate=args.learning_rate)
-        best_w, best_ep, best_mrr = train_kd_userdistill(
+        best_w, best_ep, best_mrr, best_metrics = train_kd_userdistill(
             student_model,
             teacher_news,
             student_news,
@@ -840,6 +843,7 @@ def main() -> None:
                 best_overall_run = run_no
                 best_overall_epoch = int(best_ep)
                 best_overall_weights = [np.array(w) for w in best_w]
+                best_overall_metrics = dict(best_metrics) if best_metrics is not None else None
         else:
             print(f"[run {run_no}] 에폭 평가 없음/지표 없음 → run 마지막 에폭 가중치 보관", flush=True)
 
@@ -850,6 +854,15 @@ def main() -> None:
             f"(MRR={best_overall_mrr:.6f}) 가중치 → {out_w}",
             flush=True,
         )
+        if best_overall_metrics is not None:
+            print(
+                "[최고 성능 기대본문 지표] "
+                f"MRR={float(best_overall_metrics.get('MRR', 0.0)):.6f}  "
+                f"NDCG@5={float(best_overall_metrics.get('NDCG@5', 0.0)):.6f}  "
+                f"Hit@1={float(best_overall_metrics.get('Hit@1', 0.0)):.6f}  "
+                f"(세션 {int(best_overall_metrics.get('evaluated_sessions', 0))})",
+                flush=True,
+            )
         fallback_last_model.save_weights(out_w)
     else:
         if fallback_last_model is None or fallback_last_weights is None:
