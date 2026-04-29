@@ -396,7 +396,8 @@ def _load_seen_hparam_keys_from_log(log_path: str) -> set[tuple]:
 def _load_previous_best_from_log(log_path: str) -> tuple[float, dict | None]:
     """이전 로그 JSON에서 최고 MRR 및 해당 hparams를 읽는다."""
     best_mrr = -1.0
-    best_hp: dict | None = None
+    from typing import Optional, Tuple, Dict
+    best_hp: Optional[Dict] = None
     try:
         with open(log_path, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -429,7 +430,7 @@ def _load_previous_best_from_log(log_path: str) -> tuple[float, dict | None]:
     return best_mrr, best_hp
 
 
-def _load_json_or_none(path: str) -> dict | None:
+def _load_json_or_none(path: str) -> "dict | None":
     try:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -636,12 +637,13 @@ def main():
 
     rng = random.Random(args.seed)
     global_best_mrr = -1.0
-    global_best_hp: dict | None = None
+    from typing import Optional, Dict
+    global_best_hp: Optional[Dict] = None
     log_trials = []
 
     grid_n = _hparam_grid_size()
     seen_hparam_keys: set[tuple] = set()
-    resume_log_path: str | None = None
+    resume_log_path: "str | None" = None
     if args.resume_log:
         resume_log_path = (
             os.path.join(_ROOT, args.resume_log) if not os.path.isabs(args.resume_log) else args.resume_log
