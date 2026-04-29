@@ -37,6 +37,10 @@ if str(_ROOT / "NAML") not in sys.path:
     sys.path.insert(0, str(_ROOT / "NAML"))
 
 from naml_dataset_env import apply_dataset_env_from_argv
+# 중요: naml_common import 전에 dataset env를 먼저 적용해야
+# MIND_DATASET_SUBDIR 기준 파일명이 올바르게 고정됩니다.
+apply_dataset_env_from_argv()
+
 from naml_common import preprocess_news_file, preprocess_user_file, get_embedding
 
 

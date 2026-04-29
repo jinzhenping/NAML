@@ -50,6 +50,9 @@ if str(_ROOT) not in sys.path:
 if str(_ROOT / "NAML") not in sys.path:
     sys.path.insert(0, str(_ROOT / "NAML"))
 
+from naml_dataset_env import apply_dataset_env_from_argv
+apply_dataset_env_from_argv()
+
 from eval_cluster_batch import load_expected_bodies_from_train_dir
 from naml_eval_test import (
     _DEFAULT_ARCH,
