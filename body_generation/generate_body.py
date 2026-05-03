@@ -914,12 +914,30 @@ def main():
     parser.add_argument('--output', type=str, default='body_generation/output',
                         help='출력 루트 (실제 저장은 <루트>/<데이터셋 폴더>/trainN 등, 예: output/MIND_2000/train0)')
     parser.add_argument('--use_test', action='store_true', help='테스트셋 후보로 생성 (미지정 시 학습 TSV 사용)')
-    parser.add_argument('--policy_file', type=int, default=None, metavar='N', help='정책으로 사용할 coordinator 출력 파일 번호 (N이면 N.txt). 생략 시 가장 큰 번호 사용')
+    parser.add_argument('--policy_file', type=int, default=None, metavar='N', help='정책으로 사용할 coordinator 출력 파일 번호 (N이면 coordinator_LLM/output/N.txt). 생략 시 가장 큰 번호 사용')
+    parser.add_argument(
+        '--policy_path',
+        type=str,
+        default=None,
+        metavar='PATH',
+        help='coordinator 정책 JSON(.txt) 파일을 직접 지정 (프로젝트 루트 기준 상대 경로 가능). 지정 시 --policy_file 보다 우선',
+    )
     parser.add_argument('--api_key', type=str, default=None, help='OpenAI API 키 (선택, 환경변수 사용 가능)')
     parser.add_argument('--model', type=str, default='gpt-4o-mini', help='사용할 모델명')
     parser.add_argument('--mind_dataset_subdir', type=str, default=None,
                         help='dataset 하위 폴더 (예: MIND, MIND_1000, MIND_2000). 미지정 시 env MIND_DATASET_SUBDIR 또는 MIND')
     args = parser.parse_args()
+
+    policy_path_resolved: Optional[str] = None
+    if args.policy_path and str(args.policy_path).strip():
+        raw = str(args.policy_path).strip()
+        policy_path_resolved = (
+            os.path.normpath(raw)
+            if os.path.isabs(raw)
+            else os.path.normpath(str(_BODY_GEN_PROJECT_ROOT / raw))
+        )
+        if not os.path.isfile(policy_path_resolved):
+            raise FileNotFoundError(f"정책 파일 없음: {policy_path_resolved}")
     
     # 데이터셋별로 출력 분리: body_generation/output/MIND_2000/train0 형태
     dataset_subdir = _resolve_mind_dataset_subdir(args.mind_dataset_subdir)
@@ -938,12 +956,13 @@ def main():
         print(f"데이터셋: {dataset_subdir}")
         print(f"생성 정책: {mode}, 저장 경로: {run_dir}")
     
-    # 생성기 초기화
+    # 생성기 초기화 (--policy_path 가 있으면 N.txt 디렉터리 스캔 대신 해당 파일만 사용)
     generator = BodyGenerator(
         api_key=args.api_key,
         model=args.model,
         use_test=args.use_test,
-        coordinator_policy_n=args.policy_file,
+        coordinator_policy_n=None if policy_path_resolved is not None else args.policy_file,
+        coordinator_policy_path=policy_path_resolved,
         mind_dataset_subdir=args.mind_dataset_subdir,
     )
     
