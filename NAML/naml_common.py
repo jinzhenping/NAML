@@ -3,6 +3,10 @@
 """
 NAML과 공유하는 MIND 경로·전처리·GloVe 임베딩.
 cluster_train_users_kmeans.py 등에서 NAML.py 전체를 import하지 않고 사용.
+
+히스토리 길이: 기본 DEFAULT_MAX_HISTORY_CLICKS(50). import 전에
+환경변수 NAML_MAX_HISTORY_CLICKS 또는 naml_dataset_env.apply_dataset_env_from_argv()가
+설정한 동일 환경변수(--max-history-clicks)로 덮어쓸 수 있다.
 """
 from __future__ import annotations
 
@@ -20,7 +24,39 @@ random.seed(SEED)
 np.random.seed(SEED)
 
 # 모델/데이터 공통 하이퍼파라미터 (NAML.py와 동일)
-MAX_HISTORY_CLICKS = 50
+DEFAULT_MAX_HISTORY_CLICKS = 50
+MAX_HISTORY_CLICKS = DEFAULT_MAX_HISTORY_CLICKS
+
+
+def sync_max_history_clicks_from_env() -> int:
+    """
+    환경변수 NAML_MAX_HISTORY_CLICKS(정수 >= 1)를 MAX_HISTORY_CLICKS 에 반영한다.
+    naml_common 을 import 하기 전에 naml_dataset_env.apply_dataset_env_from_argv() 로
+    argv 의 --max-history-clicks 를 환경에 넣는 것을 권장한다.
+    """
+    global MAX_HISTORY_CLICKS
+    raw = os.environ.get("NAML_MAX_HISTORY_CLICKS")
+    if raw is None or not str(raw).strip():
+        MAX_HISTORY_CLICKS = DEFAULT_MAX_HISTORY_CLICKS
+        return MAX_HISTORY_CLICKS
+    try:
+        v = int(str(raw).strip())
+    except ValueError:
+        print(
+            f"[naml_common] 경고: NAML_MAX_HISTORY_CLICKS={raw!r} 무시, 기본 {DEFAULT_MAX_HISTORY_CLICKS} 사용",
+            flush=True,
+        )
+        MAX_HISTORY_CLICKS = DEFAULT_MAX_HISTORY_CLICKS
+        return MAX_HISTORY_CLICKS
+    if v < 1:
+        print(
+            f"[naml_common] 경고: NAML_MAX_HISTORY_CLICKS={v} 무시(>=1 필요), 기본 {DEFAULT_MAX_HISTORY_CLICKS} 사용",
+            flush=True,
+        )
+        MAX_HISTORY_CLICKS = DEFAULT_MAX_HISTORY_CLICKS
+        return MAX_HISTORY_CLICKS
+    MAX_HISTORY_CLICKS = v
+    return MAX_HISTORY_CLICKS
 MAX_SENT_LENGTH = 30
 MAX_BODY_LENGTH = 300
 npratio = 4
@@ -122,6 +158,8 @@ def _resolve_mind_filenames():
 
 MIND_NEWS_FILENAME, MIND_TRAIN_FILENAME, MIND_TEST_FILENAME = _resolve_mind_filenames()
 
+sync_max_history_clicks_from_env()
+
 
 def mind_data_path(filename: str) -> str:
     """프로젝트 루트 기준 dataset/<MIND_DATASET_SUBDIR>/<filename>"""
@@ -132,6 +170,7 @@ print(
     f"[데이터셋] dataset/{MIND_DATASET_SUBDIR}/ → "
     f"news={MIND_NEWS_FILENAME}, train={MIND_TRAIN_FILENAME}, test={MIND_TEST_FILENAME}"
 )
+print(f"[NAML] max_history_clicks={MAX_HISTORY_CLICKS}", flush=True)
 
 
 def preprocess_user_file(

@@ -7,6 +7,7 @@ NAML 실제 본문만 사용: 하이퍼파라미터 탐색 후 테스트 MRR이 
 실행 (저장소 루트에서):
 python NAML/naml_tune_actual.py
 python NAML/naml_tune_actual.py --trials 24 --epochs-per-trial 10 --seed 42
+# 히스토리 길이(기본 50): --max-history-clicks 32 또는 환경변수 NAML_MAX_HISTORY_CLICKS=32
 # 예산 절약: 24조합을 2에폭으로 걸러서 상위 5개만 10에폭 재학습
 python NAML/naml_tune_actual.py --two-phase --trials 108 --screening-epochs 3 \
     --refine-top-k 10 --epochs-per-trial 10 \
@@ -20,7 +21,8 @@ python NAML/naml_tune_actual.py --two-phase --trials 108 --screening-epochs 3 \
     --resume-log saved_models/Adressa_2000/naml_tune_actual_log.json \
     --out-log saved_models/Adressa_2000/naml_tune_actual_log.json \
     --out-weights saved_models/Adressa_2000/NAML_adressa_2000_actual.h5 \
-    --mind-dataset-subdir Adressa_2000
+    --mind-dataset-subdir Adressa_2000 \
+    --max-history-clicks 30
 
 """
 from __future__ import annotations
@@ -539,6 +541,13 @@ def main():
         default=None,
         help="dataset/ 하위 폴더 (예: MIND_2000, Adressa_2000). import 전 argv에서도 인식; 미지정 시 MIND_2000",
     )
+    ap.add_argument(
+        "--max-history-clicks",
+        type=int,
+        default=None,
+        metavar="N",
+        help="사용자 클릭 히스토리 최대 길이(기본 50). 프로세스 시작 시 argv에서 apply_dataset_env_from_argv 가 반영",
+    )
     ap.add_argument("--seed", type=int, default=SEED)
     ap.add_argument(
         "--out-weights",
@@ -832,6 +841,7 @@ def main():
         "global_best_mrr": global_best_mrr,
         "global_best_hparams": global_best_hp,
         "trials": log_trials,
+        "max_history_clicks": int(MAX_HISTORY_CLICKS),
         "epochs_per_trial": args.epochs_per_trial,
         "batch_size": args.batch_size,
         "seed": args.seed,

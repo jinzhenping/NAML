@@ -26,6 +26,14 @@
     --output user_preference/expected_body/MIND_2000/test_3cluster_11_13_8 \
     --mind-dataset-subdir MIND_2000
 
+python user_preference/generate_expected_body_test_cluster_policies.py \
+    --cluster-csv NAML/user_kmeans_k3_Adressa_2000_test.csv \
+    --policy-files coordinator_LLM/Adressa_2000_output_cluster0/15.txt \
+                 coordinator_LLM/Adressa_2000_output_cluster1/10.txt \
+                 coordinator_LLM/Adressa_2000_output_cluster2/1.txt \
+    --output user_preference/expected_body/Adressa_2000/test_3cluster_15_10_1 \
+    --mind-dataset-subdir Adressa_2000
+    
   후보 제목 LLM 추상화를 쓰려면:
 
   ... 동일 옵션 ... --title-abstraction

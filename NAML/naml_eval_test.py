@@ -26,6 +26,8 @@ python NAML/naml_eval_test.py \
 # 학습(튜닝)과 동일하게 평가에서도 앞 N문장만 쓰려면 명시: --expected-body-first-n-sentences 3
 # 미지정이면 평가·OOV는 전체 기대본문 문자열 사용(튜닝 로그의 N은 자동 반영하지 않음)
 
+# 가중치와 동일한 browsed 히스토리 길이: --max-history-clicks N 또는 NAML_MAX_HISTORY_CLICKS (import 전 argv 권장)
+#
 # naml_tune_actual.py 로 튜닝·저장한 가중치는 CNN 폭 등 구조가 다를 수 있음 → 같은 로그를 넘겨야 함:
 #   --tune-log saved_models/naml_tune_actual_log.json
 #
@@ -291,6 +293,13 @@ def main() -> None:
     parser.add_argument("--attention-dense-dim", type=int, default=None)
     parser.add_argument("--category-emb-dim", type=int, default=None)
     parser.add_argument("--mind-dataset-subdir", type=str, default=None)
+    parser.add_argument(
+        "--max-history-clicks",
+        type=int,
+        default=None,
+        metavar="N",
+        help="가중치 학습 시와 동일한 히스토리 길이(기본 50). 스크립트 시작 argv에 있어야 naml_common import 시 반영됨",
+    )
     parser.add_argument(
         "--mind-test-tsv",
         type=str,

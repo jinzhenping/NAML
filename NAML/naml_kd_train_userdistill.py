@@ -516,6 +516,14 @@ def main() -> None:
     )
     ap.add_argument("--mind-dataset-subdir", type=str, default=None)
     ap.add_argument(
+        "--max-history-clicks",
+        type=int,
+        default=None,
+        metavar="N",
+        help="사용자 클릭 히스토리 최대 길이(기본 50). import 전 argv에 있어야 하며, "
+        "미지정 시 환경변수 NAML_MAX_HISTORY_CLICKS 를 사용한다.",
+    )
+    ap.add_argument(
         "--lambda-distill-user",
         type=float,
         default=0.5,

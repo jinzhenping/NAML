@@ -6,6 +6,9 @@ naml_common import 이전에만 사용: dataset/<subdir>용 MIND_* 환경변수 
 
 naml_common._resolve_mind_filenames() 는 MIND_DATASET_SUBDIR 및
 (선택) MIND_NEWS_FILENAME / MIND_TRAIN_FILENAME / MIND_TEST_FILENAME 환경변수를 읽는다.
+
+--max-history-clicks N 이 있으면 NAML_MAX_HISTORY_CLICKS 환경변수를 설정한다.
+naml_common 이 import 될 때 sync_max_history_clicks_from_env() 가 이를 반영한다.
 """
 from __future__ import annotations
 
@@ -68,7 +71,8 @@ def apply_dataset_env_from_argv(argv: Optional[List[str]] = None) -> str:
     Returns: 적용된 dataset 하위 폴더명 (예: MIND_2000).
     """
     argv = argv if argv is not None else __import__("sys").argv
-    cli_sub = _argv_value(list(argv), "--mind-dataset-subdir")
+    argv_list = list(argv)
+    cli_sub = _argv_value(argv_list, "--mind-dataset-subdir")
     sub = cli_sub or os.environ.get("MIND_DATASET_SUBDIR", "MIND_2000")
     os.environ["MIND_DATASET_SUBDIR"] = sub
     if sub in DATASET_FILE_PRESETS:
@@ -76,4 +80,7 @@ def apply_dataset_env_from_argv(argv: Optional[List[str]] = None) -> str:
         os.environ.setdefault("MIND_NEWS_FILENAME", n)
         os.environ.setdefault("MIND_TRAIN_FILENAME", tr)
         os.environ.setdefault("MIND_TEST_FILENAME", te)
+    cli_hist = _argv_value(argv_list, "--max-history-clicks")
+    if cli_hist is not None:
+        os.environ["NAML_MAX_HISTORY_CLICKS"] = cli_hist.strip()
     return sub

@@ -21,7 +21,7 @@ NAML 지식 증류 학습: L_KD = L_rec + lambda * L_distill
   CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=1 python NAML/naml_kd_train.py --teacher-weights saved_models/NAML_mind_2000.h5 \
     --expected-body-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
     --expected-body-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
-    --mind-dataset-subdir MIND_2000 --epochs 5 --lambda-distill 0.5 \
+    --mind-dataset-subdir MIND_2000 --max-history-clicks 50 --epochs 5 --lambda-distill 0.5 \
     --output-weights saved_models/NAML_mind_2000_kd_5.h5
 
   # 에폭마다 테스트 평가 끄기: --no-epoch-eval
@@ -44,6 +44,10 @@ if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 if str(_ROOT / "NAML") not in sys.path:
     sys.path.insert(0, str(_ROOT / "NAML"))
+
+from naml_dataset_env import apply_dataset_env_from_argv
+
+apply_dataset_env_from_argv()
 
 from eval_cluster_batch import load_expected_bodies_from_train_dir
 from eval_test_expected import calc_metrics_from_scores, load_expected_bodies_from_dir
@@ -429,6 +433,14 @@ def main() -> None:
         help="기대본문 JSON 루트 (user_*/news_*.json), train 전용",
     )
     ap.add_argument("--mind-dataset-subdir", type=str, default=None)
+    ap.add_argument(
+        "--max-history-clicks",
+        type=int,
+        default=None,
+        metavar="N",
+        help="사용자 클릭 히스토리 최대 길이(기본 50). import 전 argv에 있어야 하며, "
+        "미지정 시 환경변수 NAML_MAX_HISTORY_CLICKS 를 사용한다.",
+    )
     ap.add_argument(
         "--lambda-distill",
         type=float,

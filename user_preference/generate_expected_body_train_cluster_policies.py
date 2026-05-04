@@ -28,6 +28,14 @@
     --mind-dataset-subdir MIND_2000 \
     --max-run-attempts 5
 
+python user_preference/generate_expected_body_train_cluster_policies.py \
+    --cluster-csv NAML/user_kmeans_k3_Adressa_2000.csv \
+    --policy-files coordinator_LLM/Adressa_2000_output_cluster0/15.txt \
+                 coordinator_LLM/Adressa_2000_output_cluster1/10.txt \
+                 coordinator_LLM/Adressa_2000_output_cluster2/1.txt \
+    --output user_preference/expected_body/Adressa_2000/train_3cluster_15_10_1 \
+    --mind-dataset-subdir Adressa_2000
+
   후보 제목 LLM 추상화를 쓰려면:
 
   ... 동일 옵션 ... --title-abstraction

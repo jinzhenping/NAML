@@ -11,6 +11,7 @@ teacher model (actual-body) 학습을 “고정된 hparams 1조합”만으로 �
   python NAML/train_teacher_actual_fixed_hparams.py \
     --tune-log saved_models/Adressa_2000/naml_tune_expected_log.json \
     --mind-dataset-subdir Adressa_2000 \
+    --max-history-clicks 50 \
     --epochs 10 \
     --batch-size 64 \
     --seed 42 \
@@ -41,7 +42,7 @@ from naml_dataset_env import apply_dataset_env_from_argv
 # MIND_DATASET_SUBDIR 기준 파일명이 올바르게 고정됩니다.
 apply_dataset_env_from_argv()
 
-from naml_common import preprocess_news_file, preprocess_user_file, get_embedding
+from naml_common import MAX_HISTORY_CLICKS, preprocess_news_file, preprocess_user_file, get_embedding
 
 
 def _resolve_project_path(p: str) -> str:
@@ -72,6 +73,13 @@ def main() -> None:
         help="expected-body 튜닝 로그 json 경로 (global_best_hparams를 읽음)",
     )
     ap.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
+    ap.add_argument(
+        "--max-history-clicks",
+        type=int,
+        default=None,
+        metavar="N",
+        help="클릭 히스토리 최대 길이(기본 50). import 전 argv에서 반영; 환경변수 NAML_MAX_HISTORY_CLICKS 도 동일",
+    )
     ap.add_argument("--epochs", type=int, default=10)
     ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument("--seed", type=int, default=42)
@@ -249,6 +257,7 @@ def main() -> None:
             json.dump(
                 {
                     "mind_dataset_subdir": args.mind_dataset_subdir,
+                    "max_history_clicks": int(MAX_HISTORY_CLICKS),
                     "tune_log": args.tune_log,
                     "fixed_hparams": hp,
                     "epochs": args.epochs,
