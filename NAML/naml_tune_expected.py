@@ -21,18 +21,15 @@ python NAML/naml_tune_expected.py --two-phase --trials 108 --screening-epochs 3 
     --out-weights saved_models/MIND_2000/NAML_mind_2000_expected_preference.h5 \
     --mind-dataset-subdir MIND_2000
 
-
-요청 조합 고정 탐색(필터×커널만):
-python NAML/naml_tune_expected.py \
-    --use-expected-body --expected-body-first-n-sentences 3 \
-    --expected-train-dir body_generation/output/MIND_2000/train_3cluster_11_13_8 \
-    --expected-test-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
-    --fixed-filter-kernel-grid \
-    --grid-cnn-filters 256 384 512 --grid-cnn-kernel-sizes 3 4 \
-    --fixed-learning-rate 0.001 --fixed-dropout-rate 0.25 \
-    --fixed-attention-dense-dim 160 --fixed-category-emb-dim 64 --trials 6 \
-    --out-log saved_models/naml_tune_expected_log.json \
-    --out-weights saved_models/NAML_mind_2000_expected.h5
+python NAML/naml_tune_expected.py --two-phase --trials 108 --screening-epochs 3 \
+    --refine-top-k 10 --epochs-per-trial 10  --resume-log saved_models/Adressa_2000/naml_tune_expected_log.json \
+    --use-expected-body \
+    --expected-train-dir user_preference/expected_body/Adressa_2000/train_3cluster_15_10_1 \
+    --expected-test-dir user_preference/expected_body/Adressa_2000/test_3cluster_15_10_1 \
+    --expected-body-first-n-sentences 0 \
+    --out-log saved_models/Adressa_2000/naml_tune_expected_log.json \
+    --out-weights saved_models/Adressa_2000/NAML_adressa_2000_expected.h5 \
+    --mind-dataset-subdir Adressa_2000
 
 기본적으로 이산 그리드를 한 번 섞은 뒤 순서대로 쓰므로, trials가 그리드 크기(6×5×4×3×4×3=4320) 이하면
 같은 하이퍼파라미터 조합이 두 번 나오지 않는다. 예전 방식(매 trial 독립 무작위, 중복 가능)은
