@@ -10,6 +10,7 @@ NAML 하이퍼파라미터 탐색:
 python NAML/naml_tune_expected.py
 python NAML/naml_tune_expected.py --trials 24 --epochs-per-trial 10 --seed 42
 # 히스토리 길이(기본 50): --max-history-clicks 32 또는 환경변수 NAML_MAX_HISTORY_CLICKS=32
+# 동일 조합을 시드만 바꿔 여러 번: --repeat-per-combo 5 (trial_seed = seed + run_index*9973)
 # 예산 절약: 24조합을 2에폭으로 걸러서 상위 5개만 10에폭 재학습
 python NAML/naml_tune_expected.py --two-phase --trials 108 --screening-epochs 3 \
     --refine-top-k 10 --epochs-per-trial 10  --resume-log saved_models/naml_tune_expected_preference_log.json \
@@ -674,6 +675,14 @@ def main():
     )
     ap.add_argument("--seed", type=int, default=SEED)
     ap.add_argument(
+        "--repeat-per-combo",
+        type=int,
+        default=1,
+        metavar="N",
+        help="같은 하이퍼파라미터 조합을 N번 반복 실행한다. 매 실행마다 trial_seed=seed+9973*실행순번으로 달라져 "
+        "비결정적 환경에서도 여러 번 돌려 최고 MRR일 때 가중치를 고를 수 있다. (기본 1)",
+    )
+    ap.add_argument(
         "--out-weights",
         type=str,
         default=os.path.join(_ROOT, "saved_models", "NAML_mind_2000.h5"),
@@ -906,6 +915,14 @@ def main():
                 f"경고: 고유 그리드 조합은 {grid_n}개인데 trials={args.trials} → "
                 f"처음 {grid_n}개는 중복 없음, 이후는 무작위 보충(중복 가능)."
             )
+    repeat_per_combo = max(1, int(args.repeat_per_combo))
+    if repeat_per_combo > 1:
+        trial_hparams = [hp for hp in trial_hparams for _ in range(repeat_per_combo)]
+        print(
+            f"--repeat-per-combo={repeat_per_combo}: 각 조합당 {repeat_per_combo}회 실행 "
+            f"(총 실행 {len(trial_hparams)}회, trial_seed는 순번별 증가)",
+            flush=True,
+        )
     run_trials = len(trial_hparams)
     if run_trials == 0:
         print("실행할 새 조합이 없습니다. --resume-log 를 바꾸거나 --seed/--trials 설정을 조정하세요.")
@@ -960,6 +977,7 @@ def main():
             {
                 "phase": phase_label,
                 "hparams": hp,
+                "trial_seed": int(trial_seed),
                 "epochs_in_phase": epochs,
                 "best_mrr_in_trial": best_mrr,
                 "best_epoch": best_epoch_metrics,
@@ -1022,6 +1040,7 @@ def main():
                 {
                     "phase": "screening",
                     "hparams": hp,
+                    "trial_seed": int(trial_seed),
                     "epochs_in_phase": args.screening_epochs,
                     "best_mrr_in_trial": best_mrr,
                     "best_epoch": best_epoch_metrics,
@@ -1071,6 +1090,7 @@ def main():
         "epochs_per_trial": args.epochs_per_trial,
         "batch_size": args.batch_size,
         "seed": args.seed,
+        "repeat_per_combo": repeat_per_combo,
         "hparam_grid_size": grid_n,
         "allow_duplicate_hparams": bool(args.allow_duplicate_hparams),
         "resume_log": resume_log_path,
