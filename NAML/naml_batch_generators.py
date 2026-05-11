@@ -11,7 +11,21 @@ import numpy as np
 from nltk.tokenize import word_tokenize
 
 import naml_common as _naml_common_runtime
-from naml_common import MAX_HISTORY_CLICKS, clip_expected_body_to_first_sentences
+from naml_common import MAX_BODY_LENGTH, MAX_HISTORY_CLICKS, clip_expected_body_to_first_sentences
+
+
+def history_body_ids_from_title_row(title_row: np.ndarray, body_max_len: int = MAX_BODY_LENGTH) -> np.ndarray:
+    """히스토리 슬롯에서 실제 본문 대신 제목 토큰만 body 길이에 패딩해 넣을 때 사용."""
+    row = np.asarray(title_row, dtype=np.int32).reshape(-1)
+    nz = np.flatnonzero(row)
+    if nz.size == 0:
+        return np.zeros(body_max_len, dtype=np.int32)
+    ids = row[: int(nz[-1]) + 1]
+    if len(ids) > body_max_len:
+        ids = ids[:body_max_len]
+    out = np.zeros(body_max_len, dtype=np.int32)
+    out[: len(ids)] = ids
+    return out
 
 
 def _norm_expected_body_key(uid, nid):
@@ -42,6 +56,7 @@ def generate_batch_data_train(
     news_index_reverse=None,
     use_expected_body_positive_only=False,
     shuffle=True,
+    history_body_title_only=False,
 ):
     if news_index_reverse is None:
         news_index_reverse = {v: k for k, v in news_index.items()}
@@ -122,7 +137,20 @@ def generate_batch_data_train(
                 user_pos_indices = np.array(all_user_pos[idx], dtype="int32")
                 browsed_news = news_words[user_pos_indices]
                 browsed_news_split = [np.expand_dims(browsed_news[k], axis=0) for k in range(browsed_news.shape[0])]
-                browsed_news_body = news_body[user_pos_indices]
+                if history_body_title_only:
+                    browsed_news_body = np.stack(
+                        [
+                            (
+                                np.zeros(MAX_BODY_LENGTH, dtype=np.int32)
+                                if int(user_pos_indices[k]) == 0
+                                else history_body_ids_from_title_row(news_words[int(user_pos_indices[k])])
+                            )
+                            for k in range(len(user_pos_indices))
+                        ],
+                        axis=0,
+                    )
+                else:
+                    browsed_news_body = news_body[user_pos_indices]
                 browsed_news_body_split = [np.expand_dims(browsed_news_body[k], axis=0) for k in range(browsed_news_body.shape[0])]
                 browsed_news_vertical = news_v[user_pos_indices]
                 browsed_news_vertical_split = [np.expand_dims(browsed_news_vertical[k], axis=0) for k in range(browsed_news_vertical.shape[0])]
@@ -199,6 +227,7 @@ def generate_batch_data_test(
     all_test_user_pos_override=None,
     *,
     expected_body_clip_n_sentences=None,
+    history_body_title_only=False,
 ):
     if news_index_reverse is None:
         news_index_reverse = {v: k for k, v in news_index.items()}
@@ -263,7 +292,20 @@ def generate_batch_data_test(
                 user_pos_indices = np.array(user_pos[idx], dtype="int32")
                 browsed_news = news_words[user_pos_indices]
                 browsed_news_split = [np.expand_dims(browsed_news[k], axis=0) for k in range(browsed_news.shape[0])]
-                browsed_news_body = news_body[user_pos_indices]
+                if history_body_title_only:
+                    browsed_news_body = np.stack(
+                        [
+                            (
+                                np.zeros(MAX_BODY_LENGTH, dtype=np.int32)
+                                if int(user_pos_indices[k]) == 0
+                                else history_body_ids_from_title_row(news_words[int(user_pos_indices[k])])
+                            )
+                            for k in range(len(user_pos_indices))
+                        ],
+                        axis=0,
+                    )
+                else:
+                    browsed_news_body = news_body[user_pos_indices]
                 browsed_news_body_split = [
                     np.expand_dims(browsed_news_body[k], axis=0) for k in range(browsed_news_body.shape[0])
                 ]

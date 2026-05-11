@@ -76,6 +76,7 @@ from naml_model_builder import build_naml_models
 from naml_batch_generators import (
     generate_batch_data_train as generate_batch_data_train_expected,
     generate_batch_data_test as generate_batch_data_test_expected,
+    history_body_ids_from_title_row,
 )
 
 NCAND = 1 + npratio
@@ -170,6 +171,7 @@ def generate_batch_data_train_actual(
     news_v,
     news_sv,
     batch_size,
+    history_body_title_only: bool = False,
 ):
     max_hist = MAX_HISTORY_CLICKS
     inputid = np.arange(len(all_label))
@@ -210,7 +212,20 @@ def generate_batch_data_train_actual(
                 user_pos_indices = np.array(all_user_pos[idx], dtype="int32")
                 browsed_news = news_words[user_pos_indices]
                 browsed_news_split = [np.expand_dims(browsed_news[k], axis=0) for k in range(browsed_news.shape[0])]
-                browsed_news_body = news_body[user_pos_indices]
+                if history_body_title_only:
+                    browsed_news_body = np.stack(
+                        [
+                            (
+                                np.zeros(_naml_common.MAX_BODY_LENGTH, dtype=np.int32)
+                                if int(user_pos_indices[k]) == 0
+                                else history_body_ids_from_title_row(news_words[int(user_pos_indices[k])])
+                            )
+                            for k in range(len(user_pos_indices))
+                        ],
+                        axis=0,
+                    )
+                else:
+                    browsed_news_body = news_body[user_pos_indices]
                 browsed_news_body_split = [
                     np.expand_dims(browsed_news_body[k], axis=0) for k in range(browsed_news_body.shape[0])
                 ]
@@ -278,6 +293,7 @@ def generate_batch_data_test_actual(
     news_v,
     news_sv,
     batch_size,
+    history_body_title_only: bool = False,
 ):
     max_hist = MAX_HISTORY_CLICKS
     inputid = np.arange(len(all_test_label))
@@ -307,7 +323,20 @@ def generate_batch_data_test_actual(
                 user_pos_indices = np.array(all_test_user_pos[idx], dtype="int32")
                 browsed_news = news_words[user_pos_indices]
                 browsed_news_split = [np.expand_dims(browsed_news[k], axis=0) for k in range(browsed_news.shape[0])]
-                browsed_news_body = news_body[user_pos_indices]
+                if history_body_title_only:
+                    browsed_news_body = np.stack(
+                        [
+                            (
+                                np.zeros(_naml_common.MAX_BODY_LENGTH, dtype=np.int32)
+                                if int(user_pos_indices[k]) == 0
+                                else history_body_ids_from_title_row(news_words[int(user_pos_indices[k])])
+                            )
+                            for k in range(len(user_pos_indices))
+                        ],
+                        axis=0,
+                    )
+                else:
+                    browsed_news_body = news_body[user_pos_indices]
                 browsed_news_body_split = [
                     np.expand_dims(browsed_news_body[k], axis=0) for k in range(browsed_news_body.shape[0])
                 ]
@@ -366,6 +395,7 @@ def evaluate_session_metrics(
     all_test_userid_str=None,
     all_test_newsid_str=None,
     news_index=None,
+    history_body_title_only: bool = False,
 ):
     n = len(all_test_id)
     steps = (n + batch_size - 1) // batch_size
@@ -385,6 +415,7 @@ def evaluate_session_metrics(
             expected_bodies=expected_bodies_test,
             all_userid_str=all_test_userid_str,
             all_newsid_str=all_test_newsid_str,
+            history_body_title_only=history_body_title_only,
         )
     else:
         gen = generate_batch_data_test_actual(
@@ -397,6 +428,7 @@ def evaluate_session_metrics(
             news_v,
             news_sv,
             batch_size,
+            history_body_title_only=history_body_title_only,
         )
     click_score = model_test.predict(gen, steps=steps, verbose=0)
     all_mrr, all_ndcg, all_hit1 = [], [], []
@@ -564,6 +596,8 @@ def run_trial(
     all_test_userid_str=None,
     all_test_newsid_str=None,
     news_index=None,
+    history_body_title_only_train: bool = False,
+    eval_also_full_history_body: bool = False,
 ):
     np.random.seed(trial_seed)
     random.seed(trial_seed)
@@ -609,6 +643,7 @@ def run_trial(
                 expected_bodies=expected_bodies_train,
                 all_userid_str=all_train_userid_str,
                 all_train_newsid_str=all_train_newsid_str,
+                history_body_title_only=history_body_title_only_train,
             )
         else:
             traingen = generate_batch_data_train_actual(
@@ -621,6 +656,7 @@ def run_trial(
                 news_v,
                 news_sv,
                 batch_size,
+                history_body_title_only=history_body_title_only_train,
             )
         model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch, verbose=0)
         current_metrics = evaluate_session_metrics(
@@ -641,12 +677,37 @@ def run_trial(
             all_test_userid_str=all_test_userid_str,
             all_test_newsid_str=all_test_newsid_str,
             news_index=news_index,
+            history_body_title_only=history_body_title_only_train,
         )
+        merged_metrics = dict(current_metrics)
+        if eval_also_full_history_body and history_body_title_only_train:
+            full_hist_metrics = evaluate_session_metrics(
+                model_test,
+                word_dict,
+                all_test_pn,
+                all_test_label,
+                all_test_id,
+                all_test_user_pos,
+                all_test_index,
+                news_words,
+                news_body,
+                news_v,
+                news_sv,
+                batch_size,
+                use_expected_body=use_expected_body,
+                expected_bodies_test=expected_bodies_test,
+                all_test_userid_str=all_test_userid_str,
+                all_test_newsid_str=all_test_newsid_str,
+                news_index=news_index,
+                history_body_title_only=False,
+            )
+            merged_metrics["eval_history_full_body"] = dict(full_hist_metrics)
+
         mrr = current_metrics["MRR"]
         if mrr > best_mrr:
             best_mrr = mrr
             best_weights = model.get_weights()
-            best_metrics = current_metrics
+            best_metrics = merged_metrics
 
     if best_weights is not None:
         model.set_weights(best_weights)
@@ -749,6 +810,18 @@ def main():
         help="기대본문에서 앞 N문장만 사용 (0=전체). --use-expected-body 일 때 적용",
     )
     ap.add_argument(
+        "--history-body-title-only",
+        action="store_true",
+        help="브라우즈 히스토리의 본문 슬롯에 실제/기대 본문 대신 해당 뉴스 제목 토큰만 패딩. "
+        "제목 타워·카테고리 등은 그대로. --use-expected-body 여부와 무관.",
+    )
+    ap.add_argument(
+        "--eval-also-full-history-body",
+        action="store_true",
+        help="--history-body-title-only 와 함께 사용: 같은 모델로 히스토리 본문을 실제 길이로 둔 설정으로 추가 평가. "
+        "로그 trial 의 best_epoch.eval_history_full_body 에 저장. 모델 선택(MRR·가중치 저장)은 여전히 제목만 본문인 평가 기준.",
+    )
+    ap.add_argument(
         "--fixed-filter-kernel-grid",
         action="store_true",
         help="cnn_filters x cnn_kernel_size 조합만 순회하고 나머지 hparams는 고정값 사용",
@@ -779,6 +852,8 @@ def main():
     tf.random.set_seed(args.seed)
 
     use_expected_body = bool(args.use_expected_body)
+    history_body_title_only_train = bool(args.history_body_title_only)
+    eval_also_full_history_body = bool(args.eval_also_full_history_body)
     expected_bodies_train = None
     expected_bodies_test = None
     if use_expected_body:
@@ -837,7 +912,31 @@ def main():
     rng = random.Random(args.seed)
     global_best_mrr = -1.0
     global_best_hp: dict | None = None
+    global_best_primary_metrics: dict | None = None
+    global_best_secondary_mrr = -1.0
+    global_best_secondary_metrics: dict | None = None
+    global_best_secondary_hp: dict | None = None
     log_trials = []
+
+    def _track_global_secondary_best(best_epoch_metrics: dict, hp: dict) -> None:
+        nonlocal global_best_secondary_mrr, global_best_secondary_metrics, global_best_secondary_hp
+        if not (eval_also_full_history_body and history_body_title_only_train):
+            return
+        ef = best_epoch_metrics.get("eval_history_full_body")
+        if not isinstance(ef, dict):
+            return
+        try:
+            smrr = float(ef["MRR"])
+        except (TypeError, ValueError, KeyError):
+            return
+        if smrr > global_best_secondary_mrr:
+            global_best_secondary_mrr = smrr
+            global_best_secondary_metrics = {
+                "MRR": float(ef["MRR"]),
+                "NDCG@5": float(ef["NDCG@5"]),
+                "Hit@1": float(ef["Hit@1"]),
+            }
+            global_best_secondary_hp = dict(hp)
 
     grid_n = _hparam_grid_size()
     seen_hparam_keys: set[tuple] = set()
@@ -936,7 +1035,7 @@ def main():
         trial_seed: int,
         phase_label: str,
     ) -> None:
-        nonlocal global_best_mrr, global_best_hp
+        nonlocal global_best_mrr, global_best_hp, global_best_primary_metrics
         print(f"\n--- [{phase_label}] {trial_idx + 1}/{total_in_phase}  hparams={hp} ---")
         best_mrr, best_epoch_metrics, model = run_trial(
             hp,
@@ -968,11 +1067,20 @@ def main():
             all_test_userid_str=all_test_userid_str,
             all_test_newsid_str=all_test_newsid_str,
             news_index=news_index,
+            history_body_title_only_train=history_body_title_only_train,
+            eval_also_full_history_body=eval_also_full_history_body,
         )
-        print(
+        _line = (
             f"  trial best MRR (best epoch in trial): {best_mrr:.6f}  | best epoch metrics: "
             f"MRR={best_epoch_metrics['MRR']:.6f} NDCG@5={best_epoch_metrics['NDCG@5']:.6f} Hit@1={best_epoch_metrics['Hit@1']:.6f}"
         )
+        _ef = best_epoch_metrics.get("eval_history_full_body")
+        if isinstance(_ef, dict):
+            _line += (
+                f"  | eval hist full-body MRR={_ef['MRR']:.6f} "
+                f"NDCG@5={_ef['NDCG@5']:.6f} Hit@1={_ef['Hit@1']:.6f}"
+            )
+        print(_line)
         log_trials.append(
             {
                 "phase": phase_label,
@@ -983,9 +1091,15 @@ def main():
                 "best_epoch": best_epoch_metrics,
             }
         )
+        _track_global_secondary_best(best_epoch_metrics, hp)
         if best_mrr > global_best_mrr:
             global_best_mrr = best_mrr
             global_best_hp = dict(hp)
+            global_best_primary_metrics = {
+                "MRR": float(best_epoch_metrics["MRR"]),
+                "NDCG@5": float(best_epoch_metrics["NDCG@5"]),
+                "Hit@1": float(best_epoch_metrics["Hit@1"]),
+            }
             model.save_weights(args.out_weights)
             print(f"  [전역 갱신] 저장 → {args.out_weights}  MRR={global_best_mrr:.6f}")
         K.clear_session()
@@ -1031,11 +1145,20 @@ def main():
                 all_test_userid_str=all_test_userid_str,
                 all_test_newsid_str=all_test_newsid_str,
                 news_index=news_index,
+                history_body_title_only_train=history_body_title_only_train,
+                eval_also_full_history_body=eval_also_full_history_body,
             )
-            print(
+            _line_sc = (
                 f"  trial best MRR (best epoch in trial): {best_mrr:.6f}  | best epoch metrics: "
                 f"MRR={best_epoch_metrics['MRR']:.6f} NDCG@5={best_epoch_metrics['NDCG@5']:.6f} Hit@1={best_epoch_metrics['Hit@1']:.6f}"
             )
+            _ef_sc = best_epoch_metrics.get("eval_history_full_body")
+            if isinstance(_ef_sc, dict):
+                _line_sc += (
+                    f"  | eval hist full-body MRR={_ef_sc['MRR']:.6f} "
+                    f"NDCG@5={_ef_sc['NDCG@5']:.6f} Hit@1={_ef_sc['Hit@1']:.6f}"
+                )
+            print(_line_sc)
             log_trials.append(
                 {
                     "phase": "screening",
@@ -1046,9 +1169,15 @@ def main():
                     "best_epoch": best_epoch_metrics,
                 }
             )
+            _track_global_secondary_best(best_epoch_metrics, hp)
             if best_mrr > global_best_mrr:
                 global_best_mrr = best_mrr
                 global_best_hp = dict(hp)
+                global_best_primary_metrics = {
+                    "MRR": float(best_epoch_metrics["MRR"]),
+                    "NDCG@5": float(best_epoch_metrics["NDCG@5"]),
+                    "Hit@1": float(best_epoch_metrics["Hit@1"]),
+                }
                 model.save_weights(args.out_weights)
                 print(f"  [전역 갱신] 저장 → {args.out_weights}  MRR={global_best_mrr:.6f}")
             screening_rows.append((best_mrr, dict(hp), best_epoch_metrics))
@@ -1079,6 +1208,22 @@ def main():
     summary = {
         "global_best_mrr": global_best_mrr,
         "global_best_hparams": global_best_hp,
+        "global_best_primary_metrics": global_best_primary_metrics,
+        "global_best_secondary_mrr": (
+            float(global_best_secondary_mrr)
+            if eval_also_full_history_body and history_body_title_only_train
+            else None
+        ),
+        "global_best_secondary_metrics": (
+            global_best_secondary_metrics
+            if eval_also_full_history_body and history_body_title_only_train
+            else None
+        ),
+        "global_best_secondary_hparams": (
+            global_best_secondary_hp
+            if eval_also_full_history_body and history_body_title_only_train
+            else None
+        ),
         "trials": log_trials,
         "max_history_clicks": int(MAX_HISTORY_CLICKS),
         "use_expected_body": use_expected_body,
@@ -1087,6 +1232,8 @@ def main():
         "expected_body_first_n_sentences": (
             int(args.expected_body_first_n_sentences) if use_expected_body else None
         ),
+        "history_body_title_only": history_body_title_only_train,
+        "eval_also_full_history_body": eval_also_full_history_body,
         "epochs_per_trial": args.epochs_per_trial,
         "batch_size": args.batch_size,
         "seed": args.seed,
@@ -1133,9 +1280,40 @@ def main():
             summary["num_trials_total_after_append"] = len(merged_trials)
     with open(args.out_log, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
-    print(f"\n완료. 전역 최고 MRR={global_best_mrr:.6f}, 로그: {args.out_log}")
+
+    _lbl1 = (
+        "히스토리 본문=제목 토큰"
+        if history_body_title_only_train
+        else "히스토리 본문=전체(기본)"
+    )
+    print(f"\n완료. 로그: {args.out_log}")
+    print("\n--- 전역 최고 성능 ---")
+    if global_best_primary_metrics is not None:
+        pm = global_best_primary_metrics
+        print(
+            f"  [평가1 · {_lbl1}] MRR={pm['MRR']:.6f}  "
+            f"NDCG@5={pm['NDCG@5']:.6f}  Hit@1={pm['Hit@1']:.6f}"
+        )
+    else:
+        print(f"  [평가1 · {_lbl1}] MRR={global_best_mrr:.6f}")
+    if eval_also_full_history_body and history_body_title_only_train:
+        if global_best_secondary_metrics is not None:
+            sm = global_best_secondary_metrics
+            print(
+                "  [평가2 · 히스토리 본문=전체] "
+                f"MRR={sm['MRR']:.6f}  NDCG@5={sm['NDCG@5']:.6f}  Hit@1={sm['Hit@1']:.6f}"
+            )
+        else:
+            print("  [평가2 · 히스토리 본문=전체] (기록 없음)")
+    print("\n가중치 저장 기준: 평가1 MRR 최대 (위 평가1과 동일 trial은 아님 — 서로 다른 epoch/hparams일 수 있음)")
     if global_best_hp:
-        print(f"최적 hparams: {global_best_hp}")
+        print(f"저장된 체크포인트의 hparams (평가1 기준): {global_best_hp}")
+    if (
+        eval_also_full_history_body
+        and history_body_title_only_train
+        and global_best_secondary_hp is not None
+    ):
+        print(f"평가2 전역 최고일 때의 hparams (참고): {global_best_secondary_hp}")
 
 
 if __name__ == "__main__":
