@@ -24,6 +24,16 @@ def mrr_score(y_true, y_score):
     rr_score = y_true / (np.arange(len(y_true)) + 1)
     return np.sum(rr_score) / np.sum(y_true)
 
+
+def hit_at_1_score(y_true, y_score):
+    """예측 점수 상위 1위 후보가 클릭(라벨 1)이면 1, 아니면 0 (세션 단위 후 평균)."""
+    y_true = np.asarray(y_true, dtype=np.float64)
+    y_score = np.asarray(y_score, dtype=np.float64)
+    order = np.argsort(y_score)[::-1]
+    top = int(order[0])
+    return 1.0 if y_true[top] >= 1.0 else 0.0
+
+
 def parse_line(l):
     impid, ranks = l.strip('\n').split()
     ranks = json.loads(ranks)
@@ -34,6 +44,7 @@ def scoring(truth_f, sub_f):
     mrrs = []
     ndcg5s = []
     ndcg10s = []
+    hit1s = []
     
     line_index = 1
     for lt in truth_f:
@@ -78,15 +89,17 @@ def scoring(truth_f, sub_f):
         mrr = mrr_score(y_true,y_score)
         ndcg5 = ndcg_score(y_true,y_score,5)
         ndcg10 = ndcg_score(y_true,y_score,10)
-        
+        hit1 = hit_at_1_score(y_true, y_score)
+
         aucs.append(auc)
         mrrs.append(mrr)
         ndcg5s.append(ndcg5)
         ndcg10s.append(ndcg10)
-        
+        hit1s.append(hit1)
+
         line_index += 1
 
-    return np.mean(aucs), np.mean(mrrs), np.mean(ndcg5s), np.mean(ndcg10s)
+    return np.mean(aucs), np.mean(mrrs), np.mean(ndcg5s), np.mean(ndcg10s), np.mean(hit1s)
         
 
 if __name__ == '__main__':
@@ -109,7 +122,9 @@ if __name__ == '__main__':
         truth_file = open(os.path.join(truth_dir, "truth.txt"), 'r')
         submission_answer_file = open(os.path.join(submit_dir, "prediction.txt"), 'r')
         
-        auc, mrr, ndcg, ndcg10 = scoring(truth_file, submission_answer_file)
+        _, mrr, ndcg, _, hit1 = scoring(truth_file, submission_answer_file)
 
-        output_file.write("AUC:{:.4f}\nMRR:{:.4f}\nnDCG@5:{:.4f}\nnDCG@10:{:.4f}".format(auc, mrr, ndcg, ndcg10))
+        output_file.write(
+            "MRR:{:.4f}\nNDCG@5:{:.4f}\nHIT@1:{:.4f}".format(mrr, ndcg, hit1)
+        )
         output_file.close()

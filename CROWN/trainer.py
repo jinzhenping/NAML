@@ -6,8 +6,7 @@ import json
 from config import Config
 from corpus import Corpus
 from dataset import Train_Dataset
-from util import AvgMetric
-from util import compute_scores
+from util import AvgMetric, compute_scores, format_result_metrics_line
 from tqdm import tqdm
 import torch
 import torch.nn as nn
@@ -62,11 +61,13 @@ class Trainer:
         self.mrr_results = []
         self.ndcg5_results = []
         self.ndcg10_results = []
+        self.hit1_results = []
         self.best_dev_epoch = 0
         self.best_dev_auc = 0
         self.best_dev_mrr = 0
         self.best_dev_ndcg5 = 0
         self.best_dev_ndcg10 = 0
+        self.best_dev_hit1 = 0
         self.best_dev_avg = AvgMetric(0, 0, 0, 0)
         self.epoch_not_increase = 0
         self.gradient_clip_norm = config.gradient_clip_norm
@@ -160,14 +161,18 @@ class Trainer:
             torch.save({model.model_name: model.state_dict()}, self.model_dir + '/' + model.model_name + '-epoch' + str(e) + '-ckpt')
 
             if self.no_dev:
-                auc, mrr, ndcg5, ndcg10 = compute_scores(model, self._corpus, self.batch_size * 2, 'test', self.test_res_dir + '/' + model.model_name + '-' + str(e) + '.txt', self._dataset)
+                auc, mrr, ndcg5, ndcg10, hit1 = compute_scores(model, self._corpus, self.batch_size * 2, 'test', self.test_res_dir + '/' + model.model_name + '-' + str(e) + '.txt', self._dataset)
                 self.auc_results.append(auc)
                 self.mrr_results.append(mrr)
                 self.ndcg5_results.append(ndcg5)
                 self.ndcg10_results.append(ndcg10)
+                self.hit1_results.append(hit1)
                 print('Epoch %d : test done\nTest criterions' % e, flush=True)
-                print('AUC = {:.4f}\nMRR = {:.4f}\nnDCG@5 = {:.4f}\nnDCG@10 = {:.4f}'.format(auc, mrr, ndcg5, ndcg10), flush=True)
-                metric = {'auc': auc, 'mrr': mrr, 'ndcg5': ndcg5, 'ndcg10': ndcg10}[self.dev_criterion]
+                print(
+                    'MRR = {:.4f}\nNDCG@5 = {:.4f}\nHIT@1 = {:.4f}'.format(mrr, ndcg5, hit1),
+                    flush=True,
+                )
+                metric = {'auc': auc, 'mrr': mrr, 'ndcg5': ndcg5, 'ndcg10': ndcg10, 'hit1': hit1}[self.dev_criterion]
                 best_metric = getattr(self, 'best_dev_' + self.dev_criterion)
                 if metric >= best_metric:
                     setattr(self, 'best_dev_' + self.dev_criterion, metric)
@@ -187,13 +192,17 @@ class Trainer:
                 continue
 
             # validation
-            auc, mrr, ndcg5, ndcg10 = compute_scores(model, self._corpus, self.batch_size * 2, 'dev', self.dev_res_dir + '/' + model.model_name + '-' + str(e) + '.txt', self._dataset)
+            auc, mrr, ndcg5, ndcg10, hit1 = compute_scores(model, self._corpus, self.batch_size * 2, 'dev', self.dev_res_dir + '/' + model.model_name + '-' + str(e) + '.txt', self._dataset)
             self.auc_results.append(auc)
             self.mrr_results.append(mrr)
             self.ndcg5_results.append(ndcg5)
             self.ndcg10_results.append(ndcg10)
+            self.hit1_results.append(hit1)
             print('Epoch %d : dev done\nDev criterions' % e, flush=True)
-            print('AUC = {:.4f}\nMRR = {:.4f}\nnDCG@5 = {:.4f}\nnDCG@10 = {:.4f}'.format(auc, mrr, ndcg5, ndcg10), flush=True)
+            print(
+                'MRR = {:.4f}\nNDCG@5 = {:.4f}\nHIT@1 = {:.4f}'.format(mrr, ndcg5, hit1),
+                flush=True,
+            )
             
             # wandb.log({'valid_auc': auc, 'valid_mrr': mrr, 'valid_ndcg5': ndcg5, 'valid_ndcg10': ndcg10}, step=e)
             
@@ -203,7 +212,7 @@ class Trainer:
                     self.best_dev_auc = auc
                     self.best_dev_epoch = e
                     with open(self.result_dir + '/#' + str(self.run_index) + '-dev', 'w') as result_f:
-                        result_f.write('#' + str(self.run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+                        result_f.write(format_result_metrics_line(self.run_index, mrr, ndcg5, hit1))
                     self.epoch_not_increase = 0
                 else:
                     
@@ -214,7 +223,7 @@ class Trainer:
                     self.best_dev_mrr = mrr
                     self.best_dev_epoch = e
                     with open(self.result_dir + '/#' + str(self.run_index) + '-dev', 'w') as result_f:
-                        result_f.write('#' + str(self.run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+                        result_f.write(format_result_metrics_line(self.run_index, mrr, ndcg5, hit1))
                     self.epoch_not_increase = 0
                 else:
                     self.epoch_not_increase += 1
@@ -224,7 +233,7 @@ class Trainer:
                     self.best_dev_ndcg5 = ndcg5
                     self.best_dev_epoch = e
                     with open(self.result_dir + '/#' + str(self.run_index) + '-dev', 'w') as result_f:
-                        result_f.write('#' + str(self.run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+                        result_f.write(format_result_metrics_line(self.run_index, mrr, ndcg5, hit1))
                     self.epoch_not_increase = 0
                 else:
                     self.epoch_not_increase += 1
@@ -234,7 +243,16 @@ class Trainer:
                     self.best_dev_ndcg10 = ndcg10
                     self.best_dev_epoch = e
                     with open(self.result_dir + '/#' + str(self.run_index) + '-dev', 'w') as result_f:
-                        result_f.write('#' + str(self.run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+                        result_f.write(format_result_metrics_line(self.run_index, mrr, ndcg5, hit1))
+                    self.epoch_not_increase = 0
+                else:
+                    self.epoch_not_increase += 1
+            elif self.dev_criterion == 'hit1':
+                if hit1 >= self.best_dev_hit1:
+                    self.best_dev_hit1 = hit1
+                    self.best_dev_epoch = e
+                    with open(self.result_dir + '/#' + str(self.run_index) + '-dev', 'w') as result_f:
+                        result_f.write(format_result_metrics_line(self.run_index, mrr, ndcg5, hit1))
                     self.epoch_not_increase = 0
                 else:
                     self.epoch_not_increase += 1
@@ -245,7 +263,7 @@ class Trainer:
                     self.best_dev_avg = avg
                     self.best_dev_epoch = e
                     with open(self.result_dir + '/#' + str(self.run_index) + '-dev', 'w') as result_f:
-                        result_f.write('#' + str(self.run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+                        result_f.write(format_result_metrics_line(self.run_index, mrr, ndcg5, hit1))
                     self.epoch_not_increase = 0
                 else:
                     self.epoch_not_increase += 1
@@ -263,15 +281,17 @@ class Trainer:
             print(f'Training : {model.model_name} #{self.run_index} completed (no_dev mode, best epoch: {self.best_dev_epoch})')
         else:
             with open('%s/%s-%s-dev_log.txt' % (self.dev_res_dir, model.model_name, self._dataset), 'w', encoding='utf-8') as f:
-                f.write('Epoch\tAUC\tMRR\tnDCG@5\tnDCG@10\n')
-                for i in range(len(self.auc_results)):
-                    f.write('%d\t%.4f\t%.4f\t%.4f\t%.4f\n' % (i + 1, self.auc_results[i], self.mrr_results[i], self.ndcg5_results[i], self.ndcg10_results[i]))
+                f.write('Epoch\tMRR\tNDCG@5\tHIT@1\n')
+                for i in range(len(self.mrr_results)):
+                    f.write(
+                        '%d\t%.4f\t%.4f\t%.4f\n'
+                        % (i + 1, self.mrr_results[i], self.ndcg5_results[i], self.hit1_results[i])
+                    )
             shutil.copy(self.model_dir + '/' + model.model_name + '-' + str(self.best_dev_epoch), self.best_model_dir + '/' + model.model_name)
-            print('Training : ' + model.model_name + ' #' + str(self.run_index) + ' completed\nDev criterions:')
-            print('AUC : %.4f' % self.auc_results[self.best_dev_epoch - 1])
+            print('Training : ' + model.model_name + ' #' + str(self.run_index) + ' completed\nDev criterions (best epoch):')
             print('MRR : %.4f' % self.mrr_results[self.best_dev_epoch - 1])
-            print('nDCG@5 : %.4f' % self.ndcg5_results[self.best_dev_epoch - 1])
-            print('nDCG@10 : %.4f' % self.ndcg10_results[self.best_dev_epoch - 1])
+            print('NDCG@5 : %.4f' % self.ndcg5_results[self.best_dev_epoch - 1])
+            print('HIT@1 : %.4f' % self.hit1_results[self.best_dev_epoch - 1])
 
 
 def negative_log_softmax(logits):
@@ -320,11 +340,13 @@ def distributed_train(rank, model: nn.Module, config: Config, corpus: Corpus, ru
         mrr_results = []
         ndcg5_results = []
         ndcg10_results = []
+        hit1_results = []
         best_dev_epoch = 0
         best_dev_auc = 0
         best_dev_mrr = 0
         best_dev_ndcg5 = 0
         best_dev_ndcg10 = 0
+        best_dev_hit1 = 0
         best_dev_avg = AvgMetric(0, 0, 0, 0)
         epoch_not_increase = 0
         print('Running : ' + model_name + '\t#' + str(run_index))
@@ -381,19 +403,23 @@ def distributed_train(rank, model: nn.Module, config: Config, corpus: Corpus, ru
 
         # dev
         if rank == 0:
-            auc, mrr, ndcg5, ndcg10 = compute_scores(model.module, corpus, batch_size * 3 // 2, 'dev', dev_res_dir + '/' + model_name + '-' + str(e) + '.txt', config.dataset)
+            auc, mrr, ndcg5, ndcg10, hit1 = compute_scores(model.module, corpus, batch_size * 3 // 2, 'dev', dev_res_dir + '/' + model_name + '-' + str(e) + '.txt', config.dataset)
             auc_results.append(auc)
             mrr_results.append(mrr)
             ndcg5_results.append(ndcg5)
             ndcg10_results.append(ndcg10)
+            hit1_results.append(hit1)
             print('Epoch %d : dev done\nDev criterions' % e, flush=True)
-            print('AUC = {:.4f}\nMRR = {:.4f}\nnDCG@5 = {:.4f}\nnDCG@10 = {:.4f}'.format(auc, mrr, ndcg5, ndcg10), flush=True)
+            print(
+                'MRR = {:.4f}\nNDCG@5 = {:.4f}\nHIT@1 = {:.4f}'.format(mrr, ndcg5, hit1),
+                flush=True,
+            )
             if dev_criterion == 'auc':
                 if auc >= best_dev_auc:
                     best_dev_auc = auc
                     best_dev_epoch = e
                     with open(result_dir + '/#' + str(run_index) + '-dev', 'w') as result_f:
-                        result_f.write('#' + str(run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+                        result_f.write(format_result_metrics_line(run_index, mrr, ndcg5, hit1))
                     epoch_not_increase = 0
                 else:
                     epoch_not_increase += 1
@@ -402,7 +428,7 @@ def distributed_train(rank, model: nn.Module, config: Config, corpus: Corpus, ru
                     best_dev_mrr = mrr
                     best_dev_epoch = e
                     with open(result_dir + '/#' + str(run_index) + '-dev', 'w') as result_f:
-                        result_f.write('#' + str(run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+                        result_f.write(format_result_metrics_line(run_index, mrr, ndcg5, hit1))
                     epoch_not_increase = 0
                 else:
                     epoch_not_increase += 1
@@ -411,7 +437,7 @@ def distributed_train(rank, model: nn.Module, config: Config, corpus: Corpus, ru
                     best_dev_ndcg5 = ndcg5
                     best_dev_epoch = e
                     with open(result_dir + '/#' + str(run_index) + '-dev', 'w') as result_f:
-                        result_f.write('#' + str(run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+                        result_f.write(format_result_metrics_line(run_index, mrr, ndcg5, hit1))
                     epoch_not_increase = 0
                 else:
                     epoch_not_increase += 1
@@ -420,7 +446,16 @@ def distributed_train(rank, model: nn.Module, config: Config, corpus: Corpus, ru
                     best_dev_ndcg10 = ndcg10
                     best_dev_epoch = e
                     with open(result_dir + '/#' + str(run_index) + '-dev', 'w') as result_f:
-                        result_f.write('#' + str(run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+                        result_f.write(format_result_metrics_line(run_index, mrr, ndcg5, hit1))
+                    epoch_not_increase = 0
+                else:
+                    epoch_not_increase += 1
+            elif dev_criterion == 'hit1':
+                if hit1 >= best_dev_hit1:
+                    best_dev_hit1 = hit1
+                    best_dev_epoch = e
+                    with open(result_dir + '/#' + str(run_index) + '-dev', 'w') as result_f:
+                        result_f.write(format_result_metrics_line(run_index, mrr, ndcg5, hit1))
                     epoch_not_increase = 0
                 else:
                     epoch_not_increase += 1
@@ -430,7 +465,7 @@ def distributed_train(rank, model: nn.Module, config: Config, corpus: Corpus, ru
                     best_dev_avg = avg
                     best_dev_epoch = e
                     with open(result_dir + '/#' + str(run_index) + '-dev', 'w') as result_f:
-                        result_f.write('#' + str(run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+                        result_f.write(format_result_metrics_line(run_index, mrr, ndcg5, hit1))
                     epoch_not_increase = 0
                 else:
                     epoch_not_increase += 1
@@ -444,6 +479,8 @@ def distributed_train(rank, model: nn.Module, config: Config, corpus: Corpus, ru
                 print('Best nDCG@5 : %.4f' % best_dev_ndcg5)
             elif dev_criterion == 'ndcg10':
                 print('Best nDCG@10 : %.4f' % best_dev_ndcg10)
+            elif dev_criterion == 'hit1':
+                print('Best Hit@1 : %.4f' % best_dev_hit1)
             else:
                 print('Best avg : ' + str(best_dev_avg))
             torch.cuda.empty_cache()
@@ -455,13 +492,15 @@ def distributed_train(rank, model: nn.Module, config: Config, corpus: Corpus, ru
 
     if rank == 0:
         with open('%s/%s-%s-dev_log.txt' % (dev_res_dir, model_name, config.dataset), 'w', encoding='utf-8') as f:
-            f.write('Epoch\tAUC\tMRR\tnDCG@5\tnDCG@10\n')
-            for i in range(len(auc_results)):
-                f.write('%d\t%.4f\t%.4f\t%.4f\t%.4f\n' % (i + 1, auc_results[i], mrr_results[i], ndcg5_results[i], ndcg10_results[i]))
-        print('Training : ' + model_name + ' #' + str(run_index) + ' completed\nDev criterions:')
-        print('AUC : %.4f' % auc_results[best_dev_epoch - 1])
+            f.write('Epoch\tMRR\tNDCG@5\tHIT@1\n')
+            for i in range(len(mrr_results)):
+                f.write(
+                    '%d\t%.4f\t%.4f\t%.4f\n'
+                    % (i + 1, mrr_results[i], ndcg5_results[i], hit1_results[i])
+                )
+        print('Training : ' + model_name + ' #' + str(run_index) + ' completed\nDev criterions (best epoch):')
         print('MRR : %.4f' % mrr_results[best_dev_epoch - 1])
-        print('nDCG@5 : %.4f' % ndcg5_results[best_dev_epoch - 1])
-        print('nDCG@10 : %.4f' % ndcg10_results[best_dev_epoch - 1])
+        print('NDCG@5 : %.4f' % ndcg5_results[best_dev_epoch - 1])
+        print('HIT@1 : %.4f' % hit1_results[best_dev_epoch - 1])
         shutil.copy(model_dir + '/' + model_name + '-' + str(best_dev_epoch), best_model_dir + '/' + model_name)
         os.kill(os.getpid(), signal.SIGKILL)

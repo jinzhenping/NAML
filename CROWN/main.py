@@ -8,7 +8,7 @@ import torch
 from corpus import Corpus
 from model import Model
 from trainer import Trainer, distributed_train
-from util import compute_scores, get_run_index
+from util import compute_scores, format_result_metrics_line, get_run_index
 import torch.multiprocessing as mp
 from transformers import AutoTokenizer, RobertaConfig
 
@@ -47,10 +47,10 @@ def dev(config, corpus):
     dev_res_dir = os.path.join(config.dev_res_dir, config.dev_model_path.replace('\\', '_').replace('/', '_'))
     if not os.path.exists(dev_res_dir):
         os.mkdir(dev_res_dir)
-    auc, mrr, ndcg5, ndcg10 = compute_scores(model, corpus, config.batch_size * 2 // config.world_size, 'dev', dev_res_dir + '/' + model.model_name + '.txt', config.dataset)
+    auc, mrr, ndcg5, ndcg10, hit1 = compute_scores(model, corpus, config.batch_size * 2 // config.world_size, 'dev', dev_res_dir + '/' + model.model_name + '.txt', config.dataset)
     print('Dev : ' + config.dev_model_path)
-    print('AUC : %.4f\nMRR : %.4f\nnDCG@5 : %.4f\nnDCG@10 : %.4f' % (auc, mrr, ndcg5, ndcg10))
-    return auc, mrr, ndcg5, ndcg10
+    print('MRR : %.4f\nNDCG@5 : %.4f\nHIT@1 : %.4f' % (mrr, ndcg5, hit1))
+    return auc, mrr, ndcg5, ndcg10, hit1
 
 
 def test(config, corpus):
@@ -64,17 +64,17 @@ def test(config, corpus):
         os.mkdir(test_res_dir)
     print('test model path  : ' + config.test_model_path)
     print('test output file : ' + test_res_dir + '/' + model.model_name + '.txt')
-    auc, mrr, ndcg5, ndcg10 = compute_scores(model, corpus, config.batch_size, 'test', test_res_dir + '/' + model.model_name + '.txt', config.dataset)   # config.batch_size * 2
+    auc, mrr, ndcg5, ndcg10, hit1 = compute_scores(model, corpus, config.batch_size, 'test', test_res_dir + '/' + model.model_name + '.txt', config.dataset)   # config.batch_size * 2
     
-    print('AUC : %.4f\nMRR : %.4f\nnDCG@5 : %.4f\nnDCG@10 : %.4f' % (auc, mrr, ndcg5, ndcg10))
+    print('MRR : %.4f\nNDCG@5 : %.4f\nHIT@1 : %.4f' % (mrr, ndcg5, hit1))
     if config.mode == 'train':
         with open(config.result_dir + '/#' + str(config.run_index) + '-test', 'w') as result_f:
-            result_f.write('#' + str(config.run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+            result_f.write(format_result_metrics_line(config.run_index, mrr, ndcg5, hit1))
     elif config.mode == 'test':
         with open(config.test_output_file, 'w', encoding='utf-8') as f:
-            f.write('#3' + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+            f.write(format_result_metrics_line(3, mrr, ndcg5, hit1))
         with open(config.result_dir + '/#' + str(config.run_index) + '-test', 'w') as result_f:
-            result_f.write('#' + str(config.run_index) + '\t' + str(auc) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(ndcg10) + '\n')
+            result_f.write(format_result_metrics_line(config.run_index, mrr, ndcg5, hit1))
         
 
 # main.py

@@ -124,10 +124,15 @@ def compute_scores(model, corpus, batch_size, mode, result_file, dataset):
             result_f.write(('' if i == 0 else '\n') + str(i + 1) + ' ' + str(result).replace(' ', ''))
     if dataset != 'large' or mode != 'test':
         with open(mode + '/ref/truth-%s.txt' % dataset, 'r', encoding='utf-8') as truth_f, open(result_file, 'r', encoding='utf-8') as result_f:
-            auc, mrr, ndcg5, ndcg10 = scoring(truth_f, result_f)
-        return auc, mrr, ndcg5, ndcg10
+            auc, mrr, ndcg5, ndcg10, hit1 = scoring(truth_f, result_f)
+        return auc, mrr, ndcg5, ndcg10, hit1
     else:
-        return None, None, None, None
+        return None, None, None, None, None
+
+
+def format_result_metrics_line(run_index, mrr, ndcg5, hit1):
+    """One-line aggregate: #<run_index> then tab MRR, NDCG@5, HIT@1 values."""
+    return '#' + str(run_index) + '\t' + str(mrr) + '\t' + str(ndcg5) + '\t' + str(hit1) + '\n'
 
 
 def get_run_index(result_dir):

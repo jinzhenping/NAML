@@ -49,7 +49,7 @@ class Config:
         parser.add_argument('--gradient_clip_norm', type=float, default=4, help='Gradient clip norm (non-positive value for no clipping)')
         parser.add_argument('--world_size', type=int, default=1, help='World size of multi-process GPU training')
         # Dev config
-        parser.add_argument('--dev_criterion', type=str, default='auc', choices=['auc', 'mrr', 'ndcg5', 'ndcg10', 'avg'], help='Validation criterion to select model')
+        parser.add_argument('--dev_criterion', type=str, default='auc', choices=['auc', 'mrr', 'ndcg5', 'ndcg10', 'hit1', 'avg'], help='Validation criterion to select model')
         parser.add_argument('--early_stopping_epoch', type=int, default=5, help='Epoch number of stop training after dev result does not improve')
 
         # LIME config
