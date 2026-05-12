@@ -107,7 +107,8 @@ def merge_crown_argv(base: list[str], overrides: dict[str, Any]) -> list[str]:
             i += 1
 
     for k, v in overrides.items():
-        flag = "--" + k.replace("_", "-")
+        # Config 파서는 --negative_sample_num 처럼 언더스코어 옵션명을 쓴다. 하이픈 형태는 unrecognized 로 실패한다.
+        flag = "--" + k
         if k in _STORE_TRUE_FLAGS:
             if v:
                 out.append(flag)
