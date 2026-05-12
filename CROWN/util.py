@@ -124,10 +124,10 @@ def compute_scores(model, corpus, batch_size, mode, result_file, dataset):
             result_f.write(('' if i == 0 else '\n') + str(i + 1) + ' ' + str(result).replace(' ', ''))
     if dataset != 'large' or mode != 'test':
         with open(mode + '/ref/truth-%s.txt' % dataset, 'r', encoding='utf-8') as truth_f, open(result_file, 'r', encoding='utf-8') as result_f:
-            auc, mrr, ndcg5, ndcg10, hit1 = scoring(truth_f, result_f)
-        return auc, mrr, ndcg5, ndcg10, hit1
+            auc, mrr, ndcg5, hit1 = scoring(truth_f, result_f)
+        return auc, mrr, ndcg5, hit1
     else:
-        return None, None, None, None, None
+        return None, None, None, None
 
 
 def format_result_metrics_line(run_index, mrr, ndcg5, hit1):
@@ -148,12 +148,11 @@ def get_run_index(result_dir):
 
 
 class AvgMetric:
-    def __init__(self, auc, mrr, ndcg5, ndcg10):
+    def __init__(self, auc, mrr, ndcg5):
         self.auc = auc
         self.mrr = mrr
         self.ndcg5 = ndcg5
-        self.ndcg10 = ndcg10
-        self.avg = (self.auc + self.mrr + (self.ndcg5 + self.ndcg10) / 2) / 3
+        self.avg = (self.auc + self.mrr + self.ndcg5) / 3
 
     def __gt__(self, value):
         return self.avg > value.avg
@@ -168,4 +167,4 @@ class AvgMetric:
         return self.avg <= value.avg
 
     def __str__(self):
-        return '%.4f\nAUC = %.4f\nMRR = %.4f\nnDCG@5 = %.4f\nnDCG@10 = %.4f' % (self.avg, self.auc, self.mrr, self.ndcg5, self.ndcg10)
+        return '%.4f\nAUC = %.4f\nMRR = %.4f\nnDCG@5 = %.4f' % (self.avg, self.auc, self.mrr, self.ndcg5)

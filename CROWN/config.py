@@ -18,7 +18,7 @@ python -c "import torch; print(torch.__version__); print(torch.version.cuda); pr
 
 
 class Config:
-    def parse_argument(self):
+    def parse_argument(self, argv=None):
         parser = argparse.ArgumentParser(description='Neural news recommendation')
         # General config
         parser.add_argument('--mode', type=str, default='train', choices=['train', 'dev', 'test'], help='Mode')
@@ -49,7 +49,7 @@ class Config:
         parser.add_argument('--gradient_clip_norm', type=float, default=4, help='Gradient clip norm (non-positive value for no clipping)')
         parser.add_argument('--world_size', type=int, default=1, help='World size of multi-process GPU training')
         # Dev config
-        parser.add_argument('--dev_criterion', type=str, default='auc', choices=['auc', 'mrr', 'ndcg5', 'ndcg10', 'hit1', 'avg'], help='Validation criterion to select model')
+        parser.add_argument('--dev_criterion', type=str, default='auc', choices=['auc', 'mrr', 'ndcg5', 'hit1', 'avg'], help='Validation criterion to select model')
         parser.add_argument('--early_stopping_epoch', type=int, default=5, help='Epoch number of stop training after dev result does not improve')
 
         # LIME config
@@ -123,7 +123,7 @@ class Config:
         # parser.add_argument('--lstm_num_layers', type=int, default=1, help='number of recurrent layers in LSTM')
         # parser.add_argument('--pretrained_embedding', type=str, default='linear', help='')
         
-        self.attribute_dict = dict(vars(parser.parse_args()))
+        self.attribute_dict = dict(vars(parser.parse_args(argv)))
         for attribute in self.attribute_dict:
             setattr(self, attribute, self.attribute_dict[attribute])
         # self.head_dim = (self.intent_embedding_dim * 2 + self.category_embedding_dim + self.subCategory_embedding_dim) // self.head_num
@@ -314,8 +314,8 @@ class Config:
                             labels = [int(impression[-1]) for impression in impressions.strip().split(' ')]
                             truth_f.write(('' if test_ID == 0 else '\n') + str(test_ID + 1) + ' ' + str(labels).replace(' ', ''))
 
-    def __init__(self):
-        self.parse_argument()
+    def __init__(self, argv=None):
+        self.parse_argument(argv)
         self.preliminary_setup()
         self.set_cuda()
         if self.dataset in ['adressa']:

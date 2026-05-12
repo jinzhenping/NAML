@@ -119,7 +119,7 @@ test/{ref,res}/mind2000/CROWN-CROWN/ # test prediction files + groundtruth
 configs/mind2000/CROWN-CROWN/
 ```
 
-Final test metrics (AUC, MRR, nDCG@5, nDCG@10) are printed at the end of the
+Final test metrics (MRR, NDCG@5, HIT@1) are printed at the end of the
 run and also written to `results/mind2000/CROWN-CROWN/#<run_index>-test`.
 
 ## Data conversion summary (already done)

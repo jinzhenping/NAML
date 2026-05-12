@@ -43,7 +43,6 @@ def scoring(truth_f, sub_f):
     aucs = []
     mrrs = []
     ndcg5s = []
-    ndcg10s = []
     hit1s = []
     
     line_index = 1
@@ -88,18 +87,16 @@ def scoring(truth_f, sub_f):
         auc = roc_auc_score(y_true,y_score)
         mrr = mrr_score(y_true,y_score)
         ndcg5 = ndcg_score(y_true,y_score,5)
-        ndcg10 = ndcg_score(y_true,y_score,10)
         hit1 = hit_at_1_score(y_true, y_score)
 
         aucs.append(auc)
         mrrs.append(mrr)
         ndcg5s.append(ndcg5)
-        ndcg10s.append(ndcg10)
         hit1s.append(hit1)
 
         line_index += 1
 
-    return np.mean(aucs), np.mean(mrrs), np.mean(ndcg5s), np.mean(ndcg10s), np.mean(hit1s)
+    return np.mean(aucs), np.mean(mrrs), np.mean(ndcg5s), np.mean(hit1s)
         
 
 if __name__ == '__main__':
@@ -122,7 +119,7 @@ if __name__ == '__main__':
         truth_file = open(os.path.join(truth_dir, "truth.txt"), 'r')
         submission_answer_file = open(os.path.join(submit_dir, "prediction.txt"), 'r')
         
-        _, mrr, ndcg, _, hit1 = scoring(truth_file, submission_answer_file)
+        _, mrr, ndcg, hit1 = scoring(truth_file, submission_answer_file)
 
         output_file.write(
             "MRR:{:.4f}\nNDCG@5:{:.4f}\nHIT@1:{:.4f}".format(mrr, ndcg, hit1)

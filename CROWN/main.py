@@ -47,10 +47,10 @@ def dev(config, corpus):
     dev_res_dir = os.path.join(config.dev_res_dir, config.dev_model_path.replace('\\', '_').replace('/', '_'))
     if not os.path.exists(dev_res_dir):
         os.mkdir(dev_res_dir)
-    auc, mrr, ndcg5, ndcg10, hit1 = compute_scores(model, corpus, config.batch_size * 2 // config.world_size, 'dev', dev_res_dir + '/' + model.model_name + '.txt', config.dataset)
+    auc, mrr, ndcg5, hit1 = compute_scores(model, corpus, config.batch_size * 2 // config.world_size, 'dev', dev_res_dir + '/' + model.model_name + '.txt', config.dataset)
     print('Dev : ' + config.dev_model_path)
     print('MRR : %.4f\nNDCG@5 : %.4f\nHIT@1 : %.4f' % (mrr, ndcg5, hit1))
-    return auc, mrr, ndcg5, ndcg10, hit1
+    return auc, mrr, ndcg5, hit1
 
 
 def test(config, corpus):
@@ -64,7 +64,7 @@ def test(config, corpus):
         os.mkdir(test_res_dir)
     print('test model path  : ' + config.test_model_path)
     print('test output file : ' + test_res_dir + '/' + model.model_name + '.txt')
-    auc, mrr, ndcg5, ndcg10, hit1 = compute_scores(model, corpus, config.batch_size, 'test', test_res_dir + '/' + model.model_name + '.txt', config.dataset)   # config.batch_size * 2
+    auc, mrr, ndcg5, hit1 = compute_scores(model, corpus, config.batch_size, 'test', test_res_dir + '/' + model.model_name + '.txt', config.dataset)   # config.batch_size * 2
     
     print('MRR : %.4f\nNDCG@5 : %.4f\nHIT@1 : %.4f' % (mrr, ndcg5, hit1))
     if config.mode == 'train':
