@@ -31,7 +31,9 @@ class Trainer:
 
         self.loss = self.negative_log_softmax if config.click_predictor in ['dot_product', 'mlp', 'FIM'] else self.negative_log_sigmoid
         self.optimizer = optim.Adam(filter(lambda p: p.requires_grad, self.model.parameters()), lr=config.lr, weight_decay=config.weight_decay)
-        self.scheduler = optim.lr_scheduler.ReduceLROnPlateau(self.optimizer, mode='max', factor=0.5, patience=3, verbose=True)
+        self.scheduler = optim.lr_scheduler.ReduceLROnPlateau(
+            self.optimizer, mode="max", factor=0.5, patience=3
+        )
         self._dataset = config.dataset
         self._corpus = corpus
         self.train_dataset = Train_Dataset(corpus)
