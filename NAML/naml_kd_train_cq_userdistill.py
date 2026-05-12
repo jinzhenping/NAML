@@ -19,8 +19,8 @@ python NAML/naml_kd_train_cq_userdistill.py \
   --expected-body-test-dir user_preference/expected_body/MIND_2000/test_3cluster_11_13_8_rawtitle \
   --expected-body-first-n-sentences 2 \
   --mind-dataset-subdir MIND_2000 \
-  --batch-size 16 \
-  --eval-batch-size 32 \
+  --batch-size 32 \
+  --eval-batch-size 64 \
   --lambda-distill-user 0.2 \
   --lambda-distill-exp 0.1 \
   --epochs 10 \
