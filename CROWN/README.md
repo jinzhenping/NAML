@@ -1,0 +1,62 @@
+# [CIKM'25] Is This News Still Interesting to You?: Lifetime-aware Interest Matching for News Recommendation
+This repository provides an implementation of *LIME* as described in the paper: [Is This News Still Interesting to You?: Lifetime-aware Interest Matching for News Recommendation](https://arxiv.org/abs/2508.13064) by Seongeun Ryu, Yunyong Ko, and Sang-Wook Kim, In Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM) 2025
+
+## The overview of LIME
+![The overview of LIME](./assets/LIME_overview.PNG)
+
+## Available dataset
+1. [MIND Dataset](https://msnews.github.io/)
+2. [Adressa Dataset](https://reclab.idi.ntnu.no/dataset/)
+
+## Datasets
+|Datasets|# of Users|# of News|Avg. title len|Avg. body len|
+|:---:|:---:|:---:|:---:|:---:|
+|MIND|94,057|65,238|11.67|41.01|
+|Adressa|601,215|73,844|6.63|552.15|
+
+## Dependencies
+Our code runs on the Intel i7-9700k CPU with 64GB memory and NVIDIA RTX 2080 Ti GPU with 12GB, with the following packages installed:
+```
+python 3.10.16
+torch 2.0.1
+torchtext 0.15.2
+pandas
+numpy
+argparse
+sklearn
+```
+
+## Hyperparameters
+The following table lists the hyperparameters used in our experiments:
+| Hyperparameter | Value |
+| --- | --- |
+| Optimizer | Adam |
+| Learning rate *η* | 1e-4 |
+| Dropout *d* | 0.25 |
+| Batch size *b* | 32 |
+| Early stopping epochs | 5 |
+| # of buckets *B* | 10 |
+| Scaling factor *α* | 0.3 |
+| Penalty factor *β* | 0.3 |
+| # of negative examples *M* | 4 |
+| Max title length | 32 |
+| Max body length | 128 |
+| Max history length | 50 |
+| Word embedding | 300 |
+
+## How to run
+```
+python main.py --news_encoder=LIME --content_encoder=CROWN --user_encoder=CROWN
+```
+
+## Citation
+Please cite our paper if you have used the code in your work. You can use the following BibTex citation:
+```
+@inproceedings{ryu2025lime,
+  title={Is This News Still Interesting to You?: Lifetime-aware Interest Matching for News Recommendation},
+  author={Ryu, Seongeun and Ko, Yunyong and Kim, Sang-Wook},
+  booktitle={Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM) 2025},
+  pages={xxxx--xxxx},
+  year={2025}
+}
+```
