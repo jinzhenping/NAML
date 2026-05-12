@@ -210,6 +210,23 @@ def corpus_signature(c: Any) -> tuple[Any, ...]:
     )
 
 
+def apply_corpus_derived_fields(config: Any, corpus: Any) -> None:
+    """
+    Corpus.__init__ 가 config 에 넣는 필드(user_num, category_num 등).
+    코퍼스를 재사용하는 trial 에서는 새 Config 에 이 값이 없어 Model 초기화가 실패하므로,
+    corpus.config 에서 현재 trial config 로 복사한다.
+    """
+    src = corpus.config
+    for key in ("user_num", "category_num", "subCategory_num", "vocabulary_size"):
+        if hasattr(src, key):
+            val = getattr(src, key)
+            setattr(config, key, val)
+            config.attribute_dict[key] = val
+    if hasattr(src, "entity_size"):
+        config.entity_size = src.entity_size
+        config.attribute_dict["entity_size"] = src.entity_size
+
+
 def write_index_md(run_dir: str, run_name: str) -> None:
     path = os.path.join(run_dir, "INDEX.md")
     with open(path, "w", encoding="utf-8") as f:
@@ -352,6 +369,7 @@ def main() -> None:
             corpus_holder["sig"] = sig
             print(f"[trial {trial_id}] Corpus 로드 (signature 변경)", flush=True)
         corpus = corpus_holder["corpus"]
+        apply_corpus_derived_fields(config, corpus)
 
         trial_dir = os.path.join(run_dir, f"trial_{trial_id:03d}")
         os.makedirs(trial_dir, exist_ok=True)
