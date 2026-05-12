@@ -4,6 +4,7 @@
 NAML 그래프 구축 (NAML.py / cluster_train_users_kmeans.py 공용).
 """
 import keras
+import tensorflow as tf
 from keras.layers import *
 from keras.models import Model
 from tensorflow.keras.optimizers import Adam
@@ -176,6 +177,177 @@ def build_naml_models(
         'model_test': model_test,
         'newsEncoder': newsEncoder,
         'user_rep': user_rep,
+        'browsed_news_input': browsed_news_input,
+        'browsed_body_input': browsed_body_input,
+        'browsed_v_input': browsed_v_input,
+        'browsed_sv_input': browsed_sv_input,
+        'MAX_SENTS': MAX_SENTS,
+    }
+
+
+def build_naml_models_candidate_query_user(
+    word_dict,
+    embedding_mat,
+    category,
+    subcategory,
+    learning_rate,
+    clear_session=True,
+    *,
+    dropout_rate=0.3,
+    cnn_filters=400,
+    cnn_kernel_size=3,
+    attention_dense_dim=200,
+    category_emb_dim=50,
+):
+    """
+    학생용: 히스토리 뉴스 표현 위에 **후보 뉴스 벡터를 쿼리**로 두는 교차 어텐션으로
+    후보별 user_rep를 만든 뒤, 각 후보와 내적으로 로짓을 계산한다.
+    교사 NAML(`build_naml_models`)과 입력 순서·newsEncoder 구조는 동일하게 두되,
+    user 집계만 후보 조건부로 바뀐다.
+    """
+    if clear_session:
+        keras.backend.clear_session()
+
+    d = float(dropout_rate)
+    nf = int(cnn_filters)
+    nk = int(cnn_kernel_size)
+    ad = int(attention_dense_dim)
+    cem = int(category_emb_dim)
+
+    MAX_SENTS = MAX_HISTORY_CLICKS
+    title_input = Input(shape=(MAX_SENT_LENGTH,), dtype='int32')
+    body_input = Input(shape=(MAX_BODY_LENGTH,), dtype='int32')
+    embedding_layer = Embedding(len(word_dict), 300, weights=[embedding_mat], trainable=True)
+
+    embedded_sequences_title = embedding_layer(title_input)
+    embedded_sequences_title = Dropout(d)(embedded_sequences_title)
+    embedded_sequences_body = embedding_layer(body_input)
+    embedded_sequences_body = Dropout(d)(embedded_sequences_body)
+
+    title_cnn = Conv1D(filters=nf, kernel_size=nk, padding='same', activation='relu', strides=1)(
+        embedded_sequences_title
+    )
+    title_cnn = Dropout(d)(title_cnn)
+    attention = Dense(ad, activation='tanh')(title_cnn)
+    attention = Flatten()(Dense(1)(attention))
+    attention_weight = Activation('softmax')(attention)
+    title_rep = keras.layers.Dot((1, 1))([title_cnn, attention_weight])
+
+    body_cnn = Conv1D(filters=nf, kernel_size=nk, padding='same', activation='relu', strides=1)(
+        embedded_sequences_body
+    )
+    body_cnn = Dropout(d)(body_cnn)
+    attention_body = Dense(ad, activation='tanh')(body_cnn)
+    attention_body = Flatten()(Dense(1)(attention_body))
+    attention_weight_body = Activation('softmax')(attention_body)
+    body_rep = keras.layers.Dot((1, 1))([body_cnn, attention_weight_body])
+
+    vinput = Input((1,), dtype='int32')
+    svinput = Input((1,), dtype='int32')
+    v_embedding_layer = Embedding(len(category) + 1, cem, trainable=True)
+    sv_embedding_layer = Embedding(len(subcategory) + 1, cem, trainable=True)
+    v_embedding = Dense(nf, activation='relu')(Flatten()(v_embedding_layer(vinput)))
+    sv_embedding = Dense(nf, activation='relu')(Flatten()(sv_embedding_layer(svinput)))
+
+    all_channel = [title_rep, body_rep, v_embedding, sv_embedding]
+    views = concatenate([Reshape((1, -1))(channel) for channel in all_channel], axis=1)
+    attentionv = Dense(ad, activation='tanh')(views)
+    attention_weightv = Reshape((-1,))(Dense(1)(attentionv))
+    attention_weightv = Activation('softmax')(attention_weightv)
+    newsrep = keras.layers.Dot((1, 1))([views, attention_weightv])
+    newsEncoder = Model([title_input, body_input, vinput, svinput], newsrep)
+
+    browsed_news_input = [keras.Input((MAX_SENT_LENGTH,), dtype='int32') for _ in range(MAX_SENTS)]
+    browsed_body_input = [keras.Input((MAX_BODY_LENGTH,), dtype='int32') for _ in range(MAX_SENTS)]
+    browsed_v_input = [keras.Input((1,), dtype='int32') for _ in range(MAX_SENTS)]
+    browsed_sv_input = [keras.Input((1,), dtype='int32') for _ in range(MAX_SENTS)]
+
+    browsednews = [
+        newsEncoder(
+            [
+                browsed_news_input[_],
+                browsed_body_input[_],
+                browsed_v_input[_],
+                browsed_sv_input[_],
+            ]
+        )
+        for _ in range(MAX_SENTS)
+    ]
+    browsednewsrep = concatenate([Reshape((1, -1))(news) for news in browsednews], axis=1)
+
+    candidates_title = [keras.Input((MAX_SENT_LENGTH,), dtype='int32') for _ in range(1 + npratio)]
+    candidates_body = [keras.Input((MAX_BODY_LENGTH,), dtype='int32') for _ in range(1 + npratio)]
+    candidates_v = [keras.Input((1,), dtype='int32') for _ in range(1 + npratio)]
+    candidates_sv = [keras.Input((1,), dtype='int32') for _ in range(1 + npratio)]
+    candidate_vecs = [
+        newsEncoder([candidates_title[_], candidates_body[_], candidates_v[_], candidates_sv[_]])
+        for _ in range(1 + npratio)
+    ]
+
+    keys_hist = Dense(ad, activation='tanh')(browsednewsrep)
+    query_dense = Dense(ad, activation='tanh')
+
+    user_reps_per_cand = []
+    for k in range(1 + npratio):
+        q = query_dense(candidate_vecs[k])
+        scores = Lambda(lambda kv: tf.einsum('bhd,bd->bh', kv[0], kv[1]))([keys_hist, q])
+        weights = Activation('softmax')(scores)
+        u = Lambda(lambda wv: tf.einsum('bh,bhd->bd', wv[0], wv[1]))([weights, browsednewsrep])
+        user_reps_per_cand.append(u)
+
+    user_rep_stack = Reshape((1 + npratio, nf))(concatenate(user_reps_per_cand, axis=-1))
+
+    logits = [
+        keras.layers.dot([user_reps_per_cand[_], candidate_vecs[_]], axes=-1) for _ in range(1 + npratio)
+    ]
+    logits = keras.layers.Activation(keras.activations.softmax)(keras.layers.concatenate(logits))
+
+    full_inputs = (
+        candidates_title
+        + browsed_news_input
+        + candidates_body
+        + browsed_body_input
+        + candidates_v
+        + browsed_v_input
+        + candidates_sv
+        + browsed_sv_input
+    )
+
+    model = Model(full_inputs, logits)
+    model_user_stack = Model(full_inputs, user_rep_stack)
+
+    candidate_one_title = keras.Input((MAX_SENT_LENGTH,))
+    candidate_one_body = keras.Input((MAX_BODY_LENGTH,))
+    candidate_one_v = keras.Input((1,))
+    candidate_one_sv = keras.Input((1,))
+    candidate_one_vec = newsEncoder([candidate_one_title, candidate_one_body, candidate_one_v, candidate_one_sv])
+    q_test = query_dense(candidate_one_vec)
+    scores_t = Lambda(lambda kv: tf.einsum('bhd,bd->bh', kv[0], kv[1]))([keys_hist, q_test])
+    weights_t = Activation('softmax')(scores_t)
+    user_rep_test = Lambda(lambda wv: tf.einsum('bh,bhd->bd', wv[0], wv[1]))([weights_t, browsednewsrep])
+    score = keras.layers.Activation(keras.activations.sigmoid)(
+        keras.layers.dot([user_rep_test, candidate_one_vec], axes=-1)
+    )
+    model_test = keras.Model(
+        [candidate_one_title]
+        + browsed_news_input
+        + [candidate_one_body]
+        + browsed_body_input
+        + [candidate_one_v]
+        + browsed_v_input
+        + [candidate_one_sv]
+        + browsed_sv_input,
+        score,
+    )
+
+    model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=learning_rate), metrics=['acc'])
+
+    return {
+        'model': model,
+        'model_user_stack': model_user_stack,
+        'model_test': model_test,
+        'newsEncoder': newsEncoder,
+        'user_rep_stack': user_rep_stack,
         'browsed_news_input': browsed_news_input,
         'browsed_body_input': browsed_body_input,
         'browsed_v_input': browsed_v_input,
