@@ -5,7 +5,7 @@ This bundle contains everything needed to train a **pure CROWN** model
 `MIND_2000` dataset.
 
 conda activate crown
-python CROWN/main.py  --dataset=mind2000 --config_file=CROWN/pure_crown.json
+python main.py  --dataset=mind2000 --config_file=pure_crown.json
 
 ## Folder layout
 
