@@ -5,14 +5,83 @@ import gzip
 import collections
 import re
 import ast
+import zipfile
+import urllib.request
 from nltk.tokenize import word_tokenize
-# import torchtext
-# print(torchtext.__version__)
-from torchtext.vocab import GloVe
-# torchtext.disable_torchtext_deprecation_warning()
 from config import Config
 import torch
 import numpy as np
+
+
+def _ensure_glove_txt(cache_root: str, name: str, dim: int) -> str:
+    """
+    torchtext.GloVe 대체: 동일 캐시 레이아웃(GloVe/*.txt)으로 zip 다운로드·압축 해제.
+    name: '840B' | '6B'
+    """
+    cache_root = os.path.abspath(cache_root)
+    glove_dir = os.path.join(cache_root, "GloVe")
+    os.makedirs(glove_dir, exist_ok=True)
+    txt_name = f"glove.{name}.{dim}d.txt"
+    txt_path = os.path.join(glove_dir, txt_name)
+    if os.path.isfile(txt_path):
+        return txt_path
+    zip_name = txt_name + ".zip"
+    zip_path = os.path.join(glove_dir, zip_name)
+    if not os.path.isfile(txt_path):
+        if not os.path.isfile(zip_path):
+            print(f"Downloading GloVe {zip_name} from Stanford NLP ...", flush=True)
+            url = f"https://nlp.stanford.edu/data/{zip_name}"
+            urllib.request.urlretrieve(url, zip_path)
+        print(f"Extracting {zip_path} ...", flush=True)
+        with zipfile.ZipFile(zip_path, "r") as zf:
+            zf.extractall(glove_dir)
+    if not os.path.isfile(txt_path):
+        raise FileNotFoundError(f"After unzip, expected: {txt_path}")
+    return txt_path
+
+
+def _build_glove_word_embeddings(word_dict: dict, dim: int, glove_txt_path: str) -> torch.Tensor:
+    """GloVe txt를 한 줄씩 읽어 word_dict에 있는 단어만 채운 뒤, OOV는 학습 코퍼스 내 적중 벡터 평균으로 보정."""
+    n_vocab = len(word_dict)
+    word_embedding_vectors = torch.zeros([n_vocab, dim], dtype=torch.float32)
+    needed = {w for w, idx in word_dict.items() if idx != 0}
+    found: set[str] = set()
+
+    with open(glove_txt_path, "rb") as f:
+        for line in f:
+            if len(found) >= len(needed):
+                break
+            parts = line.split()
+            if len(parts) < dim + 1:
+                continue
+            word = parts[0].decode("utf-8", errors="replace")
+            if word not in needed or word in found:
+                continue
+            try:
+                vec = torch.tensor([float(x) for x in parts[1 : dim + 1]], dtype=torch.float32)
+            except ValueError:
+                continue
+            idx = word_dict[word]
+            word_embedding_vectors[idx, :] = vec
+            found.add(word)
+
+    if not found:
+        raise RuntimeError(f"No GloVe overlap with vocabulary. Check file: {glove_txt_path}")
+
+    hit_rows = word_embedding_vectors[[word_dict[w] for w in found]]
+    glove_mean_vector = hit_rows.mean(dim=0)
+
+    for word in word_dict:
+        index = word_dict[word]
+        if index == 0:
+            continue
+        if word not in found:
+            random_vector = torch.zeros(dim, dtype=torch.float32)
+            random_vector.normal_(mean=0, std=0.1)
+            word_embedding_vectors[index, :] = random_vector + glove_mean_vector
+
+    return word_embedding_vectors
+
 
 def is_number(s):
     try:
@@ -183,24 +252,12 @@ class Corpus:
             with open(vocabulary_file, 'w', encoding='utf-8') as vocabulary_f:
                 json.dump(word_dict, vocabulary_f)
 
-            # 4. Glove word embedding
+            # 4. Glove word embedding (torchtext C++ 확장 없이 txt 직접 로드 — torch 2.7+ ABI 호환)
             if config.word_embedding_dim == 300:
-                glove = GloVe(name='840B', dim=300, cache='../../glove', max_vectors=10000000000)
+                glove_txt = _ensure_glove_txt("../../glove", "840B", 300)
             else:
-                glove = GloVe(name='6B', dim=config.word_embedding_dim, cache='../../glove', max_vectors=10000000000)
-            glove_stoi = glove.stoi
-            glove_vectors = glove.vectors
-            glove_mean_vector = torch.mean(glove_vectors, dim=0, keepdim=False)
-            word_embedding_vectors = torch.zeros([len(word_dict), config.word_embedding_dim])
-            for word in word_dict:
-                index = word_dict[word]
-                if index != 0:
-                    if word in glove_stoi:
-                        word_embedding_vectors[index, :] = glove_vectors[glove_stoi[word]]
-                    else:
-                        random_vector = torch.zeros(config.word_embedding_dim)
-                        random_vector.normal_(mean=0, std=0.1)
-                        word_embedding_vectors[index, :] = random_vector + glove_mean_vector
+                glove_txt = _ensure_glove_txt("../../glove", "6B", config.word_embedding_dim)
+            word_embedding_vectors = _build_glove_word_embeddings(word_dict, config.word_embedding_dim, glove_txt)
             with open(word_embedding_file, 'wb') as word_embedding_f:
                 pickle.dump(word_embedding_vectors, word_embedding_f)
 
