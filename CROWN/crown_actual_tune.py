@@ -373,9 +373,10 @@ def main() -> None:
         trainer = Trainer(model, config, corpus, run_index)
         trainer.train()
 
+        # Trainer 는 best_model 을 config.best_model_dir + '/#' + run_index 아래에 둔다 (trainer.py)
         best_path = os.path.join(
             config.best_model_dir,
-            str(run_index),
+            "#" + str(run_index),
             model.model_name,
         )
         if not os.path.isfile(best_path):
