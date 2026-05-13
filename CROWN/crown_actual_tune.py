@@ -9,7 +9,7 @@ NAML/naml_tune_actual.py 와 비슷하게: 여러 trial을 한 프로세스에�
 실행 (반드시 CROWN 디렉터리에서, `--` 뒤에 main.py 에 넘길 인자):
 
   cd CROWN
-  python crown_actual_tune.py --trials 108 --seed 42 --epochs-per-trial 16 -- --mode train --dataset mind2000 --news_encoder CROWN --content_encoder CROWN --user_encoder CROWN
+  python crown_actual_tune.py --trials 72 --seed 42 --epochs-per-trial 16 -- --mode train --dataset mind2000 --news_encoder CROWN --content_encoder CROWN --user_encoder CROWN
 
   (반드시 `--` 앞은 튜닝 전용 옵션, 뒤는 main.py 와 동일한 CROWN 인자. `--` 가 없으면 사용법만 출력하고 종료한다.)
 
@@ -349,11 +349,20 @@ def main() -> None:
         epochs: int,
         phase_label: str,
         corpus_holder: dict[str, Any],
+        *,
+        wave_index: int | None = None,
+        wave_total: int | None = None,
     ) -> dict[str, Any]:
         merged = merge_crown_argv(crown_argv, hp)
         merged = merge_crown_argv(merged, {"negative_sample_num": TUNE_NEGATIVE_SAMPLE_NUM})
         if not any(merged[i] == "--mode" for i in range(len(merged))):
             merged = ["--mode", "train"] + merged
+        _trial_msg = (
+            f"[trial {trial_id:03d}] 시작  phase={phase_label}  epochs={epochs}"
+        )
+        if wave_index is not None and wave_total is not None:
+            _trial_msg += f"  (단계 내 {wave_index}/{wave_total})"
+        print(_trial_msg, flush=True)
         config = Config(merged)
         if config.world_size != 1:
             raise RuntimeError("crown_tune.py 는 현재 world_size=1 만 지원합니다. --world_size 1 을 넣으세요.")
@@ -472,7 +481,15 @@ def main() -> None:
         )
         screened: list[dict[str, Any]] = []
         for t, hp in enumerate(trials_hp):
-            row = run_one_trial(len(log_trials), hp, screen_e, "screening", corpus_holder)
+            row = run_one_trial(
+                len(log_trials),
+                hp,
+                screen_e,
+                "screening",
+                corpus_holder,
+                wave_index=t + 1,
+                wave_total=len(trials_hp),
+            )
             log_trials.append(row)
             screened.append(row)
             _flush_summary(run_dir, meta, log_trials, args.rank_metric)
@@ -482,13 +499,29 @@ def main() -> None:
             hp = dict(srow["hparams"])
             if "phase" in hp:
                 del hp["phase"]
-            row = run_one_trial(len(log_trials), hp, full_e, f"refine_{rank}", corpus_holder)
+            row = run_one_trial(
+                len(log_trials),
+                hp,
+                full_e,
+                f"refine_{rank}",
+                corpus_holder,
+                wave_index=rank + 1,
+                wave_total=len(top),
+            )
             log_trials.append(row)
             _flush_summary(run_dir, meta, log_trials, args.rank_metric)
     else:
         ep = base_epochs if base_epochs > 0 else 0
         for t, hp in enumerate(trials_hp):
-            row = run_one_trial(len(log_trials), hp, ep, "single", corpus_holder)
+            row = run_one_trial(
+                len(log_trials),
+                hp,
+                ep,
+                "single",
+                corpus_holder,
+                wave_index=t + 1,
+                wave_total=len(trials_hp),
+            )
             log_trials.append(row)
             _flush_summary(run_dir, meta, log_trials, args.rank_metric)
 
