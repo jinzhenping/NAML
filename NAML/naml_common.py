@@ -181,11 +181,14 @@ def preprocess_user_file(
     expected_bodies_train=None,
     expected_bodies_test=None,
     word_dict=None,
+    test_impression_tsv_line_index_out: list | None = None,
 ):
     """
     MIND 데이터셋 형식에 맞게 전처리
     train_file: user, clicked_news, candidate_news, clicked (None이면 MIND_DATASET_SUBDIR 기준 기본 경로)
     test_file: user, clicked_news, candidate_news (clicked 없음)
+    test_impression_tsv_line_index_out: 리스트를 넘기면, 테스트에 포함된 impression마다
+        해당 행의 `test_file` readlines() 0-based 줄 번호를 append (스킵된 행은 없음).
     """
     if train_file is None:
         train_file = mind_data_path(MIND_TRAIN_FILENAME)
@@ -299,7 +302,7 @@ def preprocess_user_file(
         all_train_newsid_str.append(list(shuffle_news_ids))
         all_user_pos.append(allpos)
 
-    for line in test_data:
+    for line_idx, line in enumerate(test_data):
         parts = line.strip().split('\t')
         if len(parts) < 3:
             continue
@@ -364,6 +367,8 @@ def preprocess_user_file(
 
         sess_index.append(len(all_test_pn))
         all_test_index.append(sess_index)
+        if test_impression_tsv_line_index_out is not None:
+            test_impression_tsv_line_index_out.append(line_idx)
 
     all_train_pn = np.array(all_train_pn, dtype='int32')
     all_label = np.array(all_label, dtype='int32')

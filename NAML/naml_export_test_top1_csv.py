@@ -2,15 +2,15 @@
 # -*- coding: utf-8 -*-
 # MIND_2000: --mind-dataset-subdir MIND_2000
 """
-테스트 TSV를 `preprocess_user_file` 과 동일하게 읽은 뒤, `all_test_index` 순서(= 전처리에서
-살아남은 impression 순서, 원본 TSV의 위에서부터 스킵되지 않은 행 순서와 동일)로
-세션마다 모델 1위 후보를 기록한다.
+테스트 TSV를 `preprocess_user_file` 과 동일하게 읽은 뒤, TSV `readlines()` 줄 순서(0-based id)에 맞춰
+한 줄당 한 CSV 레코드를 쓴다. 전처리에서 스킵된 행은 `generate` 를 비우고, `real` 은 TSV 후보열
+첫 뉴스로 메타 포맷을 시도한다.
 
 출력 CSV 형식은 `NAML/MIND_prediction_result.csv` 와 동일:
   id,generate,real
-  - id: impression 순번 (0부터)
-  - generate: 1위 예측 뉴스 `Category: ..., Subcategory: ..., Title: ...`
-  - real: 클릭(양성) 뉴스 동일 형식
+  - id: 테스트 TSV `readlines()` 기준 0-based 줄 번호 (전처리에서 스킵된 행도 한 줄씩 유지)
+  - generate: 1위 예측 뉴스 `Category: ..., Subcategory: ..., Title: ...` (스킵 행은 빈 문자열)
+  - real: 클릭(양성) 뉴스 동일 형식 (스킵 행은 TSV 후보열 첫 뉴스 ID로 메타 포맷 시도)
 
 주의: `preprocess_user_file` 은 후보 순서를 세션마다 random.shuffle 하므로,
 `naml_eval_test.py` 와 동일한 결과를 내려면 같은 `--seed`(기본 naml_common.SEED)로
@@ -68,6 +68,17 @@ def _fmt_news_line(meta: Dict[str, tuple[str, str, str]], news_id: str) -> str:
         return ""
     cat, sub, title = meta[nid]
     return f"Category: {cat}, Subcategory: {sub}, Title: {title}"
+
+
+def _real_from_test_tsv_positive_candidate(meta: Dict[str, tuple[str, str, str]], line: str) -> str:
+    """MIND 테스트 behaviors: 후보 열에서 첫 뉴스가 양성(클릭) 후보."""
+    parts = line.strip().split("\t")
+    if len(parts) < 3:
+        return ""
+    cands = parts[2].split()
+    if not cands:
+        return ""
+    return _fmt_news_line(meta, cands[0])
 
 
 def _load_news_display_meta(news_tsv: str) -> Dict[str, tuple[str, str, str]]:
@@ -185,6 +196,7 @@ def main() -> None:
         expected_bodies_train=prep_train,
         expected_bodies_test=prep_test,
     )
+    test_impression_tsv_line_indices: list[int] = []
     (
         _u,
         _tpn,
@@ -208,7 +220,13 @@ def main() -> None:
         expected_bodies_test=prep_test,
         word_dict=word_dict,
         test_file=test_tsv,
+        test_impression_tsv_line_index_out=test_impression_tsv_line_indices,
     )
+    if len(test_impression_tsv_line_indices) != len(all_test_index):
+        print(
+            "경고: 세션 수와 TSV 줄 인덱스 수가 다릅니다. CSV 정렬이 깨질 수 있습니다.",
+            flush=True,
+        )
 
     embedding_mat = get_embedding(word_dict)
     news_index_reverse = {v: k for k, v in news_index.items()}
@@ -295,9 +313,8 @@ def main() -> None:
     out_path = str(_ROOT / args.out_csv) if not os.path.isabs(args.out_csv) else args.out_csv
     os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
 
-    rows_out: List[tuple[int, str, str]] = []
-    imp_id = 0
-    for m in all_test_index:
+    gen_real_by_tsv_line: Dict[int, tuple[str, str]] = {}
+    for line_idx, m in zip(test_impression_tsv_line_indices, all_test_index):
         start, end = int(m[0]), int(m[1])
         if end > len(scores):
             continue
@@ -324,8 +341,20 @@ def main() -> None:
 
         gen_s = _fmt_news_line(display_meta, pred_nid)
         real_s = _fmt_news_line(display_meta, true_nid)
-        rows_out.append((imp_id, gen_s, real_s))
-        imp_id += 1
+        gen_real_by_tsv_line[int(line_idx)] = (gen_s, real_s)
+
+    with open(test_tsv, "r", encoding="utf-8") as f:
+        test_lines = f.readlines()
+    n_tsv_lines = len(test_lines)
+
+    rows_out: List[tuple[int, str, str]] = []
+    for line_idx in range(n_tsv_lines):
+        if line_idx in gen_real_by_tsv_line:
+            gen_s, real_s = gen_real_by_tsv_line[line_idx]
+        else:
+            gen_s = ""
+            real_s = _real_from_test_tsv_positive_candidate(display_meta, test_lines[line_idx])
+        rows_out.append((line_idx, gen_s, real_s))
 
     with open(out_path, "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
@@ -333,7 +362,12 @@ def main() -> None:
         for rid, gs, rs in rows_out:
             w.writerow([rid, gs, rs])
 
-    print(f"저장 완료: {os.path.abspath(out_path)}  (impressions={len(rows_out)})", flush=True)
+    n_pred = len(gen_real_by_tsv_line)
+    print(
+        f"저장 완료: {os.path.abspath(out_path)}  "
+        f"(TSV 줄 수={n_tsv_lines}, 모델 예측 impression={n_pred}, 스킵 줄={n_tsv_lines - n_pred})",
+        flush=True,
+    )
 
 
 if __name__ == "__main__":
