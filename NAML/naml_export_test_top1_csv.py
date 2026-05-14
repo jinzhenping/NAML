@@ -21,7 +21,7 @@
   --weights saved_models/MIND_2000/NAML_mind_2000.h5 \
   --tune-log saved_models/MIND_2000/naml_tune_actual_log.json \
   --mind-dataset-subdir MIND_2000 \
-  --mind-test-tsv dataset/MIND_2000/MIND_test_(2000)_final.tsv \
+  --mind-test-tsv dataset/MIND_2000/MIND_test_2000_final.tsv \
   --out-csv NAML/MIND_prediction_result_export.csv
 """
 from __future__ import annotations

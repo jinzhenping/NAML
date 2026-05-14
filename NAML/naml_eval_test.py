@@ -21,7 +21,7 @@ python NAML/naml_eval_test.py \
   --tune-log saved_models/naml_tune_expected_log.json \
   --mind-dataset-subdir MIND_2000 \
   --expected-body-first-n-sentences 3 \
-  --mind-test-tsv dataset/MIND_2000/MIND_test_(2000)_final.tsv
+  --mind-test-tsv dataset/MIND_2000/MIND_test_2000_final.tsv
 
 # 학습(튜닝)과 동일하게 평가에서도 앞 N문장만 쓰려면 명시: --expected-body-first-n-sentences 3
 # 미지정이면 평가·OOV는 전체 기대본문 문자열 사용(튜닝 로그의 N은 자동 반영하지 않음)
