@@ -5,16 +5,16 @@ NAML KD (후보 쿼리 사용자 인코딩 학생 + 양성 슬롯 사용자 증�
 
   L = L_rec + lambda_user * L_distill_user_pos + lambda_exp * L_distill_exp
 
-- 교사: 기존 `build_naml_models` + `--teacher-weights` (표준 히스토리 어텐션 user_rep, 동결).
-- 학생: `build_naml_models_candidate_query_user` — 후보 뉴스 벡터를 쿼리로 하는 교차 어텐션으로
-  후보별 user_rep 후 로짓 계산.
-- L_distill_user_pos: 클릭(양성) 슬롯의 학생 user_rep 만 교사 user_rep 와 1-cos 정렬.
+- 교사: `build_naml_models_candidate_query_user` + `--teacher-weights` (예: `naml_tune_actual_cq_teacher.py` 로 학습한 CQ 가중치).
+  `--tune-log` 에는 그 학습 시 저장한 JSON(`global_best_hparams`)을 지정해 아키텍처를 맞춘다.
+- 학생: 동일 CQ 그래프(가중치는 별도 초기화 후 KD).
+- L_distill_user_pos: 양성 슬롯의 학생·교사 user_rep 각각 `model_user_stack` 에서 뽑아 1-cos 정렬.
 
 예시:
 
 python NAML/naml_kd_train_cq_userdistill.py \
-  --teacher-weights saved_models/MIND_2000/NAML_mind_2000.h5 \
-  --tune-log saved_models/MIND_2000/naml_tune_actual_log.json \
+  --teacher-weights saved_models/MIND_2000/NAML_cq_teacher_mind_2000_actual.h5 \
+  --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json \
   --expected-body-train-dir user_preference/expected_body/MIND_2000/train_3cluster_11_13_8_rawtitle \
   --expected-body-test-dir user_preference/expected_body/MIND_2000/test_3cluster_11_13_8_rawtitle \
   --expected-body-first-n-sentences 2 \
@@ -56,11 +56,10 @@ from naml_eval_test import (
 )
 from naml_common import SEED, preprocess_news_file, preprocess_user_file, get_embedding
 import naml_common as _naml_common
-from naml_model_builder import build_naml_models, build_naml_models_candidate_query_user
+from naml_model_builder import build_naml_models_candidate_query_user
 
 from naml_kd_train_userdistill import (
     _input_indices,
-    _history_input_indices,
     generate_batch_data_train_kd,
     _to_tf_inputs,
     _cosine_1minus,
@@ -74,7 +73,7 @@ def train_kd_cq_userdistill(
     model_user_stack,
     teacher_news_encoder,
     student_news_encoder,
-    teacher_user_encoder,
+    teacher_user_stack,
     make_train_gen,
     steps_per_epoch: int,
     optimizer: Adam,
@@ -86,7 +85,6 @@ def train_kd_cq_userdistill(
     eval_after_epoch: Optional[Callable[[], Tuple[Dict[str, Any], Optional[Dict[str, Any]]]]] = None,
 ) -> Tuple[Optional[List[np.ndarray]], int, float, Optional[Dict[str, Any]]]:
     cand_title_idx, cand_body_idx, cand_v_idx, cand_sv_idx = _input_indices(H)
-    hist_title_idx, hist_body_idx, hist_v_idx, hist_sv_idx = _history_input_indices(H)
 
     best_weights: Optional[List[np.ndarray]] = None
     best_epoch_1based = -1
@@ -119,15 +117,11 @@ def train_kd_cq_userdistill(
                 teacher_news_targets.append(
                     tf.stop_gradient(teacher_news_encoder([t_k, b_t_k, vk, svk], training=False))
                 )
-            t_user = tf.stop_gradient(
-                teacher_user_encoder(
-                    [x_list[i] for i in hist_title_idx]
-                    + [x_list[i] for i in hist_body_idx]
-                    + [x_list[i] for i in hist_v_idx]
-                    + [x_list[i] for i in hist_sv_idx],
-                    training=False,
-                )
-            )
+            pos = tf.argmax(y_t, axis=-1, output_type=tf.int32)
+            batch_i = tf.range(tf.shape(y_t)[0], dtype=tf.int32)
+            pos_idx2 = tf.stack([batch_i, pos], axis=-1)
+            t_all = tf.stop_gradient(teacher_user_stack(x_list, training=False))
+            t_user = tf.gather_nd(t_all, pos_idx2)
 
             with tf.GradientTape() as tape:
                 logits = student_model(x_list, training=True)
@@ -145,10 +139,7 @@ def train_kd_cq_userdistill(
                 loss_d_exp = tf.add_n(loss_d_exp_parts) / 5.0
 
                 s_all = model_user_stack(x_list, training=True)
-                pos = tf.argmax(y_t, axis=-1, output_type=tf.int32)
-                batch_i = tf.range(tf.shape(s_all)[0], dtype=tf.int32)
-                idx2 = tf.stack([batch_i, pos], axis=-1)
-                s_pos = tf.gather_nd(s_all, idx2)
+                s_pos = tf.gather_nd(s_all, pos_idx2)
                 loss_d_user = _cosine_1minus(s_pos, t_user)
 
                 loss = loss_rec + lambda_user * loss_d_user + lambda_exp * loss_d_exp
@@ -212,10 +203,15 @@ def train_kd_cq_userdistill(
 
 def main() -> None:
     ap = argparse.ArgumentParser(
-        description="NAML KD: CQ 학생 + 양성 슬롯 사용자 증류 (교사는 표준 NAML 가중치)"
+        description="NAML KD: CQ 교사·CQ 학생 + 양성 슬롯 사용자 증류 (교사 가중치는 CQ 사전학습)"
     )
     ap.add_argument("--teacher-weights", type=str, required=True)
-    ap.add_argument("--tune-log", type=str, default=None)
+    ap.add_argument(
+        "--tune-log",
+        type=str,
+        default=None,
+        help="CQ 교사/학생 빌드용 JSON (global_best_hparams). 예: naml_tune_actual_cq_teacher_log.json",
+    )
     ap.add_argument("--dropout-rate", type=float, default=None)
     ap.add_argument("--cnn-filters", type=int, default=None)
     ap.add_argument("--cnn-kernel-size", type=int, default=None)
@@ -388,30 +384,26 @@ def main() -> None:
         model_user_stack = built_s["model_user_stack"]
         model_test = built_s["model_test"]
 
-        built_t = build_naml_models(
+        built_t = build_naml_models_candidate_query_user(
             word_dict, embedding_mat, category, subcategory, args.learning_rate, clear_session=False, **_kw
         )
         teacher_full = built_t["model"]
         teacher_news = built_t["newsEncoder"]
-        teacher_user = tf.keras.Model(
-            built_t["browsed_news_input"]
-            + built_t["browsed_body_input"]
-            + built_t["browsed_v_input"]
-            + built_t["browsed_sv_input"],
-            built_t["user_rep"],
-        )
+        teacher_user_stack = built_t["model_user_stack"]
         try:
             teacher_full.load_weights(tw)
         except Exception as e:
             print(
-                "\n오류: 교사 가중치 로드 실패. 튜닝 가중치면 --tune-log 로 아키텍처를 맞추세요.\n",
+                "\n오류: 교사 가중치 로드 실패. CQ 교사는 `naml_tune_actual_cq_teacher.py` 산출물과 "
+                "동일 아키텍처가 필요합니다. --tune-log 에 해당 run 의 global_best_hparams 가 있는 JSON을 지정하거나 "
+                "--cnn-filters 등으로 수동 맞추세요.\n",
                 flush=True,
             )
             raise e
         teacher_full.trainable = False
         teacher_news.trainable = False
-        teacher_user.trainable = False
-        print(f"교사 가중치 로드 (동결): {tw}")
+        teacher_user_stack.trainable = False
+        print(f"교사(CQ) 가중치 로드 (동결): {tw}")
 
         def eval_after_epoch_fn():
             return run_test_set_eval(
@@ -464,7 +456,7 @@ def main() -> None:
             model_user_stack,
             teacher_news,
             built_s["newsEncoder"],
-            teacher_user,
+            teacher_user_stack,
             make_train_gen,
             steps_per_epoch,
             optimizer,
