@@ -16,6 +16,13 @@
   - CLI: `--fixed-learning-rate`, `--fixed-dropout-rate`, `--grid-cnn-filters`, … 로 덮어쓰기.
   - `--fixed-filter-kernel-grid` 는 CNN 폭·커널을 `--grid-cnn-filters` / `--grid-cnn-kernel-sizes` 로만 탐색할 때 쓰며, 이 플래그 사용 시 두 `--grid-*` 는 필수.
   - 동일 조합을 여러 시드로: `--repeat-per-combo N` (단일 페이즈만; `--two-phase` 와 병행 불가).
+  
+  python NAML/naml_tune_actual_cq_teacher.py --two-phase --trials 72 --screening-epochs 3 \
+  --mind-dataset-subdir MIND_2000 \
+  --refine-top-k 10 --epochs-per-trial 10 \
+  --resume-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json \
+  --out-weights saved_models/MIND_2000/NAML_cq_teacher_mind_2000_actual.h5 \
+  --out-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json
 
   python NAML/naml_tune_actual_cq_teacher.py \
   --mind-dataset-subdir MIND_2000 \
@@ -160,37 +167,48 @@ def _load_seen_hparam_keys_from_log(log_path: str) -> set[tuple]:
     return seen
 
 
-def _load_previous_best_from_log(log_path: str) -> tuple[float, dict | None]:
+def _load_previous_best_from_log(log_path: str) -> tuple[float, dict | None, dict | None]:
+    """(best_mrr, best_hparams, best_epoch_metrics). best_epoch_metrics 는 MRR/NDCG@5/Hit@1 키."""
     best_mrr = -1.0
     best_hp: dict | None = None
+    best_metrics: dict | None = None
     try:
         with open(log_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        gb = data.get("global_best_mrr", None)
-        gh = data.get("global_best_hparams", None)
-        if gb is not None:
-            try:
-                best_mrr = float(gb)
-                if isinstance(gh, dict):
-                    best_hp = gh
-            except Exception:
-                pass
-
-        rows = data.get("trials", [])
-        if isinstance(rows, list):
-            for r in rows:
-                m = r.get("best_mrr_in_trial", None)
-                hp = r.get("hparams", None)
-                try:
-                    mv = float(m)
-                except Exception:
-                    continue
-                if mv > best_mrr:
-                    best_mrr = mv
-                    best_hp = hp if isinstance(hp, dict) else best_hp
     except Exception as e:
         print(f"경고: 이전 최고 성능 로드 실패: {e}")
-    return best_mrr, best_hp
+        return best_mrr, best_hp, best_metrics
+
+    rows = data.get("trials", [])
+    if isinstance(rows, list):
+        for r in rows:
+            m = r.get("best_mrr_in_trial", None)
+            hp = r.get("hparams", None)
+            try:
+                mv = float(m)
+            except Exception:
+                continue
+            if mv > best_mrr:
+                best_mrr = mv
+                best_hp = hp if isinstance(hp, dict) else best_hp
+                be = r.get("best_epoch")
+                best_metrics = dict(be) if isinstance(be, dict) else best_metrics
+
+    gg = data.get("global_best_mrr", None)
+    gh = data.get("global_best_hparams", None)
+    gm = data.get("global_best_epoch_metrics", None)
+    if gg is not None:
+        try:
+            gfv = float(gg)
+        except Exception:
+            gfv = -1.0
+        if gfv > best_mrr and isinstance(gh, dict):
+            best_mrr = gfv
+            best_hp = dict(gh)
+            if isinstance(gm, dict):
+                best_metrics = dict(gm)
+
+    return best_mrr, best_hp, best_metrics
 
 
 def _load_json_or_none(path: str) -> dict | None:
@@ -200,6 +218,23 @@ def _load_json_or_none(path: str) -> dict | None:
         return data if isinstance(data, dict) else None
     except Exception:
         return None
+
+
+def _metrics_from_trials_for_mrr(trials: list, target_mrr: float) -> dict | None:
+    """trials 항목 중 best_mrr_in_trial 이 target_mrr 과 일치(근사)인 첫 best_epoch dict."""
+    for r in reversed(trials):
+        if not isinstance(r, dict):
+            continue
+        try:
+            mv = float(r.get("best_mrr_in_trial", -1.0))
+        except Exception:
+            continue
+        if abs(mv - target_mrr) > 1e-5:
+            continue
+        be = r.get("best_epoch")
+        if isinstance(be, dict):
+            return dict(be)
+    return None
 
 
 def run_trial_cq(
@@ -426,6 +461,7 @@ def main() -> None:
     rng = random.Random(args.seed)
     global_best_mrr = -1.0
     global_best_hp: dict | None = None
+    global_best_metrics: dict | None = None
     log_trials: list[dict] = []
 
     grid_n = _hparam_grid_size_for(choices)
@@ -438,10 +474,12 @@ def main() -> None:
         if os.path.isfile(resume_log_path):
             seen_hparam_keys = _load_seen_hparam_keys_from_log(resume_log_path)
             print(f"resume-log: {resume_log_path} (이미 시도한 조합 {len(seen_hparam_keys)}개)")
-            prev_best_mrr, prev_best_hp = _load_previous_best_from_log(resume_log_path)
+            prev_best_mrr, prev_best_hp, prev_best_metrics = _load_previous_best_from_log(resume_log_path)
             if prev_best_mrr > global_best_mrr:
                 global_best_mrr = prev_best_mrr
                 global_best_hp = prev_best_hp
+                if isinstance(prev_best_metrics, dict):
+                    global_best_metrics = dict(prev_best_metrics)
             print(
                 f"resume 기준 이전 최고 MRR={global_best_mrr:.6f} "
                 f"(초과 시 {args.out_weights} 저장)"
@@ -497,7 +535,7 @@ def main() -> None:
         phase_label: str,
         extra_log: dict | None = None,
     ) -> None:
-        nonlocal global_best_mrr, global_best_hp
+        nonlocal global_best_mrr, global_best_hp, global_best_metrics
         print(f"\n--- [{phase_label}] {trial_idx + 1}/{total_in_phase}  hparams={hp} ---")
         best_mrr, best_metrics, model = run_trial_cq(
             hp,
@@ -539,8 +577,12 @@ def main() -> None:
         if best_mrr > global_best_mrr:
             global_best_mrr = best_mrr
             global_best_hp = dict(hp)
+            global_best_metrics = dict(best_metrics)
             model.save_weights(args.out_weights)
-            print(f"  [전역 갱신] 저장 → {args.out_weights}  MRR={global_best_mrr:.6f}")
+            print(
+                f"  [전역 갱신] 저장 → {args.out_weights}  "
+                f"MRR={global_best_mrr:.6f}  NDCG@5={best_metrics['NDCG@5']:.6f}  Hit@1={best_metrics['Hit@1']:.6f}"
+            )
         K.clear_session()
 
     if args.two_phase:
@@ -593,8 +635,12 @@ def main() -> None:
             if best_mrr > global_best_mrr:
                 global_best_mrr = best_mrr
                 global_best_hp = dict(hp)
+                global_best_metrics = dict(best_metrics)
                 model.save_weights(args.out_weights)
-                print(f"  [전역 갱신] 저장 → {args.out_weights}  MRR={global_best_mrr:.6f}")
+                print(
+                    f"  [전역 갱신] 저장 → {args.out_weights}  "
+                    f"MRR={global_best_mrr:.6f}  NDCG@5={best_metrics['NDCG@5']:.6f}  Hit@1={best_metrics['Hit@1']:.6f}"
+                )
             screening_rows.append((best_mrr, dict(hp), best_metrics))
             K.clear_session()
 
@@ -632,6 +678,7 @@ def main() -> None:
         "model_user_encoder": "candidate_query_cross_attention",
         "global_best_mrr": global_best_mrr,
         "global_best_hparams": global_best_hp,
+        "global_best_epoch_metrics": dict(global_best_metrics) if global_best_metrics else None,
         "trials": log_trials,
         "max_history_clicks": int(MAX_HISTORY_CLICKS),
         "epochs_per_trial": args.epochs_per_trial,
@@ -669,6 +716,12 @@ def main() -> None:
                 old_hp = old.get("global_best_hparams", None)
                 if isinstance(old_hp, dict):
                     summary["global_best_hparams"] = old_hp
+                old_m = old.get("global_best_epoch_metrics", None)
+                if isinstance(old_m, dict):
+                    summary["global_best_epoch_metrics"] = dict(old_m)
+                else:
+                    fb = _metrics_from_trials_for_mrr(old_trials, old_best)
+                    summary["global_best_epoch_metrics"] = fb
             summary["trials"] = merged_trials
             summary["append_log"] = True
             summary["append_log_auto_by_resume"] = bool(args.resume_log and not args.append_log)
@@ -677,9 +730,23 @@ def main() -> None:
 
     with open(args.out_log, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
-    print(f"\n완료. 전역 최고 MRR={global_best_mrr:.6f}, 로그: {args.out_log}")
-    if global_best_hp:
-        print(f"최적 hparams: {global_best_hp}")
+    bm = summary.get("global_best_epoch_metrics")
+    print(f"\n완료. 로그: {args.out_log}", flush=True)
+    if isinstance(bm, dict) and all(k in bm for k in ("MRR", "NDCG@5", "Hit@1")):
+        print(
+            f"전역 최고 (테스트 세션): MRR={float(bm['MRR']):.6f}  "
+            f"NDCG@5={float(bm['NDCG@5']):.6f}  Hit@1={float(bm['Hit@1']):.6f}",
+            flush=True,
+        )
+    else:
+        print(
+            f"전역 최고 MRR={float(summary.get('global_best_mrr', -1.0)):.6f}  "
+            f"(NDCG@5/Hit@1 은 이 로그에 global_best_epoch_metrics 없음)",
+            flush=True,
+        )
+    best_hp_out = summary.get("global_best_hparams")
+    if isinstance(best_hp_out, dict) and best_hp_out:
+        print(f"최적 hparams: {best_hp_out}", flush=True)
 
 
 if __name__ == "__main__":
