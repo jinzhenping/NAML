@@ -5,7 +5,10 @@ This bundle contains everything needed to train a **pure CROWN** model
 `MIND_2000` dataset.
 
 conda activate crown_bw
+# CROWN
 python main.py  --dataset=mind2000 --config_file=pure_crown.json
+#LIME
+python main.py --news_encoder=LIME --content_encoder=CROWN --user_encoder=CROWN --dataset mind2000
 
 ## Folder layout
 
