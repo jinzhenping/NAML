@@ -7,7 +7,7 @@ This bundle contains everything needed to train a **pure CROWN** model
 conda activate crown_bw
 # CROWN
 python main.py  --dataset=mind2000 --config_file=pure_crown.json
-#LIME
+# LIME
 python main.py --news_encoder=LIME --content_encoder=CROWN --user_encoder=CROWN --dataset mind2000
 
 ## Folder layout

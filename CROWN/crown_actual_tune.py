@@ -8,8 +8,9 @@ NAML/naml_tune_actual.py 와 비슷하게: 여러 trial을 한 프로세스에�
 
 실행 (반드시 CROWN 디렉터리에서, `--` 뒤에 main.py 에 넘길 인자):
 
-  cd CROWN
-  python crown_actual_tune.py --trials 72 --seed 42 --epochs-per-trial 16 -- --mode train --dataset mind2000 --news_encoder CROWN --content_encoder CROWN --user_encoder CROWN
+cd CROWN
+python crown_actual_tune.py --trials 72 --seed 42 --epochs-per-trial 16 -- --mode train --dataset mind2000 --news_encoder CROWN --content_encoder CROWN --user_encoder CROWN
+python crown_actual_tune.py --trials 108 --seed 42 --epochs-per-trial 16 -- --mode train --dataset mind2000 --news_encoder LIME --content_encoder CROWN --user_encoder CROWN
 
   (반드시 `--` 앞은 튜닝 전용 옵션, 뒤는 main.py 와 동일한 CROWN 인자. `--` 가 없으면 사용법만 출력하고 종료한다.)
 
