@@ -23,7 +23,7 @@ CQ NAML (`build_naml_models_candidate_query_user`) 테스트셋 평가.
   --weights saved_models/MIND_2000/NAML_kd_student_cq_0.5_0.5_7.h5 \
   --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json \
   --mind-dataset-subdir MIND_2000 \
-  --expected-body-first-n-sentences 7 \
+  --expected-body-first-n-sentences 0 \
   --mind-test-tsv dataset/MIND_2000/MIND_test_2000_final.tsv
 
 표준 NAML 평가는 `NAML/naml_eval_test.py` (--cq-user-encoder 없음).
