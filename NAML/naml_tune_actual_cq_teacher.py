@@ -2,8 +2,9 @@
 # MIND_2000: --mind-dataset-subdir MIND_2000
 # Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
-후보 뉴스를 사용자 히스토리 어텐션의 쿼리로 쓰는 NAML(`build_naml_models_candidate_query_user`)을
-**실제 본문**만으로 학습하고, 테스트 세션 MRR 기준으로 하이퍼파라미터를 탐색한다.
+후보 뉴스를 사용자 히스토리 어텐션의 쿼리로 쓰는 NAML(`build_naml_models_candidate_query_user`)의
+하이퍼파라미터 탐색. 기본은 **실제 본문**; `--use-expected-body` 로 학습·평가 모두 기대본문
+(`naml_tune_expected.py` 와 동일한 JSON + 앞 N문장 규칙).
 
 `naml_kd_train_cq_userdistill.py` 의 학생 그래프와 동일한 사용자 경로이므로, 여기서 저장한 가중치를
 동일 아키텍처·동일 `HPARAM_CHOICES` 로 KD 교사로 쓸 수 있다(교사·학생 구조 정렬).
@@ -41,6 +42,16 @@
   --repeat-per-combo 5 \
   --out-weights saved_models/MIND_2000/NAML_cq_teacher_mind_2000_actual.h5 \
   --out-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json
+
+  # CQ 교사 + 기대본문 (학습·튜닝 중 테스트 MRR 모두 기대본문):
+  python NAML/naml_tune_actual_cq_teacher.py --two-phase --trials 36 --screening-epochs 3 \
+  --mind-dataset-subdir MIND_2000 --refine-top-k 5 --epochs-per-trial 8 \
+  --use-expected-body \
+  --expected-train-dir user_preference/expected_body/MIND_2000/train_3cluster_11_13_8_rawtitle \
+  --expected-test-dir user_preference/expected_body/MIND_2000/test_3cluster_11_13_8_rawtitle \
+  --expected-body-first-n-sentences 3 \
+  --out-weights saved_models/MIND_2000/NAML_cq_mind_2000_expected.h5 \
+  --out-log saved_models/MIND_2000/naml_tune_expected_cq_log.json
 """
 from __future__ import annotations
 
@@ -66,6 +77,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras import backend as K
 
+import naml_common as _naml_common
 from naml_common import (
     SEED,
     MAX_HISTORY_CLICKS,
@@ -74,12 +86,13 @@ from naml_common import (
     preprocess_user_file,
 )
 from naml_model_builder import build_naml_models_candidate_query_user
+from naml_batch_generators import generate_batch_data_train as generate_batch_data_train_expected
 
-# 배치·평가는 표준 NAML과 입력 순서가 동일 → tune_actual 구현 재사용
-from naml_tune_actual import (
+from naml_tune_expected import (
+    _resolve_expected_body_dir,
     evaluate_session_metrics,
     generate_batch_data_train_actual,
-    generate_batch_data_test_actual,
+    load_expected_bodies_from_dir,
 )
 
 # 튜닝 그리드: 필요 시 이 dict 만 수정 (itertools.product 크기 = 고유 조합 개수)
@@ -252,16 +265,26 @@ def run_trial_cq(
     news_body,
     news_v,
     news_sv,
+    news_index,
     all_train_pn,
     all_label,
     all_train_id,
     all_user_pos,
+    all_train_userid_str,
+    all_train_newsid_str,
     all_test_pn,
     all_test_label,
     all_test_id,
     all_test_user_pos,
     all_test_index,
+    all_test_userid_str,
+    all_test_newsid_str,
     trial_seed: int,
+    *,
+    use_expected_body: bool = False,
+    expected_bodies_train=None,
+    expected_bodies_test=None,
+    history_body_title_only: bool = False,
 ):
     np.random.seed(trial_seed)
     random.seed(trial_seed)
@@ -291,20 +314,41 @@ def run_trial_cq(
     best_metrics = None
 
     for _ep in range(epochs):
-        traingen = generate_batch_data_train_actual(
-            all_train_pn,
-            all_label,
-            all_train_id,
-            all_user_pos,
-            news_words,
-            news_body,
-            news_v,
-            news_sv,
-            batch_size,
-        )
+        if use_expected_body:
+            traingen = generate_batch_data_train_expected(
+                word_dict=word_dict,
+                news_words=news_words,
+                news_body=news_body,
+                news_v=news_v,
+                news_sv=news_sv,
+                news_index=news_index,
+                all_train_pn=all_train_pn,
+                all_label=all_label,
+                all_train_id=all_train_id,
+                all_user_pos=all_user_pos,
+                batch_size=batch_size,
+                expected_bodies=expected_bodies_train,
+                all_userid_str=all_train_userid_str,
+                all_train_newsid_str=all_train_newsid_str,
+                history_body_title_only=history_body_title_only,
+            )
+        else:
+            traingen = generate_batch_data_train_actual(
+                all_train_pn,
+                all_label,
+                all_train_id,
+                all_user_pos,
+                news_words,
+                news_body,
+                news_v,
+                news_sv,
+                batch_size,
+                history_body_title_only=history_body_title_only,
+            )
         model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch, verbose=0)
         current_metrics = evaluate_session_metrics(
             model_test,
+            word_dict,
             all_test_pn,
             all_test_label,
             all_test_id,
@@ -315,6 +359,12 @@ def run_trial_cq(
             news_v,
             news_sv,
             batch_size,
+            use_expected_body=use_expected_body,
+            expected_bodies_test=expected_bodies_test,
+            all_test_userid_str=all_test_userid_str,
+            all_test_newsid_str=all_test_newsid_str,
+            news_index=news_index,
+            history_body_title_only=history_body_title_only,
         )
         mrr = current_metrics["MRR"]
         if mrr > best_mrr:
@@ -331,7 +381,7 @@ def run_trial_cq(
 
 def main() -> None:
     ap = argparse.ArgumentParser(
-        description="NAML 후보쿼리 사용자 인코더 - 실제 본문 하이퍼파라미터 탐색 (CQ teacher 사전학습)"
+        description="NAML CQ-user 교사 하이퍼파라미터 탐색 (기본 실제본문, --use-expected-body 로 기대본문)"
     )
     ap.add_argument("--trials", type=int, default=12)
     ap.add_argument("--epochs-per-trial", type=int, default=8)
@@ -392,6 +442,34 @@ def main() -> None:
     ap.add_argument("--fixed-dropout-rate", type=float, default=None, metavar="D")
     ap.add_argument("--fixed-attention-dense-dim", type=int, default=None, metavar="DIM")
     ap.add_argument("--fixed-category-emb-dim", type=int, default=None, metavar="DIM")
+    ap.add_argument(
+        "--use-expected-body",
+        action="store_true",
+        help="학습·튜닝 중 테스트 MRR 평가 모두 기대본문(user_*/news_*.json) 사용",
+    )
+    ap.add_argument(
+        "--expected-train-dir",
+        type=str,
+        default=None,
+        help="train 기대본문 상위 폴더. --use-expected-body 일 때 필수",
+    )
+    ap.add_argument(
+        "--expected-test-dir",
+        type=str,
+        default=None,
+        help="test 기대본문 상위 폴더. --use-expected-body 일 때 필수",
+    )
+    ap.add_argument(
+        "--expected-body-first-n-sentences",
+        type=int,
+        default=3,
+        help="기대본문 앞 N문장만 (0=전체). --use-expected-body 일 때 적용",
+    )
+    ap.add_argument(
+        "--history-body-title-only",
+        action="store_true",
+        help="히스토리 본문 슬롯은 제목 토큰만(0 패딩). 후보는 기대/실제 본문 규칙 그대로",
+    )
     args = ap.parse_args()
 
     if args.fixed_filter_kernel_grid:
@@ -415,12 +493,42 @@ def main() -> None:
     random.seed(args.seed)
     tf.random.set_seed(args.seed)
 
+    use_expected_body = bool(args.use_expected_body)
+    expected_bodies_train = None
+    expected_bodies_test = None
+    if use_expected_body:
+        _train_dir = _resolve_expected_body_dir(args.expected_train_dir)
+        _test_dir = _resolve_expected_body_dir(args.expected_test_dir)
+        if not _train_dir:
+            print(f"오류: --expected-train-dir 없음: {args.expected_train_dir}", file=sys.stderr)
+            sys.exit(1)
+        if not _test_dir:
+            print(f"오류: --expected-test-dir 없음: {args.expected_test_dir}", file=sys.stderr)
+            sys.exit(1)
+        _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES = max(0, int(args.expected_body_first_n_sentences))
+        expected_bodies_train = load_expected_bodies_from_dir(_train_dir)
+        expected_bodies_test = load_expected_bodies_from_dir(_test_dir)
+        if not expected_bodies_train:
+            print(f"오류: train 기대본문 0개: {_train_dir}", file=sys.stderr)
+            sys.exit(1)
+        if not expected_bodies_test:
+            print(f"오류: test 기대본문 0개: {_test_dir}", file=sys.stderr)
+            sys.exit(1)
+
+    body_mode = "기대본문" if use_expected_body else "실제 본문"
     print(
-        f"데이터 로드 (실제 본문, CQ-user NAML, {os.environ.get('MIND_DATASET_SUBDIR', 'MIND_2000')} train/test)..."
+        f"데이터 로드 ({body_mode}, CQ-user NAML, "
+        f"{os.environ.get('MIND_DATASET_SUBDIR', 'MIND_2000')} train/test)..."
     )
+    if use_expected_body:
+        print(
+            f"  기대본문 train={len(expected_bodies_train)} test={len(expected_bodies_test)} "
+            f"앞 {_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}문장",
+            flush=True,
+        )
     word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(
-        expected_bodies_train=None,
-        expected_bodies_test=None,
+        expected_bodies_train=expected_bodies_train if use_expected_body else None,
+        expected_bodies_test=expected_bodies_test if use_expected_body else None,
         expected_bodies_vocab_extra=None,
     )
     (
@@ -436,14 +544,14 @@ def main() -> None:
         all_test_index,
         _c1,
         _c2,
-        _tr_u,
-        _tr_n,
-        _te_u,
-        _te_n,
+        all_train_userid_str,
+        all_train_newsid_str,
+        all_test_userid_str,
+        all_test_newsid_str,
     ) = preprocess_user_file(
         news_index=news_index,
-        expected_bodies_train=None,
-        expected_bodies_test=None,
+        expected_bodies_train=expected_bodies_train if use_expected_body else None,
+        expected_bodies_test=expected_bodies_test if use_expected_body else None,
         word_dict=word_dict,
     )
 
@@ -529,6 +637,37 @@ def main() -> None:
             for r in range(max(1, int(args.repeat_per_combo))):
                 trial_schedule.append((hp, ci, r))
 
+    history_body_title_only = bool(args.history_body_title_only)
+    trial_kw = dict(
+        batch_size=args.batch_size,
+        word_dict=word_dict,
+        embedding_mat=embedding_mat,
+        category=category,
+        subcategory=subcategory,
+        news_words=news_words,
+        news_body=news_body,
+        news_v=news_v,
+        news_sv=news_sv,
+        news_index=news_index,
+        all_train_pn=all_train_pn,
+        all_label=all_label,
+        all_train_id=all_train_id,
+        all_user_pos=all_user_pos,
+        all_train_userid_str=all_train_userid_str,
+        all_train_newsid_str=all_train_newsid_str,
+        all_test_pn=all_test_pn,
+        all_test_label=all_test_label,
+        all_test_id=all_test_id,
+        all_test_user_pos=all_test_user_pos,
+        all_test_index=all_test_index,
+        all_test_userid_str=all_test_userid_str,
+        all_test_newsid_str=all_test_newsid_str,
+        use_expected_body=use_expected_body,
+        expected_bodies_train=expected_bodies_train,
+        expected_bodies_test=expected_bodies_test,
+        history_body_title_only=history_body_title_only,
+    )
+
     def _one_trial(
         trial_idx: int,
         total_in_phase: int,
@@ -543,25 +682,8 @@ def main() -> None:
         best_mrr, best_metrics, model = run_trial_cq(
             hp,
             epochs,
-            args.batch_size,
-            word_dict,
-            embedding_mat,
-            category,
-            subcategory,
-            news_words,
-            news_body,
-            news_v,
-            news_sv,
-            all_train_pn,
-            all_label,
-            all_train_id,
-            all_user_pos,
-            all_test_pn,
-            all_test_label,
-            all_test_id,
-            all_test_user_pos,
-            all_test_index,
             trial_seed,
+            **trial_kw,
         )
         print(
             f"  trial best MRR: {best_mrr:.6f}  |  "
@@ -602,25 +724,8 @@ def main() -> None:
             best_mrr, best_metrics, model = run_trial_cq(
                 hp,
                 args.screening_epochs,
-                args.batch_size,
-                word_dict,
-                embedding_mat,
-                category,
-                subcategory,
-                news_words,
-                news_body,
-                news_v,
-                news_sv,
-                all_train_pn,
-                all_label,
-                all_train_id,
-                all_user_pos,
-                all_test_pn,
-                all_test_label,
-                all_test_id,
-                all_test_user_pos,
-                all_test_index,
                 trial_seed,
+                **trial_kw,
             )
             print(
                 f"  trial best MRR: {best_mrr:.6f}  |  "
@@ -679,6 +784,13 @@ def main() -> None:
 
     summary = {
         "model_user_encoder": "candidate_query_cross_attention",
+        "use_expected_body": use_expected_body,
+        "expected_train_dir": args.expected_train_dir if use_expected_body else None,
+        "expected_test_dir": args.expected_test_dir if use_expected_body else None,
+        "expected_body_first_n_sentences": (
+            int(args.expected_body_first_n_sentences) if use_expected_body else None
+        ),
+        "history_body_title_only": history_body_title_only,
         "global_best_mrr": global_best_mrr,
         "global_best_hparams": global_best_hp,
         "global_best_epoch_metrics": dict(global_best_metrics) if global_best_metrics else None,
