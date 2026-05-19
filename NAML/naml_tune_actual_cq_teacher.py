@@ -3,8 +3,8 @@
 # Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
 후보 뉴스를 사용자 히스토리 어텐션의 쿼리로 쓰는 NAML(`build_naml_models_candidate_query_user`)의
-하이퍼파라미터 탐색. 기본은 **실제 본문**; `--use-expected-body` 로 학습·평가 모두 기대본문
-(`naml_tune_expected.py` 와 동일한 JSON + 앞 N문장 규칙).
+하이퍼파라미터 탐색. 기본은 **실제 본문**; `--use-expected-body` 시 학습은 `--expected-body-first-n-sentences`,
+튜닝 중 테스트 MRR 평가는 **기대본문 전체** (문장 컷 없음).
 
 `naml_kd_train_cq_userdistill.py` 의 학생 그래프와 동일한 사용자 경로이므로, 여기서 저장한 가중치를
 동일 아키텍처·동일 `HPARAM_CHOICES` 로 KD 교사로 쓸 수 있다(교사·학생 구조 정렬).
@@ -365,6 +365,7 @@ def run_trial_cq(
             all_test_newsid_str=all_test_newsid_str,
             news_index=news_index,
             history_body_title_only=history_body_title_only,
+            eval_expected_body_clip_n_sentences=0 if use_expected_body else None,
         )
         mrr = current_metrics["MRR"]
         if mrr > best_mrr:
@@ -463,7 +464,7 @@ def main() -> None:
         "--expected-body-first-n-sentences",
         type=int,
         default=3,
-        help="기대본문 앞 N문장만 (0=전체). --use-expected-body 일 때 적용",
+        help="학습 시 기대본문 앞 N문장만 (0=전체). 튜닝 중 테스트 MRR 평가는 항상 기대본문 전체",
     )
     ap.add_argument(
         "--history-body-title-only",
@@ -521,9 +522,15 @@ def main() -> None:
         f"{os.environ.get('MIND_DATASET_SUBDIR', 'MIND_2000')} train/test)..."
     )
     if use_expected_body:
+        n_train_clip = _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES
+        train_clip_msg = (
+            f"학습 앞 {n_train_clip}문장"
+            if n_train_clip > 0
+            else "학습 전체 문장"
+        )
         print(
             f"  기대본문 train={len(expected_bodies_train)} test={len(expected_bodies_test)} "
-            f"앞 {_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES}문장",
+            f"({train_clip_msg}, 평가=전체)",
             flush=True,
         )
     word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(

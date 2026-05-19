@@ -396,10 +396,14 @@ def evaluate_session_metrics(
     all_test_newsid_str=None,
     news_index=None,
     history_body_title_only: bool = False,
+    eval_expected_body_clip_n_sentences: int | None = None,
 ):
     n = len(all_test_id)
     steps = (n + batch_size - 1) // batch_size
     if use_expected_body:
+        _exp_kw: dict = {}
+        if eval_expected_body_clip_n_sentences is not None:
+            _exp_kw["expected_body_clip_n_sentences"] = int(eval_expected_body_clip_n_sentences)
         gen = generate_batch_data_test_expected(
             word_dict=word_dict,
             news_words=news_words,
@@ -416,6 +420,7 @@ def evaluate_session_metrics(
             all_userid_str=all_test_userid_str,
             all_newsid_str=all_test_newsid_str,
             history_body_title_only=history_body_title_only,
+            **_exp_kw,
         )
     else:
         gen = generate_batch_data_test_actual(
