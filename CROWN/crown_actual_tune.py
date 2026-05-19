@@ -30,6 +30,11 @@ trial 마다 저장:
   run_meta.json, summary.json, leaderboard.csv, INDEX.md
 
 학습 후보 수는 튜닝 중 항상 고정: 양성 1 + 네거티브 4 (--negative_sample_num 4).
+
+`--` 뒤 `--news_encoder` / `--user_encoder` (및 HDC+FIM 시 `--click_predictor FIM`) 조합에 따라
+탐색 그리드가 자동 전환된다 (예: CNN+LSTUR → cnn_kernel_num, long_term_masking_probability).
+CROWN/LIME+CROWN 은 intent_num·intent_embedding_dim 을 탐색한다.
+`--tune-profile` 로 강제 지정 가능 (auto | crown | cnn_lstur | cne_sue | naml_att | hdc_fim | generic).
 """
 
 from __future__ import annotations
@@ -51,6 +56,20 @@ _CROWN_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # 튜닝 시 후보 수 고정: 양성 1 + 네거티브 4 (= config.negative_sample_num 4)
 TUNE_NEGATIVE_SAMPLE_NUM = 4
+
+_COMMON_LRS = [5e-5, 1e-4, 2e-4]
+_COMMON_DROPOUTS = [0.15, 0.2, 0.25, 0.3]
+_COMMON_WDS = [0.0, 1e-5]
+
+_TUNE_PROFILE_CHOICES = (
+    "auto",
+    "crown",
+    "cnn_lstur",
+    "cne_sue",
+    "naml_att",
+    "hdc_fim",
+    "generic",
+)
 
 
 def _chdir_crown() -> None:
@@ -118,19 +137,150 @@ def merge_crown_argv(base: list[str], overrides: dict[str, Any]) -> list[str]:
     return out
 
 
-def default_hparam_grid(rng: random.Random) -> list[dict[str, Any]]:
-    """논문/기본값 근처의 작은 그리드에서 무작위 trial용 조합 풀."""
-    lrs = [5e-5, 1e-4, 2e-4]
-    dropouts = [0.15, 0.2, 0.25, 0.3]
-    wds = [0.0, 1e-5]
-    intents = [2, 3, 4]
-    intent_dims = [300, 400]
-    combos = [
-        {"lr": lr, "dropout_rate": dr, "weight_decay": wd, "intent_num": k, "intent_embedding_dim": d}
-        for lr, dr, wd, k, d in itertools.product(lrs, dropouts, wds, intents, intent_dims)
-    ]
+def parse_crown_argv_flags(argv: list[str]) -> dict[str, str]:
+    """`--key val` / `--key=val` 형태만 추출 (store_true 플래그 값 없음)."""
+    out: dict[str, str] = {}
+    i = 0
+    while i < len(argv):
+        tok = argv[i]
+        if not tok.startswith("--"):
+            i += 1
+            continue
+        body = tok[2:]
+        if "=" in body:
+            name, val = body.split("=", 1)
+            out[name.replace("-", "_")] = val
+            i += 1
+            continue
+        name = body.replace("-", "_")
+        if i + 1 < len(argv) and not argv[i + 1].startswith("--"):
+            out[name] = argv[i + 1]
+            i += 2
+        else:
+            i += 1
+    return out
+
+
+def detect_tune_profile(crown_argv: list[str]) -> str:
+    """baseline argv 에서 튜닝 프로필 키를 추론."""
+    f = parse_crown_argv_flags(crown_argv)
+    news = f.get("news_encoder", "").upper()
+    user = f.get("user_encoder", "").upper()
+    click = f.get("click_predictor", "dot_product").upper()
+    if news == "CNN" and user == "LSTUR":
+        return "cnn_lstur"
+    if news == "CNE" and user == "SUE":
+        return "cne_sue"
+    if news == "NAML" and user == "ATT":
+        return "naml_att"
+    if news == "HDC" and user == "FIM":
+        return "hdc_fim"
+    if news in ("CROWN", "LIME") or user == "CROWN":
+        return "crown"
+    return "generic"
+
+
+def resolve_tune_profile(crown_argv: list[str], cli_profile: str) -> str:
+    p = (cli_profile or "auto").strip().lower()
+    if p not in _TUNE_PROFILE_CHOICES:
+        raise ValueError(f"unknown --tune-profile {cli_profile!r}; choices: {_TUNE_PROFILE_CHOICES}")
+    if p == "auto":
+        return detect_tune_profile(crown_argv)
+    return p
+
+
+def profile_tuned_param_names(profile: str) -> list[str]:
+    """leaderboard / 문서용: 프로필별 trial 이 덮어쓰는 config 키."""
+    common = ["lr", "dropout_rate", "weight_decay", "batch_size"]
+    extra: dict[str, list[str]] = {
+        "crown": ["intent_num", "intent_embedding_dim"],
+        "cnn_lstur": ["cnn_kernel_num", "attention_dim", "long_term_masking_probability"],
+        "cne_sue": ["hidden_dim", "attention_dim", "gcn_layer_num"],
+        "naml_att": ["cnn_kernel_num", "attention_dim"],
+        "hdc_fim": ["HDC_filter_num", "conv3D_filter_num_first"],
+        "generic": [],
+    }
+    return common + extra.get(profile, [])
+
+
+def _grid_product(axes: dict[str, list[Any]]) -> list[dict[str, Any]]:
+    keys = list(axes.keys())
+    vals = [axes[k] for k in keys]
+    return [dict(zip(keys, combo)) for combo in itertools.product(*vals)]
+
+
+def default_hparam_grid(profile: str, rng: random.Random) -> list[dict[str, Any]]:
+    """프로필별 작은 그리드 → shuffle 후 trial 풀."""
+    common = {
+        "lr": _COMMON_LRS,
+        "dropout_rate": _COMMON_DROPOUTS,
+        "weight_decay": _COMMON_WDS,
+    }
+    if profile == "crown":
+        axes = {
+            **common,
+            "intent_num": [2, 3, 4],
+            "intent_embedding_dim": [300, 400],
+        }
+    elif profile == "cnn_lstur":
+        axes = {
+            **common,
+            "cnn_kernel_num": [300, 400],
+            "attention_dim": [300, 400],
+            "long_term_masking_probability": [0.1, 0.3, 0.5],
+        }
+    elif profile == "cne_sue":
+        axes = {
+            **common,
+            "hidden_dim": [300, 400],
+            "attention_dim": [300, 400],
+            "gcn_layer_num": [3, 4, 5],
+        }
+    elif profile == "naml_att":
+        axes = {
+            **common,
+            "cnn_kernel_num": [300, 400],
+            "attention_dim": [300, 400],
+        }
+    elif profile == "hdc_fim":
+        axes = {
+            **common,
+            "HDC_filter_num": [100, 150, 200],
+            "conv3D_filter_num_first": [24, 32],
+        }
+    else:  # generic
+        axes = dict(common)
+    combos = _grid_product(axes)
     rng.shuffle(combos)
     return combos
+
+
+def random_hparam_sample(profile: str, rng: random.Random) -> dict[str, Any]:
+    hp: dict[str, Any] = {
+        "lr": rng.choice([5e-5, 1e-4, 1.5e-4, 2e-4]),
+        "dropout_rate": rng.choice([0.1, 0.15, 0.2, 0.25, 0.3]),
+        "weight_decay": rng.choice([0.0, 1e-5, 1e-4]),
+    }
+    if profile == "crown":
+        hp["intent_num"] = rng.choice([1, 2, 3, 4, 5])
+        hp["intent_embedding_dim"] = rng.choice([200, 300, 400])
+    elif profile == "cnn_lstur":
+        hp["cnn_kernel_num"] = rng.choice([300, 400])
+        hp["attention_dim"] = rng.choice([300, 400])
+        hp["long_term_masking_probability"] = rng.choice([0.1, 0.2, 0.3, 0.5])
+    elif profile == "cne_sue":
+        hp["hidden_dim"] = rng.choice([300, 400])
+        hp["attention_dim"] = rng.choice([300, 400])
+        hp["gcn_layer_num"] = rng.choice([3, 4, 5])
+    elif profile == "naml_att":
+        hp["cnn_kernel_num"] = rng.choice([300, 400])
+        hp["attention_dim"] = rng.choice([300, 400])
+    elif profile == "hdc_fim":
+        hp["HDC_filter_num"] = rng.choice([100, 150, 200])
+        hp["conv3D_filter_num_first"] = rng.choice([24, 32, 40])
+    if rng.random() < 0.25:
+        hp["batch_size"] = rng.choice([16, 32, 64])
+    return hp
 
 
 def plan_trials(
@@ -138,8 +288,9 @@ def plan_trials(
     n_trials: int,
     seen_keys: set[str],
     allow_duplicates: bool,
+    profile: str,
 ) -> list[dict[str, Any]]:
-    pool = default_hparam_grid(rng)
+    pool = default_hparam_grid(profile, rng)
     chosen: list[dict[str, Any]] = []
     if not allow_duplicates:
         for hp in pool:
@@ -153,14 +304,7 @@ def plan_trials(
         attempts = 0
         while len(chosen) < n_trials and attempts < n_trials * 50:
             attempts += 1
-            hp = {
-                "lr": rng.choice([5e-5, 1e-4, 1.5e-4, 2e-4]),
-                "dropout_rate": rng.choice([0.1, 0.15, 0.2, 0.25, 0.3]),
-                "weight_decay": rng.choice([0.0, 1e-5, 1e-4]),
-                "intent_num": rng.choice([1, 2, 3, 4, 5]),
-                "intent_embedding_dim": rng.choice([200, 300, 400]),
-                "batch_size": rng.choice([16, 32, 64]),
-            }
+            hp = random_hparam_sample(profile, rng)
             key = _hparam_key(hp)
             if key in seen_keys:
                 continue
@@ -168,15 +312,11 @@ def plan_trials(
             chosen.append(hp)
         return chosen[:n_trials]
     for _ in range(n_trials):
-        chosen.append(
-            {
-                "lr": rng.choice([5e-5, 1e-4, 2e-4]),
-                "dropout_rate": rng.choice([0.15, 0.2, 0.25]),
-                "weight_decay": rng.choice([0.0, 1e-5]),
-                "intent_num": rng.choice([2, 3, 4]),
-                "intent_embedding_dim": rng.choice([300, 400]),
-            }
-        )
+        hp = random_hparam_sample(profile, rng)
+        # allow_duplicates 모드에서는 batch_size 를 항상 넣지 않음
+        if "batch_size" in hp and rng.random() < 0.5:
+            del hp["batch_size"]
+        chosen.append(hp)
     return chosen
 
 
@@ -228,10 +368,12 @@ def apply_corpus_derived_fields(config: Any, corpus: Any) -> None:
         config.attribute_dict["entity_size"] = src.entity_size
 
 
-def write_index_md(run_dir: str, run_name: str) -> None:
+def write_index_md(run_dir: str, run_name: str, tune_profile: str) -> None:
     path = os.path.join(run_dir, "INDEX.md")
+    tuned = ", ".join(f"`{k}`" for k in profile_tuned_param_names(tune_profile) if k != "batch_size")
     with open(path, "w", encoding="utf-8") as f:
         f.write(f"# CROWN tune run: `{run_name}`\n\n")
+        f.write(f"- 튜닝 프로필: `{tune_profile}` (탐색: {tuned})\n")
         f.write(f"- 학습 후보: 양성 1 + 네거티브 {TUNE_NEGATIVE_SAMPLE_NUM} (`negative_sample_num` 튜닝 안 함)\n")
         f.write("- `run_meta.json` — 실행 시각, 시드, baseline argv\n")
         f.write("- `summary.json` — 모든 trial 요약 (metrics, 경로)\n")
@@ -272,6 +414,13 @@ def main() -> None:
     ap.add_argument("--resume-log", type=str, default="", help="이전 summary.json → 시도한 hparam 스킵")
     ap.add_argument("--append-log", action="store_true")
     ap.add_argument("--allow-duplicate-hparams", action="store_true")
+    ap.add_argument(
+        "--tune-profile",
+        type=str,
+        default="auto",
+        choices=list(_TUNE_PROFILE_CHOICES),
+        help="auto: -- 뒤 encoder 조합으로 그리드 선택",
+    )
     args = ap.parse_args(tune_argv)
 
     if not crown_argv:
@@ -312,10 +461,19 @@ def main() -> None:
         except Exception as e:
             print(f"append-log: 기존 summary 로드 실패: {e}", flush=True)
 
-    trials_hp = plan_trials(rng, args.trials, seen_hparam_keys, args.allow_duplicate_hparams)
+    tune_profile = resolve_tune_profile(crown_argv, args.tune_profile)
+    trials_hp = plan_trials(
+        rng, args.trials, seen_hparam_keys, args.allow_duplicate_hparams, tune_profile
+    )
     if not trials_hp:
         print("실행할 새 hparam 조합이 없습니다.", file=sys.stderr)
         sys.exit(0)
+
+    print(
+        f"[tune] profile={tune_profile}  "
+        f"grid_keys={profile_tuned_param_names(tune_profile)}  trials={len(trials_hp)}",
+        flush=True,
+    )
 
     # delayed imports after chdir
     import numpy as np
@@ -330,6 +488,9 @@ def main() -> None:
     meta = {
         "run_name": run_name,
         "seed": args.seed,
+        "tune_profile": tune_profile,
+        "tune_profile_cli": args.tune_profile,
+        "tuned_param_names": profile_tuned_param_names(tune_profile),
         "negative_sample_num_fixed": TUNE_NEGATIVE_SAMPLE_NUM,
         "trials_requested": args.trials,
         "crown_argv": crown_argv,
@@ -342,7 +503,7 @@ def main() -> None:
     with open(os.path.join(run_dir, "run_meta.json"), "w", encoding="utf-8") as f:
         json.dump(meta, f, indent=2, ensure_ascii=False)
 
-    write_index_md(run_dir, run_name)
+    write_index_md(run_dir, run_name, tune_profile)
 
     def run_one_trial(
         trial_id: int,
@@ -526,7 +687,7 @@ def main() -> None:
             log_trials.append(row)
             _flush_summary(run_dir, meta, log_trials, args.rank_metric)
 
-    _write_leaderboard(run_dir, log_trials, args.rank_metric)
+    _write_leaderboard(run_dir, log_trials, args.rank_metric, tune_profile)
     print(f"\n완료. 결과 디렉터리:\n  {os.path.abspath(run_dir)}\n", flush=True)
 
 
@@ -549,11 +710,17 @@ def _flush_summary(run_dir: str, meta: dict[str, Any], trials: list[dict[str, An
         json.dump(summary, f, indent=2, ensure_ascii=False)
 
 
-def _write_leaderboard(run_dir: str, trials: list[dict[str, Any]], rank_metric: str) -> None:
+def _write_leaderboard(
+    run_dir: str,
+    trials: list[dict[str, Any]],
+    rank_metric: str,
+    tune_profile: str,
+) -> None:
     path = os.path.join(run_dir, "leaderboard.csv")
     rows = [r for r in trials if not str(r.get("phase", "")).startswith("screening")]
     if not rows:
         rows = list(trials)
+    hp_cols = profile_tuned_param_names(tune_profile)
     fieldnames = [
         "trial_id",
         "phase",
@@ -566,12 +733,7 @@ def _write_leaderboard(run_dir: str, trials: list[dict[str, Any]], rank_metric: 
         "test_mrr",
         "test_ndcg5",
         "test_hit1",
-        "lr",
-        "dropout_rate",
-        "weight_decay",
-        "intent_num",
-        "intent_embedding_dim",
-        "batch_size",
+        *hp_cols,
     ]
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")

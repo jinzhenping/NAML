@@ -614,6 +614,8 @@ class FIM(UserEncoder):
         self.maxpool_3D = torch.nn.MaxPool3d(kernel_size=config.maxpooling3D_size, stride=config.maxpooling3D_stride)
 
         self.use_candidate_aware_attn = config.use_candidate_ware_clicked_news_attention
+        if news_encoder.news_embedding_dim is None:
+            self.use_candidate_aware_attn = False
         if self.use_candidate_aware_attn:
             self.candidate_aware_attn = CandidateAware_ClickedNewsAttention(config, news_encoder)
 
