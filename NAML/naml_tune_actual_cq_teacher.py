@@ -256,6 +256,8 @@ def _metrics_from_trials_for_mrr(trials: list, target_mrr: float) -> dict | None
 def run_trial_cq(
     hp: dict,
     epochs: int,
+    trial_seed: int,
+    *,
     batch_size: int,
     word_dict,
     embedding_mat,
@@ -279,8 +281,6 @@ def run_trial_cq(
     all_test_index,
     all_test_userid_str,
     all_test_newsid_str,
-    trial_seed: int,
-    *,
     use_expected_body: bool = False,
     expected_bodies_train=None,
     expected_bodies_test=None,
