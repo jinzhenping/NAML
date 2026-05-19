@@ -18,7 +18,7 @@ CQ NAML (`build_naml_models_candidate_query_user`) 테스트셋 평가.
 
 실제본문 + 기대본문:
 
-  python NAML/naml_eval_test.py \
+  python NAML/naml_eval_test_cq.py \
   --expected-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
   --weights saved_models/MIND_2000/NAML_kd_student_cq_0.5_0.5_7.h5 \
   --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json \
