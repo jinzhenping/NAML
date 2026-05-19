@@ -11,6 +11,9 @@
 실행 (저장소 루트에서):
   python NAML/naml_tune_actual_cq_teacher.py --trials 12 --epochs-per-trial 8 --seed 42
 
+테스트셋 평가 (CQ 그래프·튜닝 로그와 동일 hparam):
+  python NAML/naml_eval_test_cq.py --weights ... --tune-log ... --mind-dataset-subdir MIND_2000 --actual-only
+
 하이퍼 조합:
   - 기본: 아래 `HPARAM_CHOICES` 를 직접 수정.
   - CLI: `--fixed-learning-rate`, `--fixed-dropout-rate`, `--grid-cnn-filters`, … 로 덮어쓰기.

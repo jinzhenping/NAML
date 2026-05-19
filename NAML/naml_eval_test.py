@@ -31,6 +31,9 @@ python NAML/naml_eval_test.py \
 # naml_tune_actual.py 로 튜닝·저장한 가중치는 CNN 폭 등 구조가 다를 수 있음 → 같은 로그를 넘겨야 함:
 #   --tune-log saved_models/naml_tune_actual_log.json
 #
+# CQ 교사(naml_tune_actual_cq_teacher.py) 가중치는 --cq-user-encoder 또는 NAML/naml_eval_test_cq.py 사용:
+#   --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json
+#
 # 다른 테스트 split TSV (예: 후반 절반):
 #   --mind-test-tsv dataset/MIND_2000/MIND_test_(2000)_final.tsv
 """
@@ -315,6 +318,12 @@ def main() -> None:
         help="기본 자동 동작(튜닝 로그의 expected-body 전처리 설정 재사용)을 비활성화",
     )
     parser.add_argument(
+        "--cq-user-encoder",
+        action="store_true",
+        help="후보 쿼리 사용자 인코더(build_naml_models_candidate_query_user). "
+        "naml_tune_actual_cq_teacher / naml_kd_train_cq_userdistill 가중치용",
+    )
+    parser.add_argument(
         "--expected-body-first-n-sentences",
         type=int,
         default=None,
@@ -338,7 +347,7 @@ def main() -> None:
         preprocess_news_file,
         preprocess_user_file,
     )
-    from naml_model_builder import build_naml_models
+    from naml_model_builder import build_naml_models, build_naml_models_candidate_query_user
 
     mind_test_tsv_override: str | None = None
     if args.mind_test_tsv and str(args.mind_test_tsv).strip():
@@ -481,9 +490,19 @@ def main() -> None:
         arch["attention_dense_dim"] = args.attention_dense_dim
     if args.category_emb_dim is not None:
         arch["category_emb_dim"] = args.category_emb_dim
-    print(f"build_naml_models 아키텍처: {arch}", flush=True)
+    build_fn = (
+        build_naml_models_candidate_query_user
+        if args.cq_user_encoder
+        else build_naml_models
+    )
+    build_name = (
+        "build_naml_models_candidate_query_user"
+        if args.cq_user_encoder
+        else "build_naml_models"
+    )
+    print(f"{build_name} 아키텍처: {arch}", flush=True)
 
-    built = build_naml_models(
+    built = build_fn(
         word_dict,
         embedding_mat,
         category,
@@ -500,11 +519,16 @@ def main() -> None:
     try:
         model.load_weights(str(weights_path))
     except Exception as e:
+        cq_hint = (
+            "  CQ 교사/학생이면 --cq-user-encoder 또는 NAML/naml_eval_test_cq.py\n"
+            "  예: --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json\n"
+            if args.cq_user_encoder
+            else "  예: --tune-log saved_models/naml_tune_actual_log.json\n"
+        )
         print(
-            "\n오류: 가중치 로드 실패. 가중치가 naml_tune_actual 등으로 튜닝된 모델이라면 "
-            "그때의 global_best_hparams와 동일하게 그래프를 맞춰야 합니다.\n"
-            "  예: --tune-log saved_models/naml_tune_actual_log.json\n"
-            "또는 --cnn-filters 등으로 수동 지정.\n",
+            "\n오류: 가중치 로드 실패. 튜닝 시 global_best_hparams와 동일한 그래프가 필요합니다.\n"
+            + cq_hint
+            + "또는 --cnn-filters 등으로 수동 지정.\n",
             flush=True,
         )
         raise e
