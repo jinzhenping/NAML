@@ -35,6 +35,11 @@ trial 마다 저장:
 탐색 그리드가 자동 전환된다 (예: CNN+LSTUR → cnn_kernel_num, long_term_masking_probability).
 CROWN/LIME+CROWN 은 intent_num·intent_embedding_dim 을 탐색한다.
 `--tune-profile` 로 강제 지정 가능 (auto | crown | cnn_lstur | cne_sue | naml_att | hdc_fim | generic).
+
+`--tune-scope auto` (기본): CNN+LSTUR / CNE+SUE / NAML+ATT / HDC+FIM 은 **lr만** 탐색하고 아래를 고정한다.
+  dropout_rate=0.4, cnn_kernel_num=300, cnn_window_size=2, attention_dim=128,
+  category_embedding_dim=subCategory_embedding_dim=64 (CNE·HDC는 CNN 필드 제외).
+  CROWN/LIME 등은 `--tune-scope full` 과 동일한 다축 그리드.
 """
 
 from __future__ import annotations
@@ -45,6 +50,7 @@ import gc
 import hashlib
 import itertools
 import json
+import math
 import os
 import random
 import shutil
@@ -70,6 +76,25 @@ _TUNE_PROFILE_CHOICES = (
     "hdc_fim",
     "generic",
 )
+
+_TUNE_SCOPE_CHOICES = ("auto", "full", "lr_only")
+
+# 네 baseline (NAML/CNN 계열 논문 설정에 맞춘 고정값; CROWN config 키 이름)
+_BASELINE_LR_ONLY_PROFILES = frozenset({"cnn_lstur", "cne_sue", "naml_att", "hdc_fim"})
+
+_BASELINE_FIXED_COMMON: dict[str, Any] = {
+    "dropout_rate": 0.4,
+    "category_embedding_dim": 64,
+    "subCategory_embedding_dim": 64,
+}
+
+_BASELINE_FIXED_CNN_STYLE: dict[str, Any] = {
+    "cnn_kernel_num": 300,
+    "cnn_window_size": 2,
+    "attention_dim": 128,
+}
+
+_LR_ONLY_GRID = [1e-5, 2e-5, 5e-5, 7.5e-5, 1e-4, 1.25e-4, 1.5e-4, 2e-4, 2.5e-4, 3e-4]
 
 
 def _chdir_crown() -> None:
@@ -189,8 +214,29 @@ def resolve_tune_profile(crown_argv: list[str], cli_profile: str) -> str:
     return p
 
 
-def profile_tuned_param_names(profile: str) -> list[str]:
-    """leaderboard / 문서용: 프로필별 trial 이 덮어쓰는 config 키."""
+def resolve_tune_scope(profile: str, cli_scope: str) -> str:
+    s = (cli_scope or "auto").strip().lower()
+    if s not in _TUNE_SCOPE_CHOICES:
+        raise ValueError(f"unknown --tune-scope {cli_scope!r}; choices: {_TUNE_SCOPE_CHOICES}")
+    if s == "auto":
+        return "lr_only" if profile in _BASELINE_LR_ONLY_PROFILES else "full"
+    return s
+
+
+def baseline_fixed_hparams(profile: str) -> dict[str, Any]:
+    """lr_only baseline: 논문/실험 고정 하이퍼파라미터 (CROWN config 키)."""
+    fixed = dict(_BASELINE_FIXED_COMMON)
+    if profile in ("cnn_lstur", "naml_att"):
+        fixed.update(_BASELINE_FIXED_CNN_STYLE)
+    elif profile == "cne_sue":
+        fixed["attention_dim"] = 128
+    return fixed
+
+
+def profile_tuned_param_names(profile: str, tune_scope: str = "full") -> list[str]:
+    """leaderboard / 문서용: trial마다 바뀌는 config 키."""
+    if tune_scope == "lr_only":
+        return ["lr"]
     common = ["lr", "dropout_rate", "weight_decay", "batch_size"]
     extra: dict[str, list[str]] = {
         "crown": ["intent_num", "intent_embedding_dim"],
@@ -209,8 +255,13 @@ def _grid_product(axes: dict[str, list[Any]]) -> list[dict[str, Any]]:
     return [dict(zip(keys, combo)) for combo in itertools.product(*vals)]
 
 
-def default_hparam_grid(profile: str, rng: random.Random) -> list[dict[str, Any]]:
+def default_hparam_grid(profile: str, rng: random.Random, tune_scope: str = "full") -> list[dict[str, Any]]:
     """프로필별 작은 그리드 → shuffle 후 trial 풀."""
+    if tune_scope == "lr_only":
+        combos = [{"lr": lr} for lr in _LR_ONLY_GRID]
+        rng.shuffle(combos)
+        return combos
+
     common = {
         "lr": _COMMON_LRS,
         "dropout_rate": _COMMON_DROPOUTS,
@@ -255,7 +306,13 @@ def default_hparam_grid(profile: str, rng: random.Random) -> list[dict[str, Any]
     return combos
 
 
-def random_hparam_sample(profile: str, rng: random.Random) -> dict[str, Any]:
+def random_hparam_sample(profile: str, rng: random.Random, tune_scope: str = "full") -> dict[str, Any]:
+    if tune_scope == "lr_only":
+        # log-uniform in [1e-5, 3e-4] for extra trials beyond grid
+        log_lo, log_hi = math.log10(1e-5), math.log10(3e-4)
+        lr = 10 ** rng.uniform(log_lo, log_hi)
+        return {"lr": round(lr, 8)}
+
     hp: dict[str, Any] = {
         "lr": rng.choice([5e-5, 1e-4, 1.5e-4, 2e-4]),
         "dropout_rate": rng.choice([0.1, 0.15, 0.2, 0.25, 0.3]),
@@ -289,8 +346,9 @@ def plan_trials(
     seen_keys: set[str],
     allow_duplicates: bool,
     profile: str,
+    tune_scope: str,
 ) -> list[dict[str, Any]]:
-    pool = default_hparam_grid(profile, rng)
+    pool = default_hparam_grid(profile, rng, tune_scope)
     chosen: list[dict[str, Any]] = []
     if not allow_duplicates:
         for hp in pool:
@@ -304,7 +362,7 @@ def plan_trials(
         attempts = 0
         while len(chosen) < n_trials and attempts < n_trials * 50:
             attempts += 1
-            hp = random_hparam_sample(profile, rng)
+            hp = random_hparam_sample(profile, rng, tune_scope)
             key = _hparam_key(hp)
             if key in seen_keys:
                 continue
@@ -312,7 +370,7 @@ def plan_trials(
             chosen.append(hp)
         return chosen[:n_trials]
     for _ in range(n_trials):
-        hp = random_hparam_sample(profile, rng)
+        hp = random_hparam_sample(profile, rng, tune_scope)
         # allow_duplicates 모드에서는 batch_size 를 항상 넣지 않음
         if "batch_size" in hp and rng.random() < 0.5:
             del hp["batch_size"]
@@ -368,12 +426,21 @@ def apply_corpus_derived_fields(config: Any, corpus: Any) -> None:
         config.attribute_dict["entity_size"] = src.entity_size
 
 
-def write_index_md(run_dir: str, run_name: str, tune_profile: str) -> None:
+def write_index_md(
+    run_dir: str,
+    run_name: str,
+    tune_profile: str,
+    tune_scope: str,
+    baseline_fixed: dict[str, Any],
+) -> None:
     path = os.path.join(run_dir, "INDEX.md")
-    tuned = ", ".join(f"`{k}`" for k in profile_tuned_param_names(tune_profile) if k != "batch_size")
+    tuned = ", ".join(f"`{k}`" for k in profile_tuned_param_names(tune_profile, tune_scope))
     with open(path, "w", encoding="utf-8") as f:
         f.write(f"# CROWN tune run: `{run_name}`\n\n")
-        f.write(f"- 튜닝 프로필: `{tune_profile}` (탐색: {tuned})\n")
+        f.write(f"- 튜닝 프로필: `{tune_profile}` · scope: `{tune_scope}` (탐색: {tuned})\n")
+        if baseline_fixed:
+            fixed = ", ".join(f"`{k}={v}`" for k, v in sorted(baseline_fixed.items()))
+            f.write(f"- 고정 하이퍼파라미터: {fixed}\n")
         f.write(f"- 학습 후보: 양성 1 + 네거티브 {TUNE_NEGATIVE_SAMPLE_NUM} (`negative_sample_num` 튜닝 안 함)\n")
         f.write("- `run_meta.json` — 실행 시각, 시드, baseline argv\n")
         f.write("- `summary.json` — 모든 trial 요약 (metrics, 경로)\n")
@@ -421,6 +488,13 @@ def main() -> None:
         choices=list(_TUNE_PROFILE_CHOICES),
         help="auto: -- 뒤 encoder 조합으로 그리드 선택",
     )
+    ap.add_argument(
+        "--tune-scope",
+        type=str,
+        default="auto",
+        choices=list(_TUNE_SCOPE_CHOICES),
+        help="auto: 네 baseline은 lr_only, CROWN 등은 full",
+    )
     args = ap.parse_args(tune_argv)
 
     if not crown_argv:
@@ -462,16 +536,24 @@ def main() -> None:
             print(f"append-log: 기존 summary 로드 실패: {e}", flush=True)
 
     tune_profile = resolve_tune_profile(crown_argv, args.tune_profile)
+    tune_scope = resolve_tune_scope(tune_profile, args.tune_scope)
+    baseline_fixed = baseline_fixed_hparams(tune_profile) if tune_scope == "lr_only" else {}
     trials_hp = plan_trials(
-        rng, args.trials, seen_hparam_keys, args.allow_duplicate_hparams, tune_profile
+        rng,
+        args.trials,
+        seen_hparam_keys,
+        args.allow_duplicate_hparams,
+        tune_profile,
+        tune_scope,
     )
     if not trials_hp:
         print("실행할 새 hparam 조합이 없습니다.", file=sys.stderr)
         sys.exit(0)
 
     print(
-        f"[tune] profile={tune_profile}  "
-        f"grid_keys={profile_tuned_param_names(tune_profile)}  trials={len(trials_hp)}",
+        f"[tune] profile={tune_profile}  scope={tune_scope}  "
+        f"search={profile_tuned_param_names(tune_profile, tune_scope)}  "
+        f"fixed={list(baseline_fixed.keys())}  trials={len(trials_hp)}",
         flush=True,
     )
 
@@ -490,7 +572,10 @@ def main() -> None:
         "seed": args.seed,
         "tune_profile": tune_profile,
         "tune_profile_cli": args.tune_profile,
-        "tuned_param_names": profile_tuned_param_names(tune_profile),
+        "tune_scope": tune_scope,
+        "tune_scope_cli": args.tune_scope,
+        "baseline_fixed_hparams": baseline_fixed,
+        "tuned_param_names": profile_tuned_param_names(tune_profile, tune_scope),
         "negative_sample_num_fixed": TUNE_NEGATIVE_SAMPLE_NUM,
         "trials_requested": args.trials,
         "crown_argv": crown_argv,
@@ -503,7 +588,7 @@ def main() -> None:
     with open(os.path.join(run_dir, "run_meta.json"), "w", encoding="utf-8") as f:
         json.dump(meta, f, indent=2, ensure_ascii=False)
 
-    write_index_md(run_dir, run_name, tune_profile)
+    write_index_md(run_dir, run_name, tune_profile, tune_scope, baseline_fixed)
 
     def run_one_trial(
         trial_id: int,
@@ -515,7 +600,8 @@ def main() -> None:
         wave_index: int | None = None,
         wave_total: int | None = None,
     ) -> dict[str, Any]:
-        merged = merge_crown_argv(crown_argv, hp)
+        merged = merge_crown_argv(crown_argv, baseline_fixed)
+        merged = merge_crown_argv(merged, hp)
         merged = merge_crown_argv(merged, {"negative_sample_num": TUNE_NEGATIVE_SAMPLE_NUM})
         if not any(merged[i] == "--mode" for i in range(len(merged))):
             merged = ["--mode", "train"] + merged
@@ -547,7 +633,17 @@ def main() -> None:
         redirect_experiment_dirs(config, trial_dir)
 
         with open(os.path.join(trial_dir, "hparams.json"), "w", encoding="utf-8") as f:
-            json.dump({"phase": phase_label, **hp}, f, indent=2, ensure_ascii=False)
+            json.dump(
+                {
+                    "phase": phase_label,
+                    "tune_scope": tune_scope,
+                    "fixed": baseline_fixed,
+                    **hp,
+                },
+                f,
+                indent=2,
+                ensure_ascii=False,
+            )
 
         torch.manual_seed(args.seed + trial_id)
         torch.cuda.manual_seed_all(args.seed + trial_id)
@@ -687,7 +783,7 @@ def main() -> None:
             log_trials.append(row)
             _flush_summary(run_dir, meta, log_trials, args.rank_metric)
 
-    _write_leaderboard(run_dir, log_trials, args.rank_metric, tune_profile)
+    _write_leaderboard(run_dir, log_trials, args.rank_metric, tune_profile, tune_scope)
     print(f"\n완료. 결과 디렉터리:\n  {os.path.abspath(run_dir)}\n", flush=True)
 
 
@@ -715,12 +811,13 @@ def _write_leaderboard(
     trials: list[dict[str, Any]],
     rank_metric: str,
     tune_profile: str,
+    tune_scope: str,
 ) -> None:
     path = os.path.join(run_dir, "leaderboard.csv")
     rows = [r for r in trials if not str(r.get("phase", "")).startswith("screening")]
     if not rows:
         rows = list(trials)
-    hp_cols = profile_tuned_param_names(tune_profile)
+    hp_cols = profile_tuned_param_names(tune_profile, tune_scope)
     fieldnames = [
         "trial_id",
         "phase",
