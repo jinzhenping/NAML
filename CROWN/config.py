@@ -33,7 +33,7 @@ class Config:
         parser.add_argument('--seed', type=int, default=0, help='Seed for random number generator')
         parser.add_argument('--config_file', type=str, default='', help='Config file path')
         # Dataset config
-        parser.add_argument('--dataset', type=str, default='adressa', choices=['adressa', 'mind', 'ebnerd', 'adressa1w', 'mind2000'], help='Dataset type')
+        parser.add_argument('--dataset', type=str, default='adressa', choices=['adressa', 'mind', 'ebnerd', 'adressa1w', 'mind2000', 'adressa2000'], help='Dataset type')
         parser.add_argument('--no_dev', action='store_true', default=False, help='Skip dev evaluation; save model at last epoch')
         parser.add_argument('--tokenizer', type=str, default='MIND', choices=['MIND', 'NLTK'], help='Sentence tokenizer')
         parser.add_argument('--word_threshold', type=int, default=3, help='Word threshold')
@@ -159,6 +159,12 @@ class Config:
             self.dev_root = 'dataset/MIND-2000/dev'
             self.test_root = 'dataset/MIND-2000/test'
             self.max_history_num = 50
+        elif self.dataset in ['adressa2000']:
+            # Adressa_2000 flat TSV → dataset/Adressa-2000/ (see prepare_adressa2000.py)
+            self.train_root = 'dataset/Adressa-2000/train'
+            self.dev_root = 'dataset/Adressa-2000/dev'
+            self.test_root = 'dataset/Adressa-2000/test'
+            self.max_history_num = 50
 
         if self.dataset in ['mind']:
             self.gcn_layer_num = 5
@@ -186,7 +192,7 @@ class Config:
             self.early_stopping_epoch = 4
             self.word_embedding_dim = 768
             self.head_num = 8  # 768 must be divisible by head_num
-        elif self.dataset in ['mind2000']:
+        elif self.dataset in ['mind2000', 'adressa2000']:
             self.gcn_layer_num = 4
             self.epoch = 16
             self.dropout_rate = 0.2
@@ -347,6 +353,12 @@ class Config:
                 category_dict = json.load(f)
                 self.id2category = {v: k for k, v in category_dict.items()}
             with open("./topic_wise_lifetime-mind2000.json", "r") as f:
+                self.topic_wise_lifetime = json.load(f)
+        elif self.dataset in ['adressa2000']:
+            with open("./category-adressa2000.json", "r") as f:
+                category_dict = json.load(f)
+                self.id2category = {v: k for k, v in category_dict.items()}
+            with open("./topic_wise_lifetime-adressa2000.json", "r") as f:
                 self.topic_wise_lifetime = json.load(f)
        
         self.default_lifetime = self.topic_wise_lifetime.get("Unknown", 110462)

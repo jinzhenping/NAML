@@ -448,7 +448,7 @@ class Corpus:
                 for line in dev_news_f:
                     if config.dataset == 'mind':
                         news_ID, category, subCategory, title, abstract, publishTime, title_entities, abstract_entities = line.strip().split('\t', 7)
-                    elif config.dataset in ['adressa', 'adressa1w', 'ebnerd', 'mind2000']:
+                    elif config.dataset in ['adressa', 'adressa1w', 'ebnerd', 'mind2000', 'adressa2000']:
                         news_ID, category, subCategory, title, abstract, publishTime, title_entities, abstract_entities = line.rstrip('\n').rstrip('\r').split('\t')
                     if news_ID not in news_ID_set:
                         news_lines.append(line)
@@ -457,7 +457,7 @@ class Corpus:
             for line in test_news_f:
                 if config.dataset == 'mind':
                     news_ID, category, subCategory, title, abstract, publishTime, title_entities, abstract_entities = line.strip().split('\t', 7)
-                elif config.dataset in ['adressa', 'adressa1w', 'ebnerd', 'mind2000']:
+                elif config.dataset in ['adressa', 'adressa1w', 'ebnerd', 'mind2000', 'adressa2000']:
                     news_ID, category, subCategory, title, abstract, publishTime, title_entities, abstract_entities = line.rstrip('\n').rstrip('\r').split('\t')
                 if news_ID not in news_ID_set:
                     news_lines.append(line)
@@ -466,7 +466,7 @@ class Corpus:
         for line in news_lines:
             if config.dataset == 'mind':
                     news_ID, category, subCategory, title, abstract, publishTime, title_entities, abstract_entities = line.strip().split('\t', 7)
-            elif config.dataset in ['adressa', 'adressa1w', 'ebnerd', 'mind2000']:
+            elif config.dataset in ['adressa', 'adressa1w', 'ebnerd', 'mind2000', 'adressa2000']:
                 news_ID, category, subCategory, title, abstract, publishTime, title_entities, abstract_entities = line.rstrip('\n').rstrip('\r').split('\t')
             index = self.news_ID_dict[news_ID]
             self.news_category[index] = self.category_dict[category] if category in self.category_dict else 0
