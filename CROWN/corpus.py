@@ -13,31 +13,93 @@ import torch
 import numpy as np
 
 
+def _glove_download_urls(name: str, dim: int) -> list[str]:
+    """Stanford 경로가 바뀌는 경우가 있어 여러 URL을 순서대로 시도."""
+    base = f"glove.{name}.{dim}d"
+    return [
+        f"https://nlp.stanford.edu/data/{base}.zip",
+        f"https://nlp.stanford.edu/data/{base}.txt.zip",
+        f"https://downloads.cs.stanford.edu/nlp/data/{base}.zip",
+        f"https://downloads.cs.stanford.edu/nlp/data/{base}.txt.zip",
+    ]
+
+
+def _find_glove_txt_in_dir(glove_dir: str, name: str, dim: int) -> str | None:
+    expected = os.path.join(glove_dir, f"glove.{name}.{dim}d.txt")
+    if os.path.isfile(expected):
+        return expected
+    pattern = re.compile(rf"^glove\.{re.escape(name)}\.{dim}d\.txt$", re.I)
+    for fname in os.listdir(glove_dir):
+        if pattern.match(fname):
+            return os.path.join(glove_dir, fname)
+    return None
+
+
 def _ensure_glove_txt(cache_root: str, name: str, dim: int) -> str:
     """
-    torchtext.GloVe 대체: 동일 캐시 레이아웃(GloVe/*.txt)으로 zip 다운로드·압축 해제.
+    torchtext.GloVe 대체: GloVe/*.txt 로드 (없으면 zip 다운로드·압축 해제).
+
     name: '840B' | '6B'
+
+    수동 경로 (서버에 이미 있을 때, mind2000 학습 때 받아 둔 파일 재사용):
+      export GLOVE_TXT_PATH=/path/to/glove.840B.300d.txt
+      export GLOVE_CACHE_ROOT=/path/to/glove   # 기본: ../../glove (CROWN 기준)
     """
-    cache_root = os.path.abspath(cache_root)
+    env_txt = os.environ.get("GLOVE_TXT_PATH", "").strip()
+    if env_txt and os.path.isfile(env_txt):
+        return os.path.abspath(env_txt)
+
+    cache_root = os.path.abspath(os.environ.get("GLOVE_CACHE_ROOT", cache_root).strip() or cache_root)
     glove_dir = os.path.join(cache_root, "GloVe")
     os.makedirs(glove_dir, exist_ok=True)
+
+    found = _find_glove_txt_in_dir(glove_dir, name, dim)
+    if found:
+        return found
+
     txt_name = f"glove.{name}.{dim}d.txt"
     txt_path = os.path.join(glove_dir, txt_name)
-    if os.path.isfile(txt_path):
-        return txt_path
-    zip_name = txt_name + ".zip"
-    zip_path = os.path.join(glove_dir, zip_name)
-    if not os.path.isfile(txt_path):
-        if not os.path.isfile(zip_path):
-            print(f"Downloading GloVe {zip_name} from Stanford NLP ...", flush=True)
-            url = f"https://nlp.stanford.edu/data/{zip_name}"
-            urllib.request.urlretrieve(url, zip_path)
-        print(f"Extracting {zip_path} ...", flush=True)
-        with zipfile.ZipFile(zip_path, "r") as zf:
-            zf.extractall(glove_dir)
-    if not os.path.isfile(txt_path):
-        raise FileNotFoundError(f"After unzip, expected: {txt_path}")
-    return txt_path
+    zip_candidates = [f"glove.{name}.{dim}d.zip", f"{txt_name}.zip"]
+
+    for zip_name in zip_candidates:
+        zip_path = os.path.join(glove_dir, zip_name)
+        if os.path.isfile(zip_path):
+            break
+    else:
+        zip_path = os.path.join(glove_dir, zip_candidates[0])
+        last_err: Exception | None = None
+        for url in _glove_download_urls(name, dim):
+            try:
+                print(f"Downloading GloVe from {url} ...", flush=True)
+                urllib.request.urlretrieve(url, zip_path)
+                last_err = None
+                break
+            except Exception as e:
+                last_err = e
+                print(f"  failed: {e}", flush=True)
+                if os.path.isfile(zip_path):
+                    os.remove(zip_path)
+        if last_err is not None:
+            raise RuntimeError(
+                "GloVe 다운로드 실패 (Stanford URL 404 등). "
+                "mind2000 은 이미 word_embedding-...-mind2000.pkl 이 있어서 다운로드를 안 했을 수 있습니다. "
+                "adressa2000 은 새 pickle 이라 GloVe txt 가 필요합니다.\n"
+                "해결: (1) glove.840B.300d.txt 를 수동으로 받아 "
+                f"{glove_dir}/ 에 두거나 (2) export GLOVE_TXT_PATH=/절대경로/glove.840B.300d.txt\n"
+                f"시도한 URL: {_glove_download_urls(name, dim)}"
+            ) from last_err
+
+    print(f"Extracting {zip_path} ...", flush=True)
+    with zipfile.ZipFile(zip_path, "r") as zf:
+        zf.extractall(glove_dir)
+
+    found = _find_glove_txt_in_dir(glove_dir, name, dim)
+    if found:
+        return found
+    raise FileNotFoundError(
+        f"After unzip, GloVe txt not found under {glove_dir} "
+        f"(expected glove.{name}.{dim}d.txt). Set GLOVE_TXT_PATH if the file is elsewhere."
+    )
 
 
 def _build_glove_word_embeddings(word_dict: dict, dim: int, glove_txt_path: str) -> torch.Tensor:
