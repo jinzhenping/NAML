@@ -41,21 +41,26 @@ def _ensure_glove_txt(cache_root: str, name: str, dim: int) -> str:
 
     name: '840B' | '6B'
 
-    수동 경로 (서버에 이미 있을 때, mind2000 학습 때 받아 둔 파일 재사용):
+    수동 경로 (서버에 이미 있을 때):
       export GLOVE_TXT_PATH=/path/to/glove.840B.300d.txt
       export GLOVE_CACHE_ROOT=/path/to/glove   # 기본: ../../glove (CROWN 기준)
+    탐색 순서: {cache_root}/glove.*.txt → {cache_root}/GloVe/glove.*.txt
     """
     env_txt = os.environ.get("GLOVE_TXT_PATH", "").strip()
     if env_txt and os.path.isfile(env_txt):
         return os.path.abspath(env_txt)
 
     cache_root = os.path.abspath(os.environ.get("GLOVE_CACHE_ROOT", cache_root).strip() or cache_root)
+    # torchtext 는 cache/GloVe/ 아래에 두지만, 수동 설치는 cache_root 바로 아래인 경우가 많음
+    search_dirs = [cache_root, os.path.join(cache_root, "GloVe")]
+    for glove_dir in search_dirs:
+        if os.path.isdir(glove_dir):
+            found = _find_glove_txt_in_dir(glove_dir, name, dim)
+            if found:
+                return found
+
     glove_dir = os.path.join(cache_root, "GloVe")
     os.makedirs(glove_dir, exist_ok=True)
-
-    found = _find_glove_txt_in_dir(glove_dir, name, dim)
-    if found:
-        return found
 
     txt_name = f"glove.{name}.{dim}d.txt"
     txt_path = os.path.join(glove_dir, txt_name)
