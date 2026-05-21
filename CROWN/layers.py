@@ -12,6 +12,20 @@ import torch.nn.functional as F
 '''
 LIME - Candidate-aware Lifetime Attention
 '''
+
+
+def _resolve_num_heads(news_embedding_dim: int, preferred: int = 10) -> int:
+    """Multi-head attention requires embed_dim % num_heads == 0 (CNN+NAML fusion dims vary by trial)."""
+    if news_embedding_dim <= 0:
+        return 1
+    if preferred > 0 and news_embedding_dim % preferred == 0:
+        return preferred
+    for h in (8, 5, 4, 2, 1):
+        if news_embedding_dim % h == 0:
+            return h
+    return 1
+
+
 class CandidateAware_ClickedNewsAttention(nn.Module):
     def __init__(self, config, news_encoder):
         super(CandidateAware_ClickedNewsAttention, self).__init__()
@@ -19,10 +33,15 @@ class CandidateAware_ClickedNewsAttention(nn.Module):
         self.use_residual_connection = config.use_residual_connection
         self.news_embedding_dim = news_encoder.news_embedding_dim
 
-        self.num_heads = 10  # 4 or 10
+        preferred = getattr(config, "head_num", 10)
+        self.num_heads = _resolve_num_heads(self.news_embedding_dim, preferred)
         self.head_dim = self.news_embedding_dim // self.num_heads
-
-        assert self.news_embedding_dim % self.num_heads == 0, "embedding_dim must be divisible by num_heads"
+        if self.num_heads != preferred:
+            print(
+                f"[CandidateAware_ClickedNewsAttention] news_embedding_dim={self.news_embedding_dim} "
+                f"is not divisible by head_num={preferred}; using num_heads={self.num_heads}",
+                flush=True,
+            )
 
         self.last_attn_weights = None
         self.log_weights = False
