@@ -3,21 +3,22 @@
 # MIND_2000: --mind-dataset-subdir MIND_2000
 # Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
-NAML 테스트 impression별 1위 예측 뉴스 ID를 CSV로 저장.
+NAML 테스트 impression별 1위 예측 뉴스를 CSV로 저장.
 
 - TSV 한 줄 = CSV 한 줄 (`id` = readlines() 0-based 줄 번호)
-- 전처리에서 스킵된 줄: `generate=""`, `real` = TSV 후보 목록 첫 ID(있을 때)
-- 평가에 포함된 줄: `generate` = 해당 세션 argmax 뉴스 ID, `real` = TSV 첫 후보(클릭 뉴스)
+- `generate` / `real`: 뉴스 ID가 아니라
+  `Category: {cat}, Subcategory: {subcat}, Title: {title}` 문자열
+- 전처리 스킵·메타 없음: 해당 칸은 빈 문자열 (`7,,` 형태)
 
 CQ 교사 예:
 
-  python NAML/naml_export_test_top1_cq.py \\
-    --weights saved_models/Adressa_2000/NAML_cq_teacher_adressa_2000_actual.h5 \\
-    --tune-log saved_models/Adressa_2000/naml_tune_actual_cq_teacher_log.json \\
-    --mind-dataset-subdir Adressa_2000 \\
-    --mind-test-tsv dataset/Adressa_2000/Adressa_test_2000_final.tsv \\
-    --actual-only \\
-    --out-csv NAML/export/adressa_cq_test_top1.csv
+  python NAML/naml_export_test_top1_csv.py \
+    --weights saved_models/Adressa_2000/NAML_cq_teacher_adressa_2000_actual.h5 \
+    --tune-log saved_models/Adressa_2000/naml_tune_actual_cq_teacher_log.json \
+    --mind-dataset-subdir Adressa_2000 \
+    --mind-test-tsv dataset/Adressa_2000/Adressa_test_2000_final.tsv \
+    --actual-only \
+    --out-csv NAML/export/Adressa_prediction_result_export.csv
 """
 from __future__ import annotations
 
@@ -56,6 +57,40 @@ def _tsv_first_candidate(parts: list[str]) -> str:
     return cands[0] if cands else ""
 
 
+def load_news_meta_from_tsv(news_tsv_path: str) -> dict[str, tuple[str, str, str]]:
+    """news_id -> (category, subCategory, title) from MIND/Adressa news TSV."""
+    from naml_dataset_env import news_tsv_skiprows
+
+    meta: dict[str, tuple[str, str, str]] = {}
+    if not news_tsv_path or not os.path.isfile(news_tsv_path):
+        return meta
+    skip = news_tsv_skiprows(news_tsv_path)
+    with open(news_tsv_path, "r", encoding="utf-8") as f:
+        for line_idx, line in enumerate(f):
+            if line_idx < skip:
+                continue
+            parts = line.strip().split("\t")
+            if len(parts) < 4:
+                continue
+            news_id = parts[0].strip()
+            category = (parts[1] or "").strip()
+            subcategory = (parts[2] or "").strip()
+            title = (parts[3] if len(parts) > 3 else "").replace("\t", " ").replace("\n", " ").strip()
+            meta[news_id] = (category, subcategory, title)
+    return meta
+
+
+def format_news_cell(news_id: str, meta: dict[str, tuple[str, str, str]]) -> str:
+    """`Category: news, Subcategory: x, Title: ...` (메타 없으면 빈 문자열)."""
+    if not news_id:
+        return ""
+    row = meta.get(str(news_id).strip())
+    if not row:
+        return ""
+    category, subcategory, title = row
+    return f"Category: {category}, Subcategory: {subcategory}, Title: {title}"
+
+
 def _resolve_test_tsv(path_opt: str | None, mind_data_path, default_name: str) -> str:
     if path_opt and str(path_opt).strip():
         mt = str(path_opt).strip()
@@ -91,7 +126,7 @@ def top1_by_session(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="NAML test top-1 news ID → CSV")
+    parser = argparse.ArgumentParser(description="NAML test top-1 → CSV (Category/Subcategory/Title)")
     parser.add_argument("--weights", type=str, required=True)
     parser.add_argument("--tune-log", type=str, default="", help="global_best_hparams 아키텍처")
     parser.add_argument("--mind-dataset-subdir", type=str, default="Adressa_2000")
@@ -130,7 +165,10 @@ def main() -> None:
     np.random.seed(SEED)
 
     test_tsv_path = _resolve_test_tsv(args.mind_test_tsv, mind_data_path, MIND_TEST_FILENAME)
+    news_tsv_path = mind_data_path(MIND_NEWS_FILENAME)
+    news_meta = load_news_meta_from_tsv(news_tsv_path)
     print(f"test TSV: {test_tsv_path}", flush=True)
+    print(f"news TSV: {news_tsv_path}  ({len(news_meta)} articles)", flush=True)
 
     weights_path = _ROOT / args.weights
     if not weights_path.is_file():
@@ -259,10 +297,10 @@ def main() -> None:
         )
 
     top1_by_sess = top1_by_session(click_score, all_test_index, all_test_newsid_str)
-    line_to_generate: dict[int, str] = {}
+    line_to_generate_id: dict[int, str] = {}
     for sess_i, line_idx in enumerate(test_line_indices):
         if sess_i in top1_by_sess:
-            line_to_generate[line_idx] = top1_by_sess[sess_i]
+            line_to_generate_id[line_idx] = top1_by_sess[sess_i]
 
     with open(test_tsv_path, "r", encoding="utf-8") as f:
         tsv_lines = f.readlines()
@@ -275,12 +313,18 @@ def main() -> None:
     n_exported = 0
     n_inferred = 0
     with open(out_path, "w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["id", "generate", "real"])
+        w = csv.DictWriter(
+            f,
+            fieldnames=["id", "generate", "real"],
+            quoting=csv.QUOTE_MINIMAL,
+        )
         w.writeheader()
         for line_idx, line in enumerate(tsv_lines):
             parts = line.strip().split("\t")
-            real = _tsv_first_candidate(parts)
-            generate = line_to_generate.get(line_idx, "")
+            real_id = _tsv_first_candidate(parts)
+            gen_id = line_to_generate_id.get(line_idx, "")
+            generate = format_news_cell(gen_id, news_meta)
+            real = format_news_cell(real_id, news_meta)
             if generate:
                 n_inferred += 1
             w.writerow({"id": line_idx, "generate": generate, "real": real})

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-CQ NAML 테스트 top-1 CSV export (`--cq-user-encoder` 자동).
+CQ NAML 테스트 top-1 CSV (`generate`/`real` = Category/Subcategory/Title 문자열).
 
   python NAML/naml_export_test_top1_cq.py \
   --weights saved_models/Adressa_2000/NAML_cq_teacher_adressa_2000_actual.h5 \
@@ -9,7 +9,7 @@ CQ NAML 테스트 top-1 CSV export (`--cq-user-encoder` 자동).
   --mind-dataset-subdir Adressa_2000 \
   --mind-test-tsv dataset/Adressa_2000/Adressa_test_2000_final.tsv \
   --actual-only \
-  --out-csv NAML/export/adressa_cq_test_top1.csv
+  --out-csv NAML/export/Adressa_prediction_result_export.csv
 """
 from __future__ import annotations
 
