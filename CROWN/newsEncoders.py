@@ -556,6 +556,9 @@ class CNN(NewsEncoder):
         w = self.dropout(self.word_embedding(title_text)).view([batch_news_num, self.max_sentence_length, self.word_embedding_dim]) # [batch_size * news_num, max_sentence_length, word_embedding_dim]
         # 2. CNN encoding
         c = self.dropout_(self.conv(w.permute(0, 2, 1)).permute(0, 2, 1))                                                           # [batch_size * news_num, max_sentence_length, cnn_kernel_num]
+        seq_len = c.size(1)
+        if mask.size(1) != seq_len:
+            mask = mask[:, :seq_len]
         # 3. attention layer
         news_representation = self.attention(c, mask=mask).view([batch_size, news_num, self.cnn_kernel_num])                        # [batch_size, news_num, cnn_kernel_num]
         # 4. feature fusion

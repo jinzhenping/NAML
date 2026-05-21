@@ -9,20 +9,26 @@
   2) NAML/eval_cluster_batch.py  (--batch-index N, --train-body-dir .../cluster{C}_batch{N}, --result-index N)
   3) coordinator_LLM/coordinator.py  (--n N)
 
-eval 은 resultN.txt 로 저장해 coordinator 가 resultN.txt 와 coordinator_LLM/output/N.txt 를 짝지어 읽도록 맞춤.
-coordinator 는 응답을 (N+1).txt 로 저장 (기존 coordinator 동작).
+Ablation (한 가지 구성 요소만 제거):
+  full            — 기본 (클러스터 + 취향 + coordinator 정책)
+  no_policy       — coordinator 정책 없이 기대본문 (취향 O)
+  no_cluster      — 클러스터 없이 전체 train 유저/세션 (--full-train)
+  no_preference   — preference_profile 없이 (히스토리 + 정책만)
 
-사전 조건: 시작 N에 대해 coordinator_LLM/output/{N}.txt 가 있어야 함 (예: N=0 이면 0.txt).
+출력 경로 (ablation != full):
+  body_generation/output/<dataset>/ablation_<name>/...
+  NAML/results/ablation_<name>/resultN.txt
+  coordinator_LLM/ablations/<name>/output/N.txt  (시드: coordinator_LLM/output/0.txt 등에서 복사)
+
+eval 은 resultN.txt 로 저장해 coordinator 가 resultN.txt 와 coordinator_LLM/.../output/N.txt 를 짝지어 읽도록 맞춤.
+coordinator 는 응답을 (N+1).txt 로 저장 (기존 coordinator 동작).
 
 프로젝트 루트에서:
   python scripts/run_cluster_batch_pipeline.py --start 0 --end 2
-  python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --cluster-id 0
-
-  # Adressa (--cluster-csv / --weights 기본값이 데이터셋에 맞게 잡힘)
   python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --cluster-id 0 --mind-dataset-subdir Adressa_2000
-
-  # 클러스터 없이 전체 트레이닝 세션 (출력 .../fulltrain_batch<N>/)
-  python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --full-train --sessions-per-batch 500
+  python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --ablation no_policy --cluster-id 0
+  python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --ablation no_cluster
+  python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --ablation no_preference --cluster-id 0
 """
 from __future__ import annotations
 
@@ -36,7 +42,18 @@ from typing import List, Optional
 _ROOT = Path(__file__).resolve().parent.parent
 if str(_ROOT / "NAML") not in sys.path:
     sys.path.insert(0, str(_ROOT / "NAML"))
+if str(_ROOT / "body_generation") not in sys.path:
+    sys.path.insert(0, str(_ROOT / "body_generation"))
 
+from body_generation.ablation_config import (
+    ABLATION_CHOICES,
+    body_output_dir,
+    coordinator_output_dir,
+    naml_results_dir,
+    normalize_ablation,
+    seed_coordinator_policy,
+    uses_full_train,
+)
 from naml_dataset_env import default_naml_eval_weights, default_user_kmeans_csv
 
 
@@ -54,15 +71,22 @@ def main() -> None:
     p.add_argument("--start", type=int, required=True, help="배치 인덱스 시작 (포함)")
     p.add_argument("--end", type=int, required=True, help="배치 인덱스 끝 (포함)")
     p.add_argument(
+        "--ablation",
+        type=str,
+        default="full",
+        choices=ABLATION_CHOICES,
+        help="full | no_policy | no_cluster | no_preference",
+    )
+    p.add_argument(
         "--cluster-id",
         type=int,
         default=0,
-        help="클러스터 번호 (기본 0). --full-train 이면 사용하지 않음",
+        help="클러스터 번호 (기본 0). --ablation no_cluster 이면 무시",
     )
     p.add_argument(
         "--full-train",
         action="store_true",
-        help="클러스터 없이 전체 트레이닝 세션 (출력 fulltrain_batch<N>, generate/eval 에 --full-train 전달)",
+        help="(레거시) --ablation no_cluster 와 동일 효과",
     )
     p.add_argument(
         "--cluster-csv",
@@ -93,15 +117,14 @@ def main() -> None:
         "--weights",
         type=str,
         default=None,
-        help="eval_cluster_batch --weights. 기본: Adressa → saved_models/Adressa_2000/NAML_adressa_2000_actual.h5, "
-        "그 외 → saved_models/NAML_mind_2000.h5",
+        help="eval_cluster_batch --weights",
     )
     p.add_argument(
         "--sessions-per-batch",
         type=int,
         default=300,
         metavar="S",
-        help="배치 인덱스 하나당 포함할 트레이닝 세션 수 (generate·eval 공통, 기본 300)",
+        help="배치당 트레이닝 세션 수 (generate·eval 공통, 기본 300)",
     )
     p.add_argument(
         "--batch-size",
@@ -122,19 +145,26 @@ def main() -> None:
         print("오류: --batch-size 는 1 이상이어야 합니다.", file=sys.stderr)
         sys.exit(2)
 
+    ablation = normalize_ablation(args.ablation)
+    if args.full_train:
+        ablation = "no_cluster"
+
     py = sys.executable
     sub = args.mind_dataset_subdir
     if args.cluster_csv is None:
         args.cluster_csv = default_user_kmeans_csv(sub)
     if args.weights is None:
         args.weights = default_naml_eval_weights(sub)
-    cid = args.cluster_id
+
+    full_train = uses_full_train(ablation)
+    coord_out = coordinator_output_dir(ablation)
+    results_dir = naml_results_dir(ablation)
+    seed_coordinator_policy(ablation, args.start)
+
+    print(f"[pipeline] ablation={ablation}, dataset={sub}, full_train={full_train}", flush=True)
 
     for n in range(args.start, args.end + 1):
-        if args.full_train:
-            train_body = f"body_generation/output/{sub}/fulltrain_batch{n}"
-        else:
-            train_body = f"body_generation/output/{sub}/cluster{cid}_batch{n}"
+        train_body = body_output_dir(sub, ablation, n, cluster_id=args.cluster_id)
 
         if not args.skip_generate:
             gen_cmd = [
@@ -144,8 +174,10 @@ def main() -> None:
                 str(n),
                 "--mind-dataset-subdir",
                 sub,
+                "--ablation",
+                ablation,
             ]
-            if args.full_train:
+            if full_train:
                 gen_cmd.append("--full-train")
             else:
                 gen_cmd.extend(
@@ -153,7 +185,7 @@ def main() -> None:
                         "--cluster-csv",
                         args.cluster_csv,
                         "--cluster-id",
-                        str(cid),
+                        str(args.cluster_id),
                     ]
                 )
             gen_cmd.extend(["--sessions-per-batch", str(args.sessions_per_batch)])
@@ -173,8 +205,10 @@ def main() -> None:
                 args.weights,
                 "--mind-dataset-subdir",
                 sub,
+                "--results-dir",
+                results_dir,
             ]
-            if args.full_train:
+            if full_train:
                 eval_cmd.append("--full-train")
             else:
                 eval_cmd.extend(
@@ -182,7 +216,7 @@ def main() -> None:
                         "--cluster-csv",
                         args.cluster_csv,
                         "--cluster-id",
-                        str(cid),
+                        str(args.cluster_id),
                     ]
                 )
             eval_cmd.extend(
@@ -200,16 +234,26 @@ def main() -> None:
             _run(eval_cmd, env=env)
 
         if not args.skip_coordinator:
+            if ablation == "no_policy":
+                print(
+                    f"[배치 {n}] coordinator 단계: no_policy ablation 에서도 정책 갱신은 실행 "
+                    f"(다음 배치 생성에는 정책 미사용).",
+                    flush=True,
+                )
             _run(
                 [
                     py,
                     str(_ROOT / "coordinator_LLM" / "coordinator.py"),
                     "--n",
                     str(n),
+                    "--output_dir",
+                    str(_ROOT / coord_out),
+                    "--results_dir",
+                    str(_ROOT / results_dir),
                 ]
             )
 
-        print(f"\n>>> 배치 {n} 완료 (다음 루프: {n + 1})\n", flush=True)
+        print(f"\n>>> 배치 {n} 완료 (ablation={ablation}, 다음: {n + 1})\n", flush=True)
 
     print("전체 파이프라인 종료.")
 

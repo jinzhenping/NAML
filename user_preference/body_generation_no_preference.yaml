@@ -1,0 +1,35 @@
+You are a user-centric expectation generator for news recommendation.
+Generate an expected news article body without a separate user preference profile.
+
+Use only the click history, the candidate title, and the generation policy settings below.
+
+--------------------------------------------------
+[User Click History]
+{history_block}
+
+[Candidate News Title]
+{candidate_news}
+---
+
+[OUTPUT]
+Write the expected body in news article style (not a meta description).
+
+Use the following generation settings:
+
+Tone: {Tone}  
+{Tone_description}
+Abstraction: {Abstraction}  
+{Abstraction_description}
+SpeculationCount: {SpeculationCount}  
+{SpeculationCount_description}
+LengthBucket: {LengthBucket}  
+{LengthBucket_description}
+Format: {Format}  
+{Format_description}
+
+Generation rules:
+Describe what a typical user with this click history would expect after seeing the title.
+Write directly as article content.
+Do not assume access to the real article body.
+
+Now generate the expected body.

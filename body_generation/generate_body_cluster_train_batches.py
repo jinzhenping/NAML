@@ -41,7 +41,12 @@ if str(_ROOT / "body_generation") not in sys.path:
     sys.path.insert(0, str(_ROOT / "body_generation"))
 
 import generate_body as gb
-
+from body_generation.ablation_config import (
+    ABLATION_CHOICES,
+    body_output_dir,
+    coordinator_output_dir,
+    normalize_ablation,
+)
 from naml_dataset_env import default_user_kmeans_csv
 
 
@@ -179,16 +184,28 @@ def main() -> None:
         action="store_true",
         help="배치 분할 없이 해당 클러스터 트레이닝 세션 전체를 한 번에 처리 (내부적으로 batch-index=0, sessions-per-batch=세션 전체 수)",
     )
+    parser.add_argument(
+        "--ablation",
+        type=str,
+        default="full",
+        choices=ABLATION_CHOICES,
+        help="full | no_policy (취향 O, coordinator 정책 X) | no_cluster (전체 유저, --full-train) | no_preference (정책 O, 취향 LLM X)",
+    )
     args = parser.parse_args()
+    ablation = normalize_ablation(args.ablation)
+    if ablation == "no_cluster":
+        args.full_train = True
 
     sub = gb._resolve_mind_dataset_subdir(args.mind_dataset_subdir)
     if args.cluster_csv is None:
         args.cluster_csv = default_user_kmeans_csv(sub)
 
     if not args.full_train and args.cluster_id is None:
-        parser.error("--cluster-id 는 필수입니다. (전체 트레이닝: --full-train)")
-    if args.full_train and args.cluster_id is not None:
+        parser.error("--cluster-id 는 필수입니다. (전체 트레이닝: --full-train 또는 --ablation no_cluster)")
+    if args.full_train and args.cluster_id is not None and ablation != "no_cluster":
         print("경고: --full-train 이므로 --cluster-id 는 무시됩니다.", flush=True)
+    if ablation != "full":
+        print(f"[ablation] {ablation}", flush=True)
 
     if not args.batch_count_only and args.batch_index is None and not args.all_sessions:
         parser.error("--batch-index 는 필수입니다. (전체 한 번에: --all-sessions, 배치 개수만: --batch-count-only)")
@@ -288,10 +305,17 @@ def main() -> None:
             print(f"정책: --policy-path → {policy_path_resolved}")
         else:
             policy_n = args.policy_file if args.policy_file is not None else args.batch_index
-            print(
-                f"배치: index={args.batch_index}, 세션 {args.sessions_per_batch}개/배치, "
-                f"coordinator 정책: coordinator_LLM/output/{policy_n}.txt"
-            )
+            coord_dir = coordinator_output_dir(ablation)
+            if ablation == "no_policy":
+                print(
+                    f"배치: index={args.batch_index}, 세션 {args.sessions_per_batch}개/배치, "
+                    f"coordinator 정책: 사용 안 함 (ablation no_policy)"
+                )
+            else:
+                print(
+                    f"배치: index={args.batch_index}, 세션 {args.sessions_per_batch}개/배치, "
+                    f"coordinator 정책: {coord_dir}/{policy_n}.txt"
+                )
 
     spb = max(1, int(args.sessions_per_batch))
     n_batches = math.ceil(total_sess / spb) if total_sess > 0 else 0
@@ -343,12 +367,14 @@ def main() -> None:
         os.makedirs(run_dir, exist_ok=True)
         print(f"저장 폴더 (--output-dir): {run_dir}")
     else:
-        base_out = os.path.join(os.path.normpath(args.output), sub)
-        os.makedirs(base_out, exist_ok=True)
-        if args.full_train:
-            run_dir = os.path.join(base_out, f"fulltrain_batch{args.batch_index}")
-        else:
-            run_dir = os.path.join(base_out, f"cluster{args.cluster_id}_batch{args.batch_index}")
+        rel = body_output_dir(
+            sub,
+            ablation,
+            int(args.batch_index),
+            cluster_id=int(args.cluster_id or 0),
+            output_root=os.path.normpath(args.output),
+        )
+        run_dir = os.path.normpath(str(_ROOT / rel))
         os.makedirs(run_dir, exist_ok=True)
         print(f"저장 폴더: {run_dir}")
 
@@ -363,6 +389,8 @@ def main() -> None:
         mind_dataset_subdir=args.mind_dataset_subdir,
         use_preference_prompt=not bool(args.legacy_body_prompt),
         preference_history_k=int(args.history_k),
+        ablation=ablation,
+        coordinator_output_dir=str(_ROOT / coordinator_output_dir(ablation)),
     )
     if args.preference_base:
         gen_kw["preference_base_dir"] = _resolve_project_path(args.preference_base)

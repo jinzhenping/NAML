@@ -368,6 +368,12 @@ def main() -> None:
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--learning-rate", type=float, default=0.0005)
     parser.add_argument("--result-index", type=int, default=None, help="N in NAML/results/resultN.txt (기본: 자동 증가)")
+    parser.add_argument(
+        "--results-dir",
+        type=str,
+        default=None,
+        help="결과 JSON 디렉터리 (기본: NAML/results 또는 ablation 시 NAML/results/ablation_<name>)",
+    )
     parser.add_argument("--no-extend-word-dict", action="store_true", help="기대본문을 word_dict에 넣지 않음 (기본은 포함)")
     args = parser.parse_args()
 
@@ -720,7 +726,11 @@ def main() -> None:
         "diagnostic_samples": diagnostic_samples,
     }
 
-    results_dir = _ROOT / "NAML" / "results"
+    if args.results_dir:
+        rd = args.results_dir.strip()
+        results_dir = Path(rd) if os.path.isabs(rd) else (_ROOT / rd)
+    else:
+        results_dir = _ROOT / "NAML" / "results"
     results_dir.mkdir(parents=True, exist_ok=True)
     n = args.result_index if args.result_index is not None else next_free_result_index(results_dir)
     out_path = results_dir / f"result{n}.txt"

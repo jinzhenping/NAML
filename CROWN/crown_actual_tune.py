@@ -37,8 +37,10 @@ CROWN/LIME+CROWN 은 intent_num·intent_embedding_dim 을 탐색한다.
 `--tune-profile` 로 강제 지정 가능 (auto | crown | cnn_lstur | cne_sue | naml_att | hdc_fim | generic).
 
 `--tune-scope auto` (기본): CNN+LSTUR / CNE+SUE / NAML+ATT / HDC+FIM 은 **lr만** 탐색하고 아래를 고정한다.
-  dropout_rate=0.4, cnn_kernel_num=300, cnn_window_size=2, attention_dim=128,
+  MIND 등: dropout_rate=0.4, cnn_kernel_num=300, cnn_window_size=2, attention_dim=128,
   category_embedding_dim=subCategory_embedding_dim=64 (CNE·HDC는 CNN 필드 제외).
+  Adressa (`--dataset adressa2000` 등): dropout_rate=0.35, cnn_kernel_num=400, cnn_window_size=3,
+  attention_dim=128, category/subCategory_embedding_dim=64 (NAML Adressa 튜닝과 동일).
   CROWN/LIME 등은 `--tune-scope full` 과 동일한 다축 그리드.
 """
 
@@ -91,6 +93,21 @@ _BASELINE_FIXED_COMMON: dict[str, Any] = {
 _BASELINE_FIXED_CNN_STYLE: dict[str, Any] = {
     "cnn_kernel_num": 300,
     "cnn_window_size": 2,
+    "attention_dim": 128,
+}
+
+# Adressa 계열: NAML naml_tune_actual Adressa 고정값과 맞춤 (CROWN config 키 이름)
+_ADRESSA_DATASETS = frozenset({"adressa2000", "adressa", "adressa1w"})
+
+_BASELINE_FIXED_ADRESSA_COMMON: dict[str, Any] = {
+    "dropout_rate": 0.35,
+    "category_embedding_dim": 64,
+    "subCategory_embedding_dim": 64,
+}
+
+_BASELINE_FIXED_ADRESSA_CNN_STYLE: dict[str, Any] = {
+    "cnn_kernel_num": 400,
+    "cnn_window_size": 3,
     "attention_dim": 128,
 }
 
@@ -214,6 +231,16 @@ def resolve_tune_profile(crown_argv: list[str], cli_profile: str) -> str:
     return p
 
 
+def _dataset_from_crown_argv(crown_argv: list[str]) -> str:
+    """`--dataset` 값 (없으면 빈 문자열)."""
+    return parse_crown_argv_flags(crown_argv).get("dataset", "").strip().lower()
+
+
+def _is_adressa_dataset(dataset: str) -> bool:
+    d = (dataset or "").strip().lower()
+    return d in _ADRESSA_DATASETS or d.startswith("adressa")
+
+
 def resolve_tune_scope(profile: str, cli_scope: str) -> str:
     s = (cli_scope or "auto").strip().lower()
     if s not in _TUNE_SCOPE_CHOICES:
@@ -223,8 +250,16 @@ def resolve_tune_scope(profile: str, cli_scope: str) -> str:
     return s
 
 
-def baseline_fixed_hparams(profile: str) -> dict[str, Any]:
+def baseline_fixed_hparams(profile: str, dataset: str = "") -> dict[str, Any]:
     """lr_only baseline: 논문/실험 고정 하이퍼파라미터 (CROWN config 키)."""
+    if _is_adressa_dataset(dataset):
+        fixed = dict(_BASELINE_FIXED_ADRESSA_COMMON)
+        if profile in ("cnn_lstur", "naml_att"):
+            fixed.update(_BASELINE_FIXED_ADRESSA_CNN_STYLE)
+        elif profile == "cne_sue":
+            fixed["attention_dim"] = 128
+        return fixed
+
     fixed = dict(_BASELINE_FIXED_COMMON)
     if profile in ("cnn_lstur", "naml_att"):
         fixed.update(_BASELINE_FIXED_CNN_STYLE)
@@ -537,7 +572,10 @@ def main() -> None:
 
     tune_profile = resolve_tune_profile(crown_argv, args.tune_profile)
     tune_scope = resolve_tune_scope(tune_profile, args.tune_scope)
-    baseline_fixed = baseline_fixed_hparams(tune_profile) if tune_scope == "lr_only" else {}
+    crown_dataset = _dataset_from_crown_argv(crown_argv)
+    baseline_fixed = (
+        baseline_fixed_hparams(tune_profile, crown_dataset) if tune_scope == "lr_only" else {}
+    )
     trials_hp = plan_trials(
         rng,
         args.trials,
@@ -550,10 +588,15 @@ def main() -> None:
         print("실행할 새 hparam 조합이 없습니다.", file=sys.stderr)
         sys.exit(0)
 
+    fixed_detail = (
+        ", ".join(f"{k}={v}" for k, v in sorted(baseline_fixed.items()))
+        if baseline_fixed
+        else "(none)"
+    )
     print(
-        f"[tune] profile={tune_profile}  scope={tune_scope}  "
+        f"[tune] dataset={crown_dataset or '(default)'}  profile={tune_profile}  scope={tune_scope}  "
         f"search={profile_tuned_param_names(tune_profile, tune_scope)}  "
-        f"fixed={list(baseline_fixed.keys())}  trials={len(trials_hp)}",
+        f"fixed=[{fixed_detail}]  trials={len(trials_hp)}",
         flush=True,
     )
 
@@ -574,6 +617,7 @@ def main() -> None:
         "tune_profile_cli": args.tune_profile,
         "tune_scope": tune_scope,
         "tune_scope_cli": args.tune_scope,
+        "dataset": crown_dataset,
         "baseline_fixed_hparams": baseline_fixed,
         "tuned_param_names": profile_tuned_param_names(tune_profile, tune_scope),
         "negative_sample_num_fixed": TUNE_NEGATIVE_SAMPLE_NUM,

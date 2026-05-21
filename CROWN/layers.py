@@ -121,7 +121,14 @@ class Conv1D(nn.Module):
         self.cnn_method = cnn_method
         self.in_channels = in_channels
         if self.cnn_method == 'naive':
-            self.conv = nn.Conv1d(in_channels=self.in_channels, out_channels=cnn_kernel_num, kernel_size=cnn_window_size, padding=(cnn_window_size - 1) // 2)
+            self.cnn_window_size = int(cnn_window_size)
+            # padding=(k-1)//2 만으로는 짝수 kernel(예: 2)에서 길이가 1 줄어 Attention mask 와 불일치
+            self.conv = nn.Conv1d(
+                in_channels=self.in_channels,
+                out_channels=cnn_kernel_num,
+                kernel_size=self.cnn_window_size,
+                padding=0,
+            )
         elif self.cnn_method == 'group3':
             assert cnn_kernel_num % 3 == 0
             self.conv1 = nn.Conv1d(in_channels=self.in_channels, out_channels=cnn_kernel_num // 3, kernel_size=1, padding=0)
@@ -142,7 +149,18 @@ class Conv1D(nn.Module):
     # out     : [batch_size, cnn_kernel_num, length]
     def forward(self, feature):
         if self.cnn_method == 'naive':
-            return F.relu(self.conv(feature)) # [batch_size, cnn_kernel_num, length]
+            L = feature.size(2)
+            k = self.cnn_window_size
+            pad_left = (k - 1) // 2
+            pad_right = k - 1 - pad_left
+            if pad_left or pad_right:
+                feature = F.pad(feature, (pad_left, pad_right))
+            out = F.relu(self.conv(feature))
+            if out.size(2) > L:
+                out = out[:, :, :L]
+            elif out.size(2) < L:
+                out = F.pad(out, (0, L - out.size(2)))
+            return out
         elif self.cnn_method == 'group3':
             return F.relu(torch.cat([self.conv1(feature), self.conv2(feature), self.conv3(feature)], dim=1))
         else:
@@ -310,6 +328,9 @@ class Attention(nn.Module):
         # 마스크가 주어지면 어텐션 스코어를 마스크 처리하고, 
         # 소프트맥스 함수를 적용하여 어텐션 가중치를 계산
         if mask is not None:
+            L = feature.size(1)
+            if mask.size(1) != L:
+                mask = mask[:, :L] if mask.size(1) > L else F.pad(mask, (0, L - mask.size(1)), value=0)
             alpha = F.softmax(a.masked_fill(mask == 0, -1e9), dim=1).unsqueeze(dim=1) # [batch_size, 1, length]
         else:
             alpha = F.softmax(a, dim=1).unsqueeze(dim=1)                              # [batch_size, 1, length]

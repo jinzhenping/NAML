@@ -131,7 +131,8 @@ class BodyGenerator:
                  preference_base_dir: Optional[str] = None,
                  preference_body_prompt_path: Optional[str] = None,
                  preference_generation_settings_path: Optional[str] = None,
-                 preference_history_k: int = 10):
+                 preference_history_k: int = 10,
+                 ablation: Optional[str] = None):
         """
         Args:
             prompt_path: 프롬프트 YAML 파일 경로
@@ -152,9 +153,13 @@ class BodyGenerator:
             preference_body_prompt_path: 본문 생성 프롬프트 템플릿 (기본: user_preference/body_generation.yaml).
             preference_generation_settings_path: geb parse_settings용 YAML (기본: user_preference/generation_settings.yaml).
             preference_history_k: 선호도 프롬프트에 넣을 클릭 히스토리 제목 개수.
+            ablation: full | no_policy | no_preference (no_cluster는 파이프라인·세션 선택만 변경).
         """
+        from body_generation.ablation_config import normalize_ablation
+
         sub = _resolve_mind_dataset_subdir(mind_dataset_subdir)
         self.mind_dataset_subdir = sub
+        self.ablation = normalize_ablation(ablation)
         self.use_preference_prompt = bool(use_preference_prompt)
         self.preference_history_k = int(preference_history_k)
         if self.use_preference_prompt:
@@ -165,11 +170,14 @@ class BodyGenerator:
             )
             geb = _get_geb_body_helpers()
             self._geb = geb
-            p_body = (
-                Path(preference_body_prompt_path)
-                if preference_body_prompt_path
-                else (_BODY_GEN_PROJECT_ROOT / "user_preference" / "body_generation.yaml")
-            )
+            if preference_body_prompt_path:
+                p_body = Path(preference_body_prompt_path)
+            elif self.ablation == "no_policy":
+                p_body = _BODY_GEN_PROJECT_ROOT / "user_preference" / "body_generation_no_policy.yaml"
+            elif self.ablation == "no_preference":
+                p_body = _BODY_GEN_PROJECT_ROOT / "user_preference" / "body_generation_no_preference.yaml"
+            else:
+                p_body = _BODY_GEN_PROJECT_ROOT / "user_preference" / "body_generation.yaml"
             p_set = (
                 Path(preference_generation_settings_path)
                 if preference_generation_settings_path
@@ -216,10 +224,16 @@ class BodyGenerator:
         self._load_data()
 
         if self.use_preference_prompt:
-            print(
-                f"프롬프트 모드: 선호도 JSON + {self.preference_base_dir.name} "
-                f"(history_k={self.preference_history_k}, geb/build_prompt)"
-            )
+            mode = f"ablation={self.ablation}, history_k={self.preference_history_k}"
+            if self.ablation == "no_preference":
+                print(f"프롬프트 모드: {mode} (히스토리+정책만, preference_profile 미사용)")
+            elif self.ablation == "no_policy":
+                print(f"프롬프트 모드: {mode} (preference_profile+히스토리, coordinator 정책 미사용)")
+            else:
+                print(
+                    f"프롬프트 모드: 선호도 JSON + {self.preference_base_dir.name} "
+                    f"({mode}, geb/build_prompt)"
+                )
 
         # 설정 로딩 (레거시 news1.. 프롬프트용; 선호도 모드에서는 geb 설정 파일을 별도 로드함)
         if not self.use_preference_prompt:
@@ -230,8 +244,11 @@ class BodyGenerator:
         # 프롬프트 로딩
         self._load_prompt()
         
-        # coordinator 출력에서 Tone 등 설정 로드 (가장 숫자가 큰 N.txt)
-        self._load_coordinator_policy()
+        # coordinator 출력에서 Tone 등 설정 로드 (no_policy ablation 은 생성에 미사용)
+        if self.ablation != "no_policy":
+            self._load_coordinator_policy()
+        else:
+            self.coordinator_policy = None
     
     def _load_data(self):
         """뉴스 데이터와 학습/테스트 데이터 로딩"""
@@ -431,6 +448,11 @@ class BodyGenerator:
 
     def _append_dataset_body_language_suffix(self, prompt: str) -> str:
         geb = _get_geb_body_helpers()
+        if self.ablation == "no_policy" and "adressa" in self.mind_dataset_subdir.lower():
+            return (
+                prompt
+                + "\n\nLanguage: Write the generated news article body entirely in Norwegian (norsk bokmål)."
+            )
         sfx = geb.extra_body_prompt_suffix_for_dataset(self.mind_dataset_subdir)
         return (prompt + sfx) if sfx else prompt
 
@@ -453,10 +475,31 @@ class BodyGenerator:
         )
         if not hist:
             return None
-        policy = self.coordinator_policy or {}
+        policy: dict = {}
+        settings = self._preference_settings if self.ablation != "no_policy" else {}
+        if self.ablation != "no_policy":
+            policy = self.coordinator_policy or {}
         return self._geb.build_prompt(
             template=self._preference_prompt_template,
             model1_output=model1_out,
+            history_titles=hist,
+            candidate_news=self._geb.safe_api_text(candidate_title),
+            policy=policy,
+            settings=settings,
+        )
+
+    def _build_prompt_no_preference(self, user_id: int, candidate_title: str) -> Optional[str]:
+        assert self._geb is not None
+        uid = int(user_id)
+        hist = self._geb.get_recent_titles(
+            self.train_df, self._news_title_map, str(uid), self.preference_history_k
+        )
+        if not hist:
+            return None
+        policy = self.coordinator_policy or {}
+        return self._geb.build_prompt(
+            template=self._preference_prompt_template,
+            model1_output="",
             history_titles=hist,
             candidate_news=self._geb.safe_api_text(candidate_title),
             policy=policy,
@@ -473,7 +516,10 @@ class BodyGenerator:
         프롬프트 생성. 선호도 모드에서 JSON/히스토리 부족 시 None (호출측에서 스킵).
         """
         if self.use_preference_prompt:
-            p = self._build_prompt_from_preference(user_id, candidate_title)
+            if self.ablation == "no_preference":
+                p = self._build_prompt_no_preference(user_id, candidate_title)
+            else:
+                p = self._build_prompt_from_preference(user_id, candidate_title)
             if p is None:
                 return None
             return self._append_dataset_body_language_suffix(p)
@@ -584,6 +630,7 @@ class BodyGenerator:
                 'user_history_count': len(user_history),
                 'user_history': user_history,
                 'use_preference_prompt': self.use_preference_prompt,
+                'ablation': self.ablation,
                 'prompt': prompt,
                 'generated_body': generated_body,
                 'model': self.model
@@ -648,6 +695,7 @@ class BodyGenerator:
                 "user_history_count": len(user_history),
                 "user_history": user_history,
                 "use_preference_prompt": self.use_preference_prompt,
+                "ablation": self.ablation,
                 "prompt": prompt,
                 "generated_body": generated_body,
                 "model": self.model,

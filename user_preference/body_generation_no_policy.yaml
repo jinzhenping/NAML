@@ -1,0 +1,26 @@
+You are a user-centric expectation generator for news recommendation.
+Generate an expected news article body for the user described below.
+
+The user has the click history and preference profile shown below.
+When they see the candidate news title, write the body text they would most likely expect to read if they clicked it.
+
+Do NOT use coordinator tone/length/format policy fields — infer style only from the preference profile and history.
+
+--------------------------------------------------
+[User Preference Profile]
+{model1_output}
+
+[User Click History]
+{history_block}
+
+[Candidate News Title]
+{candidate_news}
+---
+
+[OUTPUT]
+Write the expected body as news article content (not meta commentary).
+Do not assume access to the real article body.
+Avoid phrases like "The article is likely to…" or "Readers may expect…".
+Match the reading level and topics implied by the preference profile and history.
+
+Now generate the expected body.
