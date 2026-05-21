@@ -23,6 +23,16 @@ python NAML/naml_tune_actual.py --two-phase --trials 108 --screening-epochs 3 \
     --out-weights saved_models/Adressa_2000/NAML_adressa_2000_actual.h5 \
     --mind-dataset-subdir Adressa_2000 \
     --max-history-clicks 30
+# 고정 hparams + CNN filter/kernel만 지정 (Adressa 예):
+python NAML/naml_tune_actual.py \
+    --mind-dataset-subdir Adressa_2000 \
+    --fixed-filter-kernel-grid \
+    --grid-cnn-filters 400 --grid-cnn-kernel-sizes 3 \
+    --fixed-learning-rate 0.0005 --fixed-dropout-rate 0.35 \
+    --fixed-attention-dense-dim 128 --fixed-category-emb-dim 50 \
+    --trials 1 --epochs-per-trial 10 --repeat-per-combo 3 \
+    --out-weights saved_models/Adressa_2000/NAML_adressa_2000_actual.h5 \
+    --out-log saved_models/Adressa_2000/naml_tune_actual_log.json
 
 """
 from __future__ import annotations
@@ -595,7 +605,52 @@ def main():
         action="store_true",
         help="out-log가 이미 있으면 기존 trials 뒤에 이번 run trials를 이어붙여 저장",
     )
+    ap.add_argument(
+        "--repeat-per-combo",
+        type=int,
+        default=1,
+        metavar="N",
+        help="동일 hparam 조합을 서로 다른 시드로 N번 반복 (단일 페이즈만; --two-phase 와 병행 불가)",
+    )
+    ap.add_argument(
+        "--fixed-filter-kernel-grid",
+        action="store_true",
+        help="cnn_filters x cnn_kernel_size 조합만 순회하고 나머지 hparams는 고정값 사용",
+    )
+    ap.add_argument(
+        "--grid-cnn-filters",
+        type=int,
+        nargs="+",
+        default=[256, 384, 512],
+        help="--fixed-filter-kernel-grid 일 때 사용할 cnn_filters 목록",
+    )
+    ap.add_argument(
+        "--grid-cnn-kernel-sizes",
+        type=int,
+        nargs="+",
+        default=[3, 4],
+        help="--fixed-filter-kernel-grid 일 때 사용할 cnn_kernel_size 목록",
+    )
+    ap.add_argument("--fixed-learning-rate", type=float, default=0.001)
+    ap.add_argument("--fixed-dropout-rate", type=float, default=0.25)
+    ap.add_argument("--fixed-attention-dense-dim", type=int, default=160)
+    ap.add_argument("--fixed-category-emb-dim", type=int, default=64)
     args = ap.parse_args()
+
+    if args.fixed_filter_kernel_grid:
+        if not args.grid_cnn_filters or not args.grid_cnn_kernel_sizes:
+            print(
+                "오류: --fixed-filter-kernel-grid 는 --grid-cnn-filters 와 --grid-cnn-kernel-sizes 가 "
+                "각각 하나 이상 필요합니다.",
+                file=sys.stderr,
+            )
+            sys.exit(2)
+    if args.two_phase and args.repeat_per_combo > 1:
+        print("오류: --two-phase 와 --repeat-per-combo>1 은 함께 사용할 수 없습니다.", file=sys.stderr)
+        sys.exit(2)
+    if args.repeat_per_combo < 1:
+        print("오류: --repeat-per-combo 는 1 이상이어야 합니다.", file=sys.stderr)
+        sys.exit(2)
 
     os.environ["PYTHONHASHSEED"] = str(args.seed)
     np.random.seed(args.seed)
@@ -671,7 +726,31 @@ def main():
         else:
             print(f"경고: --resume-log 파일이 없어 skip-seen 생략: {resume_log_path}")
 
-    if args.allow_duplicate_hparams:
+    if args.fixed_filter_kernel_grid:
+        filters = [int(x) for x in args.grid_cnn_filters]
+        kernels = [int(x) for x in args.grid_cnn_kernel_sizes]
+        fixed_base = {
+            "learning_rate": float(args.fixed_learning_rate),
+            "dropout_rate": float(args.fixed_dropout_rate),
+            "attention_dense_dim": int(args.fixed_attention_dense_dim),
+            "category_emb_dim": int(args.fixed_category_emb_dim),
+        }
+        all_grid = []
+        for f in filters:
+            for ksz in kernels:
+                hp = dict(fixed_base)
+                hp["cnn_filters"] = int(f)
+                hp["cnn_kernel_size"] = int(ksz)
+                all_grid.append(hp)
+        rng.shuffle(all_grid)
+        trial_hparams = [hp for hp in all_grid if _hp_key(hp) not in seen_hparam_keys][: args.trials]
+        print(
+            f"fixed filter-kernel grid 모드: {len(filters)}x{len(kernels)}={len(all_grid)} 조합, "
+            f"고정값={fixed_base}"
+        )
+        if len(trial_hparams) < min(args.trials, len(all_grid)):
+            print(f"경고: resume-log 제외 후 실행 가능한 조합이 {len(trial_hparams)}개입니다.")
+    elif args.allow_duplicate_hparams:
         trial_hparams = []
         local_keys: set[tuple] = set()
         max_attempts = max(args.trials * 300, 3000)
@@ -702,6 +781,14 @@ def main():
                 f"경고: 고유 그리드 조합은 {grid_n}개인데 trials={args.trials} → "
                 f"처음 {grid_n}개는 중복 없음, 이후는 무작위 보충(중복 가능)."
             )
+    repeat_per_combo = max(1, int(args.repeat_per_combo))
+    if repeat_per_combo > 1:
+        trial_hparams = [hp for hp in trial_hparams for _ in range(repeat_per_combo)]
+        print(
+            f"--repeat-per-combo={repeat_per_combo}: 각 조합당 {repeat_per_combo}회 실행 "
+            f"(총 실행 {len(trial_hparams)}회, trial_seed는 순번별 증가)",
+            flush=True,
+        )
     run_trials = len(trial_hparams)
     if run_trials == 0:
         print("실행할 새 조합이 없습니다. --resume-log 를 바꾸거나 --seed/--trials 설정을 조정하세요.")
@@ -854,6 +941,14 @@ def main():
         "two_phase": bool(args.two_phase),
         "screening_epochs": args.screening_epochs if args.two_phase else None,
         "refine_top_k": args.refine_top_k if args.two_phase else None,
+        "repeat_per_combo": int(args.repeat_per_combo),
+        "fixed_filter_kernel_grid": bool(args.fixed_filter_kernel_grid),
+        "grid_cnn_filters": [int(x) for x in args.grid_cnn_filters] if args.fixed_filter_kernel_grid else None,
+        "grid_cnn_kernel_sizes": [int(x) for x in args.grid_cnn_kernel_sizes] if args.fixed_filter_kernel_grid else None,
+        "fixed_learning_rate": float(args.fixed_learning_rate) if args.fixed_filter_kernel_grid else None,
+        "fixed_dropout_rate": float(args.fixed_dropout_rate) if args.fixed_filter_kernel_grid else None,
+        "fixed_attention_dense_dim": int(args.fixed_attention_dense_dim) if args.fixed_filter_kernel_grid else None,
+        "fixed_category_emb_dim": int(args.fixed_category_emb_dim) if args.fixed_filter_kernel_grid else None,
     }
     append_mode = bool(args.append_log or args.resume_log)
     if append_mode and os.path.isfile(args.out_log):
