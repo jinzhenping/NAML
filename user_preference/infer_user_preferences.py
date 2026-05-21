@@ -15,6 +15,7 @@ python user_preference/infer_user_preferences.py --dataset_subdir MIND_2000 --hi
 # 테스트셋 유저 취향 (기본: 비-final test + *test*final*.tsv 병합)
 python user_preference/infer_user_preferences.py --dataset_subdir MIND_2000 --use_test --history_k 50
 # 병합 끄기: ... --use_test --use-test-no-merge-final
+# 동시 API 요청(기본 8): --concurrency 8  (순차: --concurrency 1)
 """
 
 from __future__ import annotations
@@ -24,8 +25,10 @@ import json
 import os
 import sys
 import tempfile
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Callable, Dict, List, Optional, Tuple
 
 import pandas as pd
 from openai import OpenAI
@@ -106,6 +109,18 @@ def infer_profile(client: OpenAI, model: str, prompt: str) -> str:
         max_tokens=300,
     )
     return (response.choices[0].message.content or "").strip()
+
+
+def _thread_local_openai_factory(api_key: str) -> Callable[[], OpenAI]:
+    """스레드마다 별도 OpenAI 클라이언트 (동시 호출 시 HTTP 오류 방지)."""
+    local = threading.local()
+
+    def get_client() -> OpenAI:
+        if getattr(local, "client", None) is None:
+            local.client = OpenAI(api_key=api_key)
+        return local.client  # type: ignore[return-value]
+
+    return get_client
 
 
 def ensure_dir(path: Path) -> None:
@@ -206,7 +221,16 @@ def main() -> None:
         action="store_true",
         help="overwrite existing user output files",
     )
+    parser.add_argument(
+        "--concurrency",
+        type=int,
+        default=8,
+        help="동시 OpenAI API 요청 수 (기본 8; 1이면 순차 처리)",
+    )
     args = parser.parse_args()
+    if args.concurrency < 1:
+        print("오류: --concurrency 는 1 이상이어야 합니다.", file=sys.stderr)
+        sys.exit(1)
 
     dataset_dir = PROJECT_ROOT / "dataset" / args.dataset_subdir
     tmp_merged_test: Optional[Path] = None
@@ -292,7 +316,7 @@ def main() -> None:
     extra_prompt = extra_instructions_for_dataset(args.dataset_subdir)
     if extra_prompt:
         print(f"[prompt] dataset {args.dataset_subdir}: appending output-language instructions", flush=True)
-    client = OpenAI(api_key=api_key)
+    get_openai_client = _thread_local_openai_factory(api_key)
 
     ensure_dir(output_dir)
 
@@ -300,31 +324,39 @@ def main() -> None:
     success = 0
     skipped = 0
     failed = 0
+    print_lock = threading.Lock()
+    max_workers = max(1, int(args.concurrency))
 
-    print(f"Start inference for {total} unique users ({split_name}, history_k={args.history_k})")
+    work_items: List[Tuple[int, str, str]] = []
     for idx, row in enumerate(unique_users_df.itertuples(index=False), start=1):
-        user_id = str(row.user).strip()
-        clicked_news = str(row.clicked_news)
+        work_items.append((idx, str(row.user).strip(), str(row.clicked_news)))
 
+    print(
+        f"Start inference for {total} unique users "
+        f"({split_name}, history_k={args.history_k}, concurrency={max_workers})"
+    )
+
+    def process_one(item: Tuple[int, str, str]) -> str:
+        idx, user_id, clicked_news = item
         out_path = output_dir / f"user_{user_id}.json"
         if out_path.exists() and not args.overwrite:
-            skipped += 1
-            print(f"[{idx}/{total}] user={user_id} skipped (exists)")
-            continue
+            with print_lock:
+                print(f"[{idx}/{total}] user={user_id} skipped (exists)")
+            return "skipped"
 
         history_titles = recent_titles_from_clicked(
             clicked_news, news_title_map, max_history=args.history_k
         )
         if not history_titles:
-            failed += 1
-            print(f"[{idx}/{total}] user={user_id} failed (no valid history titles)")
-            continue
+            with print_lock:
+                print(f"[{idx}/{total}] user={user_id} failed (no valid history titles)")
+            return "failed"
 
         prompt = build_prompt(prompt_template, history_titles)
         if extra_prompt:
             prompt = prompt + extra_prompt
         try:
-            profile_text = infer_profile(client, args.model, prompt)
+            profile_text = infer_profile(get_openai_client(), args.model, prompt)
             result = {
                 "user_id": user_id,
                 "history_k": args.history_k,
@@ -338,11 +370,34 @@ def main() -> None:
             }
             with open(out_path, "w", encoding="utf-8") as f:
                 json.dump(result, f, ensure_ascii=False, indent=2)
-            success += 1
-            print(f"[{idx}/{total}] user={user_id} saved -> {out_path.name}")
+            with print_lock:
+                print(f"[{idx}/{total}] user={user_id} saved -> {out_path.name}")
+            return "success"
         except Exception as e:
-            failed += 1
-            print(f"[{idx}/{total}] user={user_id} failed ({e})")
+            with print_lock:
+                print(f"[{idx}/{total}] user={user_id} failed ({e})")
+            return "failed"
+
+    if max_workers == 1:
+        for item in work_items:
+            stats_key = process_one(item)
+            if stats_key == "success":
+                success += 1
+            elif stats_key == "skipped":
+                skipped += 1
+            else:
+                failed += 1
+    else:
+        with ThreadPoolExecutor(max_workers=max_workers) as ex:
+            futs = [ex.submit(process_one, item) for item in work_items]
+            for fut in as_completed(futs):
+                stats_key = fut.result()
+                if stats_key == "success":
+                    success += 1
+                elif stats_key == "skipped":
+                    skipped += 1
+                else:
+                    failed += 1
 
     print(
         f"Done. success={success}, skipped={skipped}, failed={failed}, output_dir={output_dir}"
