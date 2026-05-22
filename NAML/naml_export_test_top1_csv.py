@@ -10,11 +10,10 @@ NAML 테스트 impression별 1위 예측 뉴스를 CSV로 저장.
   `Category: {cat}, Subcategory: {subcat}, Title: {title}` 문자열
 - 전처리 스킵·메타 없음: 해당 칸은 빈 문자열 (`7,,` 형태)
 
-CQ 교사 예:
 
   python NAML/naml_export_test_top1_csv.py \
-    --weights saved_models/Adressa_2000/NAML_cq_teacher_adressa_2000_actual.h5 \
-    --tune-log saved_models/Adressa_2000/naml_tune_actual_cq_teacher_log.json \
+    --weights saved_models/Adressa_2000/NAML_adressa_2000_actual.h5 \
+    --tune-log saved_models/Adressa_2000/naml_tune_actual_log.json \
     --mind-dataset-subdir Adressa_2000 \
     --mind-test-tsv dataset/Adressa_2000/Adressa_test_2000_final.tsv \
     --actual-only \
