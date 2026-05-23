@@ -190,7 +190,7 @@ def load_expected_bodies_from_train_dir(train_dir):
                         key = _norm_expected_body_key(user_id, news_id)
                         expected_bodies[key] = data['generated_body']
             except Exception:
-                continue
+                    continue
     return expected_bodies
 
 
