@@ -43,7 +43,15 @@
   --out-weights saved_models/MIND_2000/NAML_cq_teacher_mind_2000_actual.h5 \
   --out-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json
 
-  # CQ 교사 + 기대본문 (학습·튜닝 중 테스트 MRR 모두 기대본문):
+  # CQ 교사 actual 가중치 → 기대본문 파인튜닝 (from scratch 튜닝 아님):
+  python NAML/finetune_cq_teacher_expected_body.py \
+    --init-weights saved_models/MIND_2000/NAML_cq_teacher_mind_2000_actual.h5 \
+    --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json \
+    --expected-train-dir user_preference/expected_body/MIND_2000/train_3cluster_11_13_8_rawtitle \
+    --expected-test-dir user_preference/expected_body/MIND_2000/test_3cluster_11_13_8_rawtitle \
+    --out-weights saved_models/MIND_2000/NAML_cq_teacher_mind_2000_finetuned_expected.h5
+
+  # CQ 교사 + 기대본문 (학습·튜닝 중 테스트 MRR 모두 기대본문, 처음부터):
   python NAML/naml_tune_actual_cq_teacher.py --two-phase --trials 36 --screening-epochs 3 \
   --mind-dataset-subdir MIND_2000 --refine-top-k 5 --epochs-per-trial 8 \
   --use-expected-body \
@@ -285,6 +293,7 @@ def run_trial_cq(
     expected_bodies_train=None,
     expected_bodies_test=None,
     history_body_title_only: bool = False,
+    init_weights: str | None = None,
 ):
     np.random.seed(trial_seed)
     random.seed(trial_seed)
@@ -305,6 +314,19 @@ def run_trial_cq(
     )
     model = built["model"]
     model_test = built["model_test"]
+
+    if init_weights:
+        iw = os.path.normpath(init_weights)
+        if not os.path.isfile(iw):
+            raise FileNotFoundError(f"init_weights 파일 없음: {iw}")
+        try:
+            model.load_weights(iw)
+        except Exception as e:
+            raise RuntimeError(
+                f"CQ init_weights 로드 실패: {iw}\n"
+                "  tune-log 의 global_best_hparams 와 동일 아키텍처인지 확인하세요."
+            ) from e
+        print(f"  [init] CQ 가중치 로드: {iw}", flush=True)
 
     n_train = len(all_train_id)
     steps_per_epoch = (n_train + batch_size - 1) // batch_size
