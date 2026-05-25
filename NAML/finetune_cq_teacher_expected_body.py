@@ -26,6 +26,18 @@
     --out-weights saved_models/MIND_2000/NAML_cq_teacher_finetuned_expected.h5 \
     --out-log saved_models/MIND_2000/finetune_cq_teacher_expected_log.json
 
+평가 (반드시 naml_eval_test_cq.py — 표준 naml_eval_test.py 아님):
+
+  python NAML/naml_eval_test_cq.py \
+    --weights saved_models/MIND_2000/NAML_cq_teacher_finetuned_expected.h5 \
+    --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json \
+    --expected-dir user_preference/expected_body/MIND_2000/test_3cluster_11_13_8_rawtitle \
+    --mind-dataset-subdir MIND_2000 \
+    --expected-body-first-n-sentences 0
+
+  # --tune-log: CQ actual 튜닝 로그 (finetune out-log 아님)
+  # word_dict 는 actual-body 기준 (파인튜닝 저장 가중치와 동일)
+
 예시 (Adressa):
 
   python NAML/finetune_cq_teacher_expected_body.py \

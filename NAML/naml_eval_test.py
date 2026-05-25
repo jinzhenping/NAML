@@ -520,14 +520,23 @@ def main() -> None:
         model.load_weights(str(weights_path))
     except Exception as e:
         cq_hint = (
-            "  CQ 교사/학생이면 --cq-user-encoder 또는 NAML/naml_eval_test_cq.py\n"
-            "  예: --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json\n"
+            "  CQ 교사/학생/파인튜닝 가중치면 반드시 CQ 그래프가 필요합니다:\n"
+            "    python NAML/naml_eval_test_cq.py --weights ... "
+            "--tune-log saved_models/.../naml_tune_actual_cq_teacher_log.json\n"
+            "  (naml_eval_test.py 를 쓸 경우 --cq-user-encoder 필수)\n"
+            if not args.cq_user_encoder
+            else "  --tune-log 가 CQ actual 튜닝 로그인지 확인: "
+            "naml_tune_actual_cq_teacher_log.json\n"
+        )
+        std_hint = (
+            ""
             if args.cq_user_encoder
-            else "  예: --tune-log saved_models/naml_tune_actual_log.json\n"
+            else "  표준 NAML 가중치면: --tune-log saved_models/naml_tune_actual_log.json\n"
         )
         print(
             "\n오류: 가중치 로드 실패. 튜닝 시 global_best_hparams와 동일한 그래프가 필요합니다.\n"
             + cq_hint
+            + std_hint
             + "또는 --cnn-filters 등으로 수동 지정.\n",
             flush=True,
         )

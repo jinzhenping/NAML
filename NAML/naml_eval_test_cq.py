@@ -16,15 +16,16 @@ CQ NAML (`build_naml_models_candidate_query_user`) 테스트셋 평가.
     --mind-dataset-subdir MIND_2000 \
     --actual-only
 
-실제본문 + 기대본문:
+실제본문 + 기대본문 (CQ 파인튜닝 / KD 학생):
 
   python NAML/naml_eval_test_cq.py \
-  --expected-dir body_generation/output/MIND_2000/test_3cluster_11_13_8 \
-  --weights saved_models/MIND_2000/NAML_kd_student_cq_0.5_0.5_7.h5 \
-  --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json \
-  --mind-dataset-subdir MIND_2000 \
-  --expected-body-first-n-sentences 0 \
-  --mind-test-tsv dataset/MIND_2000/MIND_test_2000_final.tsv
+    --weights saved_models/MIND_2000/NAML_cq_teacher_finetuned_expected.h5 \
+    --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json \
+    --expected-dir user_preference/expected_body/MIND_2000/test_3cluster_11_13_8_rawtitle \
+    --mind-dataset-subdir MIND_2000 \
+    --expected-body-first-n-sentences 0
+
+  # 잘못된 예: python NAML/naml_eval_test.py (CQ 그래프 아님 → dense shape mismatch)
 
 표준 NAML 평가는 `NAML/naml_eval_test.py` (--cq-user-encoder 없음).
 """
