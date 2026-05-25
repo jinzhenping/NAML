@@ -92,11 +92,6 @@ def train_kd_cq_userdistill(
     best_metrics_expected: Optional[Dict[str, Any]] = None
 
     for ep in range(epochs):
-        print(f"\n=== KD(CQ user + pos-slot distill) epoch {ep + 1}/{epochs} ===", flush=True)
-        mean_rec = tf.keras.metrics.Mean()
-        mean_user = tf.keras.metrics.Mean()
-        mean_exp = tf.keras.metrics.Mean()
-        mean_total = tf.keras.metrics.Mean()
         train_gen = make_train_gen()
 
         for step in range(steps_per_epoch):
@@ -147,37 +142,15 @@ def train_kd_cq_userdistill(
             grads = tape.gradient(loss, student_model.trainable_variables)
             optimizer.apply_gradients(zip(grads, student_model.trainable_variables))
 
-            mean_rec.update_state(loss_rec)
-            mean_user.update_state(loss_d_user)
-            mean_exp.update_state(loss_d_exp)
-            mean_total.update_state(loss)
-
-            if (step + 1) % max(1, steps_per_epoch // 5) == 0 or step == 0:
-                print(
-                    f"  step {step + 1}/{steps_per_epoch}  "
-                    f"L_rec={float(mean_rec.result()):.4f}  "
-                    f"L_user_pos={float(mean_user.result()):.4f}  "
-                    f"L_exp={float(mean_exp.result()):.4f}  "
-                    f"total={float(mean_total.result()):.4f}",
-                    flush=True,
-                )
-
-        print(
-            f"epoch {ep + 1} end: L_rec={float(mean_rec.result()):.4f}  "
-            f"L_user_pos={float(mean_user.result()):.4f}  "
-            f"L_exp={float(mean_exp.result()):.4f}  "
-            f"total={float(mean_total.result()):.4f}",
-            flush=True,
-        )
-
         if eval_after_epoch is not None:
             print(f"  [테스트셋] 에폭 {ep + 1} 평가 중...", flush=True)
             mr, me = eval_after_epoch()
-            print(
-                f"  [실제본문] MRR={mr['MRR']:.6f}  NDCG@5={mr['NDCG@5']:.6f}  "
-                f"Hit@1={mr['Hit@1']:.6f}  (세션 {mr.get('evaluated_sessions', 0)})",
-                flush=True,
-            )
+            if mr is not None:
+                print(
+                    f"  [실제본문] MRR={mr['MRR']:.6f}  NDCG@5={mr['NDCG@5']:.6f}  "
+                    f"Hit@1={mr['Hit@1']:.6f}  (세션 {mr.get('evaluated_sessions', 0)})",
+                    flush=True,
+                )
             if me is not None:
                 print(
                     f"  [기대본문] MRR={me['MRR']:.6f}  NDCG@5={me['NDCG@5']:.6f}  "
@@ -237,6 +210,11 @@ def main() -> None:
     )
     ap.add_argument("--expected-body-test-dir", type=str, default=None)
     ap.add_argument("--no-epoch-eval", action="store_true")
+    ap.add_argument(
+        "--eval-actual-body",
+        action="store_true",
+        help="에폭 평가에 실제본문 predict 포함 (기본: 기대본문만 평가)",
+    )
     ap.add_argument("--eval-batch-size", type=int, default=None)
     ap.add_argument("--teacher-exp-use-expected-body", action="store_true")
     ap.add_argument(
@@ -425,6 +403,7 @@ def main() -> None:
                 expected_bodies_test,
                 eval_bs,
                 eval_expected_body_clip_n_sentences=_eval_exp_n,
+                eval_actual_body=bool(args.eval_actual_body),
             )
 
         eval_cb = None if args.no_epoch_eval else eval_after_epoch_fn

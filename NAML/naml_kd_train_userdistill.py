@@ -273,36 +273,37 @@ def run_test_set_eval(
     eval_batch_size: int,
     *,
     eval_expected_body_clip_n_sentences: Optional[int] = None,
-) -> Tuple[Dict[str, Any], Optional[Dict[str, Any]]]:
+    eval_actual_body: bool = True,
+) -> Tuple[Optional[Dict[str, Any]], Optional[Dict[str, Any]]]:
     n_test = len(all_test_id)
     if n_test == 0:
-        return (
-            {"MRR": 0.0, "NDCG@5": 0.0, "Hit@1": 0.0, "evaluated_sessions": 0},
-            None,
-        )
+        empty = {"MRR": 0.0, "NDCG@5": 0.0, "Hit@1": 0.0, "evaluated_sessions": 0}
+        return (empty if eval_actual_body else None, None)
     bs = max(1, int(eval_batch_size))
     test_steps = (n_test + bs - 1) // bs
 
-    testgen_real = generate_batch_data_test(
-        word_dict,
-        news_words,
-        news_body,
-        news_v,
-        news_sv,
-        news_index,
-        all_test_pn,
-        all_test_label,
-        all_test_id,
-        all_test_user_pos,
-        bs,
-        candidate_news_body=None,
-        expected_bodies=None,
-        all_userid_str=all_test_userid_str,
-        all_newsid_str=all_test_newsid_str,
-        news_index_reverse=news_index_reverse,
-    )
-    score_real = model_test.predict(testgen_real, steps=test_steps, verbose=0)
-    metrics_real = calc_metrics_from_scores(score_real, all_test_label, all_test_index)
+    metrics_real: Optional[Dict[str, Any]] = None
+    if eval_actual_body:
+        testgen_real = generate_batch_data_test(
+            word_dict,
+            news_words,
+            news_body,
+            news_v,
+            news_sv,
+            news_index,
+            all_test_pn,
+            all_test_label,
+            all_test_id,
+            all_test_user_pos,
+            bs,
+            candidate_news_body=None,
+            expected_bodies=None,
+            all_userid_str=all_test_userid_str,
+            all_newsid_str=all_test_newsid_str,
+            news_index_reverse=news_index_reverse,
+        )
+        score_real = model_test.predict(testgen_real, steps=test_steps, verbose=0)
+        metrics_real = calc_metrics_from_scores(score_real, all_test_label, all_test_index)
 
     metrics_exp: Optional[Dict[str, Any]] = None
     if expected_bodies_test:
@@ -464,11 +465,14 @@ def train_kd_userdistill(
         if eval_after_epoch is not None:
             print(f"  [테스트셋] 에폭 {ep + 1} 평가 중...", flush=True)
             mr, me = eval_after_epoch()
-            print(
-                f"  [실제본문] MRR={mr['MRR']:.6f}  NDCG@5={mr['NDCG@5']:.6f}  "
-                f"Hit@1={mr['Hit@1']:.6f}  (세션 {mr.get('evaluated_sessions', 0)})",
-                flush=True,
-            )
+            if mr is not None:
+                print(
+                    f"  [실제본문] MRR={mr['MRR']:.6f}  NDCG@5={mr['NDCG@5']:.6f}  "
+                    f"Hit@1={mr['Hit@1']:.6f}  (세션 {mr.get('evaluated_sessions', 0)})",
+                    flush=True,
+                )
+            else:
+                print("  [실제본문] 생략 (--eval-expected-only)", flush=True)
             if me is not None:
                 print(
                     f"  [기대본문] MRR={me['MRR']:.6f}  NDCG@5={me['NDCG@5']:.6f}  "
@@ -556,6 +560,11 @@ def main() -> None:
         "--no-epoch-eval",
         action="store_true",
         help="매 에폭 종료 후 테스트셋 평가 생략",
+    )
+    ap.add_argument(
+        "--eval-expected-only",
+        action="store_true",
+        help="에폭 평가 시 실제본문 predict 생략, 기대본문 지표만 출력·best 가중치 선정",
     )
     ap.add_argument(
         "--eval-batch-size",
@@ -741,6 +750,7 @@ def main() -> None:
             expected_bodies_test,
             eval_bs,
             eval_expected_body_clip_n_sentences=_eval_exp_n,
+            eval_actual_body=not bool(args.eval_expected_only),
         )
 
     eval_cb: Optional[Callable[[], Tuple[Dict[str, Any], Optional[Dict[str, Any]]]]] = None
