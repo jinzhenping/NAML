@@ -6,6 +6,9 @@
 - 그래프: `build_naml_models_candidate_query_user` (naml_tune_actual_cq_teacher 와 동일)
 - 아키텍처: `--tune-log` 의 global_best_hparams (CQ actual 튜닝 로그 권장)
 - 학습·평가: 기대본문 (학습은 --expected-body-first-n-sentences, 평가는 전체 본문)
+- word_dict: 기본은 **actual-body 교사와 동일**(init-weights strict 로드). 기대본문 토큰은
+  word_dict에 없으면 토큰화 시 생략(KD 스크립트와 동일). `--include-expected-in-word-dict` 로
+  vocab 확장 + embedding 행 이전 가능.
 
 예시 (MIND):
 
@@ -189,6 +192,11 @@ def main() -> None:
         help="히스토리 본문 슬롯은 제목만. 후보는 기대본문",
     )
     ap.add_argument(
+        "--include-expected-in-word-dict",
+        action="store_true",
+        help="기대본문 토큰을 word_dict에 추가( vocab 확대 ). init-weights 는 공통 토큰 embedding만 이전",
+    )
+    ap.add_argument(
         "--out-weights",
         type=str,
         required=True,
@@ -256,11 +264,39 @@ def main() -> None:
             if k in arch_from_log and k in hp and arch_from_log[k] != hp[k]:
                 print(f"  경고: tune-log 아키텍처와 hp 불일치 {k}: log={arch_from_log[k]} hp={hp[k]}", flush=True)
 
-    word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = preprocess_news_file(
-        expected_bodies_train=expected_bodies_train,
-        expected_bodies_test=expected_bodies_test,
-        expected_bodies_vocab_extra=None,
+    word_dict_init, category, subcategory, news_words, news_body, news_v, news_sv, news_index = (
+        preprocess_news_file(
+            expected_bodies_train=None,
+            expected_bodies_test=None,
+            expected_bodies_vocab_extra=None,
+        )
     )
+    init_word_dict = word_dict_init
+    print(
+        f"  init word_dict (actual-body, 교사 호환): {len(init_word_dict)}",
+        flush=True,
+    )
+
+    if args.include_expected_in_word_dict:
+        word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = (
+            preprocess_news_file(
+                expected_bodies_train=expected_bodies_train,
+                expected_bodies_test=expected_bodies_test,
+                expected_bodies_vocab_extra=None,
+            )
+        )
+        print(
+            f"  expanded word_dict (기대본문 포함): {len(word_dict)} "
+            f"(+{len(word_dict) - len(init_word_dict)} 토큰)",
+            flush=True,
+        )
+    else:
+        word_dict = init_word_dict
+        print(
+            "  word_dict=actual-body only → init-weights strict 로드, "
+            "기대본문 OOV 토큰은 배치 생성 시 생략",
+            flush=True,
+        )
     (
         _userid_dict,
         all_train_pn,
@@ -280,8 +316,8 @@ def main() -> None:
         all_test_newsid_str,
     ) = preprocess_user_file(
         news_index=news_index,
-        expected_bodies_train=expected_bodies_train,
-        expected_bodies_test=expected_bodies_test,
+        expected_bodies_train=None,
+        expected_bodies_test=None,
         word_dict=word_dict,
     )
 
@@ -323,6 +359,7 @@ def main() -> None:
         expected_bodies_test=expected_bodies_test,
         history_body_title_only=bool(args.history_body_title_only),
         init_weights=init_w,
+        init_word_dict=init_word_dict,
     )
 
     best_overall_mrr = float("-inf")
@@ -395,6 +432,9 @@ def main() -> None:
                     "expected_train_dir": train_dir,
                     "expected_test_dir": test_dir,
                     "expected_body_first_n_sentences": int(args.expected_body_first_n_sentences),
+                    "include_expected_in_word_dict": bool(args.include_expected_in_word_dict),
+                    "init_word_dict_size": len(init_word_dict),
+                    "word_dict_size": len(word_dict),
                     "history_body_title_only": bool(args.history_body_title_only),
                     "epochs": args.epochs,
                     "batch_size": args.batch_size,

@@ -261,6 +261,79 @@ def _metrics_from_trials_for_mrr(trials: list, target_mrr: float) -> dict | None
     return None
 
 
+def load_cq_init_weights(
+    model,
+    weights_path: str,
+    *,
+    init_word_dict: dict,
+    target_word_dict: dict,
+    target_news_encoder,
+    hp: dict,
+    category,
+    subcategory,
+    learning_rate: float,
+) -> None:
+    """
+    CQ 교사 체크포인트를 target 모델에 로드.
+    word_dict 크기가 다르면(기대본문 vocab 확장 등) 공통 토큰 embedding 행만 이전하고
+    나머지 가중치는 by_name/skip_mismatch 로 로드한다.
+    """
+    iw = os.path.normpath(weights_path)
+    if not os.path.isfile(iw):
+        raise FileNotFoundError(f"init_weights 파일 없음: {iw}")
+
+    if len(init_word_dict) == len(target_word_dict):
+        try:
+            model.load_weights(iw)
+            print(f"  [init] CQ 가중치 로드 (strict): {iw}", flush=True)
+            return
+        except ValueError:
+            pass
+
+    print(
+        f"  [init] word_dict 크기 불일치: checkpoint={len(init_word_dict)} "
+        f"current={len(target_word_dict)} → embedding 행 이전 + partial load",
+        flush=True,
+    )
+
+    init_emb_mat = get_embedding(init_word_dict)
+    built_init = build_naml_models_candidate_query_user(
+        init_word_dict,
+        init_emb_mat,
+        category,
+        subcategory,
+        learning_rate,
+        clear_session=False,
+        dropout_rate=hp["dropout_rate"],
+        cnn_filters=hp["cnn_filters"],
+        cnn_kernel_size=hp["cnn_kernel_size"],
+        attention_dense_dim=hp["attention_dense_dim"],
+        category_emb_dim=hp["category_emb_dim"],
+    )
+    built_init["model"].load_weights(iw)
+    init_news_enc = built_init["newsEncoder"]
+
+    model.load_weights(iw, by_name=True, skip_mismatch=True)
+
+    init_emb_w = init_news_enc.get_layer("embedding").get_weights()[0]
+    target_emb_layer = target_news_encoder.get_layer("embedding")
+    new_emb_w = target_emb_layer.get_weights()[0].copy()
+    copied = 0
+    for word, (new_idx, _freq) in target_word_dict.items():
+        if word in init_word_dict:
+            old_idx = init_word_dict[word][0]
+            if old_idx < init_emb_w.shape[0] and new_idx < new_emb_w.shape[0]:
+                new_emb_w[new_idx] = init_emb_w[old_idx]
+                copied += 1
+    target_emb_layer.set_weights([new_emb_w])
+    print(
+        f"  [init] embedding 행 이전: {copied}/{len(target_word_dict)} "
+        f"(신규 토큰 {len(target_word_dict) - copied}개는 랜덤 초기화 유지)",
+        flush=True,
+    )
+    print(f"  [init] CQ 가중치 partial load 완료: {iw}", flush=True)
+
+
 def run_trial_cq(
     hp: dict,
     epochs: int,
@@ -294,6 +367,7 @@ def run_trial_cq(
     expected_bodies_test=None,
     history_body_title_only: bool = False,
     init_weights: str | None = None,
+    init_word_dict: dict | None = None,
 ):
     np.random.seed(trial_seed)
     random.seed(trial_seed)
@@ -314,19 +388,27 @@ def run_trial_cq(
     )
     model = built["model"]
     model_test = built["model_test"]
+    news_encoder = built["newsEncoder"]
 
     if init_weights:
-        iw = os.path.normpath(init_weights)
-        if not os.path.isfile(iw):
-            raise FileNotFoundError(f"init_weights 파일 없음: {iw}")
         try:
-            model.load_weights(iw)
+            load_cq_init_weights(
+                model,
+                init_weights,
+                init_word_dict=init_word_dict if init_word_dict is not None else word_dict,
+                target_word_dict=word_dict,
+                target_news_encoder=news_encoder,
+                hp=hp,
+                category=category,
+                subcategory=subcategory,
+                learning_rate=float(hp["learning_rate"]),
+            )
         except Exception as e:
             raise RuntimeError(
-                f"CQ init_weights 로드 실패: {iw}\n"
-                "  tune-log 의 global_best_hparams 와 동일 아키텍처인지 확인하세요."
+                f"CQ init_weights 로드 실패: {os.path.normpath(init_weights)}\n"
+                "  tune-log 의 global_best_hparams 와 동일 아키텍처인지, "
+                "word_dict 가 actual-body 교사 학습과 동일한지 확인하세요."
             ) from e
-        print(f"  [init] CQ 가중치 로드: {iw}", flush=True)
 
     n_train = len(all_train_id)
     steps_per_epoch = (n_train + batch_size - 1) // batch_size
