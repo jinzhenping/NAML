@@ -194,7 +194,7 @@ class Config:
             self.head_num = 8  # 768 must be divisible by head_num
         elif self.dataset in ['mind2000', 'adressa2000']:
             self.gcn_layer_num = 4
-            self.epoch = 16
+            self.epoch = 25
             self.dropout_rate = 0.2
             self.max_title_length = 32
             self.max_abstract_length = 128
