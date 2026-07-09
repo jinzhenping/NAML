@@ -121,6 +121,7 @@ def generate_batch_data_train_kd(
     news_index_reverse: Dict[int, str],
     H: int,
     shuffle: bool = True,
+    student_use_actual_body: bool = False,
 ):
     inputid = np.arange(len(all_label))
     if shuffle:
@@ -161,7 +162,10 @@ def generate_batch_data_train_kd(
                         continue
                     news_id_str = news_ids_str[j] if j < len(news_ids_str) else ""
                     key = _norm_expected_body_key(user_id_str, news_id_str)
-                    if key in expected_bodies:
+                    if (
+                        not student_use_actual_body
+                        and key in expected_bodies
+                    ):
                         expected_body = expected_bodies[key]
                         _eb = clip_expected_body_to_first_sentences(
                             expected_body, _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES
@@ -578,6 +582,11 @@ def main() -> None:
         help="L_distill_exp에서 teacher newsEncoder 입력 본문을 실제본문 대신 기대본문으로 사용",
     )
     ap.add_argument(
+        "--student-use-actual-body",
+        action="store_true",
+        help="학습 시 student 후보 본문 입력을 기대본문 대신 MIND_news.tsv 실제본문으로 사용",
+    )
+    ap.add_argument(
         "--expected-body-first-n-sentences",
         "--train-expected-body-first-n-sentences",
         type=int,
@@ -627,6 +636,10 @@ def main() -> None:
             if _eval_exp_n > 0
             else "평가 기대본문([기대본문] 지표): 전체 문장 (기본)"
         ),
+        flush=True,
+    )
+    print(
+        f"학생 후보본문: {'실제본문' if args.student_use_actual_body else '기대본문(매칭 시)'}",
         flush=True,
     )
 
@@ -776,6 +789,7 @@ def main() -> None:
             news_index_reverse,
             H,
             shuffle=True,
+            student_use_actual_body=bool(args.student_use_actual_body),
         )
 
     out_w = str(_ROOT / args.output_weights) if not os.path.isabs(args.output_weights) else args.output_weights

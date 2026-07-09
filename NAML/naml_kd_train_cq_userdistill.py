@@ -9,6 +9,7 @@ NAML KD (후보 쿼리 사용자 인코딩 학생 + 양성 슬롯 사용자 증�
   `--tune-log` 에는 그 학습 시 저장한 JSON(`global_best_hparams`)을 지정해 아키텍처를 맞춘다.
 - 학생: 동일 CQ 그래프(가중치는 별도 초기화 후 KD).
 - L_distill_user_pos: 양성 슬롯의 학생·교사 user_rep 각각 `model_user_stack` 에서 뽑아 1-cos 정렬.
+- `--student-use-actual-body`: 학생 후보 본문 입력을 기대본문 대신 실제본문으로 학습 (기본: 기대본문).
 
 예시:
 
@@ -25,6 +26,7 @@ python NAML/naml_kd_train_cq_userdistill.py \
   --lambda-distill-exp 0.1 \
   --epochs 10 \
   --output-weights saved_models/MIND_2000/NAML_kd_student_cq_userdistill.h5 --teacher-exp-use-expected-body \
+  --student-use-actual-body \
   --num-runs 3
 """
 from __future__ import annotations
@@ -218,6 +220,11 @@ def main() -> None:
     ap.add_argument("--eval-batch-size", type=int, default=None)
     ap.add_argument("--teacher-exp-use-expected-body", action="store_true")
     ap.add_argument(
+        "--student-use-actual-body",
+        action="store_true",
+        help="학습 시 student 후보 본문 입력을 기대본문 대신 MIND_news.tsv 실제본문으로 사용",
+    )
+    ap.add_argument(
         "--expected-body-first-n-sentences",
         "--train-expected-body-first-n-sentences",
         type=int,
@@ -235,6 +242,10 @@ def main() -> None:
     tf.random.set_seed(args.seed)
     _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES = max(0, int(args.expected_body_first_n_sentences))
     _eval_exp_n = max(0, int(args.eval_expected_body_first_n_sentences))
+    print(
+        f"학생 후보본문: {'실제본문' if args.student_use_actual_body else '기대본문(매칭 시)'}",
+        flush=True,
+    )
 
     sub = args.mind_dataset_subdir or os.environ.get("MIND_DATASET_SUBDIR", "MIND_2000")
     os.environ["MIND_DATASET_SUBDIR"] = sub
@@ -427,6 +438,7 @@ def main() -> None:
                 news_index_reverse,
                 H,
                 shuffle=True,
+                student_use_actual_body=bool(args.student_use_actual_body),
             )
 
         optimizer = Adam(learning_rate=args.learning_rate)
