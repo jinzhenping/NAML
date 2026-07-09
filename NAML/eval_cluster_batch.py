@@ -363,7 +363,14 @@ def main() -> None:
         "--tune-log",
         type=str,
         default=None,
-        help="naml_tune_actual_log.json. 기본: saved_models/<SUBDIR>/naml_tune_actual_log.json (있으면 모델 아키텍처 반영)",
+        help="naml_tune_actual_log.json 또는 naml_tune_actual_cq_teacher_log.json. "
+        "기본: saved_models/<SUBDIR>/naml_tune_actual_log.json (있으면 모델 아키텍처 반영)",
+    )
+    parser.add_argument(
+        "--cq-user-encoder",
+        action="store_true",
+        help="후보 쿼리 사용자 인코더(build_naml_models_candidate_query_user). "
+        "NAML_cq_teacher_mind_2000_actual.h5 등 CQ 가중치용",
     )
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--learning-rate", type=float, default=0.0005)
@@ -392,7 +399,7 @@ def main() -> None:
 
     from naml_batch_generators import generate_batch_data_test, generate_batch_data_train
     from naml_common import MIND_NEWS_FILENAME, SEED, get_embedding, mind_data_path, preprocess_news_file, preprocess_user_file
-    from naml_model_builder import build_naml_models
+    from naml_model_builder import build_naml_models, build_naml_models_candidate_query_user
 
     arch: Dict[str, Union[float, int]] = dict(_DEFAULT_ARCH)
     tune_log_path = args.tune_log if os.path.isabs(args.tune_log) else str(_ROOT / args.tune_log)
@@ -525,17 +532,31 @@ def main() -> None:
     news_tsv = mind_data_path(MIND_NEWS_FILENAME)
     news_titles = load_news_titles(news_tsv)
 
-    _built = build_naml_models(
-        word_dict,
-        embedding_mat,
-        category,
-        subcategory,
-        args.learning_rate,
+    _built_kw = dict(
         dropout_rate=float(arch["dropout_rate"]),
         cnn_filters=int(arch["cnn_filters"]),
         cnn_kernel_size=int(arch["cnn_kernel_size"]),
         attention_dense_dim=int(arch["attention_dense_dim"]),
         category_emb_dim=int(arch["category_emb_dim"]),
+    )
+    build_fn = (
+        build_naml_models_candidate_query_user
+        if args.cq_user_encoder
+        else build_naml_models
+    )
+    build_name = (
+        "build_naml_models_candidate_query_user"
+        if args.cq_user_encoder
+        else "build_naml_models"
+    )
+    print(f"{build_name} 아키텍처: {arch}", flush=True)
+    _built = build_fn(
+        word_dict,
+        embedding_mat,
+        category,
+        subcategory,
+        args.learning_rate,
+        **_built_kw,
     )
     model = _built["model"]
     model_test = _built["model_test"]

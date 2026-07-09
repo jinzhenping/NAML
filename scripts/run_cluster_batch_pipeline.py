@@ -29,6 +29,10 @@ coordinator 는 응답을 (N+1).txt 로 저장 (기존 coordinator 동작).
   python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --ablation no_policy --cluster-id 0
   python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --ablation no_cluster
   python scripts/run_cluster_batch_pipeline.py --start 0 --end 5 --ablation no_preference --cluster-id 0
+  python scripts/run_cluster_batch_pipeline.py --start 0 --end 11 --cluster-id 0 --mind-dataset-subdir MIND_2000 \
+    --weights saved_models/MIND_2000/NAML_cq_teacher_mind_2000_actual.h5 \
+    --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json \
+    --cq-user-encoder
 """
 from __future__ import annotations
 
@@ -117,7 +121,18 @@ def main() -> None:
         "--weights",
         type=str,
         default=None,
-        help="eval_cluster_batch --weights",
+        help="eval_cluster_batch --weights (예: saved_models/MIND_2000/NAML_cq_teacher_mind_2000_actual.h5)",
+    )
+    p.add_argument(
+        "--tune-log",
+        type=str,
+        default=None,
+        help="eval_cluster_batch --tune-log (예: saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json)",
+    )
+    p.add_argument(
+        "--cq-user-encoder",
+        action="store_true",
+        help="eval_cluster_batch --cq-user-encoder (CQ 교사/학생 가중치 평가 시 필수)",
     )
     p.add_argument(
         "--sessions-per-batch",
@@ -227,6 +242,10 @@ def main() -> None:
                     str(args.batch_size),
                 ]
             )
+            if args.tune_log:
+                eval_cmd.extend(["--tune-log", args.tune_log])
+            if args.cq_user_encoder:
+                eval_cmd.append("--cq-user-encoder")
             env = os.environ.copy()
             if not args.no_cuda_env:
                 env["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
