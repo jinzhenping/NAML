@@ -10,10 +10,10 @@
 (.txt 확장자여도 내용이 JSON이면 됨).
 
 프로젝트 루트에서:
-  python body_generation/generate_body_test_cluster_policies.py \\
-    --cluster-csv NAML/user_kmeans_k3_MIND_2000_test.csv \\
-    --policy-files policies/c0.json policies/c1.json policies/c2.json \\
-    --output body_generation/output/MIND_2000/test_cluster_mixed_run1 \\
+  python body_generation/generate_body_test_cluster_policies.py \
+    --cluster-csv NAML/user_kmeans_k3_MIND_2000_test.csv \
+    --policy-files policies/c0.json policies/c1.json policies/c2.json \
+    --output body_generation/output/MIND_2000/test_cluster_mixed_run1 \
     --mind-dataset-subdir MIND_2000
 
 --policy-files 순서: 클러스터 0번용, 1번용, 2번용, ... (CSV에 등장하는 cluster 값이

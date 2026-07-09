@@ -1,0 +1,29 @@
+# 여러 스크립트 실행 시간 측정 예시 설정
+# 사용: python scripts/time_scripts_batch.py scripts/timing.example.yaml
+
+output: timing/batch_results.json
+
+defaults:
+  cwd: .
+  repeat: 1
+
+scripts:
+  - name: pipeline_smoke
+    label: "클러스터 배치 파이프라인 (0번만)"
+    command:
+      - python
+      - scripts/run_cluster_batch_pipeline.py
+      - --start
+      - "0"
+      - --end
+      - "0"
+      - --skip-generate
+      - --skip-eval
+      - --skip-coordinator
+
+  # script/args 형식 예시 (--help 로 빠르게 확인)
+  - name: eval_smoke
+    label: "NAML eval_cluster_batch --help"
+    script: NAML/eval_cluster_batch.py
+    args:
+      - --help

@@ -10,10 +10,10 @@ NAML preprocess_user_file 과 동일한 트레이닝 세션 순서·(user,후보
 
 프로젝트 루트에서:
   set PYTHONPATH=NAML
-  python body_generation/generate_body_train_cluster_policies.py \\
-    --cluster-csv NAML/user_kmeans_k3_MIND_2000.csv \\
-    --policy-files coordinator_LLM/output/0.txt coordinator_LLM/output/1.txt coordinator_LLM/output/2.txt \\
-    --output body_generation/output/MIND_2000/train_cluster_all \\
+  python body_generation/generate_body_train_cluster_policies.py \
+    --cluster-csv NAML/user_kmeans_k3_MIND_2000.csv \
+    --policy-files coordinator_LLM/output/0.txt coordinator_LLM/output/1.txt coordinator_LLM/output/2.txt \
+    --output body_generation/output/MIND_2000/train_cluster_all \
     --mind-dataset-subdir MIND_2000
 
 --policy-files 순서: 클러스터 0, 1, 2, ... 용 (CSV의 cluster id가 0 .. len(policy-files)-1 이어야 함)
