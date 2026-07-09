@@ -40,10 +40,10 @@ from pathlib import Path
 from typing import List, Optional
 
 _ROOT = Path(__file__).resolve().parent.parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
 if str(_ROOT / "NAML") not in sys.path:
     sys.path.insert(0, str(_ROOT / "NAML"))
-if str(_ROOT / "body_generation") not in sys.path:
-    sys.path.insert(0, str(_ROOT / "body_generation"))
 
 from body_generation.ablation_config import (
     ABLATION_CHOICES,
