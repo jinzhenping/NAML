@@ -24,7 +24,8 @@ python NAML/naml_eval_test.py \
   --mind-test-tsv dataset/MIND_2000/MIND_test_2000_final.tsv
 
 # 학습(튜닝)과 동일하게 평가에서도 앞 N문장만 쓰려면 명시: --expected-body-first-n-sentences 3
-# 미지정이면 평가·OOV는 전체 기대본문 문자열 사용(튜닝 로그의 N은 자동 반영하지 않음)
+# 미지정이면 평가 시 전체 기대본문 문자열 사용(튜닝 로그의 N은 자동 반영하지 않음)
+# OOV 통계는 기본 생략(시간 절약). 필요 시 --report-oov
 
 # 가중치와 동일한 browsed 히스토리 길이: --max-history-clicks N 또는 NAML_MAX_HISTORY_CLICKS (import 전 argv 권장)
 #
@@ -319,6 +320,11 @@ def main() -> None:
         "예: dataset/MIND_2000/MIND_test_(2000)_final.tsv 또는 MIND_test_(2000)_final.tsv",
     )
     parser.add_argument("--batch-size", type=int, default=64)
+    parser.add_argument(
+        "--report-oov",
+        action="store_true",
+        help="OOV 토큰 통계 출력 (기본: 생략하여 평가 시간 단축)",
+    )
     parser.add_argument("--learning-rate", type=float, default=0.0005)
     parser.add_argument(
         "--disable-auto-expected-preprocess-from-tune-log",
@@ -336,7 +342,7 @@ def main() -> None:
         type=int,
         default=None,
         metavar="N",
-        help="기대본문 평가·OOV 집계 시 앞 N문장만 사용 (0=전체). "
+        help="기대본문 평가 시 앞 N문장만 사용 (0=전체). "
         "미지정이면 문장 컷 없음(전체 본문). --tune-log의 값은 자동 적용하지 않음",
     )
     args = parser.parse_args()
@@ -451,7 +457,7 @@ def main() -> None:
     else:
         _naml_common.EXPECTED_BODY_FIRST_N_SENTENCES = 0
         print(
-            "기대본문 문장 컷: 미지정 → 평가·OOV는 전체 본문 (튜닝 로그의 N은 자동 반영하지 않음)",
+            "기대본문 문장 컷: 미지정 → 평가는 전체 본문 (튜닝 로그의 N은 자동 반영하지 않음)",
             flush=True,
         )
 
@@ -560,16 +566,15 @@ def main() -> None:
         raise e
 
     news_index_reverse = {v: k for k, v in news_index.items()}
-    news_tsv_path = mind_data_path(MIND_NEWS_FILENAME)
-    raw_bodies_by_news_id = load_news_id_to_body_from_tsv(news_tsv_path)
 
-    # 실제본문 OOV: MIND_news.tsv 원문을 기대본문과 동일 규칙으로 토큰화
-    actual_bodies_unique: List[str] = []
-    seen_nids = set()
-    actual_bodies_per_slot: List[str] = []
+    # 실제본문 OOV (옵션; word_tokenize 비용이 커서 기본 생략)
     oov_actual_unique = None
     oov_actual_slots = None
-    if eval_actual:
+    if eval_actual and args.report_oov:
+        raw_bodies_by_news_id = load_news_id_to_body_from_tsv(mind_data_path(MIND_NEWS_FILENAME))
+        actual_bodies_unique: List[str] = []
+        seen_nids = set()
+        actual_bodies_per_slot: List[str] = []
         for i in range(len(all_test_pn)):
             idx = int(all_test_pn[i])
             if idx == 0:
@@ -628,23 +633,24 @@ def main() -> None:
             if k in expected_bodies:
                 matched_slots += 1
 
-        # OOV: 기대본문을 평가와 동일하게 문장 컷 후 NAML과 동일 토큰화
-        n_sent_oov = int(_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES)
-        exp_for_oov = [
-            clip_expected_body_to_first_sentences(t, n_sent_oov) or ""
-            for t in expected_bodies.values()
-        ]
-        oov_all_json = aggregate_oov_from_texts(word_dict, exp_for_oov)
-        texts_test_matched: List[str] = []
-        for i in range(len(all_test_pn)):
-            if int(all_test_pn[i]) == 0:
-                continue
-            k = _norm_expected_body_key(all_test_userid_str[i], all_test_newsid_str[i])
-            if k in expected_bodies:
-                texts_test_matched.append(
-                    clip_expected_body_to_first_sentences(expected_bodies[k], n_sent_oov) or ""
-                )
-        oov_test_slots = aggregate_oov_from_texts(word_dict, texts_test_matched)
+        if args.report_oov:
+            # OOV: 기대본문을 평가와 동일하게 문장 컷 후 NAML과 동일 토큰화
+            n_sent_oov = int(_naml_common.EXPECTED_BODY_FIRST_N_SENTENCES)
+            exp_for_oov = [
+                clip_expected_body_to_first_sentences(t, n_sent_oov) or ""
+                for t in expected_bodies.values()
+            ]
+            oov_all_json = aggregate_oov_from_texts(word_dict, exp_for_oov)
+            texts_test_matched: List[str] = []
+            for i in range(len(all_test_pn)):
+                if int(all_test_pn[i]) == 0:
+                    continue
+                k = _norm_expected_body_key(all_test_userid_str[i], all_test_newsid_str[i])
+                if k in expected_bodies:
+                    texts_test_matched.append(
+                        clip_expected_body_to_first_sentences(expected_bodies[k], n_sent_oov) or ""
+                    )
+            oov_test_slots = aggregate_oov_from_texts(word_dict, texts_test_matched)
 
     print("\n=== 테스트셋 성능 비교 ===")
     if metrics_real is not None:
