@@ -23,6 +23,7 @@ CQ NAML (`build_naml_models_candidate_query_user`) 테스트셋 평가.
     --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json \
     --expected-dir user_preference/expected_body/MIND_2000/test_3cluster_11_13_8_rawtitle \
     --mind-dataset-subdir MIND_2000 \
+    --expected-only \
     --expected-body-first-n-sentences 0
 
   # 잘못된 예: python NAML/naml_eval_test.py (CQ 그래프 아님 → dense shape mismatch)

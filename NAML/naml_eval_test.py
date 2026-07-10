@@ -36,6 +36,9 @@ python NAML/naml_eval_test.py \
 #
 # 다른 테스트 split TSV (예: 후반 절반):
 #   --mind-test-tsv dataset/MIND_2000/MIND_test_(2000)_final.tsv
+#
+# 기대본문만:
+#   --expected-only --expected-dir ...
 """
 from __future__ import annotations
 
@@ -283,6 +286,11 @@ def main() -> None:
         action="store_true",
         help="기대본문 평가는 생략하고 실제본문 성능만 측정",
     )
+    parser.add_argument(
+        "--expected-only",
+        action="store_true",
+        help="실제본문 평가는 생략하고 기대본문 성능만 측정 (--expected-dir 필수)",
+    )
     parser.add_argument("--weights", type=str, default="saved_models/NAML_mind_2000.h5")
     parser.add_argument(
         "--tune-log",
@@ -333,6 +341,13 @@ def main() -> None:
     )
     args = parser.parse_args()
 
+    if args.actual_only and args.expected_only:
+        print("오류: --actual-only 와 --expected-only 는 동시에 사용할 수 없습니다.", file=sys.stderr)
+        sys.exit(2)
+
+    eval_actual = not args.expected_only
+    eval_expected = not args.actual_only
+
     if args.mind_dataset_subdir:
         os.environ["MIND_DATASET_SUBDIR"] = args.mind_dataset_subdir
 
@@ -375,9 +390,9 @@ def main() -> None:
         sys.exit(1)
 
     expected_dir_abs: str | None = None
-    if not args.actual_only:
+    if eval_expected:
         if not args.expected_dir:
-            print("오류: 기대본문 평가를 하려면 --expected-dir 가 필요합니다. (또는 --actual-only 사용)")
+            print("오류: 기대본문 평가를 하려면 --expected-dir 가 필요합니다.", file=sys.stderr)
             sys.exit(1)
         expected_dir_abs = (
             os.path.normpath(str(_ROOT / args.expected_dir)) if not os.path.isabs(args.expected_dir) else args.expected_dir
@@ -393,6 +408,8 @@ def main() -> None:
         print(f"기대본문 로드: {len(expected_bodies)}개 ({expected_dir_abs})")
     else:
         print("기대본문 평가: 비활성화 (--actual-only)")
+    if not eval_actual:
+        print("실제본문 평가: 비활성화 (--expected-only)")
 
     # tune-log 기반 자동 전처리 복원 (기대본문 튜닝 가중치의 embedding 크기 불일치 방지)
     prep_expected_train = None
@@ -550,36 +567,41 @@ def main() -> None:
     actual_bodies_unique: List[str] = []
     seen_nids = set()
     actual_bodies_per_slot: List[str] = []
-    for i in range(len(all_test_pn)):
-        idx = int(all_test_pn[i])
-        if idx == 0:
-            continue
-        nid = news_index_reverse.get(idx, "") or ""
-        body = raw_bodies_by_news_id.get(str(nid).strip(), "") if nid else ""
-        actual_bodies_per_slot.append(body)
-        if nid and str(nid).strip() not in seen_nids:
-            seen_nids.add(str(nid).strip())
-            actual_bodies_unique.append(body)
-    oov_actual_unique = aggregate_oov_from_texts(word_dict, actual_bodies_unique)
-    oov_actual_slots = aggregate_oov_from_texts(word_dict, actual_bodies_per_slot)
+    oov_actual_unique = None
+    oov_actual_slots = None
+    if eval_actual:
+        for i in range(len(all_test_pn)):
+            idx = int(all_test_pn[i])
+            if idx == 0:
+                continue
+            nid = news_index_reverse.get(idx, "") or ""
+            body = raw_bodies_by_news_id.get(str(nid).strip(), "") if nid else ""
+            actual_bodies_per_slot.append(body)
+            if nid and str(nid).strip() not in seen_nids:
+                seen_nids.add(str(nid).strip())
+                actual_bodies_unique.append(body)
+        oov_actual_unique = aggregate_oov_from_texts(word_dict, actual_bodies_unique)
+        oov_actual_slots = aggregate_oov_from_texts(word_dict, actual_bodies_per_slot)
 
     bs = args.batch_size
     test_steps = (len(all_test_id) + bs - 1) // bs
 
-    testgen_real = generate_batch_data_test(
-        word_dict, news_words, news_body, news_v, news_sv, news_index,
-        all_test_pn, all_test_label, all_test_id, all_test_user_pos, bs,
-        expected_bodies=None,
-        all_userid_str=all_test_userid_str,
-        all_newsid_str=all_test_newsid_str,
-        news_index_reverse=news_index_reverse,
-    )
-    print("테스트셋 예측 중... (실제본문)")
-    score_real = model_test.predict(testgen_real, steps=test_steps, verbose=0)
+    metrics_real = None
+    if eval_actual:
+        testgen_real = generate_batch_data_test(
+            word_dict, news_words, news_body, news_v, news_sv, news_index,
+            all_test_pn, all_test_label, all_test_id, all_test_user_pos, bs,
+            expected_bodies=None,
+            all_userid_str=all_test_userid_str,
+            all_newsid_str=all_test_newsid_str,
+            news_index_reverse=news_index_reverse,
+        )
+        print("테스트셋 예측 중... (실제본문)")
+        score_real = model_test.predict(testgen_real, steps=test_steps, verbose=0)
+        metrics_real = calc_metrics_from_scores(score_real, all_test_label, all_test_index)
 
-    metrics_real = calc_metrics_from_scores(score_real, all_test_label, all_test_index)
     metrics_exp = None
-    if not args.actual_only:
+    if eval_expected:
         testgen_exp = generate_batch_data_test(
             word_dict, news_words, news_body, news_v, news_sv, news_index,
             all_test_pn, all_test_label, all_test_id, all_test_user_pos, bs,
@@ -597,7 +619,7 @@ def main() -> None:
     matched_slots = 0
     oov_all_json = None
     oov_test_slots = None
-    if not args.actual_only:
+    if eval_expected:
         for i in range(len(all_test_pn)):
             if int(all_test_pn[i]) == 0:
                 continue
@@ -625,11 +647,12 @@ def main() -> None:
         oov_test_slots = aggregate_oov_from_texts(word_dict, texts_test_matched)
 
     print("\n=== 테스트셋 성능 비교 ===")
-    print(
-        f"[실제본문]   MRR={metrics_real['MRR']:.6f}  "
-        f"NDCG@5={metrics_real['NDCG@5']:.6f}  "
-        f"Hit@1={metrics_real['Hit@1']:.6f}"
-    )
+    if metrics_real is not None:
+        print(
+            f"[실제본문]   MRR={metrics_real['MRR']:.6f}  "
+            f"NDCG@5={metrics_real['NDCG@5']:.6f}  "
+            f"Hit@1={metrics_real['Hit@1']:.6f}"
+        )
     if metrics_exp is not None:
         print(
             f"[기대본문]   MRR={metrics_exp['MRR']:.6f}  "
@@ -653,14 +676,15 @@ def main() -> None:
             f"[OOV 기대본문] 테스트에서 기대본문 쓴 슬롯만(반복 합산): "
             f"{ot['oov_tokens']}/{ot['total_tokens']} ({ot['oov_token_rate']:.2%})"
         )
-    print(
-        f"[OOV 실제본문] MIND TSV 테스트 후보 고유 뉴스 각 1회: "
-        f"{aru['oov_tokens']}/{aru['total_tokens']} ({aru['oov_token_rate']:.2%})"
-    )
-    print(
-        f"[OOV 실제본문] 테스트 슬롯(행마다 반복): "
-        f"{ars['oov_tokens']}/{ars['total_tokens']} ({ars['oov_token_rate']:.2%})"
-    )
+    if aru is not None and ars is not None:
+        print(
+            f"[OOV 실제본문] MIND TSV 테스트 후보 고유 뉴스 각 1회: "
+            f"{aru['oov_tokens']}/{aru['total_tokens']} ({aru['oov_token_rate']:.2%})"
+        )
+        print(
+            f"[OOV 실제본문] 테스트 슬롯(행마다 반복): "
+            f"{ars['oov_tokens']}/{ars['total_tokens']} ({ars['oov_token_rate']:.2%})"
+        )
 
 
 if __name__ == "__main__":
