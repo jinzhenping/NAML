@@ -1,0 +1,329 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+Kandinsky 2.2 prior의 CLIP image encoder로 썸네일 임베딩을 추출한다.
+
+  python CLIP/clip_embeddings.py \
+    --mind-dataset-subdir MIND_2000 \
+    --thumbnail-dir dataset/MIND_thumbnail \
+    --out CLIP/cache/MIND_2000_clip_image_embeds.npz
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+from pathlib import Path
+from typing import Dict, Iterable, List, Optional, Sequence, Tuple
+
+import numpy as np
+
+_ROOT = Path(__file__).resolve().parent.parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+if str(_ROOT / "NAML") not in sys.path:
+    sys.path.insert(0, str(_ROOT / "NAML"))
+
+CLIP_MODEL_ID = "kandinsky-community/kandinsky-2-2-prior"
+CLIP_IMAGE_ENCODER_SUBFOLDER = "image_encoder"
+CLIP_IMAGE_PROCESSOR_SUBFOLDER = "image_processor"
+DEFAULT_THUMBNAIL_DIR = "dataset/MIND_thumbnail"
+DEFAULT_CACHE_NAME = "{subdir}_clip_image_embeds.npz"
+
+_HEADER_IDS = frozenset({"news_id", "clicked_news", "id"})
+
+
+def resolve_project_path(p: str) -> str:
+    p = (p or "").strip()
+    if not p:
+        return ""
+    return os.path.normpath(p) if os.path.isabs(p) else os.path.normpath(str(_ROOT / p))
+
+
+def default_cache_path(mind_dataset_subdir: str) -> str:
+    name = DEFAULT_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    return str(_ROOT / "CLIP" / "cache" / name)
+
+
+def thumbnail_path(thumbnail_dir: str, news_id: str) -> str:
+    return os.path.join(thumbnail_dir, f"{news_id}.jpg")
+
+
+def load_news_ids_from_tsv(news_tsv: str) -> List[str]:
+    ids: List[str] = []
+    seen = set()
+    with open(news_tsv, "r", encoding="utf-8") as f:
+        for line in f:
+            nid = line.split("\t", 1)[0].strip()
+            if not nid or nid.lower() in _HEADER_IDS:
+                continue
+            if nid in seen:
+                continue
+            seen.add(nid)
+            ids.append(nid)
+    return ids
+
+
+def count_missing_thumbnails(
+    news_ids: Iterable[str],
+    thumbnail_dir: str,
+) -> Tuple[List[str], List[str]]:
+    catalog: List[str] = []
+    missing: List[str] = []
+    for nid in news_ids:
+        if not nid or nid == "0":
+            continue
+        catalog.append(nid)
+        if not os.path.isfile(thumbnail_path(thumbnail_dir, nid)):
+            missing.append(nid)
+    return catalog, missing
+
+
+def print_missing_thumbnail_report(
+    news_ids: Sequence[str],
+    thumbnail_dir: str,
+    *,
+    sample: int = 20,
+) -> List[str]:
+    catalog, missing = count_missing_thumbnails(news_ids, thumbnail_dir)
+    print(
+        f"[CLIP] thumbnail_dir={thumbnail_dir}\n"
+        f"[CLIP] news catalog (padding 제외)={len(catalog)}\n"
+        f"[CLIP] missing jpg={len(missing)} / {len(catalog)}",
+        flush=True,
+    )
+    if missing:
+        shown = missing[:sample]
+        extra = "" if len(missing) <= sample else f" ... (+{len(missing) - sample})"
+        print(f"[CLIP] missing sample: {shown}{extra}", flush=True)
+    return missing
+
+
+def _news_ids_from_index(news_index: Dict[str, int]) -> List[str]:
+    rows = [(idx, nid) for nid, idx in news_index.items() if nid != "0" and int(idx) != 0]
+    rows.sort()
+    return [nid for _idx, nid in rows]
+
+
+def load_clip_npz(path: str) -> Tuple[np.ndarray, List[str]]:
+    data = np.load(path, allow_pickle=True)
+    emb = np.asarray(data["embeddings"], dtype=np.float32)
+    raw_ids = data["news_ids"]
+    news_ids = [str(x) for x in raw_ids.tolist()]
+    if emb.ndim != 2 or len(news_ids) != emb.shape[0]:
+        raise ValueError(
+            f"CLIP cache shape mismatch: embeddings={emb.shape} news_ids={len(news_ids)} ({path})"
+        )
+    return emb, news_ids
+
+
+def build_news_image_matrix(
+    news_index: Dict[str, int],
+    n_rows: int,
+    cache_path: str,
+) -> Tuple[np.ndarray, int]:
+    """
+    news_words 와 같은 행 인덱스의 이미지 임베딩 행렬.
+    캐시에 없거나 추출 당시 파일이 없었던 ID는 0벡터.
+    Returns: (news_image, n_nonzero)
+    """
+    emb, news_ids = load_clip_npz(cache_path)
+    dim = int(emb.shape[1])
+    id_to_row = {nid: i for i, nid in enumerate(news_ids)}
+    news_image = np.zeros((int(n_rows), dim), dtype=np.float32)
+    n_hit = 0
+    for nid, idx in news_index.items():
+        i = int(idx)
+        if i <= 0 or i >= n_rows:
+            continue
+        row = id_to_row.get(str(nid))
+        if row is None:
+            continue
+        vec = emb[row]
+        news_image[i] = vec
+        if np.any(vec):
+            n_hit += 1
+    return news_image, n_hit
+
+
+def _chunks(items: Sequence[str], batch_size: int) -> Iterable[Sequence[str]]:
+    for i in range(0, len(items), batch_size):
+        yield items[i : i + batch_size]
+
+
+def extract_clip_embeddings(
+    news_ids: Sequence[str],
+    thumbnail_dir: str,
+    out_path: str,
+    *,
+    model_id: str = CLIP_MODEL_ID,
+    device: str = "auto",
+    batch_size: int = 16,
+) -> dict:
+    try:
+        import torch
+        from PIL import Image
+        from transformers import CLIPImageProcessor, CLIPVisionModelWithProjection
+    except ImportError as e:
+        raise ImportError(
+            "CLIP 추출에는 torch, transformers, Pillow 가 필요합니다. "
+            "pip install -r CLIP/requirements.txt"
+        ) from e
+
+    if device == "auto":
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+    dtype = torch.float16 if device.startswith("cuda") else torch.float32
+
+    print(
+        f"[CLIP] load image_encoder from {model_id}/{CLIP_IMAGE_ENCODER_SUBFOLDER} device={device}",
+        flush=True,
+    )
+    try:
+        processor = CLIPImageProcessor.from_pretrained(
+            model_id, subfolder=CLIP_IMAGE_PROCESSOR_SUBFOLDER
+        )
+    except Exception:
+        processor = CLIPImageProcessor.from_pretrained(model_id)
+    encoder = CLIPVisionModelWithProjection.from_pretrained(
+        model_id, subfolder=CLIP_IMAGE_ENCODER_SUBFOLDER
+    )
+    encoder = encoder.to(device=device, dtype=dtype)
+    encoder.eval()
+    fallback_dim = int(getattr(encoder.config, "projection_dim", 1280) or 1280)
+
+    catalog, missing = count_missing_thumbnails(news_ids, thumbnail_dir)
+    missing_set = set(missing)
+    to_encode = [nid for nid in catalog if nid not in missing_set]
+    print(
+        f"[CLIP] encode {len(to_encode)} images, skip missing={len(missing)}",
+        flush=True,
+    )
+
+    clip_dim: Optional[int] = None
+    id_to_vec: Dict[str, np.ndarray] = {}
+    unreadable: List[str] = []
+
+    def _open_rgb(path: str):
+        img = Image.open(path)
+        img.load()
+        return img.convert("RGB")
+
+    n_done = 0
+    n_batches = 0
+    with torch.no_grad():
+        for batch_ids in _chunks(to_encode, batch_size):
+            images = []
+            ok_ids = []
+            for nid in batch_ids:
+                path = thumbnail_path(thumbnail_dir, nid)
+                try:
+                    images.append(_open_rgb(path))
+                    ok_ids.append(nid)
+                except Exception:
+                    unreadable.append(nid)
+            if not images:
+                continue
+            pixel = processor(images=images, return_tensors="pt").pixel_values
+            pixel = pixel.to(device=device, dtype=dtype)
+            out = encoder(pixel_values=pixel)
+            vecs = out.image_embeds.float().cpu().numpy().astype(np.float32)
+            if clip_dim is None:
+                clip_dim = int(vecs.shape[1])
+            for nid, vec in zip(ok_ids, vecs):
+                id_to_vec[nid] = vec
+            n_done += len(ok_ids)
+            n_batches += 1
+            if n_batches == 1 or n_batches % 20 == 0 or n_done >= len(to_encode):
+                print(f"[CLIP] encoded {n_done}/{len(to_encode)}", flush=True)
+
+    del encoder
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    import gc
+    gc.collect()
+
+    if clip_dim is None:
+        clip_dim = fallback_dim
+        print(
+            f"[CLIP] 경고: 인코딩된 이미지가 없어 0벡터만 저장합니다 (dim={clip_dim})",
+            flush=True,
+        )
+
+    embeddings = np.zeros((len(catalog), clip_dim), dtype=np.float32)
+    for i, nid in enumerate(catalog):
+        vec = id_to_vec.get(nid)
+        if vec is not None:
+            embeddings[i] = vec
+
+    os.makedirs(os.path.dirname(os.path.abspath(out_path)) or ".", exist_ok=True)
+    np.savez_compressed(
+        out_path,
+        embeddings=embeddings,
+        news_ids=np.array(catalog, dtype=object),
+    )
+    meta = {
+        "model_id": model_id,
+        "image_encoder_subfolder": CLIP_IMAGE_ENCODER_SUBFOLDER,
+        "thumbnail_dir": thumbnail_dir,
+        "out_path": os.path.abspath(out_path),
+        "clip_dim": int(clip_dim),
+        "n_news": len(catalog),
+        "n_encoded": int(len(id_to_vec)),
+        "n_missing": len(missing),
+        "n_unreadable": len(unreadable),
+        "missing_sample": missing[:50],
+        "unreadable_sample": unreadable[:50],
+    }
+    meta_path = os.path.splitext(out_path)[0] + ".json"
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+    print(
+        f"[CLIP] saved {out_path}\n"
+        f"[CLIP] dim={clip_dim} encoded={len(id_to_vec)} "
+        f"missing={len(missing)} unreadable={len(unreadable)}\n"
+        f"[CLIP] meta {meta_path}",
+        flush=True,
+    )
+    return meta
+
+
+def main() -> None:
+    from naml_dataset_env import apply_dataset_env_from_argv
+
+    apply_dataset_env_from_argv()
+
+    ap = argparse.ArgumentParser(description="Kandinsky 2.2 CLIP image encoder로 썸네일 임베딩 추출")
+    ap.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
+    ap.add_argument("--thumbnail-dir", type=str, default=DEFAULT_THUMBNAIL_DIR)
+    ap.add_argument("--news-tsv", type=str, default=None, help="미지정 시 dataset/<subdir>/MIND_news.tsv")
+    ap.add_argument("--out", type=str, default=None)
+    ap.add_argument("--device", type=str, default="auto", choices=["auto", "cuda", "cpu"])
+    ap.add_argument("--batch-size", type=int, default=16)
+    args = ap.parse_args()
+
+    apply_dataset_env_from_argv(["--mind-dataset-subdir", args.mind_dataset_subdir])
+    from naml_common import MIND_NEWS_FILENAME, mind_data_path
+
+    news_tsv = resolve_project_path(args.news_tsv) if args.news_tsv else mind_data_path(MIND_NEWS_FILENAME)
+    thumb_dir = resolve_project_path(args.thumbnail_dir)
+    out_path = resolve_project_path(args.out) if args.out else default_cache_path(args.mind_dataset_subdir)
+
+    if not os.path.isfile(news_tsv):
+        raise FileNotFoundError(f"news tsv 없음: {news_tsv}")
+    if not os.path.isdir(thumb_dir):
+        print(f"[CLIP] 경고: thumbnail 폴더 없음: {thumb_dir} (전부 0벡터로 저장)", flush=True)
+
+    news_ids = load_news_ids_from_tsv(news_tsv)
+    print_missing_thumbnail_report(news_ids, thumb_dir)
+    extract_clip_embeddings(
+        news_ids,
+        thumb_dir,
+        out_path,
+        device=args.device,
+        batch_size=args.batch_size,
+    )
+
+
+if __name__ == "__main__":
+    main()
