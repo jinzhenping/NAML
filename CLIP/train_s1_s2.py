@@ -457,7 +457,7 @@ def main() -> None:
         help="global_best_hparams 를 읽을 실제본문 튜닝 로그. 없으면 NAML 기본값",
     )
     ap.add_argument("--epochs", type=int, default=10, help="S1 에폭 수 (기본 10). S2는 --epochs-s2")
-    ap.add_argument("--epochs-s2", type=int, default=20, help="S2 에폭 수 (기본 20)")
+    ap.add_argument("--epochs-s2", type=int, default=30, help="S2 에폭 수 (기본 30)")
     ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument("--seed", type=int, default=SEED)
     ap.add_argument("--max-history-clicks", type=int, default=None)
