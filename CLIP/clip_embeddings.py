@@ -14,6 +14,7 @@ import argparse
 import json
 import os
 import sys
+import zipfile
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 
@@ -106,11 +107,84 @@ def _news_ids_from_index(news_index: Dict[str, int]) -> List[str]:
     return [nid for _idx, nid in rows]
 
 
-def load_clip_npz(path: str) -> Tuple[np.ndarray, List[str]]:
-    data = np.load(path, allow_pickle=True)
-    emb = np.asarray(data["embeddings"], dtype=np.float32)
-    raw_ids = data["news_ids"]
-    news_ids = [str(x) for x in raw_ids.tolist()]
+def _news_ids_sidecar_path(npz_path: str) -> str:
+    return os.path.splitext(npz_path)[0] + "_news_ids.json"
+
+
+def _save_clip_cache(out_path: str, embeddings: np.ndarray, catalog: Sequence[str]) -> None:
+    """numpy 1.x / 2.x 모두 읽히도록 object(pickle) 배열을 쓰지 않는다."""
+    catalog_list = [str(x) for x in catalog]
+    max_len = max((len(x) for x in catalog_list), default=8)
+    os.makedirs(os.path.dirname(os.path.abspath(out_path)) or ".", exist_ok=True)
+    np.savez_compressed(
+        out_path,
+        embeddings=np.asarray(embeddings, dtype=np.float32),
+        news_ids=np.asarray(catalog_list, dtype=f"U{max(max_len, 8)}"),
+    )
+    with open(_news_ids_sidecar_path(out_path), "w", encoding="utf-8") as f:
+        json.dump(catalog_list, f, ensure_ascii=False)
+
+
+def _read_npz_npy(path: str, key: str, allow_pickle: bool = False) -> np.ndarray:
+    from numpy.lib.format import read_array
+
+    with zipfile.ZipFile(path, "r") as z:
+        name = key if key.endswith(".npy") else f"{key}.npy"
+        with z.open(name) as f:
+            return read_array(f, allow_pickle=allow_pickle)
+
+
+def load_clip_npz(
+    path: str,
+    news_ids_fallback: Optional[Sequence[str]] = None,
+) -> Tuple[np.ndarray, List[str]]:
+    emb = np.asarray(_read_npz_npy(path, "embeddings", allow_pickle=False), dtype=np.float32)
+
+    news_ids: Optional[List[str]] = None
+    sidecar = _news_ids_sidecar_path(path)
+    if os.path.isfile(sidecar):
+        with open(sidecar, "r", encoding="utf-8") as f:
+            loaded = json.load(f)
+        if isinstance(loaded, list) and loaded:
+            news_ids = [str(x) for x in loaded]
+
+    if news_ids is None:
+        try:
+            raw_ids = _read_npz_npy(path, "news_ids", allow_pickle=False)
+            news_ids = [str(x) for x in np.asarray(raw_ids).reshape(-1).tolist()]
+        except Exception:
+            news_ids = None
+
+    if news_ids is None:
+        try:
+            raw_ids = _read_npz_npy(path, "news_ids", allow_pickle=True)
+            news_ids = [str(x) for x in np.asarray(raw_ids).reshape(-1).tolist()]
+        except Exception:
+            news_ids = None
+
+    if news_ids is None and news_ids_fallback is not None:
+        fb = [str(x) for x in news_ids_fallback]
+        if len(fb) == emb.shape[0]:
+            print(
+                "[CLIP] npz의 news_ids가 다른 numpy 버전으로 pickle되어 읽을 수 없습니다. "
+                "뉴스 TSV 순서로 ID를 복구합니다. 캐시를 numpy1 호환으로 다시 저장합니다.",
+                flush=True,
+            )
+            news_ids = fb
+            _save_clip_cache(path, emb, news_ids)
+        else:
+            raise ValueError(
+                f"CLIP cache news_ids를 읽을 수 없고 fallback 길이도 다릅니다 "
+                f"(emb={emb.shape[0]}, fallback={len(fb)}). "
+                f"CLIP/clip_embeddings.py 로 캐시를 다시 추출하세요: {path}"
+            )
+
+    if news_ids is None:
+        raise ValueError(
+            f"CLIP cache news_ids를 읽을 수 없습니다 (numpy 버전 불일치 가능). "
+            f"tf28gpu가 아닌 추출 환경에서 다시 저장하거나, 이 코드로 재추출하세요: {path}"
+        )
+
     if emb.ndim != 2 or len(news_ids) != emb.shape[0]:
         raise ValueError(
             f"CLIP cache shape mismatch: embeddings={emb.shape} news_ids={len(news_ids)} ({path})"
@@ -122,13 +196,14 @@ def build_news_image_matrix(
     news_index: Dict[str, int],
     n_rows: int,
     cache_path: str,
+    news_ids_fallback: Optional[Sequence[str]] = None,
 ) -> Tuple[np.ndarray, int]:
     """
     news_words 와 같은 행 인덱스의 이미지 임베딩 행렬.
     캐시에 없거나 추출 당시 파일이 없었던 ID는 0벡터.
     Returns: (news_image, n_nonzero)
     """
-    emb, news_ids = load_clip_npz(cache_path)
+    emb, news_ids = load_clip_npz(cache_path, news_ids_fallback=news_ids_fallback)
     dim = int(emb.shape[1])
     id_to_row = {nid: i for i, nid in enumerate(news_ids)}
     news_image = np.zeros((int(n_rows), dim), dtype=np.float32)
@@ -152,6 +227,52 @@ def _chunks(items: Sequence[str], batch_size: int) -> Iterable[Sequence[str]]:
         yield items[i : i + batch_size]
 
 
+def resolve_torch_device(requested: str) -> str:
+    """
+    Blackwell(sm_120) 등 현재 PyTorch 휠이 지원하지 않는 GPU면 CUDA를 쓰지 않는다.
+    torch.cuda.is_available() 만으로는 커널이 없어서 런타임에 터진다.
+    """
+    import torch
+
+    req = (requested or "auto").strip().lower()
+    if req == "cpu":
+        return "cpu"
+    if req not in ("auto", "cuda"):
+        return "cpu"
+    if not torch.cuda.is_available():
+        if req == "cuda":
+            print("[CLIP] CUDA를 쓸 수 없어 CPU로 추출합니다.", flush=True)
+        return "cpu"
+
+    name = torch.cuda.get_device_name(0)
+    major, minor = torch.cuda.get_device_capability(0)
+    sm = f"sm_{major}{minor}"
+    archs = []
+    if hasattr(torch.cuda, "get_arch_list"):
+        try:
+            archs = [str(a) for a in torch.cuda.get_arch_list()]
+        except Exception:
+            archs = []
+    supported = sm in archs
+    if not supported:
+        print(
+            f"[CLIP] {name} ({sm}) 은 현재 PyTorch CUDA 빌드와 호환되지 않습니다.\n"
+            f"[CLIP] 이 설치가 지원하는 arch: {archs or '(unknown)'}\n"
+            f"[CLIP] CUDA 커널이 없어 GPU 추출을 건너뛰고 CPU로 진행합니다.\n"
+            f"[CLIP] GPU로 추출하려면 sm_120 지원 PyTorch(CUDA 12.8+)를 별도 환경에 설치하세요.",
+            flush=True,
+        )
+        return "cpu"
+    try:
+        x = torch.zeros(1, device="cuda")
+        _ = x + 1
+        torch.cuda.synchronize()
+    except Exception as e:
+        print(f"[CLIP] CUDA 테스트 실패 ({type(e).__name__}: {e}) → CPU로 추출합니다.", flush=True)
+        return "cpu"
+    return "cuda"
+
+
 def extract_clip_embeddings(
     news_ids: Sequence[str],
     thumbnail_dir: str,
@@ -171,8 +292,14 @@ def extract_clip_embeddings(
             "pip install -r CLIP/requirements.txt"
         ) from e
 
-    if device == "auto":
-        device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = resolve_torch_device(device)
+    if device == "cpu" and batch_size > 8:
+        print(
+            f"[CLIP] CPU 추출이라 batch-size를 {batch_size} → 8 로 낮춥니다 "
+            f"(유지하려면 --batch-size 8 이하로 지정).",
+            flush=True,
+        )
+        batch_size = 8
     dtype = torch.float16 if device.startswith("cuda") else torch.float32
 
     print(
@@ -257,11 +384,7 @@ def extract_clip_embeddings(
             embeddings[i] = vec
 
     os.makedirs(os.path.dirname(os.path.abspath(out_path)) or ".", exist_ok=True)
-    np.savez_compressed(
-        out_path,
-        embeddings=embeddings,
-        news_ids=np.array(catalog, dtype=object),
-    )
+    _save_clip_cache(out_path, embeddings, catalog)
     meta = {
         "model_id": model_id,
         "image_encoder_subfolder": CLIP_IMAGE_ENCODER_SUBFOLDER,

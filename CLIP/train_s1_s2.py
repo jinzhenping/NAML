@@ -6,10 +6,12 @@ S1 / S2 NAML 학습 (실제 본문).
 S1: 기존 NAML (title + body + cat/subcat)
 S2: S1 + Kandinsky 2.2 CLIP 이미지 임베딩을 5번째 뷰로 view-attention
 
-  # 1) (S2) 썸네일 CLIP 임베딩
+  # 1) (S2) 썸네일 CLIP 
+  conda activate clip_cu128
   python CLIP/clip_embeddings.py --mind-dataset-subdir MIND_2000
 
   # 2) S1, S2 학습 (val = MIND_test_(2000).tsv)
+  conda activate tf28gpu
   python CLIP/train_s1_s2.py --variant both --mind-dataset-subdir MIND_2000 \
     --tune-log saved_models/MIND_2000/naml_tune_actual_log.json
   # 가중치 기본 저장: CLIP/saved_models/MIND_2000/
@@ -45,6 +47,7 @@ from tensorflow.keras import backend as K
 from clip_embeddings import (
     DEFAULT_THUMBNAIL_DIR,
     build_news_image_matrix,
+    count_missing_thumbnails,
     default_cache_path,
     extract_clip_embeddings,
     load_news_ids_from_tsv,
@@ -537,7 +540,13 @@ def main() -> None:
             args.clip_device,
             args.clip_batch_size,
         )
-        news_image, n_hit = build_news_image_matrix(news_index, len(news_words), clip_cache)
+        fallback_ids, _ = count_missing_thumbnails(load_news_ids_from_tsv(news_tsv), thumb_dir)
+        news_image, n_hit = build_news_image_matrix(
+            news_index,
+            len(news_words),
+            clip_cache,
+            news_ids_fallback=fallback_ids,
+        )
         print(
             f"[train] CLIP matrix {news_image.shape}  nonzero news={n_hit}/{len(catalog_ids)}",
             flush=True,
