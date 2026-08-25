@@ -3,8 +3,11 @@
 """
 S1 / S2 NAML 학습 (실제 본문).
 
-S1: 기존 NAML (title + body + cat/subcat)
-S2: S1 + Kandinsky 2.2 CLIP 이미지 임베딩을 5번째 뷰로 view-attention
+S1: title only (기본) 또는 title+body+cat/subcat (--full-text)
+S2: S1과 같은 텍스트 + CLIP 썸네일 이미지 뷰
+
+  python CLIP/train_s1_s2.py --variant both --mind-dataset-subdir MIND_2000
+  python CLIP/train_s1_s2.py --variant both --full-text   # 기존 4뷰 텍스트
 
   # 1) (S2) 썸네일 CLIP 
   conda activate clip_cu128
@@ -64,7 +67,11 @@ from naml_common import (
     preprocess_news_file,
     preprocess_user_file,
 )
-from naml_image_model import build_naml_models_with_image
+from naml_image_model import (
+    build_naml_models_title_image,
+    build_naml_models_title_only,
+    build_naml_models_with_image,
+)
 from naml_model_builder import build_naml_models
 from naml_tune_actual import evaluate_session_metrics, hit_at_k, mrr_score, ndcg_score
 
@@ -103,6 +110,7 @@ def generate_batch_data_train(
     news_sv,
     batch_size,
     news_image=None,
+    title_only=False,
 ):
     n = len(all_label)
     inputid = np.arange(n)
@@ -116,22 +124,19 @@ def generate_batch_data_train(
         for idx in batches:
             cand_i = all_train_pn[idx]
             hist_i = all_user_pos[idx]
-            parts = (
-                _split_by_slot(news_words[cand_i])
-                + _split_by_slot(news_words[hist_i])
-                + _split_by_slot(news_body[cand_i])
-                + _split_by_slot(news_body[hist_i])
-                + _split_by_slot(news_v[cand_i])
-                + _split_by_slot(news_v[hist_i])
-                + _split_by_slot(news_sv[cand_i])
-                + _split_by_slot(news_sv[hist_i])
-            )
-            if news_image is not None:
+            parts = _split_by_slot(news_words[cand_i]) + _split_by_slot(news_words[hist_i])
+            if not title_only:
                 parts = (
                     parts
-                    + _split_by_slot(news_image[cand_i])
-                    + _split_by_slot(news_image[hist_i])
+                    + _split_by_slot(news_body[cand_i])
+                    + _split_by_slot(news_body[hist_i])
+                    + _split_by_slot(news_v[cand_i])
+                    + _split_by_slot(news_v[hist_i])
+                    + _split_by_slot(news_sv[cand_i])
+                    + _split_by_slot(news_sv[hist_i])
                 )
+            if news_image is not None:
+                parts = parts + _split_by_slot(news_image[cand_i]) + _split_by_slot(news_image[hist_i])
             yield (parts, np.asarray(all_label[idx], dtype=np.float32))
 
 
@@ -145,6 +150,7 @@ def generate_batch_data_test(
     news_sv,
     batch_size,
     news_image=None,
+    title_only=False,
 ):
     n = len(all_test_label)
     inputid = np.arange(n)
@@ -157,16 +163,17 @@ def generate_batch_data_test(
         for idx in batches:
             cand_i = all_test_pn[idx]
             hist_i = all_test_user_pos[idx]
-            parts = (
-                [news_words[cand_i]]
-                + _split_by_slot(news_words[hist_i])
-                + [news_body[cand_i]]
-                + _split_by_slot(news_body[hist_i])
-                + [news_v[cand_i]]
-                + _split_by_slot(news_v[hist_i])
-                + [news_sv[cand_i]]
-                + _split_by_slot(news_sv[hist_i])
-            )
+            parts = [news_words[cand_i]] + _split_by_slot(news_words[hist_i])
+            if not title_only:
+                parts = (
+                    parts
+                    + [news_body[cand_i]]
+                    + _split_by_slot(news_body[hist_i])
+                    + [news_v[cand_i]]
+                    + _split_by_slot(news_v[hist_i])
+                    + [news_sv[cand_i]]
+                    + _split_by_slot(news_sv[hist_i])
+                )
             if news_image is not None:
                 parts = parts + [news_image[cand_i]] + _split_by_slot(news_image[hist_i])
             yield (parts, np.asarray(all_test_label[idx], dtype=np.float32))
@@ -185,8 +192,9 @@ def evaluate_metrics(
     news_sv,
     batch_size,
     news_image=None,
+    title_only=False,
 ):
-    if news_image is None:
+    if news_image is None and not title_only:
         return evaluate_session_metrics(
             model_test,
             all_test_pn,
@@ -212,6 +220,7 @@ def evaluate_metrics(
         news_sv,
         batch_size,
         news_image=news_image,
+        title_only=title_only,
     )
     click_score = model_test.predict(gen, steps=steps, verbose=0)
     all_mrr, all_ndcg, all_hit1 = [], [], []
@@ -290,25 +299,47 @@ def train_one(
     news_image: Optional[np.ndarray],
     out_weights: str,
     out_log: str,
+    title_only: bool = True,
 ) -> Dict[str, Any]:
     _set_seed(seed)
     use_image = variant == "s2"
+    arch_kw = dict(
+        dropout_rate=hp["dropout_rate"],
+        cnn_filters=hp["cnn_filters"],
+        cnn_kernel_size=hp["cnn_kernel_size"],
+        attention_dense_dim=hp["attention_dense_dim"],
+        category_emb_dim=hp["category_emb_dim"],
+    )
     if use_image:
         if news_image is None:
             raise ValueError("S2 학습에는 CLIP 임베딩 행렬이 필요합니다.")
-        built = build_naml_models_with_image(
+        if title_only:
+            built = build_naml_models_title_image(
+                word_dict,
+                embedding_mat,
+                hp["learning_rate"],
+                clip_dim=int(news_image.shape[1]),
+                clear_session=True,
+                **arch_kw,
+            )
+        else:
+            built = build_naml_models_with_image(
+                word_dict,
+                embedding_mat,
+                category,
+                subcategory,
+                hp["learning_rate"],
+                clip_dim=int(news_image.shape[1]),
+                clear_session=True,
+                **arch_kw,
+            )
+    elif title_only:
+        built = build_naml_models_title_only(
             word_dict,
             embedding_mat,
-            category,
-            subcategory,
             hp["learning_rate"],
-            clip_dim=int(news_image.shape[1]),
             clear_session=True,
-            dropout_rate=hp["dropout_rate"],
-            cnn_filters=hp["cnn_filters"],
-            cnn_kernel_size=hp["cnn_kernel_size"],
-            attention_dense_dim=hp["attention_dense_dim"],
-            category_emb_dim=hp["category_emb_dim"],
+            **arch_kw,
         )
     else:
         built = build_naml_models(
@@ -318,11 +349,7 @@ def train_one(
             subcategory,
             hp["learning_rate"],
             clear_session=True,
-            dropout_rate=hp["dropout_rate"],
-            cnn_filters=hp["cnn_filters"],
-            cnn_kernel_size=hp["cnn_kernel_size"],
-            attention_dense_dim=hp["attention_dense_dim"],
-            category_emb_dim=hp["category_emb_dim"],
+            **arch_kw,
         )
     model = built["model"]
     model_test = built["model_test"]
@@ -336,9 +363,10 @@ def train_one(
     best_epoch = -1
     epoch_logs: List[Dict[str, Any]] = []
 
+    text_mode = "title-only" if title_only else "title+body+cat/subcat"
     print(
         f"\n=== {variant.upper()} train  epochs={epochs}  batch={batch_size}  "
-        f"seed={seed}  image_view={use_image} ===",
+        f"seed={seed}  text={text_mode}  image_view={use_image} ===",
         flush=True,
     )
     for ep in range(1, epochs + 1):
@@ -352,6 +380,7 @@ def train_one(
             news_sv,
             batch_size,
             news_image=img,
+            title_only=title_only,
         )
         hist = model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch, verbose=1)
         metrics = evaluate_metrics(
@@ -367,6 +396,7 @@ def train_one(
             news_sv,
             batch_size,
             news_image=img,
+            title_only=title_only,
         )
         loss = None
         if hist.history.get("loss"):
@@ -404,6 +434,7 @@ def train_one(
         "epoch_logs": epoch_logs,
         "out_weights": os.path.abspath(out_weights),
         "use_image": use_image,
+        "title_only": title_only,
     }
     os.makedirs(os.path.dirname(os.path.abspath(out_log)) or ".", exist_ok=True)
     with open(out_log, "w", encoding="utf-8") as f:
@@ -471,6 +502,20 @@ def main() -> None:
         default=None,
         help="가중치/로그 저장 폴더. 기본 CLIP/saved_models/<mind-dataset-subdir>",
     )
+    text_group = ap.add_mutually_exclusive_group()
+    text_group.add_argument(
+        "--title-only",
+        dest="title_only",
+        action="store_true",
+        help="텍스트는 제목만 사용 (기본)",
+    )
+    text_group.add_argument(
+        "--full-text",
+        dest="title_only",
+        action="store_false",
+        help="title + body + category + subcategory (기존 NAML 4뷰)",
+    )
+    ap.set_defaults(title_only=True)
     args = ap.parse_args()
 
     argv = ["--mind-dataset-subdir", args.mind_dataset_subdir]
@@ -482,6 +527,10 @@ def main() -> None:
     hp = load_hparams(args.tune_log)
 
     print("[train] 실제 본문으로 전처리 (기대본문 미사용)", flush=True)
+    if args.title_only:
+        print("[train] 텍스트 입력: title only (body/cat/subcat 미사용)", flush=True)
+    else:
+        print("[train] 텍스트 입력: title + body + category + subcategory", flush=True)
     word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = (
         preprocess_news_file(
             expected_bodies_train=None,
@@ -582,22 +631,31 @@ def main() -> None:
         all_test_user_pos=all_test_user_pos,
         all_test_index=all_test_index,
         news_image=news_image,
+        title_only=bool(args.title_only),
     )
+    if args.title_only:
+        s1_w, s1_l = "S1_naml_title.h5", "S1_naml_title_log.json"
+        s2_w, s2_l = "S2_naml_clip_title.h5", "S2_naml_clip_title_log.json"
+        cmp_name = "S1_S2_compare_title.json"
+    else:
+        s1_w, s1_l = "S1_naml_actual.h5", "S1_naml_actual_log.json"
+        s2_w, s2_l = "S2_naml_clip.h5", "S2_naml_clip_log.json"
+        cmp_name = "S1_S2_compare.json"
     if args.variant in ("s1", "both"):
         results["s1"] = train_one(
             "s1",
             **shared,
             epochs=int(args.epochs),
-            out_weights=os.path.join(out_dir, "S1_naml_actual.h5"),
-            out_log=os.path.join(out_dir, "S1_naml_actual_log.json"),
+            out_weights=os.path.join(out_dir, s1_w),
+            out_log=os.path.join(out_dir, s1_l),
         )
     if args.variant in ("s2", "both"):
         results["s2"] = train_one(
             "s2",
             **shared,
             epochs=int(args.epochs_s2),
-            out_weights=os.path.join(out_dir, "S2_naml_clip.h5"),
-            out_log=os.path.join(out_dir, "S2_naml_clip_log.json"),
+            out_weights=os.path.join(out_dir, s2_w),
+            out_log=os.path.join(out_dir, s2_l),
         )
 
     if "s1" in results and "s2" in results:
@@ -610,7 +668,7 @@ def main() -> None:
                 f"  {k}: S1={s1m[k]:.6f}  S2={s2m[k]:.6f}  Δ(S2-S1)={d:+.6f}",
                 flush=True,
             )
-        cmp_path = os.path.join(out_dir, "S1_S2_compare.json")
+        cmp_path = os.path.join(out_dir, cmp_name)
         with open(cmp_path, "w", encoding="utf-8") as f:
             json.dump(
                 {
@@ -620,6 +678,7 @@ def main() -> None:
                     "s2_best_epoch": results["s2"]["best_epoch"],
                     "hparams": hp,
                     "clip_cache": clip_cache,
+                    "title_only": bool(args.title_only),
                 },
                 f,
                 ensure_ascii=False,
