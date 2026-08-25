@@ -456,7 +456,8 @@ def main() -> None:
         default="saved_models/MIND_2000/naml_tune_actual_log.json",
         help="global_best_hparams 를 읽을 실제본문 튜닝 로그. 없으면 NAML 기본값",
     )
-    ap.add_argument("--epochs", type=int, default=10)
+    ap.add_argument("--epochs", type=int, default=10, help="S1 에폭 수 (기본 10). S2는 --epochs-s2")
+    ap.add_argument("--epochs-s2", type=int, default=20, help="S2 에폭 수 (기본 20)")
     ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument("--seed", type=int, default=SEED)
     ap.add_argument("--max-history-clicks", type=int, default=None)
@@ -561,7 +562,6 @@ def main() -> None:
     results = {}
     shared = dict(
         hp=hp,
-        epochs=int(args.epochs),
         batch_size=int(args.batch_size),
         seed=int(args.seed),
         word_dict=word_dict,
@@ -587,6 +587,7 @@ def main() -> None:
         results["s1"] = train_one(
             "s1",
             **shared,
+            epochs=int(args.epochs),
             out_weights=os.path.join(out_dir, "S1_naml_actual.h5"),
             out_log=os.path.join(out_dir, "S1_naml_actual_log.json"),
         )
@@ -594,6 +595,7 @@ def main() -> None:
         results["s2"] = train_one(
             "s2",
             **shared,
+            epochs=int(args.epochs_s2),
             out_weights=os.path.join(out_dir, "S2_naml_clip.h5"),
             out_log=os.path.join(out_dir, "S2_naml_clip_log.json"),
         )
