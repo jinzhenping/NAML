@@ -12,6 +12,7 @@ S2: S1 + Kandinsky 2.2 CLIP 이미지 임베딩을 5번째 뷰로 view-attention
   # 2) S1, S2 학습 (val = MIND_test_(2000).tsv)
   python CLIP/train_s1_s2.py --variant both --mind-dataset-subdir MIND_2000 \
     --tune-log saved_models/MIND_2000/naml_tune_actual_log.json
+  # 가중치 기본 저장: CLIP/saved_models/MIND_2000/
 """
 from __future__ import annotations
 
@@ -463,8 +464,8 @@ def main() -> None:
     ap.add_argument(
         "--out-dir",
         type=str,
-        default="saved_models/MIND_2000",
-        help="가중치/로그 저장 폴더",
+        default=None,
+        help="가중치/로그 저장 폴더. 기본 CLIP/saved_models/<mind-dataset-subdir>",
     )
     args = ap.parse_args()
 
@@ -542,8 +543,12 @@ def main() -> None:
             flush=True,
         )
 
-    out_dir = resolve_project_path(args.out_dir)
+    if args.out_dir:
+        out_dir = resolve_project_path(args.out_dir)
+    else:
+        out_dir = str(_CLIP_DIR / "saved_models" / args.mind_dataset_subdir)
     os.makedirs(out_dir, exist_ok=True)
+    print(f"[train] out_dir={out_dir}", flush=True)
     results = {}
     shared = dict(
         hp=hp,
