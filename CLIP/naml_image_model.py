@@ -61,7 +61,7 @@ def build_naml_models_with_image(
     body_cnn = Dropout(d)(body_cnn)
     attention_body = Dense(ad, activation="tanh")(body_cnn)
     attention_body = Flatten()(Dense(1)(attention_body))
-    attention_weight_body = Activation("softmax")(attention_weight_body)
+    attention_weight_body = Activation("softmax")(attention_body)
     body_rep = keras.layers.Dot((1, 1))([body_cnn, attention_weight_body])
 
     vinput = Input((1,), dtype="int32")
