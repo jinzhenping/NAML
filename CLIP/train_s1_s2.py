@@ -9,6 +9,10 @@ S2: S1과 같은 텍스트 + CLIP 썸네일 이미지 뷰
   python CLIP/train_s1_s2.py --variant both --mind-dataset-subdir MIND_2000
   python CLIP/train_s1_s2.py --variant both --full-text   # 기존 4뷰 텍스트
 
+  # S2 full-text 하이퍼파라미터 튜닝 (naml_tune_actual 과 동일 그리드)
+  python CLIP/tune_s2.py --two-phase --trials 108 --screening-epochs 3 \
+    --refine-top-k 10 --epochs-per-trial 10 --mind-dataset-subdir MIND_2000
+
   # 1) (S2) 썸네일 CLIP 
   conda activate clip_cu128
   python CLIP/clip_embeddings.py --mind-dataset-subdir MIND_2000
