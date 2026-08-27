@@ -30,7 +30,11 @@ CLIP_MODEL_ID = "kandinsky-community/kandinsky-2-2-prior"
 CLIP_IMAGE_ENCODER_SUBFOLDER = "image_encoder"
 CLIP_IMAGE_PROCESSOR_SUBFOLDER = "image_processor"
 DEFAULT_THUMBNAIL_DIR = "dataset/MIND_thumbnail"
+DEFAULT_GENERATED_IMAGE_DIR = "dataset/MIND_image"
 DEFAULT_CACHE_NAME = "{subdir}_clip_image_embeds.npz"
+DEFAULT_B4_CACHE_NAME = "{subdir}_clip_b4_mind_image.npz"
+DEFAULT_B1_CACHE_NAME = "{subdir}_clip_b1_text_expected.npz"
+DEFAULT_B2_CACHE_NAME = "{subdir}_clip_b2_prior_expected.npz"
 
 _HEADER_IDS = frozenset({"news_id", "clicked_news", "id"})
 
@@ -51,6 +55,30 @@ def thumbnail_path(thumbnail_dir: str, news_id: str) -> str:
     return os.path.join(thumbnail_dir, f"{news_id}.jpg")
 
 
+def resolve_news_image_path(
+    image_dir: str,
+    news_id: str,
+    suffixes: Sequence[str] = (".jpg",),
+) -> Optional[str]:
+    for sfx in suffixes:
+        path = os.path.join(image_dir, f"{news_id}{sfx}")
+        if os.path.isfile(path):
+            return path
+    return None
+
+
+def default_b4_cache_path(mind_dataset_subdir: str) -> str:
+    return str(_ROOT / "CLIP" / "cache" / DEFAULT_B4_CACHE_NAME.format(subdir=mind_dataset_subdir))
+
+
+def default_b1_cache_path(mind_dataset_subdir: str) -> str:
+    return str(_ROOT / "CLIP" / "cache" / DEFAULT_B1_CACHE_NAME.format(subdir=mind_dataset_subdir))
+
+
+def default_b2_cache_path(mind_dataset_subdir: str) -> str:
+    return str(_ROOT / "CLIP" / "cache" / DEFAULT_B2_CACHE_NAME.format(subdir=mind_dataset_subdir))
+
+
 def load_news_ids_from_tsv(news_tsv: str) -> List[str]:
     ids: List[str] = []
     seen = set()
@@ -66,9 +94,10 @@ def load_news_ids_from_tsv(news_tsv: str) -> List[str]:
     return ids
 
 
-def count_missing_thumbnails(
+def count_missing_images(
     news_ids: Iterable[str],
-    thumbnail_dir: str,
+    image_dir: str,
+    suffixes: Sequence[str] = (".jpg",),
 ) -> Tuple[List[str], List[str]]:
     catalog: List[str] = []
     missing: List[str] = []
@@ -76,9 +105,38 @@ def count_missing_thumbnails(
         if not nid or nid == "0":
             continue
         catalog.append(nid)
-        if not os.path.isfile(thumbnail_path(thumbnail_dir, nid)):
+        if resolve_news_image_path(image_dir, nid, suffixes) is None:
             missing.append(nid)
     return catalog, missing
+
+
+def count_missing_thumbnails(
+    news_ids: Iterable[str],
+    thumbnail_dir: str,
+) -> Tuple[List[str], List[str]]:
+    return count_missing_images(news_ids, thumbnail_dir, suffixes=(".jpg",))
+
+
+def print_missing_image_report(
+    news_ids: Sequence[str],
+    image_dir: str,
+    *,
+    suffixes: Sequence[str] = (".jpg",),
+    label: str = "image",
+    sample: int = 20,
+) -> List[str]:
+    catalog, missing = count_missing_images(news_ids, image_dir, suffixes=suffixes)
+    print(
+        f"[CLIP] {label}_dir={image_dir} suffixes={list(suffixes)}\n"
+        f"[CLIP] news catalog (padding 제외)={len(catalog)}\n"
+        f"[CLIP] missing {label}={len(missing)} / {len(catalog)}",
+        flush=True,
+    )
+    if missing:
+        shown = missing[:sample]
+        extra = "" if len(missing) <= sample else f" ... (+{len(missing) - sample})"
+        print(f"[CLIP] missing sample: {shown}{extra}", flush=True)
+    return missing
 
 
 def print_missing_thumbnail_report(
@@ -87,18 +145,13 @@ def print_missing_thumbnail_report(
     *,
     sample: int = 20,
 ) -> List[str]:
-    catalog, missing = count_missing_thumbnails(news_ids, thumbnail_dir)
-    print(
-        f"[CLIP] thumbnail_dir={thumbnail_dir}\n"
-        f"[CLIP] news catalog (padding 제외)={len(catalog)}\n"
-        f"[CLIP] missing jpg={len(missing)} / {len(catalog)}",
-        flush=True,
+    return print_missing_image_report(
+        news_ids,
+        thumbnail_dir,
+        suffixes=(".jpg",),
+        label="thumbnail",
+        sample=sample,
     )
-    if missing:
-        shown = missing[:sample]
-        extra = "" if len(missing) <= sample else f" ... (+{len(missing) - sample})"
-        print(f"[CLIP] missing sample: {shown}{extra}", flush=True)
-    return missing
 
 
 def _news_ids_from_index(news_index: Dict[str, int]) -> List[str]:
@@ -222,6 +275,79 @@ def build_news_image_matrix(
     return news_image, n_hit
 
 
+def _pairs_sidecar_path(npz_path: str) -> str:
+    return os.path.splitext(npz_path)[0] + "_pairs.json"
+
+
+def _save_pair_cache(
+    out_path: str,
+    embeddings: np.ndarray,
+    user_ids: Sequence[str],
+    news_ids: Sequence[str],
+) -> None:
+    users = [str(x) for x in user_ids]
+    news = [str(x) for x in news_ids]
+    if len(users) != len(news) or len(users) != int(np.asarray(embeddings).shape[0]):
+        raise ValueError(
+            f"pair cache length mismatch: users={len(users)} news={len(news)} "
+            f"emb={np.asarray(embeddings).shape}"
+        )
+    u_len = max((len(x) for x in users), default=8)
+    n_len = max((len(x) for x in news), default=8)
+    os.makedirs(os.path.dirname(os.path.abspath(out_path)) or ".", exist_ok=True)
+    np.savez_compressed(
+        out_path,
+        embeddings=np.asarray(embeddings, dtype=np.float32),
+        user_ids=np.asarray(users, dtype=f"U{max(u_len, 8)}"),
+        news_ids=np.asarray(news, dtype=f"U{max(n_len, 8)}"),
+    )
+    with open(_pairs_sidecar_path(out_path), "w", encoding="utf-8") as f:
+        json.dump([[u, n] for u, n in zip(users, news)], f, ensure_ascii=False)
+
+
+def load_pair_npz(
+    path: str,
+) -> Tuple[np.ndarray, List[str], List[str]]:
+    emb = np.asarray(_read_npz_npy(path, "embeddings", allow_pickle=False), dtype=np.float32)
+    users: Optional[List[str]] = None
+    news: Optional[List[str]] = None
+    sidecar = _pairs_sidecar_path(path)
+    if os.path.isfile(sidecar):
+        with open(sidecar, "r", encoding="utf-8") as f:
+            loaded = json.load(f)
+        if isinstance(loaded, list) and loaded:
+            users = [str(x[0]) for x in loaded]
+            news = [str(x[1]) for x in loaded]
+
+    def _try_key(key: str, allow_pickle: bool) -> Optional[List[str]]:
+        try:
+            raw = _read_npz_npy(path, key, allow_pickle=allow_pickle)
+            return [str(x) for x in np.asarray(raw).reshape(-1).tolist()]
+        except Exception:
+            return None
+
+    if users is None:
+        users = _try_key("user_ids", False) or _try_key("user_ids", True)
+    if news is None:
+        news = _try_key("news_ids", False) or _try_key("news_ids", True)
+    if users is None or news is None:
+        raise ValueError(f"pair cache user/news ids를 읽을 수 없습니다: {path}")
+    if emb.ndim != 2 or len(users) != emb.shape[0] or len(news) != emb.shape[0]:
+        raise ValueError(
+            f"pair cache shape mismatch: embeddings={emb.shape} users={len(users)} "
+            f"news={len(news)} ({path})"
+        )
+    return emb, users, news
+
+
+def load_pair_embed_dict(path: str) -> Dict[Tuple[str, str], np.ndarray]:
+    emb, users, news = load_pair_npz(path)
+    out: Dict[Tuple[str, str], np.ndarray] = {}
+    for vec, uid, nid in zip(emb, users, news):
+        out[(str(uid), str(nid))] = np.asarray(vec, dtype=np.float32)
+    return out
+
+
 def _chunks(items: Sequence[str], batch_size: int) -> Iterable[Sequence[str]]:
     for i in range(0, len(items), batch_size):
         yield items[i : i + batch_size]
@@ -281,6 +407,8 @@ def extract_clip_embeddings(
     model_id: str = CLIP_MODEL_ID,
     device: str = "auto",
     batch_size: int = 16,
+    suffixes: Sequence[str] = (".jpg",),
+    source_label: str = "thumbnail",
 ) -> dict:
     try:
         import torch
@@ -319,11 +447,11 @@ def extract_clip_embeddings(
     encoder.eval()
     fallback_dim = int(getattr(encoder.config, "projection_dim", 1280) or 1280)
 
-    catalog, missing = count_missing_thumbnails(news_ids, thumbnail_dir)
+    catalog, missing = count_missing_images(news_ids, thumbnail_dir, suffixes=suffixes)
     missing_set = set(missing)
     to_encode = [nid for nid in catalog if nid not in missing_set]
     print(
-        f"[CLIP] encode {len(to_encode)} images, skip missing={len(missing)}",
+        f"[CLIP] encode {len(to_encode)} {source_label} images, skip missing={len(missing)}",
         flush=True,
     )
 
@@ -343,7 +471,10 @@ def extract_clip_embeddings(
             images = []
             ok_ids = []
             for nid in batch_ids:
-                path = thumbnail_path(thumbnail_dir, nid)
+                path = resolve_news_image_path(thumbnail_dir, nid, suffixes)
+                if not path:
+                    unreadable.append(nid)
+                    continue
                 try:
                     images.append(_open_rgb(path))
                     ok_ids.append(nid)
@@ -388,7 +519,9 @@ def extract_clip_embeddings(
     meta = {
         "model_id": model_id,
         "image_encoder_subfolder": CLIP_IMAGE_ENCODER_SUBFOLDER,
-        "thumbnail_dir": thumbnail_dir,
+        "image_dir": thumbnail_dir,
+        "suffixes": list(suffixes),
+        "source_label": source_label,
         "out_path": os.path.abspath(out_path),
         "clip_dim": int(clip_dim),
         "n_news": len(catalog),

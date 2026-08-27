@@ -9,6 +9,12 @@ S2: S1과 같은 텍스트 + CLIP 썸네일 이미지 뷰
   python CLIP/train_s1_s2.py --variant both --mind-dataset-subdir MIND_2000
   python CLIP/train_s1_s2.py --variant both --full-text   # 기존 4뷰 텍스트
 
+  # Frozen S2 teacher 후보 슬롯 교체 (B0/B1/B2/B4). B3 개인화 픽셀은 제외.
+  conda activate clip_cu128
+  python CLIP/extract_route_embeds.py --routes b1,b2,b4 --mind-dataset-subdir MIND_2000
+  conda activate tf28gpu
+  python CLIP/eval_frozen_teacher.py --branches b0,b1,b2,b4 --mind-dataset-subdir MIND_2000
+
   # S2 full-text 하이퍼파라미터 튜닝 (naml_tune_actual 과 동일 그리드)
   python CLIP/tune_s2.py --two-phase --trials 108 --screening-epochs 3 \
     --refine-top-k 10 --epochs-per-trial 10 --mind-dataset-subdir MIND_2000
@@ -155,6 +161,7 @@ def generate_batch_data_test(
     batch_size,
     news_image=None,
     title_only=False,
+    cand_image=None,
 ):
     n = len(all_test_label)
     inputid = np.arange(n)
@@ -178,8 +185,11 @@ def generate_batch_data_test(
                     + [news_sv[cand_i]]
                     + _split_by_slot(news_sv[hist_i])
                 )
-            if news_image is not None:
-                parts = parts + [news_image[cand_i]] + _split_by_slot(news_image[hist_i])
+            if news_image is not None or cand_image is not None:
+                if news_image is None:
+                    raise ValueError("히스토리 CLIP 행렬(news_image)이 필요합니다.")
+                cand_img = cand_image[idx] if cand_image is not None else news_image[cand_i]
+                parts = parts + [cand_img] + _split_by_slot(news_image[hist_i])
             yield (parts, np.asarray(all_test_label[idx], dtype=np.float32))
 
 
@@ -197,8 +207,9 @@ def evaluate_metrics(
     batch_size,
     news_image=None,
     title_only=False,
+    cand_image=None,
 ):
-    if news_image is None and not title_only:
+    if news_image is None and cand_image is None and not title_only:
         return evaluate_session_metrics(
             model_test,
             all_test_pn,
@@ -225,6 +236,7 @@ def evaluate_metrics(
         batch_size,
         news_image=news_image,
         title_only=title_only,
+        cand_image=cand_image,
     )
     click_score = model_test.predict(gen, steps=steps, verbose=0)
     all_mrr, all_ndcg, all_hit1 = [], [], []
