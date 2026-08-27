@@ -29,6 +29,7 @@ if str(_ROOT / "NAML") not in sys.path:
 CLIP_MODEL_ID = "kandinsky-community/kandinsky-2-2-prior"
 CLIP_IMAGE_ENCODER_SUBFOLDER = "image_encoder"
 CLIP_IMAGE_PROCESSOR_SUBFOLDER = "image_processor"
+CLIP_TEXT_MAX_LENGTH = 77
 DEFAULT_THUMBNAIL_DIR = "dataset/MIND_thumbnail"
 DEFAULT_GENERATED_IMAGE_DIR = "dataset/MIND_image"
 DEFAULT_CACHE_NAME = "{subdir}_clip_image_embeds.npz"

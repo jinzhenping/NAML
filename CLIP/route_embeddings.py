@@ -15,6 +15,7 @@ import numpy as np
 
 from clip_embeddings import (
     CLIP_MODEL_ID,
+    CLIP_TEXT_MAX_LENGTH,
     _save_pair_cache,
     load_pair_embed_dict,
     resolve_torch_device,
@@ -190,11 +191,24 @@ def extract_clip_text_embeddings(
         tokenizer = CLIPTokenizer.from_pretrained(model_id)
     except Exception:
         tokenizer = CLIPTokenizer.from_pretrained(model_id, subfolder="tokenizer")
+    # HF CLIP tokenizer.model_max_length 가 2^100 같은 값으로 저장돼
+    # Rust tokenizer enable_truncation 에서 OverflowError 가 난다. CLIP 은 77 고정.
+    raw_max = getattr(tokenizer, "model_max_length", CLIP_TEXT_MAX_LENGTH)
+    try:
+        raw_max_int = int(raw_max)
+    except (TypeError, ValueError, OverflowError):
+        raw_max_int = CLIP_TEXT_MAX_LENGTH
+    if raw_max_int <= 0 or raw_max_int > CLIP_TEXT_MAX_LENGTH:
+        print(
+            f"[CLIP B1] tokenizer.model_max_length={raw_max} → {CLIP_TEXT_MAX_LENGTH} 로 고정",
+            flush=True,
+        )
+    tokenizer.model_max_length = CLIP_TEXT_MAX_LENGTH
     encoder = CLIPTextModelWithProjection.from_pretrained(model_id, subfolder="text_encoder")
     encoder = encoder.to(device=device, dtype=dtype)
     encoder.eval()
     fallback_dim = int(getattr(encoder.config, "projection_dim", 1280) or 1280)
-    max_len = int(getattr(tokenizer, "model_max_length", 77) or 77)
+    max_len = CLIP_TEXT_MAX_LENGTH
 
     clip_dim: Optional[int] = None
     if existing:
@@ -333,6 +347,18 @@ def extract_prior_image_embeddings(
     pipe = KandinskyV22PriorPipeline.from_pretrained(model_id, torch_dtype=dtype)
     pipe = pipe.to(device)
     pipe.set_progress_bar_config(disable=True)
+    if getattr(pipe, "tokenizer", None) is not None:
+        raw_max = getattr(pipe.tokenizer, "model_max_length", CLIP_TEXT_MAX_LENGTH)
+        try:
+            raw_max_int = int(raw_max)
+        except (TypeError, ValueError, OverflowError):
+            raw_max_int = CLIP_TEXT_MAX_LENGTH
+        if raw_max_int <= 0 or raw_max_int > CLIP_TEXT_MAX_LENGTH:
+            print(
+                f"[CLIP B2] tokenizer.model_max_length={raw_max} → {CLIP_TEXT_MAX_LENGTH} 로 고정",
+                flush=True,
+            )
+        pipe.tokenizer.model_max_length = CLIP_TEXT_MAX_LENGTH
 
     clip_dim: Optional[int] = None
     if existing:
