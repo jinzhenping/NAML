@@ -15,6 +15,8 @@ import numpy as np
 
 from clip_embeddings import (
     CLIP_DECODER_MODEL_ID,
+    CLIP_IMAGE_ENCODER_SUBFOLDER,
+    CLIP_IMAGE_PROCESSOR_SUBFOLDER,
     CLIP_MODEL_ID,
     CLIP_TEXT_MAX_LENGTH,
     _save_pair_cache,
@@ -668,4 +670,186 @@ def generate_images_from_prior_embeds(
     with open(meta_path, "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=2)
     print(f"[CLIP B3] saved images → {out_dir}\n[CLIP B3] meta {meta_path}", flush=True)
+    return meta
+
+
+def list_b3_image_pairs(image_dir: str) -> List[Tuple[str, str, str]]:
+    """(uid, nid, path) from user_<uid>/news_<nid>.png|jpg."""
+    items: List[Tuple[str, str, str]] = []
+    if not image_dir or not os.path.isdir(image_dir):
+        return items
+    for user_folder in os.listdir(image_dir):
+        user_path = os.path.join(image_dir, user_folder)
+        if not os.path.isdir(user_path) or not user_folder.startswith("user_"):
+            continue
+        uid_raw = user_folder[len("user_") :]
+        for filename in os.listdir(user_path):
+            lower = filename.lower()
+            if not (filename.startswith("news_") and lower.endswith((".png", ".jpg", ".jpeg"))):
+                continue
+            stem = filename[len("news_") :]
+            nid_raw = os.path.splitext(stem)[0]
+            uid, nid = norm_pair_key(uid_raw, nid_raw)
+            if not uid or not nid:
+                continue
+            items.append((uid, nid, os.path.join(user_path, filename)))
+    items.sort(key=lambda x: (x[0], x[1]))
+    return items
+
+
+def extract_b3_pixel_clip_embeddings(
+    image_dir: str,
+    out_path: str,
+    *,
+    model_id: str = CLIP_MODEL_ID,
+    device: str = "auto",
+    batch_size: int = 16,
+    resume: bool = True,
+) -> dict:
+    """
+    Route P 후단: B3 PNG → CLIP image encoder → image_embeds.
+    L2 정규화 없음. pair cache 저장.
+    """
+    try:
+        import torch
+        from PIL import Image
+        from transformers import CLIPImageProcessor, CLIPVisionModelWithProjection
+    except ImportError as e:
+        raise ImportError(
+            "B3 CLIP 추출에는 torch, transformers, Pillow 가 필요합니다. "
+            "pip install -r CLIP/requirements.txt"
+        ) from e
+
+    items = list_b3_image_pairs(image_dir)
+    if not items:
+        raise FileNotFoundError(
+            f"B3 생성 이미지가 없습니다: {image_dir}\n"
+            f"먼저 python CLIP/generate_b3_images.py 로 PNG를 만드세요. "
+            f"예: {os.path.join(image_dir, 'user_1', 'news_N1.png')}"
+        )
+
+    device = resolve_torch_device(device)
+    if device == "cpu" and batch_size > 8:
+        print(f"[CLIP B3 emb] CPU라 batch-size를 {batch_size} → 8 로 낮춥니다.", flush=True)
+        batch_size = 8
+    dtype = torch.float16 if device.startswith("cuda") else torch.float32
+
+    existing = _load_existing_pair_cache(out_path) if resume else {}
+    todo: List[Tuple[str, str, str]] = []
+    seen = set()
+    for uid, nid, path in items:
+        key = (uid, nid)
+        if key in seen or key in existing:
+            continue
+        seen.add(key)
+        todo.append((uid, nid, path))
+
+    print(
+        f"[CLIP B3 emb] load image_encoder from {model_id}/{CLIP_IMAGE_ENCODER_SUBFOLDER} device={device}\n"
+        f"[CLIP B3 emb] image_dir={image_dir} png_pairs={len(items)} "
+        f"todo={len(todo)} resume_cached={len(existing)}",
+        flush=True,
+    )
+    if not todo and existing:
+        clip_dim = int(next(iter(existing.values())).reshape(-1).shape[0])
+        print(f"[CLIP B3 emb] 새로 추출할 pair가 없어 cache를 유지합니다: {out_path}", flush=True)
+        return {
+            "route": "B3",
+            "encoder": "CLIPVisionModelWithProjection.image_embeds",
+            "image_dir": os.path.abspath(image_dir),
+            "out_path": os.path.abspath(out_path),
+            "clip_dim": clip_dim,
+            "n_pairs": int(len(existing)),
+            "n_encoded_this_run": 0,
+            "space": "clip_image",
+        }
+
+    try:
+        processor = CLIPImageProcessor.from_pretrained(
+            model_id, subfolder=CLIP_IMAGE_PROCESSOR_SUBFOLDER
+        )
+    except Exception:
+        processor = CLIPImageProcessor.from_pretrained(model_id)
+    encoder = CLIPVisionModelWithProjection.from_pretrained(
+        model_id, subfolder=CLIP_IMAGE_ENCODER_SUBFOLDER
+    )
+    encoder = encoder.to(device=device, dtype=dtype)
+    encoder.eval()
+    fallback_dim = int(getattr(encoder.config, "projection_dim", 1280) or 1280)
+
+    def _open_rgb(path: str):
+        img = Image.open(path)
+        img.load()
+        return img.convert("RGB")
+
+    clip_dim: Optional[int] = None
+    if existing:
+        clip_dim = int(next(iter(existing.values())).reshape(-1).shape[0])
+    n_done = 0
+    n_batches = 0
+    n_unreadable = 0
+    with torch.no_grad():
+        for i in range(0, len(todo), batch_size):
+            chunk = todo[i : i + batch_size]
+            images = []
+            ok_keys = []
+            for uid, nid, path in chunk:
+                try:
+                    images.append(_open_rgb(path))
+                    ok_keys.append((uid, nid))
+                except Exception:
+                    n_unreadable += 1
+            if not images:
+                continue
+            pixel = processor(images=images, return_tensors="pt").pixel_values
+            pixel = pixel.to(device=device, dtype=dtype)
+            out = encoder(pixel_values=pixel)
+            vecs = out.image_embeds.float().cpu().numpy().astype(np.float32)
+            if clip_dim is None:
+                clip_dim = int(vecs.shape[1])
+            elif int(vecs.shape[1]) != int(clip_dim):
+                raise ValueError(f"B3 dim mismatch: got {vecs.shape[1]} expected {clip_dim}")
+            existing = _merge_and_save_pairs(out_path, existing, ok_keys, vecs, clip_dim)
+            n_done += len(ok_keys)
+            n_batches += 1
+            if n_batches == 1 or n_batches % 20 == 0 or n_done >= len(todo):
+                print(f"[CLIP B3 emb] encoded {n_done}/{len(todo)}", flush=True)
+
+    del encoder
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    import gc
+
+    gc.collect()
+
+    if clip_dim is None:
+        clip_dim = fallback_dim
+        if existing:
+            clip_dim = int(next(iter(existing.values())).reshape(-1).shape[0])
+        _merge_and_save_pairs(out_path, existing, [], [], clip_dim)
+
+    meta = {
+        "route": "B3",
+        "model_id": model_id,
+        "encoder": "CLIPVisionModelWithProjection.image_embeds",
+        "image_dir": os.path.abspath(image_dir),
+        "l2_normalize": False,
+        "out_path": os.path.abspath(out_path),
+        "clip_dim": int(clip_dim),
+        "n_png": int(len(items)),
+        "n_pairs": int(len(existing)),
+        "n_encoded_this_run": int(n_done),
+        "n_unreadable": int(n_unreadable),
+        "space": "clip_image",
+    }
+    meta_path = os.path.splitext(out_path)[0] + ".json"
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+    print(
+        f"[CLIP B3 emb] saved {out_path}\n"
+        f"[CLIP B3 emb] dim={clip_dim} pairs={len(existing)} encoded_this_run={n_done} "
+        f"unreadable={n_unreadable}\n"
+        f"[CLIP B3 emb] meta {meta_path}",
+        flush=True,
+    )
     return meta

@@ -5,13 +5,13 @@ Frozen teacher 파일럿용 임베딩 추출.
 
 B1: 기대본문 → CLIP text encoder (Route T)
 B2: 기대본문 → Kandinsky prior → CLIP image embed (Route E)
+B3: B3 PNG → CLIP image encoder (Route P 후단, user×news)
 B4: <ours 상위>/MIND_image/{id}.png → CLIP image encoder (비개인화 생성 픽셀)
 
 B0 썸네일은 CLIP/clip_embeddings.py 캐시를 그대로 쓴다.
-B3 개인화 픽셀은 이번 실험에서 제외.
 
   conda activate clip_cu128
-  python CLIP/extract_route_embeds.py --routes b1,b2,b4 --mind-dataset-subdir MIND_2000
+  python CLIP/extract_route_embeds.py --routes b1,b2,b3,b4 --mind-dataset-subdir MIND_2000
 """
 from __future__ import annotations
 
@@ -35,6 +35,8 @@ from clip_embeddings import (
     DEFAULT_GENERATED_IMAGE_DIR,
     default_b1_cache_path,
     default_b2_cache_path,
+    default_b3_cache_path,
+    default_b3_image_dir,
     default_b4_cache_path,
     extract_clip_embeddings,
     load_news_ids_from_tsv,
@@ -45,6 +47,7 @@ from route_embeddings import (
     build_pairs_and_texts,
     collect_candidate_pairs_from_tsv,
     default_expected_body_dir,
+    extract_b3_pixel_clip_embeddings,
     extract_clip_text_embeddings,
     extract_prior_image_embeddings,
     load_expected_bodies_from_dir,
@@ -52,18 +55,18 @@ from route_embeddings import (
 
 
 def _parse_routes(raw: str) -> list:
-    allowed = {"b1", "b2", "b4"}
+    allowed = {"b1", "b2", "b3", "b4"}
     routes = []
     for part in (raw or "").split(","):
         key = part.strip().lower()
         if not key:
             continue
         if key not in allowed:
-            raise ValueError(f"unknown route {part!r}. use b1,b2,b4")
+            raise ValueError(f"unknown route {part!r}. use b1,b2,b3,b4")
         if key not in routes:
             routes.append(key)
     if not routes:
-        raise ValueError("--routes 가 비어 있습니다. 예: b1,b2,b4")
+        raise ValueError("--routes 가 비어 있습니다. 예: b1,b2,b3,b4")
     return routes
 
 
@@ -81,19 +84,22 @@ def _news_tsv_path(mind_dataset_subdir: str) -> str:
 
 def main() -> None:
     apply_dataset_env_from_argv()
-    ap = argparse.ArgumentParser(description="B1/B2/B4 CLIP 임베딩 추출")
+    ap = argparse.ArgumentParser(description="B1/B2/B3/B4 CLIP 임베딩 추출")
     ap.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
-    ap.add_argument("--routes", type=str, default="b1,b2,b4", help="comma: b1,b2,b4")
+    ap.add_argument("--routes", type=str, default="b1,b2,b4", help="comma: b1,b2,b3,b4")
     ap.add_argument("--expected-body-dir", type=str, default=None)
     ap.add_argument("--test-tsv", type=str, default=None)
     ap.add_argument("--generated-image-dir", type=str, default=DEFAULT_GENERATED_IMAGE_DIR)
+    ap.add_argument("--b3-image-dir", type=str, default=None)
     ap.add_argument("--b1-out", type=str, default=None)
     ap.add_argument("--b2-out", type=str, default=None)
+    ap.add_argument("--b3-out", type=str, default=None)
     ap.add_argument("--b4-out", type=str, default=None)
     ap.add_argument("--device", type=str, default="auto", choices=["auto", "cuda", "cpu"])
     ap.add_argument("--b1-batch-size", type=int, default=32)
     ap.add_argument("--b2-batch-size", type=int, default=4)
     ap.add_argument("--b4-batch-size", type=int, default=16)
+    ap.add_argument("--b3-batch-size", type=int, default=16)
     ap.add_argument("--prior-steps", type=int, default=25)
     ap.add_argument("--prior-guidance", type=float, default=4.0)
     ap.add_argument("--seed", type=int, default=42)
@@ -115,6 +121,12 @@ def main() -> None:
     b1_out = resolve_project_path(args.b1_out) if args.b1_out else default_b1_cache_path(args.mind_dataset_subdir)
     b2_out = resolve_project_path(args.b2_out) if args.b2_out else default_b2_cache_path(args.mind_dataset_subdir)
     b4_out = resolve_project_path(args.b4_out) if args.b4_out else default_b4_cache_path(args.mind_dataset_subdir)
+    b3_out = resolve_project_path(args.b3_out) if args.b3_out else default_b3_cache_path(args.mind_dataset_subdir)
+    b3_dir = (
+        resolve_project_path(args.b3_image_dir)
+        if args.b3_image_dir
+        else default_b3_image_dir(args.mind_dataset_subdir)
+    )
 
     print(
         f"[extract] dataset={args.mind_dataset_subdir} routes={routes}\n"
@@ -156,6 +168,15 @@ def main() -> None:
                 seed=int(args.seed),
                 resume=resume,
             )
+
+    if "b3" in routes:
+        extract_b3_pixel_clip_embeddings(
+            b3_dir,
+            b3_out,
+            device=args.device,
+            batch_size=int(args.b3_batch_size),
+            resume=resume,
+        )
 
     if "b4" in routes:
         if not os.path.isfile(news_tsv):

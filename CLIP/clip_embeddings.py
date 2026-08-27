@@ -40,6 +40,7 @@ DEFAULT_CACHE_NAME = "{subdir}_clip_image_embeds.npz"
 DEFAULT_B4_CACHE_NAME = "{subdir}_clip_b4_mind_image.npz"
 DEFAULT_B1_CACHE_NAME = "{subdir}_clip_b1_text_expected.npz"
 DEFAULT_B2_CACHE_NAME = "{subdir}_clip_b2_prior_expected.npz"
+DEFAULT_B3_CACHE_NAME = "{subdir}_clip_b3_pixel_expected.npz"
 
 _HEADER_IDS = frozenset({"news_id", "clicked_news", "id"})
 
@@ -86,6 +87,10 @@ def default_b2_cache_path(mind_dataset_subdir: str) -> str:
 
 def default_b3_image_dir(mind_dataset_subdir: str) -> str:
     return os.path.join(DEFAULT_B3_IMAGE_DIR, mind_dataset_subdir)
+
+
+def default_b3_cache_path(mind_dataset_subdir: str) -> str:
+    return str(_ROOT / "CLIP" / "cache" / DEFAULT_B3_CACHE_NAME.format(subdir=mind_dataset_subdir))
 
 
 def load_news_ids_from_tsv(news_tsv: str) -> List[str]:

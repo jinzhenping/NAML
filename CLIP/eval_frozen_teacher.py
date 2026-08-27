@@ -4,11 +4,10 @@
 Frozen full-text S2 teacher 위에서 후보 5번째 뷰만 교체해 평가.
 
 히스토리 이미지 슬롯은 항상 B0 (썸네일 CLIP).
-후보만 B0 / B1 / B2 / B4.
-B3 개인화 픽셀은 제외.
+후보만 B0 / B1 / B2 / B3 / B4.
 
   conda activate tf28gpu
-  python CLIP/eval_frozen_teacher.py --branches b0,b1,b2,b4 --mind-dataset-subdir MIND_2000
+  python CLIP/eval_frozen_teacher.py --branches b0,b1,b2,b3,b4 --mind-dataset-subdir MIND_2000
 """
 from __future__ import annotations
 
@@ -44,6 +43,7 @@ from clip_embeddings import (
     count_missing_thumbnails,
     default_b1_cache_path,
     default_b2_cache_path,
+    default_b3_cache_path,
     default_b4_cache_path,
     default_cache_path,
     load_news_ids_from_tsv,
@@ -67,20 +67,18 @@ from train_s1_s2 import evaluate_metrics, load_hparams
 
 
 def _parse_branches(raw: str) -> List[str]:
-    allowed = {"b0", "b1", "b2", "b4"}
+    allowed = {"b0", "b1", "b2", "b3", "b4"}
     out: List[str] = []
     for part in (raw or "").split(","):
         key = part.strip().lower()
         if not key:
             continue
-        if key == "b3":
-            raise ValueError("B3(개인화 픽셀)는 이번 실험에서 제외했습니다. b0,b1,b2,b4 만 지정하세요.")
         if key not in allowed:
-            raise ValueError(f"unknown branch {part!r}. use b0,b1,b2,b4")
+            raise ValueError(f"unknown branch {part!r}. use b0,b1,b2,b3,b4")
         if key not in out:
             out.append(key)
     if not out:
-        raise ValueError("--branches 가 비어 있습니다. 예: b0,b1,b2,b4")
+        raise ValueError("--branches 가 비어 있습니다. 예: b0,b1,b2,b3,b4")
     return out
 
 
@@ -154,7 +152,7 @@ def _expected_body_coverage(
 def main() -> None:
     ap = argparse.ArgumentParser(description="Frozen S2 teacher 후보 이미지 슬롯 교체 평가")
     ap.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
-    ap.add_argument("--branches", type=str, default="b0,b1,b2,b4")
+    ap.add_argument("--branches", type=str, default="b0,b1,b2,b3,b4")
     ap.add_argument(
         "--weights",
         type=str,
@@ -172,13 +170,14 @@ def main() -> None:
     ap.add_argument("--clip-cache", type=str, default=None)
     ap.add_argument("--b1-cache", type=str, default=None)
     ap.add_argument("--b2-cache", type=str, default=None)
+    ap.add_argument("--b3-cache", type=str, default=None)
     ap.add_argument("--b4-cache", type=str, default=None)
     ap.add_argument("--expected-body-dir", type=str, default=None)
     ap.add_argument(
         "--out",
         type=str,
         default=None,
-        help="결과 JSON. 기본 CLIP/saved_models/<subdir>/frozen_teacher_b0_b1_b2_b4.json",
+        help="결과 JSON. 기본 CLIP/saved_models/<subdir>/frozen_teacher_<branches>.json",
     )
     args = ap.parse_args()
 
@@ -264,7 +263,7 @@ def main() -> None:
         else default_expected_body_dir(str(_ROOT), args.mind_dataset_subdir, split="test")
     )
     expected_bodies = {}
-    if any(b in branches for b in ("b1", "b2")):
+    if any(b in branches for b in ("b1", "b2", "b3")):
         expected_bodies = load_expected_bodies_from_dir(expected_dir)
         print(
             f"[eval] expected_body_dir={expected_dir} files={len(expected_bodies)}",
@@ -274,6 +273,7 @@ def main() -> None:
     caches = {
         "b1": resolve_project_path(args.b1_cache) if args.b1_cache else default_b1_cache_path(args.mind_dataset_subdir),
         "b2": resolve_project_path(args.b2_cache) if args.b2_cache else default_b2_cache_path(args.mind_dataset_subdir),
+        "b3": resolve_project_path(args.b3_cache) if args.b3_cache else default_b3_cache_path(args.mind_dataset_subdir),
         "b4": resolve_project_path(args.b4_cache) if args.b4_cache else default_b4_cache_path(args.mind_dataset_subdir),
     }
 
@@ -301,6 +301,7 @@ def main() -> None:
         "b0": "thumbnail CLIP image embed (news-level)",
         "b1": "expected-body CLIP text embed (user, news) Route T",
         "b2": "expected-body Kandinsky prior image embed (user, news) Route E",
+        "b3": "personalized pixel CLIP image embed (user, news) Route P",
         "b4": "title-only generated pixel CLIP image embed (news-level)",
     }
 
@@ -312,14 +313,20 @@ def main() -> None:
             cand_image = cand_mat
             cov.update(cov_rows)
             cov["space"] = "clip_image"
-        elif br in ("b1", "b2"):
+        elif br in ("b1", "b2", "b3"):
             cache_path = caches[br]
             if not os.path.isfile(cache_path):
                 raise FileNotFoundError(
                     f"{br.upper()} cache 없음: {cache_path}\n"
-                    f"먼저 clip_cu128 에서 python CLIP/extract_route_embeds.py --routes {br} 를 실행하세요."
+                    + (
+                        "먼저 clip_cu128 에서 python CLIP/extract_b3_embeds.py 를 실행하세요."
+                        if br == "b3"
+                        else f"먼저 clip_cu128 에서 python CLIP/extract_route_embeds.py --routes {br} 를 실행하세요."
+                    )
                 )
-            pair_dict = load_pair_embed_dict(cache_path)
+            pair_dict = {
+                norm_pair_key(u, n): v for (u, n), v in load_pair_embed_dict(cache_path).items()
+            }
             sample_dim = clip_dim
             if pair_dict:
                 sample_dim = int(next(iter(pair_dict.values())).shape[0])
@@ -403,7 +410,12 @@ def main() -> None:
     out_path = (
         resolve_project_path(args.out)
         if args.out
-        else str(_CLIP_DIR / "saved_models" / args.mind_dataset_subdir / "frozen_teacher_b0_b1_b2_b4.json")
+        else str(
+            _CLIP_DIR
+            / "saved_models"
+            / args.mind_dataset_subdir
+            / f"frozen_teacher_{'_'.join(branches)}.json"
+        )
     )
     os.makedirs(os.path.dirname(os.path.abspath(out_path)) or ".", exist_ok=True)
     payload = {
@@ -415,11 +427,11 @@ def main() -> None:
         "seed": int(args.seed),
         "history_image": "B0",
         "text_views": ["title", "body", "category", "subcategory"],
-        "skipped": ["B3_personalized_pixels"],
         "caches": {
             "b0": os.path.abspath(b0_cache),
             "b1": os.path.abspath(caches["b1"]),
             "b2": os.path.abspath(caches["b2"]),
+            "b3": os.path.abspath(caches["b3"]),
             "b4": os.path.abspath(caches["b4"]),
         },
         "expected_body_dir": expected_dir,
