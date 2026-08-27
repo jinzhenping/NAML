@@ -5,7 +5,7 @@ Frozen teacher 파일럿용 임베딩 추출.
 
 B1: 기대본문 → CLIP text encoder (Route T)
 B2: 기대본문 → Kandinsky prior → CLIP image embed (Route E)
-B4: MIND_image/{id}.png → CLIP image encoder (비개인화 생성 픽셀)
+B4: <ours 상위>/MIND_image/{id}.png → CLIP image encoder (비개인화 생성 픽셀)
 
 B0 썸네일은 CLIP/clip_embeddings.py 캐시를 그대로 쓴다.
 B3 개인화 픽셀은 이번 실험에서 제외.
@@ -160,10 +160,21 @@ def main() -> None:
     if "b4" in routes:
         if not os.path.isfile(news_tsv):
             raise FileNotFoundError(f"news tsv 없음: {news_tsv}")
+        if not os.path.isdir(gen_dir):
+            raise FileNotFoundError(
+                f"B4 이미지 폴더 없음: {gen_dir}\n"
+                f"ours 상위 폴더의 MIND_image 를 확인하세요. 예: {os.path.join(gen_dir, 'N1.png')}"
+            )
         news_ids = load_news_ids_from_tsv(news_tsv)
-        print_missing_image_report(
+        missing = print_missing_image_report(
             news_ids, gen_dir, suffixes=(".png", ".jpg"), label="generated_image"
         )
+        catalog = [nid for nid in news_ids if nid and nid != "0"]
+        if catalog and len(missing) >= len(catalog):
+            raise FileNotFoundError(
+                f"B4 생성 이미지를 하나도 찾지 못했습니다: {gen_dir}\n"
+                f"파일명은 N1.png (없으면 N1.jpg) 이어야 합니다."
+            )
         extract_clip_embeddings(
             news_ids,
             gen_dir,

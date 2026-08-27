@@ -31,7 +31,8 @@ CLIP_IMAGE_ENCODER_SUBFOLDER = "image_encoder"
 CLIP_IMAGE_PROCESSOR_SUBFOLDER = "image_processor"
 CLIP_TEXT_MAX_LENGTH = 77
 DEFAULT_THUMBNAIL_DIR = "dataset/MIND_thumbnail"
-DEFAULT_GENERATED_IMAGE_DIR = "dataset/MIND_image"
+# B4 비개인화 생성 이미지: ours 상위 폴더/MIND_image/N1.png
+DEFAULT_GENERATED_IMAGE_DIR = str(_ROOT.parent / "MIND_image")
 DEFAULT_CACHE_NAME = "{subdir}_clip_image_embeds.npz"
 DEFAULT_B4_CACHE_NAME = "{subdir}_clip_b4_mind_image.npz"
 DEFAULT_B1_CACHE_NAME = "{subdir}_clip_b1_text_expected.npz"
