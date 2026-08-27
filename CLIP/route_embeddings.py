@@ -14,6 +14,7 @@ from typing import Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 from clip_embeddings import (
+    CLIP_DECODER_MODEL_ID,
     CLIP_MODEL_ID,
     CLIP_TEXT_MAX_LENGTH,
     _save_pair_cache,
@@ -448,3 +449,223 @@ def build_pairs_and_texts(
             continue
         items.append((key[0], key[1], body))
     return items, len(items), n_missing
+
+
+def b3_image_path(out_dir: str, uid: str, nid: str) -> str:
+    return os.path.join(out_dir, f"user_{uid}", f"news_{nid}.png")
+
+
+def _fix_clip_tokenizer_max_length(tokenizer) -> None:
+    if tokenizer is None:
+        return
+    raw_max = getattr(tokenizer, "model_max_length", CLIP_TEXT_MAX_LENGTH)
+    try:
+        raw_max_int = int(raw_max)
+    except (TypeError, ValueError, OverflowError):
+        raw_max_int = CLIP_TEXT_MAX_LENGTH
+    if raw_max_int <= 0 or raw_max_int > CLIP_TEXT_MAX_LENGTH:
+        tokenizer.model_max_length = CLIP_TEXT_MAX_LENGTH
+    else:
+        tokenizer.model_max_length = CLIP_TEXT_MAX_LENGTH
+
+
+def _uncond_prior_image_embed(
+    *,
+    model_id: str,
+    device: str,
+    dtype,
+    seed: int,
+    num_inference_steps: int,
+):
+    import torch
+    from diffusers import KandinskyV22PriorPipeline
+
+    print(f"[CLIP B3] uncond prior embed from empty prompt device={device}", flush=True)
+    pipe = KandinskyV22PriorPipeline.from_pretrained(model_id, torch_dtype=dtype)
+    pipe = pipe.to(device)
+    _fix_clip_tokenizer_max_length(getattr(pipe, "tokenizer", None))
+    pipe.set_progress_bar_config(disable=True)
+    gen = torch.Generator(device="cpu").manual_seed(int(seed))
+    out = pipe(
+        prompt="",
+        num_inference_steps=int(num_inference_steps),
+        guidance_scale=1.0,
+        generator=gen,
+    )
+    neg = out.image_embeds.detach().float().cpu()
+    if neg.ndim == 1:
+        neg = neg.unsqueeze(0)
+    del pipe
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    import gc
+
+    gc.collect()
+    return neg
+
+
+def generate_images_from_prior_embeds(
+    pair_embeds: Dict[Tuple[str, str], np.ndarray],
+    out_dir: str,
+    *,
+    decoder_id: str = CLIP_DECODER_MODEL_ID,
+    prior_id: str = CLIP_MODEL_ID,
+    device: str = "auto",
+    batch_size: int = 1,
+    height: int = 768,
+    width: int = 768,
+    num_inference_steps: int = 50,
+    guidance_scale: float = 4.0,
+    seed: int = 42,
+    resume: bool = True,
+    max_images: int = 0,
+    negative_mode: str = "prior",
+    cpu_offload: bool = False,
+    prior_steps: int = 25,
+) -> dict:
+    """
+    B2 prior image embed → Kandinsky 2.2 decoder → PNG.
+    저장: out_dir/user_<uid>/news_<nid>.png
+    """
+    try:
+        import torch
+        from diffusers import KandinskyV22Pipeline
+    except ImportError as e:
+        raise ImportError(
+            "B3 이미지 생성에는 torch, diffusers, Pillow 가 필요합니다. "
+            "pip install -r CLIP/requirements.txt"
+        ) from e
+
+    device = resolve_torch_device(device)
+    if device == "cpu":
+        print("[CLIP B3] CPU decoder는 매우 느립니다. GPU를 권장합니다.", flush=True)
+        batch_size = 1
+        dtype = torch.float32
+    else:
+        dtype = torch.float16
+
+    pair_embeds = {
+        norm_pair_key(uid, nid): np.asarray(vec, dtype=np.float32).reshape(-1)
+        for (uid, nid), vec in pair_embeds.items()
+    }
+
+    keys: List[Tuple[str, str]] = []
+    for (uid, nid), vec in pair_embeds.items():
+        arr = np.asarray(vec, dtype=np.float32).reshape(-1)
+        if not np.any(arr):
+            continue
+        path = b3_image_path(out_dir, uid, nid)
+        if resume and os.path.isfile(path):
+            continue
+        keys.append((uid, nid))
+    keys.sort(key=lambda x: (x[0], x[1]))
+    if max_images and max_images > 0:
+        keys = keys[: int(max_images)]
+
+    n_existing = 0
+    if resume:
+        for (uid, nid), vec in pair_embeds.items():
+            if os.path.isfile(b3_image_path(out_dir, uid, nid)):
+                n_existing += 1
+
+    print(
+        f"[CLIP B3] decoder={decoder_id} device={device} size={width}x{height} "
+        f"steps={num_inference_steps} guidance={guidance_scale}\n"
+        f"[CLIP B3] out_dir={out_dir}\n"
+        f"[CLIP B3] prior_pairs={len(pair_embeds)} existing_png={n_existing} todo={len(keys)}",
+        flush=True,
+    )
+    if not keys:
+        print("[CLIP B3] 새로 생성할 이미지가 없습니다.", flush=True)
+        return {
+            "n_todo": 0,
+            "n_generated": 0,
+            "n_existing": n_existing,
+            "out_dir": os.path.abspath(out_dir),
+        }
+
+    if negative_mode == "zeros":
+        sample_dim = int(np.asarray(next(iter(pair_embeds.values()))).reshape(-1).shape[0])
+        negative = torch.zeros((1, sample_dim), dtype=torch.float32)
+        print("[CLIP B3] negative_image_embeds = zeros", flush=True)
+    else:
+        negative = _uncond_prior_image_embed(
+            model_id=prior_id,
+            device=device,
+            dtype=dtype,
+            seed=seed,
+            num_inference_steps=prior_steps,
+        )
+
+    print(f"[CLIP B3] load decoder {decoder_id}", flush=True)
+    pipe = KandinskyV22Pipeline.from_pretrained(decoder_id, torch_dtype=dtype)
+    if cpu_offload and device.startswith("cuda"):
+        pipe.enable_model_cpu_offload()
+    else:
+        pipe = pipe.to(device)
+    pipe.set_progress_bar_config(disable=True)
+
+    n_done = 0
+    n_batches = 0
+    os.makedirs(out_dir, exist_ok=True)
+    for i in range(0, len(keys), batch_size):
+        chunk = keys[i : i + batch_size]
+        vecs = []
+        for uid, nid in chunk:
+            vecs.append(np.asarray(pair_embeds[(uid, nid)], dtype=np.float32).reshape(-1))
+        emb = torch.from_numpy(np.stack(vecs, axis=0)).to(device=device, dtype=dtype)
+        neg = negative.to(device=device, dtype=dtype)
+        if neg.shape[0] == 1 and emb.shape[0] > 1:
+            neg = neg.expand(emb.shape[0], -1)
+        elif neg.shape[0] != emb.shape[0]:
+            neg = neg[:1].expand(emb.shape[0], -1)
+        gens = [
+            torch.Generator(device="cpu").manual_seed(_pair_seed(uid, nid, seed))
+            for uid, nid in chunk
+        ]
+        out = pipe(
+            image_embeds=emb,
+            negative_image_embeds=neg,
+            height=int(height),
+            width=int(width),
+            num_inference_steps=int(num_inference_steps),
+            guidance_scale=float(guidance_scale),
+            generator=gens,
+        )
+        for (uid, nid), img in zip(chunk, out.images):
+            path = b3_image_path(out_dir, uid, nid)
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            img.save(path)
+        n_done += len(chunk)
+        n_batches += 1
+        if n_batches == 1 or n_batches % 10 == 0 or n_done >= len(keys):
+            print(f"[CLIP B3] generated {n_done}/{len(keys)}", flush=True)
+
+    del pipe
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    import gc
+
+    gc.collect()
+
+    meta = {
+        "route": "B3",
+        "decoder_id": decoder_id,
+        "prior_id": prior_id,
+        "out_dir": os.path.abspath(out_dir),
+        "height": int(height),
+        "width": int(width),
+        "num_inference_steps": int(num_inference_steps),
+        "guidance_scale": float(guidance_scale),
+        "seed": int(seed),
+        "negative_mode": negative_mode,
+        "n_prior_pairs": int(len(pair_embeds)),
+        "n_existing": int(n_existing),
+        "n_generated_this_run": int(n_done),
+        "n_todo": int(len(keys)),
+    }
+    meta_path = os.path.join(out_dir, "generate_b3_log.json")
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+    print(f"[CLIP B3] saved images → {out_dir}\n[CLIP B3] meta {meta_path}", flush=True)
+    return meta

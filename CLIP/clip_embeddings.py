@@ -27,12 +27,15 @@ if str(_ROOT / "NAML") not in sys.path:
     sys.path.insert(0, str(_ROOT / "NAML"))
 
 CLIP_MODEL_ID = "kandinsky-community/kandinsky-2-2-prior"
+CLIP_DECODER_MODEL_ID = "kandinsky-community/kandinsky-2-2-decoder"
 CLIP_IMAGE_ENCODER_SUBFOLDER = "image_encoder"
 CLIP_IMAGE_PROCESSOR_SUBFOLDER = "image_processor"
 CLIP_TEXT_MAX_LENGTH = 77
 DEFAULT_THUMBNAIL_DIR = "dataset/MIND_thumbnail"
 # B4 비개인화 생성 이미지: ours 상위 폴더/MIND_image/N1.png
 DEFAULT_GENERATED_IMAGE_DIR = str(_ROOT.parent / "MIND_image")
+# B3 개인화 생성 이미지: ours 상위/MIND_image_b3/<subdir>/user_<uid>/news_<nid>.png
+DEFAULT_B3_IMAGE_DIR = str(_ROOT.parent / "MIND_image_b3")
 DEFAULT_CACHE_NAME = "{subdir}_clip_image_embeds.npz"
 DEFAULT_B4_CACHE_NAME = "{subdir}_clip_b4_mind_image.npz"
 DEFAULT_B1_CACHE_NAME = "{subdir}_clip_b1_text_expected.npz"
@@ -79,6 +82,10 @@ def default_b1_cache_path(mind_dataset_subdir: str) -> str:
 
 def default_b2_cache_path(mind_dataset_subdir: str) -> str:
     return str(_ROOT / "CLIP" / "cache" / DEFAULT_B2_CACHE_NAME.format(subdir=mind_dataset_subdir))
+
+
+def default_b3_image_dir(mind_dataset_subdir: str) -> str:
+    return os.path.join(DEFAULT_B3_IMAGE_DIR, mind_dataset_subdir)
 
 
 def load_news_ids_from_tsv(news_tsv: str) -> List[str]:
