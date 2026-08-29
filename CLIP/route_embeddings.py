@@ -19,7 +19,9 @@ from clip_embeddings import (
     CLIP_IMAGE_PROCESSOR_SUBFOLDER,
     CLIP_MODEL_ID,
     CLIP_TEXT_MAX_LENGTH,
+    _save_clip_cache,
     _save_pair_cache,
+    load_clip_npz,
     load_pair_embed_dict,
     resolve_torch_device,
 )
@@ -451,6 +453,236 @@ def build_pairs_and_texts(
             continue
         items.append((key[0], key[1], body))
     return items, len(items), n_missing
+
+
+def load_actual_bodies_from_news_tsv(news_tsv: str) -> Dict[str, str]:
+    """MIND_news.tsv: news_id, category, subcategory, title, body."""
+    bodies: Dict[str, str] = {}
+    if not news_tsv or not os.path.isfile(news_tsv):
+        return bodies
+    with open(news_tsv, "r", encoding="utf-8") as f:
+        for line in f:
+            parts = line.rstrip("\n").split("\t")
+            if len(parts) < 5:
+                continue
+            nid = parts[0].strip()
+            if not nid or nid.lower() in ("news_id", "clicked_news", "id"):
+                continue
+            body = parts[4].strip() if len(parts) > 4 else ""
+            bodies[nid] = body
+    return bodies
+
+
+def collect_news_ids_from_interaction_tsv(tsv_path: str) -> List[str]:
+    """train/test TSV의 clicked_news + candidate_news unique ID (등장 순)."""
+    ids: List[str] = []
+    seen = set()
+    if not tsv_path or not os.path.isfile(tsv_path):
+        return ids
+    with open(tsv_path, "r", encoding="utf-8") as f:
+        for line_i, line in enumerate(f):
+            parts = line.strip().split("\t")
+            if len(parts) < 3:
+                continue
+            if line_i == 0 and parts[0].strip().lower() in ("user", "userid", "user_id"):
+                continue
+            for col in (1, 2):
+                for nid in str(parts[col] or "").split():
+                    ns = nid.strip()
+                    if not ns or ns in seen:
+                        continue
+                    seen.add(ns)
+                    ids.append(ns)
+    return ids
+
+
+def extract_clip_text_actual_bodies(
+    news_ids: Sequence[str],
+    bodies: Dict[str, str],
+    out_path: str,
+    *,
+    model_id: str = CLIP_MODEL_ID,
+    device: str = "auto",
+    batch_size: int = 32,
+    resume: bool = True,
+) -> dict:
+    """
+    실제 뉴스 본문 → CLIP text encoder → text_embeds (뉴스 단위).
+    77토큰 truncation, L2 없음. 빈 본문은 0벡터.
+    """
+    try:
+        import torch
+        from transformers import CLIPTextModelWithProjection, CLIPTokenizer
+    except ImportError as e:
+        raise ImportError(
+            "CLIP text 추출에는 torch, transformers 가 필요합니다. pip install -r CLIP/requirements.txt"
+        ) from e
+
+    catalog = [str(n) for n in news_ids if n and n != "0"]
+    if not catalog:
+        raise ValueError("인코딩할 뉴스 ID가 없습니다.")
+
+    device = resolve_torch_device(device)
+    if device == "cpu" and batch_size > 16:
+        print(f"[CLIP actual-body] CPU라 batch-size를 {batch_size} → 16 으로 낮춥니다.", flush=True)
+        batch_size = 16
+    dtype = torch.float16 if device.startswith("cuda") else torch.float32
+
+    id_to_vec: Dict[str, np.ndarray] = {}
+    if resume and os.path.isfile(out_path):
+        try:
+            emb, cached_ids = load_clip_npz(out_path)
+            for nid, vec in zip(cached_ids, emb):
+                id_to_vec[str(nid)] = np.asarray(vec, dtype=np.float32)
+            print(f"[CLIP actual-body] resume cache {len(id_to_vec)} ids from {out_path}", flush=True)
+        except Exception as e:
+            print(f"[CLIP actual-body] 기존 cache를 읽지 못해 다시 추출합니다: {e}", flush=True)
+            id_to_vec = {}
+
+    todo: List[str] = []
+    n_empty = 0
+    n_missing_body_key = 0
+    for nid in catalog:
+        if nid in id_to_vec:
+            continue
+        if nid not in bodies:
+            n_missing_body_key += 1
+            continue
+        if not (bodies.get(nid) or "").strip():
+            n_empty += 1
+            continue
+        todo.append(nid)
+
+    print(
+        f"[CLIP actual-body] catalog={len(catalog)} todo={len(todo)} "
+        f"resume={len(id_to_vec)} empty_body={n_empty} not_in_news_tsv={n_missing_body_key}",
+        flush=True,
+    )
+
+    clip_dim: Optional[int] = None
+    if id_to_vec:
+        clip_dim = int(next(iter(id_to_vec.values())).reshape(-1).shape[0])
+
+    def _flush(dim: int) -> None:
+        merged = dict(id_to_vec)
+        _save_news_text_cache(out_path, merged, catalog, dim)
+
+    if not todo:
+        dim = int(clip_dim or 1280)
+        for nid in catalog:
+            if nid in id_to_vec:
+                continue
+            id_to_vec[nid] = np.zeros((dim,), dtype=np.float32)
+        _flush(dim)
+        print(f"[CLIP actual-body] 새로 인코딩할 본문이 없어 cache를 갱신합니다: {out_path}", flush=True)
+        return {
+            "encoder": "CLIPTextModelWithProjection.text_embeds",
+            "source": "actual_body",
+            "out_path": os.path.abspath(out_path),
+            "clip_dim": dim,
+            "n_news": len(catalog),
+            "n_encoded_this_run": 0,
+            "n_empty_body": n_empty,
+            "n_missing_in_news_tsv": n_missing_body_key,
+            "space": "clip_text",
+            "max_length": CLIP_TEXT_MAX_LENGTH,
+            "l2_normalize": False,
+        }
+
+    try:
+        tokenizer = CLIPTokenizer.from_pretrained(model_id)
+    except Exception:
+        tokenizer = CLIPTokenizer.from_pretrained(model_id, subfolder="tokenizer")
+    _fix_clip_tokenizer_max_length(tokenizer)
+    encoder = CLIPTextModelWithProjection.from_pretrained(model_id, subfolder="text_encoder")
+    encoder = encoder.to(device=device, dtype=dtype)
+    encoder.eval()
+    fallback_dim = int(getattr(encoder.config, "projection_dim", 1280) or 1280)
+    max_len = CLIP_TEXT_MAX_LENGTH
+
+    n_done = 0
+    n_batches = 0
+    with torch.no_grad():
+        for i in range(0, len(todo), batch_size):
+            chunk = todo[i : i + batch_size]
+            texts = [bodies[nid].strip() for nid in chunk]
+            encoded = tokenizer(
+                texts,
+                padding="max_length",
+                truncation=True,
+                max_length=max_len,
+                return_tensors="pt",
+            )
+            encoded = {k: v.to(device) for k, v in encoded.items()}
+            out = encoder(**encoded)
+            vecs = out.text_embeds.float().cpu().numpy().astype(np.float32)
+            if clip_dim is None:
+                clip_dim = int(vecs.shape[1])
+            elif int(vecs.shape[1]) != int(clip_dim):
+                raise ValueError(f"actual-body dim mismatch: got {vecs.shape[1]} expected {clip_dim}")
+            for nid, vec in zip(chunk, vecs):
+                id_to_vec[nid] = vec
+            n_done += len(chunk)
+            n_batches += 1
+            if n_batches == 1 or n_batches % 20 == 0 or n_done >= len(todo):
+                _flush(clip_dim)
+                print(f"[CLIP actual-body] encoded {n_done}/{len(todo)}", flush=True)
+
+    del encoder
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    import gc
+
+    gc.collect()
+
+    if clip_dim is None:
+        clip_dim = fallback_dim
+    zero = np.zeros((int(clip_dim),), dtype=np.float32)
+    for nid in catalog:
+        if nid not in id_to_vec:
+            id_to_vec[nid] = zero
+    _flush(int(clip_dim))
+
+    meta = {
+        "encoder": "CLIPTextModelWithProjection.text_embeds",
+        "source": "actual_body",
+        "model_id": model_id,
+        "out_path": os.path.abspath(out_path),
+        "clip_dim": int(clip_dim),
+        "n_news": len(catalog),
+        "n_encoded_this_run": int(n_done),
+        "n_nonzero": int(sum(1 for nid in catalog if np.any(id_to_vec[nid]))),
+        "n_empty_body": n_empty,
+        "n_missing_in_news_tsv": n_missing_body_key,
+        "space": "clip_text",
+        "max_length": CLIP_TEXT_MAX_LENGTH,
+        "l2_normalize": False,
+    }
+    meta_path = os.path.splitext(out_path)[0] + ".json"
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+    print(
+        f"[CLIP actual-body] saved {out_path}\n"
+        f"[CLIP actual-body] dim={clip_dim} news={len(catalog)} encoded_this_run={n_done} "
+        f"nonzero={meta['n_nonzero']}\n"
+        f"[CLIP actual-body] meta {meta_path}",
+        flush=True,
+    )
+    return meta
+
+
+def _save_news_text_cache(
+    out_path: str,
+    id_to_vec: Dict[str, np.ndarray],
+    catalog: Sequence[str],
+    dim: int,
+) -> None:
+    emb = np.zeros((len(catalog), int(dim)), dtype=np.float32)
+    for i, nid in enumerate(catalog):
+        vec = id_to_vec.get(nid)
+        if vec is not None:
+            emb[i] = np.asarray(vec, dtype=np.float32).reshape(-1)
+    _save_clip_cache(out_path, emb, catalog)
 
 
 def b3_image_path(out_dir: str, uid: str, nid: str) -> str:
