@@ -8,7 +8,10 @@
 
   python CLIP/build_expected_image_embeds.py --mind-dataset-subdir MIND_2000
   conda activate tf28gpu
-  python CLIP/train_expected_image.py --mind-dataset-subdir MIND_2000
+  python CLIP/tune_expected_image.py --two-phase --trials 108 --screening-epochs 3 \
+    --refine-top-k 10 --epochs-per-trial 10 --mind-dataset-subdir MIND_2000
+  python CLIP/train_expected_image.py --mind-dataset-subdir MIND_2000 \
+    --tune-log CLIP/saved_models/MIND_2000/naml_tune_expected_image_log.json
 """
 from __future__ import annotations
 
