@@ -39,6 +39,7 @@ DEFAULT_B3_IMAGE_DIR = str(_ROOT.parent / "MIND_image_b3")
 DEFAULT_CACHE_NAME = "{subdir}_clip_image_embeds.npz"
 DEFAULT_B4_CACHE_NAME = "{subdir}_clip_b4_mind_image.npz"
 DEFAULT_B1_CACHE_NAME = "{subdir}_clip_b1_text_expected.npz"
+DEFAULT_B1_TRAIN_CACHE_NAME = "{subdir}_clip_b1_text_expected_train.npz"
 DEFAULT_B2_CACHE_NAME = "{subdir}_clip_b2_prior_expected.npz"
 DEFAULT_B3_CACHE_NAME = "{subdir}_clip_b3_pixel_expected.npz"
 DEFAULT_ACTUAL_BODY_TEXT_CACHE_NAME = "{subdir}_clip_text_actual_body_train.npz"
@@ -80,6 +81,10 @@ def default_b4_cache_path(mind_dataset_subdir: str) -> str:
 
 def default_b1_cache_path(mind_dataset_subdir: str) -> str:
     return str(_ROOT / "CLIP" / "cache" / DEFAULT_B1_CACHE_NAME.format(subdir=mind_dataset_subdir))
+
+
+def default_b1_train_cache_path(mind_dataset_subdir: str) -> str:
+    return str(_ROOT / "CLIP" / "cache" / DEFAULT_B1_TRAIN_CACHE_NAME.format(subdir=mind_dataset_subdir))
 
 
 def default_b2_cache_path(mind_dataset_subdir: str) -> str:
