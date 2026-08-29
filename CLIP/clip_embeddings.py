@@ -43,6 +43,9 @@ DEFAULT_B1_TRAIN_CACHE_NAME = "{subdir}_clip_b1_text_expected_train.npz"
 DEFAULT_B2_CACHE_NAME = "{subdir}_clip_b2_prior_expected.npz"
 DEFAULT_B3_CACHE_NAME = "{subdir}_clip_b3_pixel_expected.npz"
 DEFAULT_ACTUAL_BODY_TEXT_CACHE_NAME = "{subdir}_clip_text_actual_body_train.npz"
+DEFAULT_DELTA_CACHE_NAME = "{subdir}_clip_text_image_delta.npz"
+DEFAULT_EXPECTED_IMAGE_TRAIN_CACHE_NAME = "{subdir}_clip_expected_image_train.npz"
+DEFAULT_EXPECTED_IMAGE_TEST_CACHE_NAME = "{subdir}_clip_expected_image_test.npz"
 
 _HEADER_IDS = frozenset({"news_id", "clicked_news", "id"})
 
@@ -102,6 +105,28 @@ def default_b3_cache_path(mind_dataset_subdir: str) -> str:
 def default_actual_body_text_cache_path(mind_dataset_subdir: str) -> str:
     return str(
         _ROOT / "CLIP" / "cache" / DEFAULT_ACTUAL_BODY_TEXT_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_delta_cache_path(mind_dataset_subdir: str) -> str:
+    return str(_ROOT / "CLIP" / "cache" / DEFAULT_DELTA_CACHE_NAME.format(subdir=mind_dataset_subdir))
+
+
+def default_expected_image_train_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_TRAIN_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_expected_image_test_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_TEST_CACHE_NAME.format(subdir=mind_dataset_subdir)
     )
 
 
