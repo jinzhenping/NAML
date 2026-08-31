@@ -6,10 +6,17 @@
 단어 임베딩 / title CNN / cat·subcat 임베딩은 공유하고,
 view-attention 만 히스토리와 후보가 따로 쓴다.
 """
+import os
+
 import keras
 from keras.layers import *
 from keras.models import Model
 from tensorflow.keras.optimizers import Adam
+from tensorflow.keras import backend as K
+
+import naml_common
+from naml_common import MAX_BODY_LENGTH, MAX_SENT_LENGTH, npratio
+from naml_image_model import _title_rep, _user_rep_from_history
 
 import naml_common
 from naml_common import MAX_BODY_LENGTH, MAX_SENT_LENGTH, npratio
@@ -199,3 +206,89 @@ def build_naml_models_expected_image(
         "MAX_SENTS": MAX_SENTS,
         "clip_dim": clip_dim,
     }
+
+
+def _h5_decode(x) -> str:
+    if isinstance(x, bytes):
+        return x.decode("utf8")
+    return str(x)
+
+
+def load_h5_weights_by_name(model, filepath: str) -> int:
+    """
+    Keras HDF5 load_weights 는 중첩 Model + 공유 레이어에서
+    Conv1D Keras1 transpose 를 잘못 적용한다 (axes don't match array).
+    저장된 그룹을 레이어 이름으로 찾아 preprocess 없이 넣는다.
+    """
+    import h5py
+    import numpy as np
+
+    filepath = os.path.abspath(filepath)
+    n_set = 0
+    with h5py.File(filepath, "r") as f:
+        root = f
+        if "layer_names" not in root.attrs and "model_weights" in root:
+            root = root["model_weights"]
+        if "layer_names" not in root.attrs:
+            raise ValueError(f"HDF5에 layer_names가 없습니다: {filepath}")
+
+        layers = {}
+        stack = [model]
+        seen = set()
+        while stack:
+            cur = stack.pop()
+            for layer in getattr(cur, "layers", []):
+                if id(layer) in seen:
+                    continue
+                seen.add(id(layer))
+                layers.setdefault(layer.name, layer)
+                if hasattr(layer, "layers"):
+                    stack.append(layer)
+
+        layer_names = [_h5_decode(n) for n in root.attrs["layer_names"]]
+        missing = []
+        shape_mismatch = []
+        for name in layer_names:
+            if name not in root:
+                continue
+            g = root[name]
+            raw_names = list(g.attrs.get("weight_names", []))
+            if not raw_names:
+                continue
+            values = [np.asarray(g[_h5_decode(wn)]) for wn in raw_names]
+            layer = layers.get(name)
+            if layer is None:
+                missing.append(name)
+                continue
+            symbolic = list(layer.weights)
+            if len(symbolic) != len(values):
+                raise ValueError(
+                    f"{name}: 파일 {len(values)}개 vs 모델 {len(symbolic)}개 가중치. "
+                    "cnn_filters 등 hparams가 튜닝 로그와 다른지 확인하세요."
+                )
+            layer_bad = []
+            pairs = []
+            for i, (var, val) in enumerate(zip(symbolic, values)):
+                expected = tuple(int(x) for x in var.shape)
+                got = tuple(int(x) for x in val.shape)
+                if expected != got:
+                    layer_bad.append(
+                        f"{name}[{i}] {getattr(var, 'name', i)} expect {expected} got {got}"
+                    )
+                else:
+                    pairs.append((var, val))
+            if layer_bad:
+                shape_mismatch.extend(layer_bad)
+                continue
+            K.batch_set_value(pairs)
+            n_set += 1
+
+        if shape_mismatch:
+            raise ValueError(
+                "가중치 shape 불일치 (tune-log hparams와 가중치 파일이 다를 수 있음):\n  "
+                + "\n  ".join(shape_mismatch[:20])
+            )
+        if missing:
+            print(f"[weights] h5 그룹 중 모델에 없는 레이어 skip: {missing[:10]}", flush=True)
+    print(f"[weights] loaded by name from {filepath}  layers={n_set}", flush=True)
+    return n_set

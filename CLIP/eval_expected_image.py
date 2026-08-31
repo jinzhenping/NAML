@@ -55,7 +55,7 @@ from naml_common import (
     sync_max_history_clicks_from_env,
 )
 import naml_common
-from naml_expected_image_model import build_naml_models_expected_image
+from naml_expected_image_model import build_naml_models_expected_image, load_h5_weights_by_name
 from train_expected_image import _max_history_from_log, _set_seed, evaluate_metrics
 from train_s1_s2 import load_hparams
 
@@ -199,7 +199,7 @@ def main() -> None:
     )
     model = built["model"]
     model_test = built["model_test"]
-    model.load_weights(weights_path)
+    load_h5_weights_by_name(model, weights_path)
 
     metrics = evaluate_metrics(
         model_test,
