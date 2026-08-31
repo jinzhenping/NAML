@@ -3,15 +3,22 @@
 """
 기대이미지 NAML 학습.
 
-후보: title + cat + subcat + L2(CLIP_text(기대본문)+Δ)
+후보: title + cat + subcat + L2(기대본문_embed + Δ)
 히스토리: title + 실제본문 + cat + subcat (이미지 뷰 없음)
+
+--recipe clip_text (기본): CLIP text + Δ
+--recipe prior: Kandinsky prior + Δ_prior
 
   python CLIP/build_expected_image_embeds.py --mind-dataset-subdir MIND_2000
   conda activate tf28gpu
   python CLIP/tune_expected_image.py --two-phase --trials 108 --screening-epochs 3 \
     --refine-top-k 10 --epochs-per-trial 10 --mind-dataset-subdir MIND_2000
-  python CLIP/train_expected_image.py --mind-dataset-subdir MIND_2000 \
-    --tune-log CLIP/saved_models/MIND_2000/naml_tune_expected_image_log.json
+  python CLIP/train_expected_image.py --mind-dataset-subdir MIND_2000
+
+  python CLIP/build_expected_image_embeds.py --source prior --mind-dataset-subdir MIND_2000
+  python CLIP/tune_expected_image.py --recipe prior --two-phase --trials 108 \
+    --screening-epochs 3 --refine-top-k 10 --epochs-per-trial 10 --mind-dataset-subdir MIND_2000
+  python CLIP/train_expected_image.py --recipe prior --mind-dataset-subdir MIND_2000
 
   # 최종 test (MIND_test_2000_final.tsv)
   conda activate clip_cu128
@@ -48,11 +55,7 @@ apply_dataset_env_from_argv()
 import tensorflow as tf
 from tensorflow.keras import backend as K
 
-from clip_embeddings import (
-    default_expected_image_test_path,
-    default_expected_image_train_path,
-    resolve_project_path,
-)
+from clip_embeddings import expected_image_recipe_paths, resolve_project_path
 from expected_image import (
     build_test_candidate_image,
     build_train_candidate_image,
@@ -215,9 +218,17 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="기대이미지 NAML 학습")
     ap.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
     ap.add_argument(
+        "--recipe",
+        type=str,
+        default="clip_text",
+        choices=["clip_text", "prior"],
+        help="clip_text: CLIP text+Δ. prior: Kandinsky prior+Δ_prior",
+    )
+    ap.add_argument(
         "--tune-log",
         type=str,
-        default="CLIP/saved_models/MIND_2000/naml_tune_s2_clip_log.json",
+        default=None,
+        help="기본 CLIP/saved_models/<subdir>/naml_tune_expected_image[_prior]_log.json",
     )
     ap.add_argument("--epochs", type=int, default=30)
     ap.add_argument("--batch-size", type=int, default=64)
@@ -233,37 +244,45 @@ def main() -> None:
     )
     args = ap.parse_args()
 
+    paths = expected_image_recipe_paths(args.mind_dataset_subdir, args.recipe)
+    tune_log = (
+        resolve_project_path(args.tune_log)
+        if args.tune_log
+        else str(_CLIP_DIR / "saved_models" / args.mind_dataset_subdir / paths["tune_log_name"])
+    )
     argv = ["--mind-dataset-subdir", args.mind_dataset_subdir]
     hist = args.max_history_clicks
     if hist is None:
-        hist = _max_history_from_log(args.tune_log)
+        hist = _max_history_from_log(tune_log)
     if hist is not None:
         argv += ["--max-history-clicks", str(hist)]
     apply_dataset_env_from_argv(argv)
     sync_max_history_clicks_from_env()
 
     _set_seed(int(args.seed))
-    hp = load_hparams(args.tune_log)
+    source_flag = f" --source {args.recipe}" if args.recipe != "clip_text" else ""
+    hp = load_hparams(tune_log)
 
     train_cache = (
         resolve_project_path(args.train_expected_image_cache)
         if args.train_expected_image_cache
-        else default_expected_image_train_path(args.mind_dataset_subdir)
+        else paths["train_image"]
     )
     test_cache = (
         resolve_project_path(args.test_expected_image_cache)
         if args.test_expected_image_cache
-        else default_expected_image_test_path(args.mind_dataset_subdir)
+        else paths["test_image"]
     )
     for p, name in ((train_cache, "학습 기대이미지"), (test_cache, "테스트 기대이미지")):
         if not os.path.isfile(p):
             raise FileNotFoundError(
                 f"{name} cache 없음: {p}\n"
-                "먼저 python CLIP/build_expected_image_embeds.py 를 실행하세요."
+                f"먼저 python CLIP/build_expected_image_embeds.py{source_flag} 를 실행하세요."
             )
 
     print(
-        "[train] 히스토리=title+실제본문+cat/subcat  후보=title+cat/subcat+기대이미지",
+        f"[train] recipe={args.recipe}  "
+        "히스토리=title+실제본문+cat/subcat  후보=title+cat/subcat+기대이미지",
         flush=True,
     )
     word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = (
@@ -351,8 +370,8 @@ def main() -> None:
     else:
         out_dir = str(_CLIP_DIR / "saved_models" / args.mind_dataset_subdir)
     os.makedirs(out_dir, exist_ok=True)
-    out_weights = os.path.join(out_dir, "naml_expected_image.h5")
-    out_log = os.path.join(out_dir, "naml_expected_image_log.json")
+    out_weights = os.path.join(out_dir, paths["train_weights_name"])
+    out_log = os.path.join(out_dir, paths["train_log_name"])
 
     n_train = len(all_train_id)
     batch_size = int(args.batch_size)
@@ -421,6 +440,7 @@ def main() -> None:
     model.save_weights(out_weights)
     summary = {
         "variant": "expected_image",
+        "recipe": args.recipe,
         "hparams": hp,
         "epochs": epochs,
         "batch_size": batch_size,

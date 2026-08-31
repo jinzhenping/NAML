@@ -9,11 +9,14 @@
   python CLIP/tune_expected_image.py --two-phase --trials 108 --screening-epochs 3 \
     --refine-top-k 10 --epochs-per-trial 10 --mind-dataset-subdir MIND_2000
 
-  # 찾은 hparams로 길게 재학습
-  python CLIP/train_expected_image.py --mind-dataset-subdir MIND_2000 \
-    --tune-log CLIP/saved_models/MIND_2000/naml_tune_expected_image_log.json
+  python CLIP/tune_expected_image.py --recipe prior --two-phase --trials 108 \
+    --screening-epochs 3 --refine-top-k 10 --epochs-per-trial 10 --mind-dataset-subdir MIND_2000
+
+  python CLIP/train_expected_image.py --mind-dataset-subdir MIND_2000
+  python CLIP/train_expected_image.py --recipe prior --mind-dataset-subdir MIND_2000
 
   python CLIP/eval_expected_image.py --mind-dataset-subdir MIND_2000
+  python CLIP/eval_expected_image.py --recipe prior --mind-dataset-subdir MIND_2000
 """
 from __future__ import annotations
 
@@ -43,11 +46,7 @@ apply_dataset_env_from_argv()
 import tensorflow as tf
 from tensorflow.keras import backend as K
 
-from clip_embeddings import (
-    default_expected_image_test_path,
-    default_expected_image_train_path,
-    resolve_project_path,
-)
+from clip_embeddings import expected_image_recipe_paths, resolve_project_path
 from expected_image import (
     build_test_candidate_image,
     build_train_candidate_image,
@@ -180,19 +179,26 @@ def main() -> None:
     ap.add_argument("--epochs-per-trial", type=int, default=8)
     ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
+    ap.add_argument(
+        "--recipe",
+        type=str,
+        default="clip_text",
+        choices=["clip_text", "prior"],
+        help="clip_text: CLIP text+Δ. prior: Kandinsky prior+Δ_prior",
+    )
     ap.add_argument("--max-history-clicks", type=int, default=None)
     ap.add_argument("--seed", type=int, default=SEED)
     ap.add_argument(
         "--out-weights",
         type=str,
         default=None,
-        help="전역 최고 val MRR 가중치. 기본 CLIP/saved_models/<subdir>/naml_expected_image_tuned.h5",
+        help="전역 최고 val MRR 가중치. 기본 CLIP/saved_models/<subdir>/naml_expected_image[_prior]_tuned.h5",
     )
     ap.add_argument(
         "--out-log",
         type=str,
         default=None,
-        help="튜닝 로그 JSON. 기본 CLIP/saved_models/<subdir>/naml_tune_expected_image_log.json",
+        help="튜닝 로그 JSON. 기본 CLIP/saved_models/<subdir>/naml_tune_expected_image[_prior]_log.json",
     )
     ap.add_argument("--allow-duplicate-hparams", action="store_true")
     ap.add_argument("--two-phase", action="store_true")
@@ -222,17 +228,19 @@ def main() -> None:
         print("오류: --two-phase 와 --repeat-per-combo>1 은 함께 사용할 수 없습니다.", file=sys.stderr)
         sys.exit(2)
 
+    paths = expected_image_recipe_paths(args.mind_dataset_subdir, args.recipe)
+    source_flag = f" --source {args.recipe}" if args.recipe != "clip_text" else ""
     out_dir = str(_CLIP_DIR / "saved_models" / args.mind_dataset_subdir)
     os.makedirs(out_dir, exist_ok=True)
     out_weights = (
         resolve_project_path(args.out_weights)
         if args.out_weights
-        else os.path.join(out_dir, "naml_expected_image_tuned.h5")
+        else os.path.join(out_dir, paths["tuned_weights_name"])
     )
     out_log = (
         resolve_project_path(args.out_log)
         if args.out_log
-        else os.path.join(out_dir, "naml_tune_expected_image_log.json")
+        else os.path.join(out_dir, paths["tune_log_name"])
     )
     os.makedirs(os.path.dirname(os.path.abspath(out_weights)) or ".", exist_ok=True)
     os.makedirs(os.path.dirname(os.path.abspath(out_log)) or ".", exist_ok=True)
@@ -245,22 +253,23 @@ def main() -> None:
     train_cache = (
         resolve_project_path(args.train_expected_image_cache)
         if args.train_expected_image_cache
-        else default_expected_image_train_path(args.mind_dataset_subdir)
+        else paths["train_image"]
     )
     test_cache = (
         resolve_project_path(args.test_expected_image_cache)
         if args.test_expected_image_cache
-        else default_expected_image_test_path(args.mind_dataset_subdir)
+        else paths["test_image"]
     )
     for p, name in ((train_cache, "학습 기대이미지"), (test_cache, "테스트 기대이미지")):
         if not os.path.isfile(p):
             raise FileNotFoundError(
                 f"{name} cache 없음: {p}\n"
-                "먼저 python CLIP/build_expected_image_embeds.py 를 실행하세요."
+                f"먼저 python CLIP/build_expected_image_embeds.py{source_flag} 를 실행하세요."
             )
 
     print(
-        f"[tune expected-image] hist=title+body+cat/subcat  cand=title+cat/subcat+expected_image  "
+        f"[tune expected-image] recipe={args.recipe}  "
+        f"hist=title+body+cat/subcat  cand=title+cat/subcat+expected_image  "
         f"dataset={args.mind_dataset_subdir}",
         flush=True,
     )
@@ -507,6 +516,7 @@ def main() -> None:
 
     summary = {
         "variant": "expected_image",
+        "recipe": args.recipe,
         "candidate_views": ["title", "category", "subcategory", "expected_image"],
         "history_views": ["title", "actual_body", "category", "subcategory"],
         "train_expected_image_cache": os.path.abspath(train_cache),

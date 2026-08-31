@@ -685,6 +685,198 @@ def _save_news_text_cache(
     _save_clip_cache(out_path, emb, catalog)
 
 
+def extract_prior_actual_bodies(
+    news_ids: Sequence[str],
+    bodies: Dict[str, str],
+    out_path: str,
+    *,
+    model_id: str = CLIP_MODEL_ID,
+    device: str = "auto",
+    batch_size: int = 4,
+    num_inference_steps: int = 25,
+    guidance_scale: float = 4.0,
+    seed: int = 42,
+    resume: bool = True,
+) -> dict:
+    """
+    실제 뉴스 본문 → Kandinsky 2.2 prior → CLIP image_embeds (뉴스 단위).
+    L2 없음. 빈 본문은 0벡터. 뉴스마다 고정 시드.
+    """
+    try:
+        import torch
+        from diffusers import KandinskyV22PriorPipeline
+    except ImportError as e:
+        raise ImportError(
+            "actual-body prior 추출에는 torch, diffusers 가 필요합니다. pip install -r CLIP/requirements.txt"
+        ) from e
+
+    catalog = [str(n) for n in news_ids if n and n != "0"]
+    if not catalog:
+        raise ValueError("인코딩할 뉴스 ID가 없습니다.")
+
+    device = resolve_torch_device(device)
+    if device == "cpu":
+        print("[CLIP actual-body prior] CPU prior는 매우 느립니다.", flush=True)
+        if batch_size > 2:
+            print(f"[CLIP actual-body prior] CPU라 batch-size를 {batch_size} → 1 로 낮춥니다.", flush=True)
+            batch_size = 1
+    dtype = torch.float16 if device.startswith("cuda") else torch.float32
+
+    id_to_vec: Dict[str, np.ndarray] = {}
+    if resume and os.path.isfile(out_path):
+        try:
+            emb, cached_ids = load_clip_npz(out_path)
+            for nid, vec in zip(cached_ids, emb):
+                id_to_vec[str(nid)] = np.asarray(vec, dtype=np.float32)
+            print(f"[CLIP actual-body prior] resume cache {len(id_to_vec)} ids from {out_path}", flush=True)
+        except Exception as e:
+            print(f"[CLIP actual-body prior] 기존 cache를 읽지 못해 다시 추출합니다: {e}", flush=True)
+            id_to_vec = {}
+
+    todo: List[str] = []
+    n_empty = 0
+    n_missing_body_key = 0
+    for nid in catalog:
+        if nid in id_to_vec:
+            continue
+        if nid not in bodies:
+            n_missing_body_key += 1
+            continue
+        if not (bodies.get(nid) or "").strip():
+            n_empty += 1
+            continue
+        todo.append(nid)
+
+    print(
+        f"[CLIP actual-body prior] catalog={len(catalog)} todo={len(todo)} "
+        f"resume={len(id_to_vec)} empty_body={n_empty} not_in_news_tsv={n_missing_body_key} "
+        f"steps={num_inference_steps} guidance={guidance_scale}",
+        flush=True,
+    )
+
+    clip_dim: Optional[int] = None
+    if id_to_vec:
+        clip_dim = int(next(iter(id_to_vec.values())).reshape(-1).shape[0])
+
+    def _flush(dim: int) -> None:
+        _save_news_text_cache(out_path, dict(id_to_vec), catalog, dim)
+
+    if not todo:
+        dim = int(clip_dim or 1280)
+        for nid in catalog:
+            if nid in id_to_vec:
+                continue
+            id_to_vec[nid] = np.zeros((dim,), dtype=np.float32)
+        _flush(dim)
+        print(f"[CLIP actual-body prior] 새로 인코딩할 본문이 없어 cache를 갱신합니다: {out_path}", flush=True)
+        return {
+            "encoder": "KandinskyV22PriorPipeline.image_embeds",
+            "source": "actual_body",
+            "out_path": os.path.abspath(out_path),
+            "clip_dim": dim,
+            "n_news": len(catalog),
+            "n_encoded_this_run": 0,
+            "n_empty_body": n_empty,
+            "n_missing_in_news_tsv": n_missing_body_key,
+            "space": "clip_image",
+            "l2_normalize": False,
+        }
+
+    pipe = KandinskyV22PriorPipeline.from_pretrained(model_id, torch_dtype=dtype)
+    pipe = pipe.to(device)
+    pipe.set_progress_bar_config(disable=True)
+    if getattr(pipe, "tokenizer", None) is not None:
+        raw_max = getattr(pipe.tokenizer, "model_max_length", CLIP_TEXT_MAX_LENGTH)
+        try:
+            raw_max_int = int(raw_max)
+        except (TypeError, ValueError, OverflowError):
+            raw_max_int = CLIP_TEXT_MAX_LENGTH
+        if raw_max_int <= 0 or raw_max_int > CLIP_TEXT_MAX_LENGTH:
+            print(
+                f"[CLIP actual-body prior] tokenizer.model_max_length={raw_max} → {CLIP_TEXT_MAX_LENGTH} 로 고정",
+                flush=True,
+            )
+        pipe.tokenizer.model_max_length = CLIP_TEXT_MAX_LENGTH
+
+    n_done = 0
+    n_batches = 0
+    fallback_dim = 1280
+    for i in range(0, len(todo), batch_size):
+        chunk = todo[i : i + batch_size]
+        texts = [bodies[nid].strip() for nid in chunk]
+        gens = [
+            torch.Generator(device="cpu").manual_seed(_pair_seed("actual_body", nid, seed))
+            for nid in chunk
+        ]
+        out = pipe(
+            prompt=texts,
+            num_inference_steps=int(num_inference_steps),
+            guidance_scale=float(guidance_scale),
+            generator=gens,
+        )
+        embeds = out.image_embeds
+        if hasattr(embeds, "detach"):
+            vecs = embeds.detach().float().cpu().numpy().astype(np.float32)
+        else:
+            vecs = np.asarray(embeds, dtype=np.float32)
+        if clip_dim is None:
+            clip_dim = int(vecs.shape[1])
+        elif int(vecs.shape[1]) != int(clip_dim):
+            raise ValueError(f"actual-body prior dim mismatch: got {vecs.shape[1]} expected {clip_dim}")
+        for nid, vec in zip(chunk, vecs):
+            id_to_vec[nid] = vec
+        n_done += len(chunk)
+        n_batches += 1
+        if n_batches == 1 or n_batches % 5 == 0 or n_done >= len(todo):
+            _flush(clip_dim)
+            print(f"[CLIP actual-body prior] encoded {n_done}/{len(todo)}", flush=True)
+
+    del pipe
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    import gc
+
+    gc.collect()
+
+    if clip_dim is None:
+        clip_dim = fallback_dim
+    zero = np.zeros((int(clip_dim),), dtype=np.float32)
+    for nid in catalog:
+        if nid not in id_to_vec:
+            id_to_vec[nid] = zero
+    _flush(int(clip_dim))
+
+    meta = {
+        "encoder": "KandinskyV22PriorPipeline.image_embeds",
+        "source": "actual_body",
+        "model_id": model_id,
+        "num_inference_steps": int(num_inference_steps),
+        "guidance_scale": float(guidance_scale),
+        "seed": int(seed),
+        "out_path": os.path.abspath(out_path),
+        "clip_dim": int(clip_dim),
+        "n_news": len(catalog),
+        "n_encoded_this_run": int(n_done),
+        "n_nonzero": int(sum(1 for nid in catalog if np.any(id_to_vec[nid]))),
+        "n_empty_body": n_empty,
+        "n_missing_in_news_tsv": n_missing_body_key,
+        "space": "clip_image",
+        "l2_normalize": False,
+        "max_length": CLIP_TEXT_MAX_LENGTH,
+    }
+    meta_path = os.path.splitext(out_path)[0] + ".json"
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+    print(
+        f"[CLIP actual-body prior] saved {out_path}\n"
+        f"[CLIP actual-body prior] dim={clip_dim} news={len(catalog)} encoded_this_run={n_done} "
+        f"nonzero={meta['n_nonzero']}\n"
+        f"[CLIP actual-body prior] meta {meta_path}",
+        flush=True,
+    )
+    return meta
+
+
 def b3_image_path(out_dir: str, uid: str, nid: str) -> str:
     return os.path.join(out_dir, f"user_{uid}", f"news_{nid}.png")
 

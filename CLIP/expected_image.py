@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Δ = mean(CLIP_image(thumbnail)) − mean(CLIP_text(actual body))
-기대이미지 = L2(CLIP_text(expected body) + Δ)
+clip_text: Δ = mean(CLIP_image(thumbnail)) − mean(CLIP_text(actual body))
+          기대이미지 = L2(CLIP_text(expected body) + Δ)
+prior:     Δ_prior = mean(CLIP_image(thumbnail)) − mean(prior(actual body))
+          기대이미지 = L2(prior(expected body) + Δ_prior)
 """
 from __future__ import annotations
 

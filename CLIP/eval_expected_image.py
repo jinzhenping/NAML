@@ -4,7 +4,7 @@
 튜닝/학습된 기대이미지 NAML을 최종 test TSV로 평가.
 
 기존 기대이미지 캐시(MIND_test_(2000).tsv / val)와 다른 pair라서
-최종 test용 CLIP text → Δ 적용 캐시가 먼저 필요하다.
+최종 test용 기대본문 embed → Δ 적용 캐시가 먼저 필요하다.
 
   conda activate clip_cu128
   python CLIP/extract_expected_body_text_embeds.py --split test_final --mind-dataset-subdir MIND_2000
@@ -13,6 +13,11 @@
   conda activate tf28gpu
   python CLIP/eval_expected_image.py --mind-dataset-subdir MIND_2000 \
     --mind-test-tsv dataset/MIND_2000/MIND_test_2000_final.tsv
+
+  # prior recipe
+  python CLIP/extract_expected_body_prior_embeds.py --split test_final --mind-dataset-subdir MIND_2000
+  python CLIP/build_expected_image_embeds.py --source prior --apply-delta-only --mind-dataset-subdir MIND_2000
+  python CLIP/eval_expected_image.py --recipe prior --mind-dataset-subdir MIND_2000
 """
 from __future__ import annotations
 
@@ -38,8 +43,8 @@ apply_dataset_env_from_argv()
 from tensorflow.keras import backend as K
 
 from clip_embeddings import (
-    default_expected_image_test_final_path,
     default_test_final_tsv,
+    expected_image_recipe_paths,
     resolve_project_path,
 )
 from expected_image import (
@@ -64,6 +69,13 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="기대이미지 NAML 최종 test 평가")
     ap.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
     ap.add_argument(
+        "--recipe",
+        type=str,
+        default="clip_text",
+        choices=["clip_text", "prior"],
+        help="clip_text: CLIP text+Δ. prior: Kandinsky prior+Δ_prior",
+    )
+    ap.add_argument(
         "--mind-test-tsv",
         type=str,
         default=None,
@@ -72,12 +84,14 @@ def main() -> None:
     ap.add_argument(
         "--weights",
         type=str,
-        default="CLIP/saved_models/MIND_2000/naml_expected_image_tuned.h5",
+        default=None,
+        help="기본 CLIP/saved_models/<subdir>/naml_expected_image[_prior]_tuned.h5",
     )
     ap.add_argument(
         "--tune-log",
         type=str,
-        default="CLIP/saved_models/MIND_2000/naml_tune_expected_image_log.json",
+        default=None,
+        help="기본 CLIP/saved_models/<subdir>/naml_tune_expected_image[_prior]_log.json",
     )
     ap.add_argument("--expected-image-cache", type=str, default=None)
     ap.add_argument("--batch-size", type=int, default=64)
@@ -87,23 +101,37 @@ def main() -> None:
         "--out",
         type=str,
         default=None,
-        help="결과 JSON. 기본 CLIP/saved_models/<subdir>/naml_expected_image_test_final.json",
+        help="결과 JSON. 기본 CLIP/saved_models/<subdir>/naml_expected_image[_prior]_test_final.json",
     )
     args = ap.parse_args()
+
+    paths = expected_image_recipe_paths(args.mind_dataset_subdir, args.recipe)
+    source_flag = f" --source {args.recipe}" if args.recipe != "clip_text" else ""
+    extract_cmd = (
+        "python CLIP/extract_expected_body_prior_embeds.py --split test_final"
+        if args.recipe == "prior"
+        else "python CLIP/extract_expected_body_text_embeds.py --split test_final"
+    )
+    weights_arg = args.weights or str(
+        _CLIP_DIR / "saved_models" / args.mind_dataset_subdir / paths["tuned_weights_name"]
+    )
+    tune_log_arg = args.tune_log or str(
+        _CLIP_DIR / "saved_models" / args.mind_dataset_subdir / paths["tune_log_name"]
+    )
 
     argv = ["--mind-dataset-subdir", args.mind_dataset_subdir]
     hist = args.max_history_clicks
     if hist is None:
-        hist = _max_history_from_log(args.tune_log)
+        hist = _max_history_from_log(tune_log_arg)
     if hist is not None:
         argv += ["--max-history-clicks", str(hist)]
     apply_dataset_env_from_argv(argv)
     sync_max_history_clicks_from_env()
 
     _set_seed(int(args.seed))
-    hp = load_hparams(args.tune_log)
+    hp = load_hparams(tune_log_arg)
 
-    weights_path = resolve_project_path(args.weights)
+    weights_path = resolve_project_path(weights_arg)
     if not os.path.isfile(weights_path):
         raise FileNotFoundError(f"가중치 없음: {weights_path}")
 
@@ -118,19 +146,19 @@ def main() -> None:
     cache_path = (
         resolve_project_path(args.expected_image_cache)
         if args.expected_image_cache
-        else default_expected_image_test_final_path(args.mind_dataset_subdir)
+        else paths["test_final_image"]
     )
     if not os.path.isfile(cache_path):
         raise FileNotFoundError(
             f"최종 test 기대이미지 cache 없음: {cache_path}\n"
             "conda activate clip_cu128\n"
-            "python CLIP/extract_expected_body_text_embeds.py --split test_final "
-            f"--mind-dataset-subdir {args.mind_dataset_subdir}\n"
-            "python CLIP/build_expected_image_embeds.py --apply-delta-only "
+            f"{extract_cmd} --mind-dataset-subdir {args.mind_dataset_subdir}\n"
+            f"python CLIP/build_expected_image_embeds.py{source_flag} --apply-delta-only "
             f"--mind-dataset-subdir {args.mind_dataset_subdir}"
         )
 
     print(
+        f"[eval] recipe={args.recipe}\n"
         f"[eval] weights={weights_path}\n"
         f"[eval] test_tsv={test_tsv}\n"
         f"[eval] expected-image cache={cache_path}",
@@ -228,15 +256,16 @@ def main() -> None:
             _CLIP_DIR
             / "saved_models"
             / args.mind_dataset_subdir
-            / "naml_expected_image_test_final.json"
+            / paths["eval_json_name"]
         )
     )
     os.makedirs(os.path.dirname(os.path.abspath(out_path)) or ".", exist_ok=True)
     summary = {
         "variant": "expected_image",
+        "recipe": args.recipe,
         "split": "test_final",
         "weights": os.path.abspath(weights_path),
-        "tune_log": os.path.abspath(resolve_project_path(args.tune_log)),
+        "tune_log": os.path.abspath(resolve_project_path(tune_log_arg)),
         "test_tsv": os.path.abspath(test_tsv),
         "expected_image_cache": os.path.abspath(cache_path),
         "hparams": hp,

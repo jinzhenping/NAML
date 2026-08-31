@@ -41,13 +41,20 @@ DEFAULT_B4_CACHE_NAME = "{subdir}_clip_b4_mind_image.npz"
 DEFAULT_B1_CACHE_NAME = "{subdir}_clip_b1_text_expected.npz"
 DEFAULT_B1_TRAIN_CACHE_NAME = "{subdir}_clip_b1_text_expected_train.npz"
 DEFAULT_B2_CACHE_NAME = "{subdir}_clip_b2_prior_expected.npz"
+DEFAULT_B2_TRAIN_CACHE_NAME = "{subdir}_clip_b2_prior_expected_train.npz"
+DEFAULT_B2_TEST_FINAL_CACHE_NAME = "{subdir}_clip_b2_prior_expected_test_final.npz"
 DEFAULT_B3_CACHE_NAME = "{subdir}_clip_b3_pixel_expected.npz"
 DEFAULT_ACTUAL_BODY_TEXT_CACHE_NAME = "{subdir}_clip_text_actual_body_train.npz"
+DEFAULT_ACTUAL_BODY_PRIOR_CACHE_NAME = "{subdir}_clip_prior_actual_body_train.npz"
 DEFAULT_DELTA_CACHE_NAME = "{subdir}_clip_text_image_delta.npz"
+DEFAULT_DELTA_PRIOR_CACHE_NAME = "{subdir}_clip_prior_image_delta.npz"
 DEFAULT_EXPECTED_IMAGE_TRAIN_CACHE_NAME = "{subdir}_clip_expected_image_train.npz"
 DEFAULT_EXPECTED_IMAGE_TEST_CACHE_NAME = "{subdir}_clip_expected_image_test.npz"
 DEFAULT_B1_TEST_FINAL_CACHE_NAME = "{subdir}_clip_b1_text_expected_test_final.npz"
 DEFAULT_EXPECTED_IMAGE_TEST_FINAL_CACHE_NAME = "{subdir}_clip_expected_image_test_final.npz"
+DEFAULT_EXPECTED_IMAGE_PRIOR_TRAIN_CACHE_NAME = "{subdir}_clip_expected_image_prior_train.npz"
+DEFAULT_EXPECTED_IMAGE_PRIOR_TEST_CACHE_NAME = "{subdir}_clip_expected_image_prior_test.npz"
+DEFAULT_EXPECTED_IMAGE_PRIOR_TEST_FINAL_CACHE_NAME = "{subdir}_clip_expected_image_prior_test_final.npz"
 
 _HEADER_IDS = frozenset({"news_id", "clicked_news", "id"})
 
@@ -96,6 +103,16 @@ def default_b2_cache_path(mind_dataset_subdir: str) -> str:
     return str(_ROOT / "CLIP" / "cache" / DEFAULT_B2_CACHE_NAME.format(subdir=mind_dataset_subdir))
 
 
+def default_b2_train_cache_path(mind_dataset_subdir: str) -> str:
+    return str(_ROOT / "CLIP" / "cache" / DEFAULT_B2_TRAIN_CACHE_NAME.format(subdir=mind_dataset_subdir))
+
+
+def default_b2_test_final_cache_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT / "CLIP" / "cache" / DEFAULT_B2_TEST_FINAL_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
 def default_b3_image_dir(mind_dataset_subdir: str) -> str:
     return os.path.join(DEFAULT_B3_IMAGE_DIR, mind_dataset_subdir)
 
@@ -110,8 +127,18 @@ def default_actual_body_text_cache_path(mind_dataset_subdir: str) -> str:
     )
 
 
+def default_actual_body_prior_cache_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT / "CLIP" / "cache" / DEFAULT_ACTUAL_BODY_PRIOR_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
 def default_delta_cache_path(mind_dataset_subdir: str) -> str:
     return str(_ROOT / "CLIP" / "cache" / DEFAULT_DELTA_CACHE_NAME.format(subdir=mind_dataset_subdir))
+
+
+def default_delta_prior_cache_path(mind_dataset_subdir: str) -> str:
+    return str(_ROOT / "CLIP" / "cache" / DEFAULT_DELTA_PRIOR_CACHE_NAME.format(subdir=mind_dataset_subdir))
 
 
 def default_expected_image_train_path(mind_dataset_subdir: str) -> str:
@@ -147,10 +174,78 @@ def default_expected_image_test_final_path(mind_dataset_subdir: str) -> str:
     )
 
 
+def default_expected_image_prior_train_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_PRIOR_TRAIN_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_expected_image_prior_test_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_PRIOR_TEST_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_expected_image_prior_test_final_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_PRIOR_TEST_FINAL_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
 def default_test_final_tsv(mind_dataset_subdir: str) -> str:
     sub = (mind_dataset_subdir or "").strip()
     fname = "Adressa_test_2000_final.tsv" if "adressa" in sub.lower() else "MIND_test_2000_final.tsv"
     return str(_ROOT / "dataset" / sub / fname)
+
+
+def expected_image_recipe_paths(mind_dataset_subdir: str, recipe: str = "clip_text") -> dict:
+    """clip_text: CLIP text+Δ. prior: Kandinsky prior+Δ_prior."""
+    r = (recipe or "clip_text").strip().lower()
+    if r not in ("clip_text", "prior"):
+        raise ValueError(f"unknown recipe {recipe!r}. use clip_text or prior")
+    sub = mind_dataset_subdir
+    if r == "prior":
+        return {
+            "recipe": r,
+            "actual_body": default_actual_body_prior_cache_path(sub),
+            "train_src": default_b2_train_cache_path(sub),
+            "test_src": default_b2_cache_path(sub),
+            "test_final_src": default_b2_test_final_cache_path(sub),
+            "delta": default_delta_prior_cache_path(sub),
+            "train_image": default_expected_image_prior_train_path(sub),
+            "test_image": default_expected_image_prior_test_path(sub),
+            "test_final_image": default_expected_image_prior_test_final_path(sub),
+            "tuned_weights_name": "naml_expected_image_prior_tuned.h5",
+            "tune_log_name": "naml_tune_expected_image_prior_log.json",
+            "train_weights_name": "naml_expected_image_prior.h5",
+            "train_log_name": "naml_expected_image_prior_log.json",
+            "eval_json_name": "naml_expected_image_prior_test_final.json",
+        }
+    return {
+        "recipe": r,
+        "actual_body": default_actual_body_text_cache_path(sub),
+        "train_src": default_b1_train_cache_path(sub),
+        "test_src": default_b1_cache_path(sub),
+        "test_final_src": default_b1_test_final_cache_path(sub),
+        "delta": default_delta_cache_path(sub),
+        "train_image": default_expected_image_train_path(sub),
+        "test_image": default_expected_image_test_path(sub),
+        "test_final_image": default_expected_image_test_final_path(sub),
+        "tuned_weights_name": "naml_expected_image_tuned.h5",
+        "tune_log_name": "naml_tune_expected_image_log.json",
+        "train_weights_name": "naml_expected_image.h5",
+        "train_log_name": "naml_expected_image_log.json",
+        "eval_json_name": "naml_expected_image_test_final.json",
+    }
 
 
 def load_news_ids_from_tsv(news_tsv: str) -> List[str]:
