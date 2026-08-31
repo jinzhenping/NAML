@@ -12,6 +12,8 @@
   # 찾은 hparams로 길게 재학습
   python CLIP/train_expected_image.py --mind-dataset-subdir MIND_2000 \
     --tune-log CLIP/saved_models/MIND_2000/naml_tune_expected_image_log.json
+
+  python CLIP/eval_expected_image.py --mind-dataset-subdir MIND_2000
 """
 from __future__ import annotations
 

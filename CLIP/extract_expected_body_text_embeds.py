@@ -10,6 +10,7 @@
   conda activate clip_cu128
   python CLIP/extract_expected_body_text_embeds.py --mind-dataset-subdir MIND_2000
   python CLIP/extract_expected_body_text_embeds.py --split test --mind-dataset-subdir MIND_2000
+  python CLIP/extract_expected_body_text_embeds.py --split test_final --mind-dataset-subdir MIND_2000
 """
 from __future__ import annotations
 
@@ -31,7 +32,9 @@ from naml_dataset_env import DATASET_FILE_PRESETS, apply_dataset_env_from_argv
 
 from clip_embeddings import (
     default_b1_cache_path,
+    default_b1_test_final_cache_path,
     default_b1_train_cache_path,
+    default_test_final_tsv,
     resolve_project_path,
 )
 from route_embeddings import (
@@ -44,6 +47,8 @@ from route_embeddings import (
 
 
 def _split_tsv(mind_dataset_subdir: str, split: str) -> str:
+    if split == "test_final":
+        return default_test_final_tsv(mind_dataset_subdir)
     names = DATASET_FILE_PRESETS.get(mind_dataset_subdir)
     news_name, train_name, test_name = names if names else (
         "MIND_news.tsv",
@@ -58,7 +63,7 @@ def main() -> None:
     apply_dataset_env_from_argv()
     ap = argparse.ArgumentParser(description="Expected body → CLIP text embeds")
     ap.add_argument("--mind-dataset-subdir", type=str, default="MIND_2000")
-    ap.add_argument("--split", type=str, default="train", choices=["train", "test"])
+    ap.add_argument("--split", type=str, default="train", choices=["train", "test", "test_final"])
     ap.add_argument("--expected-body-dir", type=str, default=None)
     ap.add_argument("--tsv", type=str, default=None)
     ap.add_argument("--out", type=str, default=None)
@@ -68,16 +73,19 @@ def main() -> None:
     args = ap.parse_args()
 
     apply_dataset_env_from_argv(["--mind-dataset-subdir", args.mind_dataset_subdir])
+    body_split = "test" if args.split in ("test", "test_final") else "train"
     expected_dir = (
         resolve_project_path(args.expected_body_dir)
         if args.expected_body_dir
-        else default_expected_body_dir(str(_ROOT), args.mind_dataset_subdir, split=args.split)
+        else default_expected_body_dir(str(_ROOT), args.mind_dataset_subdir, split=body_split)
     )
     tsv_path = resolve_project_path(args.tsv) if args.tsv else _split_tsv(args.mind_dataset_subdir, args.split)
     if args.out:
         out_path = resolve_project_path(args.out)
     elif args.split == "train":
         out_path = default_b1_train_cache_path(args.mind_dataset_subdir)
+    elif args.split == "test_final":
+        out_path = default_b1_test_final_cache_path(args.mind_dataset_subdir)
     else:
         out_path = default_b1_cache_path(args.mind_dataset_subdir)
 

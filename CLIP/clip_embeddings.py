@@ -46,6 +46,8 @@ DEFAULT_ACTUAL_BODY_TEXT_CACHE_NAME = "{subdir}_clip_text_actual_body_train.npz"
 DEFAULT_DELTA_CACHE_NAME = "{subdir}_clip_text_image_delta.npz"
 DEFAULT_EXPECTED_IMAGE_TRAIN_CACHE_NAME = "{subdir}_clip_expected_image_train.npz"
 DEFAULT_EXPECTED_IMAGE_TEST_CACHE_NAME = "{subdir}_clip_expected_image_test.npz"
+DEFAULT_B1_TEST_FINAL_CACHE_NAME = "{subdir}_clip_b1_text_expected_test_final.npz"
+DEFAULT_EXPECTED_IMAGE_TEST_FINAL_CACHE_NAME = "{subdir}_clip_expected_image_test_final.npz"
 
 _HEADER_IDS = frozenset({"news_id", "clicked_news", "id"})
 
@@ -128,6 +130,27 @@ def default_expected_image_test_path(mind_dataset_subdir: str) -> str:
         / "cache"
         / DEFAULT_EXPECTED_IMAGE_TEST_CACHE_NAME.format(subdir=mind_dataset_subdir)
     )
+
+
+def default_b1_test_final_cache_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT / "CLIP" / "cache" / DEFAULT_B1_TEST_FINAL_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_expected_image_test_final_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_TEST_FINAL_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_test_final_tsv(mind_dataset_subdir: str) -> str:
+    sub = (mind_dataset_subdir or "").strip()
+    fname = "Adressa_test_2000_final.tsv" if "adressa" in sub.lower() else "MIND_test_2000_final.tsv"
+    return str(_ROOT / "dataset" / sub / fname)
 
 
 def load_news_ids_from_tsv(news_tsv: str) -> List[str]:
