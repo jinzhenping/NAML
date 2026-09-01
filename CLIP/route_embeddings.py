@@ -727,8 +727,14 @@ def extract_prior_actual_bodies(
         try:
             emb, cached_ids = load_clip_npz(out_path)
             for nid, vec in zip(cached_ids, emb):
-                id_to_vec[str(nid)] = np.asarray(vec, dtype=np.float32)
-            print(f"[CLIP actual-body prior] resume cache {len(id_to_vec)} ids from {out_path}", flush=True)
+                v = np.asarray(vec, dtype=np.float32).reshape(-1)
+                # 중간 flush는 아직 안 뽑은 뉴스를 0벡터로 남겨 두므로, nonzero만 완료로 친다.
+                if np.any(v):
+                    id_to_vec[str(nid)] = v
+            print(
+                f"[CLIP actual-body prior] resume cache {len(id_to_vec)} nonzero ids from {out_path}",
+                flush=True,
+            )
         except Exception as e:
             print(f"[CLIP actual-body prior] 기존 cache를 읽지 못해 다시 추출합니다: {e}", flush=True)
             id_to_vec = {}
@@ -827,8 +833,8 @@ def extract_prior_actual_bodies(
             id_to_vec[nid] = vec
         n_done += len(chunk)
         n_batches += 1
+        _flush(clip_dim)
         if n_batches == 1 or n_batches % 5 == 0 or n_done >= len(todo):
-            _flush(clip_dim)
             print(f"[CLIP actual-body prior] encoded {n_done}/{len(todo)}", flush=True)
 
     del pipe
