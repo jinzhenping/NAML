@@ -232,9 +232,10 @@ def main() -> None:
         summary = mmrec_train(run_args)
         if summary:
             print(
-                f"[mmrec] best val epoch={summary.get('best_epoch')} "
-                f"{summary.get('selection_metric')} "
-                f"{(summary.get('best_metrics') or {}).get(summary.get('selection_metric') or 'MRR')}",
+                f"[mmrec] best val epoch={summary.get('best_epoch')}  "
+                f"MRR={(summary.get('best_metrics') or {}).get('MRR')}  "
+                f"NDCG@5={(summary.get('best_metrics') or {}).get('NDCG@5')}  "
+                f"Hit@1={(summary.get('best_metrics') or {}).get('Hit@1')}",
                 flush=True,
             )
 

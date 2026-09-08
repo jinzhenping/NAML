@@ -14,7 +14,7 @@ from model import mmrec
 from parameters import parse_args
 from transformers import AutoTokenizer
 from model import BertConfig
-from metrics import roc_auc_score, ndcg_score, mrr_score, ctr_score
+from metrics import ndcg_score, mrr_score, hit_at_k
 
 #layer for finetuning
 finetuneset={
@@ -209,7 +209,7 @@ def score_impressions(
         enable_shuffle=False,
         enable_gpu=args.enable_gpu,
     )
-    AUC, MRR, nDCG5, nDCG10, HIT1 = [], [], [], [], []
+    MRR, nDCG5, HIT1 = [], [], []
     device = _device(args)
     model.eval()
     with torch.no_grad():
@@ -231,38 +231,32 @@ def score_impressions(
                 )
                 score = torch.sum((news_vec_t + news_vec_v) * user_vecs, -1)
                 score = score.squeeze(0).cpu().detach().numpy()
-                AUC.append(roc_auc_score(label, score))
                 MRR.append(mrr_score(label, score))
                 nDCG5.append(ndcg_score(label, score, k=5))
-                nDCG10.append(ndcg_score(label, score, k=10))
-                HIT1.append(ctr_score(label, score, k=1))
-            if cnt % args.log_steps == 0 and AUC:
+                HIT1.append(hit_at_k(label, score, k=1))
+            if cnt % args.log_steps == 0 and MRR:
                 logging.info(
-                    "[{}] Ed: {}: {}".format(
+                    "[{}] Ed: {}: MRR={:.2f}\tNDCG@5={:.2f}\tHit@1={:.2f}".format(
                         hvd_rank,
                         cnt * args.batch_size,
-                        "\t".join(
-                            "{:0.2f}".format(np.mean(x) * 100)
-                            for x in (AUC, MRR, nDCG5, nDCG10)
-                        ),
+                        np.mean(MRR) * 100,
+                        np.mean(nDCG5) * 100,
+                        np.mean(HIT1) * 100,
                     )
                 )
 
-    n = len(AUC)
+    n = len(MRR)
     metrics = {
-        "AUC": float(np.mean(AUC)) if n else 0.0,
         "MRR": float(np.mean(MRR)) if n else 0.0,
         "NDCG@5": float(np.mean(nDCG5)) if n else 0.0,
-        "nDCG@10": float(np.mean(nDCG10)) if n else 0.0,
         "Hit@1": float(np.mean(HIT1)) if n else 0.0,
         "n": n,
     }
     if result_name:
         with open(os.path.join(args.log_dir, f"{result_name}_{hvd_rank}.txt"), "w") as fout:
-            fout.write(str(metrics["AUC"]) + " " + str(n) + "\n")
             fout.write(str(metrics["MRR"]) + " " + str(n) + "\n")
             fout.write(str(metrics["NDCG@5"]) + " " + str(n) + "\n")
-            fout.write(str(metrics["nDCG@10"]) + " " + str(n) + "\n")
+            fout.write(str(metrics["Hit@1"]) + " " + str(n) + "\n")
     dataloader.join()
     return metrics
 
@@ -457,12 +451,10 @@ def train(args):
                 hvd_local_rank,
             )
             logging.info(
-                "val epoch {} AUC={:.4f} MRR={:.4f} NDCG@5={:.4f} nDCG@10={:.4f} Hit@1={:.4f} (n={})".format(
+                "val epoch {} MRR={:.6f} NDCG@5={:.6f} Hit@1={:.6f} (n={})".format(
                     ep + 1,
-                    val_metrics["AUC"],
                     val_metrics["MRR"],
                     val_metrics["NDCG@5"],
-                    val_metrics["nDCG@10"],
                     val_metrics["Hit@1"],
                     val_metrics["n"],
                 )
@@ -510,12 +502,13 @@ def train(args):
         logging.info("val log → %s", log_json)
         if best_metrics:
             logging.info(
-                "best val epoch={} {}={:.6f} MRR={:.6f} NDCG@5={:.6f}".format(
+                "best val epoch={} {}={:.6f}  MRR={:.6f}  NDCG@5={:.6f}  Hit@1={:.6f}".format(
                     best_epoch,
                     sel_key,
                     best_score,
                     best_metrics["MRR"],
                     best_metrics["NDCG@5"],
+                    best_metrics["Hit@1"],
                 )
             )
     return summary
@@ -618,10 +611,9 @@ def test(args):
     )
     if hvd_size <= 1:
         with open(os.path.join(args.log_dir, "final_result.txt"), "w") as fout:
-            fout.write(str(metrics["AUC"]) + " " + str(metrics["n"]) + "\n")
-            fout.write(str(metrics["MRR"]) + " " + str(metrics["n"]) + "\n")
-            fout.write(str(metrics["NDCG@5"]) + " " + str(metrics["n"]) + "\n")
-            fout.write(str(metrics["nDCG@10"]) + " " + str(metrics["n"]) + "\n")
+            fout.write("MRR\t{:.6f}\n".format(metrics["MRR"]))
+            fout.write("NDCG@5\t{:.6f}\n".format(metrics["NDCG@5"]))
+            fout.write("Hit@1\t{:.6f}\n".format(metrics["Hit@1"]))
         with open(os.path.join(args.log_dir, "test_metrics.json"), "w", encoding="utf-8") as f:
             json.dump(
                 {"ckpt": ckpt_path, "ckpt_epoch": ckpt_epoch, "val": ckpt_val, "test": metrics},
@@ -630,11 +622,9 @@ def test(args):
                 indent=2,
             )
         logging.info(
-            "TEST AUC={:.4f} MRR={:.4f} NDCG@5={:.4f} nDCG@10={:.4f} Hit@1={:.4f} (n={})".format(
-                metrics["AUC"],
+            "TEST MRR={:.6f}  NDCG@5={:.6f}  Hit@1={:.6f}  (n={})".format(
                 metrics["MRR"],
                 metrics["NDCG@5"],
-                metrics["nDCG@10"],
                 metrics["Hit@1"],
                 metrics["n"],
             )
@@ -647,7 +637,7 @@ if __name__ == "__main__":
     Path(args.model_dir).mkdir(parents=True, exist_ok=True)
     Path(args.log_dir).mkdir(parents=True, exist_ok=True)
     if 'cal' in args.mode:
-        metric = [[0,0] for i in range(4)]
+        metric = [[0,0] for i in range(3)]
         for i in range(args.hvd_size):
             with open(os.path.join(args.log_dir,f'test_result_{i}.txt'),'r')as f:
                 cnt = 0
@@ -659,9 +649,10 @@ if __name__ == "__main__":
                     metric[cnt][0]+=sum_val
                     metric[cnt][1]+=tot
                     cnt+=1
+        names = ["MRR", "NDCG@5", "Hit@1"]
         with open(os.path.join(args.log_dir,'final_result.txt'),'w') as fout :
-            for i in range(4):
-                fout.write(str(metric[i][0]/metric[i][1])+' '+str(metric[i][1])+'\n')
+            for i in range(3):
+                fout.write(f"{names[i]}\t{metric[i][0]/metric[i][1]:.6f}\n")
         exit()
     if 'train' in args.mode:
         utils.setuplogger(os.path.join(args.log_dir,'log_train.txt'))

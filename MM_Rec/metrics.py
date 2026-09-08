@@ -1,4 +1,3 @@
-from sklearn.metrics import roc_auc_score
 import numpy as np
 
 def dcg_score(y_true, y_score, k=10):
@@ -21,7 +20,12 @@ def mrr_score(y_true, y_score):
     return np.sum(rr_score) / np.sum(y_true)
 
 
-def ctr_score(y_true, y_score, k=1):
-    order = np.argsort(y_score)[::-1]
-    y_true = np.take(y_true, order[:k])
-    return np.mean(y_true)
+def hit_at_k(y_true, y_score, k=1):
+    """Hit@K: 상위 K개 예측 중 정답이 있으면 1, 없으면 0."""
+    if len(y_true) == 0 or np.sum(y_true) == 0:
+        return 0.0
+    y_score = np.array(y_score).flatten()
+    y_true = np.array(y_true).flatten()
+    sorted_indices = np.argsort(y_score)[::-1]
+    top_k_indices = sorted_indices[:k]
+    return 1.0 if np.any(y_true[top_k_indices] == 1) else 0.0
