@@ -45,19 +45,33 @@ def init_hvd_cuda(enable_hvd=True, enable_gpu=True):
     return hvd_size, hvd_rank, hvd_local_rank
 
 
-def setuplogger(log_file):
+def setuplogger(log_file, console_level=logging.WARNING):
+    """파일에는 INFO 전부, 콘솔에는 WARNING 이상만 (기본)."""
     root = logging.getLogger()
     root.setLevel(logging.INFO)
-    handler = logging.StreamHandler(sys.stdout)
-    handler.setLevel(logging.INFO)
-    formatter = logging.Formatter("[%(levelname)s %(asctime)s] %(message)s")
-    handler.setFormatter(formatter)
-    root.addHandler(handler)
-    handler = logging.FileHandler(log_file)
-    handler.setLevel(logging.INFO)
-    formatter = logging.Formatter("[%(levelname)s %(asctime)s] %(message)s")
-    handler.setFormatter(formatter)
-    root.addHandler(handler)
+    for h in list(root.handlers):
+        root.removeHandler(h)
+        try:
+            h.close()
+        except Exception:
+            pass
+
+    fmt = logging.Formatter("[%(levelname)s %(asctime)s] %(message)s")
+    sh = logging.StreamHandler(sys.stdout)
+    sh.setLevel(console_level)
+    sh.setFormatter(fmt)
+    root.addHandler(sh)
+
+    Path = __import__("pathlib").Path
+    Path(log_file).parent.mkdir(parents=True, exist_ok=True)
+    fh = logging.FileHandler(log_file)
+    fh.setLevel(logging.INFO)
+    fh.setFormatter(fmt)
+    root.addHandler(fh)
+
+    # HuggingFace / HTTP 잡음 줄이기
+    for name in ("httpx", "httpcore", "urllib3", "transformers", "filelock", "huggingface_hub"):
+        logging.getLogger(name).setLevel(logging.WARNING)
 
 
 def dump_args(args):
