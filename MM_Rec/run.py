@@ -16,23 +16,33 @@ from transformers import AutoTokenizer
 from model import BertConfig
 from metrics import ndcg_score, mrr_score, hit_at_k
 
-#layer for finetuning
-finetuneset={
-    'news_encoder.bert.encoder.layer.7',
-    'news_encoder.bert.encoder.layer.6',
-    'news_encoder.bert.encoder.layer.5',
-    'news_encoder.bert.encoder.layer.4',
-    'news_encoder.bert.encoder.c_layer.0',
-    'news_encoder.bert.encoder.c_layer.1',
-    'news_encoder.bert.encoder.v_layer.0',
-    'news_encoder.bert.encoder.v_layer.1',
-    'news_encoder.bert.t_pooler',
-    'news_encoder.bert.v_pooler',
-    'news_encoder.bert.t_pooler_new',
-    'news_encoder.bert.v_pooler_new',
-    'news_encoder.bert.v_embeddings',
-    'user_encoder',
-}
+def build_finetuneset(config):
+    """원 MM-Rec: 텍스트 마지막 4층 + visual/co-attention 전부 + user encoder."""
+    n_t = int(getattr(config, "num_hidden_layers", 8))
+    v_n = int(getattr(config, "v_num_hidden_layers", 2))
+    c_n = len(getattr(config, "v_biattention_id", [0, 1]))
+    names = {
+        "news_encoder.bert.t_pooler",
+        "news_encoder.bert.v_pooler",
+        "news_encoder.bert.t_pooler_new",
+        "news_encoder.bert.v_pooler_new",
+        "news_encoder.bert.v_embeddings",
+        "user_encoder",
+    }
+    for i in range(max(0, n_t - 4), n_t):
+        names.add(f"news_encoder.bert.encoder.layer.{i}")
+    for i in range(v_n):
+        names.add(f"news_encoder.bert.encoder.v_layer.{i}")
+    for i in range(c_n):
+        names.add(f"news_encoder.bert.encoder.c_layer.{i}")
+    return names
+
+
+def _param_trainable(name, prefixes):
+    for p in prefixes:
+        if name == p or name.startswith(p + "."):
+            return True
+    return False
 
 
 def _news_tsv_path(args):
@@ -312,14 +322,10 @@ def train(args):
     
     model.train()
 
+    finetuneset = build_finetuneset(config)
     for name,para in model.named_parameters():
         logging.info(name)
-        req_grad = False
-        for name_finetune in finetuneset:
-            if name_finetune in name:
-                req_grad = True
-                break
-        para.requires_grad = req_grad
+        para.requires_grad = _param_trainable(name, finetuneset)
 
     if args.enable_gpu:
         model = model.cuda()

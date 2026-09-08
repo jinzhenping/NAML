@@ -46,7 +46,15 @@ def copy_bert_text_weights(enc: news_encoder) -> int:
 def build_news_encoder(config, from_pretrained: str, default_gpu: bool = True):
     ckpt = (from_pretrained or "").strip()
     if ckpt and os.path.isfile(ckpt):
-        logger.info("loading ViLBERT / news encoder weights from %s", ckpt)
+    logger.info("loading ViLBERT / news encoder weights from %s", ckpt)
+    n_t = getattr(config, "num_hidden_layers", None)
+    v_n = getattr(config, "v_num_hidden_layers", None)
+    if n_t == 8 and v_n == 2:
+        logger.warning(
+            "현재 config는 축소 8층(텍스트 8 + visual 2)입니다. "
+            "공식 ViLBERT 가중치는 --config-file MM_Rec/config/bert_base_8layer_8conect.json "
+            "(또는 6-layer면 bert_base_6layer_6conect.json) 과 같이 쓰세요."
+        )
         enc = news_encoder.from_pretrained(ckpt, config, default_gpu=default_gpu)
         if enc is None:
             raise FileNotFoundError(f"failed to load encoder from {ckpt}")

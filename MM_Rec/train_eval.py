@@ -31,9 +31,24 @@ val(MIND_test_(2000).tsv) 평가:
 
   python MM_Rec/train_eval.py --stage test --eval-split dev --mind-dataset-subdir MIND_2000
 
-ViLBERT 가중치가 있으면:
+ViLBERT 사전학습 가중치 (권장). 8-layer Conceptual Captions:
 
-  python MM_Rec/train_eval.py --from-pretrained /path/to/pytorch_model_8.bin
+  브라우저에서 받아 MM_Rec/pretrained/ 에 두기:
+  https://drive.google.com/drive/folders/1M-QoxLB6WJaqY9nq4KzPwfpJ8Va5FNCy
+
+  python MM_Rec/train_eval.py --mind-dataset-subdir MIND_2000 \\
+      --from-pretrained MM_Rec/pretrained/pytorch_model_8.bin \\
+      --config-file MM_Rec/config/bert_base_8layer_8conect.json
+
+받기 쉬운 6-layer (wget):
+
+  mkdir -p MM_Rec/pretrained
+  wget -O MM_Rec/pretrained/pretrained_model.bin \\
+      https://dl.fbaipublicfiles.com/vilbert-multi-task/pretrained_model.bin
+  python MM_Rec/train_eval.py --mind-dataset-subdir MIND_2000 \\
+      --from-pretrained MM_Rec/pretrained/pretrained_model.bin \\
+      --config-file MM_Rec/config/bert_base_6layer_6conect.json
+
 """
 from __future__ import annotations
 
