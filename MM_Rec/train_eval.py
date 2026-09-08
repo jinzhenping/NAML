@@ -165,7 +165,7 @@ def main() -> None:
     ap.add_argument("--thumbnail-dir", type=str, default=str(DEFAULT_THUMBNAIL_DIR))
     ap.add_argument("--from-pretrained", type=str, default="")
     ap.add_argument("--config-file", type=str, default=str(default_config_file()))
-    ap.add_argument("--epochs", type=int, default=3)
+    ap.add_argument("--epochs", type=int, default=10)
     ap.add_argument("--batch-size", type=int, default=8)
     ap.add_argument("--lr", type=float, default=1e-5)
     ap.add_argument("--npratio", type=int, default=4)

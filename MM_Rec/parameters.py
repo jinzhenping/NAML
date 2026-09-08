@@ -73,7 +73,7 @@ def parse_args():
 
     # model training
     parser.add_argument("--debug", type=utils.str2bool, default=False)
-    parser.add_argument("--epochs", type=int, default=3)
+    parser.add_argument("--epochs", type=int, default=10)
     parser.add_argument("--epoch", type=int, default=None, help="alias of --epochs")
     parser.add_argument("--lr", type=float, default=0.0001)
     parser.add_argument(
