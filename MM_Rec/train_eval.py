@@ -8,6 +8,12 @@ MIND_2000 (또는 Adressa_2000)으로 MM-Rec 학습/평가.
   conda activate clip_cu128
   python MM_Rec/train_eval.py --mind-dataset-subdir MIND_2000
 
+하이퍼파라미터 탐색 (val MRR, CLIP/NAML과 동일 프로토콜):
+
+  python MM_Rec/tune.py --mind-dataset-subdir MIND_2000 --two-phase \\
+      --trials 24 --screening-epochs 3 --refine-top-k 5 --epochs-per-trial 10
+
+
 에폭마다 val(MIND_test_(2000).tsv) MRR을 보고 최고 체크포인트(best.pt)를
 MIND_test_2000_final.tsv 로 평가한다. 선택 지표를 nDCG@5로 바꾸려면:
 
