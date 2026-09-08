@@ -15,7 +15,14 @@ def parse_args():
         "./data",
     )
     parser.add_argument("--hvd_size",type=int,default=1)
-    parser.add_argument("--valid_dir",type=str,default=None)
+    parser.add_argument("--valid_dir",type=str,default="dev")
+    parser.add_argument(
+        "--selection_metric",
+        type=str,
+        default="MRR",
+        choices=["MRR", "nDCG@5", "NDCG@5"],
+        help="validation metric used to pick the best epoch",
+    )
     parser.add_argument("--dataset",
                         type=str,
                         default='MIND')

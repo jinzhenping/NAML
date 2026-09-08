@@ -117,13 +117,17 @@ def load_matrix(embedding_file_path, word_dict, word_embedding_dim):
 def latest_checkpoint(directory):
     if not os.path.exists(directory):
         return None
-    print(os.listdir(directory))
-    if len(os.listdir(directory))==0:
+    names = os.listdir(directory)
+    if len(names)==0:
         return None
-    all_checkpoints = {
-        int(x.split('.')[-2].split('-')[-1]): x
-        for x in os.listdir(directory)
-    }
+    all_checkpoints = {}
+    for x in names:
+        if not x.endswith(".pt") or not x.startswith("epoch-"):
+            continue
+        try:
+            all_checkpoints[int(x.split('.')[-2].split('-')[-1])] = x
+        except (ValueError, IndexError):
+            continue
     if not all_checkpoints:
         return None
     return os.path.join(directory,

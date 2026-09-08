@@ -8,6 +8,12 @@ MIND_2000 (또는 Adressa_2000)으로 MM-Rec 학습/평가.
   conda activate clip_cu128
   python MM_Rec/train_eval.py --mind-dataset-subdir MIND_2000
 
+에폭마다 val(MIND_test_(2000).tsv) MRR을 보고 최고 체크포인트(best.pt)를
+MIND_test_2000_final.tsv 로 평가한다. 선택 지표를 nDCG@5로 바꾸려면:
+
+  python MM_Rec/train_eval.py --selection-metric NDCG@5 --mind-dataset-subdir MIND_2000
+
+
 단계만 따로:
 
   python MM_Rec/train_eval.py --stage prepare --mind-dataset-subdir MIND_2000
@@ -64,6 +70,7 @@ def _build_run_args(
     load_ckpt: str | None,
     debug: bool,
     enable_gpu: bool,
+    selection_metric: str = "MRR",
 ) -> argparse.Namespace:
     split_dir = "test" if eval_split == "test" else "dev"
     argv = [
@@ -80,6 +87,10 @@ def _build_run_args(
         "train",
         "--test_dir",
         split_dir,
+        "--valid_dir",
+        "dev",
+        "--selection_metric",
+        selection_metric,
         "--filename_pat",
         "train_*.tsv",
         "--roi_npz_file",
@@ -144,6 +155,13 @@ def main() -> None:
         choices=["prepare", "extract-roi", "train", "test", "all"],
     )
     ap.add_argument("--eval-split", type=str, default="test", choices=["test", "dev"])
+    ap.add_argument(
+        "--selection-metric",
+        type=str,
+        default="MRR",
+        choices=["MRR", "NDCG@5", "nDCG@5"],
+        help="val에서 best epoch를 고를 지표 (CLIP/NAML과 같이 기본 MRR)",
+    )
     ap.add_argument("--thumbnail-dir", type=str, default=str(DEFAULT_THUMBNAIL_DIR))
     ap.add_argument("--from-pretrained", type=str, default="")
     ap.add_argument("--config-file", type=str, default=str(default_config_file()))
@@ -152,7 +170,7 @@ def main() -> None:
     ap.add_argument("--lr", type=float, default=1e-5)
     ap.add_argument("--npratio", type=int, default=4)
     ap.add_argument("--force-extract", action="store_true")
-    ap.add_argument("--load-ckpt", type=str, default="epoch-3.pt")
+    ap.add_argument("--load-ckpt", type=str, default="best.pt")
     ap.add_argument("--debug", action="store_true")
     ap.add_argument("--cpu", action="store_true")
     args = ap.parse_args()
@@ -208,20 +226,29 @@ def main() -> None:
             load_ckpt=None,
             debug=args.debug,
             enable_gpu=enable_gpu,
+            selection_metric=args.selection_metric,
         )
         utils.setuplogger(os.path.join(run_args.log_dir, "log_train.txt"))
-        mmrec_train(run_args)
+        summary = mmrec_train(run_args)
+        if summary:
+            print(
+                f"[mmrec] best val epoch={summary.get('best_epoch')} "
+                f"{summary.get('selection_metric')} "
+                f"{(summary.get('best_metrics') or {}).get(summary.get('selection_metric') or 'MRR')}",
+                flush=True,
+            )
 
     if args.stage in ("test", "all"):
         ckpt_name = args.load_ckpt
         if args.stage == "all":
-            ckpt_name = f"epoch-{args.epochs}.pt"
+            ckpt_name = "best.pt"
+        eval_split = "test" if args.stage == "all" else args.eval_split
         run_args = _build_run_args(
             mode="test",
             mind_dataset_subdir=args.mind_dataset_subdir,
             data_root=data_root,
             save_root=save_root,
-            eval_split=args.eval_split,
+            eval_split=eval_split,
             epochs=args.epochs,
             batch_size=args.batch_size,
             lr=args.lr,
@@ -231,6 +258,7 @@ def main() -> None:
             load_ckpt=ckpt_name,
             debug=args.debug,
             enable_gpu=enable_gpu,
+            selection_metric=args.selection_metric,
         )
         utils.setuplogger(os.path.join(run_args.log_dir, "log_test.txt"))
         mmrec_test(run_args)
