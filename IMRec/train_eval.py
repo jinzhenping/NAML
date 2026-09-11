@@ -157,7 +157,10 @@ def train_one(args) -> dict:
         flush=True,
     )
 
-    save_root = saved_dir(args.mind_dataset_subdir) / args.model.replace("-", "_")
+    if getattr(args, "save_root", None):
+        save_root = Path(args.save_root)
+    else:
+        save_root = saved_dir(args.mind_dataset_subdir) / args.model.replace("-", "_")
     (save_root / "ckpts").mkdir(parents=True, exist_ok=True)
     (save_root / "logs").mkdir(parents=True, exist_ok=True)
 
@@ -224,11 +227,20 @@ def train_one(args) -> dict:
     summary = {
         "best_epoch": best_epoch,
         "best_val": best_metrics,
+        "best_mrr": best_mrr,
         "epoch_logs": epoch_logs,
+        "ckpt": str(save_root / "ckpts" / "best.pt"),
     }
     (save_root / "logs" / "val_epoch_log.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+
+    if getattr(args, "skip_final_test", False):
+        print(
+            f"[imrec] skip final test  best_epoch={best_epoch} val_MRR={best_mrr:.6f}",
+            flush=True,
+        )
+        return summary
 
     # final test with best
     ckpt = torch.load(save_root / "ckpts" / "best.pt", map_location=device)
@@ -283,6 +295,13 @@ def main() -> None:
     ap.add_argument("--load-ckpt", type=str, default="best.pt")
     ap.add_argument("--debug", action="store_true")
     ap.add_argument("--cpu", action="store_true")
+    ap.add_argument("--skip-final-test", action="store_true")
+    ap.add_argument(
+        "--save-root",
+        type=str,
+        default=None,
+        help="체크포인트/로그 저장 루트 (튜닝 trial용)",
+    )
     args = ap.parse_args()
     train_one(args)
 

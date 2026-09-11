@@ -29,10 +29,24 @@ The dataset for paper "Why Do We Click: Visual Impression-aware News Recommendat
 conda activate clip_cu128
 
 # NRMS-IM
-python IMRec/train_eval.py --model nrms-im --mind-dataset-subdir MIND_2000
+python IMRec/train_eval.py --model nrms-im --mind-dataset-subdir MIND_2000 \
+    --glove-path glove/glove.6B.100d.txt
 
 # FIM-IM
-python IMRec/train_eval.py --model fim-im --mind-dataset-subdir MIND_2000
+python IMRec/train_eval.py --model fim-im --mind-dataset-subdir MIND_2000 \
+    --glove-path glove/glove.6B.100d.txt
+```
+
+하이퍼파라미터 튜닝 (val MRR, MM_Rec과 동일 프로토콜):
+
+```bash
+python IMRec/tune.py --model nrms-im --mind-dataset-subdir MIND_2000 --two-phase \
+    --trials 24 --screening-epochs 3 --refine-top-k 5 --epochs-per-trial 30 \
+    --glove-path glove/glove.6B.100d.txt
+
+python IMRec/tune.py --model fim-im --mind-dataset-subdir MIND_2000 --two-phase \
+    --trials 24 --screening-epochs 3 --refine-top-k 5 --epochs-per-trial 30 \
+    --glove-path glove/glove.6B.100d.txt
 ```
 
 단계만:
