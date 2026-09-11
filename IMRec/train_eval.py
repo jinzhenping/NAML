@@ -265,7 +265,7 @@ def main() -> None:
     )
     ap.add_argument("--thumbnail-dir", type=str, default=str(DEFAULT_THUMBNAIL_DIR))
     ap.add_argument("--glove-path", type=str, default="")
-    ap.add_argument("--epochs", type=int, default=10)
+    ap.add_argument("--epochs", type=int, default=30)
     ap.add_argument("--batch-size", type=int, default=32)
     ap.add_argument("--eval-batch-size", type=int, default=64)
     ap.add_argument("--lr", type=float, default=1e-4)
