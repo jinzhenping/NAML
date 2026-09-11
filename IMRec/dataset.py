@@ -84,6 +84,7 @@ def build_news_tables(
     news_name = DATASET_FILE_PRESETS[mind_dataset_subdir][0]
     news_path = raw / news_name
 
+    print("[data] reading news tsv...", flush=True)
     category_dict = {"PADDING": 0}
     word_dict = {"PADDING": 0}
     rows: List[Tuple[str, str, List[str]]] = []
@@ -103,23 +104,6 @@ def build_news_tables(
                 if w not in word_dict:
                     word_dict[w] = len(word_dict)
             rows.append((nid, cat, toks))
-
-    # features
-    feat_file = features_path(mind_dataset_subdir)
-    feat_map: Dict[str, dict] = {}
-    if feat_file.is_file():
-        z = np.load(feat_file, allow_pickle=True)
-        for i, nid in enumerate(z["news_ids"].tolist()):
-            feat_map[str(nid)] = {
-                "word_vis": z["word_vis"][i],
-                "word_vis_mask": z["word_vis_mask"][i],
-                "cover_regions": z["cover_regions"][i],
-                "category_vis": z["category_vis"][i],
-                "global_feat": z["global_feat"][i],
-            }
-        print(f"[data] loaded features for {len(feat_map)} news", flush=True)
-    else:
-        print(f"[data] WARNING: no features at {feat_file}; using zeros", flush=True)
 
     n = len(rows) + 1  # index 0 = padding news
     L = max_title_len
@@ -142,18 +126,40 @@ def build_news_tables(
         for t, w in enumerate(toks):
             title_ids[idx, t] = word_dict[w]
             title_mask[idx, t] = 1.0
-        if nid in feat_map:
-            fm = feat_map[nid]
-            word_vis[idx] = fm["word_vis"]
-            word_vis_mask[idx] = fm["word_vis_mask"]
-            cover_regions[idx] = fm["cover_regions"]
-            category_vis[idx] = fm["category_vis"]
-            global_feat[idx] = fm["global_feat"]
 
+    feat_file = features_path(mind_dataset_subdir)
+    if feat_file.is_file():
+        print(f"[data] mmap features ← {feat_file}", flush=True)
+        z = np.load(feat_file, allow_pickle=True, mmap_mode="r")
+        feat_ids = [str(x) for x in z["news_ids"].tolist()]
+        # load arrays once (mmap may still page in); map by id without per-row dict copies
+        src_word = np.asarray(z["word_vis"])
+        src_wmask = np.asarray(z["word_vis_mask"])
+        src_cover = np.asarray(z["cover_regions"])
+        src_cat = np.asarray(z["category_vis"])
+        src_glob = np.asarray(z["global_feat"])
+        hit = 0
+        for i, nid in enumerate(feat_ids):
+            idx = news_index.get(nid)
+            if idx is None:
+                continue
+            word_vis[idx] = src_word[i]
+            word_vis_mask[idx] = src_wmask[i]
+            cover_regions[idx] = src_cover[i]
+            category_vis[idx] = src_cat[i]
+            global_feat[idx] = src_glob[i]
+            hit += 1
+        del src_word, src_wmask, src_cover, src_cat, src_glob, z
+        print(f"[data] features aligned hit={hit}/{len(feat_ids)}", flush=True)
+    else:
+        print(f"[data] WARNING: no features at {feat_file}; using zeros", flush=True)
+
+    print(f"[data] loading GloVe ({glove_path or 'random'}) ...", flush=True)
     emb = load_glove(word_dict, glove_path, emb_dim) if glove_path else None
     if emb is None:
         emb = np.random.uniform(-0.1, 0.1, size=(len(word_dict), emb_dim)).astype(np.float32)
         emb[0] = 0.0
+    print(f"[data] tables ready news={n-1} vocab={len(word_dict)}", flush=True)
 
     return NewsTables(
         news_ids=news_ids,

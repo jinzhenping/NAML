@@ -95,10 +95,16 @@ def train_one(args) -> dict:
             print(f"[imrec] feature cache ok: {features_path(args.mind_dataset_subdir)}", flush=True)
         else:
             extract_all(args.mind_dataset_subdir, force=args.force_extract, device=device)
+            import gc
+
+            gc.collect()
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
 
     if args.stage not in ("train", "test", "all"):
         return {}
 
+    print("[imrec] building news tables...", flush=True)
     news_name, train_name, val_name, test_name = DATASET_FILE_PRESETS[args.mind_dataset_subdir]
     raw = dataset_raw_dir(args.mind_dataset_subdir)
     title_len = 15 if "nrms" in args.model.lower() else args.max_title_len
@@ -116,6 +122,7 @@ def train_one(args) -> dict:
         emb_dim=args.word_dim,
     )
 
+    print("[imrec] loading impressions...", flush=True)
     rng = random.Random(args.seed)
     train_imps, _ = load_impressions(
         raw / train_name,
@@ -154,6 +161,7 @@ def train_one(args) -> dict:
     (save_root / "ckpts").mkdir(parents=True, exist_ok=True)
     (save_root / "logs").mkdir(parents=True, exist_ok=True)
 
+    print("[imrec] building model...", flush=True)
     model = build_model(args.model, tables, args).to(device)
     if args.stage == "test":
         ckpt = save_root / "ckpts" / args.load_ckpt

@@ -210,6 +210,17 @@ def extract_all(
         global_feat=np.stack(globv),
     )
     print(f"[feat] saved {len(id_list)} news → {out}", flush=True)
+    # free ResNet before training
+    del local_m, glob_m
+    try:
+        import gc
+        import torch
+
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+    except Exception:
+        pass
     return out
 
 
