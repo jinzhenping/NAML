@@ -3,8 +3,8 @@
 """
 IMRec 하이퍼파라미터 탐색 (MM_Rec/tune.py 와 동일 프로토콜).
 
-각 trial: 지정 에폭 학습, val(MIND_test_(2000).tsv) MRR 최고 에폭 선택.
-전역 최고 best.pt 를 MIND_test_2000_final.tsv 로 최종 평가.
+각 trial: 지정 에폭 학습, val(MIND_dev_(2000).tsv) MRR 최고 에폭 선택.
+전역 최고 best.pt 를 MIND_test_(2000).tsv 로 최종 평가.
 
   python IMRec/tune.py --model nrms-im --mind-dataset-subdir MIND_2000 --two-phase \\
       --trials 24 --screening-epochs 3 --refine-top-k 5 --epochs-per-trial 30 \\

@@ -9,8 +9,8 @@ Source files
     Per line: news_id \t category \t subCategory \t title \t abstract
 - dataset/MIND_2000/MIND_train_(2000).tsv (has header)
     Per line: user \t clicked_news_ids \t candidate_news_ids \t labels (e.g. "1 0 0 0 0")
-- dataset/MIND_2000/MIND_test_(2000).tsv  (no header, used as dev split)
-- dataset/MIND_2000/MIND_test_2000_final.tsv (no header, used as test split)
+- dataset/MIND_2000/MIND_dev_(2000).tsv  (no header, used as dev split)
+- dataset/MIND_2000/MIND_test_(2000).tsv (no header, used as test split)
     Per line: user \t clicked_news_ids \t candidate_news_ids   (1st candidate is positive)
 
 Target format
@@ -37,8 +37,8 @@ DST_DIR = os.path.join('dataset', 'MIND-2000')
 
 SPLITS = OrderedDict([
     ('train', 'MIND_train_(2000).tsv'),
-    ('dev', 'MIND_test_(2000).tsv'),
-    ('test', 'MIND_test_2000_final.tsv'),
+    ('dev', 'MIND_dev_(2000).tsv'),
+    ('test', 'MIND_test_(2000).tsv'),
 ])
 
 DEFAULT_LIFETIME = 110462

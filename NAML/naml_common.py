@@ -116,20 +116,32 @@ def _discover_mind_tsv_in_folder(subdir: str):
     def _filter_non_final_test(paths: list[str]) -> list[str]:
         return [p for p in paths if '_final' not in os.path.basename(p).lower()]
 
+    def _pick_dev_or_test() -> list[str]:
+        """학습 중 validation용 TSV: MIND_dev_* 우선, 없으면 MIND_test_* (non-final)."""
+        devs = sorted(glob.glob(os.path.join(base, 'MIND_dev_*.tsv')))
+        if not devs:
+            devs = sorted(glob.glob(os.path.join(base, '*_dev_*.tsv')))
+        if devs:
+            return devs
+        tests = sorted(glob.glob(os.path.join(base, 'MIND_test_*.tsv')))
+        if len(tests) > 1:
+            tests = _filter_non_final_test(tests)
+        return tests
+
     news_name = _pick_news()
     if not news_name:
         return None
 
     trains = sorted(glob.glob(os.path.join(base, 'MIND_train_*.tsv')))
-    tests = sorted(glob.glob(os.path.join(base, 'MIND_test_*.tsv')))
-    if len(tests) > 1:
-        tests = _filter_non_final_test(tests)
+    tests = _pick_dev_or_test()
 
     if len(trains) != 1 or len(tests) != 1:
         trains = sorted(glob.glob(os.path.join(base, '*_train_*.tsv')))
-        tests = sorted(glob.glob(os.path.join(base, '*_test_*.tsv')))
-        if len(tests) > 1:
-            tests = _filter_non_final_test(tests)
+        tests = _pick_dev_or_test()
+        if not tests:
+            tests = sorted(glob.glob(os.path.join(base, '*_test_*.tsv')))
+            if len(tests) > 1:
+                tests = _filter_non_final_test(tests)
 
     if len(trains) != 1 or len(tests) != 1:
         return None

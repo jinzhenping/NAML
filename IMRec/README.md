@@ -23,7 +23,7 @@ The dataset for paper "Why Do We Click: Visual Impression-aware News Recommendat
 ## MIND_2000 학습/평가 (ours)
 
 뉴스 카드 합성 → ResNet-101 local/global feature → **NRMS-IM** / **FIM-IM** 학습.
-에폭마다 `MIND_test_(2000).tsv`(val) MRR로 best 선택 후 `MIND_test_2000_final.tsv` 평가.
+에폭마다 `MIND_dev_(2000).tsv`(val) MRR로 best 선택 후 `MIND_test_(2000).tsv` 평가.
 
 ```bash
 conda activate clip_cu128

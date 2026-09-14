@@ -72,7 +72,7 @@ def _parse_routes(raw: str) -> list:
 
 def _test_tsv_path(mind_dataset_subdir: str) -> str:
     names = DATASET_FILE_PRESETS.get(mind_dataset_subdir)
-    test_name = names[2] if names else "MIND_test_(2000).tsv"
+    test_name = names[2] if names else "MIND_dev_(2000).tsv"
     return str(_ROOT / "dataset" / mind_dataset_subdir / test_name)
 
 

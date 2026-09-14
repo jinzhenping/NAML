@@ -14,8 +14,8 @@ MIND_2000 (또는 Adressa_2000)으로 MM-Rec 학습/평가.
       --trials 24 --screening-epochs 3 --refine-top-k 5 --epochs-per-trial 10
 
 
-에폭마다 val(MIND_test_(2000).tsv) MRR을 보고 최고 체크포인트(best.pt)를
-MIND_test_2000_final.tsv 로 평가한다. 선택 지표를 nDCG@5로 바꾸려면:
+에폭마다 val(MIND_dev_(2000).tsv) MRR을 보고 최고 체크포인트(best.pt)를
+MIND_test_(2000).tsv 로 평가한다. 선택 지표를 nDCG@5로 바꾸려면:
 
   python MM_Rec/train_eval.py --selection-metric NDCG@5 --mind-dataset-subdir MIND_2000
 
@@ -27,7 +27,7 @@ MIND_test_2000_final.tsv 로 평가한다. 선택 지표를 nDCG@5로 바꾸려�
   python MM_Rec/train_eval.py --stage train --mind-dataset-subdir MIND_2000
   python MM_Rec/train_eval.py --stage test --mind-dataset-subdir MIND_2000 --eval-split test
 
-val(MIND_test_(2000).tsv) 평가:
+val(MIND_dev_(2000).tsv) 평가:
 
   python MM_Rec/train_eval.py --stage test --eval-split dev --mind-dataset-subdir MIND_2000
 

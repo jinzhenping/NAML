@@ -17,7 +17,8 @@ from typing import Dict, List, Optional, Tuple
 
 # naml_common.MIND_DATASET_PRESETS 단일 정의 (이 모듈만 수정하면 프리셋 일괄 반영)
 DATASET_FILE_PRESETS: Dict[str, Tuple[str, str, str]] = {
-    "MIND_2000": ("MIND_news.tsv", "MIND_train_(2000).tsv", "MIND_test_(2000).tsv"),
+    # 세 번째 값은 학습 중 validation(dev). held-out test는 MIND_test_(2000).tsv (--mind-test-tsv).
+    "MIND_2000": ("MIND_news.tsv", "MIND_train_(2000).tsv", "MIND_dev_(2000).tsv"),
     "Adressa_2000": ("Adressa_news.tsv", "Adressa_train_(2000).tsv", "Adressa_test_(2000).tsv"),
 }
 

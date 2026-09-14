@@ -3,7 +3,7 @@
 """
 튜닝/학습된 기대이미지 NAML을 최종 test TSV로 평가.
 
-기존 기대이미지 캐시(MIND_test_(2000).tsv / val)와 다른 pair라서
+기존 기대이미지 캐시(MIND_dev_(2000).tsv / val)와 다른 pair라서
 최종 test용 기대본문 embed → Δ 적용 캐시가 먼저 필요하다.
 
   conda activate clip_cu128
@@ -12,7 +12,7 @@
 
   conda activate tf28gpu
   python CLIP/eval_expected_image.py --mind-dataset-subdir MIND_2000 \
-    --mind-test-tsv dataset/MIND_2000/MIND_test_2000_final.tsv
+    --mind-test-tsv dataset/MIND_2000/MIND_test_(2000).tsv
 
   # prior recipe
   python CLIP/extract_expected_body_prior_embeds.py --split test_final --mind-dataset-subdir MIND_2000
@@ -79,7 +79,7 @@ def main() -> None:
         "--mind-test-tsv",
         type=str,
         default=None,
-        help="기본 dataset/<subdir>/MIND_test_2000_final.tsv",
+        help="기본 dataset/<subdir>/MIND_test_(2000).tsv",
     )
     ap.add_argument(
         "--weights",

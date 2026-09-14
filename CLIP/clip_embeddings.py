@@ -202,8 +202,9 @@ def default_expected_image_prior_test_final_path(mind_dataset_subdir: str) -> st
 
 
 def default_test_final_tsv(mind_dataset_subdir: str) -> str:
+    """Held-out test impression TSV (MIND_test_(2000).tsv)."""
     sub = (mind_dataset_subdir or "").strip()
-    fname = "Adressa_test_2000_final.tsv" if "adressa" in sub.lower() else "MIND_test_2000_final.tsv"
+    fname = "Adressa_test_2000_final.tsv" if "adressa" in sub.lower() else "MIND_test_(2000).tsv"
     return str(_ROOT / "dataset" / sub / fname)
 
 

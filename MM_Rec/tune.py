@@ -3,8 +3,8 @@
 """
 MM-Rec 하이퍼파라미터 탐색 (CLIP/NAML과 같은 프로토콜).
 
-각 trial: 지정 에폭 학습, val(MIND_test_(2000).tsv) MRR이 가장 좋은 에폭을 고른다.
-전역 최고 조합의 best.pt 를 MIND_test_2000_final.tsv 로 최종 평가한다.
+각 trial: 지정 에폭 학습, val(MIND_dev_(2000).tsv) MRR이 가장 좋은 에폭을 고른다.
+전역 최고 조합의 best.pt 를 MIND_test_(2000).tsv 로 최종 평가한다.
 
   conda activate clip_cu128
   python MM_Rec/tune.py --mind-dataset-subdir MIND_2000 --two-phase \\

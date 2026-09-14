@@ -27,11 +27,12 @@ resolve_project_path = _mm.resolve_project_path
 thumbnail_path = _mm.thumbnail_path
 
 DATASET_FILE_PRESETS = {
+    # news, train, dev(val), test(held-out)
     "MIND_2000": (
         "MIND_news.tsv",
         "MIND_train_(2000).tsv",
+        "MIND_dev_(2000).tsv",
         "MIND_test_(2000).tsv",
-        "MIND_test_2000_final.tsv",
     ),
     "Adressa_2000": (
         "Adressa_news.tsv",

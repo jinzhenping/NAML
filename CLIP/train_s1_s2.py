@@ -25,7 +25,7 @@ S2: S1과 같은 텍스트 + CLIP 썸네일 이미지 뷰
   conda activate clip_cu128
   python CLIP/clip_embeddings.py --mind-dataset-subdir MIND_2000
 
-  # 2) S1, S2 학습 (val = MIND_test_(2000).tsv)
+  # 2) S1, S2 학습 (val = MIND_dev_(2000).tsv)
   conda activate tf28gpu
   python CLIP/train_s1_s2.py --variant both --mind-dataset-subdir MIND_2000 \
     --tune-log saved_models/MIND_2000/naml_tune_actual_log.json

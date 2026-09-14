@@ -20,7 +20,7 @@
     --screening-epochs 3 --refine-top-k 10 --epochs-per-trial 10 --mind-dataset-subdir MIND_2000
   python CLIP/train_expected_image.py --recipe prior --mind-dataset-subdir MIND_2000
 
-  # 최종 test (MIND_test_2000_final.tsv)
+  # 최종 test (MIND_test_(2000).tsv)
   conda activate clip_cu128
   python CLIP/extract_expected_body_text_embeds.py --split test_final --mind-dataset-subdir MIND_2000
   python CLIP/build_expected_image_embeds.py --apply-delta-only --mind-dataset-subdir MIND_2000

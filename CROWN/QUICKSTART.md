@@ -31,8 +31,8 @@ lime_pure_crown_mind2000/
     ├── MIND_2000/                       # original raw files
     │   ├── MIND_news.tsv
     │   ├── MIND_train_(2000).tsv
-    │   ├── MIND_test_(2000).tsv         # used as dev split
-    │   └── MIND_test_2000_final.tsv     # used as test split
+    │   ├── MIND_dev_(2000).tsv          # used as dev split
+    │   └── MIND_test_(2000).tsv         # used as test split
     └── MIND-2000/                       # LIME-standard format (already converted)
         ├── train/{news.tsv, behaviors.tsv}
         ├── dev/{news.tsv, behaviors.tsv}
@@ -129,7 +129,7 @@ run and also written to `results/mind2000/CROWN-CROWN/#<run_index>-test`.
 
 - `MIND_train_(2000).tsv` carries the labels `1 0 0 0 0` in its last column,
   which are re-attached to candidate IDs as `Nxxx-1 Nyyy-0 ...`.
-- `MIND_test_(2000).tsv` (dev) and `MIND_test_2000_final.tsv` (test) have no
+- `MIND_dev_(2000).tsv` (dev) and `MIND_test_(2000).tsv` (test) have no
   labels; the first candidate of each row is treated as the positive sample
   (so it becomes `Nxxx-1` and the remaining four are `-0`).
 - The freshness / user-topic-lifetime fields in `behaviors.tsv` are filled

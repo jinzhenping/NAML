@@ -53,7 +53,7 @@ def _split_tsv(mind_dataset_subdir: str, split: str) -> str:
     news_name, train_name, test_name = names if names else (
         "MIND_news.tsv",
         "MIND_train_(2000).tsv",
-        "MIND_test_(2000).tsv",
+        "MIND_dev_(2000).tsv",
     )
     fname = train_name if split == "train" else test_name
     return str(_ROOT / "dataset" / mind_dataset_subdir / fname)

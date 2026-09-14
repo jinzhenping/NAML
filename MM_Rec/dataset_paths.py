@@ -11,11 +11,12 @@ _MMREC_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = _MMREC_DIR.parent
 
 DATASET_FILE_PRESETS: Dict[str, Tuple[str, str, str, str]] = {
+    # news, train, dev(val), test(held-out)
     "MIND_2000": (
         "MIND_news.tsv",
         "MIND_train_(2000).tsv",
+        "MIND_dev_(2000).tsv",
         "MIND_test_(2000).tsv",
-        "MIND_test_2000_final.tsv",
     ),
     "Adressa_2000": (
         "Adressa_news.tsv",
@@ -63,18 +64,28 @@ def discover_tsv_names(subdir: str) -> Tuple[str, str, str, Optional[str]]:
             news = fixed
             break
     trains = sorted(base.glob("MIND_train_*.tsv")) or sorted(base.glob("*_train_*.tsv"))
-    tests = [
-        p
-        for p in sorted(base.glob("MIND_test_*.tsv")) + sorted(base.glob("*_test_*.tsv"))
-        if "_final" not in p.name.lower()
-    ]
-    finals = [
-        p
-        for p in sorted(base.glob("*test*final*.tsv"))
-    ]
+    devs = (
+        sorted(base.glob("MIND_dev_*.tsv"))
+        or sorted(base.glob("*_dev_*.tsv"))
+        or [
+            p
+            for p in sorted(base.glob("MIND_test_*.tsv")) + sorted(base.glob("*_test_*.tsv"))
+            if "_final" not in p.name.lower()
+        ]
+    )
+    finals = (
+        sorted(base.glob("MIND_test_*.tsv"))
+        or sorted(base.glob("*_test_*.tsv"))
+        or sorted(base.glob("*test*final*.tsv"))
+    )
+    # held-out test: prefer MIND_test_*.tsv that is not also selected as dev
+    dev_name = devs[0].name if devs else "MIND_dev_(2000).tsv"
+    final_cands = [p for p in finals if p.name != dev_name]
+    if not final_cands:
+        final_cands = list(finals)
     train = trains[0].name if trains else "MIND_train_(2000).tsv"
-    test = tests[0].name if tests else "MIND_test_(2000).tsv"
-    final = finals[0].name if finals else None
+    test = dev_name
+    final = final_cands[0].name if final_cands else None
     return news, train, test, final
 
 

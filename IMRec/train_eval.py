@@ -4,9 +4,9 @@
 IMRec (NRMS-IM / FIM-IM) on MIND_2000.
 
 프로토콜 (NAML/CLIP/MM-Rec과 동일):
-  - 매폭마다 val(MIND_test_(2000).tsv) 평가
+  - 매폭마다 val(MIND_dev_(2000).tsv) 평가
   - val MRR 최고 에폭 저장
-  - best.pt 로 held-out test(MIND_test_2000_final.tsv) 평가
+  - best.pt 로 held-out test(MIND_test_(2000).tsv) 평가
 
   conda activate clip_cu128
   python IMRec/train_eval.py --model nrms-im --mind-dataset-subdir MIND_2000

@@ -8,8 +8,8 @@ dataset/<MIND_2000> TSV → MM-Rec behaviors 형식.
 출력 (MM_Rec/data/MIND_2000/):
   subnews.tsv
   MIND_2000/train/train_0.tsv
-  MIND_2000/dev/test_0.tsv     # MIND_test_(2000).tsv (val)
-  MIND_2000/test/test_0.tsv    # MIND_test_2000_final.tsv
+  MIND_2000/dev/test_0.tsv     # MIND_dev_(2000).tsv (val)
+  MIND_2000/test/test_0.tsv    # MIND_test_(2000).tsv
 """
 from __future__ import annotations
 

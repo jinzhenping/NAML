@@ -21,7 +21,7 @@ python NAML/naml_eval_test.py \
   --tune-log saved_models/naml_tune_expected_log.json \
   --mind-dataset-subdir MIND_2000 \
   --expected-body-first-n-sentences 3 \
-  --mind-test-tsv dataset/MIND_2000/MIND_test_2000_final.tsv
+  --mind-test-tsv dataset/MIND_2000/MIND_test_(2000).tsv
 
 # 학습(튜닝)과 동일하게 평가에서도 앞 N문장만 쓰려면 명시: --expected-body-first-n-sentences 3
 # 미지정이면 평가 시 전체 기대본문 문자열 사용(튜닝 로그의 N은 자동 반영하지 않음)
@@ -36,7 +36,7 @@ python NAML/naml_eval_test.py \
 #   --tune-log saved_models/MIND_2000/naml_tune_actual_cq_teacher_log.json
 #
 # 다른 테스트 split TSV (예: 후반 절반):
-#   --mind-test-tsv dataset/MIND_2000/MIND_test_(2000)_final.tsv
+#   --mind-test-tsv dataset/MIND_2000/MIND_test_(2000).tsv
 #
 # 기대본문만:
 #   --expected-only --expected-dir ...
@@ -316,8 +316,8 @@ def main() -> None:
         "--mind-test-tsv",
         type=str,
         default=None,
-        help="테스트 impression TSV (미지정이면 naml_common 기본, 예: MIND_test_(2000).tsv). "
-        "예: dataset/MIND_2000/MIND_test_(2000)_final.tsv 또는 MIND_test_(2000)_final.tsv",
+        help="테스트 impression TSV (미지정이면 naml_common 기본(dev). held-out: MIND_test_(2000).tsv). "
+        "예: dataset/MIND_2000/MIND_test_(2000).tsv",
     )
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument(
