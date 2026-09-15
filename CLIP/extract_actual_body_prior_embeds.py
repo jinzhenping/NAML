@@ -6,8 +6,11 @@
 MIND_news.tsv body 컬럼을 쓰고, 기본은 train TSV에 등장한 unique 뉴스만 인코딩한다.
 CLIP 77토큰 truncation, L2 없음. B2(기대본문 prior)와 같은 파이프.
 
+S3(NAML + prior 이미지)는 val/test 뉴스 ID도 필요하므로 --scope catalog 를 권장한다.
+기본 --scope train 만 쓰면 캐시에 없는 ID는 NAML에서 0벡터가 된다. resume는 nonzero ID를 건너뛴다.
+
   conda activate clip_cu128
-  python CLIP/extract_actual_body_prior_embeds.py --mind-dataset-subdir MIND_2000
+  python CLIP/extract_actual_body_prior_embeds.py --scope catalog --mind-dataset-subdir MIND_2000
 """
 from __future__ import annotations
 
