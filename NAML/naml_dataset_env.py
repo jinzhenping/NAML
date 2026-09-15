@@ -17,10 +17,18 @@ from typing import Dict, List, Optional, Tuple
 
 # naml_common.MIND_DATASET_PRESETS 단일 정의 (이 모듈만 수정하면 프리셋 일괄 반영)
 DATASET_FILE_PRESETS: Dict[str, Tuple[str, str, str]] = {
-    # 세 번째 값은 학습 중 validation(dev). held-out test는 MIND_test_(2000).tsv (--mind-test-tsv).
+    # 세 번째 값은 학습 중 validation(dev). held-out test는 default_held_out_test_filename().
     "MIND_2000": ("MIND_news.tsv", "MIND_train_(2000).tsv", "MIND_dev_(2000).tsv"),
     "Adressa_2000": ("Adressa_news.tsv", "Adressa_train_(2000).tsv", "Adressa_test_(2000).tsv"),
 }
+
+
+def default_held_out_test_filename(subdir: str) -> str:
+    """bash 괄호 이스케이프 없이 코드에서 held-out test TSV 이름을 고른다."""
+    s = (subdir or "").strip()
+    if "adressa" in s.lower():
+        return "Adressa_test_2000_final.tsv"
+    return "MIND_test_(2000).tsv"
 
 # k-means / eval 기본 경로 (프로젝트 루트 기준 상대). --mind-dataset-subdir 가 Adressa 이면 Adressa CSV·가중치.
 _DEFAULT_KMEANS_K = 3

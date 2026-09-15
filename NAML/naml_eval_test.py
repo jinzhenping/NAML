@@ -61,7 +61,7 @@ if str(_ROOT / "NAML") not in sys.path:
 
 # naml_common 은 import 시점에 MIND_DATASET_SUBDIR·뉴스/TSV 파일명을 고정한다.
 # main() 이후에 --mind-dataset-subdir 를 넣어도 이미 늦으므로, 배치 제너레이터 import 전에 argv 반영.
-from naml_dataset_env import apply_dataset_env_from_argv
+from naml_dataset_env import apply_dataset_env_from_argv, default_held_out_test_filename
 
 apply_dataset_env_from_argv()
 
@@ -315,11 +315,19 @@ def main() -> None:
         help="가중치 학습 시와 동일한 히스토리 길이(기본 50). 스크립트 시작 argv에 있어야 naml_common import 시 반영됨",
     )
     parser.add_argument(
+        "--split",
+        type=str,
+        default="test",
+        choices=["test", "val"],
+        help="test: held-out MIND_test_(2000).tsv (기본). val: 학습 validation MIND_dev_(2000).tsv. "
+        "--mind-test-tsv 가 있으면 그 경로가 우선",
+    )
+    parser.add_argument(
         "--mind-test-tsv",
         type=str,
         default=None,
-        help="테스트 impression TSV (미지정이면 naml_common 기본(dev). held-out: MIND_test_(2000).tsv). "
-        "예: dataset/MIND_2000/MIND_test_(2000).tsv",
+        help="impression TSV 직접 지정. 괄호가 있으면 반드시 따옴표로 감싸기. "
+        "미지정 시 --split 기본값(test)을 코드에서 고름",
     )
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument(
@@ -389,6 +397,14 @@ def main() -> None:
             print(f"오류: --mind-test-tsv 파일을 찾을 수 없습니다: {args.mind_test_tsv}", file=sys.stderr)
             sys.exit(1)
         print(f"MIND 테스트 TSV (--mind-test-tsv): {mind_test_tsv_override}", flush=True)
+    elif args.split == "test":
+        sub = args.mind_dataset_subdir or os.environ.get("MIND_DATASET_SUBDIR", "MIND_2000")
+        held_out = mind_data_path(default_held_out_test_filename(sub))
+        if not os.path.isfile(held_out):
+            print(f"오류: held-out test TSV 없음: {held_out}", file=sys.stderr)
+            sys.exit(1)
+        mind_test_tsv_override = held_out
+        print(f"MIND 테스트 TSV (--split test): {mind_test_tsv_override}", flush=True)
     effective_test_tsv = mind_test_tsv_override or mind_data_path(MIND_TEST_FILENAME)
     print(f"실제 평가 test TSV: {effective_test_tsv}", flush=True)
 
