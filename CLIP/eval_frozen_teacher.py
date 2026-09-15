@@ -30,7 +30,7 @@ if str(_ROOT / "NAML") not in sys.path:
 if str(_CLIP_DIR) not in sys.path:
     sys.path.insert(0, str(_CLIP_DIR))
 
-from naml_dataset_env import apply_dataset_env_from_argv
+from naml_dataset_env import apply_dataset_env_from_argv, default_held_out_test_filename
 
 apply_dataset_env_from_argv()
 
@@ -163,6 +163,19 @@ def main() -> None:
         type=str,
         default="CLIP/saved_models/MIND_2000/naml_tune_s2_clip_log.json",
     )
+    ap.add_argument(
+        "--split",
+        type=str,
+        default="test",
+        choices=["test", "val"],
+        help="test: held-out MIND_test_(2000).tsv (기본). val: MIND_dev_(2000).tsv",
+    )
+    ap.add_argument(
+        "--mind-test-tsv",
+        type=str,
+        default=None,
+        help="impression TSV 직접 지정. 괄호가 있으면 따옴표로 감싸기. 미지정 시 --split",
+    )
     ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument("--seed", type=int, default=SEED)
     ap.add_argument("--max-history-clicks", type=int, default=None)
@@ -197,8 +210,19 @@ def main() -> None:
     if not os.path.isfile(weights_path):
         raise FileNotFoundError(f"teacher 가중치 없음: {weights_path}")
 
+    test_tsv = None
+    if args.mind_test_tsv and str(args.mind_test_tsv).strip():
+        test_tsv = resolve_project_path(args.mind_test_tsv)
+        if not os.path.isfile(test_tsv):
+            raise FileNotFoundError(f"test TSV 없음: {test_tsv}")
+    elif args.split == "test":
+        test_tsv = mind_data_path(default_held_out_test_filename(args.mind_dataset_subdir))
+        if not os.path.isfile(test_tsv):
+            raise FileNotFoundError(f"held-out test TSV 없음: {test_tsv}")
+
     print(
         f"[eval] frozen full-text S2  weights={weights_path}\n"
+        f"[eval] split={args.split}  tsv={test_tsv or 'val(MIND_dev)'}\n"
         f"[eval] branches={branches}  history_image=B0  candidate_image=swapped",
         flush=True,
     )
@@ -228,6 +252,7 @@ def main() -> None:
         all_test_newsid_str,
     ) = preprocess_user_file(
         news_index=news_index,
+        test_file=test_tsv,
         expected_bodies_train=None,
         expected_bodies_test=None,
         word_dict=word_dict,
@@ -414,13 +439,17 @@ def main() -> None:
             _CLIP_DIR
             / "saved_models"
             / args.mind_dataset_subdir
-            / f"frozen_teacher_{'_'.join(branches)}.json"
+            / f"frozen_teacher_{args.split}_{'_'.join(branches)}.json"
         )
     )
     os.makedirs(os.path.dirname(os.path.abspath(out_path)) or ".", exist_ok=True)
     payload = {
         "teacher_weights": os.path.abspath(weights_path),
         "tune_log": resolve_project_path(args.tune_log),
+        "split": args.split,
+        "test_tsv": os.path.abspath(test_tsv) if test_tsv else mind_data_path(
+            naml_common.MIND_TEST_FILENAME
+        ),
         "hparams": hp,
         "clip_dim": clip_dim,
         "max_history_clicks": int(naml_common.MAX_HISTORY_CLICKS),
