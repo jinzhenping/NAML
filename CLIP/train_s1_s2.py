@@ -274,7 +274,9 @@ def load_hparams(tune_log: Optional[str]) -> Dict[str, Any]:
         data = json.load(f)
     gb = data.get("global_best_hparams")
     if not isinstance(gb, dict):
-        print(f"[train] 경고: global_best_hparams 없음 {path} → 기본 hparams {hp}", flush=True)
+        gb = data.get("hparams")
+    if not isinstance(gb, dict):
+        print(f"[train] 경고: global_best_hparams/hparams 없음 {path} → 기본 hparams {hp}", flush=True)
         return hp
     for k in _HP_KEYS:
         if k not in gb:

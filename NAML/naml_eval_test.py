@@ -193,7 +193,7 @@ _ARCH_KEYS = tuple(_DEFAULT_ARCH.keys())
 
 
 def _arch_from_tune_log(log_path: str) -> Dict[str, float | int]:
-    """naml_tune_actual_log.json 의 global_best_hparams 에서 아키텍처만 추출."""
+    """global_best_hparams 또는 학습 로그의 hparams 에서 아키텍처만 추출."""
     out: Dict[str, float | int] = {}
     try:
         with open(log_path, "r", encoding="utf-8") as f:
@@ -201,6 +201,8 @@ def _arch_from_tune_log(log_path: str) -> Dict[str, float | int]:
     except Exception:
         return out
     gb = data.get("global_best_hparams")
+    if not isinstance(gb, dict):
+        gb = data.get("hparams")
     if not isinstance(gb, dict):
         return out
     for k in _ARCH_KEYS:
