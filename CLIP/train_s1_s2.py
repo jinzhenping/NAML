@@ -80,6 +80,8 @@ from naml_common import (
     preprocess_user_file,
 )
 from naml_image_model import (
+    build_naml_models_title_cat,
+    build_naml_models_title_cat_image,
     build_naml_models_title_image,
     build_naml_models_title_only,
     build_naml_models_with_image,
@@ -112,6 +114,24 @@ def _split_by_slot(arr: np.ndarray) -> List[np.ndarray]:
     return [arr[:, k] for k in range(arr.shape[1])]
 
 
+def _text_mode(title_only: bool = False, text_mode: Optional[str] = None) -> str:
+    if text_mode:
+        m = str(text_mode).strip().lower()
+        aliases = {
+            "title": "title",
+            "title_only": "title",
+            "title_cat": "title_cat",
+            "title_cat_subcat": "title_cat",
+            "no_body": "title_cat",
+            "full": "full",
+            "full_text": "full",
+        }
+        if m not in aliases:
+            raise ValueError(f"unknown text_mode {text_mode!r}. use title, title_cat, full")
+        return aliases[m]
+    return "title" if title_only else "full"
+
+
 def generate_batch_data_train(
     all_train_pn,
     all_label,
@@ -123,7 +143,9 @@ def generate_batch_data_train(
     batch_size,
     news_image=None,
     title_only=False,
+    text_mode=None,
 ):
+    mode = _text_mode(title_only, text_mode)
     n = len(all_label)
     inputid = np.arange(n)
     np.random.shuffle(inputid)
@@ -137,11 +159,19 @@ def generate_batch_data_train(
             cand_i = all_train_pn[idx]
             hist_i = all_user_pos[idx]
             parts = _split_by_slot(news_words[cand_i]) + _split_by_slot(news_words[hist_i])
-            if not title_only:
+            if mode == "full":
                 parts = (
                     parts
                     + _split_by_slot(news_body[cand_i])
                     + _split_by_slot(news_body[hist_i])
+                    + _split_by_slot(news_v[cand_i])
+                    + _split_by_slot(news_v[hist_i])
+                    + _split_by_slot(news_sv[cand_i])
+                    + _split_by_slot(news_sv[hist_i])
+                )
+            elif mode == "title_cat":
+                parts = (
+                    parts
                     + _split_by_slot(news_v[cand_i])
                     + _split_by_slot(news_v[hist_i])
                     + _split_by_slot(news_sv[cand_i])
@@ -164,7 +194,9 @@ def generate_batch_data_test(
     news_image=None,
     title_only=False,
     cand_image=None,
+    text_mode=None,
 ):
+    mode = _text_mode(title_only, text_mode)
     n = len(all_test_label)
     inputid = np.arange(n)
     batches = [
@@ -177,11 +209,19 @@ def generate_batch_data_test(
             cand_i = all_test_pn[idx]
             hist_i = all_test_user_pos[idx]
             parts = [news_words[cand_i]] + _split_by_slot(news_words[hist_i])
-            if not title_only:
+            if mode == "full":
                 parts = (
                     parts
                     + [news_body[cand_i]]
                     + _split_by_slot(news_body[hist_i])
+                    + [news_v[cand_i]]
+                    + _split_by_slot(news_v[hist_i])
+                    + [news_sv[cand_i]]
+                    + _split_by_slot(news_sv[hist_i])
+                )
+            elif mode == "title_cat":
+                parts = (
+                    parts
                     + [news_v[cand_i]]
                     + _split_by_slot(news_v[hist_i])
                     + [news_sv[cand_i]]
@@ -210,8 +250,10 @@ def evaluate_metrics(
     news_image=None,
     title_only=False,
     cand_image=None,
+    text_mode=None,
 ):
-    if news_image is None and cand_image is None and not title_only:
+    mode = _text_mode(title_only, text_mode)
+    if news_image is None and cand_image is None and mode == "full":
         return evaluate_session_metrics(
             model_test,
             all_test_pn,
@@ -239,6 +281,7 @@ def evaluate_metrics(
         news_image=news_image,
         title_only=title_only,
         cand_image=cand_image,
+        text_mode=mode,
     )
     click_score = model_test.predict(gen, steps=steps, verbose=0)
     all_mrr, all_ndcg, all_hit1 = [], [], []
@@ -320,9 +363,11 @@ def train_one(
     out_weights: str,
     out_log: str,
     title_only: bool = True,
+    text_mode: Optional[str] = None,
 ) -> Dict[str, Any]:
     _set_seed(seed)
     use_image = variant == "s2"
+    mode = _text_mode(title_only, text_mode)
     arch_kw = dict(
         dropout_rate=hp["dropout_rate"],
         cnn_filters=hp["cnn_filters"],
@@ -333,10 +378,21 @@ def train_one(
     if use_image:
         if news_image is None:
             raise ValueError("S2 학습에는 CLIP 임베딩 행렬이 필요합니다.")
-        if title_only:
+        if mode == "title":
             built = build_naml_models_title_image(
                 word_dict,
                 embedding_mat,
+                hp["learning_rate"],
+                clip_dim=int(news_image.shape[1]),
+                clear_session=True,
+                **arch_kw,
+            )
+        elif mode == "title_cat":
+            built = build_naml_models_title_cat_image(
+                word_dict,
+                embedding_mat,
+                category,
+                subcategory,
                 hp["learning_rate"],
                 clip_dim=int(news_image.shape[1]),
                 clear_session=True,
@@ -353,10 +409,20 @@ def train_one(
                 clear_session=True,
                 **arch_kw,
             )
-    elif title_only:
+    elif mode == "title":
         built = build_naml_models_title_only(
             word_dict,
             embedding_mat,
+            hp["learning_rate"],
+            clear_session=True,
+            **arch_kw,
+        )
+    elif mode == "title_cat":
+        built = build_naml_models_title_cat(
+            word_dict,
+            embedding_mat,
+            category,
+            subcategory,
             hp["learning_rate"],
             clear_session=True,
             **arch_kw,
@@ -383,10 +449,14 @@ def train_one(
     best_epoch = -1
     epoch_logs: List[Dict[str, Any]] = []
 
-    text_mode = "title-only" if title_only else "title+body+cat/subcat"
+    text_label = {
+        "title": "title-only",
+        "title_cat": "title+cat/subcat",
+        "full": "title+body+cat/subcat",
+    }[mode]
     print(
         f"\n=== {variant.upper()} train  epochs={epochs}  batch={batch_size}  "
-        f"seed={seed}  text={text_mode}  image_view={use_image} ===",
+        f"seed={seed}  text={text_label}  image_view={use_image} ===",
         flush=True,
     )
     for ep in range(1, epochs + 1):
@@ -401,6 +471,7 @@ def train_one(
             batch_size,
             news_image=img,
             title_only=title_only,
+            text_mode=mode,
         )
         hist = model.fit(traingen, epochs=1, steps_per_epoch=steps_per_epoch, verbose=1)
         metrics = evaluate_metrics(
@@ -417,6 +488,7 @@ def train_one(
             batch_size,
             news_image=img,
             title_only=title_only,
+            text_mode=mode,
         )
         loss = None
         if hist.history.get("loss"):
@@ -454,7 +526,8 @@ def train_one(
         "epoch_logs": epoch_logs,
         "out_weights": os.path.abspath(out_weights),
         "use_image": use_image,
-        "title_only": title_only,
+        "title_only": mode == "title",
+        "text_mode": mode,
     }
     os.makedirs(os.path.dirname(os.path.abspath(out_log)) or ".", exist_ok=True)
     with open(out_log, "w", encoding="utf-8") as f:
@@ -535,6 +608,13 @@ def main() -> None:
         action="store_false",
         help="title + body + category + subcategory (기존 NAML 4뷰)",
     )
+    ap.add_argument(
+        "--text-mode",
+        type=str,
+        default=None,
+        choices=["title", "title_cat", "full"],
+        help="title_cat: title+category+subcategory (본문 없음). 지정 시 --title-only/--full-text보다 우선",
+    )
     ap.set_defaults(title_only=True)
     args = ap.parse_args()
 
@@ -545,12 +625,17 @@ def main() -> None:
 
     _set_seed(int(args.seed))
     hp = load_hparams(args.tune_log)
+    text_mode = _text_mode(bool(args.title_only), args.text_mode)
 
     print("[train] 실제 본문으로 전처리 (기대본문 미사용)", flush=True)
-    if args.title_only:
-        print("[train] 텍스트 입력: title only (body/cat/subcat 미사용)", flush=True)
-    else:
-        print("[train] 텍스트 입력: title + body + category + subcategory", flush=True)
+    print(
+        {
+            "title": "[train] 텍스트 입력: title only",
+            "title_cat": "[train] 텍스트 입력: title + category + subcategory (본문 없음)",
+            "full": "[train] 텍스트 입력: title + body + category + subcategory",
+        }[text_mode],
+        flush=True,
+    )
     word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = (
         preprocess_news_file(
             expected_bodies_train=None,
@@ -651,12 +736,17 @@ def main() -> None:
         all_test_user_pos=all_test_user_pos,
         all_test_index=all_test_index,
         news_image=news_image,
-        title_only=bool(args.title_only),
+        title_only=text_mode == "title",
+        text_mode=text_mode,
     )
-    if args.title_only:
+    if text_mode == "title":
         s1_w, s1_l = "S1_naml_title.h5", "S1_naml_title_log.json"
         s2_w, s2_l = "S2_naml_clip_title.h5", "S2_naml_clip_title_log.json"
         cmp_name = "S1_S2_compare_title.json"
+    elif text_mode == "title_cat":
+        s1_w, s1_l = "S1_naml_title_cat.h5", "S1_naml_title_cat_log.json"
+        s2_w, s2_l = "S2_naml_clip_title_cat.h5", "S2_naml_clip_title_cat_log.json"
+        cmp_name = "S1_S2_compare_title_cat.json"
     else:
         s1_w, s1_l = "S1_naml_actual.h5", "S1_naml_actual_log.json"
         s2_w, s2_l = "S2_naml_clip.h5", "S2_naml_clip_log.json"

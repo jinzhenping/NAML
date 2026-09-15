@@ -345,3 +345,230 @@ def build_naml_models_with_image(
         "clip_dim": clip_dim,
         "title_only": False,
     }
+
+
+def _cat_proj(vinput, embedding_layer, nf):
+    return Dense(nf, activation="relu")(Flatten()(embedding_layer(vinput)))
+
+
+def build_naml_models_title_cat(
+    word_dict,
+    embedding_mat,
+    category,
+    subcategory,
+    learning_rate,
+    clear_session=True,
+    *,
+    dropout_rate=0.3,
+    cnn_filters=400,
+    cnn_kernel_size=3,
+    attention_dense_dim=200,
+    category_emb_dim=50,
+):
+    """S1: title + category + subcategory. 본문·이미지 없음."""
+    if clear_session:
+        keras.backend.clear_session()
+
+    d = float(dropout_rate)
+    nf = int(cnn_filters)
+    nk = int(cnn_kernel_size)
+    ad = int(attention_dense_dim)
+    cem = int(category_emb_dim)
+    MAX_SENTS = MAX_HISTORY_CLICKS
+
+    embedding_layer = Embedding(len(word_dict), 300, weights=[embedding_mat], trainable=True)
+    v_embedding_layer = Embedding(len(category) + 1, cem, trainable=True)
+    sv_embedding_layer = Embedding(len(subcategory) + 1, cem, trainable=True)
+
+    title_input = Input(shape=(MAX_SENT_LENGTH,), dtype="int32")
+    vinput = Input((1,), dtype="int32")
+    svinput = Input((1,), dtype="int32")
+    title_rep = _title_rep(title_input, embedding_layer, d, nf, nk, ad)
+    v_embedding = _cat_proj(vinput, v_embedding_layer, nf)
+    sv_embedding = _cat_proj(svinput, sv_embedding_layer, nf)
+    views = concatenate(
+        [Reshape((1, -1))(ch) for ch in (title_rep, v_embedding, sv_embedding)],
+        axis=1,
+    )
+    attentionv = Dense(ad, activation="tanh")(views)
+    attention_weightv = Activation("softmax")(Reshape((-1,))(Dense(1)(attentionv)))
+    newsrep = keras.layers.Dot((1, 1))([views, attention_weightv])
+    newsEncoder = Model([title_input, vinput, svinput], newsrep, name="newsEncoder")
+
+    browsed_news_input = [keras.Input((MAX_SENT_LENGTH,), dtype="int32") for _ in range(MAX_SENTS)]
+    browsed_v_input = [keras.Input((1,), dtype="int32") for _ in range(MAX_SENTS)]
+    browsed_sv_input = [keras.Input((1,), dtype="int32") for _ in range(MAX_SENTS)]
+    browsednews = [
+        newsEncoder([browsed_news_input[_], browsed_v_input[_], browsed_sv_input[_]])
+        for _ in range(MAX_SENTS)
+    ]
+    user_rep = _user_rep_from_history(browsednews, ad)
+
+    n_cand = 1 + npratio
+    candidates_title = [keras.Input((MAX_SENT_LENGTH,), dtype="int32") for _ in range(n_cand)]
+    candidates_v = [keras.Input((1,), dtype="int32") for _ in range(n_cand)]
+    candidates_sv = [keras.Input((1,), dtype="int32") for _ in range(n_cand)]
+    candidate_vecs = [
+        newsEncoder([candidates_title[_], candidates_v[_], candidates_sv[_]])
+        for _ in range(n_cand)
+    ]
+    logits = [keras.layers.dot([user_rep, candidate_vec], axes=-1) for candidate_vec in candidate_vecs]
+    logits = keras.layers.Activation(keras.activations.softmax)(keras.layers.concatenate(logits))
+    model = Model(
+        candidates_title + browsed_news_input + candidates_v + browsed_v_input + candidates_sv + browsed_sv_input,
+        logits,
+    )
+
+    candidate_one_title = keras.Input((MAX_SENT_LENGTH,))
+    candidate_one_v = keras.Input((1,))
+    candidate_one_sv = keras.Input((1,))
+    candidate_one_vec = newsEncoder([candidate_one_title, candidate_one_v, candidate_one_sv])
+    score = keras.layers.Activation(keras.activations.sigmoid)(
+        keras.layers.dot([user_rep, candidate_one_vec], axes=-1)
+    )
+    model_test = keras.Model(
+        [candidate_one_title]
+        + browsed_news_input
+        + [candidate_one_v]
+        + browsed_v_input
+        + [candidate_one_sv]
+        + browsed_sv_input,
+        score,
+    )
+    model.compile(
+        loss="categorical_crossentropy",
+        optimizer=Adam(learning_rate=learning_rate),
+        metrics=["acc"],
+    )
+    return {
+        "model": model,
+        "model_test": model_test,
+        "newsEncoder": newsEncoder,
+        "user_rep": user_rep,
+        "MAX_SENTS": MAX_SENTS,
+        "use_image": False,
+        "title_only": False,
+        "text_mode": "title_cat",
+    }
+
+
+def build_naml_models_title_cat_image(
+    word_dict,
+    embedding_mat,
+    category,
+    subcategory,
+    learning_rate,
+    clip_dim,
+    clear_session=True,
+    *,
+    dropout_rate=0.3,
+    cnn_filters=400,
+    cnn_kernel_size=3,
+    attention_dense_dim=200,
+    category_emb_dim=50,
+):
+    """S2: title + category + subcategory + CLIP 썸네일. 본문 없음."""
+    if clear_session:
+        keras.backend.clear_session()
+
+    d = float(dropout_rate)
+    nf = int(cnn_filters)
+    nk = int(cnn_kernel_size)
+    ad = int(attention_dense_dim)
+    cem = int(category_emb_dim)
+    clip_dim = int(clip_dim)
+    MAX_SENTS = MAX_HISTORY_CLICKS
+
+    embedding_layer = Embedding(len(word_dict), 300, weights=[embedding_mat], trainable=True)
+    v_embedding_layer = Embedding(len(category) + 1, cem, trainable=True)
+    sv_embedding_layer = Embedding(len(subcategory) + 1, cem, trainable=True)
+
+    title_input = Input(shape=(MAX_SENT_LENGTH,), dtype="int32")
+    vinput = Input((1,), dtype="int32")
+    svinput = Input((1,), dtype="int32")
+    image_input = Input(shape=(clip_dim,), dtype="float32", name="image_input")
+    title_rep = _title_rep(title_input, embedding_layer, d, nf, nk, ad)
+    v_embedding = _cat_proj(vinput, v_embedding_layer, nf)
+    sv_embedding = _cat_proj(svinput, sv_embedding_layer, nf)
+    image_rep = Dense(nf, activation="relu", name="image_proj")(image_input)
+    views = concatenate(
+        [Reshape((1, -1))(ch) for ch in (title_rep, v_embedding, sv_embedding, image_rep)],
+        axis=1,
+    )
+    attentionv = Dense(ad, activation="tanh")(views)
+    attention_weightv = Activation("softmax")(Reshape((-1,))(Dense(1)(attentionv)))
+    newsrep = keras.layers.Dot((1, 1))([views, attention_weightv])
+    newsEncoder = Model([title_input, vinput, svinput, image_input], newsrep, name="newsEncoder")
+
+    browsed_news_input = [keras.Input((MAX_SENT_LENGTH,), dtype="int32") for _ in range(MAX_SENTS)]
+    browsed_v_input = [keras.Input((1,), dtype="int32") for _ in range(MAX_SENTS)]
+    browsed_sv_input = [keras.Input((1,), dtype="int32") for _ in range(MAX_SENTS)]
+    browsed_image_input = [keras.Input((clip_dim,), dtype="float32") for _ in range(MAX_SENTS)]
+    browsednews = [
+        newsEncoder(
+            [browsed_news_input[_], browsed_v_input[_], browsed_sv_input[_], browsed_image_input[_]]
+        )
+        for _ in range(MAX_SENTS)
+    ]
+    user_rep = _user_rep_from_history(browsednews, ad)
+
+    n_cand = 1 + npratio
+    candidates_title = [keras.Input((MAX_SENT_LENGTH,), dtype="int32") for _ in range(n_cand)]
+    candidates_v = [keras.Input((1,), dtype="int32") for _ in range(n_cand)]
+    candidates_sv = [keras.Input((1,), dtype="int32") for _ in range(n_cand)]
+    candidates_image = [keras.Input((clip_dim,), dtype="float32") for _ in range(n_cand)]
+    candidate_vecs = [
+        newsEncoder([candidates_title[_], candidates_v[_], candidates_sv[_], candidates_image[_]])
+        for _ in range(n_cand)
+    ]
+    logits = [keras.layers.dot([user_rep, candidate_vec], axes=-1) for candidate_vec in candidate_vecs]
+    logits = keras.layers.Activation(keras.activations.softmax)(keras.layers.concatenate(logits))
+    model = Model(
+        candidates_title
+        + browsed_news_input
+        + candidates_v
+        + browsed_v_input
+        + candidates_sv
+        + browsed_sv_input
+        + candidates_image
+        + browsed_image_input,
+        logits,
+    )
+
+    candidate_one_title = keras.Input((MAX_SENT_LENGTH,))
+    candidate_one_v = keras.Input((1,))
+    candidate_one_sv = keras.Input((1,))
+    candidate_one_image = keras.Input((clip_dim,), dtype="float32")
+    candidate_one_vec = newsEncoder(
+        [candidate_one_title, candidate_one_v, candidate_one_sv, candidate_one_image]
+    )
+    score = keras.layers.Activation(keras.activations.sigmoid)(
+        keras.layers.dot([user_rep, candidate_one_vec], axes=-1)
+    )
+    model_test = keras.Model(
+        [candidate_one_title]
+        + browsed_news_input
+        + [candidate_one_v]
+        + browsed_v_input
+        + [candidate_one_sv]
+        + browsed_sv_input
+        + [candidate_one_image]
+        + browsed_image_input,
+        score,
+    )
+    model.compile(
+        loss="categorical_crossentropy",
+        optimizer=Adam(learning_rate=learning_rate),
+        metrics=["acc"],
+    )
+    return {
+        "model": model,
+        "model_test": model_test,
+        "newsEncoder": newsEncoder,
+        "user_rep": user_rep,
+        "MAX_SENTS": MAX_SENTS,
+        "use_image": True,
+        "clip_dim": clip_dim,
+        "title_only": False,
+        "text_mode": "title_cat",
+    }
