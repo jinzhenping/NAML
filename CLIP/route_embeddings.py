@@ -473,6 +473,97 @@ def load_actual_bodies_from_news_tsv(news_tsv: str) -> Dict[str, str]:
     return bodies
 
 
+def load_news_titles_from_news_tsv(news_tsv: str) -> Dict[str, str]:
+    """MIND_news.tsv title 컬럼 (index 3)."""
+    titles: Dict[str, str] = {}
+    if not news_tsv or not os.path.isfile(news_tsv):
+        return titles
+    with open(news_tsv, "r", encoding="utf-8") as f:
+        for line in f:
+            parts = line.rstrip("\n").split("\t")
+            if len(parts) < 4:
+                continue
+            nid = parts[0].strip()
+            if not nid or nid.lower() in ("news_id", "clicked_news", "id"):
+                continue
+            titles[nid] = parts[3].strip()
+    return titles
+
+
+def default_preference_dir(project_root: str, mind_dataset_subdir: str, split: str = "train") -> str:
+    pref_split = "train" if (split or "train").strip().lower() == "train" else "test"
+    return os.path.join(
+        project_root, "user_preference", "preference", mind_dataset_subdir, pref_split
+    )
+
+
+def load_preference_profiles(pref_dir: str) -> Dict[str, str]:
+    """user_<id>.json 의 preference_profile. raw uid 와 norm uid 둘 다 넣는다."""
+    out: Dict[str, str] = {}
+    if not pref_dir or not os.path.isdir(pref_dir):
+        return out
+    for name in os.listdir(pref_dir):
+        if not (name.startswith("user_") and name.endswith(".json")):
+            continue
+        uid_raw = name[len("user_") : -len(".json")].strip()
+        fpath = os.path.join(pref_dir, name)
+        try:
+            with open(fpath, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception:
+            continue
+        profile = data.get("preference_profile") if isinstance(data, dict) else None
+        if not isinstance(profile, str) or not profile.strip():
+            continue
+        text = profile.strip()
+        out[uid_raw] = text
+        norm_uid = norm_pair_key(uid_raw, "x")[0]
+        if norm_uid:
+            out[norm_uid] = text
+    return out
+
+
+def format_s3p_prior_text(summary: str, title: str) -> str:
+    """
+    S3' prior 입력. title을 앞에 두어 CLIP 77토큰 truncation 때 뉴스 identity가 남게 한다.
+    summary 또는 title이 비면 빈 문자열 (추출 스킵 → NAML에서 0벡터).
+    """
+    s = (summary or "").strip()
+    t = (title or "").strip()
+    if not s or not t:
+        return ""
+    return f"{t}\n\n{s}"
+
+
+def build_s3p_pairs_and_texts(
+    pairs: Sequence[Tuple[str, str]],
+    profiles: Dict[str, str],
+    titles: Dict[str, str],
+) -> Tuple[List[Tuple[str, str, str]], int, int, int]:
+    items: List[Tuple[str, str, str]] = []
+    n_missing_pref = 0
+    n_missing_title = 0
+    seen = set()
+    for uid, nid in pairs:
+        key = norm_pair_key(uid, nid)
+        if key in seen:
+            continue
+        seen.add(key)
+        summary = profiles.get(key[0]) or profiles.get(str(uid).strip())
+        title = titles.get(key[1]) or titles.get(str(nid).strip())
+        if not summary:
+            n_missing_pref += 1
+            continue
+        if not title:
+            n_missing_title += 1
+            continue
+        text = format_s3p_prior_text(summary, title)
+        if not text:
+            continue
+        items.append((key[0], key[1], text))
+    return items, len(items), n_missing_pref, n_missing_title
+
+
 def collect_news_ids_from_interaction_tsv(tsv_path: str) -> List[str]:
     """train/test TSV의 clicked_news + candidate_news unique ID (등장 순)."""
     ids: List[str] = []

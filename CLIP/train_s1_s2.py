@@ -143,6 +143,7 @@ def generate_batch_data_train(
     batch_size,
     news_image=None,
     title_only=False,
+    cand_image=None,
     text_mode=None,
 ):
     mode = _text_mode(title_only, text_mode)
@@ -177,8 +178,11 @@ def generate_batch_data_train(
                     + _split_by_slot(news_sv[cand_i])
                     + _split_by_slot(news_sv[hist_i])
                 )
-            if news_image is not None:
-                parts = parts + _split_by_slot(news_image[cand_i]) + _split_by_slot(news_image[hist_i])
+            if news_image is not None or cand_image is not None:
+                if news_image is None:
+                    raise ValueError("히스토리 이미지 행렬(news_image)이 필요합니다.")
+                cand_img = cand_image[idx] if cand_image is not None else news_image[cand_i]
+                parts = parts + _split_by_slot(cand_img) + _split_by_slot(news_image[hist_i])
             yield (parts, np.asarray(all_label[idx], dtype=np.float32))
 
 

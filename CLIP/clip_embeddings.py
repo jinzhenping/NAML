@@ -55,6 +55,9 @@ DEFAULT_EXPECTED_IMAGE_TEST_FINAL_CACHE_NAME = "{subdir}_clip_expected_image_tes
 DEFAULT_EXPECTED_IMAGE_PRIOR_TRAIN_CACHE_NAME = "{subdir}_clip_expected_image_prior_train.npz"
 DEFAULT_EXPECTED_IMAGE_PRIOR_TEST_CACHE_NAME = "{subdir}_clip_expected_image_prior_test.npz"
 DEFAULT_EXPECTED_IMAGE_PRIOR_TEST_FINAL_CACHE_NAME = "{subdir}_clip_expected_image_prior_test_final.npz"
+DEFAULT_S3P_TRAIN_CACHE_NAME = "{subdir}_clip_prior_s3p_summary_title_train.npz"
+DEFAULT_S3P_VAL_CACHE_NAME = "{subdir}_clip_prior_s3p_summary_title_val.npz"
+DEFAULT_S3P_TEST_CACHE_NAME = "{subdir}_clip_prior_s3p_summary_title_test.npz"
 
 _HEADER_IDS = frozenset({"news_id", "clicked_news", "id"})
 
@@ -131,6 +134,31 @@ def default_actual_body_prior_cache_path(mind_dataset_subdir: str) -> str:
     return str(
         _ROOT / "CLIP" / "cache" / DEFAULT_ACTUAL_BODY_PRIOR_CACHE_NAME.format(subdir=mind_dataset_subdir)
     )
+
+
+def default_s3p_train_cache_path(mind_dataset_subdir: str) -> str:
+    return str(_ROOT / "CLIP" / "cache" / DEFAULT_S3P_TRAIN_CACHE_NAME.format(subdir=mind_dataset_subdir))
+
+
+def default_s3p_val_cache_path(mind_dataset_subdir: str) -> str:
+    return str(_ROOT / "CLIP" / "cache" / DEFAULT_S3P_VAL_CACHE_NAME.format(subdir=mind_dataset_subdir))
+
+
+def default_s3p_test_cache_path(mind_dataset_subdir: str) -> str:
+    return str(_ROOT / "CLIP" / "cache" / DEFAULT_S3P_TEST_CACHE_NAME.format(subdir=mind_dataset_subdir))
+
+
+def default_s3p_cache_path(mind_dataset_subdir: str, split: str) -> str:
+    s = (split or "train").strip().lower()
+    if s == "train":
+        return default_s3p_train_cache_path(mind_dataset_subdir)
+    if s in ("val", "dev", "test"):
+        return (
+            default_s3p_val_cache_path(mind_dataset_subdir)
+            if s in ("val", "dev")
+            else default_s3p_test_cache_path(mind_dataset_subdir)
+        )
+    raise ValueError(f"unknown s3p split {split!r}. use train, val, test")
 
 
 def default_delta_cache_path(mind_dataset_subdir: str) -> str:
