@@ -3,11 +3,14 @@
 """
 학습셋 뉴스 실제 본문 → CLIP text embedding (뉴스 단위).
 
+식의 CLIP_text(caption(actual_body)) 와 동일: caption(·)=본문 문자열을 CLIP text에 넣음
+(별도 캡션 모델 아님). CLIP 77토큰 truncation, L2 없음.
+
 MIND_news.tsv body 컬럼을 쓰고, 기본은 train TSV에 등장한 unique 뉴스만 인코딩한다.
-CLIP 77토큰 truncation, L2 없음. B1(기대본문)과 같은 text encoder.
+S5(NAML title_cat + 이 임베딩)는 val/test ID도 필요하므로 --scope catalog 권장.
 
   conda activate clip_cu128
-  python CLIP/extract_actual_body_text_embeds.py --mind-dataset-subdir MIND_2000
+  python CLIP/extract_actual_body_text_embeds.py --scope catalog --mind-dataset-subdir MIND_2000
 """
 from __future__ import annotations
 
