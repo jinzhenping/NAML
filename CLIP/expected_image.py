@@ -128,6 +128,39 @@ def load_delta(path: str) -> np.ndarray:
     return np.asarray(data["delta"], dtype=np.float32).reshape(-1)
 
 
+def make_random_delta(
+    delta: np.ndarray,
+    seed: int,
+    *,
+    eps: float = 1e-8,
+) -> np.ndarray:
+    """
+    ‖Δ_rand‖ = ‖Δ‖ 이고 방향만 표준정규에서 뽑은 전역 랜덤 벡터.
+    g ~ N(0, I), u = g/‖g‖, Δ_rand = ‖Δ‖ · u
+    """
+    d = np.asarray(delta, dtype=np.float32).reshape(-1)
+    r = float(np.linalg.norm(d))
+    rng = np.random.RandomState(int(seed))
+    g = rng.normal(size=int(d.shape[0])).astype(np.float32)
+    gn = float(np.linalg.norm(g))
+    if gn < eps:
+        g = np.zeros_like(g)
+        g[0] = 1.0
+        gn = 1.0
+    u = g / gn
+    return (r * u).astype(np.float32)
+
+
+def delta_cosine(a: np.ndarray, b: np.ndarray, *, eps: float = 1e-8) -> float:
+    x = np.asarray(a, dtype=np.float32).reshape(-1)
+    y = np.asarray(b, dtype=np.float32).reshape(-1)
+    nx = float(np.linalg.norm(x))
+    ny = float(np.linalg.norm(y))
+    if nx < eps or ny < eps:
+        return 0.0
+    return float(np.dot(x, y) / (nx * ny))
+
+
 def save_pair_embed_dict(path: str, pair_dict: Dict[Tuple[str, str], np.ndarray]) -> None:
     keys = sorted(pair_dict.keys(), key=lambda x: (x[0], x[1]))
     if not keys:

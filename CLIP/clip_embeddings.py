@@ -55,6 +55,16 @@ DEFAULT_EXPECTED_IMAGE_TEST_FINAL_CACHE_NAME = "{subdir}_clip_expected_image_tes
 DEFAULT_EXPECTED_IMAGE_PRIOR_TRAIN_CACHE_NAME = "{subdir}_clip_expected_image_prior_train.npz"
 DEFAULT_EXPECTED_IMAGE_PRIOR_TEST_CACHE_NAME = "{subdir}_clip_expected_image_prior_test.npz"
 DEFAULT_EXPECTED_IMAGE_PRIOR_TEST_FINAL_CACHE_NAME = "{subdir}_clip_expected_image_prior_test_final.npz"
+DEFAULT_RANDOM_DELTA_CACHE_NAME = "{subdir}_clip_text_image_delta_random.npz"
+DEFAULT_RANDOM_DELTA_PRIOR_CACHE_NAME = "{subdir}_clip_prior_image_delta_random.npz"
+DEFAULT_EXPECTED_IMAGE_RANDOM_TRAIN_CACHE_NAME = "{subdir}_clip_expected_image_random_train.npz"
+DEFAULT_EXPECTED_IMAGE_RANDOM_TEST_CACHE_NAME = "{subdir}_clip_expected_image_random_test.npz"
+DEFAULT_EXPECTED_IMAGE_RANDOM_TEST_FINAL_CACHE_NAME = "{subdir}_clip_expected_image_random_test_final.npz"
+DEFAULT_EXPECTED_IMAGE_RANDOM_PRIOR_TRAIN_CACHE_NAME = "{subdir}_clip_expected_image_random_prior_train.npz"
+DEFAULT_EXPECTED_IMAGE_RANDOM_PRIOR_TEST_CACHE_NAME = "{subdir}_clip_expected_image_random_prior_test.npz"
+DEFAULT_EXPECTED_IMAGE_RANDOM_PRIOR_TEST_FINAL_CACHE_NAME = (
+    "{subdir}_clip_expected_image_random_prior_test_final.npz"
+)
 DEFAULT_S3P_TRAIN_CACHE_NAME = "{subdir}_clip_prior_s3p_summary_title_train.npz"
 DEFAULT_S3P_VAL_CACHE_NAME = "{subdir}_clip_prior_s3p_summary_title_val.npz"
 DEFAULT_S3P_TEST_CACHE_NAME = "{subdir}_clip_prior_s3p_summary_title_test.npz"
@@ -229,6 +239,75 @@ def default_expected_image_prior_test_final_path(mind_dataset_subdir: str) -> st
     )
 
 
+def default_random_delta_cache_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT / "CLIP" / "cache" / DEFAULT_RANDOM_DELTA_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_random_delta_prior_cache_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_RANDOM_DELTA_PRIOR_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_expected_image_random_train_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_RANDOM_TRAIN_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_expected_image_random_test_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_RANDOM_TEST_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_expected_image_random_test_final_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_RANDOM_TEST_FINAL_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_expected_image_random_prior_train_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_RANDOM_PRIOR_TRAIN_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_expected_image_random_prior_test_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_RANDOM_PRIOR_TEST_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_expected_image_random_prior_test_final_path(mind_dataset_subdir: str) -> str:
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_EXPECTED_IMAGE_RANDOM_PRIOR_TEST_FINAL_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
 def default_test_final_tsv(mind_dataset_subdir: str) -> str:
     """Held-out test impression TSV (MIND_test_(2000).tsv)."""
     sub = (mind_dataset_subdir or "").strip()
@@ -274,6 +353,38 @@ def expected_image_recipe_paths(mind_dataset_subdir: str, recipe: str = "clip_te
         "train_weights_name": "naml_expected_image.h5",
         "train_log_name": "naml_expected_image_log.json",
         "eval_json_name": "naml_expected_image_test_final.json",
+    }
+
+
+def random_delta_recipe_paths(mind_dataset_subdir: str, recipe: str = "clip_text") -> dict:
+    """clip_text/prior expected-image ablation with global Δ_rand (‖Δ_rand‖=‖Δ‖)."""
+    base = expected_image_recipe_paths(mind_dataset_subdir, recipe)
+    r = base["recipe"]
+    sub = mind_dataset_subdir
+    if r == "prior":
+        return {
+            **base,
+            "delta_random": default_random_delta_prior_cache_path(sub),
+            "train_image": default_expected_image_random_prior_train_path(sub),
+            "test_image": default_expected_image_random_prior_test_path(sub),
+            "test_final_image": default_expected_image_random_prior_test_final_path(sub),
+            "tuned_weights_name": "naml_expected_image_random_prior_tuned.h5",
+            "tune_log_name": "naml_tune_expected_image_random_prior_log.json",
+            "train_weights_name": "naml_expected_image_random_prior.h5",
+            "train_log_name": "naml_expected_image_random_prior_log.json",
+            "eval_json_name": "naml_expected_image_random_prior_test_final.json",
+        }
+    return {
+        **base,
+        "delta_random": default_random_delta_cache_path(sub),
+        "train_image": default_expected_image_random_train_path(sub),
+        "test_image": default_expected_image_random_test_path(sub),
+        "test_final_image": default_expected_image_random_test_final_path(sub),
+        "tuned_weights_name": "naml_expected_image_random_tuned.h5",
+        "tune_log_name": "naml_tune_expected_image_random_log.json",
+        "train_weights_name": "naml_expected_image_random.h5",
+        "train_log_name": "naml_expected_image_random_log.json",
+        "eval_json_name": "naml_expected_image_random_test_final.json",
     }
 
 
