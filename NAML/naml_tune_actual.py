@@ -562,15 +562,16 @@ def main():
     ap.add_argument(
         "--out-weights",
         type=str,
-        default=os.path.join(_ROOT, "saved_models", "NAML_mind_2000.h5"),
-        help="전역 최고 테스트 MRR을 갱신할 때 저장할 가중치 파일 경로 (.h5). 상대 경로는 실행 시 작업 디렉터리 기준",
+        default=None,
+        help="전역 최고 테스트 MRR을 갱신할 때 저장할 가중치 (.h5). "
+        "미지정 시 saved_models/<subdir>/… (MIND_2000 기본은 하위호환용 saved_models/NAML_mind_2000.h5)",
     )
     ap.add_argument(
         "--out-log",
         type=str,
-        default=os.path.join(_ROOT, "saved_models", "naml_tune_actual_log.json"),
-        help="튜닝 로그 JSON 경로. 미지정 시 항상 프로젝트 루트 기준 saved_models/naml_tune_actual_log.json "
-        "(--resume-log 와 경로가 같지 않음; 이어붙이려면 보통 동일 파일로 --out-log 지정). 상대 경로는 실행 시 CWD 기준",
+        default=None,
+        help="튜닝 로그 JSON. 미지정 시 saved_models/<subdir>/naml_tune_actual_log.json "
+        "(MIND_2000 기본은 하위호환용 saved_models/naml_tune_actual_log.json)",
     )
     ap.add_argument(
         "--allow-duplicate-hparams",
@@ -636,6 +637,23 @@ def main():
     ap.add_argument("--fixed-attention-dense-dim", type=int, default=160)
     ap.add_argument("--fixed-category-emb-dim", type=int, default=64)
     args = ap.parse_args()
+
+    sub = args.mind_dataset_subdir or os.environ.get("MIND_DATASET_SUBDIR", "MIND_2000")
+    sub_dir = os.path.join(_ROOT, "saved_models", sub)
+    if args.out_weights is None:
+        if "adressa" in sub.lower():
+            args.out_weights = os.path.join(sub_dir, "NAML_adressa_2000_actual.h5")
+        elif sub == "MIND_small" or "small" in sub.lower():
+            args.out_weights = os.path.join(sub_dir, "NAML_mind_small_actual.h5")
+        elif sub == "MIND_2000":
+            args.out_weights = os.path.join(_ROOT, "saved_models", "NAML_mind_2000.h5")
+        else:
+            args.out_weights = os.path.join(sub_dir, "NAML_actual_tuned.h5")
+    if args.out_log is None:
+        if sub == "MIND_2000":
+            args.out_log = os.path.join(_ROOT, "saved_models", "naml_tune_actual_log.json")
+        else:
+            args.out_log = os.path.join(sub_dir, "naml_tune_actual_log.json")
 
     if args.fixed_filter_kernel_grid:
         if not args.grid_cnn_filters or not args.grid_cnn_kernel_sizes:

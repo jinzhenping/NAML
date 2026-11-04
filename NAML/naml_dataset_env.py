@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # MIND_2000: --mind-dataset-subdir MIND_2000
+# MIND_small: --mind-dataset-subdir MIND_small
 # Adressa_2000: --mind-dataset-subdir Adressa_2000
 """
 naml_common import 이전에만 사용: dataset/<subdir>용 MIND_* 환경변수 설정.
@@ -19,15 +20,26 @@ from typing import Dict, List, Optional, Tuple
 DATASET_FILE_PRESETS: Dict[str, Tuple[str, str, str]] = {
     # 세 번째 값은 학습 중 validation(dev). held-out test는 default_held_out_test_filename().
     "MIND_2000": ("MIND_news.tsv", "MIND_train_(2000).tsv", "MIND_dev_(2000).tsv"),
+    "MIND_small": ("MIND_news.tsv", "MIND_train.tsv", "MIND_dev.tsv"),
     "Adressa_2000": ("Adressa_news.tsv", "Adressa_train_(2000).tsv", "Adressa_test_(2000).tsv"),
+}
+
+HELD_OUT_TEST_PRESETS: Dict[str, str] = {
+    "MIND_2000": "MIND_test_(2000).tsv",
+    "MIND_small": "MIND_test.tsv",
+    "Adressa_2000": "Adressa_test_2000_final.tsv",
 }
 
 
 def default_held_out_test_filename(subdir: str) -> str:
     """bash 괄호 이스케이프 없이 코드에서 held-out test TSV 이름을 고른다."""
     s = (subdir or "").strip()
+    if s in HELD_OUT_TEST_PRESETS:
+        return HELD_OUT_TEST_PRESETS[s]
     if "adressa" in s.lower():
         return "Adressa_test_2000_final.tsv"
+    if "small" in s.lower():
+        return "MIND_test.tsv"
     return "MIND_test_(2000).tsv"
 
 # k-means / eval 기본 경로 (프로젝트 루트 기준 상대). --mind-dataset-subdir 가 Adressa 이면 Adressa CSV·가중치.
@@ -48,11 +60,14 @@ def default_naml_eval_weights(subdir: str) -> str:
     """
     eval_cluster_batch 등에서 쓰는 사전학습 가중치 기본 경로 (프로젝트 루트 기준 상대).
     Adressa: saved_models/Adressa_2000/NAML_adressa_2000_actual.h5
+    MIND_small: saved_models/MIND_small/NAML_mind_small_actual.h5
     그 외: saved_models/NAML_mind_2000.h5
     """
     s = (subdir or "").strip() or "MIND_2000"
     if "adressa" in s.lower():
         return "saved_models/Adressa_2000/NAML_adressa_2000_actual.h5"
+    if s == "MIND_small" or "small" in s.lower():
+        return "saved_models/MIND_small/NAML_mind_small_actual.h5"
     return "saved_models/NAML_mind_2000.h5"
 
 

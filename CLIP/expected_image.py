@@ -89,6 +89,27 @@ def apply_delta_to_text_pairs(
     return out
 
 
+def apply_delta_to_news_embeds(
+    text_by_news: Dict[str, np.ndarray],
+    delta: np.ndarray,
+    *,
+    l2: bool = True,
+) -> Dict[str, np.ndarray]:
+    """뉴스 단위: L2(CLIP_text(actual_body) + Δ)."""
+    delta = np.asarray(delta, dtype=np.float32).reshape(-1)
+    out: Dict[str, np.ndarray] = {}
+    for nid, vec in text_by_news.items():
+        t = np.asarray(vec, dtype=np.float32).reshape(-1)
+        if t.shape[0] != delta.shape[0]:
+            raise ValueError(f"news dim {t.shape[0]} != delta dim {delta.shape[0]} news={nid}")
+        if not np.any(t):
+            out[str(nid)] = np.zeros_like(delta)
+            continue
+        x = t + delta
+        out[str(nid)] = l2_normalize(x) if l2 else x.astype(np.float32)
+    return out
+
+
 def save_delta(
     path: str,
     mu_text: np.ndarray,

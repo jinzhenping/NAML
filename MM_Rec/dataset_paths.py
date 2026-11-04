@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""MIND_2000 / Adressa_2000 파일명과 MM-Rec 준비 디렉터리."""
+"""MIND_2000 / MIND_small / Adressa_2000 파일명과 MM-Rec 준비 디렉터리."""
 from __future__ import annotations
 
 import os
 from pathlib import Path
-from typing import Dict, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 _MMREC_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = _MMREC_DIR.parent
@@ -17,6 +17,12 @@ DATASET_FILE_PRESETS: Dict[str, Tuple[str, str, str, str]] = {
         "MIND_train_(2000).tsv",
         "MIND_dev_(2000).tsv",
         "MIND_test_(2000).tsv",
+    ),
+    "MIND_small": (
+        "MIND_news.tsv",
+        "MIND_train.tsv",
+        "MIND_dev.tsv",
+        "MIND_test.tsv",
     ),
     "Adressa_2000": (
         "Adressa_news.tsv",
@@ -53,6 +59,15 @@ def default_config_file() -> Path:
     return _MMREC_DIR / "config" / "vilbert_8layer.json"
 
 
+def _existing_sorted(base: Path, names: List[str]) -> List[Path]:
+    out: List[Path] = []
+    for name in names:
+        p = base / name
+        if p.is_file():
+            out.append(p)
+    return out
+
+
 def discover_tsv_names(subdir: str) -> Tuple[str, str, str, Optional[str]]:
     if subdir in DATASET_FILE_PRESETS:
         n, tr, te, tf = DATASET_FILE_PRESETS[subdir]
@@ -63,27 +78,41 @@ def discover_tsv_names(subdir: str) -> Tuple[str, str, str, Optional[str]]:
         if (base / fixed).is_file():
             news = fixed
             break
-    trains = sorted(base.glob("MIND_train_*.tsv")) or sorted(base.glob("*_train_*.tsv"))
+    trains = (
+        sorted(base.glob("MIND_train_*.tsv"))
+        or _existing_sorted(base, ["MIND_train.tsv"])
+        or sorted(base.glob("*_train_*.tsv"))
+        or sorted(base.glob("*_train.tsv"))
+    )
+    trains = [p for p in trains if "train" in p.name.lower()]
     devs = (
         sorted(base.glob("MIND_dev_*.tsv"))
+        or _existing_sorted(base, ["MIND_dev.tsv"])
         or sorted(base.glob("*_dev_*.tsv"))
+        or sorted(base.glob("*_dev.tsv"))
         or [
             p
-            for p in sorted(base.glob("MIND_test_*.tsv")) + sorted(base.glob("*_test_*.tsv"))
+            for p in (
+                sorted(base.glob("MIND_test_*.tsv"))
+                + _existing_sorted(base, ["MIND_test.tsv"])
+                + sorted(base.glob("*_test_*.tsv"))
+            )
             if "_final" not in p.name.lower()
         ]
     )
     finals = (
         sorted(base.glob("MIND_test_*.tsv"))
+        or _existing_sorted(base, ["MIND_test.tsv"])
         or sorted(base.glob("*_test_*.tsv"))
+        or sorted(base.glob("*_test.tsv"))
         or sorted(base.glob("*test*final*.tsv"))
     )
-    # held-out test: prefer MIND_test_*.tsv that is not also selected as dev
-    dev_name = devs[0].name if devs else "MIND_dev_(2000).tsv"
+    # held-out test: prefer MIND_test*.tsv that is not also selected as dev
+    dev_name = devs[0].name if devs else "MIND_dev.tsv"
     final_cands = [p for p in finals if p.name != dev_name]
     if not final_cands:
         final_cands = list(finals)
-    train = trains[0].name if trains else "MIND_train_(2000).tsv"
+    train = trains[0].name if trains else "MIND_train.tsv"
     test = dev_name
     final = final_cands[0].name if final_cands else None
     return news, train, test, final

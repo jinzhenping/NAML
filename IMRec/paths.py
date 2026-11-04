@@ -34,6 +34,12 @@ DATASET_FILE_PRESETS = {
         "MIND_dev_(2000).tsv",
         "MIND_test_(2000).tsv",
     ),
+    "MIND_small": (
+        "MIND_news.tsv",
+        "MIND_train.tsv",
+        "MIND_dev.tsv",
+        "MIND_test.tsv",
+    ),
     "Adressa_2000": (
         "Adressa_news.tsv",
         "Adressa_train_(2000).tsv",

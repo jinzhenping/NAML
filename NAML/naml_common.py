@@ -116,14 +116,28 @@ def _discover_mind_tsv_in_folder(subdir: str):
     def _filter_non_final_test(paths: list[str]) -> list[str]:
         return [p for p in paths if '_final' not in os.path.basename(p).lower()]
 
+    def _pick_exact(*names: str) -> list[str]:
+        out = []
+        for name in names:
+            p = os.path.join(base, name)
+            if os.path.isfile(p):
+                out.append(p)
+        return out
+
     def _pick_dev_or_test() -> list[str]:
-        """학습 중 validation용 TSV: MIND_dev_* 우선, 없으면 MIND_test_* (non-final)."""
+        """학습 중 validation용 TSV: MIND_dev_* / MIND_dev.tsv 우선, 없으면 MIND_test_* (non-final)."""
         devs = sorted(glob.glob(os.path.join(base, 'MIND_dev_*.tsv')))
         if not devs:
+            devs = _pick_exact('MIND_dev.tsv')
+        if not devs:
             devs = sorted(glob.glob(os.path.join(base, '*_dev_*.tsv')))
+        if not devs:
+            devs = sorted(glob.glob(os.path.join(base, '*_dev.tsv')))
         if devs:
             return devs
         tests = sorted(glob.glob(os.path.join(base, 'MIND_test_*.tsv')))
+        if not tests:
+            tests = _pick_exact('MIND_test.tsv')
         if len(tests) > 1:
             tests = _filter_non_final_test(tests)
         return tests
@@ -133,13 +147,19 @@ def _discover_mind_tsv_in_folder(subdir: str):
         return None
 
     trains = sorted(glob.glob(os.path.join(base, 'MIND_train_*.tsv')))
+    if not trains:
+        trains = _pick_exact('MIND_train.tsv')
     tests = _pick_dev_or_test()
 
     if len(trains) != 1 or len(tests) != 1:
         trains = sorted(glob.glob(os.path.join(base, '*_train_*.tsv')))
+        if not trains:
+            trains = sorted(glob.glob(os.path.join(base, '*_train.tsv')))
         tests = _pick_dev_or_test()
         if not tests:
             tests = sorted(glob.glob(os.path.join(base, '*_test_*.tsv')))
+            if not tests:
+                tests = sorted(glob.glob(os.path.join(base, '*_test.tsv')))
             if len(tests) > 1:
                 tests = _filter_non_final_test(tests)
 

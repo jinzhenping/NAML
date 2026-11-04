@@ -45,6 +45,7 @@ DEFAULT_B2_TRAIN_CACHE_NAME = "{subdir}_clip_b2_prior_expected_train.npz"
 DEFAULT_B2_TEST_FINAL_CACHE_NAME = "{subdir}_clip_b2_prior_expected_test_final.npz"
 DEFAULT_B3_CACHE_NAME = "{subdir}_clip_b3_pixel_expected.npz"
 DEFAULT_ACTUAL_BODY_TEXT_CACHE_NAME = "{subdir}_clip_text_actual_body_train.npz"
+DEFAULT_ACTUAL_BODY_TEXT_DELTA_CACHE_NAME = "{subdir}_clip_text_actual_body_delta.npz"
 DEFAULT_ACTUAL_BODY_PRIOR_CACHE_NAME = "{subdir}_clip_prior_actual_body_train.npz"
 DEFAULT_DELTA_CACHE_NAME = "{subdir}_clip_text_image_delta.npz"
 DEFAULT_DELTA_PRIOR_CACHE_NAME = "{subdir}_clip_prior_image_delta.npz"
@@ -137,6 +138,16 @@ def default_b3_cache_path(mind_dataset_subdir: str) -> str:
 def default_actual_body_text_cache_path(mind_dataset_subdir: str) -> str:
     return str(
         _ROOT / "CLIP" / "cache" / DEFAULT_ACTUAL_BODY_TEXT_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_actual_body_text_delta_cache_path(mind_dataset_subdir: str) -> str:
+    """L2(CLIP_text(actual_body) + Δ) news-level cache (Ours with Δ)."""
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_ACTUAL_BODY_TEXT_DELTA_CACHE_NAME.format(subdir=mind_dataset_subdir)
     )
 
 
@@ -309,9 +320,11 @@ def default_expected_image_random_prior_test_final_path(mind_dataset_subdir: str
 
 
 def default_test_final_tsv(mind_dataset_subdir: str) -> str:
-    """Held-out test impression TSV (MIND_test_(2000).tsv)."""
+    """Held-out test impression TSV (subdir별 프리셋: MIND_test.tsv / MIND_test_(2000).tsv 등)."""
+    from naml_dataset_env import default_held_out_test_filename
+
     sub = (mind_dataset_subdir or "").strip()
-    fname = "Adressa_test_2000_final.tsv" if "adressa" in sub.lower() else "MIND_test_(2000).tsv"
+    fname = default_held_out_test_filename(sub)
     return str(_ROOT / "dataset" / sub / fname)
 
 
