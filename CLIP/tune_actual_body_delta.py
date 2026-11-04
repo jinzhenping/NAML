@@ -176,6 +176,12 @@ def main() -> None:
     ap.add_argument("--refine-top-k", type=int, default=5)
     ap.add_argument("--resume-log", type=str, default=None)
     ap.add_argument("--skip-test-eval", action="store_true")
+    ap.add_argument(
+        "--fixed-hparams-json",
+        type=str,
+        default=None,
+        help="고정 hparams JSON (global_best_hparams 또는 평탄 dict). 지정 시 trials=1로 그 조합만 학습",
+    )
     args = ap.parse_args()
 
     argv = ["--mind-dataset-subdir", args.mind_dataset_subdir]
@@ -285,7 +291,22 @@ def main() -> None:
                 global_best_mrr = prev_best_mrr
                 global_best_hp = prev_best_hp
 
-    if args.allow_duplicate_hparams:
+    if args.fixed_hparams_json:
+        fhp_path = resolve_project_path(args.fixed_hparams_json)
+        with open(fhp_path, "r", encoding="utf-8") as f:
+            fhp_data = json.load(f)
+        if isinstance(fhp_data.get("global_best_hparams"), dict):
+            fixed_hp = dict(fhp_data["global_best_hparams"])
+        elif isinstance(fhp_data.get("hparams"), dict):
+            fixed_hp = dict(fhp_data["hparams"])
+        else:
+            fixed_hp = {k: fhp_data[k] for k in (
+                "learning_rate", "dropout_rate", "cnn_filters", "cnn_kernel_size",
+                "attention_dense_dim", "category_emb_dim",
+            ) if k in fhp_data}
+        trial_hparams = [fixed_hp]
+        print(f"[ours+Δ] fixed hparams from {fhp_path}: {fixed_hp}", flush=True)
+    elif args.allow_duplicate_hparams:
         trial_hparams = []
         local_keys: set = set()
         max_attempts = max(args.trials * 300, 3000)

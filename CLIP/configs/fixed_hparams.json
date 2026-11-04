@@ -1,0 +1,14 @@
+{
+  "note": "NAML-family single-run shared hparams (no tuning). Used via --tune-log / --fixed-hparams-json.",
+  "global_best_hparams": {
+    "learning_rate": 0.0005,
+    "dropout_rate": 0.3,
+    "cnn_filters": 400,
+    "cnn_kernel_size": 3,
+    "attention_dense_dim": 200,
+    "category_emb_dim": 50
+  },
+  "epochs": 10,
+  "batch_size": 64,
+  "seed": 42
+}
