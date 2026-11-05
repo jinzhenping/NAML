@@ -40,7 +40,8 @@ def compute_text_image_delta(
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, List[str]]:
     """
     μ_text, μ_img, Δ=μ_img−μ_text.
-    실제본문 CLIP과 썸네일 CLIP이 둘 다 nonzero인 뉴스만 평균에 넣는다.
+    인자 dict에 들어온 뉴스 중 실제본문 CLIP·썸네일 CLIP이 둘 다 nonzero인 것만 평균에 넣는다.
+    train-only 추정은 호출 측에서 train impression ID로 dict를 필터한 뒤 넘긴다.
     """
     ids: List[str] = []
     texts: List[np.ndarray] = []

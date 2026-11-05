@@ -25,7 +25,7 @@ S2: S1과 같은 텍스트 + CLIP 썸네일 이미지 뷰
   conda activate clip_cu128
   python CLIP/clip_embeddings.py --mind-dataset-subdir MIND_2000
 
-  # 2) S1, S2 학습 (val = MIND_dev_(2000).tsv)
+  # 2) S1, S2 학습 (val = MIND_dev) + held-out test 자동 평가
   conda activate tf28gpu
   python CLIP/train_s1_s2.py --variant both --mind-dataset-subdir MIND_2000 \
     --tune-log saved_models/MIND_2000/naml_tune_actual_log.json
@@ -52,7 +52,7 @@ if str(_ROOT / "NAML") not in sys.path:
 if str(_CLIP_DIR) not in sys.path:
     sys.path.insert(0, str(_CLIP_DIR))
 
-from naml_dataset_env import apply_dataset_env_from_argv
+from naml_dataset_env import apply_dataset_env_from_argv, default_held_out_test_filename
 
 apply_dataset_env_from_argv()
 
@@ -340,6 +340,90 @@ def _set_seed(seed: int) -> None:
     tf.random.set_seed(seed)
 
 
+def build_s1_s2_models(
+    variant: str,
+    hp: Dict[str, Any],
+    word_dict,
+    embedding_mat,
+    category,
+    subcategory,
+    news_image: Optional[np.ndarray],
+    *,
+    title_only: bool = True,
+    text_mode: Optional[str] = None,
+    clear_session: bool = True,
+) -> Dict[str, Any]:
+    use_image = variant == "s2"
+    mode = _text_mode(title_only, text_mode)
+    arch_kw = dict(
+        dropout_rate=hp["dropout_rate"],
+        cnn_filters=hp["cnn_filters"],
+        cnn_kernel_size=hp["cnn_kernel_size"],
+        attention_dense_dim=hp["attention_dense_dim"],
+        category_emb_dim=hp["category_emb_dim"],
+    )
+    if use_image:
+        if news_image is None:
+            raise ValueError("S2에는 CLIP 임베딩 행렬이 필요합니다.")
+        if mode == "title":
+            return build_naml_models_title_image(
+                word_dict,
+                embedding_mat,
+                hp["learning_rate"],
+                clip_dim=int(news_image.shape[1]),
+                clear_session=clear_session,
+                **arch_kw,
+            )
+        if mode == "title_cat":
+            return build_naml_models_title_cat_image(
+                word_dict,
+                embedding_mat,
+                category,
+                subcategory,
+                hp["learning_rate"],
+                clip_dim=int(news_image.shape[1]),
+                clear_session=clear_session,
+                **arch_kw,
+            )
+        return build_naml_models_with_image(
+            word_dict,
+            embedding_mat,
+            category,
+            subcategory,
+            hp["learning_rate"],
+            clip_dim=int(news_image.shape[1]),
+            clear_session=clear_session,
+            **arch_kw,
+        )
+    if mode == "title":
+        return build_naml_models_title_only(
+            word_dict,
+            embedding_mat,
+            hp["learning_rate"],
+            clear_session=clear_session,
+            **arch_kw,
+        )
+    if mode == "title_cat":
+        return build_naml_models_title_cat(
+            word_dict,
+            embedding_mat,
+            category,
+            subcategory,
+            hp["learning_rate"],
+            clear_session=clear_session,
+            **arch_kw,
+        )
+    return build_naml_models(
+        word_dict,
+        embedding_mat,
+        category,
+        subcategory,
+        hp["learning_rate"],
+        clear_session=clear_session,
+        **arch_kw,
+    )
+
+
 def train_one(
     variant: str,
     hp: Dict[str, Any],
@@ -372,75 +456,18 @@ def train_one(
     _set_seed(seed)
     use_image = variant == "s2"
     mode = _text_mode(title_only, text_mode)
-    arch_kw = dict(
-        dropout_rate=hp["dropout_rate"],
-        cnn_filters=hp["cnn_filters"],
-        cnn_kernel_size=hp["cnn_kernel_size"],
-        attention_dense_dim=hp["attention_dense_dim"],
-        category_emb_dim=hp["category_emb_dim"],
+    built = build_s1_s2_models(
+        variant,
+        hp,
+        word_dict,
+        embedding_mat,
+        category,
+        subcategory,
+        news_image,
+        title_only=title_only,
+        text_mode=mode,
+        clear_session=True,
     )
-    if use_image:
-        if news_image is None:
-            raise ValueError("S2 학습에는 CLIP 임베딩 행렬이 필요합니다.")
-        if mode == "title":
-            built = build_naml_models_title_image(
-                word_dict,
-                embedding_mat,
-                hp["learning_rate"],
-                clip_dim=int(news_image.shape[1]),
-                clear_session=True,
-                **arch_kw,
-            )
-        elif mode == "title_cat":
-            built = build_naml_models_title_cat_image(
-                word_dict,
-                embedding_mat,
-                category,
-                subcategory,
-                hp["learning_rate"],
-                clip_dim=int(news_image.shape[1]),
-                clear_session=True,
-                **arch_kw,
-            )
-        else:
-            built = build_naml_models_with_image(
-                word_dict,
-                embedding_mat,
-                category,
-                subcategory,
-                hp["learning_rate"],
-                clip_dim=int(news_image.shape[1]),
-                clear_session=True,
-                **arch_kw,
-            )
-    elif mode == "title":
-        built = build_naml_models_title_only(
-            word_dict,
-            embedding_mat,
-            hp["learning_rate"],
-            clear_session=True,
-            **arch_kw,
-        )
-    elif mode == "title_cat":
-        built = build_naml_models_title_cat(
-            word_dict,
-            embedding_mat,
-            category,
-            subcategory,
-            hp["learning_rate"],
-            clear_session=True,
-            **arch_kw,
-        )
-    else:
-        built = build_naml_models(
-            word_dict,
-            embedding_mat,
-            category,
-            subcategory,
-            hp["learning_rate"],
-            clear_session=True,
-            **arch_kw,
-        )
     model = built["model"]
     model_test = built["model_test"]
     img = news_image if use_image else None
@@ -548,6 +575,90 @@ def train_one(
     return summary
 
 
+def evaluate_held_out(
+    variant: str,
+    hp: Dict[str, Any],
+    weights_path: str,
+    word_dict,
+    embedding_mat,
+    category,
+    subcategory,
+    news_words,
+    news_body,
+    news_v,
+    news_sv,
+    news_index,
+    news_image: Optional[np.ndarray],
+    test_behaviors: str,
+    batch_size: int,
+    title_only: bool = True,
+    text_mode: Optional[str] = None,
+) -> Dict[str, Any]:
+    mode = _text_mode(title_only, text_mode)
+    use_image = variant == "s2"
+    (
+        _userid_dict,
+        _all_train_pn,
+        _all_label,
+        _all_train_id,
+        all_test_pn,
+        all_test_label,
+        all_test_id,
+        _all_user_pos,
+        all_test_user_pos,
+        all_test_index,
+        *_rest,
+    ) = preprocess_user_file(
+        news_index=news_index,
+        test_file=test_behaviors,
+        expected_bodies_train=None,
+        expected_bodies_test=None,
+        word_dict=word_dict,
+    )
+    built = build_s1_s2_models(
+        variant,
+        hp,
+        word_dict,
+        embedding_mat,
+        category,
+        subcategory,
+        news_image,
+        title_only=title_only,
+        text_mode=mode,
+        clear_session=True,
+    )
+    model = built["model"]
+    model_test = built["model_test"]
+    model.load_weights(weights_path)
+    img = news_image if use_image else None
+    metrics = evaluate_metrics(
+        model_test,
+        all_test_pn,
+        all_test_label,
+        all_test_id,
+        all_test_user_pos,
+        all_test_index,
+        news_words,
+        news_body,
+        news_v,
+        news_sv,
+        batch_size,
+        news_image=img,
+        title_only=title_only,
+        text_mode=mode,
+    )
+    K.clear_session()
+    return {
+        "variant": variant,
+        "text_mode": mode,
+        "use_image": use_image,
+        "weights": os.path.abspath(weights_path),
+        "test_behaviors": os.path.abspath(test_behaviors),
+        "n_test_impressions": len(all_test_index),
+        "metrics": metrics,
+    }
+
+
 def ensure_clip_cache(
     cache_path: str,
     thumbnail_dir: str,
@@ -618,6 +729,11 @@ def main() -> None:
         default=None,
         choices=["title", "title_cat", "full"],
         help="title_cat: title+category+subcategory (본문 없음). 지정 시 --title-only/--full-text보다 우선",
+    )
+    ap.add_argument(
+        "--skip-final-test",
+        action="store_true",
+        help="학습 후 held-out test(MIND_test) 자동 평가를 건너뜀 (기본은 자동 평가)",
     )
     ap.set_defaults(title_only=True)
     args = ap.parse_args()
@@ -746,14 +862,17 @@ def main() -> None:
     if text_mode == "title":
         s1_w, s1_l = "S1_naml_title.h5", "S1_naml_title_log.json"
         s2_w, s2_l = "S2_naml_clip_title.h5", "S2_naml_clip_title_log.json"
+        s1_t, s2_t = "S1_naml_title_test.json", "S2_naml_clip_title_test.json"
         cmp_name = "S1_S2_compare_title.json"
     elif text_mode == "title_cat":
         s1_w, s1_l = "S1_naml_title_cat.h5", "S1_naml_title_cat_log.json"
         s2_w, s2_l = "S2_naml_clip_title_cat.h5", "S2_naml_clip_title_cat_log.json"
+        s1_t, s2_t = "S1_naml_title_cat_test.json", "S2_naml_clip_title_cat_test.json"
         cmp_name = "S1_S2_compare_title_cat.json"
     else:
         s1_w, s1_l = "S1_naml_actual.h5", "S1_naml_actual_log.json"
         s2_w, s2_l = "S2_naml_clip.h5", "S2_naml_clip_log.json"
+        s1_t, s2_t = "S1_naml_actual_test.json", "S2_naml_clip_test.json"
         cmp_name = "S1_S2_compare.json"
     if args.variant in ("s1", "both"):
         results["s1"] = train_one(
@@ -793,12 +912,106 @@ def main() -> None:
                     "hparams": hp,
                     "clip_cache": clip_cache,
                     "title_only": bool(args.title_only),
+                    "text_mode": text_mode,
                 },
                 f,
                 ensure_ascii=False,
                 indent=2,
             )
         print(f"[train] compare → {cmp_path}", flush=True)
+
+    if args.skip_final_test:
+        print("[train] --skip-final-test: held-out test 평가를 건너뜁니다.", flush=True)
+        return
+
+    test_tsv = mind_data_path(default_held_out_test_filename(args.mind_dataset_subdir))
+    if not os.path.isfile(test_tsv):
+        raise FileNotFoundError(f"held-out test TSV 없음: {test_tsv}")
+    print(f"\n[train] held-out test 평가 → {test_tsv}", flush=True)
+
+    test_results: Dict[str, Any] = {}
+    eval_kw = dict(
+        hp=hp,
+        word_dict=word_dict,
+        embedding_mat=embedding_mat,
+        category=category,
+        subcategory=subcategory,
+        news_words=news_words,
+        news_body=news_body,
+        news_v=news_v,
+        news_sv=news_sv,
+        news_index=news_index,
+        news_image=news_image,
+        test_behaviors=test_tsv,
+        batch_size=int(args.batch_size),
+        title_only=text_mode == "title",
+        text_mode=text_mode,
+    )
+    if "s1" in results:
+        te = evaluate_held_out(
+            "s1",
+            weights_path=os.path.join(out_dir, s1_w),
+            **eval_kw,
+        )
+        test_results["s1"] = te
+        out_test = os.path.join(out_dir, s1_t)
+        with open(out_test, "w", encoding="utf-8") as f:
+            json.dump({**results["s1"], "test_metrics": te["metrics"], "test_tsv": te["test_behaviors"]}, f, ensure_ascii=False, indent=2)
+        # also update train log
+        log_path = os.path.join(out_dir, s1_l)
+        with open(log_path, "w", encoding="utf-8") as f:
+            json.dump({**results["s1"], "test_metrics": te["metrics"], "test_tsv": te["test_behaviors"]}, f, ensure_ascii=False, indent=2)
+        print(
+            f"[s1 TEST] MRR={te['metrics']['MRR']:.6f}  "
+            f"NDCG@5={te['metrics']['NDCG@5']:.6f}  Hit@1={te['metrics']['Hit@1']:.6f}\n"
+            f"[s1 TEST] → {out_test}",
+            flush=True,
+        )
+    if "s2" in results:
+        te = evaluate_held_out(
+            "s2",
+            weights_path=os.path.join(out_dir, s2_w),
+            **eval_kw,
+        )
+        test_results["s2"] = te
+        out_test = os.path.join(out_dir, s2_t)
+        with open(out_test, "w", encoding="utf-8") as f:
+            json.dump({**results["s2"], "test_metrics": te["metrics"], "test_tsv": te["test_behaviors"]}, f, ensure_ascii=False, indent=2)
+        log_path = os.path.join(out_dir, s2_l)
+        with open(log_path, "w", encoding="utf-8") as f:
+            json.dump({**results["s2"], "test_metrics": te["metrics"], "test_tsv": te["test_behaviors"]}, f, ensure_ascii=False, indent=2)
+        print(
+            f"[s2 TEST] MRR={te['metrics']['MRR']:.6f}  "
+            f"NDCG@5={te['metrics']['NDCG@5']:.6f}  Hit@1={te['metrics']['Hit@1']:.6f}\n"
+            f"[s2 TEST] → {out_test}",
+            flush=True,
+        )
+
+    if "s1" in test_results and "s2" in test_results:
+        s1m = test_results["s1"]["metrics"]
+        s2m = test_results["s2"]["metrics"]
+        print("\n=== S1 vs S2 (held-out TEST) ===", flush=True)
+        for k in ("MRR", "NDCG@5", "Hit@1"):
+            d = float(s2m[k]) - float(s1m[k])
+            print(
+                f"  {k}: S1={s1m[k]:.6f}  S2={s2m[k]:.6f}  Δ(S2-S1)={d:+.6f}",
+                flush=True,
+            )
+        cmp_test = os.path.join(out_dir, cmp_name.replace(".json", "_test.json"))
+        with open(cmp_test, "w", encoding="utf-8") as f:
+            json.dump(
+                {
+                    "s1_test": s1m,
+                    "s2_test": s2m,
+                    "test_tsv": os.path.abspath(test_tsv),
+                    "hparams": hp,
+                    "text_mode": text_mode,
+                },
+                f,
+                ensure_ascii=False,
+                indent=2,
+            )
+        print(f"[train] test compare → {cmp_test}", flush=True)
 
 
 if __name__ == "__main__":
