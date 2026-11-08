@@ -13,6 +13,11 @@ Ours with Δ: title + category + subcategory + L2(CLIP_text(caption(actual_body)
   python CLIP/tune_actual_body_delta.py --two-phase --trials 64 \\
     --screening-epochs 10 --refine-top-k 5 --epochs-per-trial 30 \\
     --mind-dataset-subdir MIND_2000
+
+  # screening만, 에폭 평가를 held-out test로 (val 미사용):
+  python CLIP/tune_actual_body_delta.py --two-phase --screening-only --trials 64 \\
+    --screening-epochs 10 --batch-size 64 --mind-dataset-subdir MIND_2000 \\
+    --eval-split test
 """
 from __future__ import annotations
 
@@ -35,7 +40,7 @@ if str(_ROOT / "NAML") not in sys.path:
 if str(_CLIP_DIR) not in sys.path:
     sys.path.insert(0, str(_CLIP_DIR))
 
-from naml_dataset_env import apply_dataset_env_from_argv
+from naml_dataset_env import apply_dataset_env_from_argv, default_held_out_test_filename
 
 apply_dataset_env_from_argv()
 
@@ -48,7 +53,14 @@ from clip_embeddings import (
     resolve_project_path,
 )
 from eval_actual_body_delta import LOG_NAME, WEIGHTS_NAME
-from naml_common import MAX_HISTORY_CLICKS, SEED, get_embedding, preprocess_news_file, preprocess_user_file
+from naml_common import (
+    MAX_HISTORY_CLICKS,
+    SEED,
+    get_embedding,
+    mind_data_path,
+    preprocess_news_file,
+    preprocess_user_file,
+)
 from naml_image_model import build_naml_models_title_cat_image
 from naml_tune_actual import (
     HPARAM_CHOICES,
@@ -174,6 +186,19 @@ def main() -> None:
     ap.add_argument("--two-phase", action="store_true")
     ap.add_argument("--screening-epochs", type=int, default=2)
     ap.add_argument("--refine-top-k", type=int, default=5)
+    ap.add_argument(
+        "--screening-only",
+        action="store_true",
+        help="--two-phase일 때 1차(screening)만 수행하고 refine을 생략",
+    )
+    ap.add_argument(
+        "--eval-split",
+        type=str,
+        default="dev",
+        choices=["dev", "test"],
+        help="trial 중 에폭 평가 split. dev=MIND_dev(기본), test=held-out MIND_test "
+        "(hparams 선택에 test를 쓰므로 정식 프로토콜과 다름)",
+    )
     ap.add_argument("--resume-log", type=str, default=None)
     ap.add_argument("--skip-test-eval", action="store_true")
     ap.add_argument(
@@ -183,6 +208,9 @@ def main() -> None:
         help="고정 hparams JSON (global_best_hparams 또는 평탄 dict). 지정 시 trials=1로 그 조합만 학습",
     )
     args = ap.parse_args()
+
+    if args.screening_only and not args.two_phase:
+        raise SystemExit("오류: --screening-only 는 --two-phase 와 함께 쓰세요.")
 
     argv = ["--mind-dataset-subdir", args.mind_dataset_subdir]
     if args.max_history_clicks is not None:
@@ -200,6 +228,12 @@ def main() -> None:
         resolve_project_path(args.out_weights) if args.out_weights else os.path.join(out_dir, WEIGHTS_NAME)
     )
     out_log = resolve_project_path(args.out_log) if args.out_log else os.path.join(out_dir, LOG_NAME)
+
+    eval_test_tsv = None
+    if args.eval_split == "test":
+        eval_test_tsv = mind_data_path(default_held_out_test_filename(args.mind_dataset_subdir))
+        if not os.path.isfile(eval_test_tsv):
+            raise FileNotFoundError(f"held-out test TSV 없음: {eval_test_tsv}")
 
     word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index = (
         preprocess_news_file(
@@ -222,6 +256,7 @@ def main() -> None:
         *_,
     ) = preprocess_user_file(
         news_index=news_index,
+        test_file=eval_test_tsv,
         expected_bodies_train=None,
         expected_bodies_test=None,
         word_dict=word_dict,
@@ -242,12 +277,20 @@ def main() -> None:
 
     news_image, n_hit = build_news_image_matrix(news_index, len(news_words), text_cache)
     catalog_n = sum(1 for nid, idx in news_index.items() if nid != "0" and int(idx) != 0)
+    eval_label = "held-out TEST" if args.eval_split == "test" else "val(dev)"
     print(
         f"[tune ours+Δ] text=title+cat/subcat  embed=L2(CLIP_text(actual_body)+Δ)\n"
         f"[tune ours+Δ] cache={text_cache} nonzero={n_hit}/{catalog_n}\n"
-        f"[tune ours+Δ] weights={out_weights}",
+        f"[tune ours+Δ] epoch-eval={eval_label}"
+        + (f" ({eval_test_tsv})" if eval_test_tsv else "")
+        + f"\n[tune ours+Δ] weights={out_weights}",
         flush=True,
     )
+    if args.eval_split == "test":
+        print(
+            "[tune ours+Δ] 경고: --eval-split test 는 trial/hparams 선택에 test를 사용합니다.",
+            flush=True,
+        )
     if n_hit < catalog_n:
         print(
             f"[tune ours+Δ] 경고: catalog {catalog_n - n_hit}개가 0벡터입니다. "
@@ -361,11 +404,18 @@ def main() -> None:
 
     if args.two_phase:
         k = min(args.refine_top_k, run_trials)
-        print(
-            f"\n[2-phase] 1차: trials={run_trials}, epochs={args.screening_epochs} → "
-            f"상위 {k}개를 2차에서 epochs={args.epochs_per_trial}",
-            flush=True,
-        )
+        if args.screening_only:
+            print(
+                f"\n[2-phase] screening-only: trials={run_trials}, "
+                f"epochs={args.screening_epochs}  (refine 생략, epoch-eval={eval_label})",
+                flush=True,
+            )
+        else:
+            print(
+                f"\n[2-phase] 1차: trials={run_trials}, epochs={args.screening_epochs} → "
+                f"상위 {k}개를 2차에서 epochs={args.epochs_per_trial}",
+                flush=True,
+            )
         screening_rows: list = []
         for t in range(run_trials):
             hp = trial_hparams[t]
@@ -400,21 +450,25 @@ def main() -> None:
                 print(f"  [전역 갱신] 저장 → {out_weights}  MRR={global_best_mrr:.6f}", flush=True)
             screening_rows.append((best_mrr, dict(hp), best_metrics))
             K.clear_session()
-        screening_rows.sort(key=lambda x: -x[0])
-        top_hps: List[dict] = []
-        seen_keys: set = set()
-        for _mrr, hp, _lm in screening_rows:
-            key = tuple(sorted(hp.items()))
-            if key in seen_keys:
-                continue
-            seen_keys.add(key)
-            top_hps.append(hp)
-            if len(top_hps) >= k:
-                break
-        print(f"\n[2-phase] 2차(refine): 상위 {len(top_hps)}개, 각 {args.epochs_per_trial} epochs\n", flush=True)
-        for j, hp in enumerate(top_hps):
-            trial_seed = args.seed + 884422 + j * 9973
-            _one_trial(j, len(top_hps), hp, args.epochs_per_trial, trial_seed, "refine")
+        if not args.screening_only:
+            screening_rows.sort(key=lambda x: -x[0])
+            top_hps: List[dict] = []
+            seen_keys: set = set()
+            for _mrr, hp, _lm in screening_rows:
+                key = tuple(sorted(hp.items()))
+                if key in seen_keys:
+                    continue
+                seen_keys.add(key)
+                top_hps.append(hp)
+                if len(top_hps) >= k:
+                    break
+            print(
+                f"\n[2-phase] 2차(refine): 상위 {len(top_hps)}개, 각 {args.epochs_per_trial} epochs\n",
+                flush=True,
+            )
+            for j, hp in enumerate(top_hps):
+                trial_seed = args.seed + 884422 + j * 9973
+                _one_trial(j, len(top_hps), hp, args.epochs_per_trial, trial_seed, "refine")
     else:
         for t in range(run_trials):
             hp = trial_hparams[t]
@@ -427,6 +481,8 @@ def main() -> None:
         "text_views": ["title", "category", "subcategory"],
         "embed_view": "l2_clip_text_actual_body_plus_delta",
         "delta_note": "Δ=μ_img−μ_text(actual_body); applied to CLIP_text(actual_body)",
+        "eval_split": args.eval_split,
+        "eval_tsv": os.path.abspath(eval_test_tsv) if eval_test_tsv else None,
         "global_best_mrr": global_best_mrr,
         "global_best_hparams": global_best_hp,
         "trials": log_trials,
@@ -437,8 +493,9 @@ def main() -> None:
         "hparam_grid_size": grid_n,
         "hparam_choices": HPARAM_CHOICES,
         "two_phase": bool(args.two_phase),
+        "screening_only": bool(args.screening_only),
         "screening_epochs": args.screening_epochs if args.two_phase else None,
-        "refine_top_k": args.refine_top_k if args.two_phase else None,
+        "refine_top_k": None if args.screening_only else (args.refine_top_k if args.two_phase else None),
         "out_weights": out_weights,
         "text_cache": os.path.abspath(text_cache),
         "n_nonzero_embed": int(n_hit),
@@ -446,12 +503,30 @@ def main() -> None:
     }
     with open(out_log, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
-    print(f"\n[ours+Δ] 완료. 전역 최고 val MRR={global_best_mrr:.6f}, 로그: {out_log}")
+    print(
+        f"\n[ours+Δ] 완료. 전역 최고 {eval_label} MRR={global_best_mrr:.6f}, 로그: {out_log}",
+        flush=True,
+    )
     if global_best_hp:
         print(f"[ours+Δ] 최적 hparams: {global_best_hp}")
 
-    if args.skip_test_eval:
-        print("[tune ours+Δ] --skip-test-eval: held-out test 평가를 건너뜁니다.", flush=True)
+    # 이미 trial 중 test로 골랐으면 최종 test 재평가는 생략
+    if args.eval_split == "test" or args.skip_test_eval:
+        if args.eval_split == "test":
+            summary["test_tsv"] = os.path.abspath(eval_test_tsv) if eval_test_tsv else None
+            summary["test_metrics"] = {
+                "note": "tuned with --eval-split test; global_best_mrr is already on held-out test",
+                "MRR": global_best_mrr,
+            }
+            with open(out_log, "w", encoding="utf-8") as f:
+                json.dump(summary, f, indent=2, ensure_ascii=False)
+            print(
+                "[tune ours+Δ] --eval-split test: 최종 held-out 재평가를 건너뜁니다 "
+                f"(best {eval_label} MRR={global_best_mrr:.6f}).",
+                flush=True,
+            )
+        else:
+            print("[tune ours+Δ] --skip-test-eval: held-out test 평가를 건너뜁니다.", flush=True)
         return
     from types import SimpleNamespace
 
