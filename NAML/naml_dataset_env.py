@@ -101,9 +101,16 @@ def apply_dataset_env_from_argv(argv: Optional[List[str]] = None) -> str:
     os.environ["MIND_DATASET_SUBDIR"] = sub
     if sub in DATASET_FILE_PRESETS:
         n, tr, te = DATASET_FILE_PRESETS[sub]
-        os.environ.setdefault("MIND_NEWS_FILENAME", n)
-        os.environ.setdefault("MIND_TRAIN_FILENAME", tr)
-        os.environ.setdefault("MIND_TEST_FILENAME", te)
+        # CLI로 subdir를 명시한 경우, 이전에 MIND_small 등으로 남은
+        # MIND_*_FILENAME 환경변수가 setdefault 때문에 고착되지 않게 덮어쓴다.
+        if cli_sub is not None:
+            os.environ["MIND_NEWS_FILENAME"] = n
+            os.environ["MIND_TRAIN_FILENAME"] = tr
+            os.environ["MIND_TEST_FILENAME"] = te
+        else:
+            os.environ.setdefault("MIND_NEWS_FILENAME", n)
+            os.environ.setdefault("MIND_TRAIN_FILENAME", tr)
+            os.environ.setdefault("MIND_TEST_FILENAME", te)
     cli_hist = _argv_value(argv_list, "--max-history-clicks")
     if cli_hist is not None:
         os.environ["NAML_MAX_HISTORY_CLICKS"] = cli_hist.strip()
