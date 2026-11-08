@@ -31,6 +31,20 @@ val(MIND_dev_(2000).tsv) 평가:
 
   python MM_Rec/train_eval.py --stage test --eval-split dev --mind-dataset-subdir MIND_2000
 
+Cross-eval (예: MIND_small 학습 ckpt → MIND_2000 held-out test 유저):
+
+  # MIND_2000 데이터/ROI가 없으면 먼저:
+  python MM_Rec/train_eval.py --stage prepare --mind-dataset-subdir MIND_2000
+  python MM_Rec/train_eval.py --stage extract-roi --mind-dataset-subdir MIND_2000
+
+  conda activate clip_cu128
+  python MM_Rec/train_eval.py --stage test --eval-split test \
+      --mind-dataset-subdir MIND_2000 \
+      --ckpt-from-subdir MIND_small \
+      --load-ckpt best.pt \
+      --from-pretrained MM_Rec/pretrained/vilbert8/pytorch_model_9.bin \
+      --config-file MM_Rec/config/bert_base_8layer_8conect.json
+
 ViLBERT 사전학습 가중치 (권장). 8-layer Conceptual Captions:
 
   브라우저에서 받아 MM_Rec/pretrained/ 에 두기:
@@ -80,7 +94,8 @@ def _build_run_args(
     mode: str,
     mind_dataset_subdir: str,
     data_root: Path,
-    save_root: Path,
+    model_dir: Path,
+    log_dir: Path,
     eval_split: str,
     epochs: int,
     batch_size: int,
@@ -92,6 +107,7 @@ def _build_run_args(
     debug: bool,
     enable_gpu: bool,
     selection_metric: str = "MRR",
+    exp_name: str | None = None,
 ) -> argparse.Namespace:
     split_dir = "test" if eval_split == "test" else "dev"
     argv = [
@@ -123,9 +139,9 @@ def _build_run_args(
         "--whole_file",
         str(data_root / "whole_features.tsv"),
         "--model_dir",
-        str(save_root / "ckpts"),
+        str(model_dir),
         "--log_dir",
-        str(save_root / "logs"),
+        str(log_dir),
         "--config_file",
         config_file,
         "--epochs",
@@ -147,7 +163,7 @@ def _build_run_args(
         "--news_attributes",
         "title",
         "--exp_name",
-        f"mmrec_{mind_dataset_subdir}",
+        exp_name or f"mmrec_{mind_dataset_subdir}",
         "--debug",
         "True" if debug else "False",
         "--num_workers",
@@ -192,11 +208,31 @@ def main() -> None:
     ap.add_argument("--npratio", type=int, default=4)
     ap.add_argument("--force-extract", action="store_true")
     ap.add_argument("--load-ckpt", type=str, default="best.pt")
+    ap.add_argument(
+        "--ckpt-from-subdir",
+        type=str,
+        default=None,
+        help="다른 데이터셋에서 학습한 ckpt 디렉터리 (예: MIND_small). "
+        "지정 시 model_dir=saved_models/<subdir>/ckpts 에서 --load-ckpt 로드, "
+        "평가는 --mind-dataset-subdir 데이터로 수행",
+    )
+    ap.add_argument(
+        "--ckpt-dir",
+        type=str,
+        default=None,
+        help="체크포인트 폴더 절대/상대 경로. --ckpt-from-subdir보다 우선",
+    )
     ap.add_argument("--debug", action="store_true")
     ap.add_argument("--cpu", action="store_true")
     args = ap.parse_args()
 
     import torch
+
+    if args.ckpt_from_subdir and args.stage in ("train", "all"):
+        raise SystemExit(
+            "오류: --ckpt-from-subdir 는 --stage test 전용입니다 "
+            "(다른 데이터셋 ckpt로 평가만 수행)."
+        )
 
     data_root = prepared_dir(args.mind_dataset_subdir)
     save_root = saved_dir(args.mind_dataset_subdir)
@@ -204,12 +240,34 @@ def main() -> None:
     (save_root / "ckpts").mkdir(parents=True, exist_ok=True)
     (save_root / "logs").mkdir(parents=True, exist_ok=True)
 
+    if args.ckpt_dir:
+        ckpt_model_dir = Path(args.ckpt_dir)
+        if not ckpt_model_dir.is_absolute():
+            ckpt_model_dir = _MMREC.parent / ckpt_model_dir
+    elif args.ckpt_from_subdir:
+        ckpt_model_dir = saved_dir(args.ckpt_from_subdir) / "ckpts"
+    else:
+        ckpt_model_dir = save_root / "ckpts"
+
+    if args.ckpt_from_subdir or args.ckpt_dir:
+        src_tag = args.ckpt_from_subdir or "ext"
+        log_dir = save_root / "logs" / f"cross_from_{src_tag}"
+    else:
+        log_dir = save_root / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+
     enable_gpu = (not args.cpu) and torch.cuda.is_available()
     print(
         f"[mmrec] subdir={args.mind_dataset_subdir} stage={args.stage} "
         f"gpu={enable_gpu} data={data_root}",
         flush=True,
     )
+    if args.ckpt_from_subdir or args.ckpt_dir:
+        print(
+            f"[mmrec] cross-eval ckpt_dir={ckpt_model_dir} load={args.load_ckpt} "
+            f"log_dir={log_dir}",
+            flush=True,
+        )
 
     if args.stage in ("prepare", "all"):
         prepare(args.mind_dataset_subdir)
@@ -236,7 +294,8 @@ def main() -> None:
             mode="train",
             mind_dataset_subdir=args.mind_dataset_subdir,
             data_root=data_root,
-            save_root=save_root,
+            model_dir=save_root / "ckpts",
+            log_dir=save_root / "logs",
             eval_split=args.eval_split,
             epochs=args.epochs,
             batch_size=args.batch_size,
@@ -265,11 +324,25 @@ def main() -> None:
         if args.stage == "all":
             ckpt_name = "best.pt"
         eval_split = "test" if args.stage == "all" else args.eval_split
+        if not npz_path.is_file():
+            raise FileNotFoundError(
+                f"ROI 없음: {npz_path}. --stage extract-roi 를 먼저 실행하세요."
+            )
+        ckpt_path = ckpt_model_dir / ckpt_name
+        if not ckpt_path.is_file():
+            raise FileNotFoundError(
+                f"체크포인트 없음: {ckpt_path}\n"
+                f"--ckpt-from-subdir / --ckpt-dir / --load-ckpt 경로를 확인하세요."
+            )
+        exp_name = f"mmrec_{args.mind_dataset_subdir}"
+        if args.ckpt_from_subdir:
+            exp_name = f"mmrec_{args.mind_dataset_subdir}_from_{args.ckpt_from_subdir}"
         run_args = _build_run_args(
             mode="test",
             mind_dataset_subdir=args.mind_dataset_subdir,
             data_root=data_root,
-            save_root=save_root,
+            model_dir=ckpt_model_dir,
+            log_dir=log_dir,
             eval_split=eval_split,
             epochs=args.epochs,
             batch_size=args.batch_size,
@@ -281,6 +354,7 @@ def main() -> None:
             debug=args.debug,
             enable_gpu=enable_gpu,
             selection_metric=args.selection_metric,
+            exp_name=exp_name,
         )
         utils.setuplogger(os.path.join(run_args.log_dir, "log_test.txt"))
         mmrec_test(run_args)
