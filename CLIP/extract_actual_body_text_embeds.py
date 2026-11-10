@@ -30,11 +30,16 @@ if str(_CLIP_DIR) not in sys.path:
 
 from naml_dataset_env import DATASET_FILE_PRESETS, apply_dataset_env_from_argv
 
-from clip_embeddings import default_actual_body_text_cache_path, resolve_project_path
+from clip_embeddings import (
+    default_actual_body_text_cache_path,
+    default_title_body_text_cache_path,
+    resolve_project_path,
+)
 from route_embeddings import (
     collect_news_ids_from_interaction_tsv,
     extract_clip_text_actual_bodies,
     load_actual_bodies_from_news_tsv,
+    load_title_body_texts_from_news_tsv,
 )
 
 
@@ -59,6 +64,13 @@ def main() -> None:
         choices=["train", "catalog"],
         help="train: train TSV에 등장한 뉴스만. catalog: MIND_news.tsv 전체",
     )
+    ap.add_argument(
+        "--text-fields",
+        type=str,
+        default="body",
+        choices=["body", "title_body"],
+        help="body: 본문만(기본). title_body: title + newline + body",
+    )
     ap.add_argument("--out", type=str, default=None)
     ap.add_argument("--device", type=str, default="auto", choices=["auto", "cuda", "cpu"])
     ap.add_argument("--batch-size", type=int, default=32)
@@ -71,15 +83,21 @@ def main() -> None:
         news_tsv = resolve_project_path(args.news_tsv)
     if args.train_tsv:
         train_tsv = resolve_project_path(args.train_tsv)
-    out_path = (
-        resolve_project_path(args.out)
-        if args.out
-        else default_actual_body_text_cache_path(args.mind_dataset_subdir)
-    )
+    if args.out:
+        out_path = resolve_project_path(args.out)
+    elif args.text_fields == "title_body":
+        out_path = default_title_body_text_cache_path(args.mind_dataset_subdir)
+    else:
+        out_path = default_actual_body_text_cache_path(args.mind_dataset_subdir)
 
     if not os.path.isfile(news_tsv):
         raise FileNotFoundError(f"news tsv 없음: {news_tsv}")
-    bodies = load_actual_bodies_from_news_tsv(news_tsv)
+    if args.text_fields == "title_body":
+        bodies = load_title_body_texts_from_news_tsv(news_tsv)
+        field_label = "title+body"
+    else:
+        bodies = load_actual_bodies_from_news_tsv(news_tsv)
+        field_label = "body"
     if args.scope == "catalog":
         news_ids = list(bodies.keys())
     else:
@@ -88,9 +106,9 @@ def main() -> None:
         news_ids = collect_news_ids_from_interaction_tsv(train_tsv)
         news_ids = [nid for nid in news_ids if nid in bodies]
     print(
-        f"[actual-body text] news_tsv={news_tsv}\n"
-        f"[actual-body text] scope={args.scope} n_ids={len(news_ids)} "
-        f"body_files={len(bodies)} out={out_path}",
+        f"[clip-text] fields={field_label} news_tsv={news_tsv}\n"
+        f"[clip-text] scope={args.scope} n_ids={len(news_ids)} "
+        f"text_rows={len(bodies)} out={out_path}",
         flush=True,
     )
     extract_clip_text_actual_bodies(

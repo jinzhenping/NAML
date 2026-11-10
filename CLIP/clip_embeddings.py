@@ -46,6 +46,9 @@ DEFAULT_B2_TEST_FINAL_CACHE_NAME = "{subdir}_clip_b2_prior_expected_test_final.n
 DEFAULT_B3_CACHE_NAME = "{subdir}_clip_b3_pixel_expected.npz"
 DEFAULT_ACTUAL_BODY_TEXT_CACHE_NAME = "{subdir}_clip_text_actual_body_train.npz"
 DEFAULT_ACTUAL_BODY_TEXT_DELTA_CACHE_NAME = "{subdir}_clip_text_actual_body_delta.npz"
+DEFAULT_TITLE_BODY_TEXT_CACHE_NAME = "{subdir}_clip_text_title_body.npz"
+DEFAULT_TITLE_BODY_TEXT_DELTA_CACHE_NAME = "{subdir}_clip_text_title_body_delta.npz"
+DEFAULT_TITLE_BODY_DELTA_CACHE_NAME = "{subdir}_clip_text_image_delta_title_body.npz"
 DEFAULT_ACTUAL_BODY_PRIOR_CACHE_NAME = "{subdir}_clip_prior_actual_body_train.npz"
 DEFAULT_DELTA_CACHE_NAME = "{subdir}_clip_text_image_delta.npz"
 DEFAULT_DELTA_PRIOR_CACHE_NAME = "{subdir}_clip_prior_image_delta.npz"
@@ -148,6 +151,30 @@ def default_actual_body_text_delta_cache_path(mind_dataset_subdir: str) -> str:
         / "CLIP"
         / "cache"
         / DEFAULT_ACTUAL_BODY_TEXT_DELTA_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_title_body_text_cache_path(mind_dataset_subdir: str) -> str:
+    """CLIP_text(title + body) news-level cache."""
+    return str(
+        _ROOT / "CLIP" / "cache" / DEFAULT_TITLE_BODY_TEXT_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_title_body_text_delta_cache_path(mind_dataset_subdir: str) -> str:
+    """L2(CLIP_text(title+body) + Δ) news-level cache."""
+    return str(
+        _ROOT
+        / "CLIP"
+        / "cache"
+        / DEFAULT_TITLE_BODY_TEXT_DELTA_CACHE_NAME.format(subdir=mind_dataset_subdir)
+    )
+
+
+def default_title_body_delta_cache_path(mind_dataset_subdir: str) -> str:
+    """Δ = μ_img − μ_text(title+body), train-scope by default when building."""
+    return str(
+        _ROOT / "CLIP" / "cache" / DEFAULT_TITLE_BODY_DELTA_CACHE_NAME.format(subdir=mind_dataset_subdir)
     )
 
 

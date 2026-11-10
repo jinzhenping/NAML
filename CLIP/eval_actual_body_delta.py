@@ -123,7 +123,9 @@ def run_eval_actual_body_delta(args) -> dict:
         expected_bodies_test=None,
         word_dict=word_dict,
     )
-    embedding_mat = get_embedding(word_dict)
+    embedding_mat = get_embedding(
+        word_dict, random_init=bool(getattr(args, "random_word_emb", False))
+    )
 
     text_cache = (
         resolve_project_path(args.text_cache)
@@ -230,6 +232,11 @@ def main() -> None:
     ap.add_argument("--weights", type=str, default=None)
     ap.add_argument("--tune-log", type=str, default=None)
     ap.add_argument("--text-cache", type=str, default=None)
+    ap.add_argument(
+        "--random-word-emb",
+        action="store_true",
+        help="GloVe 대신 word embedding 랜덤 초기화 (학습 때와 동일하게 맞출 것)",
+    )
     ap.add_argument("--batch-size", type=int, default=64)
     ap.add_argument("--seed", type=int, default=SEED)
     ap.add_argument("--max-history-clicks", type=int, default=None)

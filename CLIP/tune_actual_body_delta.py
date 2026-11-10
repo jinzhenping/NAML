@@ -182,6 +182,11 @@ def main() -> None:
     ap.add_argument("--out-weights", type=str, default=None)
     ap.add_argument("--out-log", type=str, default=None)
     ap.add_argument("--text-cache", type=str, default=None)
+    ap.add_argument(
+        "--random-word-emb",
+        action="store_true",
+        help="GloVe 대신 word embedding을 N(0,0.1) 랜덤 초기화 (mean-shift PyTorch 실험과 유사)",
+    )
     ap.add_argument("--allow-duplicate-hparams", action="store_true")
     ap.add_argument("--two-phase", action="store_true")
     ap.add_argument("--screening-epochs", type=int, default=2)
@@ -261,7 +266,7 @@ def main() -> None:
         expected_bodies_test=None,
         word_dict=word_dict,
     )
-    embedding_mat = get_embedding(word_dict)
+    embedding_mat = get_embedding(word_dict, random_init=bool(args.random_word_emb))
 
     text_cache = (
         resolve_project_path(args.text_cache)
@@ -481,6 +486,7 @@ def main() -> None:
         "text_views": ["title", "category", "subcategory"],
         "embed_view": "l2_clip_text_actual_body_plus_delta",
         "delta_note": "Δ=μ_img−μ_text(actual_body); applied to CLIP_text(actual_body)",
+        "random_word_emb": bool(args.random_word_emb),
         "eval_split": args.eval_split,
         "eval_tsv": os.path.abspath(eval_test_tsv) if eval_test_tsv else None,
         "global_best_mrr": global_best_mrr,
@@ -541,6 +547,7 @@ def main() -> None:
             weights=out_weights,
             tune_log=out_log,
             text_cache=args.text_cache,
+            random_word_emb=bool(args.random_word_emb),
             batch_size=args.batch_size,
             seed=args.seed,
             max_history_clicks=args.max_history_clicks,

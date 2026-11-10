@@ -473,6 +473,25 @@ def load_actual_bodies_from_news_tsv(news_tsv: str) -> Dict[str, str]:
     return bodies
 
 
+def load_title_body_texts_from_news_tsv(news_tsv: str) -> Dict[str, str]:
+    """MIND_news.tsv title + body → 'title\\nbody' (빈 쪽은 생략). CLIP text 입력용."""
+    texts: Dict[str, str] = {}
+    if not news_tsv or not os.path.isfile(news_tsv):
+        return texts
+    with open(news_tsv, "r", encoding="utf-8") as f:
+        for line in f:
+            parts = line.rstrip("\n").split("\t")
+            if len(parts) < 5:
+                continue
+            nid = parts[0].strip()
+            if not nid or nid.lower() in ("news_id", "clicked_news", "id"):
+                continue
+            title = parts[3].strip() if len(parts) > 3 else ""
+            body = parts[4].strip() if len(parts) > 4 else ""
+            texts[nid] = "\n".join(v for v in (title, body) if v)
+    return texts
+
+
 def load_news_titles_from_news_tsv(news_tsv: str) -> Dict[str, str]:
     """MIND_news.tsv title 컬럼 (index 3)."""
     titles: Dict[str, str] = {}

@@ -557,33 +557,36 @@ def preprocess_news_file(
     return word_dict, category, subcategory, news_words, news_body, news_v, news_sv, news_index
 
 
-def get_embedding(word_dict, glove_path='glove.840B.300d.txt'):
-    """GloVe 임베딩 로드 (없으면 랜덤 초기화)"""
+def get_embedding(word_dict, glove_path='glove.840B.300d.txt', random_init: bool = False):
+    """GloVe 임베딩 로드 (없으면 또는 random_init=True면 랜덤 초기화)."""
     embedding_dict = {}
     cnt = 0
 
-    try:
-        with open(glove_path, 'rb') as f:
-            linenb = 0
-            while True:
-                line = f.readline()
-                if len(line) == 0:
-                    break
-                line = line.split()
-                if len(line) < 301:
-                    continue
-                word = line[0].decode('utf-8', errors='ignore')
-                linenb += 1
-                if len(word) != 0:
-                    vec = [float(x) for x in line[1:]]
-                    if word in word_dict:
-                        embedding_dict[word] = vec
-                        if cnt % 1000 == 0:
-                            print(cnt, linenb, word)
-                        cnt += 1
-    except FileNotFoundError:
-        print(f"GloVe 파일을 찾을 수 없습니다: {glove_path}")
-        print("랜덤 초기화를 사용합니다.")
+    if random_init:
+        print("[embedding] random_init=True → GloVe 로드 생략, N(0,0.1) 초기화", flush=True)
+    else:
+        try:
+            with open(glove_path, 'rb') as f:
+                linenb = 0
+                while True:
+                    line = f.readline()
+                    if len(line) == 0:
+                        break
+                    line = line.split()
+                    if len(line) < 301:
+                        continue
+                    word = line[0].decode('utf-8', errors='ignore')
+                    linenb += 1
+                    if len(word) != 0:
+                        vec = [float(x) for x in line[1:]]
+                        if word in word_dict:
+                            embedding_dict[word] = vec
+                            if cnt % 1000 == 0:
+                                print(cnt, linenb, word)
+                            cnt += 1
+        except FileNotFoundError:
+            print(f"GloVe 파일을 찾을 수 없습니다: {glove_path}")
+            print("랜덤 초기화를 사용합니다.")
 
     embedding_matrix = [0] * len(word_dict)
     cand = []
@@ -609,5 +612,9 @@ def get_embedding(word_dict, glove_path='glove.840B.300d.txt'):
 
     embedding_matrix[0] = np.zeros(300, dtype='float32')
     embedding_matrix = np.array(embedding_matrix, dtype='float32')
-    print(f"임베딩 행렬 shape: {embedding_matrix.shape}")
+    print(
+        f"임베딩 행렬 shape: {embedding_matrix.shape}  "
+        f"glove_hits={len(embedding_dict)}  random_init={bool(random_init)}",
+        flush=True,
+    )
     return embedding_matrix
